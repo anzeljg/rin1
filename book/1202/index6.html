@@ -1,0 +1,398 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Vhod in izhod </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<link rel="stylesheet" href="../css/codemirrorepl.css">
+<script type="text/javascript" src="../js/skulpt/codemirrorepl.js"></script>
+<script type="text/javascript" src="../js/skulpt/repl.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt-stdlib.js"></script>
+<script type="text/javascript" src="../js/skulpt/python.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index5.html";
+  }if (e.keyCode == 39) {
+ window.location = "index7.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Program in pogojni stavki</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul class="on" id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202" style="color: black; font-weight: 600;">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Program in pogojni stavki <span class="page_numbers">25</span></a></li>
+      <li><a href="index1.html" >Od zaporedja stavkov do programa <span class="page_numbers">26</span></a></li>
+      <li><a href="index2.html" >Program, zapisan v datoteki <span class="page_numbers">27</span></a></li>
+      <li><a href="index3.html" >Program v vgrajenem elementu znotraj učbenika <span class="page_numbers">28</span></a></li>
+      <li><a href="index4.html" >Interaktivni tolmač in samostojen program <span class="page_numbers">29</span></a></li>
+      <li><a href="index5.html" >Vhod in izhod <span class="page_numbers">30</span></a></li>
+      <li class="on"><a href="#">Vhod in izhod <span class="page_numbers">31</span></a></li>
+      <li><a href="index7.html" >Pogojni stavki <span class="page_numbers">32</span></a></li>
+      <li><a href="index8.html" >Pogojni stavki <span class="page_numbers">33</span></a></li>
+      <li><a href="index9.html" >Logični izrazi <span class="page_numbers">34</span></a></li>
+      <li><a href="index10.html" >Logični izrazi <span class="page_numbers">35</span></a></li>
+      <li><a href="index11.html" >Hrošči in razhroščevanje <span class="page_numbers">36</span></a></li>
+      <li><a href="index12.html" >*Prestrezanje izjem <span class="page_numbers">37</span></a></li>
+      <li><a href="index13.html" >Povzetek <span class="page_numbers">38</span></a></li>
+      <li><a href="index14.html" >Naloge <span class="page_numbers">39</span></a></li>
+      <li><a href="index15.html" >Naloge <span class="page_numbers">40</span></a></li>
+      <li><a href="index16.html" >Naloge <span class="page_numbers">41</span></a></li>
+      <li><a href="index17.html" >Naloge <span class="page_numbers">42</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Program in pogojni stavki | Vhod in izhod</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Vhod in izhod</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Python nam rezultat izpiše na veliko preveč decimalk natančno, a se s tem problemom ne bomo ukvarjali. Pomembneje je, da se naš program zna »pogovarjati« z uporabnikom: uporabnik programu poda <b>vhod</b>, program pa mu izpiše svoj <b>izhod</b>. V splošnem je <b>vhod</b> v program množica podatkov, ki jih program prejme. Vhod lahko — tako kot v našem primeru — vnese uporabnik, lahko pa ga program pridobi iz datoteke ali z interneta ali pa mu ga posreduje nek drug program. <b>Izhod</b> pa je skupno ime za vse podatke, ki jih program proizvede pri danem vhodu. V našem primeru smo izhod izpisali na zaslon, lahko pa ga program tudi zapiše v datoteko ali posreduje nekemu drugemu programu.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+<h2>V razmislek</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<p><div align="justify">
+
+Ali program <code>hitrost2.py</code> za vse smiselne vhode deluje pravilno? Kaj bi se zgodilo, če bi se Evina tura zavlekla čez polnoč? Pustimo zaskrbljene starše ob strani, zanima nas samo delovanje programa ...
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div><h1>Še nekaj besed o izpisu</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div align="justify">
+
+V interaktivnem tolmaču funkcije <code>print</code> običajno ne potrebujemo, kljub temu pa jo lahko uporabljamo.
+
+<div class="code">
+
+&gt;&gt;&gt; stevilo = 42<br />
+
+&gt;&gt;&gt; stevilo<br />
+
+42<br />
+
+&gt;&gt;&gt; print(stevilo)<br />
+
+42<br />
+
+&gt;&gt;&gt; niz = 'tralala'<br />
+
+&gt;&gt;&gt; niz<br />
+
+'tralala'<br />
+
+&gt;&gt;&gt; print(niz)<br />
+
+tralala<br />
+
+</div>
+
+Vidimo, da funkcija print pri izpisu nizov izpusti navednice.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+<!-- casestudy - besedilo z gumbi --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <div class="popupb">
+<p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div align="justify">
+
+Če želimo s funkcijo <code>print</code> v isti vrstici izpisati več vrednosti, si lahko pomagamo z vejicami:
+
+<div class="code">
+
+&gt;&gt;&gt; a = 3<br />
+
+&gt;&gt;&gt; b = 5<br />
+
+&gt;&gt;&gt; vsota = a + b<br />
+
+&gt;&gt;&gt; print(a, '+', b, '=', vsota)<br />
+
+3 + 5 = 8<br />
+
+</div>
+
+<br />
+
+Python po vsakem izpisu vrednosti samodejno doda še presledek. Če dodatnih presledkov ne želimo, lahko vrednosti s pomočjo operatorja + sestavimo v enoten niz, nato pa dobljeni niz izpišemo:
+
+<div class="code">
+
+&gt;&gt;&gt; a = 37<br />
+
+&gt;&gt;&gt; b = 5<br />
+
+&gt;&gt;&gt; k = a // b<br />
+
+&gt;&gt;&gt; niz = 'Število ' + b + ' gre ' + k + '-krat v število ' + a + '.'<br />
+
+Traceback (most recent call last):<br />
+
+<span class="tab2">File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br />
+
+TypeError: Can't convert 'int' object to str implicitly<br />
+
+</div>
+
+</div></p><div id="viewq0b142g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b142g0" value="Zakaj je prišlo do napake?" id="btnenabledq0b142g0" onClick='showAnswer("q0b142g0",1,1)' /></div>
+<div id="hideq0b142g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b142g0" value="Skrij" onClick='showAnswer("q0b142g0",0,1)'/></div>
+<div id="sq0b142g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b142g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><div align="justify">
+
+Python nam ne pusti združevanja nizov in števil. Operator <code>+</code> lahko uporabimo bodisi za seštevanje števil ali pa za združevanje (lepljenje) nizov. Če želimo niz sestaviti na podlagi vrednosti različnih tipov, moramo vse vrednosti, ki niso nizi, s pomočjo operatorja <code>str</code> pretvoriti v nize:
+
+<div class="code">
+
+&gt;&gt;&gt; niz = 'Število ' + str(b) + ' gre ' + str(k) + '-krat v število ' + str(a) + '.'<br />
+
+&gt;&gt;&gt; print(niz)<br />
+
+Število 5 gre 7-krat v število 37.<br />
+
+</div>
+
+</div></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- casestudy - besedilo z gumbi --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<div class="popupb">
+<p><style>
+
+.code{font-family:monospace;padding:0px 4px;margin-top:4px;background-color:#eee;}
+
+</style>
+
+<div align="justify">
+
+Napiši program, ki deluje po sledečem vzorcu:
+
+<div class="code">
+
+Kako ti je ime? <u>Jaka</u><br />
+
+Vnesi svoje leto rojstva: <u>2000</u><br />
+
+Katerega leta smo letos? <u>2015</u><br />
+
+Jaka, letos praznuješ svoj 15. rojstni dan.<br />
+
+</div>
+
+</div></p><div id="viewq0b35g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b35g0" value="Namig" id="btnenabledq0b35g0" onClick='showAnswer("q0b35g0",1,2)' /></div>
+<div id="hideq0b35g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b35g0" value="Skrij" onClick='showAnswer("q0b35g0",0,2)'/></div>
+<div id="sq0b35g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b35g0",0,2)'></div>
+</div>
+<div class="feedback-content-container"><p><div align="justify">
+
+Vhodne podatke preberi v tri različne spremenljivke. Kakšnega tipa naj bodo? Za izračun starosti uvedi še četrto spremenljivko, nato pa rezultat izpiši.
+
+</div></p>
+</div></div>
+<div id="viewq0b35g1" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b35g1" value="Rešitev" id="btnenabledq0b35g1" onClick='showAnswer("q0b35g1",1,2)' /></div>
+<div id="hideq0b35g1" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b35g1" value="Skrij" onClick='showAnswer("q0b35g1",0,2)'/></div>
+<div id="sq0b35g1" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b35g1",0,2)'></div>
+</div>
+<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div class="code">
+
+ime = input('Kako ti je ime? ')<br />
+
+rojen = int(input('Vnesi svoje leto rojstva: '))<br />
+
+letos = int(input('Katerega leta smo letos? '))<br />
+
+<br />
+
+izpis = ', letos praznuješ svoj '<br />
+
+izpis = izpis + str(letos - rojen)<br />
+
+izpis = izpis + '. rojstni dan.'<br />
+
+print(ime + izpis)<br />
+
+</div></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index5.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index7.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">31/423</span></div></div>
+</body></html>

@@ -1,0 +1,478 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Nomen est omen </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index.html";
+  }if (e.keyCode == 39) {
+ window.location = "index2.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Uvod</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul class="on" id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102" style="color: black; font-weight: 600;">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Uvod <span class="page_numbers">4</span></a></li>
+      <li class="on"><a href="#">Nomen est omen <span class="page_numbers">5</span></a></li>
+      <li><a href="index2.html" >Informatika je vseprisotna <span class="page_numbers">6</span></a></li>
+      <li><a href="index3.html" >S čim vse se ukvarja informatika <span class="page_numbers">7</span></a></li>
+      <li><a href="index4.html" >Strokovna združenja in visokošolsko izobraževanje <span class="page_numbers">8</span></a></li>
+      <li><a href="index5.html" >Vrh piramide <span class="page_numbers">9</span></a></li>
+      <li><a href="index6.html" >Tekmovanje RTK <span class="page_numbers">10</span></a></li>
+      <li><a href="index7.html" >Tekmovanje UPM <span class="page_numbers">11</span></a></li>
+      <li><a href="index8.html" >Naloge <span class="page_numbers">12</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Uvod | Nomen est omen</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Nomen est omen</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+<b>Računalništvo</b> ali <b>informatika </b>ali <b>računalništvo in informatika</b>. Kaj od tega je pravilno? Vse in nič. Morda bomo lažje prišli do imena, če si odgovorimo na vprašanje, s čim se ukvarja.
+
+</div>
+
+<div align="justify">
+
+<div style="text-align: center">
+
+<img src="wordle1.png" height="259" width="400" />
+
+</div>
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Besedna zveza <b>računalniška znanost</b> (<i>Computer Science</i>) se je prvič pojavila sredi 19. stoletja, ko so se začele ustanavljati prve računalniške fakultete. Čeprav samo ime vsebuje »računalnik« (<i>Computer</i>), se znanost dejansko ni ukvarjala z računalnikom kot ga poznamo danes, ampak se je večinoma ukvarjala z računanjem. Zato so nastala alternativna imena, kot je recimo <b>računska znanost</b> (<i>Computing Science</i>).  Računalniška znanost po definiciji svetovne organizacije ACM obsega vse od teorije preko programiranja do razvoja vrhunskih računskih rešitev.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Kasneje so se vedno bolj začeli ukvarjati s podatki in informacijami, zato so nastala nova alternativna imena, kot sta <b>podatkovna znanost </b>(<i>Datalogy</i>) in <b>informatika </b>(<i>Informatics</i>). Beseda <i>Datalogy </i>se še vedno uporablja v skandinavskih deželah. V preostali Evropi se je pojavil pojem informatika iz direktnega prevoda izjave »automatic information«.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><p align="justify">
+
+V Sloveniji imamo zaradi zgodovinskih okoliščin različna imena. Pred letom 1990 smo delili računalništvo in informatiko na tri področja: strojno opremo, programsko opremo in informatiko. Področja so bila eksplicitno ločena med seboj, saj se je strojna oprema ukvarjala s samim računalniškim sistemom, programska oprema s programi na računalniškem sistemu, informatika pa z informacijskimi sistemi, oziroma s podatki in informacijami, katere smo obdelovali na računalniškem sistemu. Zaradi tega imamo tudi različna imena predmetov v različnih šolah – v gimnazijah se je uveljavil predmet <b>informatika</b>, medtem ko se je v tehničnih šolah uveljavil predmet <b>računalništvo</b>.<br />
+
+<br />
+
+Čeprav se sedaj informatika ne deli le na tri omenjena področja, ampak gredo smernice naprej v koraku s časom, je teh področij vedno več. Vseeno v svetu s pojmom ali <i>Computer Science</i> ali <i>Informatics </i>označujemo vsa področja skupaj, medtem ko v Sloveniji nismo prišli do skupnega imena.
+
+</p></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<p>Kaj misliš, kako v drugih državah pravijo informatiki? Poveži.
+
+<p>
+
+&nbsp;
+
+</p></p>
+<div class='interaktivnaNaloga'>
+<meta charset="utf-8">
+<script src="h5utils.js"></script>
+<script src="jquery-1.9.0-min.js"></script>
+<script src="jquery-ui-1.9.2-min.js"></script>
+<script src="jquery.ui.touch-punch.min.js"></script>
+<script src="jquery.jsPlumb-1.4.0-all.js"></script>
+<script type="text/javascript">
+var PovezaveKrogci = jQuery.noConflict();
+</script>
+<script type="text/javascript">
+(function(PovezaveKrogci){
+ 
+    PovezaveKrogci.fn.shuffle = function() {
+ 
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = PovezaveKrogci.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = PovezaveKrogci(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
+ 
+        this.each(function(i){
+            PovezaveKrogci(this).replaceWith(PovezaveKrogci(shuffled[i]));
+        });
+ 
+        return PovezaveKrogci(shuffled);
+ 
+    };
+ 
+})(PovezaveKrogci);
+
+
+;(function() {	
+	jsPlumb.ready(function() {
+		//svoja instanca - svoj sandbox
+		var AppletKrogci = jsPlumb.getInstance();
+		PovezaveKrogci('.odgovorAppletKrogci').shuffle();
+		
+		
+		//odgovori
+		var i=0;
+		PovezaveKrogci(".krogecAppletKrogci").each(function(i,e) {
+            var p = PovezaveKrogci(e).parent();
+			if(i%2==0)
+			{
+				AppletKrogci.addEndpoint(PovezaveKrogci(e), {
+					parent:p,
+					endpoint:["Dot", { radius:4 }],
+					anchor:"RightMiddle",
+					tolerance:"touch",
+					detachable:false,
+					isSource:true,
+					isTarget:true,
+					connector:["Straight"],
+					connectorStyle : { strokeStyle:"#F00F0F", lineWidth:3},
+					maxConnections:1,
+					beforeDrop:function(params) {
+							if("_"+params.sourceId == params.targetId || params.sourceId == "_"+params.targetId)
+							{
+								params.connection.getPaintStyle().strokeStyle = '#00FF00';
+								params.connection.repaint();
+								params.connection.setDetachable(false);
+								return true;
+							}
+							else
+							{
+								params.connection.setDetachable(true);
+								return true;
+							}
+					}
+				});
+			}
+			else
+			{
+				AppletKrogci.addEndpoint(PovezaveKrogci(e), {
+					parent:p,
+					endpoint:["Dot", { radius:4 }],
+					anchor:"LeftMiddle",
+					tolerance:"touch",
+					detachable:false,
+					isSource:true,
+					isTarget:true,
+					connector:["Straight"],
+					connectorStyle : { strokeStyle:"#F00F0F", lineWidth:3},
+					maxConnections:1,
+					beforeDrop:function(params) {
+							if("_"+params.sourceId == params.targetId || params.sourceId == "_"+params.targetId)
+							{
+								params.connection.getPaintStyle().strokeStyle = '#00FF00';
+								params.connection.repaint();
+								params.connection.setDetachable(false);
+								return true;
+							}
+							else
+							{
+								params.connection.setDetachable(true);
+								return true;
+							}
+					}
+				});
+			}
+            });		
+	});	
+})();
+</script>
+<style type="text/css">
+
+.krogecAppletKrogci {  
+	cursor: pointer;
+}
+
+._jsPlumb_endpoint {
+    cursor: pointer;
+}
+
+.binAppletKrogci {
+  border: 0px;
+}
+
+.ozadjeAppletKrogci {
+  border: 0px;
+  width: 450px;
+  min-height: 241px;
+  margin-top: 0;
+  margin-bottom:10px;
+}
+
+.odgovorAppletKrogci{
+	width:180px;
+}
+
+</style>
+
+<!-- 
+Created by: Rok Penšek <rok.pensek@gmail.com>
+-->
+	<div style="min-height:200px;" id="pravilni_odgovoriAppletKrogci">
+			<div class="ozadjeAppletKrogci">
+				<div class="bin_container">
+					<table class='tDefault'  style="width:100%">
+						<!-- En primerek za 1 vrstico vprašanja in odgovora -->
+						<tr>
+							<td>
+								<!-- Tukaj se nahaja vprašanje -->
+								<!-- id-ji so zelo pomembni, morajo biti unikatni (ne smejo se isto imenotavi) v celotnem dokumentu-->
+								<div style="float:left;">
+									<div class="binAppletKrogci krogecAppletKrogci" id="ha1"><div style="margin-right:10px;width:160px;">datalogi</div></div>
+								</div>
+								<!-- Tukaj se nahaja odgovor -->
+								<!-- vsebina id mora biti enaka vprašanju s to razliko da mora imeti pred tem podčrtaj (_) -->
+								<!-- To je potrebno zato, da skripta zna povezati vprašanja z pravilnimi odgovori -->
+								<div style="float:right;" class="odgovorAppletKrogci">
+									<div class="binAppletKrogci krogecAppletKrogci" id="_ha1"><div style="margin-left:20px;">Danska</div></div>
+								</div>
+							</td>
+						</tr>
+						<!-- Konec primerka za 1 vrstico vprašanja in odgovora -->
+						<tr>
+							<td>
+								<div style="float:left;">
+									<div class="binAppletKrogci krogecAppletKrogci" id="ha2"><div style="margin-right:10px;width:160px;">informaatika</div></div>
+								</div>
+								<div style="float:right;" class="odgovorAppletKrogci">
+									<div class="binAppletKrogci krogecAppletKrogci" id="_ha2"><div style="margin-left:20px;">Estonija</div></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="float:left;">
+									<div class="binAppletKrogci krogecAppletKrogci" id="ha3"><div style="margin-right:10px;width:160px;">informatique</div></div>
+								</div>
+								<div style="float:right;" class="odgovorAppletKrogci">
+									<div class="binAppletKrogci krogecAppletKrogci" id="_ha3"><div style="margin-left:20px;">Francija</div></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="float:left;">
+									<div class="binAppletKrogci krogecAppletKrogci" id="ha4"><div style="margin-right:10px;width:160px;">informatik</div></div>
+								</div>
+								<div style="float:right;" class="odgovorAppletKrogci">
+									<div class="binAppletKrogci krogecAppletKrogci" id="_ha4"><div style="margin-left:20px;">Nemčija</div></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="float:left;">
+									<div class="binAppletKrogci krogecAppletKrogci" id="ha5"><div style="margin-right:10px;width:160px;">informatica</div></div>
+								</div>
+								<div style="float:right;" class="odgovorAppletKrogci">
+									<div class="binAppletKrogci krogecAppletKrogci" id="_ha5"><div style="margin-left:20px;">Italija, Nizozemska</div></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="float:left;">
+									<div class="binAppletKrogci krogecAppletKrogci" id="ha6"><div style="margin-right:10px;width:160px;">datavetenskap</div></div>
+								</div>
+								<div style="float:right;" class="odgovorAppletKrogci">
+									<div class="binAppletKrogci krogecAppletKrogci" id="_ha6"><div style="margin-left:20px;">Švedska</div></div>
+								</div>
+							</td>
+						</tr>
+                        <tr>
+							<td>
+								<div style="float:left;">
+									<div class="binAppletKrogci krogecAppletKrogci" id="ha7"><div style="margin-right:10px;width:160px;">informatikk</div></div>
+								</div>
+								<div style="float:right;" class="odgovorAppletKrogci">
+									<div class="binAppletKrogci krogecAppletKrogci" id="_ha7"><div style="margin-left:20px;">Norveška</div></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="float:left;">
+									<div class="binAppletKrogci krogecAppletKrogci" id="ha8"><div style="margin-right:10px;width:160px;">informatyka</div></div>
+								</div>
+								<div style="float:right;" class="odgovorAppletKrogci">
+									<div class="binAppletKrogci krogecAppletKrogci" id="_ha8"><div style="margin-left:20px;">Poljska</div></div>
+								</div>
+							</td>
+						</tr>
+						</table>
+				</div>
+			</div>
+	</div></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index2.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">5/423</span></div></div>
+</body></html>

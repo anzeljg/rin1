@@ -1,0 +1,586 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Implementacija s tabelo elementov </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<link rel="stylesheet" href="../css/codemirrorepl.css">
+<script type="text/javascript" src="../js/skulpt/codemirrorepl.js"></script>
+<script type="text/javascript" src="../js/skulpt/repl.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt-stdlib.js"></script>
+<script type="text/javascript" src="../js/skulpt/python.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index10.html";
+  }if (e.keyCode == 39) {
+ window.location = "index12.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Množica</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul class="on" id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211" style="color: black; font-weight: 600;">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Množica <span class="page_numbers">176</span></a></li>
+      <li><a href="index1.html" >Množica <span class="page_numbers">177</span></a></li>
+      <li><a href="index2.html" >Elementi množice <span class="page_numbers">178</span></a></li>
+      <li><a href="index3.html" >Operacije nad množicami <span class="page_numbers">179</span></a></li>
+      <li><a href="index4.html" >Operacije nad množicami <span class="page_numbers">180</span></a></li>
+      <li><a href="index5.html" >*Množice in spremenljivke tipa set <span class="page_numbers">181</span></a></li>
+      <li><a href="index6.html" >Primeri uporabe množice <span class="page_numbers">182</span></a></li>
+      <li><a href="index7.html" >Primeri uporabe množice <span class="page_numbers">183</span></a></li>
+      <li><a href="index8.html" >Primeri uporabe množice <span class="page_numbers">184</span></a></li>
+      <li><a href="index9.html" >Primeri uporabe množice <span class="page_numbers">185</span></a></li>
+      <li><a href="index10.html" >Implementacije <span class="page_numbers">186</span></a></li>
+      <li class="on"><a href="#">Implementacija s tabelo elementov <span class="page_numbers">187</span></a></li>
+      <li><a href="index12.html" >Implementacija s tabelo logičnih vrednosti <span class="page_numbers">188</span></a></li>
+      <li><a href="index13.html" >Implementacija s tabelo logičnih vrednosti <span class="page_numbers">189</span></a></li>
+      <li><a href="index14.html" >*Implementacija z dvojiškim iskalnim drevesom <span class="page_numbers">190</span></a></li>
+      <li><a href="index15.html" >*Implementacija z dvojiškim iskalnim drevesom <span class="page_numbers">191</span></a></li>
+      <li><a href="index16.html" >*Implementacija z dvojiškim iskalnim drevesom <span class="page_numbers">192</span></a></li>
+      <li><a href="index17.html" >*Implementacija z dvojiškim iskalnim drevesom <span class="page_numbers">193</span></a></li>
+      <li><a href="index18.html" >Povzetek <span class="page_numbers">194</span></a></li>
+      <li><a href="index19.html" >Naloge <span class="page_numbers">195</span></a></li>
+      <li><a href="index20.html" >Naloge <span class="page_numbers">196</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Množica | Implementacija s tabelo elementov</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Implementacija s tabelo elementov</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- casestudy - besedilo z gumbi --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<div class="popupb">
+<p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div align="justify">
+
+Ponovno napiši funkcijo <code>PrestejSamoglasnike(beseda)</code>, ki vrne število samoglasnikov v podani besedi, sestavljeni iz samih malih črk. Vendar pa si tokrat pomagaj izključno z operacijami iz modula <code>mnozicaTabelaElementov.py</code>. Spomni se: modul uvoziš s stavkom<br />
+
+<br />
+
+<div class="code">
+
+import mnozicaTabelaElementov as mte
+
+</div>
+
+<br />
+
+nato pa njegove funkcije kličeš kot <code>mte.Ustvari()</code>, <code>mte.JePrisoten(...)</code> itd.
+
+</div></p><div id="viewq0b110g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b110g0" value="Rešitev" id="btnenabledq0b110g0" onClick='showAnswer("q0b110g0",1,1)' /></div>
+<div id="hideq0b110g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b110g0" value="Skrij" onClick='showAnswer("q0b110g0",0,1)'/></div>
+<div id="sq0b110g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b110g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div class="code">
+
+import mnozicaTabelaElementov as mte<br />
+
+<br />
+
+# Vrne število samoglasnikov v podanem nizu.<br />
+
+def PrestejSamoglasnike(niz):<br />
+
+<span class="tab2">samoglasniki = mte.Ustvari()</span><br />
+
+<span class="tab2">for crka in ['a', 'e', 'i', 'o', 'u']:</span><br />
+
+<span class="tab4">mte.Dodaj(samoglasniki, crka)</span><br />
+
+<br />
+
+<span class="tab2">stevilo = 0</span><br />
+
+<br />
+
+<span class="tab2"># Sprehodimo se po znakih niza in za vsak</span><br />
+
+<span class="tab2"># znak preverimo, ali je prisoten v množici</span><br />
+
+<span class="tab2"># samoglasnikov. Če je, števcu prištejemo 1.</span><br />
+
+<span class="tab2">for znak in niz:</span><br />
+
+<span class="tab4">if mte.JePrisoten(samoglasniki, znak):</span><br />
+
+<span class="tab6">stevilo += 1</span><br />
+
+<span class="tab2">return stevilo</span><br />
+
+<br />
+
+print(PrestejSamoglasnike('meteorologija'))<br />
+
+print(PrestejSamoglasnike('vzbrst'))<br />
+
+</div></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- casestudy - besedilo z gumbi --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<div class="popupb">
+<p><div align="justify">
+
+V modulu <code>mnozicaTabelaElementov</code> implementiraj in preizkusi še operacije <code>Presek(m1, m2)</code>, <code>Unija(m1, m2)</code> in <code>Razlika(m1, m2)</code>, ki vrnejo presek, unijo oziroma razliko podanih množic.
+
+</div></p><div id="viewq0b112g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b112g0" value="Rešitev" id="btnenabledq0b112g0" onClick='showAnswer("q0b112g0",1,1)' /></div>
+<div id="hideq0b112g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b112g0" value="Skrij" onClick='showAnswer("q0b112g0",0,1)'/></div>
+<div id="sq0b112g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b112g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div class="code">
+
+# Vrne presek podanih množic.<br />
+
+def Presek(m1, m2):<br />
+
+<span class="tab2">presek = []</span><br />
+
+<span class="tab2"># Za vsak element množice m1 preverimo, ali</span><br />
+
+<span class="tab2"># obstaja tudi v množici m2. Če obstaja, ga</span><br />
+
+<span class="tab2"># dodamo v presek.</span><br />
+
+<span class="tab2">for x in m1:</span><br />
+
+<span class="tab4">if JePrisoten(m2, x):</span><br />
+
+<span class="tab6">presek.append(x)</span><br />
+
+<span class="tab2">return presek</span><br />
+
+<br />
+
+# Vrne unijo podanih množic.<br />
+
+def Unija(m1, m2):<br />
+
+<span class="tab2"># Unijo ustvarimo kot kopijo množice m1.</span><br />
+
+<span class="tab2">unija = m1[:]</span><br />
+
+<span class="tab2"># Vsak element množice m2, ki NE obstaja v</span><br />
+
+<span class="tab2"># množici m1, dodamo v unijo.</span><br />
+
+<span class="tab2">for x in m2:</span><br />
+
+<span class="tab4">if not JePrisoten(m1, x):</span><br />
+
+<span class="tab6">unija.append(x)</span><br />
+
+<span class="tab2">return unija</span><br />
+
+<br />
+
+# Vrne razliko podanih množic.<br />
+
+def Razlika(m1, m2):<br />
+
+<span class="tab2">razlika = []</span><br />
+
+<span class="tab2"># Za vsak element množice m1 preverimo, ali</span><br />
+
+<span class="tab2"># obstaja tudi v množici m2. Če NE obstaja,</span><br />
+
+<span class="tab2"># ga dodamo v razliko.</span><br />
+
+<span class="tab2">for x in m1:</span><br />
+
+<span class="tab4">if not JePrisoten(m2, x):</span><br />
+
+<span class="tab6">razlika.append(x)</span><br />
+
+<span class="tab2">return razlika</span><br />
+
+</div></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- casestudy - besedilo z gumbi --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<div class="popupb">
+<p><div align="justify">
+
+Časovno učinkovitost operacij lahko nekoliko izboljšamo tako, da elemente v tabeli hranimo v naraščajočem vrstnem redu. Za dodajanje in odstranjevanje potem še vedno potrebujemo čas <i>O(n)</i>, preverjanje prisotnosti pa lahko opravimo v času <i>O</i>(log<sub>2</sub><i>n</i>). Napiši in preizkusi modul, ki množico implementira na opisani način. Implementiraj samo operacije <code>Ustvari</code>, <code>JePrisoten</code>, <code>Dodaj</code>, <code>Odstrani</code> in <code>NizElementov</code>.
+
+</div></p><div id="viewq0b113g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b113g0" value="Namig" id="btnenabledq0b113g0" onClick='showAnswer("q0b113g0",1,2)' /></div>
+<div id="hideq0b113g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b113g0" value="Skrij" onClick='showAnswer("q0b113g0",0,2)'/></div>
+<div id="sq0b113g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b113g0",0,2)'></div>
+</div>
+<div class="feedback-content-container"><p><div align="justify">
+
+Spomni se na bisekcijo.
+
+</div></p>
+</div></div>
+<div id="viewq0b113g1" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b113g1" value="Rešitev" id="btnenabledq0b113g1" onClick='showAnswer("q0b113g1",1,2)' /></div>
+<div id="hideq0b113g1" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b113g1" value="Skrij" onClick='showAnswer("q0b113g1",0,2)'/></div>
+<div id="sq0b113g1" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b113g1",0,2)'></div>
+</div>
+<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div class="code">
+
+# Implementacija množice z naraščajočo<br />
+
+# tabelo elementov<br />
+
+<br />
+
+# Vrne prazno množico.<br />
+
+def Ustvari():<br />
+
+<span class="tab2">return []</span><br />
+
+<br />
+
+# Vrne True, če je podani element prisoten<br />
+
+# v podani množici, sicer pa vrne False.<br />
+
+def JePrisoten(mnozica, element):<br />
+
+<span class="tab2"># Pomagamo si s pomožno funkcijo, ki poišče</span><br />
+
+<span class="tab2"># podani element v tabeli. Če je rezultat</span><br />
+
+<span class="tab2"># funkcije večji ali enak 0, potem je</span><br />
+
+<span class="tab2"># element prisoten v tabeli, in obratno.</span><br />
+
+<span class="tab2">return (_Poisci(mnozica, element) &gt;= 0)</span><br />
+
+<br />
+
+# Doda podani element v podano množico.<br />
+
+def Dodaj(mnozica, element):<br />
+
+<span class="tab2"># S pomočjo funkcije _Poisci poiščemo mesto,</span><br />
+
+<span class="tab2"># kamor naj se element shrani v tabelo.</span><br />
+
+<span class="tab2">indeks = _Poisci(mnozica, element)</span><br />
+
+<span class="tab2">if indeks &lt; 0:</span><br />
+
+<span class="tab4">mnozica.insert(-indeks - 1, element)</span><br />
+
+<br />
+
+# Odstrani podani element iz podane množice.<br />
+
+def Odstrani(mnozica, element):<br />
+
+<span class="tab2">indeks = _Poisci(mnozica, element)</span><br />
+
+<span class="tab2">if indeks &gt;= 0:</span><br />
+
+<span class="tab4">del mnozica[indeks]</span><br />
+
+<br />
+
+# Če podani element v podani naraščajoče<br />
+
+# urejeni tabeli obstaja, vrne njegov indeks.<br />
+
+# V nasprotnem primeru vrne vrednost<br />
+
+# (-mesto - 1), kjer je 'mesto' indeks prvega<br />
+
+# elementa v tabeli, ki je večji od podanega<br />
+
+# elementa (oziroma len(tabela), če je podani<br />
+
+# element večji od vseh elementov tabele.<br />
+
+# Funkcija uporablja bisekcijo.<br />
+
+def _Poisci(tabela, element):<br />
+
+<span class="tab2">levo = 0</span><br />
+
+<span class="tab2">desno = len(tabela) - 1</span><br />
+
+<span class="tab2">while levo &lt;= desno:</span><br />
+
+<span class="tab4">sredina = (levo + desno) // 2</span><br />
+
+<span class="tab4">if tabela[sredina] == element:</span><br />
+
+<span class="tab6">return sredina</span><br />
+
+<span class="tab4">elif element &lt; tabela[sredina]:</span><br />
+
+<span class="tab6">desno = sredina - 1</span><br />
+
+<span class="tab4">else:</span><br />
+
+<span class="tab6">levo = sredina + 1</span><br />
+
+<span class="tab2">return -levo - 1</span><br />
+
+<br />
+
+# Vrne niz, ki predstavlja podano množico;<br />
+
+# npr. '{1, 2, 3}' za množico, ki vsebuje<br />
+
+# elemente 1, 2 in 3.<br />
+
+def NizElementov(mnozica):<br />
+
+<span class="tab2"># Med sprehodom po tabeli elemente</span><br />
+
+<span class="tab2"># pretvarjamo v nize in nastale nize</span><br />
+
+<span class="tab2"># dodajamo v tabelo.</span><br />
+
+<span class="tab2">izpis = []</span><br />
+
+<span class="tab2">for element in mnozica:</span><br />
+
+<span class="tab4">izpis.append(str(element))</span><br />
+
+<br />
+
+<span class="tab2"># Združimo nize iz tabele</span><br />
+
+<span class="tab2"># (npr. ['a', 'b', 'c'] --&gt; '{a, b, c}').</span><br />
+
+<span class="tab2">return ('{' + ', '.join(izpis) + '}')</span><br />
+
+</div></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <div class='interaktivnaNaloga'>
+<!-- Skulpt stdlib extended with set implementation modules:
+     "mnozicaTabelaElementov.py",
+     "mnozicaTabelaLogicnih.py" and
+     "mnozicaIskalnoDrevo.py".
+//-->
+<script src="skulpt-stdlib-set-implementations.js"></script>
+<script type="text/javascript">
+function outf(text) {
+  var mypre = document.getElementById("output");
+  mypre.innerHTML = mypre.innerHTML + text;
+}
+function builtinRead(x) {
+  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    throw "File not found: '" + x + "'";
+  return Sk.builtinFiles["files"][x];
+}
+function runit() {
+    var prog = editor.getValue();
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = '';
+    Sk.canvas = "mycanvas";
+    Sk.pre = "output";
+    Sk.configure({output:outf, read:builtinRead});
+    try {
+        eval(Sk.importMainWithBody("<stdin>",false,prog));
+    }
+    catch(e) {
+        alert(e.toString())
+    }
+}
+function clearit() {
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = '';
+}</script>
+
+<div style="width:500px">
+<form>
+<textarea id="code"></textarea>
+<button type="button" class="btn-blue"  onclick="runit()">Izvedi</button>
+<button type="button" class="btn-blue"  onclick="clearit()">Počisti</button>
+</form>
+</div>
+
+<div class="rounded" style="width:500px">
+<pre id="output"></pre>
+</div>
+
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+  lineNumbers: true,
+  matchBrackets: true,
+  mode: "python",
+  theme: "mbo"
+});
+editor.setSize(500, 630);
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index10.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index12.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">187/423</span></div></div>
+</body></html>

@@ -1,0 +1,935 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Odvisnost in nove tehnologije </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index6.html";
+  }if (e.keyCode == 39) {
+ window.location = "index8.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Vplivi informacijskih tehnologij na posameznika</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul class="on" id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503" style="color: black; font-weight: 600;">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      <li><a href="index1.html" >Nove ekonomske priložnosti in nevarnosti <span class="page_numbers">404</span></a></li>
+      <li><a href="index2.html" >Nove oblike dela <span class="page_numbers">405</span></a></li>
+      <li><a href="index3.html" >Digitalni razkorak <span class="page_numbers">406</span></a></li>
+      <li><a href="index4.html" >Digitalni razkorak <span class="page_numbers">407</span></a></li>
+      <li><a href="index5.html" >Zasebnost v informacijski družbi <span class="page_numbers">408</span></a></li>
+      <li><a href="index6.html" >Odvisnost in nove tehnologije <span class="page_numbers">409</span></a></li>
+      <li class="on"><a href="#">Odvisnost in nove tehnologije <span class="page_numbers">410</span></a></li>
+      <li><a href="index8.html" >Spletno nadlegovanje <span class="page_numbers">411</span></a></li>
+      <li><a href="index9.html" >Spletno nadlegovanje <span class="page_numbers">412</span></a></li>
+      <li><a href="index10.html" >Spletno nadlegovanje <span class="page_numbers">413</span></a></li>
+      <li><a href="index11.html" >Spletno nadlegovanje <span class="page_numbers">414</span></a></li>
+      <li><a href="index12.html" >Povzetek <span class="page_numbers">415</span></a></li>
+      <li><a href="index13.html" >Naloge <span class="page_numbers">416</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Vplivi informacijskih tehnologij na posameznika | Odvisnost in nove tehnologije</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Odvisnost in nove tehnologije - TEST</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<p><table class='tDefault'  style="font-size: smaller" width="100%">
+
+	<thead>
+
+		<tr>
+
+			<th width="5%">#</th>
+
+			<th>Vprašanje</th>
+
+		</tr>
+
+	</thead>
+
+	<tbody>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">1</td>
+
+			<td>
+
+			Kako pogosto opaziš, da z elektronsko napravo (telefon, računalnik, tablica ...), ali preživiš več časa, kot si sprva načrtoval(-a)?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q01" name="q01" value="1" type="radio" />
+
+			<input id="q01" name="q01" value="2" type="radio" />
+
+			<input id="q01" name="q01" value="3" type="radio" />
+
+			<input id="q01" name="q01" value="4" type="radio" />
+
+			<input id="q01" name="q01" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">2</td>
+
+			<td>
+
+			Kako pogosto zanemarjaš šolske obveznosti samo zato, da bi več časa preživel(-a) na internetu?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q02" name="q02" value="1" type="radio" />
+
+			<input id="q02" name="q02" value="2" type="radio" />
+
+			<input id="q02" name="q02" value="3" type="radio" />
+
+			<input id="q02" name="q02" value="4" type="radio" />
+
+			<input id="q02" name="q02" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">3</td>
+
+			<td>
+
+			Kako pogosto ti je čas, ki ga preživiš na internetu pomembnejši od časa preživetega s tvojo punco/fantom, prijatelji ali sošolci?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q03" name="q03" value="1" type="radio" />
+
+			<input id="q03" name="q03" value="2" type="radio" />
+
+			<input id="q03" name="q03" value="3" type="radio" />
+
+			<input id="q03" name="q03" value="4" type="radio" />
+
+			<input id="q03" name="q03" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">4</td>
+
+			<td>
+
+			Ali se je že zgodilo, da si uporabljal(-a) elektronsko napravo, medtem ko bi moral(-a) početi druge stvari, in si se zato znašel(-la) v težavah? <br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q04" name="q04" value="1" type="radio" />
+
+			<input id="q04" name="q04" value="2" type="radio" />
+
+			<input id="q04" name="q04" value="3" type="radio" />
+
+			<input id="q04" name="q04" value="4" type="radio" />
+
+			<input id="q04" name="q04" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">5</td>
+
+			<td>
+
+			Kako pogosto se starši, punca/fant, prijatelji pritožujejo, da preveč časa preživiš na internetu? <br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q05" name="q05" value="1" type="radio" />
+
+			<input id="q05" name="q05" value="2" type="radio" />
+
+			<input id="q05" name="q05" value="3" type="radio" />
+
+			<input id="q05" name="q05" value="4" type="radio" />
+
+			<input id="q05" name="q05" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">6</td>
+
+			<td>
+
+			Kako pogosto tvoje ocene v šoli trpijo zaradi časa, ki ga porabiš na elektronskih napravah? <br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q06" name="q06" value="1" type="radio" />
+
+			<input id="q06" name="q06" value="2" type="radio" />
+
+			<input id="q06" name="q06" value="3" type="radio" />
+
+			<input id="q06" name="q06" value="4" type="radio" />
+
+			<input id="q06" name="q06" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">7</td>
+
+			<td>
+
+			Ali si poizkušal(-a) porabiti manj časa za uporabo elektronskih naprav, vendar ti ni uspelo? <br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q07" name="q07" value="1" type="radio" />
+
+			<input id="q07" name="q07" value="2" type="radio" />
+
+			<input id="q07" name="q07" value="3" type="radio" />
+
+			<input id="q07" name="q07" value="4" type="radio" />
+
+			<input id="q07" name="q07" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">8</td>
+
+			<td>
+
+			Ali postaneš razdražljiv(-a), če moram izklopiti elektronsko napravo (npr. v šoli ali kinu)? <br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q08" name="q08" value="1" type="radio" />
+
+			<input id="q08" name="q08" value="2" type="radio" />
+
+			<input id="q08" name="q08" value="3" type="radio" />
+
+			<input id="q08" name="q08" value="4" type="radio" />
+
+			<input id="q08" name="q08" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">9</td>
+
+			<td>
+
+			Kako pogosto postaneš slabe volje ali popadljiv(-a), če te kdo vpraša, kaj počneš na internetu? <br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q09" name="q09" value="1" type="radio" />
+
+			<input id="q09" name="q09" value="2" type="radio" />
+
+			<input id="q09" name="q09" value="3" type="radio" />
+
+			<input id="q09" name="q09" value="4" type="radio" />
+
+			<input id="q09" name="q09" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">10</td>
+
+			<td>
+
+			Ali imaš bolečine, ki so povezane z uporabo elektronske naprave?
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q10" name="q10" value="1" type="radio" />
+
+			<input id="q10" name="q10" value="2" type="radio" />
+
+			<input id="q10" name="q10" value="3" type="radio" />
+
+			<input id="q10" name="q10" value="4" type="radio" />
+
+			<input id="q10" name="q10" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+	</tbody>
+
+</table></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<p><table class='tDefault'  style="font-size: smaller" width="100%">
+
+	<thead>
+
+		<tr>
+
+			<th width="5%">#</th>
+
+			<th>Vprašanje </th>
+
+		</tr>
+
+	</thead>
+
+	<tbody>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">11</td>
+
+			<td>
+
+			Kako pogosto se zalotiš, da razmišljaš o tem, kdaj boš znova lahko uporabljal(-a) elektronsko napravo?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q11" name="q11" value="1" type="radio" />
+
+			<input id="q11" name="q11" value="2" type="radio" />
+
+			<input id="q11" name="q11" value="3" type="radio" />
+
+			<input id="q11" name="q11" value="4" type="radio" />
+
+			<input id="q11" name="q11" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">12</td>
+
+			<td>
+
+			Kako pogosto se bojiš, da bo življenje brez elektronske naprave postalo dolgočasno, prazno?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q12" name="q12" value="1" type="radio" />
+
+			<input id="q12" name="q12" value="2" type="radio" />
+
+			<input id="q12" name="q12" value="3" type="radio" />
+
+			<input id="q12" name="q12" value="4" type="radio" />
+
+			<input id="q12" name="q12" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">13</td>
+
+			<td>
+
+			Kako pogosto opaziš, da sam(-a) sebi govoriš »samo še minutko«, ko bi moral(-a) uporabo elektronske naprave prekiniti?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q13" name="q13" value="1" type="radio" />
+
+			<input id="q13" name="q13" value="2" type="radio" />
+
+			<input id="q13" name="q13" value="3" type="radio" />
+
+			<input id="q13" name="q13" value="4" type="radio" />
+
+			<input id="q13" name="q13" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">14</td>
+
+			<td>
+
+			Kako pogosto ti primanjkuje spanca zaradi nočne uporabe elektronskih naprav?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q14" name="q14" value="1" type="radio" />
+
+			<input id="q14" name="q14" value="2" type="radio" />
+
+			<input id="q14" name="q14" value="3" type="radio" />
+
+			<input id="q14" name="q14" value="4" type="radio" />
+
+			<input id="q14" name="q14" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">15</td>
+
+			<td>
+
+			Kako pogosto se zlažeš staršem ali prijateljem, kako dolgo si uporabljal(-a) elektronsko napravo?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q15" name="q15" value="1" type="radio" />
+
+			<input id="q15" name="q15" value="2" type="radio" />
+
+			<input id="q15" name="q15" value="3" type="radio" />
+
+			<input id="q15" name="q15" value="4" type="radio" />
+
+			<input id="q15" name="q15" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">16</td>
+
+			<td>
+
+			Kako pogosto raje izbereš uporabo elektronske naprave kot srečanje s prijatelji?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q16" name="q16" value="1" type="radio" />
+
+			<input id="q16" name="q16" value="2" type="radio" />
+
+			<input id="q16" name="q16" value="3" type="radio" />
+
+			<input id="q16" name="q16" value="4" type="radio" />
+
+			<input id="q16" name="q16" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">17</td>
+
+			<td>
+
+			Ali si v primerih, ko si se počutil(-a) osamljeno, že uporabil(-a) tudi elektronsko napravo, da si občutek osamljenosti omilil(-a)?
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q17" name="q17" value="1" type="radio" />
+
+			<input id="q17" name="q17" value="2" type="radio" />
+
+			<input id="q17" name="q17" value="3" type="radio" />
+
+			<input id="q17" name="q17" value="4" type="radio" />
+
+			<input id="q17" name="q17" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">18</td>
+
+			<td>
+
+			Kako pogosto skušaš prikriti, kako dolgo si uporabljal(-a) elektronsko napravo?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q18" name="q18" value="1" type="radio" />
+
+			<input id="q18" name="q18" value="2" type="radio" />
+
+			<input id="q18" name="q18" value="3" type="radio" />
+
+			<input id="q18" name="q18" value="4" type="radio" />
+
+			<input id="q18" name="q18" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">19</td>
+
+			<td>
+
+			Ali pogosto sanjaš o elektronski napravi?
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q19" name="q19" value="1" type="radio" />
+
+			<input id="q19" name="q19" value="2" type="radio" />
+
+			<input id="q19" name="q19" value="3" type="radio" />
+
+			<input id="q19" name="q19" value="4" type="radio" />
+
+			<input id="q19" name="q19" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td style="vertical-align: top" align="center">20</td>
+
+			<td>
+
+			Ali so ti prijatelji oz. sorodniki že kdaj rekli, da preveč časa »visiš« na elektronski napravi?<br />
+
+			<div style="margin-top: 5px">
+
+			<center>
+
+			nikoli
+
+			<input id="q20" name="q20" value="1" type="radio" />
+
+			<input id="q20" name="q20" value="2" type="radio" />
+
+			<input id="q20" name="q20" value="3" type="radio" />
+
+			<input id="q20" name="q20" value="4" type="radio" />
+
+			<input id="q20" name="q20" value="5" type="radio" />
+
+			vedno
+
+			</center>
+
+			</div>
+
+			</td>
+
+		</tr>
+
+	</tbody>
+
+</table></p>
+<div class='interaktivnaNaloga'>
+<script>
+function showresults() {
+  var sum = 0;
+  var q = ['q01', 'q02', 'q03', 'q04', 'q05', 'q06', 'q07', 'q08', 'q09', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20'];
+  for (i = 0; i < 20; i++) {
+    var id = "input:radio[name='"+q[i]+"']:checked";
+    var value = $(id).val();
+    if (typeof value === "undefined") {
+      alert('Odgovoriti moraš na vprašanje ' + (i+1) + '.');
+      return;
+    } else {
+      sum += parseInt(value);
+    }
+  }
+  // Rezultati vprašalnika...
+  if (sum >= 20 && sum <= 49) {
+    alert('Si povprečen uporabnik elektronskih naprav. Čas, ki ga preživiš ob uporabi elektronskih naprav, je mogoče včasih predolg, vendar imaš kontrolo nad uporabo svoje naprave.');
+  }
+  if (sum >= 50 && sum <= 79) {
+    alert('Soočaš se z občasnimi do pogostimi problemi vezanimi na rabo elektronskih naprav. Priporočamo, da premisliš o vplivu interneta na svoje življenje (prijatelji, šolski uspeh, družina).');
+  }
+  if (sum >= 80 && sum <= 100) {
+    alert('Tvoje navade rabe interneta in elektronskih naprav ti povzročajo resne težave. Nujno se o teh težavah pogovori s prijateljem, staršem, šolskim svetovalcem ali kakšno drugo osebo, ki ji zaupaš.');
+  }
+}
+</script>
+<button class="btn-green" onclick="showresults()">Prikaži rezultate</button></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index6.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index8.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">410/423</span></div></div>
+</body></html>

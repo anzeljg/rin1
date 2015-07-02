@@ -1,0 +1,92 @@
+.kalkulator {
+    margin-left:auto;
+    margin-right: auto;
+    display: table;
+    margin-top: 10px;
+}
+.ekran {
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+.ekran input{
+    text-align: right;
+    line-height:160%;
+    font-size: 160%;
+    display: inline;
+    border: 0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    padding: 10px;
+    background: #ffffff;
+    width: 95%;
+    -webkit-appearance: none;
+}
+.ekran input:active {
+    position: relative;
+    top:0;
+    color: #000;
+}
+.ogrodje {
+    background: #CCCCCC;
+    border: 10px solid #CCCCCC;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.ogrodje table{
+    width: 100%;
+    border-collapse:collapse;
+}
+.tipkovnica{
+    vertical-align: top;
+}
+.tipkovnica div {
+    float: left;
+}
+.tipkovnica div div{
+    float: left;
+    padding-right: 20px;
+}
+.tipkovnica div div div{
+    float: left;
+    padding-right: 20px;
+}
+.tipkovnica div div div input{
+    background: #dddddd;
+    border: 1px solid #aaaaaa;
+}
+.tipkovnica input {
+    width: 65px;
+    height: 40px;
+    font-size: 130%;
+    background: #eeeeee;
+    border: 1px solid #aaaaaa;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 3px 0 3px 0;
+    padding: 0;
+    -webkit-appearance: none;
+}
+.tipkovnica input:active{
+    position: relative;
+    top: 1px;
+    color: #999;
+}
+.tipkovnica .navigacija {
+    background: #dddddd;
+    margin-top: 10px;
+}
+.tipkovnica .enacaj {
+    width: 132px;
+}
+.tipkovnica input:disabled {
+    color: #DF4545;
+}
+.tipkovnica.w450 input {
+    width: 50px;
+}
+.tipkovnica.w450 .enacaj {
+    width: 104px;
+}

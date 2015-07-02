@@ -1,0 +1,872 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Transportna plast </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index2.html";
+  }if (e.keyCode == 39) {
+ window.location = "index4.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Od električnega signala do objave slike na Facebooku</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul class="on" id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402" style="color: black; font-weight: 600;">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+      <li><a href="index1.html" >Aplikacijska plast <span class="page_numbers">319</span></a></li>
+      <li><a href="index2.html" >Aplikacijska plast <span class="page_numbers">320</span></a></li>
+      <li class="on"><a href="#">Transportna plast <span class="page_numbers">321</span></a></li>
+      <li><a href="index4.html" >Omrežna plast <span class="page_numbers">322</span></a></li>
+      <li><a href="index5.html" >Povezavna in fizična plast <span class="page_numbers">323</span></a></li>
+      <li><a href="index6.html" >Povzetek <span class="page_numbers">324</span></a></li>
+      <li><a href="index7.html" >Naloge <span class="page_numbers">325</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Od električnega signala do objave slike na Facebooku | Transportna plast</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Transportna plast</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+<center>
+
+<img src="TCPIP_transportna_plast.png" width="500" height="61" />
+
+</center>
+
+<br />
+
+Spletni brskalnik in strežnik tako dolga kot tudi kratka sporočila protokola HTTP izročita procesu, ki skrbi za prenos – imenujemo ga tudi transportni protokol. Navadno se pri spletnem brskanju kot transportni protokol uporablja protokol TCP, ki je tako razširjen in pomemben, da je skupaj z internetnim protokolom IP poskrbel za poimenovanje celotnega sklada internetnih protokolov: TCP/IP.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Transportni protokol predpisuje pravila za prenos podatkov vseh aplikacij, ki tečejo na enem računalniku. Transportni proces pregleda vsako aplikacijsko sporočilo  (v našem primeru zahtevo HTTP ali pa odgovor HTTP) in ga po potrebi razkosa na več manjših delov.<br />
+
+<br />
+
+Te dele imenujemo segmenti. Vsak segment opremi z naslovom aplikacije, kateri je namenjen – temu naslovu rečemo številka vrat (<i>ang. port number</i>), na katerih posluša aplikacija (na primer spletni strežnik, poštni strežnik, strežnik vaše najljubše spletne igre... in podobno). Naslov je potreben zato, da bo sprejemni transportni proces na drugi strani lahko ugotovil, kateri aplikaciji na njegovem računalniku so namenjeni. Segmente nato odpošlje v omrežje.<br />
+
+<br />
+
+Na sprejemni strani segmenti dospejo do procesa TCP, torej do transportne plasti, ki jim odstrani transportne glave, jih po potrebi sestavi skupaj in jih v skladu z njihovim ciljnim naslovom izroči ciljni aplikaciji, v našem primeru spletnemu strežniku.<br />
+
+<br />
+
+V primeru protokola TCP sprejemna stran tudi potrdi vsak prejeti segment, po domače povedano, odpošlje nazaj paketek posebne oblike, ki pomeni potrditev, da je bil osnovni segment pravilno prenešen in sprejet.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <div class='interaktivnaNaloga'>
+<br /><br />
+<script>
+  var ratio = 0.71;
+  var floor = Math.floor;
+</script>
+
+<style>
+#container_omrezja{
+  position: relative;
+  width: 500px;
+  height: 350px;
+}
+
+#start_button_task3 {
+  z-index: 10;
+}
+
+.text_task3 {
+  position: absolute;
+  width: 105px;
+  height: 17px;
+  z-index: 5;
+  color: white;
+  background-color: black;
+  text-align: center;
+  line-height: 12px;
+  font-size: 12px;
+  border: 2px black solid;
+  top: 150px;
+  left: 30px;
+}
+
+.layer1_task3 {
+  position: absolute;
+  width: 105px;
+  height: 30px;
+  color: white;
+  background-color: #3B753B;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  border: 2px #3B753B solid;
+  z-index: 4;
+}
+
+.layer2_task3 {
+  position: absolute;
+  width: 105px;
+  height: 30px;
+  color: white;
+  background-color: #828242;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  border: 2px #828242 solid;
+  z-index: 4;
+}
+
+.layer3_task3 {
+  position: absolute;
+  width: 105px;
+  height: 30px;
+  color: white;
+  background-color: #5F7791;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  border: 2px #5F7791 solid;
+  z-index: 4;
+}
+
+.layer4_task3 {
+  position: absolute;
+  width: 105px;
+  height: 30px;
+  color: white;
+  background-color: #4D4D4D;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  border: 2px #4D4D4D solid;
+  z-index: 4;
+}
+
+#browser_task3 {
+  position: absolute;
+  width: 105px;
+  top: 6px;
+  height: 105px;
+  background-color: coral;
+  background-image: url("browser_empty.png");
+  text-align: center;
+  z-index: 5;
+  line-height: 105px;
+}
+
+#server_task3 {
+  position: absolute;
+  left: 385px;
+  top: 6px;
+  width: 105px;
+  z-index: 5;
+  height: 105px;
+  background-image: url("web_server.png");
+  text-align: center;
+  line-height: 105px;
+  font-size: 12px;
+}
+
+#myCanvas_task3 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#package_task3 {
+  position: absolute;
+  width: 75px;
+  height: 15px;
+  background-color: cornsilk;
+  border: 1px black solid;
+  z-index: 5;
+  text-align: center;
+  line-height: 12px;
+  font-size: 12px;
+}
+
+#tail1_task3 {
+  position: absolute;
+  width: 15px;
+  z-index: 5;
+  height: 15px;
+  background-color: #3B753B;
+  border: 1px black solid;
+}
+
+#cloud_task3 {
+  position: absolute;
+  top: 180px;
+  left: 139px;
+}
+
+#package_part1_task3 {
+  position: absolute;
+  width: 32px;
+  height: 15px;
+  background-color: cornsilk;
+  border: 1px black solid;
+  text-align: center;
+  z-index: 5;
+  font-size: 12px;
+  line-height: 13px;
+}
+
+#package_part2_task3 {
+  position: absolute;
+  width: 32px;
+  height: 15px;
+  background-color: cornsilk;
+  border: 1px black solid;
+  z-index: 5;
+  font-size: 12px;
+  text-align: center;
+  line-height: 13px;
+}
+
+#tail1_part1_task3 {
+  position: absolute;
+  width: 15px;
+  z-index: 5;
+  border: 1px black solid;
+  height: 15px;
+  background-color: #3B753B;
+}
+
+#tail1_part2_task3 {
+  position: absolute;
+  z-index: 5;
+  border: 1px black solid;
+  width: 5px;
+  height: 15px;
+  background-color: #828242;
+}
+
+#tail2_part1_task3 {
+  position: absolute;
+  width: 5px;
+  z-index: 5;
+  height: 15px;
+  border: 1px black solid;
+  background-color: #828242;
+}
+
+#tail2_part2_task3 {
+  position: absolute;
+  width: 5px;
+  z-index: 5;
+  background-color: #5F7791;
+  border: 1px black solid;
+  height: 15px;
+}
+
+#tail3_part1_task3 {
+  position: absolute;
+  width: 5px;
+  height: 15px;
+  border: 1px black solid;
+  background-color: #5F7791;
+  z-index: 5;
+}
+
+#tail3_part2_task3 {
+  position: absolute;
+  z-index: 5;
+  width: 5px;
+  border: 1px black solid;
+  height: 15px;
+}
+
+#confirmation_part1_task3 {
+  position: absolute;
+  z-index: 5;
+  width: 50px;
+  height: 34px;
+  background-color: cornsilk;
+  border: 1px black solid;
+  text-align: center;
+  font-size: 12px;
+}
+
+#confirmation_part2_task3 {
+  position: absolute;
+  width: 50px;
+  z-index: 5;
+  height: 34px;
+  background-color: cornsilk;
+  text-align: center;
+  border: 1px black solid;
+  text-align: center;
+  font-size: 12px;
+}
+
+#left_layer_text_task3 {
+  left: 0px;
+  z-index: 5;
+  top: 115px;
+}
+
+#left_application_layer_task3 {
+  left: 0px;
+  z-index: 5;
+  top: 140px;
+}
+
+#left_transport_layer_task3 {
+  left: 0px;
+  z-index: 5;
+  top: 180px;
+}
+
+#left_network_layer_task3 {
+  left: 0px;
+  top: 220px;
+  z-index: 5;
+}
+
+#left_datalink_layer_task3 {
+  left: 0px;
+  top: 260px;
+  z-index: 5;
+}
+
+#right_layer_text_task3 {
+  left: 385px;
+  z-index: 5;
+  top: 115px;
+}
+
+#right_application_layer_task3 {
+  left: 385px;
+  z-index: 5;
+  top: 140px;
+}
+
+#right_transport_layer_task3 {
+  left: 385px;
+  z-index: 5;
+  top: 180px;
+}
+
+#right_network_layer_task3 {
+  left: 385px;
+  top: 220px;
+  z-index: 5;
+}
+
+#right_datalink_layer_task3 {
+  left: 385px;
+  top: 260px;
+  z-index: 5;
+}
+
+.router_task3 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+}
+
+#router1_task3 {
+  top: 261px;
+  left: 125px;
+}
+
+#router2_task3 {
+  top: 192px;
+  left: 175px;
+}
+
+#router3_task3 {
+  top: 258px;
+  left: 190px;
+}
+
+#router4_task3 {
+  top: 330px;
+  left: 175px;
+}
+
+#router5_task3 {
+  top: 188px;
+  left: 243px;
+}
+
+#router6_task3 {
+  top: 258px;
+  left: 242px;
+}
+
+#router7_task3 {
+  top: 335px;
+  left: 235px;
+}
+
+#router8_task3 {
+  top: 258px;
+  left: 295px;
+}
+</style>
+
+<div id="container_omrezja">
+  <div id="browser_task3" onselectstart="return false"></div>
+  <div class="text_task3" id="left_layer_text_task3" onselectstart="return false"> Plasti </div>
+  <div class="layer1_task3" id="left_application_layer_task3" onselectstart="return false"> Aplikacijska </div>
+  <div class="layer2_task3" id="left_transport_layer_task3" onselectstart="return false"> Transportna </div>
+
+  <div class="text_task3" id="right_layer_text_task3" onselectstart="return false"> Plasti </div>
+  <div class="layer1_task3" id="right_application_layer_task3" onselectstart="return false"> Aplikacijska </div>
+  <div class="layer2_task3" id="right_transport_layer_task3" onselectstart="return false"> Transportna </div>
+
+  <div id="server_task3" onselectstart="return false"></div>
+
+  <div id="package_task3" onselectstart="return false"></div>
+  <div id="package_part1_task3" onselectstart="return false"></div>
+  <div id="package_part2_task3" onselectstart="return false"></div>
+
+  <div id="tail1_task3" onselectstart="return false"></div>
+  <div id="tail1_part1_task3" onselectstart="return false"></div>
+  <div id="tail1_part2_task3" onselectstart="return false"></div>
+
+  <div id="tail2_part1_task3" onselectstart="return false"></div>
+  <div id="tail2_part2_task3" onselectstart="return false"></div>
+
+  <div id="confirmation_part1_task3" onselectstart="return false">Paket sprejet!</div>
+  <div id="confirmation_part2_task3" onselectstart="return false">Paket sprejet!</div>
+
+  <img src="cloud.png" id="cloud_task3" />
+  <canvas id="myCanvas_task3" height="350" width="500"></canvas>
+</div>
+
+<button class="btn-blue" onselectstart="return false" onclick="start_animation_task3();">Pošlji</button>
+<button class="btn-blue" onselectstart="return false" onclick="location.reload();">Ponastavi</button>
+
+
+<script>
+var draw_background_task3 = function () {
+  var c = document.getElementById("myCanvas_task3");
+  var ctx = c.getContext("2d");
+  ctx.beginPath();
+  ctx.moveTo(floor(ratio * 70), floor(ratio * 145));
+  ctx.lineTo(floor(ratio * 70), floor(ratio * 400));
+  ctx.moveTo(floor(ratio * 620), floor(ratio * 145));
+  ctx.lineTo(floor(ratio * 620), floor(ratio * 400));
+  ctx.moveTo(floor(ratio * 620), floor(ratio * 400));
+  ctx.lineTo(floor(ratio * 436), floor(ratio * 400));
+  ctx.moveTo(floor(ratio * 204), floor(ratio * 400));
+  ctx.lineTo(floor(ratio * 70), floor(ratio * 400));
+  ctx.stroke();
+}
+
+var start_animation_task3 = function () {
+  $("#browser_task3").css("backgroundImage", "url(\"browser_loading.png\")");
+  $("#start_animation_task3").css({
+    pointerEvents: "none"
+  });
+  $("#package_task3").css({
+    top: floor(ratio * 120) + "px",
+    left: floor(ratio * 30) + "px"
+  });
+  $("#package_part1_task3").css({
+    top: floor(ratio * 265) + "px",
+    left: floor(ratio * 20) + "px"
+  });
+  $("#package_part2_task3").css({
+    top: floor(ratio * 265) + "px",
+    left: floor(ratio * 95) + "px"
+  });
+  $("#package_task3").text("http://str.si");
+  $("#package_task3").fadeIn();
+  $("#package_task3").animate({
+    top: floor(ratio * 210) + "px"
+  }, {
+    duration: 1000
+  });
+  $("#tail1_task3").css({
+    top: floor(ratio * 210) + "px",
+    left: floor(ratio * 135) + "px"
+  });
+  $("#tail1_part1_task3").css({
+    top: floor(ratio * 265) + "px",
+    left: floor(ratio * 64) + "px"
+  });
+  $("#tail1_part2_task3").css({
+    top: floor(ratio * 265) + "px",
+    left: floor(ratio * 150) + "px"
+  });
+  $("#tail2_part1_task3").css({
+    top: floor(ratio * 265) + "px",
+    left: floor(ratio * 73) + "px"
+  });
+  $("#tail2_part2_task3").css({
+    top: floor(ratio * 265) + "px",
+    left: floor(ratio * 20) + "px"
+  });
+
+  setTimeout("$(\"#tail1_task3\").fadeIn()", 1500);
+
+  setTimeout("$(\"#package_task3\").animate({top: \"" + floor(ratio * 265) + "px\"},{duration: 1000})", 2500);
+  setTimeout("$(\"#tail1_task3\").animate({top: \"" + floor(ratio * 265) + "px\"},{duration: 1000})", 2500);
+
+  $("#package_part1_task3").text("http:/");
+  $("#package_part2_task3").text("/str.si");
+
+  setTimeout("$(\"#package_part1_task3\").fadeIn()", 4000);
+  setTimeout("$(\"#package_part2_task3\").fadeIn()", 4000);
+  setTimeout("$(\"#tail1_part1_task3\").fadeIn()", 4000);
+
+  setTimeout("$(\"#package_task3\").fadeOut()", 4000);
+  setTimeout("$(\"#tail1_task3\").fadeOut()", 4000);
+
+  setTimeout("$(\"#package_part1_task3\").animate({left: \"" + floor(ratio * 10) + "px\"},{duration: 1000})", 4500);
+  setTimeout("$(\"#tail1_part1_task3\").animate({left: \"" + floor(ratio * 54) + "px\"},{duration: 1000})", 4500);
+  setTimeout("$(\"#package_part2_task3\").animate({left: \"" + floor(ratio * 105) + "px\"},{duration: 1000})", 4500);
+  //setTimeout("$(\"#tail1_part2_task3\").animate({left: \"" + floor(ratio * 155) + "px\"},{duration: 1000})", 4500);
+
+  setTimeout("$(\"#tail2_part1_task3\").fadeIn()", 5500);
+  //setTimeout("$(\"#tail2_part2_task3\").fadeIn()", 5500);
+  setTimeout("$(\"#tail1_part2_task3\").fadeIn()", 5500);
+
+  setTimeout("$(\"#package_part1_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 30) + "px\"},{duration: 1000})", 6000);
+  setTimeout("$(\"#tail1_part1_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 74) + "px\"},{duration: 1000})", 6000);
+  setTimeout("$(\"#tail2_part1_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 94) + "px\"},{duration: 1000})", 6000);
+
+  setTimeout("$(\"#package_part2_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 30) + "px\"},{duration: 1000})", 7000);
+  setTimeout("$(\"#tail1_part2_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 74) + "px\"},{duration: 1000})", 7000);
+  setTimeout("$(\"#tail2_part2_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 84) + "px\"},{duration: 1000})", 7000);
+
+  setTimeout("$(\"#package_part1_task3\").animate({left: \"" + floor(ratio * 600) + "px\"},{duration: 2000})", 6100);
+  setTimeout("$(\"#tail1_part1_task3\").animate({left: \"" + floor(ratio * 644) + "px\"},{duration: 2000})", 6100);
+  setTimeout("$(\"#tail2_part1_task3\").animate({left: \"" + floor(ratio * 664) + "px\"},{duration: 2000})", 6100);
+
+  setTimeout("$(\"#package_part2_task3\").animate({left: \"" + floor(ratio * 600) + "px\"},{duration: 2000})", 7100);
+  setTimeout("$(\"#tail1_part2_task3\").animate({left: \"" + floor(ratio * 644) + "px\"},{duration: 2000})", 7100);
+  setTimeout("$(\"#tail2_part2_task3\").animate({left: \"" + floor(ratio * 654) + "px\"},{duration: 2000})", 7100);
+
+  setTimeout("$(\"#package_part1_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left:\"" + floor(ratio * 540) + "\"},{duration: 1000})", 6200);
+  setTimeout("$(\"#tail1_part1_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left:\"" + floor(ratio * 584) + "\"},{duration: 1000})", 6200);
+  setTimeout("$(\"#tail2_part1_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left:\"" + floor(ratio * 604) + "\"},{duration: 1000})", 6200);
+
+  setTimeout("$(\"#confirmation_part1_task3\").show();", 10000);
+  setTimeout("$(\"#confirmation_part1_task3\").css({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 600) + "px\"})", 10000);
+  setTimeout("$(\"#confirmation_part1_task3\").animate({top: \"" + floor(ratio * 390) + "px\"},{duration: 1000})", 10000);
+  setTimeout("$(\"#confirmation_part1_task3\").animate({left: \"50px\"},{duration: 1000})", 10100);
+  setTimeout("$(\"#confirmation_part1_task3\").animate({top: \"" + floor(ratio * 265) + "px\"},{duration: 1000})", 10200);
+  setTimeout("$(\"#confirmation_part1_task3\").hide();", 13200);
+
+  setTimeout("$(\"#package_part2_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left:\"" + floor(ratio * 640) + "\"},{duration: 1000})", 7200);
+  setTimeout("$(\"#tail1_part2_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left:\"" + floor(ratio * 684) + "\"},{duration: 1000})", 7200);
+  setTimeout("$(\"#tail2_part2_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left:\"" + floor(ratio * 694) + "\"},{duration: 1000})", 7200);
+
+  setTimeout("$(\"#confirmation_part2_task3\").show();", 11000);
+  setTimeout("$(\"#confirmation_part2_task3\").css({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 600) + "px\"})", 11000);
+  setTimeout("$(\"#confirmation_part2_task3\").animate({top: \"" + floor(ratio * 390) + "px\"},{duration: 1000})", 11000);
+  setTimeout("$(\"#confirmation_part2_task3\").animate({left: \"50px\"},{duration: 1000})", 11100);
+  setTimeout("$(\"#confirmation_part2_task3\").animate({top: \"" + floor(ratio * 265) + "px\"},{duration: 1000})", 11200);
+  setTimeout("$(\"#confirmation_part2_task3\").hide();", 14200);
+
+  setTimeout("$(\"#tail2_part1_task3\").fadeOut()", 11000);
+  //setTimeout("$(\"#tail2_part2_task3\").fadeOut()", 11000);
+  setTimeout("$(\"#tail1_part2_task3\").fadeOut()", 11000);
+
+  setTimeout("$(\"#package_part1_task3\").animate({left: \"" + floor(ratio * 570) + "px\"},{duration: 1000})", 11000);
+  setTimeout("$(\"#tail1_part1_task3\").animate({left: \"" + floor(ratio * 614) + "px\"},{duration: 1000})", 11000);
+  setTimeout("$(\"#package_part2_task3\").animate({left: \"" + floor(ratio * 634) + "px\"},{duration: 1000})", 11000);
+  setTimeout("$(\"#tail1_part2_task3\").animate({left: \"" + floor(ratio * 678) + "px\"},{duration: 1000})", 11000);
+
+  setTimeout("$(\"#package_part1_task3\").fadeOut()", 12000);
+  setTimeout("$(\"#package_part2_task3\").fadeOut()", 12000);
+  setTimeout("$(\"#tail1_part1_task3\").fadeOut()", 12000);
+
+  setTimeout("$(\"#package_task3\").css({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 560) + "px\"})", 12000);
+  setTimeout("$(\"#tail1_task3\").css({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 664) + "px\"})", 12000);
+
+  setTimeout("$(\"#package_task3\").fadeIn()", 12000);
+  setTimeout("$(\"#tail1_task3\").fadeIn()", 12000);
+
+  setTimeout("$(\"#package_task3\").animate({top: \"" + floor(ratio * 210) + "px\"},{duration: 1000})", 12500);
+  setTimeout("$(\"#tail1_task3\").animate({top: \"" + floor(ratio * 210) + "px\"},{duration: 1000})", 12500);
+
+  setTimeout("$(\"#tail1_task3\").fadeOut()", 13500);
+
+  setTimeout("$(\"#package_task3\").animate({top: \"" + floor(ratio * 120) + "px\"},{duration: 1000})", 13600);
+
+  setTimeout("$(\"#package_task3\").fadeOut()", 15000);
+  setTimeout("$(\"#package_task3\").text(\"Spletna stran\")", 15500);
+  setTimeout("$(\"#package_task3\").fadeIn()", 16000);
+  setTimeout("$(\"#package_task3\").animate({top: \"" + floor(ratio * 210) + "px\"},{duration: 1000})", 16500);
+  setTimeout("$(\"#tail1_task3\").fadeIn()", 17500);
+
+  setTimeout("$(\"#package_task3\").animate({top: \"" + floor(ratio * 265) + "px\"},{duration: 1000})", 18000);
+  setTimeout("$(\"#tail1_task3\").animate({top: \"" + floor(ratio * 265) + "px\"},{duration: 1000})", 18000);
+
+  setTimeout("$(\"#package_part1_task3\").text(\"Splet\")", 18000);
+  setTimeout("$(\"#package_part2_task3\").text(\" stran\")", 18000);
+
+  setTimeout("$(\"#package_part1_task3\").fadeIn()", 19000);
+  setTimeout("$(\"#package_part2_task3\").fadeIn()", 19000);
+  setTimeout("$(\"#tail1_part1_task3\").fadeIn()", 19000);
+
+  setTimeout("$(\"#package_task3\").fadeOut()", 19000);
+  setTimeout("$(\"#tail1_task3\").fadeOut()", 19000);
+
+  setTimeout("$(\"#package_part1_task3\").animate({left: \"" + floor(ratio * 550) + "px\"},{duration: 1000})", 20000);
+  setTimeout("$(\"#tail1_part1_task3\").animate({left: \"" + floor(ratio * 594) + "px\"},{duration: 1000})", 20000);
+  setTimeout("$(\"#package_part2_task3\").animate({left: \"" + floor(ratio * 655) + "px\"},{duration: 1000})", 20000);
+  setTimeout("$(\"#tail1_part2_task3\").animate({left: \"" + floor(ratio * 699) + "px\"},{duration: 1000})", 20000);
+
+  setTimeout("$(\"#tail2_part1_task3\").css({left: \"" + floor(ratio * 614) + "px\"})", 20000);
+  //setTimeout("$(\"#tail2_part2_task3\").css({left: \"" + floor(ratio * 690) + "px\"})", 20000);
+
+  setTimeout("$(\"#tail2_part1_task3\").fadeIn()", 21000);
+  //setTimeout("$(\"#tail2_part2_task3\").fadeIn()", 21000);
+  setTimeout("$(\"#tail1_part2_task3\").fadeIn()", 21000);
+
+  setTimeout("$(\"#package_part1_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 580) + "px\"},{duration: 1000})", 22000);
+  setTimeout("$(\"#tail1_part1_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 624) + "px\"},{duration: 1000})", 22000);
+  setTimeout("$(\"#tail2_part1_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 644) + "px\"},{duration: 1000})", 22000);
+
+  setTimeout("$(\"#package_part2_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 580) + "px\"},{duration: 1000})", 23000);
+  setTimeout("$(\"#tail1_part2_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 624) + "px\"},{duration: 1000})", 23000);
+  setTimeout("$(\"#tail2_part2_task3\").animate({top: \"" + floor(ratio * 390) + "px\" , left: \"" + floor(ratio * 634) + "px\"},{duration: 1000})", 23000);
+
+  setTimeout("$(\"#package_part1_task3\").animate({left: \"" + floor(ratio * 30) + "px\"},{duration: 2000})", 22100);
+  setTimeout("$(\"#tail1_part1_task3\").animate({left: \"" + floor(ratio * 74) + "px\"},{duration: 2000})", 22100);
+  setTimeout("$(\"#tail2_part1_task3\").animate({left: \"" + floor(ratio * 94) + "px\"},{duration: 2000})", 22100);
+
+  setTimeout("$(\"#package_part2_task3\").animate({left: \"" + floor(ratio * 30) + "px\"},{duration: 2000})", 23100);
+  setTimeout("$(\"#tail1_part2_task3\").animate({left: \"" + floor(ratio * 74) + "px\"},{duration: 2000})", 23100);
+  setTimeout("$(\"#tail2_part2_task3\").animate({left: \"" + floor(ratio * 84) + "px\"},{duration: 2000})", 23100);
+
+  setTimeout("$(\"#package_part1_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 10) + "px\"},{duration: 1000})", 22200);
+  setTimeout("$(\"#tail1_part1_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 54) + "px\"},{duration: 1000})", 22200);
+  setTimeout("$(\"#tail2_part1_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 74) + "px\"},{duration: 1000})", 22200);
+
+  setTimeout("$(\"#confirmation_part1_task3\").show();", 26000);
+  setTimeout("$(\"#confirmation_part1_task3\").css({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 50) + "px\"})", 26000);
+  setTimeout("$(\"#confirmation_part1_task3\").animate({top: \"" + floor(ratio * 390) + "px\"},{duration: 1000})", 26000);
+  setTimeout("$(\"#confirmation_part1_task3\").animate({left: \"" + floor(ratio * 600) + "px\"},{duration: 1000})", 26100);
+  setTimeout("$(\"#confirmation_part1_task3\").animate({top: \"" + floor(ratio * 265) + "px\"},{duration: 1000})", 26200);
+  setTimeout("$(\"#confirmation_part1_task3\").hide();", 29200);
+
+  setTimeout("$(\"#package_part2_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 110) + "px\"},{duration: 1000})", 23200);
+  setTimeout("$(\"#tail1_part2_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 154) + "px\"},{duration: 1000})", 23200);
+  setTimeout("$(\"#tail2_part2_task3\").animate({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 164) + "px\"},{duration: 1000})", 23200);
+
+  setTimeout("$(\"#confirmation_part2_task3\").show();", 27000);
+  setTimeout("$(\"#confirmation_part2_task3\").css({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 50) + "px\"})", 27000);
+  setTimeout("$(\"#confirmation_part2_task3\").animate({top: \"" + floor(ratio * 390) + "px\"},{duration: 1000})", 27000);
+  setTimeout("$(\"#confirmation_part2_task3\").animate({left: \"" + floor(ratio * 600) + "px\"},{duration: 1000})", 27100);
+  setTimeout("$(\"#confirmation_part2_task3\").animate({top: \"" + floor(ratio * 265) + "px\"},{duration: 1000})", 27200);
+  setTimeout("$(\"#confirmation_part2_task3\").hide();", 30200);
+
+  setTimeout("$(\"#tail2_part1_task3\").fadeOut()", 28000);
+  setTimeout("$(\"#tail2_part2_task3\").fadeOut()", 28000);
+  setTimeout("$(\"#tail1_part2_task3\").fadeOut()", 28000);
+
+  setTimeout("$(\"#package_part1_task3\").animate({left: \"" + floor(ratio * 40) + "px\"},{duration: 1000})", 28000);
+  setTimeout("$(\"#tail1_part1_task3\").animate({left: \"" + floor(ratio * 84) + "px\"},{duration: 1000})", 28000);
+  setTimeout("$(\"#package_part2_task3\").animate({left: \"" + floor(ratio * 104) + "px\"},{duration: 1000})", 28000);
+  setTimeout("$(\"#tail1_part2_task3\").animate({left: \"" + floor(ratio * 148) + "px\"},{duration: 1000})", 28000);
+
+  setTimeout("$(\"#package_part1_task3\").fadeOut()", 29000);
+  setTimeout("$(\"#package_part2_task3\").fadeOut()", 29000);
+  setTimeout("$(\"#tail1_part1_task3\").fadeOut()", 29000);
+
+  setTimeout("$(\"#package_task3\").css({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 30) + "px\"})", 29000);
+  setTimeout("$(\"#tail1_task3\").css({top: \"" + floor(ratio * 265) + "px\", left: \"" + floor(ratio * 134) + "px\"})", 29000);
+
+  setTimeout("$(\"#package_task3\").fadeIn()", 29000);
+  setTimeout("$(\"#tail1_task3\").fadeIn()", 29000);
+
+  setTimeout("$(\"#package_task3\").animate({top: \"" + floor(ratio * 210) + "px\"},{duration: 1000})", 29500);
+  setTimeout("$(\"#tail1_task3\").animate({top: \"" + floor(ratio * 210) + "px\"},{duration: 1000})", 29500);
+
+  setTimeout("$(\"#tail1_task3\").fadeOut()", 30500);
+
+  setTimeout("$(\"#package_task3\").animate({top: \"" + floor(ratio * 120) + "px\"},{duration: 1000})", 30600);
+
+  setTimeout("$(\"#package_task3\").fadeOut()", 31000);
+
+  setTimeout("$(\"#browser_task3\").css(\"backgroundImage\", \"url('browser_content.png')\")", 31500);
+}
+
+$("#confirmation_part1_task3").hide();
+$("#confirmation_part2_task3").hide();
+$("#tail1_task3").hide();
+$("#tail1_part1_task3").hide();
+$("#tail1_part2_task3").hide();
+$("#tail2_part1_task3").hide();
+$("#tail2_part2_task3").hide();
+$("#package_task3").hide();
+$("#package_part1_task3").hide();
+$("#package_part2_task3").hide();
+draw_background_task3();
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index2.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index4.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">321/423</span></div></div>
+</body></html>

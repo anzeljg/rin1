@@ -1,0 +1,395 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Različno hitri algoritmi za isti problem </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index5.html";
+  }if (e.keyCode == 39) {
+ window.location = "index7.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Poraba časa in časovna zahtevnost</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul class="on" id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208" style="color: black; font-weight: 600;">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+      <li><a href="index1.html" >Poraba časa <span class="page_numbers">118</span></a></li>
+      <li><a href="index2.html" >Merjenje časa <span class="page_numbers">119</span></a></li>
+      <li><a href="index3.html" >Poraba časa v odvisnosti od vhodnih podatkov <span class="page_numbers">120</span></a></li>
+      <li><a href="index4.html" >Različno hitri algoritmi za isti problem <span class="page_numbers">121</span></a></li>
+      <li><a href="index5.html" >Različno hitri algoritmi za isti problem <span class="page_numbers">122</span></a></li>
+      <li class="on"><a href="#">Različno hitri algoritmi za isti problem <span class="page_numbers">123</span></a></li>
+      <li><a href="index7.html" >Različno hitri algoritmi za isti problem <span class="page_numbers">124</span></a></li>
+      <li><a href="index8.html" >Časovna zahtevnost <span class="page_numbers">125</span></a></li>
+      <li><a href="index9.html" >Štetje osnovnih operacij <span class="page_numbers">126</span></a></li>
+      <li><a href="index10.html" >Štetje osnovnih operacij <span class="page_numbers">127</span></a></li>
+      <li><a href="index11.html" >*Še nekaj redov zahtevnosti <span class="page_numbers">128</span></a></li>
+      <li><a href="index12.html" >*Še nekaj redov zahtevnosti <span class="page_numbers">129</span></a></li>
+      <li><a href="index13.html" >*Še nekaj redov zahtevnosti <span class="page_numbers">130</span></a></li>
+      <li><a href="index14.html" >Povzetek <span class="page_numbers">131</span></a></li>
+      <li><a href="index15.html" >Naloge <span class="page_numbers">132</span></a></li>
+      <li><a href="index16.html" >Naloge <span class="page_numbers">133</span></a></li>
+      <li><a href="index17.html" >Naloge <span class="page_numbers">134</span></a></li>
+      <li><a href="index18.html" >Naloge <span class="page_numbers">135</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Poraba časa in časovna zahtevnost | Različno hitri algoritmi za isti problem</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Različno hitri algoritmi</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Postavimo se v mislih na nek konkreten <code>i</code> in poiščimo zadnji tak <code>j</code>, pri katerem vsota
+
+<code>a[i] + a[j]</code> še ni prevelika (večja od <code>s</code>). Funkcija <code>NajdiVsoto2b</code> bi torej pri tem <code>i</code>
+
+pregledala vsote <code>a[i] + a[i + 1]</code>, <code>a[i] + a[i + 2]</code>, ..., <code>a[i] + a[j]</code>; in vse
+
+te vsote so ≤ <code>s</code>. Ker je tabela <code>a</code> urejena naraščajoče, so tudi te vsote
+
+naraščajoče; torej, če je ena od njih enaka <code>s</code>, bi morale biti vse nadaljnje vsote
+
+večje od <code>s</code>, mi pa smo ravnokar ugotovili, da so vse te vsote ≤ <code>s</code>.
+
+Edina vsota, ki je lahko enaka <code>s</code>, je torej zadnja — <code>a[i] + a[j]</code> — vse predhodne
+
+vsote pa so gotovo manjše od <code>s</code>.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Pregledovati vsote, ki so premajhne (manjše od <code>s</code>), je seveda prav tako nekoristno kot pregledovati tiste, ki so prevelike. Namesto da gledamo vsote od manjših proti večjim (in začnemo pri <code>a[i] + a[i + 1]</code>), bi bilo bolje le pogledati zadnjo od njih, torej <code>a[i] + a[j]</code>; če je ta enaka <code>s</code>, smo našli iskani par in se lahko vrnemo iz funkcije, če pa je manjša od <code>s</code>, potem so vse predhodne vsote tudi manjše od <code>s</code> in se nam z njimi ni treba ukvarjati.<br />
+
+<br />
+
+Toda kako naj vemo, kateri je (pri trenutnem <code>i</code>) pravi <code>j</code> (torej zadnji tak <code>j</code>, pri katerem vsota <code>a[i] + a[j]</code> še ni večja od <code>s</code>)?  Pri <code>i = 1</code> ga lahko poiščemo tako, da gremo v zanki po padajočih <code>j</code> (od <code>j = n - 1</code> navzdol), dokler ne najdemo prvega para z vsoto <code>a[i] + a[j] &lt;= s</code>. Kasneje pa lahko razmišljamo takole: ko se z <code>i</code> premaknemo na <code>i + 1</code>, je seveda člen <code>a[i + 1]</code> večji od <code>a[i]</code>, zato je (za poljuben <code>j</code>) tudi vsota <code>a[i + 1] + a[j]</code> večja od <code>a[j]</code>. Torej, če je bila pri nekem <code>j</code> vsota <code>a[i] + a[j]</code> prevelika (večja od <code>s</code>), bo zdaj vsota <code>a[i + 1] + a[j]</code> še bolj prevelika. Zato maksimalni <code>j</code>, pri katerem je vsota <code>a[i + 1] + a[j] ≤ s</code>, ne more biti nič večji kot maksimalni <code>j</code>, pri katerem je vsota <code>a[i] + a[j] ≤ s</code>. Torej lahko primerni <code>j</code> pri <code>i + 1</code> poiščemo tako, da nadaljujemo kar pri tistem <code>j</code>, ki smo ga uporabili pri <code>i</code>, in se po potrebi premaknemo z njim malo navzdol. Tako smo dobili zelo elegantno rešitev, zapisano na naslednji strani.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<div class='interaktivnaNaloga'>
+<style>
+/*! jQuery UI - v1.11.2 - 2014-10-16
+* http://jqueryui.com
+* Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */.ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:after,.ui-helper-clearfix:before{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}.ui-front{z-index:100}.ui-state-disabled{cursor:default!important}.ui-widget-overlay{position:fixed;top:0;left:0;width:100%;height:100%}.ui-slider{position:relative;text-align:left}.ui-slider .ui-slider-handle{position:absolute;z-index:2;width:1.2em;height:1.2em;cursor:default;-ms-touch-action:none;touch-action:none}.ui-slider .ui-slider-range{position:absolute;z-index:1;font-size:.7em;display:block;border:0;background-position:0 0}.ui-slider.ui-state-disabled .ui-slider-handle,.ui-slider.ui-state-disabled .ui-slider-range{filter:inherit}.ui-slider-horizontal{height:.8em}.ui-slider-horizontal .ui-slider-handle{top:-.3em;margin-left:-.6em}.ui-slider-horizontal .ui-slider-range{top:0;height:100%}.ui-slider-horizontal .ui-slider-range-min{left:0}.ui-slider-horizontal .ui-slider-range-max{right:0}.ui-slider-vertical{width:.8em;height:100px}.ui-slider-vertical .ui-slider-handle{left:-.3em;margin-left:0;margin-bottom:-.6em}.ui-slider-vertical .ui-slider-range{left:0;width:100%}.ui-slider-vertical .ui-slider-range-min{bottom:0}.ui-slider-vertical .ui-slider-range-max{top:0}.ui-sortable-handle{-ms-touch-action:none;touch-action:none}.ui-widget{font-family:Verdana,Arial,sans-serif;font-size:1.1em}.ui-widget .ui-widget{font-size:1em}.ui-widget button,.ui-widget input,.ui-widget select,.ui-widget textarea{font-family:Verdana,Arial,sans-serif;font-size:1em}.ui-widget-content{border:1px solid #aaa;background:url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x #fff;color:#222}.ui-widget-content a{color:#222}.ui-widget-header{border:1px solid #aaa;background:url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x #ccc;color:#222;font-weight:700}.ui-widget-header a{color:#222}.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{border:1px solid #d3d3d3;background:url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x #e6e6e6;font-weight:400;color:#555}.ui-state-default a,.ui-state-default a:link,.ui-state-default a:visited{color:#555;text-decoration:none}.ui-state-focus,.ui-state-hover,.ui-widget-content .ui-state-focus,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-focus,.ui-widget-header .ui-state-hover{border:1px solid #999;background:url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x #dadada;font-weight:400;color:#212121}.ui-state-focus a,.ui-state-focus a:hover,.ui-state-focus a:link,.ui-state-focus a:visited,.ui-state-hover a,.ui-state-hover a:hover,.ui-state-hover a:link,.ui-state-hover a:visited{color:#212121;text-decoration:none}.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active{border:1px solid #aaa;background:url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x #fff;font-weight:400;color:#212121}.ui-state-active a,.ui-state-active a:link,.ui-state-active a:visited{color:#212121;text-decoration:none}.ui-corner-all,.ui-corner-left,.ui-corner-tl,.ui-corner-top{border-top-left-radius:4px}.ui-corner-all,.ui-corner-right,.ui-corner-top,.ui-corner-tr{border-top-right-radius:4px}.ui-corner-all,.ui-corner-bl,.ui-corner-bottom,.ui-corner-left{border-bottom-left-radius:4px}.ui-corner-all,.ui-corner-bottom,.ui-corner-br,.ui-corner-right{border-bottom-right-radius:4px}.ui-widget-overlay{background:url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x #aaa;opacity:.3;filter:Alpha(Opacity=30)}.ui-widget-shadow{margin:-8px 0 0 -8px;padding:8px;background:url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x #aaa;opacity:.3;filter:Alpha(Opacity=30);border-radius:8px}
+
+table#NajdiVsoto2b {
+border-collapse: collapse
+}
+table#NajdiVsoto2b tbody td {
+border: none!important;
+box-shadow: none!important;
+}
+table#NajdiVsoto2b tbody tr:first-child {
+box-shadow: none!important;
+}
+table#NajdiVsoto2b tbody tr {
+border-top: none!important;
+background: none repeat scroll 0 0 #E7F4F9!important;
+}
+
+table#NajdiVsoto2b tbody td.border {border:1px solid #000!important}
+table#NajdiVsoto2b tbody td.gray {background-color:#333333;color:#FFF;}
+table#NajdiVsoto2b tbody td.blue1 {background-color:#216A82;color:#000;}
+table#NajdiVsoto2b tbody td.blue2 {background-color:#2E91B2;color:#000;}
+table#NajdiVsoto2b tbody td.blue3 {background-color:#4DB0D1;color:#000;}
+table#NajdiVsoto2b tbody td.blue4 {background-color:#7AC4DD;color:#000;}
+table#NajdiVsoto2b tbody td.blue5 {background-color:#AEDBEA;color:#000;}
+table#NajdiVsoto2b tbody td.red1 {background-color:#7A2E2A;color:#000;}
+table#NajdiVsoto2b tbody td.red2 {background-color:#A73F39;color:#000;}
+table#NajdiVsoto2b tbody td.red3 {background-color:#C65D58;color:#000;}
+table#NajdiVsoto2b tbody td.red4 {background-color:#D58985;color:#000;}
+table#NajdiVsoto2b tbody td.red5 {background-color:#E5B6B3;color:#000;}
+</style>
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<script>
+var NR = 8;
+//var a = [1, 2, 3, 4, 5, 6, 7, 8];
+var a = [4, 9, 13, 21, 33, 43, 59, 67];
+
+$(function() {
+  $("#slider").slider({
+    range: "min",
+    min: 0,
+    max: 200,
+    value: 72,
+    step: 1,
+    slide: function(event, ui) {
+      // posodobi vrednost vsote
+      NUM = $("#slider").slider("value");
+      document.getElementById("vsota").innerHTML = "s = " + NUM;
+      sortSumAlgorithm();
+    },
+    stop: function(event, ui) {
+      // posodobi vrednost vsote
+      NUM = $("#slider").slider("value");
+      document.getElementById("vsota").innerHTML = "s = " + NUM;
+      sortSumAlgorithm();
+    }
+  });
+  // nastavi začetno vrednost vsote
+  NUM = $("#slider").slider("value");
+  sortSumAlgorithm();
+});
+
+$(function() {
+  $("#number").slider({
+    range: "min",
+    min: 3,
+    max: 8,
+    value: 8,
+    step: 1,
+    slide: function(event, ui) {
+      // posodobi vrednost vsote
+      NR = $("#number").slider("value");
+      document.getElementById("dolzina").innerHTML = "len(a) = " + NR;
+      a = generateArray(NR);
+      str = a.toString().replace(/,/g, ", ");
+      document.getElementById("polje").innerHTML = "a = [" + str + "]";
+      sortSumAlgorithm();
+    },
+    stop: function(event, ui) {
+      // posodobi vrednost vsote
+      NR = $("#number").slider("value");
+      document.getElementById("dolzina").innerHTML = "len(a) = " + NR;
+      a = generateArray(NR);
+      str = a.toString().replace(/,/g, ", ");
+      document.getElementById("polje").innerHTML = "a = [" + str + "]";
+      sortSumAlgorithm();
+    }
+  });
+  // nastavi začetno vrednost vsote
+  NR = $("#number").slider("value");
+  sortSumAlgorithm();
+});
+</script>
+
+
+<div style="margin-left:10px">Iskana vsota elementov: <code><span id="vsota">s = 72</span></code></div>
+<div id="slider" style="width:300px;margin:10px"></div>
+
+<div style="margin-left:10px">Dolžina tabele: <code><span id="dolzina">len(a) = 8</span></code></div>
+<div id="number" style="width:300px;margin:10px"></div>
+
+<div style="margin-left:10px">Tabela: <code><span id="polje">a = [4, 9, 13, 21, 33, 43, 59, 67]</span></code></div>
+<hr style="width:100%;height:1px;color:#000">
+<table class='tDefault'  id="NajdiVsoto2b" border="0"></table>
+
+<script>
+function generateArray(length) {
+  var arr = new Array();
+  for (i = 0; i < length; i++) {
+    // Random number between 1 and 50
+    num = Math.floor((Math.random() * 50) + 1); 
+    arr.push(num)
+  }
+  arr.sort(sortNumber);
+  return arr;
+}
+
+function sortNumber(a, b) {
+  return a - b;
+}
+
+function sortSumAlgorithm() {
+  var table = document.getElementById("NajdiVsoto2b");
+  while (table.rows.length > 0) {
+    table.deleteRow(0);
+  }
+
+  for (i=0; i<NR; i++) {
+    var row = table.insertRow(i);
+    row.align = "center";
+    for (j=0; j<NR; j++) {
+      var cell = row.insertCell(j);
+      if (i == 0 && j > 0) {
+        cell.innerHTML = "j = "+j;
+        cell.height = 25;
+      }
+      if (j == 0 && i > 0) {
+        cell.innerHTML = "i = "+(i-1);
+      }
+      cell.width = 50;
+      if (i > 0) {
+        cell.height = 50;
+      }
+      if (i > 0 && j > 0 && j >= i) {
+        sum = (a[i-1]+a[j]);
+        if (sum >= 0 && sum < 0.2*NUM) { z = "blue5"; }
+        else if (sum >= 0.2*NUM && sum < 0.4*NUM) { z = "blue4"; }
+        else if (sum >= 0.4*NUM && sum < 0.6*NUM) { z = "blue3"; }
+        else if (sum >= 0.6*NUM && sum < 0.8*NUM) { z = "blue2"; }
+        else if (sum >= 0.8*NUM && sum < NUM) { z = "blue1"; }
+        else if (sum == NUM) { z = "gray"; }
+        else if (sum > NUM && sum < 1.2*NUM) { z = "red1"; }
+        else if (sum >= 1.2*NUM && sum < 1.4*NUM) { z = "red2"; }
+        else if (sum >= 1.4*NUM && sum < 1.6*NUM) { z = "red3"; }
+        else if (sum >= 1.6*NUM && sum < 1.8*NUM) { z = "red4"; }
+        else { z = "red5"; }
+        cell.className = "border "+z;
+        cell.innerHTML = sum;
+      }
+    }
+  }
+}
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index5.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index7.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">123/423</span></div></div>
+</body></html>

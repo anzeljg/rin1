@@ -1,0 +1,681 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Naloge </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index8.html";
+  }if (e.keyCode == 39) {
+ window.location = "index10.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Procesi</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul class="on" id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309" style="color: black; font-weight: 600;">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Procesi <span class="page_numbers">292</span></a></li>
+      <li><a href="index1.html" >Kaj je proces <span class="page_numbers">293</span></a></li>
+      <li><a href="index2.html" >Zaporednost in večopravilnost <span class="page_numbers">294</span></a></li>
+      <li><a href="index3.html" >Pregled procesov <span class="page_numbers">295</span></a></li>
+      <li><a href="index4.html" >Razvrščanje procesov <span class="page_numbers">296</span></a></li>
+      <li><a href="index5.html" >Uporaba pomnilnika <span class="page_numbers">297</span></a></li>
+      <li><a href="index6.html" >Stanje procesa <span class="page_numbers">298</span></a></li>
+      <li><a href="index7.html" >Življenje procesov in drevo procesov <span class="page_numbers">299</span></a></li>
+      <li><a href="index8.html" >Povzetek <span class="page_numbers">300</span></a></li>
+      <li class="on"><a href="#">Naloge <span class="page_numbers">301</span></a></li>
+      <li><a href="index10.html" >Naloge <span class="page_numbers">302</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Procesi | Naloge</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Naloge</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- dopolnjevanje - Cloze --> 
+  <div class="wrapper numbered" id="wrap72">
+<span class="number number-green">1.</span><div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<h3><div align="justify">
+
+
+
+Babica štrika pulover za vnuka po kroju, ki ga je dobila v reviji. Pripravila si je pletilke in volno ter začela štrikati. Nastal je lep zelen pulover!<br />
+
+<br />
+
+Kaj v zgodbici predstavlja pojme proces, program procesor in vhodni podatek?
+
+</div></h3>
+<div id="cloze72_7" class="clozeBlock">
+<input type="hidden" name="clozeFlag72_7.strictMarking" id="clozeFlag72_7.strictMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag72_7.checkCaps" id="clozeFlag72_7.checkCaps" value="true"/>
+
+<input type="hidden" name="clozeFlag72_7.instantMarking" id="clozeFlag72_7.instantMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag72_7.listing" id="clozeFlag72_7.listing" value="0"/>
+
+<input type="hidden" name="clozeFlag72_7.dropdown" id="clozeFlag72_7.dropdown" value="False"/>
+
+<input type="hidden" name="clozeFlag72_7.equallength" id="clozeFlag72_7.equallength" value="False"/>
+
+
+
+<p>
+
+proces = 
+<u>štrikanje</u>
+
+
+</p>
+
+<p>
+
+program = 
+<u>kroj</u>
+
+
+</p>
+
+<p>
+
+vhodna podatka = 
+<u>pletilke</u>
+ 
+<u>volna</u>
+
+
+</p>
+
+<p>
+
+procesor = 
+<u>babica</u>
+
+
+</p>
+
+
+<div class="blockb">
+
+<input type="button" class="btn-blue" name="submit72_7" value="Preveri" id="submit72_7" onClick='clozeSubmit("72_7")'/>
+<input type="button" class="btn-blue" name="restart72_7" value="Za&#269;ni znova" style="display: none;" id="restart72_7" onClick='clozeRestart("72_7")'/>
+<span id="clozeScore72_7" class="rezultat"></span>
+<input type="button" class="btn-orange" name="72_7showAnswersButton" value="Prika&#382;i odgovore" style="display: none;" id="showAnswersButton72_7" onClick='fillClozeInputs("72_7")'/>
+</div>
+</div></div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- casestudy - besedilo z gumbi --> 
+  <div class="wrapper numbered" id="wrap70">
+<span class="number number-red">2.</span><div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<div class="popupb">
+<p><div align="justify">
+
+
+
+Razvrsti procese po vseh treh načinih, ki smo jih obdelali (prvi pride, 
+
+prvi melje; najkrajši najprej, kroženje). V katerem vrstnem redu procesi
+
+prihajajo v vrsto in iz nje? Pomagaj si s sliko časovnice.
+
+</div>
+
+<p>
+
+&nbsp;
+
+</p>
+
+<table class='tDefault'  border="1">
+
+	<tbody>
+
+		<tr>
+
+			<td align="center"><b>Proces <br />
+
+			</b>
+
+			</td>
+
+			<td align="center"><b>Prihod v vrsto <br />
+
+			</b>
+
+			</td>
+
+			<td align="center"><b>Čas izvajanja <br />
+
+			</b>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> P1</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 2</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> P2</td>
+
+			<td align="center"> 2</td>
+
+			<td align="center"> 5</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> P3</td>
+
+			<td align="center"> 4</td>
+
+			<td align="center"> 3</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> P4</td>
+
+			<td align="center"> 6</td>
+
+			<td align="center"> 1</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> P5</td>
+
+			<td align="center"> 8</td>
+
+			<td align="center"> 2</td>
+
+		</tr>
+
+	</tbody>
+
+</table></p><div id="viewq0b70g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b70g0" value="Rešitev" id="btnenabledq0b70g0" onClick='showAnswer("q0b70g0",1,1)' /></div>
+<div id="hideq0b70g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b70g0" value="Skrij" onClick='showAnswer("q0b70g0",0,1)'/></div>
+<div id="sq0b70g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b70g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><b>1) Prvi pride, prvi melje
+
+</b>
+
+<p>
+
+Prihod v vrsto: P1, P2, P3, P4, P5<br />
+
+Izhod iz vrste: P1, P2, P3, P4, P5
+
+</p>
+
+<p>
+
+<img src="fifo.png" height="100" width="400" />
+
+</p>
+
+<p>
+
+<b>2) Najkrajši najprej</b>
+
+</p>
+
+<p>
+
+Prihod v vrsto: P1, P2, P3, P4, P5<br />
+
+Izhod iz vrste: P1, P2, P4, P5, P3
+
+</p>
+
+<p>
+
+<img src="srt.png" height="100" width="400" /> 
+
+</p>
+
+<p>
+
+<b>3) Kroženje
+
+</b>
+
+</p>
+
+<p>
+
+Prihod: v vrsto: P1, P2, P3, P4, P5<br />
+
+Izhod iz vrste: P1, P4, P3, P5, P2
+
+</p>
+
+<p>
+
+<img src="rr.png" height="100" width="400" /> 
+
+</p></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+ <!-- applet --> 
+  <div class="wrapper numbered2" id="wrap74">
+<span class="number2 number-blue">3.</span><div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<p>Razporedi stanja procesa v pravilni vrstni red:</p>
+<div class='interaktivnaNaloga'>
+<style>
+.ansGrayX {
+color:#777;
+font-family:OpenSymbol, Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size:24px;
+font-weight:700;
+line-height:20px;
+}
+.ansGreenCheck {
+color:#080;
+font-family:OpenSymbol, Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size:24px;
+font-weight:700;
+line-height:20px;
+}
+.ansRedX {
+color:red;
+font-family:OpenSymbol, Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size:24px;
+font-weight:700;
+line-height:20px;
+}
+.defMatchTable {
+background:transparent !important;
+border:0px solid transparent!important;
+border-collapse:separate!important;
+border-spacing:0 5px!important;
+margin:0px!important;
+}
+.defMatchTable tr {
+background-color:transparent!important;
+border:0px solid #E7F4F9!important;
+}
+.defMatchTable tbody td,
+.defMatchTable tbody tr:first-child {
+box-shadow:none!important;
+}
+.defMatchTable tr td {
+padding:0 5px!important;
+border:0px solid transparent!important;
+}
+.defMatchTable ul {
+margin-top:0px;
+}
+.definitionMatchDefinitions {
+list-style-type:none!important;
+width:200px;
+}
+.definitionMatchDefinitions li {
+-khtml-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+background:#FFF;
+border:1px solid #000;
+height:24px;
+margin:3px!important;
+text-align:center;
+user-select:none;
+}
+.definitionMatchTerms {
+list-style-type:none!important;
+margin:0!important;
+padding:0!important;
+width:150px;
+}
+.definitionMatchTerms li {
+-khtml-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+background:#A0FFFF;
+border:1px dotted #000;
+cursor:pointer;
+height:20px;
+margin:5px!important;
+text-align:center;
+user-select:none;
+}
+.definitionMatch_instruction {
+color:grey;
+font-style:italic;
+padding-top:2px!important;
+}
+.definitionMatch_placeholder {
+background:#A0FFFF;
+height:20px;
+margin:5px!important;
+}
+.definitionMatch_termBank {
+display:inline-block;
+min-height:20px!important;
+width:100%;
+}
+.definitionMatch_termBank .sortableContainer {
+border:2px dashed #D3D3D3;
+background-color:#f0f0f0;
+margin-top:5px;
+}
+.definitionMatch_termBucketHighlight {
+background:#0071FF !important;
+}
+.defnCol {
+padding-left:20px!important;
+width:450px!important;
+}
+.defnColCorr {
+border:0!important;
+width:20px;
+}
+.defnColUnselectedTerm {
+background:#ddd !important;
+border-bottom:1px solid grey!important;
+border-right:1px solid grey!important;
+border-top:1px solid grey!important;
+width:350px!important;
+}
+.defnRow {
+border:2px solid #0071FF!important;
+display:table-cell;
+height:100%;
+min-height:20px;
+width:180px!important;
+}
+.defn_termWrong {
+background:red !important;
+border-bottom:1px solid red!important;
+border-right:1px solid red!important;
+border-top:1px solid red!important;
+color:#fff!important;
+}
+.defn_termWrongRightBorder {
+border-right:2px solid red!important;
+}
+.sortableContainer {
+height:auto;
+list-style-type:none;
+margin:0;
+min-height:20px;
+padding:0;
+}
+.sortableContainer li {
+margin:4px!important;
+padding:4px!important;
+list-style-type:none!important;
+}
+.sortableContainer li.ui-sortable-helper {
+cursor:move!important;
+}
+.sortableContainer li:hover {
+cursor:pointer!important;
+}
+.termBucket {
+min-height:24px;
+width:100%!important;
+}
+.termCorrect {
+background:#58C24A !important;
+border:1px solid #58C24A!important;
+color:#FFF!important;
+line-height:1!important;
+}
+.termOutOfPalette {
+display:inline-block;
+margin:0!important;
+width:300px!important;
+border:0px solid transparent!important;
+background:transparent!important;
+line-height:1!important;
+}
+.unselectedTerm {
+background:#C8D6FF;
+border:1px solid #7AC4DD!important; /*#0071FF*/
+color:#000!important;
+display:inline-block;
+line-height:1!important;
+}
+</style>
+<script>
+function initDefinitionMatch(e){function t(e){if(e.attr("id").indexOf("_terms")!==-1){e.find("li").removeClass("termCorrect").removeClass("defn_termWrong").removeClass("termOutOfPalette").addClass("unselectedTerm")}else{var t=e.attr("id").replace("termBucket","definition");var n=e.attr("id").replace("termBucket","correctness");var r=e.find("li");if(r.length===0){e.find("span").css("display","block");e.parent().removeClass("termCorrect").removeClass("defn_termWrong").addClass("unselectedTerm");$("#"+t).removeClass("termCorrect").removeClass("defn_termWrong").addClass("defnColUnselectedTerm");$("#"+n).html("")}else if(r[0].getAttribute("termNum")===e.attr("id")[e.attr("id").length-1]){e.parent().removeClass("unselectedTerm").removeClass("defn_termWrong").addClass("termCorrect");r.removeClass("unselectedTerm").removeClass("defn_termWrong").addClass("termCorrect").addClass("termOutOfPalette");$("#"+t).removeClass("defn_termWrong").removeClass("defnColUnselectedTerm").addClass("termCorrect");$("#"+n).html('<span class="ansGreenCheck">✓</span>')}else{e.parent().removeClass("termCorrect").removeClass("defn_termWrong").addClass("unselectedTerm");$("#"+t).removeClass("defnColUnselectedTerm").addClass("defn_termWrong");r.removeClass("unselectedTerm").removeClass("termCorrect").addClass("termOutOfPalette");$("#"+n).html('<span class="ansRedX">✗</span>')}}}function n(){var t=$("[id^="+e+"_termBucket]");var n=0;var r=t.length;for(var i=0;i<t.length;i++){var s=t[i];if($("#"+s.id).attr("dummy")=="1"){r--;continue}var o=$("#"+s.id).find("li");if(o.length===0){}else if(o[0].getAttribute("termNum")===s.id[s.id.length-1]){n++}else{}}if(n==r){document.getElementById("srfSectionID").value="DefMatch";document.getElementById("srfQuestionID").value=e;document.getElementById("srfAnswer").value="";document.getElementById("srfCorrectAnswer").value="";document.getElementById("srfGrade").value=1;document.getElementById("srfSubmitButton").click()}}function i(){if(!r){document.getElementById("srfSectionID").value="DefMatch";document.getElementById("srfQuestionID").value=e;document.getElementById("srfAnswer").value="-";document.getElementById("srfCorrectAnswer").value="-";document.getElementById("srfGrade").value="-";document.getElementById("srfSubmitButton").click();r=true}}var r=false;var s;var o;$("[id^="+e+"_terms], [id^="+e+"_termBucket]").sortable({connectWith:"[id^="+e+"_terms], [id^="+e+"_termBucket]",cancel:".definitionMatch_instruction",placeholder:"definitionMatch_emptyPlaceholder",start:function(e,t){s=t.item.parent();t.item.removeClass("termCorrect").removeClass("defn_termWrong").removeClass("termOutOfPalette").addClass("unselectedTerm")},over:function(t,n){$("#"+e+" .definitionMatch_instruction").fadeOut("fast");if(o){o.removeClass("definitionMatch_termBucketHighlight")}if(n.placeholder.parent().attr("id").match(/_terms/)){n.placeholder.parent().addClass("definitionMatch_termBucketHighlight");o=n.placeholder.parent()}else{n.placeholder.parent().parent().addClass("definitionMatch_termBucketHighlight");o=n.placeholder.parent().parent()}},stop:function(r,i){var u=i.item.parent().attr("id");if(o){o.removeClass("definitionMatch_termBucketHighlight")}if(u.indexOf("_termBucket")!==-1){var a=i.item.parent().find("li");if(a.length===2){var f;var l;if(a[0].getAttribute("termNum")==i.item.attr("termNum")){f=1;l=0}else{f=0;l=1}if(a[f].getAttribute("termNum")!==i.item.parent().attr("id")[i.item.parent().attr("id").length-1]){var c=document.getElementById(e+"_terms");c.appendChild(a[f])}else{var c=document.getElementById(e+"_terms");c.appendChild(a[l])}}}t(i.item.parent());t(s);t($("#"+e+"_terms"));n()}}).disableSelection();$("#"+e+"_resetButton").click(function(){var n=$("[id^="+e+"_terms], [id^="+e+"_termBucket]").find("li");n.remove();n.sort(function(e,t){return t.innerHTML>e.innerHTML});$("#"+e+"_terms").append(n);var r=$("[id^="+e+"_terms], [id^="+e+"_termBucket]");for(var i=0;i<r.length;i++){t($("#"+r[i].id))}$("#"+e+" .definitionMatch_instruction").fadeTo("slow",1)});$("#"+e+"_resetButton").click()}
+</script>
+
+<!--Razvrsti korake v pravilnem vrstnem redu, da boš prišel do želenega operacijskega sistema.  -->
+
+<div id="Q1" style="width: 450px;"><div class="definitionMatch_termBank">
+ <ul id="Q1_terms" class="sortableContainer ui-sortable" style="border">
+ <li class="ui-state-default unselectedTerm" termnum="1">ZAČETEK: proces štrikanja puloverja</li>
+ <li class="ui-state-default unselectedTerm" termnum="2">ČAKANJE: priprava pletilk in volne</li>
+ <li class="ui-state-default unselectedTerm" termnum="3">IZVAJANJE: štrikanje</li>
+ <li class="ui-state-default unselectedTerm" termnum="4">SPANJE: babici se ena pletilka nesrečno zlomi</li>
+  <li class="ui-state-default unselectedTerm" termnum="5">ČAKANJE: vnuk prinese iz predala drugo pletilko</li>
+   <li class="ui-state-default unselectedTerm" termnum="6">IZVAJANJE: nadaljevanje štrikanja</li>
+    <li class="ui-state-default unselectedTerm" termnum="7">KONEC: pulover je končan</li>
+ </ul>
+</div><br>
+<table class="tDefault defMatchTable">
+  <tr>
+    <td class="unselectedTerm defnRow" style="width: 350px !important">
+      <ul id="Q1_termBucket1" class="sortableContainer termBucket ui-sortable" dummy="0">
+      <span class="definitionMatch_instruction" style="display: block; opacity: 1;">Povleci in spusti gradnik</span></ul>
+    </td>
+    <td id="Q1_definition1" class="defnCol defnColUnselectedTerm" style="width: 70px !important"><span>1.</span></td>
+    <td id="Q1_correctness1" class="defnColCorr" style="width: 30px !important"></td>
+  </tr>
+  <tr>
+    <td class="unselectedTerm defnRow" style="width: 350px !important">
+      <ul id="Q1_termBucket2" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
+	</td>
+    <td id="Q1_definition2" class="defnCol defnColUnselectedTerm" style="width: 70px !important"><span>2.</span></td>
+    <td id="Q1_correctness2" class="defnColCorr" style="width: 30px !important"></td>
+  </tr>
+  <tr>
+    <td class="unselectedTerm defnRow" style="width: 350px !important">
+      <ul id="Q1_termBucket3" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
+	</td>
+    <td id="Q1_definition3" class="defnCol defnColUnselectedTerm" style="width: 70px !important"><span>3.</span></td>
+    <td id="Q1_correctness3" class="defnColCorr" style="width: 30px !important"></td>
+  </tr>
+  <tr>
+    <td class="unselectedTerm defnRow" style="width: 350px !important">
+      <ul id="Q1_termBucket4" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
+	</td>
+    <td id="Q1_definition4" class="defnCol defnColUnselectedTerm" style="width: 70px !important"><span>4.</span></td>
+    <td id="Q1_correctness4" class="defnColCorr" style="width: 30px !important"></td>
+  </tr>
+  
+    <tr>
+    <td class="unselectedTerm defnRow" style="width: 350px !important">
+      <ul id="Q1_termBucket5" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
+	</td>
+    <td id="Q1_definition5" class="defnCol defnColUnselectedTerm" style="width: 70px !important"><span>5.</span></td>
+    <td id="Q1_correctness5" class="defnColCorr" style="width: 30px !important"></td>
+  </tr>
+  
+    <tr>
+    <td class="unselectedTerm defnRow" style="width: 350px !important">
+      <ul id="Q1_termBucket6" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
+	</td>
+    <td id="Q1_definition6" class="defnCol defnColUnselectedTerm" style="width: 70px !important"><span>6.</span></td>
+    <td id="Q1_correctness6" class="defnColCorr" style="width: 30px !important"></td>
+  </tr>
+  
+    <tr>
+    <td class="unselectedTerm defnRow" style="width: 350px !important">
+      <ul id="Q1_termBucket7" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
+	</td>
+    <td id="Q1_definition7" class="defnCol defnColUnselectedTerm" style="width: 70px !important"><span>7.</span></td>
+    <td id="Q1_correctness7" class="defnColCorr" style="width: 30px !important"></td>
+  </tr>
+</table>
+<button type="button" class="btn-blue"  id="Q1_resetButton">Ponastavi</button></div>
+<script>initDefinitionMatch("Q1");</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index8.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index10.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">301/423</span></div></div>
+</body></html>

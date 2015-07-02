@@ -1,0 +1,258 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Digitalni razkorak </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index2.html";
+  }if (e.keyCode == 39) {
+ window.location = "index4.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Vplivi informacijskih tehnologij na posameznika</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul class="on" id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503" style="color: black; font-weight: 600;">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      <li><a href="index1.html" >Nove ekonomske priložnosti in nevarnosti <span class="page_numbers">404</span></a></li>
+      <li><a href="index2.html" >Nove oblike dela <span class="page_numbers">405</span></a></li>
+      <li class="on"><a href="#">Digitalni razkorak <span class="page_numbers">406</span></a></li>
+      <li><a href="index4.html" >Digitalni razkorak <span class="page_numbers">407</span></a></li>
+      <li><a href="index5.html" >Zasebnost v informacijski družbi <span class="page_numbers">408</span></a></li>
+      <li><a href="index6.html" >Odvisnost in nove tehnologije <span class="page_numbers">409</span></a></li>
+      <li><a href="index7.html" >Odvisnost in nove tehnologije <span class="page_numbers">410</span></a></li>
+      <li><a href="index8.html" >Spletno nadlegovanje <span class="page_numbers">411</span></a></li>
+      <li><a href="index9.html" >Spletno nadlegovanje <span class="page_numbers">412</span></a></li>
+      <li><a href="index10.html" >Spletno nadlegovanje <span class="page_numbers">413</span></a></li>
+      <li><a href="index11.html" >Spletno nadlegovanje <span class="page_numbers">414</span></a></li>
+      <li><a href="index12.html" >Povzetek <span class="page_numbers">415</span></a></li>
+      <li><a href="index13.html" >Naloge <span class="page_numbers">416</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Vplivi informacijskih tehnologij na posameznika | Digitalni razkorak</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Digitalni razkorak</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Digitalni razkorak je neenakost, ki jo povzroči nezmožnost dostopa ali sposobnosti uporabe informacijskih tehnologij. Neenakost je lahko med posamezniki v določeni družbi (na primer med prebivalci Slovenije) ali pa med različnimi družbami.<br />
+
+<br />
+
+Najpomembnejši razlogi za digitalni razkorak med posamezniki so:<br />
+
+<ul>
+
+	<li>veščine in digitalna pismenost,</li>
+
+	<li>geografska lokacija,</li>
+
+	<li>starost,</li>
+
+	<li>družbeno-ekonomski položaj in</li>
+
+	<li>fizična zmožnost posameznika.</li>
+
+</ul>
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+<h2>Veščine in digitalna pismenost</h2>  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Tudi če ima posameznik možnost dostopa do novih tehnologij, jih bo lahko uporabljal le če bo imel dovolj znanja za njihovo uporabo. Za uporabo novih tehnologij je ključna digitalna pismenost. Za digitalno pismenost označujemo znanje, ki ga mora imeti uporabnik za uporabo računalnikov, pametnih telefonov in drugih naprav. Digitalno pismen posameznik mora tudi razumeti pomen informacij in znati jih uporabljati preko omrežij. Sicer pa lahko uporabo IKT delimo na:<br />
+
+<br />
+
+<b>Računalniška pismenost</b>. Kdor je računalniško pismen, zna rokovati z informacijsko-komunikacijsko tehnologijo (IKT) tako, da samostojno uporablja osnovne uporabniške računalniške programe, tudi nove. Pri tem obvlada delo z datotekami: od iskanja do stiskanja in prenašanja.<br />
+
+<br />
+
+<b>Razbremenitev pri delu</b> je raven, ki jo dosežemo, ko osnovno rokovanje z informacijsko-komunikacijsko tehnologijo (IKT) tako dobro obvladamo, da nam samo po sebi ne predstavlja napora. Potem predstavlja vsaka smiselna uporaba računalnika razbremenitev pri delu.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+<b>Delamo stvari, ki jih do sedaj nismo</b>. Računalnik nam zaradi svoje hitrosti in drugih lastnosti omogoča, da delamo stvari, ki jih do sedaj nismo zmogli. Kot primer navedimo: preverjanje črkovanja, preverjanje pravilnosti (električnih) shem, preoblikovanje slik, pregledovanje množice podatkov po svetu, analiza podatkov, analiza kaj–če, reinženiring proizvodnje ipd.<br />
+
+<br />
+
+<b>Uporaba sistemov za intenzivno uporabo znanja</b> predstavlja najvišjo raven uporabe informacijsko-komunikacijske tehnologije (IKT). Za uporabo teh sistemov potrebujemo poleg računalniške pismenosti tudi ustvarjalnost. Primeri uporabe teh sistemov so: ekspertni sistemi, inteligentna analiza podatkov, pomoč pri odločanju ipd.<br />
+
+<br />
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- galerija --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+  <article class="gallery">
+                        <div class="gallery-preview interaktivnaNaloga" id="image_wrap_156">
+                       <img src="ravni-uporabe-ikt.png" style="height:300px; display: block;margin: 0 auto;"/>
+</div><div class="besediloObSliki" title="Ravni uporabe IKT"> Ravni uporabe IKT </div>       <div class="gallery-items">
+       <div class="gallery-items-group gallery-items-group-active">
+           <img id="83" src="ravni-uporabe-iktThumbnail.png" alt="ravni-uporabe-ikt.png<>Ravni uporabe IKT" height="75" data-fullimg="ravni-uporabe-ikt.png"  class="active capNone" />
+           <img id="83" src="little_and_large_1280Thumbnail.png" alt="little_and_large_1280.jpg<>Digitalni razkorak zaradi starosti" height="75" data-fullimg="little_and_large_1280.jpg"  class=" capNone" />
+           <img id="83" src="who_is_looking_whoThumbnail.png" alt="who_is_looking_who.jpg<>Digitalni razkorak zaradi ekonomskega položaja" height="75" data-fullimg="who_is_looking_who.jpg"  class=" capNone" />
+   </div>
+          <a class="gallery-items-next"></a>
+              <a class="gallery-items-prev"></a>
+       </div>
+  </article></div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index2.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index4.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">406/423</span></div></div>
+</body></html>

@@ -1,0 +1,401 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> *Implementacija s povezanim seznamom </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<link rel="stylesheet" href="../css/codemirrorepl.css">
+<script type="text/javascript" src="../js/skulpt/codemirrorepl.js"></script>
+<script type="text/javascript" src="../js/skulpt/repl.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt-stdlib.js"></script>
+<script type="text/javascript" src="../js/skulpt/python.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index11.html";
+  }if (e.keyCode == 39) {
+ window.location = "index13.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Zaporedje</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul class="on" id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209" style="color: black; font-weight: 600;">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Zaporedje <span class="page_numbers">136</span></a></li>
+      <li><a href="index1.html" >Zaporedje <span class="page_numbers">137</span></a></li>
+      <li><a href="index2.html" >Implementacija s tabelo elementov <span class="page_numbers">138</span></a></li>
+      <li><a href="index3.html" >Implementacija s tabelo elementov <span class="page_numbers">139</span></a></li>
+      <li><a href="index4.html" >Pythonov modul <span class="page_numbers">140</span></a></li>
+      <li><a href="index5.html" >*Implementacija s povezanim seznamom <span class="page_numbers">141</span></a></li>
+      <li><a href="index6.html" >*Implementacija s povezanim seznamom <span class="page_numbers">142</span></a></li>
+      <li><a href="index7.html" >*Implementacija s povezanim seznamom <span class="page_numbers">143</span></a></li>
+      <li><a href="index8.html" >*Implementacija s povezanim seznamom <span class="page_numbers">144</span></a></li>
+      <li><a href="index9.html" >*Implementacija s povezanim seznamom <span class="page_numbers">145</span></a></li>
+      <li><a href="index10.html" >*Implementacija s povezanim seznamom <span class="page_numbers">146</span></a></li>
+      <li><a href="index11.html" >*Implementacija s povezanim seznamom <span class="page_numbers">147</span></a></li>
+      <li class="on"><a href="#">*Implementacija s povezanim seznamom <span class="page_numbers">148</span></a></li>
+      <li><a href="index13.html" >Vrsta in sklad <span class="page_numbers">149</span></a></li>
+      <li><a href="index14.html" >Vrsta in sklad <span class="page_numbers">150</span></a></li>
+      <li><a href="index15.html" >Vrsta in sklad <span class="page_numbers">151</span></a></li>
+      <li><a href="index16.html" >Vrsta in sklad <span class="page_numbers">152</span></a></li>
+      <li><a href="index17.html" >Povzetek <span class="page_numbers">153</span></a></li>
+      <li><a href="index18.html" >Naloge <span class="page_numbers">154</span></a></li>
+      <li><a href="index19.html" >Naloge <span class="page_numbers">155</span></a></li>
+      <li><a href="index20.html" >Naloge <span class="page_numbers">156</span></a></li>
+      <li><a href="index21.html" >Naloge <span class="page_numbers">157</span></a></li>
+      <li><a href="index22.html" >Naloge <span class="page_numbers">158</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Zaporedje | *Implementacija s povezanim seznamom</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>*Implementacija s povezanim seznamom</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+ <!-- applet --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<p><div align="justify">
+
+Ustvari nov pythonov program in v njem uvozi modul <code>povezaniSeznam.py</code> (glej spodaj). V programu napiši in preizkusi funkcijo <code>Poisci(povSeznam, element)</code>, ki vrne indeks prvega vozlišča, ki vsebuje podani element. »Prvo vozlišče« pomeni vozlišče z najmanjšim položajem, ne z najmanjšim indeksom. Če elementa v seznamu ni, naj funkcija vrne vrednost −1.
+
+</div></p>
+<div class='interaktivnaNaloga'>
+<!-- Skulpt stdlib extended with "povezaniSeznam.py" module -->
+<script src="skulpt-stdlib-extended.js"></script> 
+<script type="text/javascript">
+function outf4(text) {
+  var mypre4 = document.getElementById("output4");
+  mypre4.innerHTML = mypre4.innerHTML + text;
+}
+function builtinRead4(x) {
+  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    throw "File not found: '" + x + "'";
+  return Sk.builtinFiles["files"][x];
+}
+function runit4() {
+    var prog = editor4.getValue();
+    var mypre4 = document.getElementById("output4");
+    mypre4.innerHTML = '';
+    Sk.canvas = "mycanvas4";
+    Sk.pre = "output4";
+    Sk.configure({output:outf4, read:builtinRead4});
+    try {
+        eval(Sk.importMainWithBody("<stdin>",false,prog));
+    }
+    catch(e) {
+        alert(e.toString())
+    }
+}
+function clearit4() {
+    var mypre4 = document.getElementById("output4");
+    mypre4.innerHTML = '';
+}
+function solveit4() {
+  editor4.setValue("import povezaniSeznam as sez\n\n# Vrne indeks prvega vozlišča, ki vsebuje\n# podani element.\ndef Poisci(povSeznam, element):\n  # Pričnemo v začetnem vozlišču.\n  i = sez.IndeksZacetnega(povSeznam)\n\n  # Potujemo po verigi vozlišč, dokler\n  # ne pridemo do konca oziroma dokler\n  # ne naletimo na iskani element.\n  while i != 0:\n    if sez.Element(povSeznam, i) == element:\n      return i\n    i = sez.IndeksNaslednika(povSeznam, i)\n\n  # Elementa nismo našli.\n  return -1\n\n# Preizkusimo funkcijo.\nps = sez.Ustvari()\nprint('Povezani seznam za zaporedje KARTA')\nsez.DodajNaZacetek(ps, 'T')\nsez.DodajNaKonec(ps, 'A')\nsez.DodajNaZacetek(ps, 'R')\nsez.DodajNaZacetek(ps, 'A')\nsez.DodajNaZacetek(ps, 'K')\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z\\\n        elementom A: ' + str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')\n\nprint('')\nprint('Izločimo prvo vozlišče z\\\n      elementom A ...')\nsez.Izloci(ps, indeks)\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z\\\n        elementom A: ' + str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')\n\nprint('')\nprint('Izločimo edino preostalo vozlišče z\\\n       elementom A ...')\nsez.Izloci(ps, indeks)\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z\\\n        elementom A: ' + str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')");
+}
+</script>
+
+<div style="width:500px">
+<form>
+<textarea id="code4">import povezaniSeznam as sez
+
+# Vrne indeks prvega vozlišča, ki vsebuje
+# podani element.
+def Poisci(povSeznam, element):
+  pass
+
+# Preizkusimo funkcijo.
+ps = sez.Ustvari()
+print('Povezani seznam za zaporedje KARTA')
+sez.DodajNaZacetek(ps, 'T')
+sez.DodajNaKonec(ps, 'A')
+sez.DodajNaZacetek(ps, 'R')
+sez.DodajNaZacetek(ps, 'A')
+sez.DodajNaZacetek(ps, 'K')
+sez.IzpisiVse(ps)
+indeks = Poisci(ps, 'A')
+if indeks >= 0:
+  print('Indeks prvega vozlišča z\
+        elementom A: ' + str(indeks))
+else:
+  print('Vozlišče z elementom A ne obstaja.')
+
+print('')
+print('Izločimo prvo vozlišče z\
+      elementom A ...')
+sez.Izloci(ps, indeks)
+sez.IzpisiVse(ps)
+indeks = Poisci(ps, 'A')
+if indeks >= 0:
+  print('Indeks prvega vozlišča z\
+        elementom A: ' + str(indeks))
+else:
+  print('Vozlišče z elementom A ne obstaja.')
+
+print('')
+print('Izločimo edino preostalo vozlišče z\
+       elementom A ...')
+sez.Izloci(ps, indeks)
+sez.IzpisiVse(ps)
+indeks = Poisci(ps, 'A')
+if indeks >= 0:
+  print('Indeks prvega vozlišča z\
+        elementom A: ' + str(indeks))
+else:
+  print('Vozlišče z elementom A ne obstaja.')</textarea>
+<button type="button" class="btn-blue"  onclick="runit4()">Izvedi</button>
+<button type="button" class="btn-blue"  onclick="clearit4()">Počisti</button>
+<button type="button" class="btn-blue"  onclick="showPopup('show_tip4', '', '', '', '', 1 , 'div.feedback-draggable', 50);">Namig</button>
+<button type="button" class="btn-blue"  onclick="solveit4()">Rešitev</button>
+</form>
+</div>
+
+<div id="show_tip4" class="feedback-content-top button-hover hideall" style="display: none; width: 520px">
+<div class="feedback-draggable">
+<div class="close" onclick="hidePopup()">
+</div>
+</div>
+<div class="feedback-content-container">
+<div align="justify">
+Po zgledu funkcije <code>Zaporedje</code> se sprehodi po verigi vozliščih seznama. Ko naletiš na vozlišče, ki vsebuje podani element, vrni indeks vozlišča.
+</div>
+</div>
+</div>
+
+
+<div class="rounded" style="width:500px">
+<pre id="output4"></pre>
+</div>
+
+<script>
+var editor4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
+  lineNumbers: true,
+  matchBrackets: true,
+  mode: "python",
+  //theme: "mbo"
+});
+editor4.setSize(460, 320);
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+ <!-- applet --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_dejstvo splosna_obvezna_znanja">
+    <span class="triangle triangle-red"></span>
+<p><div align="justify">
+
+Pomanjkljivost naše predstavitve povezanega seznama je v tem, da pri izločanju elementov v tabeli vozlišč nastajajo luknje (izločena vozlišča), ki jih nikoli ne zapolnimo, saj nova vozlišča vedno dodajamo na konec tabele vozlišč. Na ta način bi nam lahko dolgoročno zmanjkalo pomnilniškega prostora, četudi bi seznam vseboval razmeroma malo elementov. Napiši in preizkusi modul <code>varcenPovezaniSeznam.py</code>, ki povezani seznam implementira tako, da novo vozlišče vedno zapolni eno od lukenj, na konec tabele pa se doda samo v primeru, če tabela vozlišč ne vsebuje nobene luknje.
+
+</div></p>
+<div class='interaktivnaNaloga'>
+<script type="text/javascript">
+function outf5(text) {
+  var mypre5 = document.getElementById("output5");
+  mypre5.innerHTML = mypre5.innerHTML + text;
+}
+function builtinRead5(x) {
+  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    throw "File not found: '" + x + "'";
+  return Sk.builtinFiles["files"][x];
+}
+function runit5() {
+    var prog = editor5.getValue();
+    var mypre5 = document.getElementById("output5");
+    mypre5.innerHTML = '';
+    Sk.canvas = "mycanvas5";
+    Sk.pre = "output5";
+    Sk.configure({output:outf5, read:builtinRead5});
+    try {
+        eval(Sk.importMainWithBody("<stdin>",false,prog));
+    }
+    catch(e) {
+        alert(e.toString())
+    }
+}
+function clearit5() {
+    var mypre5 = document.getElementById("output5");
+    mypre5.innerHTML = '';
+}
+function solveit5() {
+  editor5.setValue("# Ta modul vsebuje osnovne operacije za delo\n# s povezanim seznamom, ki pri dodajanju\n# izkorišča luknje. Seznam je predstavljen\n# kot tabela [vozlisca, luknje], kjer je\n# 'vozlisca' tabela vozlišč, 'luknje' pa\n# tabela indeksov lukenj.\n\n# Ustvari in vrne prazen povezani seznam.\ndef Ustvari():\n  vozlisca = [[0, 0, 0]]\n  luknje = []\n  return [vozlisca, luknje]\n\n# Pomožna funkcija, ki vrne tabelo vozlišč\n# povezanega seznama. Z začetnim podčrtajem\n# označimo, da je funkcija namenjena samo\n# za uporabo znotraj modula. (To je stvar\n# dogovora; python še vedno omogoča\n# klicanje funkcije izven modula.)\ndef _Vozlisca(povSeznam):\n  return povSeznam[0]\n\n# Pomožna funkcija, ki vrne tabelo indeksov\n# lukenj.\ndef _Luknje(povSeznam):\n  return povSeznam[1]\n\n# Vrne število elementov (vozlišč)\n# povezanega seznama.\ndef SteviloElementov(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][0]\n\n# Vrne indeks začetnega vozlišča povezanega\n# seznama.\ndef IndeksZacetnega(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][1]\n\n# Vrne indeks naslednika vozlišča na\n# podanem indeksu.\ndef IndeksNaslednika(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][1]\n\n# Vrne indeks končnega vozlišča povezanega\n# seznama.\ndef IndeksKoncnega(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][2]\n\n# Vrne indeks predhodnika vozlišča na\n# podanem indeksu.\ndef IndeksPredhodnika(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][2]\n\n# Vrne element, ki ga hrani vozlišče s\n# podanim indeksom.\ndef Element(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][0]\n\n# Doda podani element na konec povezanega\n# seznama.\ndef DodajNaKonec(povSeznam, element):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks trenutnega končnega\n  # vozlišča seznama. Po dodajanju bo to\n  # vozlišče postalo prejšnje končno\n  # vozlišče.\n  indeksPrejKoncnega = vozlisca[0][2]\n\n  # Vozlišče vpišemo v prvo luknjo. Če\n  # lukenj ni, ga dodamo na konec tabele.\n  # Dodano vozlišče nima naslednika, njegov\n  # predhodnik pa postane prejšnje končno\n  # vozlišče.\n  if len(luknje) > 0:\n    # Vrni indeks zadnje luknje in jo\n    # odstrani iz tabele lukenj.\n    indeksDodanega = luknje.pop()\n    vozlisca[indeksDodanega] = \\\n    [element, 0, indeksPrejKoncnega]\n  else:\n    indeksDodanega = len(vozlisca)\n    vozlisca.append([element, 0,\n                     indeksPrejKoncnega])\n\n  # Dodano vozlišče postane naslednik\n  # prejšnjega končnega vozlišča.\n  vozlisca[indeksPrejKoncnega][1] = \\\n  indeksDodanega\n\n  # Dodano vozlišče postane tudi novo\n  # končno vozlišče seznama.\n  vozlisca[0][2] = indeksDodanega\n\n  # Število elementov se poveča za 1.\n  vozlisca[0][0] += 1\n\n# Ustvari novo vozlišče s podanim elementom\n# in ga v seznam poveže tako, da vozlišče na\n# podanem indeksu postane njegov naslednik.\ndef Vstavi(povSeznam, indeks, element):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks naslednika in\n  # predhodnika vozlišča, ki ga bomo dodali.\n  indeksNasl = indeks\n  indeksPred = vozlisca[indeks][2]\n\n  # Vozlišče vpišemo v prvo luknjo. Če\n  # lukenj ni, ga dodamo na konec tabele.\n  if len(luknje) > 0:\n    # Vrni indeks zadnje luknje in jo\n    # odstrani iz tabele lukenj.\n    indeksDodanega = luknje.pop()\n    vozlisca[indeksDodanega] = \\\n    [element, indeksNasl, indeksPred]\n  else:\n    indeksDodanega = len(vozlisca)\n    vozlisca.append([element, indeksNasl,\n                     indeksPred])\n\n  # Vozlišče povežemo z njegovim\n  # predhodnikom in naslednikom.\n  vozlisca[indeksPred][1] = indeksDodanega\n  vozlisca[indeksNasl][2] = indeksDodanega\n\n  # Število elementov se poveča za 1.\n  vozlisca[0][0] += 1\n\n# Doda novo vozlišče s podanim elementom\n# na začetek povezanega seznama.\ndef DodajNaZacetek(povSeznam, element):\n  i = IndeksZacetnega(povSeznam)\n  Vstavi(povSeznam, i, element)\n\n# Iz seznama izloči vozlišče s podanim\n# indeksom.\ndef Izloci(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks naslednika in\n  # predhodnika vozlišča, ki ga želimo\n  # odstraniti.\n  indeksNasl = vozlisca[indeks][1]\n  indeksPred = vozlisca[indeks][2]\n\n  # »Obvozimo« vozlišče.\n  vozlisca[indeksPred][1] = indeksNasl\n  vozlisca[indeksNasl][2] = indeksPred\n\n  # Število elementov se zmanjša za 1.\n  vozlisca[0][0] -= 1\n\n  # Dodamo indeks izločenega vozlišča v\n  # tabelo lukenj.\n  luknje.append(indeks)\n\n# Iz seznama izloči začetno vozlišče.\ndef IzlociZacetnega(povSeznam):\n  Izloci(povSeznam,\n         IndeksZacetnega(povSeznam))\n\n# Iz seznama izloči končno vozlišče.\ndef IzlociKoncnega(povSeznam):\n  Izloci(povSeznam,\n         IndeksKoncnega(povSeznam))\n\n# Pomožna funkcija, ki vrne tabelo z\n# elementi povezanega seznama (po vrsti\n# od začetnega do končnega elementa).\ndef Zaporedje(povSeznam):\n  i = IndeksZacetnega(povSeznam)\n  elementi = []\n  while i != 0:\n    elementi.append(Element(povSeznam, i))\n    i = IndeksNaslednika(povSeznam, i)\n  return elementi\n\n# Pomožna funkcija, ki vrne tabelo z\n# elementi povezanega seznama (po vrsti\n# od končnega do začetnega elementa).\ndef ZaporedjeNazaj(povSeznam):\n  i = IndeksKoncnega(povSeznam)\n  elementi = []\n  while i != 0:\n    elementi.append(Element(povSeznam, i))\n    i = IndeksPredhodnika(povSeznam, i)\n  return elementi\n\n# Pomožna funkcija, ki izpiše zgradbo\n# podanega povezanega seznama in zaporedje,\n# ki ga seznam predstavlja. Zaporedje se\n# izpiše v obeh smereh (od začetnega do\n# končnega in od končnega do začetnega\n# elementa).\ndef IzpisiVse(povSeznam):\n  print(povSeznam)\n  print('Zaporedje od začetka do konca :'\n        + str(Zaporedje(povSeznam)))\n  print('Zaporedje od konca do začetka :'\n        + str(ZaporedjeNazaj(povSeznam)))\n\n# Ta funkcija se izvede, če datoteko\n# poženemo kot samostojen program.\ndef main():\n  print('Povezani seznam za zap. MIZNA')\n  ps = Ustvari() # trenutno zaporedje: <>\n  DodajNaKonec(ps, 'Z')\n  DodajNaZacetek(ps, 'I')\n  DodajNaKonec(ps, 'N')\n  DodajNaZacetek(ps, 'M')\n  DodajNaKonec(ps, 'A')\n  IzpisiVse(ps)\n\n  print()\n  print('Izločimo N ...')\n  indeks = IndeksKoncnega(ps)\n  indeks = IndeksPredhodnika(ps, indeks)\n  Izloci(ps, indeks)\n  IzpisiVse(ps)\n\n  print()\n  print('Dodamo R na konec ...')\n  DodajNaKonec(ps, 'R')\n  IzpisiVse(ps)\n\n  print()\n  print('Izločimo prva dva elementa ...')\n  IzlociZacetnega(ps)\n  IzlociZacetnega(ps)\n  IzpisiVse(ps)\n\n  print()\n  print('Dodamo A na konec ...')\n  DodajNaKonec(ps, 'A')\n  IzpisiVse(ps)\n\n  print()\n  print('Vstavimo J pred končni A ...')\n  indeks = IndeksKoncnega(ps)\n  Vstavi(ps, indeks, 'J')\n  IzpisiVse(ps)\n\nif __name__ == '__main__':\n  main()");
+}
+</script>
+
+<div style="width:500px">
+<form>
+<textarea id="code5"></textarea>
+<button type="button" class="btn-blue"  onclick="runit5()">Izvedi</button>
+<button type="button" class="btn-blue"  onclick="clearit5()">Počisti</button>
+<button type="button" class="btn-blue"  onclick="showPopup('show_tip5', '', '', '', '', 1 , 'div.feedback-draggable', 50);">Namig</button>
+<button type="button" class="btn-blue"  onclick="solveit5()">Rešitev</button>
+</form>
+</div>
+
+<div id="show_tip5" class="feedback-content-top button-hover hideall" style="display: none; width: 520px">
+<div class="feedback-draggable">
+<div class="close" onclick="hidePopup()">
+</div>
+</div>
+<div class="feedback-content-container">
+<div align="justify">
+Indekse lukenj hrani v posebni tabeli. Povezani seznam predstavi kot tabelo <code>[vozlisca, luknje]</code>, kjer je <code>vozlisca</code> tabela vozlišč, <code>luknje</code> pa tabela indeksov lukenj. Da bodo tvoje funkcije učinkovite, indekse lukenj v tabeli dodajaj in odvzemaj samo na koncu.
+</div>
+</div>
+</div>
+
+
+<div class="rounded" style="width:500px">
+<pre id="output5"></pre>
+</div>
+
+<script>
+var editor5 = CodeMirror.fromTextArea(document.getElementById("code5"), {
+  lineNumbers: true,
+  matchBrackets: true,
+  mode: "python",
+  //theme: "mbo"
+});
+editor5.setSize(460, 255);
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index11.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index13.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">148/423</span></div></div>
+</body></html>

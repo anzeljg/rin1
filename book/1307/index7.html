@@ -1,0 +1,363 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Datotečni sistem </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index6.html";
+  }if (e.keyCode == 39) {
+ window.location = "index8.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Datoteke in organizacija podatkov</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul class="on" id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307" style="color: black; font-weight: 600;">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+      <li><a href="index1.html" >Datoteke <span class="page_numbers">272</span></a></li>
+      <li><a href="index2.html" >Imeniki in hierarhična organizacija datotek <span class="page_numbers">273</span></a></li>
+      <li><a href="index3.html" >Naslavljanje datotek in poti do datoteke <span class="page_numbers">274</span></a></li>
+      <li><a href="index4.html" >Organizacija diska in particije <span class="page_numbers">275</span></a></li>
+      <li><a href="index5.html" >Organizacija diska <span class="page_numbers">276</span></a></li>
+      <li><a href="index6.html" >Datotečni sistem <span class="page_numbers">277</span></a></li>
+      <li class="on"><a href="#">Datotečni sistem <span class="page_numbers">278</span></a></li>
+      <li><a href="index8.html" >Povzetek <span class="page_numbers">279</span></a></li>
+      <li><a href="index9.html" >Naloge <span class="page_numbers">280</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Datoteke in organizacija podatkov | Datotečni sistem</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+
+<!-- Samostojno besedilo --> 
+  <div class='wrapper-top'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Ker zelo pogosto velikost bloka ni dovolj za zapis celotne datoteke, se 
+
+dogovorimo, da se na začetku bloka nahaja dovolj pomnilnika za naslov do
+
+naslednjega bloka ali zapis, ki nam pove, da se v tem bloku datoteka 
+
+konča - EOF (<i>ang. end-of-file</i>).
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- dopolnjevanje - Cloze --> 
+  <div class='wrapper' id='wrap53'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<h3><div align="justify">
+
+V naši pomnilni enoti so zapisane tri datoteke z besedilom.<br />
+
+<br />
+
+<center>
+
+<img src="zapis_datoteke_v_bloke.png" height="165" width="500" /><br />
+
+<i>Na sliki vidimo 10 blokov iz naše pomnilne enote. Vsak blok je velik 8 bajtov.</i>
+
+</center>
+
+<br />
+
+<ul>
+
+	<li>1. datoteka se nahaja v bloku 2 in bloku 3 in ima vsebino &quot;Vsebina datoteke&quot;.</li>
+
+	<li>2. datoteka se nahaja v bloku 5 in ima vsebino &quot;Kakadu.&quot;.</li>
+
+	<li>3. datoteka se začne v bloku 1 in ima vsebino &quot;Datoteko zapišemo v zaporedje blokov.&quot;. </li>
+
+</ul>
+
+V katerih blokih je zapisana 3. datoteka?
+
+</div></h3>
+<div id="cloze53_7" class="clozeBlock">
+<input type="hidden" name="clozeFlag53_7.strictMarking" id="clozeFlag53_7.strictMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag53_7.checkCaps" id="clozeFlag53_7.checkCaps" value="false"/>
+
+<input type="hidden" name="clozeFlag53_7.instantMarking" id="clozeFlag53_7.instantMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag53_7.listing" id="clozeFlag53_7.listing" value="0"/>
+
+<input type="hidden" name="clozeFlag53_7.dropdown" id="clozeFlag53_7.dropdown" value="False"/>
+
+<input type="hidden" name="clozeFlag53_7.equallength" id="clozeFlag53_7.equallength" value="False"/>
+
+Odgovor: 3. datoteka je zapisana v blok 
+<u>1</u>
+, blok 
+<u>4</u>
+, blok 
+<u>6</u>
+, blok 
+<u>7</u>
+ in blok 
+<u>8</u>
+.
+
+
+<div class="blockb">
+
+<input type="button" class="btn-blue" name="submit53_7" value="Preveri" id="submit53_7" onClick='clozeSubmit("53_7")'/>
+<input type="button" class="btn-blue" name="restart53_7" value="Za&#269;ni znova" style="display: none;" id="restart53_7" onClick='clozeRestart("53_7")'/>
+<span id="clozeScore53_7" class="rezultat"></span>
+<input type="button" class="btn-orange" name="53_7showAnswersButton" value="Prika&#382;i odgovore" style="display: none;" id="showAnswersButton53_7" onClick='fillClozeInputs("53_7")'/>
+</div>
+</div></div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Iz zgleda vidimo, da datoteka ni nujno zapisana v zaporednih blokih. Če so zaporedni bloki na voljo (niso zasedeni z drugimi podatki), se datoteka seveda zapiše v zaporedne bloke. Če pa ni dovolj prostih zaporednih blokov, se zasedejo bloki, ki so na voljo.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Tako dobimo razpršene ali <b>fragmentirane</b> (<i>ang. fragmented</i>) zapise datotek po celotni pomnilni enoti. S pogostim pisanjem, brisanjem in spreminjanjem zapisov datotek na pomnilni enoti se razpršenost ali fragmentiranost zapisov datotek na pomnilni enoti veča. S tem se upočasnjuje delovanje pomnilne enote in pojavi se potreba po <b>defragmentaciji </b>(<i>ang. defragmentation</i>) pomnilne enote. <br />
+
+<br />
+
+<b>Defragmentacija pomnilne enote</b> je postopek urejanja zapisa datotek v čim bolj strnjene in zaporedne nize blokov. S tem bistveno pohitrimo delovanje pomnilne enote.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+<h2>Bloki in podatkovni nosilec</h2>  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><span style="font-size: 15px; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline" id="docs-internal-guid-5fbe43a6-a53a-24be-e647-ae612c766b53">Podatkovni nosilec (kot je disk) je urejen v vrsto blokov določene velikost.</span></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><center>
+
+<img src="bloki_OsX.png" height="146" width="500" /><br />
+
+<i>V konzoli so izpisani osnovni podatki o podatkovnih nosilcih (ime nosilca, velikost posameznega bloka, število blokov na nosilcu, velikost nosilca v bajtih ...)</i>
+
+</center></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- dopolnjevanje - Cloze --> 
+  <div class='wrapper' id='wrap96'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<h3>Na sliki vidimo, da je podatkovni nosilec &quot;/dev/disk1&quot; sestavljen iz blokov, ki so veliki 512 B. Podatkovni nosilec vsebuje 974 368 768 blokov. <br />
+
+<br />
+
+Koliko GB pomnilnika je velik naš disk?</h3>
+<div id="cloze96_7" class="clozeBlock">
+<input type="hidden" name="clozeFlag96_7.strictMarking" id="clozeFlag96_7.strictMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag96_7.checkCaps" id="clozeFlag96_7.checkCaps" value="false"/>
+
+<input type="hidden" name="clozeFlag96_7.instantMarking" id="clozeFlag96_7.instantMarking" value="false"/>
+
+<input type="hidden" name="clozeVar96_7.feedbackId" id="clozeVar96_7.feedbackId" value="ta96_8"/>
+
+<input type="hidden" name="clozeFlag96_7.listing" id="clozeFlag96_7.listing" value="0"/>
+
+<input type="hidden" name="clozeFlag96_7.dropdown" id="clozeFlag96_7.dropdown" value="False"/>
+
+<input type="hidden" name="clozeFlag96_7.equallength" id="clozeFlag96_7.equallength" value="False"/>
+
+<p>
+
+Naš disk je velik 
+<u>464,6</u>
+ GB. (rezultat zaokroži na eno decimalno mesto)
+
+</p>
+
+
+<div class="blockb">
+
+<input type="button" class="btn-blue" name="submit96_7" value="Preveri" id="submit96_7" onClick='clozeSubmit("96_7");getFeedback(1,0,"96","odziv")'/>
+<input type="button" class="btn-blue" name="restart96_7" value="Za&#269;ni znova" style="display: none;" id="restart96_7" onClick='showAnswer("nmg96",4,1);clozeRestart("96_7")'/>
+<span id="clozeScore96_7" class="rezultat"></span>
+<input type="button" class="btn-orange" name="96_7showAnswersButton" value="Prika&#382;i odgovore" style="display: none;" id="showAnswersButton96_7" onClick='fillClozeInputs("96_7")'/>
+</div>
+</div><div id="nmg96" class="feedback-content-top button-hover hideall" style="display:none;"><div class="feedback-draggable">
+<div class="close" onclick='showAnswer("nmg96",4,1)'></div></div>
+<div class="feedback-content-container"><p id="feedback96">En blok je velik 512 B.<br />
+
+Število blokov na disku je 974 368 768.<br />
+
+Celoten disk vsebuje 974 368 768 * 512 B = 498 876 809 216 B.<br />
+
+Če želimo velikost diska prikazati v GB, moramo B pretvoriti.<br />
+
+Velikost diska = 498 876 809 216 B / 1024 = 487 184 384 kB<br />
+
+487 184 384 kB /1024 = 475 766 MB<br />
+
+475 766 MB /1024 = 464,6 GB<br />
+
+Naš disk je velik 464,6 GB.</p>
+</div></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index6.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index8.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">278/423</span></div></div>
+</body></html>

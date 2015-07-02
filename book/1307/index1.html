@@ -1,0 +1,332 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Datoteke </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index.html";
+  }if (e.keyCode == 39) {
+ window.location = "index2.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Datoteke in organizacija podatkov</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul class="on" id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307" style="color: black; font-weight: 600;">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+      <li class="on"><a href="#">Datoteke <span class="page_numbers">272</span></a></li>
+      <li><a href="index2.html" >Imeniki in hierarhična organizacija datotek <span class="page_numbers">273</span></a></li>
+      <li><a href="index3.html" >Naslavljanje datotek in poti do datoteke <span class="page_numbers">274</span></a></li>
+      <li><a href="index4.html" >Organizacija diska in particije <span class="page_numbers">275</span></a></li>
+      <li><a href="index5.html" >Organizacija diska <span class="page_numbers">276</span></a></li>
+      <li><a href="index6.html" >Datotečni sistem <span class="page_numbers">277</span></a></li>
+      <li><a href="index7.html" >Datotečni sistem <span class="page_numbers">278</span></a></li>
+      <li><a href="index8.html" >Povzetek <span class="page_numbers">279</span></a></li>
+      <li><a href="index9.html" >Naloge <span class="page_numbers">280</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Datoteke in organizacija podatkov | Datoteke</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Datoteke</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+V uvodu smo povedali, da so podatki na pomnilni enoti, kot je disk, zapisani v obliki datoteke. <b>Datoteka je torej osnovna organizacijska enota z računalnikom zapisanih podatkov.</b> Ker poznamo kar nekaj različnih vrst podatkov, smo ugotovili, da te podatke zapisujemo v različne vrste datotek. Na primer slike so drugače zapisane v datoteko kot besedilo, video ali zvok. Če želimo datoteko uporabiti (si datoteko s sliko ogledati ali datoteko z zvokom poslušati), potrebujemo vrsti datoteke primerno programsko in strojno opremo.
+
+<br />
+
+<br />
+
+V datoteko zapisujemo tudi programe. Takim datotekam rečemo <b>izvršljive datoteke</b> (<i>ang. executable file</i>). Ob zagonu takšne datoteke se izvede v njej zapisano zaporedje ukazov oziroma program.<br />
+
+<br />
+
+ 
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+<h2>Vrste datotek</h2>  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Ker je vsaka datoteka na nivoju pomnilne enote zapisana v obliki nizov ničel in enic (bitov), datoteke običajno ločimo eno od druge po podaljšku datoteke, ki je del njenega imena. Ime datoteke je običajno sestavljeno iz imena, pike in podaljška datoteke. Podaljšek datoteke operacijskemu sistemu (in tudi nam) pove, kakšna je vrsta datoteke in posledično, s katerim programom se jo da zagnati.<br />
+
+<br />
+
+V tabeli na desni si oglejmo nekatere najbolj pogoste vrste datotek in njihove tipične podaljške.<br />
+
+ 
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><table class='tDefault'  border="1" width="100%">
+
+	<tbody>
+
+		<tr>
+
+			<td><b>Vrsta vsebine</b></td>
+
+			<td><b>Podaljšek v obliki &quot;.podaljsek&quot;</b></td>
+
+			<td><b>Opis</b></td>
+
+		</tr>
+
+		<tr>
+
+			<td>Besedilo</td>
+
+			<td> .txt</td>
+
+			<td> Besedilo v ASCII obliki: čisto besedilo napisano v urejevalnikih, ki ne uporabljajo oblikovanja besedila. Ti programi so Notepad, Emacs, Crimson Editor in mnogi drugi.</td>
+
+		</tr>
+
+		<tr>
+
+			<td> </td>
+
+			<td>.c, .py, .php, .htm ...</td>
+
+			<td>V to skupino ASCII besedila spada tudi izvorna koda programov.</td>
+
+		</tr>
+
+		<tr>
+
+			<td> </td>
+
+			<td>.doc(x), .odt, .pages ... </td>
+
+			<td>Oblikovno obogateno besedilo zapisno v urejevalniku besedil, ki je namenjen oblikovanju besedila. Primeri so MS Word, OpenOffice, iWork Pages in mnogi drugi.</td>
+
+		</tr>
+
+		<tr>
+
+			<td>Slike</td>
+
+			<td>.bmp, .jpg, .png, .gif ... <br />
+
+			</td>
+
+			<td>Točkovne slike. BMP predstavja sliko v nezgoščenem točkovnem zapisu. Slike s podaljškom jpg, png in gif uporabljajo principe zgoščevanja zapisa. Zato zasedejo manj prostora v pomnilni enoti in so primerne npr. za objavo na spletu.  <br />
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td>Zvok</td>
+
+			<td>.wav, .mp3, .mid ...</td>
+
+			<td>Datoteki wav in mp3 vsebujeta posneti zvok. Zvok v primeru mp3 je zgoščen.<br />
+
+			Datoteka midi vsebuje opis zvoka z ukazi za tvorjenje (s sintetizatorjem zvoka).</td>
+
+		</tr>
+
+		<tr>
+
+			<td>Video</td>
+
+			<td>.avi, .mp4, .wmv ... </td>
+
+			<td>Videoposnetek. Te datoteke vsebujejo zapis gibljive slike in zapis zvoka. Datoteki mp4 in wmv sta datoteki z zgoščenim zapisom videa.<br />
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td>Zgoščeni podatki<br />
+
+			</td>
+
+			<td>.zip, .arj ...<br />
+
+			</td>
+
+			<td>Zgoščeni podatki, ki so zgoščeni s postopkom zgoščevanja brez izgube podatkov. Zgoščene podatke namreč moramo razširiti nazaj v izvorne, če jih želimo ponovno uporabiti.<br />
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td>Izvršljiva datoteka<br />
+
+			</td>
+
+			<td>.exe, .bat. ...<br />
+
+			</td>
+
+			<td>Datoteke, ki vsebujejo izvedljiv program. Izvršljive datoteke v operacijskem sistemu Unix nimajo podaljška. <br />
+
+			</td>
+
+		</tr>
+
+	</tbody>
+
+</table></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index2.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">272/423</span></div></div>
+</body></html>

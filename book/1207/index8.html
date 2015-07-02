@@ -1,0 +1,475 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Različni algoritmi za isti problem </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<link rel="stylesheet" href="../css/codemirrorepl.css">
+<script type="text/javascript" src="../js/skulpt/codemirrorepl.js"></script>
+<script type="text/javascript" src="../js/skulpt/repl.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt-stdlib.js"></script>
+<script type="text/javascript" src="../js/skulpt/python.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index7.html";
+  }if (e.keyCode == 39) {
+ window.location = "index9.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Osnovni pojmi algoritmike</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul class="on" id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207" style="color: black; font-weight: 600;">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+      <li><a href="index1.html" >Abstrakcija <span class="page_numbers">102</span></a></li>
+      <li><a href="index2.html" >Problem in primerek problema <span class="page_numbers">103</span></a></li>
+      <li><a href="index3.html" >Program <span class="page_numbers">104</span></a></li>
+      <li><a href="index4.html" >Algoritem in alternativni načini zapisa <span class="page_numbers">105</span></a></li>
+      <li><a href="index5.html" >Alternativni načini zapisa algoritma <span class="page_numbers">106</span></a></li>
+      <li><a href="index6.html" >Alternativni načini zapisa algoritma <span class="page_numbers">107</span></a></li>
+      <li><a href="index7.html" >Alternativni načini zapisa algoritma <span class="page_numbers">108</span></a></li>
+      <li class="on"><a href="#">Različni algoritmi za isti problem <span class="page_numbers">109</span></a></li>
+      <li><a href="index9.html" >*Pravilnost algoritma <span class="page_numbers">110</span></a></li>
+      <li><a href="index10.html" >*Pravilnost algoritma <span class="page_numbers">111</span></a></li>
+      <li><a href="index11.html" >*Pravilnost algoritma <span class="page_numbers">112</span></a></li>
+      <li><a href="index12.html" >*Ustavljivost algoritma <span class="page_numbers">113</span></a></li>
+      <li><a href="index13.html" >Povzetek <span class="page_numbers">114</span></a></li>
+      <li><a href="index14.html" >Naloge <span class="page_numbers">115</span></a></li>
+      <li><a href="index15.html" >Naloge <span class="page_numbers">116</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Osnovni pojmi algoritmike | Različni algoritmi za isti problem</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Različni algoritmi za isti problem</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Program, funkcija, naravni jezik, psevdokoda in diagram poteka so različni načini za zapis istega algoritma, torej <b>istega</b> postopka za reševanje programerskega problema. Včasih pa lahko problem rešimo na več bistveno različnih načinov, torej z več različnimi smiselnimi algoritmi.<br />
+
+<br />
+
+Problem MIN3 smo doslej reševali tako, da smo primerjali prvi dve števili, nato pa manjše od prvih dveh še s tretjim. Po dveh primerjavah smo natančno vedeli, katero število v podani trojici je najmanjše. Lahko pa se »pomikamo« od prvega števila do tretjega in v pomožni spremenljivki <code>naj</code> hranimo <b>doslej</b> najmanjše število. Na ta način dobimo <b>drugačen</b> algoritem:
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <div class='interaktivnaNaloga'>
+<script type="text/javascript">
+function outf(text) {
+  var mypre = document.getElementById("output");
+  mypre.innerHTML = mypre.innerHTML + text;
+}
+function builtinRead(x) {
+  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    throw "File not found: '" + x + "'";
+  return Sk.builtinFiles["files"][x];
+}
+function runit() {
+    var prog = editor.getValue();
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = '';
+    Sk.canvas = "mycanvas";
+    Sk.pre = "output";
+    Sk.configure({output:outf, read:builtinRead});
+    try {
+        eval(Sk.importMainWithBody("<stdin>",false,prog));
+    }
+    catch(e) {
+        alert(e.toString())
+    }
+}
+function clearit() {
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = '';
+}
+</script>
+
+<div style="width:500px">
+<form>
+<textarea id="code">def min3b(a, b, c):
+  naj = a
+  if b < naj:
+    naj = b
+  if c < naj:
+    naj = c
+  return naj
+
+print(min3b(19, 23, 27))</textarea>
+<button type="button" class="btn-blue"  onclick="runit()">Izvedi</button>
+<button type="button" class="btn-blue"  onclick="clearit()">Počisti</button>
+</form>
+</div>
+
+<div class="rounded" style="width:500px">
+<pre id="output"></pre>
+</div>
+
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+  lineNumbers: true,
+  matchBrackets: true,
+  mode: "python",
+  theme: "mbo"
+});
+editor.setSize(500, 150);
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Kako lahko različne algoritme primerjamo med seboj? Algoritmi, ki ne dajejo pravilnih rezultatov ali pa se pri nekaterih vhodih ne ustavijo, nas običajno ne zanimajo. Pravilne in ustavljive algoritme pa lahko primerjamo po sledečih kriterijih:<br />
+
+<br />
+
+<ul>
+
+	<li><b>Poraba časa</b>: Med dvema algoritmoma za podani problem bomo seveda raje izbrali tistega, ki bo za svoje izvajanje na računalniku pri večini vhodov (ali pa vsaj pri »povprečnem« vhodu) porabil manj časa. Ta kriterij je tako pomemben, da mu namenjamo celotno naslednjo učno enoto.</li>
+
+</ul>
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+<ul>
+
+	<li><b>Poraba prostora</b>: V računalniku imamo resda na voljo zelo veliko pomnilniškega prostora, vendar pa je ta še vedno omejen. Če delamo z velikimi množicami podatkov, moramo paziti, da algoritem ne porabi preveč dodatnega pomnilniškega prostora za svoje izvajanje.</li>
+
+	<li><b>Razumljivost</b>: Če pri porabi časa ali prostora ni bistvenih razlik, imamo raje algoritme, ki jih lažje razumemo.</li>
+
+	<li><b>Prilagodljivost</b>: Kako enostavno lahko algoritem prilagodimo tako, da bo deloval tudi za večje ali splošnejše različice problema?</li>
+
+</ul>
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Primerjajmo algoritma za problem MIN3. Kot bomo videli v naslednji učni enoti, lahko porabo časa ocenimo tako, da štejemo osnovne korake izvajanja algoritma; v našem primeru so to medsebojne primerjave dveh števil in prirejanja. Pri obeh algoritmih imamo pri poljubnem vhodu po dve primerjavi: pri prvem algoritmu najprej primerjamo prvo število z drugim, nato pa še manjše od obeh s tretjim, pri drugem algoritmu pa primerjamo najprej drugo, nato pa še tretje število s spremenljivko naj. Pri drugem algoritmu nekaj dodatnega časa vzamejo prirejanja, ki jih je lahko več kot pri prvem. Zaradi hitrosti današnjih računalnikov pa je ta razlika zanemarljiva. Glede porabe prostora sta oba algoritma enakovredna: poleg treh vhodnih spremenljivk oba uporabljata še spremenljivko <code>naj</code>. Razumljivost je subjektiven kriterij, zato presojo o tem prepuščamo našim bralkam in bralcem. Glede prilagodljivosti pa ima drugi algoritem prednost pred prvim. To boš spoznal(-a) pri reševanju naslednje naloge:
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- casestudy - besedilo z gumbi --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<h3><div align="justify">
+
+Razširi algoritma tako, da bosta reševala problem iskanja najmanjšega med podanimi <b>štirimi</b> števili. Algoritma zapiši kot pythonovi funkciji.
+
+</div></h3>
+<div class="popupb">
+<p></p><div id="viewq0b77g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b77g0" value="Rešitev" id="btnenabledq0b77g0" onClick='showAnswer("q0b77g0",1,1)' /></div>
+<div id="hideq0b77g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b77g0" value="Skrij" onClick='showAnswer("q0b77g0",0,1)'/></div>
+<div id="sq0b77g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b77g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<p>
+
+Prvi algoritem:
+
+</p>
+
+<div class="code">
+
+# Vrne najmanjše med podanimi štirimi števili.<br />
+
+def min4a(a, b, c, d):<br />
+
+<span class="tab2">if a &lt; b:</span><br />
+
+<span class="tab4"># Najmanjše število je a, c ali d.</span><br />
+
+<span class="tab4">if a &lt; c:</span><br />
+
+<span class="tab6"># Najmanjše število je a ali d.</span><br />
+
+<span class="tab6">if a &lt; d:</span><br />
+
+<span class="tab8">naj = a</span><br />
+
+<span class="tab6">else:</span><br />
+
+<span class="tab8">naj = d</span><br />
+
+<span class="tab4">else:</span><br />
+
+<span class="tab6"># Najmanjše število je c ali d.</span><br />
+
+<span class="tab6">if c &lt; d:</span><br />
+
+<span class="tab8">naj = c</span><br />
+
+<span class="tab6">else:</span><br />
+
+<span class="tab8">naj = d</span><br />
+
+<span class="tab2">else:</span><br />
+
+<span class="tab4"># Najmanjše število je b, c ali d.</span><br />
+
+<span class="tab4">if b &lt; c:</span><br />
+
+<span class="tab6"># Najmanjše število je b ali d.</span><br />
+
+<span class="tab6">if b &lt; d:</span><br />
+
+<span class="tab8">naj = b</span><br />
+
+<span class="tab6">else:</span><br />
+
+<span class="tab8">naj = d</span><br />
+
+<span class="tab4">else:</span><br />
+
+<span class="tab6"># Najmanjše število je c ali d.</span><br />
+
+<span class="tab6">if c &lt; d:</span><br />
+
+<span class="tab8">naj = c</span><br />
+
+<span class="tab6">else:</span><br />
+
+<span class="tab8">naj = d</span><br />
+
+<span class="tab2">return naj</span><br />
+
+<br />
+
+# kratek preizkus funkcije<br />
+
+print(min4a(10, 20, 30, 40))<br />
+
+print(min4a(10, 10, 30, 40))<br />
+
+print(min4a(20, 10, 30, 40))<br />
+
+print(min4a(20, 10, 10, 30))<br />
+
+print(min4a(20, 10, 0, 5))<br />
+
+print(min4a(20, 10, 5, 5))<br />
+
+print(min4a(20, 10, 5, 0))<br />
+
+</div>
+
+<br />
+
+<p>
+
+Drugi algoritem:
+
+</p>
+
+<div class="code">
+
+# Vrne najmanjše med podanimi štirimi števili.<br />
+
+def min4b(a, b, c, d):<br />
+
+<span class="tab2">naj = a</span><br />
+
+<span class="tab2">if b &lt; naj:</span><br />
+
+<span class="tab4">naj = b</span><br />
+
+<span class="tab2">if c &lt; naj:</span><br />
+
+<span class="tab4">naj = c</span><br />
+
+<span class="tab2">if d &lt; naj:</span><br />
+
+<span class="tab4">naj = d</span><br />
+
+<span class="tab2">return naj</span><br />
+
+<br />
+
+# kratek preizkus funkcije<br />
+
+print(min4b(10, 20, 30, 40))<br />
+
+print(min4b(10, 10, 30, 40))<br />
+
+print(min4b(20, 10, 30, 40))<br />
+
+print(min4b(20, 10, 10, 30))<br />
+
+print(min4b(20, 10, 0, 5))<br />
+
+print(min4b(20, 10, 5, 5))<br />
+
+print(min4b(20, 10, 5, 0))<br />
+
+</div></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index7.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index9.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">109/423</span></div></div>
+</body></html>

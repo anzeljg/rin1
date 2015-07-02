@@ -1,0 +1,502 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Logični izrazi </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<link rel="stylesheet" href="../css/codemirrorepl.css">
+<script type="text/javascript" src="../js/skulpt/codemirrorepl.js"></script>
+<script type="text/javascript" src="../js/skulpt/repl.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt.js"></script>
+<script type="text/javascript" src="../js/skulpt/skulpt-stdlib.js"></script>
+<script type="text/javascript" src="../js/skulpt/python.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index9.html";
+  }if (e.keyCode == 39) {
+ window.location = "index11.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Program in pogojni stavki</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul class="on" id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202" style="color: black; font-weight: 600;">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Program in pogojni stavki <span class="page_numbers">25</span></a></li>
+      <li><a href="index1.html" >Od zaporedja stavkov do programa <span class="page_numbers">26</span></a></li>
+      <li><a href="index2.html" >Program, zapisan v datoteki <span class="page_numbers">27</span></a></li>
+      <li><a href="index3.html" >Program v vgrajenem elementu znotraj učbenika <span class="page_numbers">28</span></a></li>
+      <li><a href="index4.html" >Interaktivni tolmač in samostojen program <span class="page_numbers">29</span></a></li>
+      <li><a href="index5.html" >Vhod in izhod <span class="page_numbers">30</span></a></li>
+      <li><a href="index6.html" >Vhod in izhod <span class="page_numbers">31</span></a></li>
+      <li><a href="index7.html" >Pogojni stavki <span class="page_numbers">32</span></a></li>
+      <li><a href="index8.html" >Pogojni stavki <span class="page_numbers">33</span></a></li>
+      <li><a href="index9.html" >Logični izrazi <span class="page_numbers">34</span></a></li>
+      <li class="on"><a href="#">Logični izrazi <span class="page_numbers">35</span></a></li>
+      <li><a href="index11.html" >Hrošči in razhroščevanje <span class="page_numbers">36</span></a></li>
+      <li><a href="index12.html" >*Prestrezanje izjem <span class="page_numbers">37</span></a></li>
+      <li><a href="index13.html" >Povzetek <span class="page_numbers">38</span></a></li>
+      <li><a href="index14.html" >Naloge <span class="page_numbers">39</span></a></li>
+      <li><a href="index15.html" >Naloge <span class="page_numbers">40</span></a></li>
+      <li><a href="index16.html" >Naloge <span class="page_numbers">41</span></a></li>
+      <li><a href="index17.html" >Naloge <span class="page_numbers">42</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Program in pogojni stavki | Logični izrazi</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+
+<!-- Samostojno besedilo --> 
+  <div class='wrapper-top'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Podobno kot ima množenje prednost pred seštevanjem, ima tudi operator <code>and</code> prednost pred operatorjem <code>or</code>, zato nam oklepajev v pogoju pri bloku <code>if</code> ne bi bilo treba pisati. Operator <code>not</code> pa ima prednost pred obema.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- casestudy - besedilo z gumbi --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<div class="popupb">
+<p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div valign="justify">
+
+Kakšne vrednosti imajo sledeči izrazi? Najprej odgovori, nato preveri!<br />
+
+<div class="code">
+
+not (3 &lt;= 5) or (6 == 3)<br />
+
+not ((3 &lt;= 5) and (6 == 3))<br />
+
+True or (1 == 2) and False<br />
+
+(True or (1 == 2)) and False<br />
+
+</div>
+
+</div></p><div id="viewq0b157g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b157g0" value="Rešitev" id="btnenabledq0b157g0" onClick='showAnswer("q0b157g0",1,1)' /></div>
+<div id="hideq0b157g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b157g0" value="Skrij" onClick='showAnswer("q0b157g0",0,1)'/></div>
+<div id="sq0b157g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b157g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div valign="justify">
+
+(a) <code>not (3 &lt;= 5) or (6 == 3)</code> računamo takole:<br />
+
+<div class="code">
+
+not (3 &lt;= 5) or (6 == 3)<br />
+
+not True or False<br />
+
+False or False<br />
+
+False<br />
+
+</div>
+
+<br />
+
+(b) <code>not ((3 &lt;= 5) and (6 == 3))</code> računamo takole:<br />
+
+<div class="code">
+
+not ((3 &lt;= 5) and (6 == 3))<br />
+
+not (True and False)<br />
+
+not False<br />
+
+True<br />
+
+</div>
+
+<br />
+
+(c) <code>True or (1 == 2) and False</code> računamo takole:<br />
+
+<div class="code">
+
+True or (1 == 2) and False<br />
+
+True or False and False<br />
+
+True or False<br />
+
+True<br />
+
+</div>
+
+<br />
+
+(d) <code>(True or (1 == 2)) and False</code> računamo takole:<br />
+
+<div class="code">
+
+<br />
+
+</div>
+
+(True or (1 == 2)) and False<br />
+
+(True or False) and False<br />
+
+True and False<br />
+
+False<br />
+
+</div></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div><h1>*Kratkostično vrednotenje logičnih izrazov</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <div class='interaktivnaNaloga'>
+<script type="text/javascript">
+function outf(text) {
+  var mypre = document.getElementById("output");
+  mypre.innerHTML = mypre.innerHTML + text;
+}
+function builtinRead(x) {
+  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    throw "File not found: '" + x + "'";
+  return Sk.builtinFiles["files"][x];
+}
+function runit() {
+    var prog = editor.getValue();
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = '';
+    Sk.canvas = "mycanvas";
+    Sk.pre = "output";
+    Sk.configure({output:outf, read:builtinRead});
+    try {
+        eval(Sk.importMainWithBody("<stdin>",false,prog));
+    }
+    catch(e) {
+        alert(e.toString())
+    }
+}
+function clearit() {
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = '';
+}
+</script>
+
+<div style="width:500px">
+<form>
+<textarea id="code">a = int(input('Vnesi celo število: '))
+if (a > 0) or (a < b):
+  print('tralala')
+else:
+  print('hopsasa')</textarea>
+<button type="button" class="btn-blue"  onclick="runit()">Izvedi</button>
+<button type="button" class="btn-blue"  onclick="clearit()">Počisti</button>
+</form>
+</div>
+
+<div class="rounded" style="width:500px">
+<pre id="output"></pre>
+</div>
+
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+  lineNumbers: true,
+  matchBrackets: true,
+  mode: "python",
+  theme: "mbo"
+});
+editor.setSize(500, 90);
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+
+<div align="justify">
+
+Poženimo program in vnesimo neko pozitivno celo število (npr. 3). Ker spremenljivka b ni definirana, bi se program moral še pred izpisom zaključiti z napako. Vendar pa se to ne zgodi. Program sporoči napako samo v primeru, če je vnešeno število negativno ali enako 0:<br />
+
+<div class="code">
+
+Vnesi celo število: <u>-2</u><br />
+
+Traceback (most recent call last):<br />
+
+<span class="tab2">File &quot;primer.py&quot;, line 4, in &lt;module&gt;</span><br />
+
+<span class="tab4">if (a &gt; 0) or (a &lt; b):</span><br />
+
+NameError: name 'b' is not defined<br />
+
+</div>
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Kaj se tu dogaja? Če sta podizraza v logičnem izrazu povezana z operatorjem <code>or</code> in je prvi podizraz resničen, potem je celoten izraz resničen <b>ne glede na vrednost drugega podizraza</b>. Zato se drugi podizraz izračuna samo v primeru, če je prvi izraz neresničen. V izrazu <code>(a &gt; 0) or (a &lt; b)</code> se bo podizraz <code>a &lt; b</code> izračunal samo v primeru, če velja <code>a &lt;= 0</code>. V nasprotnem primeru se bo podizraz <code>a &lt; b</code> preskočil, zato python spremenljivke <code>b</code> sploh ne bo videl. Temu načinu računanja logičnih izrazov pravimo <b>kratkostično računanje</b>.<br />
+
+<br />
+
+Podobno velja za operator <code>and</code>. Če sta podizraza povezana z operatorjem <code>and</code> in je prvi podizraz neresničen, potem je vrednost celotnega izraza neresnična ne glede na vrednost drugega podizraza, zato se v takšnem primeru drugi podizraz enostavno preskoči.<br />
+
+<br />
+
+Prejšnji primer se zdi nekoliko umeten, vendar pa nam kratkostično računanje logičnih izrazov velikokrat pride prav. Recimo pri programu za ugotavljanje, ali je prvo vnešeno število deljivo z drugim:
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <div class='interaktivnaNaloga'>
+<script type="text/javascript">
+function outf2(text) {
+  var mypre = document.getElementById("output2");
+  mypre.innerHTML = mypre.innerHTML + text;
+}
+function builtinRead2(x) {
+  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+    throw "File not found: '" + x + "'";
+  return Sk.builtinFiles["files"][x];
+}
+function runit2() {
+    var prog = editor2.getValue();
+    var mypre = document.getElementById("output2");
+    mypre.innerHTML = '';
+    Sk.canvas = "mycanvas2";
+    Sk.pre = "output2";
+    Sk.configure({output:outf2, read:builtinRead2});
+    try {
+        eval(Sk.importMainWithBody("<stdin>",false,prog));
+    }
+    catch(e) {
+        alert(e.toString())
+    }
+}
+function clearit2() {
+    var mypre = document.getElementById("output2");
+    mypre.innerHTML = '';
+}
+</script>
+
+<div style="width:500px">
+<form>
+<textarea id="code2">a = int(input('Vnesi prvo celo število: '))
+b = int(input('Vnesi drugo celo število: '))
+if (b != 0) and (a % b == 0):
+  print('DA')
+else:
+  print('NE')</textarea>
+<button type="button" class="btn-blue"  onclick="runit2()">Izvedi</button>
+<button type="button" class="btn-blue"  onclick="clearit2()">Počisti</button>
+</form>
+</div>
+
+<div class="rounded" style="width:500px">
+<pre id="output2"></pre>
+</div>
+
+<script>
+var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+  lineNumbers: true,
+  matchBrackets: true,
+  mode: "python",
+  theme: "mbo"
+});
+editor2.setSize(500, 110);
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- casestudy - besedilo z gumbi --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<div class="popupb">
+<p><div align="justify">
+
+Kaj se zgodi v primeru <code>b == 0</code>? Kaj bi se zgodilo v primeru, če python logičnih izrazov ne bi računal kratkostično?
+
+</div></p><div id="viewq0b164g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b164g0" value="Rešitev" id="btnenabledq0b164g0" onClick='showAnswer("q0b164g0",1,1)' /></div>
+<div id="hideq0b164g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b164g0" value="Skrij" onClick='showAnswer("q0b164g0",0,1)'/></div>
+<div id="sq0b164g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b164g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><div align="justify">
+
+V primeru <code>b == 0</code> se izpiše <code>NE</code>. Brez kratkostičnega računanja bi python tudi v primeru <code>b == 0</code> izračunal logični izraz <code>a % b == 0</code>. Ker ostanka pri deljenju z ničlo ni mogoče izračunati, bi se izvajanje programa zaključilo z napako.
+
+</div></p>
+</div></div>
+</div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index9.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index11.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">35/423</span></div></div>
+</body></html>

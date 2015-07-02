@@ -1,0 +1,125 @@
+/*
+===========================================================================
+eXe
+Copyright 2004-2005, University of Auckland
+style sheet for default theme
+
+Eum Exe
+projekti E-um, 2009
+===========================================================================
+*/
+.dropdown
+{
+color: #555;
+margin: 3px -22px 0 0;
+width: 143px;
+position: absolute;
+height: 17px;
+text-align:left;
+top:55px;
+-webkit-transform:rotate(270deg);
+	-moz-transform:rotate(270deg);
+	-o-transform: rotate(270deg);
+}
+
+.navigation{
+position: relative;
+left: 30px;
+top: 20px;
+}
+
+
+.submenu
+{
+background: #fff;
+position: absolute;
+top: -20px;
+left: 95px;
+z-index: 100;
+width: 165px;
+display: none;
+/*margin-left: 10px;
+padding: 40px 0 5px;*/
+border-radius: 6px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+.submenu li a
+{
+color: #555555;
+display: block;
+font-family: arial;
+font-weight: bold;
+padding: 6px 15px;
+cursor: pointer;
+text-decoration:none;
+border-bottom:solid 1px lightgray;
+}
+
+.submenu .selected{
+	color: #ff0000;
+	border-left:solid 3px red;
+	border-right:solid 3px red;
+}
+
+.submenu li a:hover{
+	background:#155FB0;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.account {
+	font-size: 11px;
+	line-height: 16px;
+	color: #555;
+	position: relative;
+	z-index: 110;
+	display: block;
+	padding: 11px 0 0 20px;
+	height: 28px;
+	width: 145px;
+	margin: -11px 0 0 -10px;
+	text-decoration: none;
+	cursor:pointer;
+	background: #DCDCDE;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.root{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	font-size: 11px;
+	padding: 11px 0 0 0px;
+	border-top:1px solid #dedede;
+}
+
+.rounded-corners {
+     -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+	box-shadow: -7px 1px 14px rgba(0, 0, 0, 0.5);
+}
+
+#main {
+margin-left: 20px;
+margin-right:auto;
+margin-top: 20px;
+position:relative;
+text-align:left;
+border:none;
+left: 120px;
+}
+
+#navigate-left{
+    left: -50px;
+    position: absolute;
+    top: 320px;
+}
+#navigate-right{
+    left: 1080px;
+    position: absolute;
+    top: 320px;
+}

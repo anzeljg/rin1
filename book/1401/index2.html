@@ -1,0 +1,456 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Created using eXeCute: http://exelearning.org -->
+<head>
+<style type="text/css">
+@import url(../css/normalize.css);
+@import url(../css/main.css);
+@import url(../css/jquery-ui.css);
+@import url(../css/nav.css);
+@import url(../css/jsxgraph.css);
+@import url(../css/kalkulator.css);
+@import url(../css/lightbox.css);
+@import url(../css/jplayer.css);
+</style><title> Uporaba omrežnega komuniciranja </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/eum.js"></script>
+<script type="text/javascript" src="../js/commoneum.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
+<script type="text/javascript" src="../js/options.js"></script>
+<script type="text/javascript" src="../js/kalkulator.js"></script>
+<script type="text/javascript" src="../js/jquery-exe.js"></script>
+<script type="text/javascript" src="../js/jquery-tools.js"></script>
+<script type="text/javascript" src="../js/gui/gui_core.js"></script>
+<script type="text/javascript" src="../js/gui/gui_help.js"></script>
+<script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/createjs.js"></script>
+<script type="text/javascript" src="../js/movieclip.js"></script>
+<script type="text/javascript" src="../js/povezovanje.js"></script>
+<script type="text/javascript" src="../js/underscore.js"></script>
+<script type="text/javascript" src="../js/transit.js"></script>
+<script type="text/javascript" src="../js/cloze.js"></script>
+<script type="text/javascript" src="../js/JSmol.js"></script>
+<script type="text/javascript" src="../js/jplayer.js"></script>
+<script type="text/x-mathjax-config">  
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
+$(document).keydown(function(e){
+if (e.keyCode == 37) { 
+ window.location = "index1.html";
+  }if (e.keyCode == 39) {
+ window.location = "index3.html";
+  }});
+</script></head>
+    <body>
+<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
+<input type="hidden" name="elo-id" id="elo-id" value="1"/>
+<!--navigacija-->
+    <nav id="nav">
+        <ul class="main">
+            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
+            <li class="topics"><a href="#">Kazalo</a></li>
+            <li class="pages"><a href="#">Strani</a></li>
+        </ul>
+    <ul>
+    <li id="textbook-title"><span>Utemeljitev pomena omrežij in komuniciranja</span></li>
+    </ul>
+    <ul class="meta">
+            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
+            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
+            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.00.zip">Prenos</a></li>
+            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
+        </ul>
+    </nav>
+    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
+     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
+     <img src="../img/by-nc-sa.eu.png" height="30px">
+    </div></div>
+<section id="nav-tabbed">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul class="accordion">
+      <li class="on" id="menu001"><a href="#">Uvod</a>
+      <ul id="submenu001" class="sub-menu">
+        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
+        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
+      <ul id="submenu002" class="sub-menu">
+        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
+        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
+        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
+        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
+        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
+        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
+        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
+        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
+        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
+        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
+        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
+        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu003"><a href="#">Sistemi</a>
+      <ul id="submenu003" class="sub-menu">
+        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
+        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
+        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
+        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
+        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
+        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
+        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
+        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
+        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
+        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
+      <ul class="on" id="submenu004" class="sub-menu">
+        <li class="on"><a href="../1401/index.html" id="unit1401" style="color: black; font-weight: 600;">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
+        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
+        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
+        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
+        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
+        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
+        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
+        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
+      </ul>
+      </li>
+      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
+      <ul id="submenu005" class="sub-menu">
+        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
+        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
+        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav></section>
+</section>
+
+<section id="nav-pages">
+  <nav class="tabs"></nav>
+  <section class="content"><nav>
+    <ul>
+      <li><a href="index.html" >Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
+      <li><a href="index1.html" >Komunikacija <span class="page_numbers">312</span></a></li>
+      <li class="on"><a href="#">Uporaba omrežnega komuniciranja <span class="page_numbers">313</span></a></li>
+      <li><a href="index3.html" >Pošiljanje in prenos podatkov <span class="page_numbers">314</span></a></li>
+      <li><a href="index4.html" >Nesreče pri prenosu podatkov <span class="page_numbers">315</span></a></li>
+      <li><a href="index5.html" >Povzetek <span class="page_numbers">316</span></a></li>
+      <li><a href="index6.html" >Naloge <span class="page_numbers">317</span></a></li>
+    </ul>
+  </nav></section>
+</section>
+
+<div class="container" id="nodeDecoration">
+            <nav class="breadcrumbs">
+                <ul>
+                <li style="float:left;"><span class="unit-path">Utemeljitev pomena omrežij in komuniciranja | Uporaba omrežnega komuniciranja</span></a></li> 
+        <li>&nbsp;</li>
+            </ul>
+            </nav>
+
+<section class="page page-left">
+<h1>Uporaba omrežnega komuniciranja</h1>
+ <div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+S hitrim tehnološkom napredkom in veliko rastjo interneta postaja računalniška komunikacija nepogrešljiv člen, ki povezuje ljudi in tehnologijo. Danes so z nekaj miškinimi kliki premostljive nekoč nepredstavljive geografske razdalje med celinami, računalniška omrežja pa uporabljamo vsepovsod: pri uporabi mobilnih telefonov, igranju iger, brskanju po spletu, učenju, delu, klepetanju, gledanju televizije in tako naprej. 
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+<!-- Samostojno besedilo --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <p><div align="justify">
+
+Pod pojmom <b>omrežno komuniciranje</b> navadno razumemo različne korake, ki so potrebni za prenos sporočil: aplikacija, ki jo uporabljamo, sprejme uporabnikov (npr. tvoj)  ukaz za pošiljanje sporočila, zato najprej oblikuje sporočilo, ki je skladno z nekim dogovorom ali računalniškim standardom.<br />
+
+<br />
+
+To sporočilo je potem treba iz človeku prijazne oblike (črk in številk) pretvoriti v računalniku prijazno obliko (ničle in enice), za tem razbiti na ustrezno velike enote za prenos po omrežju, ki jim rečemo <b>paketki</b>.<br />
+
+<br />
+
+Podobno kot na pošti računalnik vsak paketek opremi z naslovom, nato ga vrže v omrežje. <b>Omrežne naprave</b>, ki jim rečemo vozlišča ali usmerjevalniki, so podobna velikim cestnim križiščem: paketke usmerijo na pot, ki jih bo kar najhitreje pripeljala proti ciljnemu naslovu.<br />
+
+<br />
+
+Na cilju je potrebno paketke ponovno sestaviti skupaj v pravilnem vrstnem redu, da dobimo takšno sporočilo, kot je bilo oddano. Šele potem ga lahko sprejme aplikacija in ga prikaže svojemu uporabniku.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<section class="page page-right">
+<!-- Samostojno besedilo --> 
+<h2>Naloga</h2>  <div class='wrapper'>
+<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue"></span>
+<p><div align="justify">
+
+V spodnjem omrežju se na eni izmed omrežnih naprav pojavi sporočilo (pismo), ki ga moraš preko omrežja usmerjati do ciljne omrežne naprave (obarvane rdeče). Nalogo poizkusi opraviti tako, da boš sporočilo poslal po čim krajši poti ter pri tem porabil čim manj časa.
+
+</div></p>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div>
+ <!-- applet --> 
+  <div class='wrapper'>
+<div class="splosna_obvezna_znanja">
+ <div class='interaktivnaNaloga'>
+<script>
+var ratio = 0.7;
+var floor = Math.floor;
+</script>
+
+<style>
+#container_omrezja{
+  position: relative;
+  width: 480px;
+  height: 360px;
+}
+#myCanvas_task3 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.node_naloga1 {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+  background-image: url("hub.png");
+  background-color: #2B7CE9;
+  border-radius: 24px;
+}
+#node0 {
+  top: 44px;
+  left: 64px;
+}
+#node1 {
+  top: 38px;
+  left: 360px;
+}
+#node2 {
+  top: 130px;
+  left: 200px;
+}
+#node3 {
+  top: 190px;
+  left: 115px;
+}
+#node4 {
+  top: 205px;
+  left: 350px;
+}
+#node5 {
+  top: 290px;
+  left: 170px;
+}
+#node6 {
+  top: 295px;
+  left: 280px;
+}
+#package {
+  position: absolute;
+  width: 24px;
+  height: 18px;
+  z-index: 10;
+  background-color: white;
+  background-image: url("mail-closed.png");
+}
+/*
+#ELAPSED {
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  font-size: 25px;
+  width: 120px;
+  text-align: center;
+}
+#besedilo3 {
+  position: absolute;
+  top: 5px;
+  left: 100px;
+  font-size: 20px;
+}
+*/
+#zacetek_domaca1{
+  position: absolute;
+  z-index: 10;
+}
+#zacetek_task1{
+  position:absolute;
+  z-index: 10;
+}
+</style>
+
+<div id="container_omrezja">
+  <div class="node_naloga1" id="node0" onclick="move(this);"></div>
+  <div class="node_naloga1" id="node1" onclick="move(this);"></div>
+  <div class="node_naloga1" id="node2" onclick="move(this);"></div>
+  <div class="node_naloga1" id="node3" onclick="move(this);"></div>
+  <div class="node_naloga1" id="node4" onclick="move(this);"></div>
+  <div class="node_naloga1" id="node5" onclick="move(this);"></div>
+  <div class="node_naloga1" id="node6" onclick="move(this);"></div>
+  <div id="package"></div>
+<!--
+  <span id="ELAPSED">Čas: 00:00:00</span>
+  <div id="besedilo1"></div>
+  <div id="besedilo2"></div>
+  <div id="besedilo3"></div>
+//-->
+  <canvas id="myCanvas_task3" height="350" width="480"></canvas>
+</div>
+<div style="width:480px">
+  <button class="btn-blue" onclick="location.reload()" style="float:right">Ponastavi</button>
+  <span id="ELAPSED">Čas: 00:00:00</span>
+  <div id="besedilo3"></div>
+</div>
+
+<script>
+var draw_background_task1 = function () {
+  var c = document.getElementById("myCanvas_task3");
+  var ctx = c.getContext("2d");
+  var img = new Image();
+  img.src = 'omrezje_naloga1a.png';
+  img.onload = function() {
+    ctx.drawImage(img, 0, 0);
+  };
+}
+
+var connections = [[1, 3], [0, 4], [3, 4, 5], [0, 2, 5], [1, 2, 6], [2, 3, 6], [4, 5]];
+var position_package = 1;
+var target = 1;
+var jump = 0;
+var not_finished = true;
+
+var init = function () {
+  position_package = Math.floor((Math.random() * 6));
+  $("#package").css("top", ($("#node" + position_package).position().top + 12) + "px");
+  $("#package").css("left", ($("#node" + position_package).position().left + 9) + "px");
+
+  target = Math.floor((Math.random() * 6));
+  while (target === position_package) {
+    target = Math.floor((Math.random() * 6));
+  }
+
+  $("#node" + target).css("background-color", "red");
+  draw_background_task1();
+}
+
+var move = function (el) {
+  if (not_finished) {
+    if (seconds === -2) {
+      startTimer();
+    }
+    var p = $("#" + el.id);
+    var position = p.position();
+
+    var a = parseInt(el.id.substring(4, 5));
+
+    if (connections[position_package].indexOf(a) != -1) {
+      jump++;
+      $("#package").animate({
+        top: (position.top + 12) + "px",
+        left: (position.left + 9) + "px"
+      });
+      position_package = parseInt(el.id.substring(4, 5));
+
+      if (target === position_package) {
+        if (seconds === 1) {
+          sekunde = "sekundo";
+        } else if (seconds === 2) {
+          sekunde = "sekundi";
+        } else if (seconds < 5) {
+          sekunde = "sekunde";
+        } else {
+          sekunde = "sekund";
+        }
+
+        if (jump === 1) {
+          skok = "skok";
+        } else if (jump === 2) {
+          skok = "skoka";
+        } else if (jump < 5) {
+          skok = "skoke";
+        } else {
+          skok = "skokov";
+        }
+        not_finished = false;
+        stopTimer();
+        $("#besedilo3").text("Porabil(-a) si " + seconds + " " + sekunde + " in naredil(-a) si " + jump + " " + skok + ".");
+      }
+    }
+	else {
+      var t = $("#node" + position_package);
+      var position_t = t.position();
+
+      $("#package").animate({
+        left: (position_t.left + 30) + "px"
+      }, {
+        duration: 150
+      });
+
+      $("#package").animate({
+        left: (position_t.left + 5) + "px"
+      }, {
+        duration: 150
+      });
+
+      $("#package").animate({
+        left: (position_t.left + 10) + "px"
+      }, {
+        duration: 150
+      });
+    }
+  }
+}
+
+var seconds = -2;
+var ticker = null;
+
+function startTimer() {
+  seconds = 0;
+  ticker = setInterval("tick( )", 1000);
+  tick();
+}
+
+function stopTimer() {
+  clearInterval(ticker);
+}
+
+function tick() {
+  ++seconds;
+  var secs = seconds;
+  var hrs = Math.floor(secs / 3600);
+  secs %= 3600;
+  var mns = Math.floor(secs / 60);
+  secs %= 60;
+  var pretty = (hrs < 10 ? "0" : "") + hrs + ":" + (mns < 10 ? "0" : "") + mns + ":" + (secs < 10 ? "0" : "") + secs;
+  document.getElementById("ELAPSED").innerHTML = "Čas: " + pretty;
+}
+init();
+</script></div>
+</div>
+</div>
+<div style="clear:both;height:1px;overflow:hidden;"></div></section>
+<div class="paging-left"><a href="index1.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index3.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">313/423</span></div></div>
+</body></html>
