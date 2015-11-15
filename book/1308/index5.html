@@ -65,7 +65,7 @@ if (e.keyCode == 37) {
             <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
             <li class="print"><a href="../1901/index.html">Kolofon</a></li>
             <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.01.zip">Prenos</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.02.zip">Prenos</a></li>
             <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
         </ul>
     </nav>
@@ -238,45 +238,41 @@ Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemo
     <style>
         #scene_container_4 {
             position: relative;
-            width: 100%;
+            width: 450px;
             max-width: 450px;
-            height: 100%;
+            height: 350px;
             max-height: 350px;
             background-image: url("4_mitm_scr1.png");
             background-size: cover;
         }
-
         .package_mitm {
             position: absolute;
-            top: 62%;
-            left: 9%;
-            width: 15%;
-            height: 10%;
-            background-color: blanchedalmond;
+            top: 215px;
+            left: 40px;
+            width: 70px;
+            height: 35px;
+            background-color: cornsilk;
             border: 1px solid black;
-            border-radius: 15%;
+            border-radius: 4px;
             font-size: 90%;
             overflow: hidden;
-            font-weight: bold;
+            font-weight: normal;
             text-align: center;
         }
-
         .button_mitm {
             position: absolute;
-            top: 80%;
-            left: 37%;
-            width: 22%;
-            height: 10%;
-            min-width: 50px;
-            min-height: 20px;
+            top: 280px;
+            left: 170px;
+            width: 96px;
+            height: 28px;
+            min-width: 96px;
+            min-height: 28px;
             overflow: hidden;
         }
-
         #button_mitm_42 {
-            top: 10%;
-            left: 10%;
+            top: 30px;
+            left: 0px;
         }
-
         .unselectable {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -285,41 +281,36 @@ Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemo
             -ms-user-select: none;
             user-select: none;
         }
-
         #napadalec_tekst_4 {
             position: absolute;
-            top: 6%;
-            left: 58%;
+            top: 20px;
+            left: 250px;
             font-size: 90%;
             font-weight: bold;
         }
-
         #tekst_zmeda{
             position: absolute;
-            top: 80%;
-            left: 3%;
+            top: 280px;
+            left: 15px;
             font-size: 80%;
             text-align: center;
         }
-
-
     </style>
 
     <div id="scene_container_4">
         <div class="package_mitm" id="package_mitm_41">Peter
             <br/> 2017</div>
-        <div class="package_mitm" id="package_mitm_42" style="left: 39%">Peter</div>
-        <div class="package_mitm" id="package_mitm_43" style="left: 39%; top: 15%;">Peter</div>
-        <div  id="tekst_zmeda" >Uporabniško ime: <strong>Peter</strong></div>
-        <input class="button_mitm" id="button_mitm_41" type="submit" value="Avtentikacija" onclick="start_mitm_4();" />
-        <input class="button_mitm" id="button_mitm_42" type="submit" value="Napad" onclick="attack_mitm_4();" />
+        <div class="package_mitm" id="package_mitm_42" style="left: 176px">Peter</div>
+        <div class="package_mitm" id="package_mitm_43" style="left: 176px; top: 68px;">Peter</div>
+        <div id="tekst_zmeda" >Uporabniško ime: <strong>Peter</strong></div>
+        <input class="button_mitm btn-blue" id="button_mitm_41" type="submit" value="Avtentikacija" onclick="start_mitm_4();" />
+        <input class="button_mitm btn-blue" id="button_mitm_42" type="submit" value="Napad" onclick="attack_mitm_4();" />
         <div id="napadalec_tekst_4">Peter
             <br /> 2017</div>
 
     </div>
 
     <script>
-
         var gen_izziv_4 = function () {
             izziv_4 = Math.floor(Math.random() * 9000) + 1000;
         }
@@ -328,18 +319,14 @@ Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemo
             answer_4 = (izziv_4 * 2017) % 2027;
         }
 
-
-
         var geslo = "2017";
         var geslo_napad = "2017";
         var answer_napad = "";
-
 
         $("#package_mitm_41").hide();
         $("#package_mitm_42").hide();
         $("#package_mitm_43").hide();
         $("#napadalec_tekst_4").hide();
-
         $("#button_mitm_42").hide();
 
         var start_mitm_4 = function () {
@@ -349,29 +336,28 @@ Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemo
             answer_4 = gen_answer_4();
             $("#button_mitm_41").prop('disabled', true);
 
-            $("#button_mitm_41").css('color', '#D0D0D0');
             $("#button_mitm_33").css('cursor', 'auto');
 
             $("#package_mitm_41").html('Peter');
             $("#package_mitm_42").html('Peter');
 
             $("#package_mitm_41").css({
-                lineHeight: "250%"
+                lineHeight: "240%"
             });
             $("#package_mitm_42").css({
-                lineHeight: "250%"
+                lineHeight: "240%"
             });
             $("#package_mitm_42").css({
-                top: '62%'
+                top: '215px'
             });
             $("#package_mitm_41").fadeIn();
             $("#package_mitm_41").animate({
-                left: '73%'
+                left: '328px'
             }, {
                 duration: 2000
             });
             setTimeout('$("#package_mitm_42").show()', 1400);
-            setTimeout('$("#package_mitm_42").animate({top: "20%"},{duration: 1000})', 1350);
+            setTimeout('$("#package_mitm_42").animate({top: "70px"},{duration: 1000})', 1350);
             setTimeout('$("#package_mitm_42").hide()', 2600);
             setTimeout('$("#napadalec_tekst_4").show()', 2600);
             setTimeout('$("#napadalec_tekst_4").html("Peter")', 2600);
@@ -383,40 +369,36 @@ Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemo
 
             $("#package_mitm_41").fadeIn(1000);
             $("#package_mitm_41").animate({
-                left: '9%'
+                left: '40px'
             }, {
                 duration: 2000
             });
             $("#package_mitm_41").fadeOut(1000);
-
-
-
 
             setTimeout('$("#package_mitm_41").html("Peter <br />"+answer_4)', 7500);
             setTimeout('$("#package_mitm_42").html("Peter <br />"+answer_4)', 7500);
 
-            setTimeout('$("#package_mitm_42").css({top: "62%"})', 7500);
+            setTimeout('$("#package_mitm_42").css({top: "215px"})', 7500);
 
             $("#package_mitm_41").fadeIn();
             $("#package_mitm_41").animate({
-                left: '73%'
+                left: '328px'
             }, {
                 duration: 2000
             });
             setTimeout('$("#package_mitm_42").show()', 8900);
-            setTimeout('$("#package_mitm_42").animate({top: "20%"},{duration: 1000})', 8850);
+            setTimeout('$("#package_mitm_42").animate({top: "70px"},{duration: 1000})', 8850);
             setTimeout('$("#package_mitm_42").hide()', 10100);
             setTimeout('$("#napadalec_tekst_4").show()', 10100);
-            setTimeout('$("#napadalec_tekst_4").html("Peter <br /> ------- <br />Peter<br />"+answer_4)', 10100);
+            setTimeout('$("#napadalec_tekst_4").html("Peter <br /> -------- <br />Peter<br />"+answer_4)', 10100);
             setTimeout('answer_napad = answer_4;', 10100);
-
 
             $("#package_mitm_41").fadeOut(1000);
             setTimeout('$("#package_mitm_41").text("V redu!")', 11000);
-            setTimeout('$("#package_mitm_41").css({lineHeight: "250%"})', 11000);
+            setTimeout('$("#package_mitm_41").css({lineHeight: "240%"})', 11000);
             $("#package_mitm_41").fadeIn(1000);
             $("#package_mitm_41").animate({
-                left: '9%'
+                left: '40px'
             }, {
                 duration: 2000
             });
@@ -424,11 +406,7 @@ Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemo
 
             setTimeout('$("#button_mitm_41").prop("disabled", false)', 15000);
             setTimeout('$("#button_mitm_42").prop("disabled", false)', 15000);
-
-            setTimeout('$("#button_mitm_41").css("color", "#000000")', 15000);
-            setTimeout('$("#button_mitm_42").css("color", "#000000")', 15000);
             setTimeout('$("#button_mitm_42").show();', 15000);
-
         }
 
         var attack_mitm_4 = function () {
@@ -437,54 +415,48 @@ Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemo
             $("#package_mitm_43").html('Peter');
             $("#button_mitm_41").prop('disabled', true);
             $("#button_mitm_42").prop('disabled', true);
-            $("#button_mitm_41").css('color', '#D0D0D0');
-            $("#button_mitm_42").css('color', '#D0D0D0');
-
 
             $("#package_mitm_43").css({
-                lineHeight: "250%"
+                lineHeight: "240%"
             });
             $("#package_mitm_43").fadeIn();
             $("#package_mitm_43").animate({
-                top: '62%'
+                top: '215px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_43").animate({
-                left: '73%'
+                left: '328px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_43").fadeOut(1000);
-
 
             setTimeout('$("#package_mitm_43").html("Izziv <br /> "+izziv_4)', 3500);
             setTimeout('$("#package_mitm_43").css({lineHeight: "120%"})', 3500);
 
             $("#package_mitm_43").fadeIn(1000);
             $("#package_mitm_43").animate({
-                left: '39%'
+                left: '176px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_43").animate({
-                top: '20%'
+                top: '70px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_43").fadeOut(1000);
 
-
-
             setTimeout('$("#package_mitm_43").html("Peter <br />"+answer_napad)',7500);
             $("#package_mitm_43").fadeIn();
             $("#package_mitm_43").animate({
-                top: '62%'
+                top: '215px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_43").animate({
-                left: '73%'
+                left: '328px'
             }, {
                 duration: 1000
             });
@@ -496,32 +468,24 @@ Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemo
             else{
                 setTimeout('$("#package_mitm_43").html("Napaka!")', 11000);
             }
-            setTimeout('$("#package_mitm_43").css({lineHeight: "250%"})', 11000);
+            setTimeout('$("#package_mitm_43").css({lineHeight: "240%"})', 11000);
 
             $("#package_mitm_43").fadeIn(1000);
             $("#package_mitm_43").animate({
-                left: '39%'
+                left: '176px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_43").animate({
-                top: '20%'
+                top: '70px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_43").fadeOut(1000);
 
-
             setTimeout('$("#button_mitm_41").prop("disabled", false)', 15000);
             setTimeout('$("#button_mitm_42").prop("disabled", false)', 15000);
-            setTimeout('$("#button_mitm_41").css("color", "#000000")', 15000);
-            setTimeout('$("#button_mitm_42").css("color", "#000000")', 15000);
-
         }
-
-
-
-
     </script></div>
 </div>
 </div>

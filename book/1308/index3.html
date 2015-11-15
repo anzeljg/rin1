@@ -65,7 +65,7 @@ if (e.keyCode == 37) {
             <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
             <li class="print"><a href="../1901/index.html">Kolofon</a></li>
             <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.01.zip">Prenos</a></li>
+            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.02.zip">Prenos</a></li>
             <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
         </ul>
     </nav>
@@ -185,57 +185,50 @@ Avtentikacijo z geslom smo omenili že v uvodu. Spomnimo se, da za dostop do na�
     <style>
         #scene_container_1 {
             position: relative;
-            width: 100%;
+            width: 450px;
             max-width: 450px;
-            height: 100%;
+            height: 200px;
             max-height: 200px;
             background-image: url("1_mitm_mini.png");
             background-size: cover;
         }
-
         .package_mitm {
             position: absolute;
-            top: 34%;
-            left: 9%;
-            width: 15%;
-            height: 17%;
-            background-color: blanchedalmond;
+            top: 68px;
+            left: 40px;
+            width: 70px;
+            height: 35px;
+            background-color: cornsilk;
             border: 1px solid black;
-            border-radius: 15%;
-
+            border-radius: 4px;
             font-size: 90%;
             overflow:hidden;
-            font-weight: bold;
+            font-weight: normal;
             text-align: center;
         }
-
         .button_mitm {
             position: absolute;
-            top: 80%;
-            left: 39%;
-            width: 20%;
-            height: 10%;
-            min-width: 50px;
-            min-height: 20px;
+            top: 160px;
+            left: 175px;
+            width: 96px;
+            height: 28px;
+            min-width: 96px;
+            min-height: 28px;
             overflow: hidden;
-
         }
         #tekst_zmeda{
             position: absolute;
-            top: 80%;
-            left: 3%;
+            top: 160px;
+            left: 15px;
             font-size: 80%;
             text-align: center;
         }
     </style>
 
-
     <div id="scene_container_1">
         <div class="package_mitm" id="package_mitm_1">Peter <br/> 2017</div>
-        <input class="button_mitm" id="button_mitm_1" type="submit" value="Avtentikacija" onclick="start_mitm_1();"/>
+        <input class="button_mitm btn-blue" id="button_mitm_1" type="submit" value="Avtentikacija" onclick="start_mitm_1();"/>
         <div  id="tekst_zmeda" >Uporabniško ime: <strong>Peter</strong> <br/>Geslo: <strong>zmeda$3</strong></div>
-
-
     </div>
 
     <script>
@@ -250,14 +243,11 @@ Avtentikacijo z geslom smo omenili že v uvodu. Spomnimo se, da za dostop do na�
             setTimeout('$("#package_mitm_1").text("V redu!")',3500);
             $("#package_mitm_1").fadeIn(1000);
             $("#package_mitm_1").animate({left: '9%'},{duration: 2000});
-            setTimeout('$("#package_mitm_1").css({lineHeight: "250%"})', 3500);
+            setTimeout('$("#package_mitm_1").css({lineHeight: "240%"})', 3500);
             $("#package_mitm_1").fadeOut(1000);
             setTimeout('$("#button_mitm_1").prop("disabled", false)',6500);
-
         }
-
-    </script>
-</div>
+    </script></div>
 </div>
 </div>
 <div style="clear:both;height:1px;overflow:hidden;"></div>
@@ -320,90 +310,78 @@ razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
     <style>
         #scene_container_3 {
             position: relative;
-            width: 100%;
+            width: 450px;
             max-width: 450px;
-            height: 100%;
+            height: 350px;
             max-height: 350px;
             background-image: url("3_mitm_scr1.png");
             background-size: cover;
         }
-
-        .package_mitm {
+	.package_mitm_3 {
             position: absolute;
-            top: 62%;
-            left: 9%;
-            width: 15%;
-            height: 10%;
-            background-color: blanchedalmond;
+            top: 215px;
+            left: 40px;
+            width: 70px;
+            height: 35px;
+            background-color: cornsilk;
             border: 1px solid black;
-            border-radius: 15%;
+            border-radius: 4px;
             font-size: 90%;
             overflow: hidden;
-            font-weight: bold;
+            font-weight: normal;
             text-align: center;
         }
-
-        .button_mitm {
+        .button_mitm_3 {
             position: absolute;
-            top: 80%;
-            left: 37%;
-            width: 22%;
-            height: 10%;
-            min-width: 50px;
-            min-height: 20px;
+            top: 280px;
+            left: 170px;
+            width: 96px;
+            height: 28px;
+            min-width: 96px;
+            min-height: 28px;
             overflow: hidden;
         }
-
         #button_mitm_32{
-            top: 10%;
-            left: 10%;
+            top: 30px;
+            left: 0px;
         }
-
-
         #napadalec_tekst_3 {
             position: absolute;
-            top: 6%;
-            left: 58%;
+            top: 20px;
+            left: 250px;
             font-size: 90%;
             font-weight: bold;
             text-align: center;
         }
-
         #button_kriptiranje_3 {
-            top: 74%;
-            font-size: 71%;
-            line-height: 150%;
-            font-weight: bold;
-            height: 5%;
-            background-color: #CC3333;
+            top: 250px;
+            font-size: 60%;
+            font-weight: normal;
             text-align: center;
-            cursor: pointer;
         }
-
-        #tekst_zmeda{
+        #tekst_zmeda_3{
             position: absolute;
-            top: 80%;
-            left: 3%;
+            top: 280px;
+            left: 15px;
             font-size: 80%;
             text-align: center;
         }
 
-
     </style>
 
     <div id="scene_container_3">
-        <div class="package_mitm" id="package_mitm_31">Peter
+        <div class="package_mitm_3" id="package_mitm_31">Peter
             <br/> zmeda$3</div>
-        <div class="package_mitm" id="package_mitm_32" style="left: 39%">Peter
+        <div class="package_mitm_3" id="package_mitm_32" style="left: 176px">Peter
             <br/> zmeda$3</div>
-        <div class="package_mitm" id="package_mitm_33" style="left: 39%; top: 15%;">Peter
+        <div class="package_mitm_3" id="package_mitm_33" style="left: 176px; top: 53px;">Peter
             <br/> zmeda$3</div>
-        <div  id="tekst_zmeda" >Uporabniško ime: <strong>Peter</strong> <br/>Geslo: <strong>zmeda$3</strong></div>
-        <input class="button_mitm" id="button_mitm_31" type="submit" value="Avtentikacija" onclick="start_mitm_3();" />
-        <input class="button_mitm" id="button_mitm_32" type="submit" value="Napad" onclick="attack_mitm_3();" />
+        <div  id="tekst_zmeda_3" >Uporabniško ime: <strong>Peter</strong> <br/>Geslo: <strong>zmeda$3</strong></div>
+        <input class="button_mitm_3 btn-blue" id="button_mitm_31" type="submit" value="Avtentikacija" onclick="start_mitm_3();" />
+        <input class="button_mitm_3 btn-blue" id="button_mitm_32" type="submit" value="Napad" onclick="attack_mitm_3();" />
         <div id="napadalec_tekst_3">Peter
             <br /> zmeda$3</div>
-        <input class="button_mitm" id= "button_kriptiranje_3" value="Vklopi kriptiranje" onclick="vklop_kriptiranje_3();"/>
+        <input class="button_mitm_3 btn-green" id= "button_kriptiranje_3" type="submit" value="Vklopi kriptiranje" onclick="vklop_kriptiranje_3();"/>
 
     </div>
 
@@ -422,7 +400,6 @@ razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
 
             $("#button_mitm_31").prop('disabled', true);
 
-            $("#button_mitm_31").css('color', '#D0D0D0');
             $("#button_mitm_33").css('cursor', 'auto');
 
             $("#button_kriptiranje_3").prop('disabled', true);
@@ -436,16 +413,16 @@ razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
                 lineHeight: "120%"
             });
             $("#package_mitm_32").css({
-                top: '62%'
+                top: '215px'
             });
             $("#package_mitm_31").fadeIn();
             $("#package_mitm_31").animate({
-                left: '73%'
+                left: '328px'
             }, {
                 duration: 2000
             });
             setTimeout('$("#package_mitm_32").show()', 1400);
-            setTimeout('$("#package_mitm_32").animate({top: "20%"},{duration: 1000})', 1350);
+            setTimeout('$("#package_mitm_32").animate({top: "70px"},{duration: 1000})', 1350);
             setTimeout('$("#package_mitm_32").hide()', 2600);
             setTimeout('$("#napadalec_tekst_3").show()', 2600);
             setTimeout('$("#napadalec_tekst_3").html("Peter <br/> "+geslo)',2600);
@@ -454,10 +431,10 @@ razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
 
             $("#package_mitm_31").fadeOut(1000);
             setTimeout('$("#package_mitm_31").text("V redu!")', 3500);
-            setTimeout('$("#package_mitm_31").css({lineHeight: "250%"})', 3500);
+            setTimeout('$("#package_mitm_31").css({lineHeight: "240%"})', 3500);
             $("#package_mitm_31").fadeIn(1000);
             $("#package_mitm_31").animate({
-                left: '9%'
+                left: '40px'
             }, {
                 duration: 2000
             });
@@ -465,8 +442,6 @@ razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
             setTimeout('$("#button_mitm_31").prop("disabled", false)', 7500);
             setTimeout('$("#button_mitm_32").prop("disabled", false)', 7500);
             setTimeout('$("#button_kriptiranje_3").prop("disabled", false)', 7500);
-            setTimeout('$("#button_mitm_31").css("color", "#000000")', 7500);
-            setTimeout('$("#button_mitm_32").css("color", "#000000")', 7500);
             setTimeout('$("#button_mitm_32").show();',7500);
 
         }
@@ -475,20 +450,18 @@ razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
             $("#package_mitm_33").html('Peter <br/> '+geslo_napad);
             $("#button_mitm_31").prop('disabled', true);
             $("#button_mitm_32").prop('disabled', true);
-            $("#button_mitm_31").css('color', '#D0D0D0');
-            $("#button_mitm_32").css('color', '#D0D0D0');
             $("#button_kriptiranje_3").prop('disabled', true);
             $("#package_mitm_33").css({
                 lineHeight: "120%"
             });
             $("#package_mitm_33").fadeIn();
             $("#package_mitm_33").animate({
-                top: '62%'
+                top: '215px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_33").animate({
-                left: '73%'
+                left: '328px'
             }, {
                 duration: 1000
             });
@@ -499,35 +472,35 @@ razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
             else{
                 setTimeout('$("#package_mitm_33").text("V redu!")', 3500);
             }
-            setTimeout('$("#package_mitm_33").css({lineHeight: "250%"})', 3500);
+            setTimeout('$("#package_mitm_33").css({lineHeight: "240%"})', 3500);
             $("#package_mitm_33").fadeIn(1000);
             $("#package_mitm_33").animate({
-                left: '39%'
+                left: '176px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_33").animate({
-                top: '20%'
+                top: '70px'
             }, {
                 duration: 1000
             });
             $("#package_mitm_33").fadeOut(1000);
             setTimeout('$("#button_mitm_31").prop("disabled", false)', 7500);
             setTimeout('$("#button_mitm_32").prop("disabled", false)', 7500);
-            setTimeout('$("#button_mitm_31").css("color", "#000000")', 7500);
-            setTimeout('$("#button_mitm_32").css("color", "#000000")', 7500);
             setTimeout('$("#button_kriptiranje_3").prop("disabled", false)', 7500);
         }
 
         var vklop_kriptiranje_3 = function () {
             if (kriptiranje_3) {
                 kriptiranje_3 = false;
-                $('#button_kriptiranje_3').css('backgroundColor', '#CC3333');
+                $('#button_kriptiranje_3').removeClass('button_mitm_3 btn-orange');
+                $('#button_kriptiranje_3').addClass('button_mitm_3 btn-green');
                 $("#button_kriptiranje_3").prop('value', 'Vklopi kriptiranje');
                 geslo = "zmeda$3";
             } else {
                 kriptiranje_3 = true;
-                $('#button_kriptiranje_3').css('backgroundColor', 'green');
+                $('#button_kriptiranje_3').removeClass('button_mitm_3 btn-green');
+                $('#button_kriptiranje_3').addClass('button_mitm_3 btn-orange');
                 $("#button_kriptiranje_3").prop('value', 'Izklopi kriptiranje');
                 geslo = "*****";
             }
