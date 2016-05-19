@@ -1,227 +1,280 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Created using eXeCute: http://exelearning.org -->
+<!DOCTYPE html>
+<html lang="sl">
+
 <head>
-<style type="text/css">
-@import url(../css/normalize.css);
-@import url(../css/main.css);
-@import url(../css/jquery-ui.css);
-@import url(../css/nav.css);
-@import url(../css/jsxgraph.css);
-@import url(../css/kalkulator.css);
-@import url(../css/lightbox.css);
-@import url(../css/jplayer.css);
-</style><title> Funkcije in strukturirano programiranje </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/eum.js"></script>
-<script type="text/javascript" src="../js/commoneum.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
-<link rel="stylesheet" href="../css/codemirrorepl.css">
-<script type="text/javascript" src="../js/skulpt/codemirrorepl.js"></script>
-<script type="text/javascript" src="../js/skulpt/repl.js"></script>
-<script type="text/javascript" src="../js/skulpt/skulpt.js"></script>
-<script type="text/javascript" src="../js/skulpt/skulpt-stdlib.js"></script>
-<script type="text/javascript" src="../js/skulpt/python.js"></script>
-<script type="text/javascript" src="../js/options.js"></script>
-<script type="text/javascript" src="../js/kalkulator.js"></script>
-<script type="text/javascript" src="../js/jquery-exe.js"></script>
-<script type="text/javascript" src="../js/jquery-tools.js"></script>
-<script type="text/javascript" src="../js/gui/gui_core.js"></script>
-<script type="text/javascript" src="../js/gui/gui_help.js"></script>
-<script type="text/javascript" src="../js/lightbox.js"></script>
-<script type="text/javascript" src="../js/createjs.js"></script>
-<script type="text/javascript" src="../js/movieclip.js"></script>
-<script type="text/javascript" src="../js/povezovanje.js"></script>
-<script type="text/javascript" src="../js/underscore.js"></script>
-<script type="text/javascript" src="../js/transit.js"></script>
-<script type="text/javascript" src="../js/cloze.js"></script>
-<script type="text/javascript" src="../js/JSmol.js"></script>
-<script type="text/javascript" src="../js/jplayer.js"></script>
-<script type="text/x-mathjax-config">  
-MathJax.Hub.Config({
-   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
-    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
-    config:["TeX-AMS_HTML.js"]});
-</script>
-<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
-$(document).keydown(function(e){
-if (e.keyCode == 37) { 
- window.location = "index10.html";
-  }if (e.keyCode == 39) {
- window.location = "index12.html";
-  }});
-</script><link rel="shortcut icon" href="../favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>Funkcije in strukturirano programiranje</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- CodeMirror -->
+	<link href="../css/codemirrorepl.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- jQuery UI -->
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-    <body>
-<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
-<input type="hidden" name="elo-id" id="elo-id" value="1"/>
-<!--navigacija-->
-    <nav id="nav">
-        <ul class="main">
-            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
-            <li class="topics"><a href="#">Kazalo</a></li>
-            <li class="pages"><a href="#">Strani</a></li>
-        </ul>
-    <ul>
-    <li id="textbook-title"><span>Funkcije</span></li>
-    </ul>
-    <ul class="meta">
-            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
-            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
-            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.03.zip">Prenos</a></li>
-            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
-        </ul>
-    </nav>
-    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
-     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
-     <img src="../img/by-nc-sa.eu.png" height="30px">
-    </div></div>
-<section id="nav-tabbed">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul class="accordion">
-      <li class="on" id="menu001"><a href="#">Uvod</a>
-      <ul id="submenu001" class="sub-menu">
-        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
-        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
-      <ul class="on" id="submenu002" class="sub-menu">
-        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
-        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
-        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
-        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
-        <li class="on"><a href="../1205/index.html" id="unit1205" style="color: black; font-weight: 600;">Funkcije <span class="page_numbers">71</span></a></li>
-        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
-        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
-        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
-        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
-        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
-        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
-        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu003"><a href="#">Sistemi</a>
-      <ul id="submenu003" class="sub-menu">
-        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
-        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
-        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
-        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
-        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
-        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
-        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
-        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
-      <ul id="submenu004" class="sub-menu">
-        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
-        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
-        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
-        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
-        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
-        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
-        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
-        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
-      <ul id="submenu005" class="sub-menu">
-        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
-        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
-        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
-      </ul>
-      </li>
-    </ul>
-  </nav></section>
-</section>
 
-<section id="nav-pages">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul>
-      <li><a href="index.html" >Funkcije <span class="page_numbers">71</span></a></li>
-      <li><a href="index1.html" >Funkcije <span class="page_numbers">72</span></a></li>
-      <li><a href="index2.html" >Malo večji primer <span class="page_numbers">73</span></a></li>
-      <li><a href="index3.html" >Malo večji primer <span class="page_numbers">74</span></a></li>
-      <li><a href="index4.html" >Parametri <span class="page_numbers">75</span></a></li>
-      <li><a href="index5.html" >Parametri <span class="page_numbers">76</span></a></li>
-      <li><a href="index6.html" >Lokalne spremenljivke <span class="page_numbers">77</span></a></li>
-      <li><a href="index7.html" >Vračanje rezultata iz funkcije <span class="page_numbers">78</span></a></li>
-      <li><a href="index8.html" >Vračanje rezultata iz funkcije <span class="page_numbers">79</span></a></li>
-      <li><a href="index9.html" >Gnezdenje klicev <span class="page_numbers">80</span></a></li>
-      <li><a href="index10.html" >Gnezdenje klicev <span class="page_numbers">81</span></a></li>
-      <li class="on"><a href="#">Funkcije in strukturirano programiranje <span class="page_numbers">82</span></a></li>
-      <li><a href="index12.html" >Nekaj standardnih funkcij <span class="page_numbers">83</span></a></li>
-      <li><a href="index13.html" >Povzetek <span class="page_numbers">84</span></a></li>
-      <li><a href="index14.html" >Naloge <span class="page_numbers">85</span></a></li>
-      <li><a href="index15.html" >Naloge <span class="page_numbers">86</span></a></li>
-      <li><a href="index16.html" >Naloge <span class="page_numbers">87</span></a></li>
-      <li><a href="index17.html" >Naloge <span class="page_numbers">88</span></a></li>
-    </ul>
-  </nav></section>
-</section>
+<body>
 
-<div class="container" id="nodeDecoration">
-            <nav class="breadcrumbs">
-                <ul>
-                <li style="float:left;"><span class="unit-path">Funkcije | Funkcije in strukturirano programiranje</span></a></li> 
-        <li>&nbsp;</li>
-            </ul>
-            </nav>
+	<div id="wrapper">
 
-<section class="page page-left">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
+				  <div id="menu1" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1101/index.html">O učbeniku</a></li>
+					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
+				  <div id="menu2" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
+					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
+					<li><a href="../1203/index.html">Zanke</a></li>
+					<li><a href="../1204/index.html">Tabele</a></li>
+					<li class="active"><a href="../1205/index.html">Funkcije</a></li>
+					<li><a href="../1206/index.html">Nizi</a></li>
+					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
+					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
+					<li><a href="../1209/index.html">Zaporedje</a></li>
+					<li><a href="../1210/index.html">Urejanje</a></li>
+					<li><a href="../1211/index.html">Množica</a></li>
+					<li><a href="../1212/index.html">Slovar</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
+				  <div id="menu3" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
+					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
+					<li><a href="../1303/index.html">Ukazi</a></li>
+					<li><a href="../1304/index.html">Arhitektura računalnika</a></li>
+					<li><a href="../1305/index.html">Pomnilnik</a></li>
+					<li><a href="../1306/index.html">Operacijski sistem</a></li>
+					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
+					<li><a href="../1308/index.html">Uporabniki in varnost</a></li>
+					<li><a href="../1309/index.html">Procesi</a></li>
+					<li><a href="../1310/index.html">Vzporednost</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
+				  <div id="menu4" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
+					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
+					<li><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
+					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
+					<li><a href="../1405/index.html">Storitve interneta</a></li>
+					<li><a href="../1406/index.html">Svetovni splet</a></li>
+					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
+					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
+					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
+				  <div id="menu5" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
+					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
+					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
+
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Catalogue -->
+		<div id="catalogue" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
+					</div>
+					<div class="modal-body">
+						CIP - Kataložni zapis o publikaciji<br>
+						Narodna in univerzitetna knjižnica, Ljubljana<br>
+						<br>
+						659.2:004(075.3)(0.034.2)<br>
+						004(075.3)(0.034.2)<br>
+						<br>
+						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
+						<br>
+						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
+						<br>
+						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
+						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
+						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
+						<br>
+						1. Anželj, Gregor<br>
+						282126848<br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Win -->
+		<div id="win" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-sm">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Zmaga</h4>
+					</div>
+					<div class="modal-body bg-success">
+						<p class="text-success">Zmagal(a) si!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Lose -->
+		<div id="lose" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-sm">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Poraz</h4>
+					</div>
+					<div class="modal-body bg-danger">
+						<p class="text-danger">Konec igre!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+<!-- Left column start -->
 <h1>Funkcije in strukturirano programiranje</h1>
- <div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
 
-Funkcije so koristne tudi zato, ker nam pomagajo organizirati naš program v manjše, razumljivejše in obvladljivejše dele. Če za rešitev nekega problema napišemo več sto vrstic dolgo zaporedje stavkov, se bomo iz njega težko znašli. Ponavadi se izkaže, da je mogoče ta problem razdeliti na več manjših podproblemov, za vsakega od njih napisati svojo funkcijo in te funkcije potem klicati iz glavnega bloka programa.<br />
+<p align="justify">Funkcije so koristne tudi zato, ker nam pomagajo organizirati naš program v manjše, razumljivejše in obvladljivejše dele. Če za rešitev nekega problema napišemo več sto vrstic dolgo zaporedje stavkov, se bomo iz njega težko znašli. Ponavadi se izkaže, da je mogoče ta problem razdeliti na več manjših podproblemov, za vsakega od njih napisati svojo funkcijo in te funkcije potem klicati iz glavnega bloka programa.</p>
 
-<br />
+<p align="justify">Kdor kasneje bere glavni blok takega programa, si lahko hitreje in lažje predstavlja, kaj program počne, če pa ga zanimajo podrobnosti reševanja posameznih podproblemov, si lahko potem ogleda še posamezne funkcije.</p>
 
-Kdor kasneje bere glavni blok takega programa, si lahko hitreje in lažje predstavlja, kaj program počne, če pa ga zanimajo podrobnosti reševanja posameznih podproblemov, si lahko potem ogleda še posamezne funkcije.<br />
+<p align="justify">Enak razmislek lahko ponovimo tudi pri posameznih funkcijah. Čim vidimo, da je neka funkcija dolga več kot nekaj deset vrstic, je to dober znak, da se splača razmisliti, če jo lahko smiselno razdrobimo na več manjših funkcij.</p>
 
-<br />
+<p align="justify">Temu pristopu k reševanju problemov, pri katerem delimo problem na vse manjše podprobleme, dokler ne pridemo do tako majhnih podproblemov, ki se jih da smiselno rešiti z neko ne predolgo funkcijo, pravimo tudi <b>strukturirano programiranje</b>.</p>
 
-Enak razmislek lahko ponovimo tudi pri posameznih funkcijah. Čim vidimo, da je neka funkcija dolga več kot nekaj deset vrstic, je to dober znak, da se splača razmisliti, če jo lahko smiselno razdrobimo na več manjših funkcij.<br />
+<p align="justify">Razdelitev programa na funkcije pride prav tudi pri testiranju in odpravljanju napak. Ko napišemo funkcijo, je koristno, če jo testiramo ločeno od preostanka programa; poženimo jo na nekaj različnih kombinacijah parametrov in se prepričajmo, ali vrača pravilne rezultate. Ko se tako prepričamo, da funkcija deluje pravilno, lahko kasneje pri testiranju drugih delov programa, ki to funkcijo uporabljajo, klic te funkcije obravnavamo kot neko osnovno operacijo, za katero vemo, kaj naredi, in se nam vanjo takrat ni treba več poglabljati.</p>
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+<!-- Right column start -->
+<h2>Hanojski stolpi</h2>
 
-<br />
-
-Temu pristopu k reševanju problemov, pri katerem delimo problem na vse manjše podprobleme, dokler ne pridemo do tako majhnih podproblemov, ki se jih da smiselno rešiti z neko ne predolgo funkcijo, pravimo tudi <b>strukturirano programiranje</b>.<br />
-
-<br />
-
-Razdelitev programa na funkcije pride prav tudi pri testiranju in odpravljanju napak. Ko napišemo funkcijo, je koristno, če jo testiramo ločeno od preostanka programa; poženimo jo na nekaj različnih kombinacijah parametrov in se prepričajmo, ali vrača pravilne rezultate. Ko se tako prepričamo, da funkcija deluje pravilno, lahko kasneje pri testiranju drugih delov programa, ki to funkcijo uporabljajo, klic te funkcije obravnavamo kot neko osnovno operacijo, za katero vemo, kaj naredi, in se nam vanjo takrat ni treba več poglabljati.
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<section class="page page-right">
- <!-- applet --> 
-<h2>Hanojski stolpi</h2>  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <div class='interaktivnaNaloga'>
 <style type="text/css">
 .disc{position:absolute;background-color:#7AC4DD;border:1px solid #2E91B2;border-radius:10px}.disc.moveable{cursor:pointer}.peg-container{width:140px;display:inline-block;margin-right:10px}.peg-over{background-color:#ff0;opacity:.25}.peg-label{font-size:24px;font-weight:700;text-align:center;border-top:10px solid #2E91B2}.peg-destination .peg-label{border-color:orange}.peg{position:relative;width:140px}#step-information span{font-weight:700}.ui-draggable-disabled.ui-state-disabled{opacity:1}
 </style>
-
 <div style="width:500px;text-align:center;padding:10px">
   <div id="game-container"></div>
   <p id="step-information">
     Število tvojih korakov: <span id="step">0</span>.
-    Najmanjše število korakov,<br />ki so potrebni, za prestavitev stolpa A na stolp C: <span id="max-step">0</span>.
+    Najmanjše število korakov,ki so potrebni, za prestavitev stolpa A na stolp C: <span id="max-step">0</span>.
   </p>
   <p>
     <label for="number-of-discs">Število ploščic:</label>
@@ -231,10 +284,94 @@ Razdelitev programa na funkcije pride prav tudi pri testiranju in odpravljanju n
       <option selected>5</option>
       <option>6</option>
     </select>
-	<button id="pause" class="btn-blue">Prekini</button>
-	<button id="restart" class="btn-blue">Ponovno</button>
+	<button id="pause" class="btn btn-primary"><span class="fa fa-pause"></span> Prekini</button>
+	<button id="restart" class="btn btn-primary"><span class="fa fa-refresh"></span> Ponovno</button>
   </p>
 </div>
+
+<p align="justify">Problem hanojskih stolpov je igra oz. uganka s področja razvedrilne matematike, pri kateri moramo premakniti kupček ploščic na drug kupček ploščic (končni stolp) ter pri tem uporabiti najmanjše možno število potez. Upoštevati moramo še pravili, da lahko naenkrat premaknemo le eno ploščico in da večje ploščice ne smemo postaviti na manjšo.</p>
+
+<p align="justify">Reševanje problema je zelo podobno strukturiranemu programiranju, saj problem razbijamo na podprobleme tako, da:
+<ul align="justify">
+	<li>najprej na vmesni stolp odmaknemo kupček ploščic, ki ne vsebuje največje (spodnje) ploščice,</li>
+	<li>nato premaknemo največjo ploščico na končni stolp ter</li>
+	<li>premaknemo manjši kupček ploščic na končni stolp.</li>
+</ul>
+</p>
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Pagination in Footer -->
+			<div class="col-md-12">
+				<center>
+				<ul class="pagination pagination-sm">
+					<li><a href="../1204/index.html" aria-label="Previous Unit"><span aria-hidden="true">&laquo;</span></a></li>
+					<li><a href="../1205/index10.html" aria-label="Previous Page"><span aria-hidden="true">&#x2039;</span></a></li>
+					<li><a href="../1205/index.html">71</a></li>
+					<li><a href="../1205/index1.html">72</a></li>
+					<li><a href="../1205/index2.html">73</a></li>
+					<li><a href="../1205/index3.html">74</a></li>
+					<li><a href="../1205/index4.html">75</a></li>
+					<li><a href="../1205/index5.html">76</a></li>
+					<li><a href="../1205/index6.html">77</a></li>
+					<li><a href="../1205/index7.html">78</a></li>
+					<li><a href="../1205/index8.html">79</a></li>
+					<li><a href="../1205/index9.html">80</a></li>
+					<li><a href="../1205/index10.html">81</a></li>
+					<li class="active"><a href="#">82</a></li>
+					<li><a href="../1205/index12.html">83</a></li>
+					<li><a href="../1205/index13.html">84</a></li>
+					<li><a href="../1205/index14.html">85</a></li>
+					<li><a href="../1205/index15.html">86</a></li>
+					<li><a href="../1205/index16.html">87</a></li>
+					<li><a href="../1205/index17.html">88</a></li>
+					<li><a href="../1205/index12.html" aria-label="Next Page"><span aria-hidden="true">&#x203A;</span></a></li>
+					<li><a href="../1206/index.html" aria-label="Next Unit"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+				</center>
+			</div>
+
+		</div>
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery-ui.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="../js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
+
+	<!-- eXe Project -->
+	<script src="../js/exe/common.js"></script>
+
+	<!-- Skulpt and CodeMirror -->
+	<script src="../js/skulpt/codemirrorepl.js"></script>
+	<script src="../js/skulpt/repl.js"></script>
+	<script src="../js/skulpt/skulpt.js"></script>
+	<script src="../js/skulpt/skulpt-stdlib.js"></script>
+	<script src="../js/skulpt/python.js"></script>
+	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
 /**
@@ -261,37 +398,12 @@ Razdelitev programa na funkcije pride prav tudi pri testiranju in odpravljanju n
  */
 var Disc=function(e){this.options=e;var t=this.options;this.id=t.id;this.el=jQuery('<div id="disc-'+t.id+'" title="Ploščica '+t.id+'" class="disc"></div>');this.width=t.width;this.margin=t.margin;this.height=t.height;this.el.css({width:this.width,height:this.height,"margin-left":this.margin,"margin-right":this.margin});return true};Disc.prototype.getId=function(){return this.id};Disc.prototype.getDisc=function(){return this.el};var Peg=function(e){this.alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";this.discs=[];this.container=jQuery('<div class="peg-container"></div>');this.peg=jQuery('<div class="peg" id="peg-'+(e+1)+'"></div>');this.id=e+1;this.label=jQuery('<div class="peg-label">'+this.alpha[e]+"</div>");this.container.append(this.peg);this.container.append(this.label);return true};Peg.prototype.top=function(){return this.discs.length>0?this.discs[0]:null};Peg.prototype.push=function(e){if(this.discs.length>0){this.discs.unshift(e)}else{this.discs.push(e)}};Peg.prototype.pop=function(){var e=this.discs.shift();return e};Peg.prototype.getPegContainer=function(){return this.container};Peg.prototype.getPeg=function(){return this.peg};var Game=function(e){this.options={numOfPegs:3,numOfDiscs:3,container:"#game-container",discHeight:25,discMaxWidth:200,destinationPeg:3};jQuery.extend(this.options,e);if(this.options.numOfPegs<0||this.options.numOfPegs>25){this.options.numOfPegs=3}if(this.options.destinationPeg<=1||this.options.destinationPeg>this.options.numOfPegs){this.options.destinationPeg=this.options.numOfPegs}this.state="init";this.result=0;var t=this.options;this.steps=0;this.maxSteps=Math.pow(2,this.options.numOfDiscs)-1;this.pegs=[];this.container=jQuery(t.container);var n=this;this.afterStep=this.options.afterStep||function(e){};this.onPause=this.options.onPause||function(e){};this.onFreeze=this.options.onFreeze||function(e){};this.afterInit=this.options.afterInit||function(e){};this.createPegs();var r=this.pegs[0];this.createDiscs(r);this.state="playing";this.afterInit(n)};Game.prototype.createPegs=function(){for(var e=0;e<this.options.numOfPegs;e++){this.pegs[e]=new Peg(e);this.container.append(this.pegs[e].getPegContainer());this.pegs[e].getPeg().css({"min-height":this.options.discHeight*this.options.numOfDiscs});this._bindDroppableToPeg(this.pegs[e])}this.pegs[this.options.destinationPeg-1].getPeg().parent().addClass("peg-destination")};Game.prototype.createDiscs=function(e){for(var t=0;t<this.options.numOfDiscs;t++){var n=new Disc({id:t+1,width:this.options.discMaxWidth-(this.options.numOfDiscs-t)*20,height:this.options.discHeight,margin:(this.options.numOfDiscs-t)*10});this._bindDraggableToDisc(n);e.discs.push(n);e.getPeg().append(n.getDisc());n.getDisc().css("top",t*this.options.discHeight)}var r=e.getPeg().height();for(var t=1;t<this.options.numOfPegs;t++){this.pegs[t].getPeg().height(r)}var i=e.top().getDisc();i.draggable("option","disabled",false).addClass("moveable")};Game.prototype._bindDroppableToPeg=function(e){var t=this;var n=function(e,n){var r=n.draggable;var i=r.attr("id");var s=jQuery(this);s=t.getPegById(s.attr("id"));var o=s.top()===null?true:false;var u=!o?s.top().getDisc().attr("id"):null;var a;if(!o){a=s.getPeg().height()-(s.discs.length+1)*t.options.discHeight}else{a=(t.options.numOfDiscs-1)*t.options.discHeight}r.draggable("option","revert",false);if(!o&&u<=i){r.draggable("option","revert",true);return}var f=t.getPegByDiscId(r.attr("id"));s.push(f.pop());if(!o){s.getPeg().prepend(r);r.css("top",a)}else{s.getPeg().append(r);r.css("top",a)}t.steps++;for(p in t.pegs){for(d in t.pegs[p].discs){t.pegs[p].discs[d].getDisc().draggable("option","disabled",true).removeClass("moveable")}if(t.pegs[p].top()!==null){t.pegs[p].top().getDisc().draggable("option","disabled",false).addClass("moveable")}}t.afterStep(t)};e.getPeg().droppable({hoverClass:"peg-over",drop:n})};Game.prototype._bindDraggableToDisc=function(e){e.getDisc().draggable({revert:"invalid",containment:this.container,cursor:"move",disabled:true,helper:"clone",opacity:.35})};Game.prototype.getPegById=function(e){if(!e)return null;var t=e.substring(4)*1;for(var n=0;n<this.pegs.length;n++){if(this.pegs[n].id==t)return this.pegs[n]}return null};Game.prototype.getPegByDiscId=function(e){var t=this.pegs;for(p in t){var n=t[p].discs;for(d in n){if(e===n[d].getDisc().attr("id")){return t[p]}}}return null};Game.prototype.getSteps=function(){return this.steps};Game.prototype.getMaxSteps=function(){return this.maxSteps};Game.prototype.isWin=function(){if(this.state!=="playing")return;if(this.steps===this.getMaxSteps()){var e=this.pegs[this.options.destinationPeg-1];if(e.discs.length===this.options.numOfDiscs){this.result=1;return 1}}else if(this.steps>=this.getMaxSteps()){if(this.result!==1){this.result=-1;return-1}return this.result}return 0};Game.prototype.pause=function(){if(this.state!=="playing")return;for(p in this.pegs){for(d in this.pegs[p].discs){var e=this.pegs[p].discs[d];e.getDisc().draggable("disable")}this.pegs[p].getPeg().droppable("disable")}this.state="pause";this.onPause(this)};Game.prototype.resume=function(){if(this.state!=="pause")return;for(p in this.pegs){if(this.pegs[p].discs.length>0){var e=this.pegs[p].discs[0];e.getDisc().draggable("enable")}this.pegs[p].getPeg().droppable("enable")}this.state="playing";this.onResume(this)};Game.prototype.restart=function(e){if(this.state!=="freeze"){this.freeze()}for(var t=0;t<this.options.numOfPegs;t++){var n=this.pegs[t];while(n.discs.length>0){n.pop()}}this.pegs=[];this.container.html("");e=e||{};jQuery.extend(this.options,e);this.createPegs();this.createDiscs(this.pegs[0]);this.maxSteps=Math.pow(2,this.options.numOfDiscs)-1;this.steps=0;this.result=0;this.state="playing"};Game.prototype.freeze=function(){if(this.state==="freeze")return;for(p in this.pegs){for(d in this.pegs[p].discs){var e=this.pegs[p].discs[d];e.getDisc().draggable("destroy").removeClass("moveable")}this.pegs[p].getPeg().droppable("destroy")}this.state="freeze";this.onFreeze(this)}
 </script>
+
 <script>
 // Game initialization and start
-$(window).load(function(){function r(){if(!confirm("To bo ponastavilo igro. Ali si prepričan(a)?")){return false}var t=jQuery("#number-of-discs").val();e.restart({numOfDiscs:t,discHeight:20,discMaxWidth:140});jQuery("#max-step").text(e.maxSteps);jQuery("#step").text(0)}var e=new Game({numOfDiscs:5,discHeight:20,discMaxWidth:140,afterInit:function(e){jQuery("#max-step").text(e.maxSteps)},afterStep:function(e){var t=e.getSteps();jQuery("#step").text(t);setTimeout(function(){if(e.isWin()===1){alert("Zmagal(a) si!");e.freeze()}else if(t>=e.getMaxSteps()){alert("Konec igre!");e.freeze()}},200)}});var t=jQuery("#step-information");var n;e.onPause=function(e){n=t.html();t.html("Igra je prekinjena.");jQuery("#pause").text("Nadaljuj")};e.onResume=function(e){t.html(n);jQuery("#pause").text("Prekini")};jQuery("#pause").click(function(t){if(e.state==="playing"){e.pause()}else if(e.state==="pause"){e.resume()}t.preventDefault()});jQuery("#restart").click(function(t){e.restart();jQuery("#max-step").text(e.maxSteps);jQuery("#step").text(0);t.preventDefault()});jQuery("#number-of-pegs").change(r);jQuery("#number-of-discs").change(r)})
-</script></div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
+$(window).load(function(){function r(){if(!confirm("To bo ponastavilo igro. Ali si prepričan(a)?")){return false}var t=jQuery("#number-of-discs").val();e.restart({numOfDiscs:t,discHeight:20,discMaxWidth:140});jQuery("#max-step").text(e.maxSteps);jQuery("#step").text(0)}var e=new Game({numOfDiscs:5,discHeight:20,discMaxWidth:140,afterInit:function(e){jQuery("#max-step").text(e.maxSteps)},afterStep:function(e){var t=e.getSteps();jQuery("#step").text(t);setTimeout(function(){if(e.isWin()===1){$('#win').modal('show');e.freeze()}else if(t>=e.getMaxSteps()){$('#lose').modal('show');e.freeze()}},200)}});var t=jQuery("#step-information");var n;e.onPause=function(e){n=t.html();t.html("Igra je prekinjena.");jQuery("#pause").html("<span class='fa fa-play'></span> Nadaljuj")};e.onResume=function(e){t.html(n);jQuery("#pause").html("<span class='fa fa-pause'></span> Prekini")};jQuery("#pause").click(function(t){if(e.state==="playing"){e.pause()}else if(e.state==="pause"){e.resume()}t.preventDefault()});jQuery("#restart").click(function(t){e.restart();jQuery("#max-step").text(e.maxSteps);jQuery("#step").text(0);t.preventDefault()});jQuery("#number-of-pegs").change(r);jQuery("#number-of-discs").change(r)})
+</script>
 
-Problem hanojskih stolpov je igra oz. uganka s področja razvedrilne matematike, pri kateri moramo premakniti kupček ploščic na drug kupček ploščic (končni stolp) ter pri tem uporabiti najmanjše možno število potez. Upoštevati moramo še pravili, da lahko naenkrat premaknemo le eno ploščico in da večje ploščice ne smemo postaviti na manjšo.<br />
+</body>
 
-<br />
-
-Reševanje problema je zelo podobno strukturiranemu programiranju, saj problem razbijamo na podprobleme tako, da:
-
-<ul>
-
-	<li>najprej na vmesni stolp odmaknemo kupček ploščic, ki ne vsebuje največje (spodnje) ploščice,</li>
-
-	<li>nato premaknemo največjo ploščico na končni stolp ter</li>
-
-	<li>premaknemo manjši kupček ploščic na končni stolp.</li>
-
-</ul>
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<div class="paging-left"><a href="index10.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index12.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">82/423</span></div></div>
-</body></html>
+</html>

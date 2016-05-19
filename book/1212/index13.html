@@ -1,285 +1,649 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Created using eXeCute: http://exelearning.org -->
+<!DOCTYPE html>
+<html lang="sl">
+
 <head>
-<style type="text/css">
-@import url(../css/normalize.css);
-@import url(../css/main.css);
-@import url(../css/jquery-ui.css);
-@import url(../css/nav.css);
-@import url(../css/jsxgraph.css);
-@import url(../css/kalkulator.css);
-@import url(../css/lightbox.css);
-@import url(../css/jplayer.css);
-</style><title> Naloge </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/eum.js"></script>
-<script type="text/javascript" src="../js/commoneum.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
-<link rel="stylesheet" href="../css/codemirrorepl.css">
-<script type="text/javascript" src="../js/skulpt/codemirrorepl.js"></script>
-<script type="text/javascript" src="../js/skulpt/repl.js"></script>
-<script type="text/javascript" src="../js/skulpt/skulpt.js"></script>
-<script type="text/javascript" src="../js/skulpt/skulpt-stdlib.js"></script>
-<script type="text/javascript" src="../js/skulpt/python.js"></script>
-<script type="text/javascript" src="../js/options.js"></script>
-<script type="text/javascript" src="../js/kalkulator.js"></script>
-<script type="text/javascript" src="../js/jquery-exe.js"></script>
-<script type="text/javascript" src="../js/jquery-tools.js"></script>
-<script type="text/javascript" src="../js/gui/gui_core.js"></script>
-<script type="text/javascript" src="../js/gui/gui_help.js"></script>
-<script type="text/javascript" src="../js/lightbox.js"></script>
-<script type="text/javascript" src="../js/createjs.js"></script>
-<script type="text/javascript" src="../js/movieclip.js"></script>
-<script type="text/javascript" src="../js/povezovanje.js"></script>
-<script type="text/javascript" src="../js/underscore.js"></script>
-<script type="text/javascript" src="../js/transit.js"></script>
-<script type="text/javascript" src="../js/cloze.js"></script>
-<script type="text/javascript" src="../js/JSmol.js"></script>
-<script type="text/javascript" src="../js/jplayer.js"></script>
-<script type="text/x-mathjax-config">  
-MathJax.Hub.Config({
-   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
-    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
-    config:["TeX-AMS_HTML.js"]});
-</script>
-<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
-$(document).keydown(function(e){
-if (e.keyCode == 37) { 
- window.location = "index12.html";
-  }if (e.keyCode == 39) {
- window.location = "../1301/index.html";
-  }});
-</script><link rel="shortcut icon" href="../favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>Naloge</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- CodeMirror -->
+	<link href="../css/codemirrorepl.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-    <body>
-<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
-<input type="hidden" name="elo-id" id="elo-id" value="1"/>
-<!--navigacija-->
-    <nav id="nav">
-        <ul class="main">
-            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
-            <li class="topics"><a href="#">Kazalo</a></li>
-            <li class="pages"><a href="#">Strani</a></li>
-        </ul>
-    <ul>
-    <li id="textbook-title"><span>Slovar</span></li>
-    </ul>
-    <ul class="meta">
-            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
-            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
-            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.03.zip">Prenos</a></li>
-            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
-        </ul>
-    </nav>
-    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
-     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
-     <img src="../img/by-nc-sa.eu.png" height="30px">
-    </div></div>
-<section id="nav-tabbed">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul class="accordion">
-      <li class="on" id="menu001"><a href="#">Uvod</a>
-      <ul id="submenu001" class="sub-menu">
-        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
-        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
-      <ul class="on" id="submenu002" class="sub-menu">
-        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
-        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
-        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
-        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
-        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
-        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
-        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
-        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
-        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
-        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
-        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
-        <li class="on"><a href="../1212/index.html" id="unit1212" style="color: black; font-weight: 600;">Slovar <span class="page_numbers">197</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu003"><a href="#">Sistemi</a>
-      <ul id="submenu003" class="sub-menu">
-        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
-        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
-        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
-        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
-        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
-        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
-        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
-        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
-      <ul id="submenu004" class="sub-menu">
-        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
-        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
-        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
-        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
-        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
-        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
-        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
-        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
-      <ul id="submenu005" class="sub-menu">
-        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
-        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
-        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
-      </ul>
-      </li>
-    </ul>
-  </nav></section>
-</section>
 
-<section id="nav-pages">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul>
-      <li><a href="index.html" >Slovar <span class="page_numbers">197</span></a></li>
-      <li><a href="index1.html" >Slovar in operacije nad njim <span class="page_numbers">198</span></a></li>
-      <li><a href="index2.html" >Operacije nad slovarjem <span class="page_numbers">199</span></a></li>
-      <li><a href="index3.html" >Operacije nad slovarjem <span class="page_numbers">200</span></a></li>
-      <li><a href="index4.html" >Primeri uporabe slovarja <span class="page_numbers">201</span></a></li>
-      <li><a href="index5.html" >Primeri uporabe slovarja <span class="page_numbers">202</span></a></li>
-      <li><a href="index6.html" >Primeri uporabe slovarja <span class="page_numbers">203</span></a></li>
-      <li><a href="index7.html" >Slovar kot temeljni gradnik podatkovnih baz <span class="page_numbers">204</span></a></li>
-      <li><a href="index8.html" >*Implementacija slovarja z razpršeno tabelo <span class="page_numbers">205</span></a></li>
-      <li><a href="index9.html" >Povzetek <span class="page_numbers">206</span></a></li>
-      <li><a href="index10.html" >Naloge <span class="page_numbers">207</span></a></li>
-      <li><a href="index11.html" >Naloge <span class="page_numbers">208</span></a></li>
-      <li><a href="index12.html" >Naloge <span class="page_numbers">209</span></a></li>
-      <li class="on"><a href="#">Naloge <span class="page_numbers">210</span></a></li>
-    </ul>
-  </nav></section>
-</section>
+<body>
 
-<div class="container" id="nodeDecoration">
-            <nav class="breadcrumbs">
-                <ul>
-                <li style="float:left;"><span class="unit-path">Slovar | Naloge</span></a></li> 
-        <li>&nbsp;</li>
-            </ul>
-            </nav>
+	<div id="wrapper">
 
-<section class="page page-left">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
+				  <div id="menu1" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1101/index.html">O učbeniku</a></li>
+					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
+				  <div id="menu2" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
+					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
+					<li><a href="../1203/index.html">Zanke</a></li>
+					<li><a href="../1204/index.html">Tabele</a></li>
+					<li><a href="../1205/index.html">Funkcije</a></li>
+					<li><a href="../1206/index.html">Nizi</a></li>
+					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
+					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
+					<li><a href="../1209/index.html">Zaporedje</a></li>
+					<li><a href="../1210/index.html">Urejanje</a></li>
+					<li><a href="../1211/index.html">Množica</a></li>
+					<li class="active"><a href="../1212/index.html">Slovar</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
+				  <div id="menu3" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
+					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
+					<li><a href="../1303/index.html">Ukazi</a></li>
+					<li><a href="../1304/index.html">Arhitektura računalnika</a></li>
+					<li><a href="../1305/index.html">Pomnilnik</a></li>
+					<li><a href="../1306/index.html">Operacijski sistem</a></li>
+					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
+					<li><a href="../1308/index.html">Uporabniki in varnost</a></li>
+					<li><a href="../1309/index.html">Procesi</a></li>
+					<li><a href="../1310/index.html">Vzporednost</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
+				  <div id="menu4" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
+					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
+					<li><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
+					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
+					<li><a href="../1405/index.html">Storitve interneta</a></li>
+					<li><a href="../1406/index.html">Svetovni splet</a></li>
+					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
+					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
+					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
+				  <div id="menu5" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
+					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
+					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
+
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Catalogue -->
+		<div id="catalogue" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
+					</div>
+					<div class="modal-body">
+						CIP - Kataložni zapis o publikaciji<br>
+						Narodna in univerzitetna knjižnica, Ljubljana<br>
+						<br>
+						659.2:004(075.3)(0.034.2)<br>
+						004(075.3)(0.034.2)<br>
+						<br>
+						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
+						<br>
+						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
+						<br>
+						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
+						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
+						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
+						<br>
+						1. Anželj, Gregor<br>
+						282126848<br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 9a -->
+		<div id="solution9a" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+def Obrni(slovar):
+  obrnjeni = {}
+  for kljuc in slovar:
+    vrednost = slovar[kljuc]
+    obrnjeni[vrednost] = kljuc
+  return obrnjeni
+
+# Kaj se zgodi, če ima v vhodnem slovarju več ključev enako vrednost?
+# V obrnjenem slovarju bo ta vrednost seveda nastopila (kot ključ) le
+# enkrat, njena pripadajoča vrednost pa bo zadnji ključ iz vhodnega
+# slovarja, ki je imel to pripadajočo vrednost. "Zadnji" je mišljeno
+# glede na vrstni red, v katerem zanka "for kljuc in slovar" pregleduje
+# ključe. Glede tega, kakšen točno je ta vrstni red, pa nam jezik
+# python ne daje nobenih posebnih zagotovil.
+
+print(Obrni({"ena": 11, "dve": 222}))
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 9b -->
+		<div id="solution9b" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+slovar = {"ena": 11, "dve": 222, "tri": 222}
+obrnjeni = Obrni(slovar)
+dvakratObrnjeni = Obrni(obrnjeni)
+print(slovar)
+print(obrnjeni) # {11: "ena", 222: "dve"}
+# ali pa {11: "ena", 222: "tri"}
+print(dvakratObrnjeni) # {"ena": 11, "dve": 222}
+# ali pa {"ena": 11, "tri": 222}
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 10a -->
+		<div id="solution10a" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+def Komp(h1, h2):
+  rezultat = {}
+  for k in h1:
+    k2 = h1[k]
+    if k2 in h2:
+      rezultat[k] = h2[k2]
+  return rezultat
+
+h1 = {"ena": 1, "dve": 2, "tri": 3}
+h2 = {1: "ane", 3: "irt"}
+print(Komp(h1, h2))
+# izpiše {"ena": "ane", "tri": "irt"}
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 10b -->
+		<div id="solution10b" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+def Komp(h1, h2):
+  rezultat = {}
+  for k in h1:
+    k2 = h1[k]
+    if k2 in h2:
+      rezultat[k] = h2[k2]
+  return rezultat
+
+def Komp3(h1, h2, h3):
+  return Komp(h1, Komp(h2, h3))
+
+# Druga različica rešitve...
+def Komp3_druga(h1, h2, h3):
+  h = {}
+  for k in h1:
+    v = h1[k]
+    if v not in h2: continue
+    v = h2[v]
+    if v not in h3: continue
+    h[k] = h3[v]
+  return h
+
+h1 = {"ena": 1, "dve": 2, "tri": 3}
+h2 = {1: "ane", 3: "irt"}
+h3 = {"ane": "one", "irt": "three"}
+print(Komp3(h1, h2, h3))
+# izpiše {"ena": "one", "tri": "three"}
+print(Komp3_druga(h1, h2, h3))
+# izpiše {"ena": "one", "tri": "three"}
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 10c -->
+		<div id="solution10c" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<p align="justify">Slovarja <code>Komp(Komp(h1, h2), h3)</code> in <code>Komp(h1, Komp(h2, h3))</code> sta res vedno enaka. Še več, sta tudi enaka slovarju <code>Komp3(h1, h2, h3)</code>. Dokaz, da je to res, spada bolj v matematiko kot v računalništvo, pa si ga vseeno oglejmo.</p>
+<p align="justify">
+<ul align="justify">
+	<li>Označimo <code>h12 = Komp(h1, h2)</code>, <code>h23 = Komp(h2, h3)</code>, <code>L = Komp(h12, h3)</code>, <code>D = Komp(h1, h23)</code>. Naloga sprašuje, ali je <code>L == D</code> (za vse možne <code>h1</code>, <code>h2</code>, <code>h3</code>).</li>
+	<li>Recimo, da je nek ključ <code>k</code> prisoten v <code>L</code> z vrednostjo <code>v</code>.<br />
+	(1) To pomeni, da je <code>k</code> prisoten v <code>h12</code>, da je <code>h12[k]</code> prisotna v <code>h3</code> in da je <code>h3[h12[k]] == v</code>.<br />
+	(2) Iz dejstva, da je <code>k</code> prisoten v <code>h12</code>, sledi tudi, da je <code>k</code> prisoten v <code>h1</code>, da je <code>h1[k]</code> prisotna v <code>h2</code> in da je <code>h2[h1[k]] == h12[k]</code>.<br />
+	(3) Označimo <code>u = h1[k]</code>; vidimo torej, da je <code>u</code> prisoten v <code>h2</code> in da je <code>h2[u] = h12[k]</code>.<br />
+	(4) Iz <code>h3[h12[k]] == v</code> (kar smo videli v (1)) lahko zdaj zaključimo, da je <code>h3[h2[u]] == v</code>.<br />
+	(5) Iz (3) in (4) zdaj dobimo, da je <code>u</code> prisoten v <code>h2</code>, da je <code>h2[u]</code> prisoten v <code>h3</code> in da je   <code>h3[h2[u]] == v</code>, torej je <code>u</code> prisoten kot ključ tudi v <code>h23</code> in to s pripadajočo vrednostjo <code>v</code>.<br />
+	(6) Ker je torej <code>k</code> prisoten v <code>h1</code> in je <code>h1[k]</code> (kar je enako <code>u</code>) prisotna kot ključ v <code>h23</code> z vrednostjo <code>v</code>, mora biti <code>k</code> prisoten kot ključ tudi v <code>Komp(h1, h23)</code> z vrednostjo <code>v</code>, torej je <code>D[k] == v</code>. Tako torej vidimo, da je vsak ključ, ki je prisoten v <code>L</code>, prisoten tudi v <code>D</code> in to z enako pripadajočo vrednostjo.</li>
+	<li>Dokaz v obratno smer (vsak ključ, ki je prisoten v <code>D</code>, je prisoten tudi v <code>L</code> in to z enako pripadajočo vrednostjo) gre na podoben način in ti ga prepustimo za vajo.</li>
+	<li>Oboje skupaj nam pove, da sta slovarja <code>L</code> in <code>D</code> res enaka.</li>
+</ul>
+</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 10d -->
+		<div id="solution10d" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+# Podnalogo (d) rešimo tako, da eno od rešitev podnaloge (b) posplošimo
+# na večje število slovarjev:
+def VerigaSlovarjev(t):
+  rezultat = {}
+  prvi = t[0]; ostali = t[1:]
+  for k in prvi:
+    ok = True
+    v = prvi[k]
+    for slovar in ostali:
+      if v not in slovar:
+        ok = False; break
+      v = slovar[v]
+    if ok:
+      rezultat[k] = v
+  return rezultat
+
+def VerigaSlovarjev_druga(t):
+  rezultat = t[0]
+  for slovar in t[1:]:
+    rezultat = Komp(rezultat, slovar)
+  return rezultat
+
+print(VerigaSlovarjev([h1, h2, h3]))
+print(VerigaSlovarjev_druga([h1, h2, h3]))
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 11 -->
+		<div id="solution11" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+# Predpostavimo, da v besedilu ni ločil in podobnih stvari, tako da ga
+# lahko razbijemo na besede kar s funkcijo split().
+def Konkordanca(besedilo):
+  # Predelajmo besedilo iz niza v seznam besed.
+  besedilo = besedilo.lower().split()
+  n = len(besedilo)
+
+  # Pripravimo si slovar, v katerem je za vsako besedo po en ključ,
+  # pripadajoča vrednost pa je seznam pojavitev (indeksov v tabelo
+  # "besede").
+  pojavitve = {}
+  for i in range(n):
+    beseda = besedilo[i]
+    if beseda not in pojavitve:
+      pojavitve[beseda] = []
+    pojavitve[beseda].append(i)
+
+  # Pripravimo si urejen seznam besed.
+  besede = [beseda for beseda in pojavitve]
+  besede.sort()
+
+  # Izpišimo konkordanco.
+  kontekst = 5
+  for beseda in besede:
+    poj = pojavitve[beseda]
+    # Za vsako pojavitev sestavimo levi in desni kontekst, torej
+    # prejšnjih in naslednjih nekaj besed. Med levimi konteksti si
+    # zapomnimo dolžino najdaljšega.
+    levi = []; desni = []
+    maxLevi = 0
+    for i in poj:
+      leviKontekst = besedilo[max(i - kontekst, 0) : i]
+      desniKontekst = besedilo[i + 1 : i + 1 + kontekst]
+      leviKontekst = " ".join(leviKontekst)
+      desniKontekst = " ".join(desniKontekst)
+      maxLevi = max(maxLevi, len(leviKontekst))
+      levi.append(leviKontekst)
+      desni.append(desniKontekst)
+    print(beseda + " (" + str(len(poj)) + " pojavitev):")
+
+    # Zdaj lahko vse pojavitve skupaj s konteksti izpišemo, pri čemer
+    # jih z vrivanjem presledkov na začetku poravnajmo tako, da
+    # opazovana beseda pride v vsaki vrstici na isto mesto. Tako je
+    # izpis preglednejši.
+    for i in range(len(poj)):
+      leviKontekst = levi[i]
+      desniKontekst = desni[i]
+      print(" " * (maxLevi - len(leviKontekst) + 5) + leviKontekst +
+            " | " + beseda + " | " + desniKontekst)
+
+Konkordanca("vsi ljudje se rodijo svobodni in imajo enako dostojanstvo
+            in enake pravice obdarjeni so z razumom in vestjo in bi
+            morali ravnati drug z drugim kakor bratje")
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+<!-- Left column start -->
 <h1>Naloge</h1>
- <div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- casestudy - besedilo z gumbi --> 
-  <div class="wrapper numbered" id="wrap112">
-<span class="number number-blue">9.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<div class="popupb">
-<p><div align="justify">
 
-(a) Napiši funkcijo <code>Obrni(slovar)</code>, ki vrne »obrnjeni« slovar, torej takega, v katerem bodo vloge ključev in vrednosti obrnjene. Primer: <code>Obrni({&quot;ena&quot;: 11, &quot;dve&quot;: 222})</code> mora vrniti slovar <code>{11: &quot;ena&quot;, 222: &quot;dve&quot;}</code>.<br />
-
-(Vrednosti nekaterih tipov se sicer v pythonu ne da uporabljati kot ključe, vendar predpostavi, da se v naših slovarjih to ne bo zgodilo — npr. da se kot vrednosti pojavljajo le nizi in cela števila.)<br />
-
-Opiši, kako se obnaša tvoja rešitev v primerih, ko več ključem v vhodnem slovarju pripada enaka vrednost.<br />
-
-<br />
-
-(b) Kaj se zgodi, če slovar dvakrat obrnemo?  Z drugimi besedami, kako se razlikujeta slovarja <code>h</code> in <code>Obrni(Obrni(h))</code>? Pod katerimi pogoji sta enaka?
-
-</div></p><div id="viewq0b112g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b112g0" value="Rešitev (a)" id="btnenabledq0b112g0" onClick='showAnswer("q0b112g0",1,2)' /></div>
-<div id="hideq0b112g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b112g0" value="Skrij" onClick='showAnswer("q0b112g0",0,2)'/></div>
-<div id="sq0b112g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b112g0",0,2)'></div>
+<div class="alert alert-info" role="alert">
+<p>
+	<span class="label label-primary"><b>9</b></span>
+	<span class="fa fa-star pull-right"></span>
+</p>
+<p align="justify">(a) Napiši funkcijo <code>Obrni(slovar)</code>, ki vrne »obrnjeni« slovar, torej takega, v katerem bodo vloge ključev in vrednosti obrnjene. Primer: <code>Obrni({"ena": 11, "dve": 222})</code> mora vrniti slovar <code>{11: "ena", 222: "dve"}</code>.
+(Vrednosti nekaterih tipov se sicer v pythonu ne da uporabljati kot ključe, vendar predpostavi, da se v naših slovarjih to ne bo zgodilo — npr. da se kot vrednosti pojavljajo le nizi in cela števila.) Opiši, kako se obnaša tvoja rešitev v primerih, ko več ključem v vhodnem slovarju pripada enaka vrednost.</p>
+<p align="justify">(b) Kaj se zgodi, če slovar dvakrat obrnemo?  Z drugimi besedami, kako se razlikujeta slovarja <code>h</code> in <code>Obrni(Obrni(h))</code>? Pod katerimi pogoji sta enaka?</p>
+<p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution9a"><span class="fa fa-check"></span> Rešitev (a)</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution9b"><span class="fa fa-check"></span> Rešitev (b)</button>
+</p>
 </div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
 
-<div class="code">
-
-def Obrni(slovar):<br />
-
-<span class="tab2">obrnjeni = {}</span><br />
-
-<span class="tab2">for kljuc in slovar:</span><br />
-
-<span class="tab4">vrednost = slovar[kljuc]</span><br />
-
-<span class="tab4">obrnjeni[vrednost] = kljuc</span><br />
-
-<span class="tab2">return obrnjeni</span><br />
-
-<br />
-
-# Kaj se zgodi, če ima v vhodnem slovarju več<br />
-
-# ključev enako vrednost? V obrnjenem slovarju<br />
-
-# bo ta vrednost seveda nastopila (kot ključ)<br />
-
-# le enkrat, njena pripadajoča vrednost pa bo<br />
-
-# zadnji ključ iz vhodnega slovarja, ki je imel<br />
-
-# to pripadajočo vrednost. &quot;Zadnji&quot; je mišljeno<br />
-
-# glede na vrstni red, v katerem zanka &quot;for kljuc<br />
-
-# in slovar&quot; pregleduje ključe. Glede tega,<br />
-
-# kakšen točno je ta vrstni red, pa nam jezik<br />
-
-# python ne daje nobenih posebnih zagotovil.<br />
-
-<br />
-
-print(Obrni({&quot;ena&quot;: 11, &quot;dve&quot;: 222}))<br />
-
-</div></p>
-</div></div>
-<div id="viewq0b112g1" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b112g1" value="Rešitev (b)" id="btnenabledq0b112g1" onClick='showAnswer("q0b112g1",1,2)' /></div>
-<div id="hideq0b112g1" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b112g1" value="Skrij" onClick='showAnswer("q0b112g1",0,2)'/></div>
-<div id="sq0b112g1" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b112g1",0,2)'></div>
+<div>
+<form>
+<p><textarea id="code"></textarea></p>
+<p>
+<a href="#" class="btn btn-primary"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-primary"  onclick="clearit()">Počisti</a>
+</p>
+</form>
 </div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
-
-<div class="code">
-
-slovar = {&quot;ena&quot;: 11, &quot;dve&quot;: 222, &quot;tri&quot;: 222}<br />
-
-obrnjeni = Obrni(slovar)<br />
-
-dvakratObrnjeni = Obrni(obrnjeni)<br />
-
-print(slovar)<br />
-
-print(obrnjeni) # {11: &quot;ena&quot;, 222: &quot;dve&quot;}<br />
-
-# ali pa {11: &quot;ena&quot;, 222: &quot;tri&quot;}<br />
-
-print(dvakratObrnjeni) # {&quot;ena&quot;: 11, &quot;dve&quot;: 222}<br />
-
-# ali pa {&quot;ena&quot;: 11, &quot;tri&quot;: 222}<br />
-
-</div></p>
-</div></div>
+<pre id="output"></pre>
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+						<br />
+<!-- Right column start -->
+<div class="alert alert-info" role="alert">
+<p>
+	<span class="label label-primary"><b>10</b></span>
+	<span class="fa fa-star pull-right"></span>
+</p>
+<p align="justify">Iz matematike se najbrž spomniš pojma preslikave in operacije kompozituma na preslikavah. Slovar pravzaprav ni nič drugega kot predstavitev preslikave v računalniku.</p><br />
+<p align="justify">(a) Napiši funkcijo <code>Komp(h1, h2)</code>, ki dobi dva slovarja in vrne nov slovar, v katerem so prisotni le tisti ključi <code>k</code> iz <code>h1</code>, za katere je vrednost <code>h1[k]</code> prisotna kot ključ v <code>h2</code>; pripadajoča vrednost k takemu ključu <code>k</code> v izhodnem slovarju pa naj bo <code>h2[h1[k]]</code>.<br />
+<b>Primer:</b> pri <code>h1 = {"ena": 1, "dve": 2, "tri": 3}</code> in <code>h2 = {1: "ane", 3: "irt"}</code>	mora funkcija <code>Komp(h1, h2)</code> vrniti slovar <code>{"ena": "ane", "tri": "irt"}</code>.</p><br />
+<p align="justify">(b) Takšno veriženje slovarjev bi se dalo posplošiti tudi na 3 ali več slovarjev. Napiši funkcijo <code>Komp3(h1, h2, h3)</code>, ki vrne nov slovar, v katerem ključu <code>k</code> pripada vrednost <code>h3[h2[h1[k]]]</code> (če je <code>k</code> prisoten kot ključ v <code>h1</code> in če je <code>h1[k]</code> prisoten kot ključ v <code>h2</code> in tako naprej).</p><br />
+<p align="justify">(c) Če imamo tri slovarje <code>h1</code>, <code>h2</code>, <code>h3</code>, ali je <code>Komp(Komp(h1, h2), h3)</code> enak slovarju <code>Komp(h1, Komp(h2, h3))</code>?</p><br />
+<p align="justify">(d) Napiši funkcijo <code>VerigaSlovarjev(t)</code>, ki dobi kot parameter tabelo <code>t</code> z dvema ali več slovarji in jih na tu opisani način sestavi v nov slovar, ki predstavlja preslikavo, ki jo dobimo, če najprej uporabimo preslikavo <code>t[0]</code>, nato preslikavo <code>t[1]</code> in tako naprej.</p>
+<p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution10a"><span class="fa fa-check"></span> Rešitev (a)</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution10b"><span class="fa fa-check"></span> Rešitev (b)</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution10c"><span class="fa fa-check"></span> Rešitev (c)</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution10d"><span class="fa fa-check"></span> Rešitev (d)</button>
+</p>
 </div>
+
+<div class="alert alert-danger" role="alert">
+<p>
+	<span class="label label-danger"><b>11</b></span>
+	<span class="fa fa-star pull-right"></span>
+</p>
+<p align="justify"><b>Konkordanca</b> nekega besedila je seznam vseh besed, ki se pojavljajo v njem, za vsako besedo pa so navedene vse njene pojavitve skupaj s kontekstom, recimo prejšnjih in naslednjih 5 besed. Takšen seznam pride prav pri preučevanju jezika in književnosti, da bolje razumemo rabo in pomen posameznih besed. Napiši program, ki prebere vhodno besedilo in izpiše njegovo konkordanco.</p>
+<p>
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution11"><span class="fa fa-check"></span> Rešitev</button>
+</p>
 </div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
- <!-- applet --> 
-  <div class="wrapper numbered" id="wrap116">
-<div class="splosna_obvezna_znanja">
- <div class='interaktivnaNaloga'>
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Pagination in Footer -->
+			<div class="col-md-12">
+				<center>
+				<ul class="pagination pagination-sm">
+					<li><a href="../1211/index.html" aria-label="Previous Unit"><span aria-hidden="true">&laquo;</span></a></li>
+					<li><a href="../1212/index12.html" aria-label="Previous Page"><span aria-hidden="true">&#x2039;</span></a></li>
+					<li><a href="../1212/index.html">197</a></li>
+					<li><a href="../1212/index1.html">198</a></li>
+					<li><a href="../1212/index2.html">199</a></li>
+					<li><a href="../1212/index3.html">200</a></li>
+					<li><a href="../1212/index4.html">201</a></li>
+					<li><a href="../1212/index5.html">202</a></li>
+					<li><a href="../1212/index6.html">203</a></li>
+					<li><a href="../1212/index7.html">204</a></li>
+					<li><a href="../1212/index8.html">205</a></li>
+					<li><a href="../1212/index9.html">206</a></li>
+					<li><a href="../1212/index10.html">207</a></li>
+					<li><a href="../1212/index11.html">208</a></li>
+					<li><a href="../1212/index12.html">209</a></li>
+					<li class="active"><a href="#">210</a></li>
+					<li><a href="../1301/index.html" aria-label="Next Page"><span aria-hidden="true">&#x203A;</span></a></li>
+					<li><a href="../1301/index.html" aria-label="Next Unit"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+				</center>
+			</div>
+
+		</div>
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="../js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
+
+	<!-- eXe Project -->
+	<script src="../js/exe/common.js"></script>
+
+	<!-- Skulpt and CodeMirror -->
+	<script src="../js/skulpt/codemirrorepl.js"></script>
+	<script src="../js/skulpt/repl.js"></script>
+	<script src="../js/skulpt/skulpt.js"></script>
+	<script src="../js/skulpt/skulpt-stdlib.js"></script>
+	<script src="../js/skulpt/python.js"></script>
+	<script>Sk.python3 = true;</script>
+
 <script type="text/javascript">
 function outf(text) {
   var mypre = document.getElementById("output");
@@ -310,18 +674,6 @@ function clearit() {
 }
 </script>
 
-<div style="width:500px">
-<form>
-<textarea id="code"></textarea>
-<button type="button" class="btn-blue"  onclick="runit()">Izvedi</button>
-<button type="button" class="btn-blue"  onclick="clearit()">Počisti</button>
-</form>
-</div>
-
-<div class="rounded" style="width:500px">
-<pre id="output"></pre>
-</div>
-
 <script>
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
@@ -329,397 +681,9 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   mode: "python",
   theme: "mbo"
 });
-editor.setSize(500, 300);
-</script></div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<section class="page page-right">
-<!-- casestudy - besedilo z gumbi --> 
-  <div class="wrapper numbered2" id="wrap113">
-<span class="number2 number-blue">10.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<div class="popupb">
-<p><div align="justify">
+editor.setSize('100%', 360);
+</script>
 
-Iz matematike se najbrž spomniš pojma preslikave in operacije kompozituma na preslikavah. Slovar pravzaprav ni nič drugega kot predstavitev preslikave v računalniku.<br />
+</body>
 
-<br />
-
-(a) Napiši funkcijo <code>Komp(h1, h2)</code>, ki dobi dva slovarja in vrne nov slovar, v katerem so prisotni le tisti ključi <code>k</code> iz <code>h1</code>, za katere je vrednost <code>h1[k]</code> prisotna kot ključ v <code>h2</code>; pripadajoča vrednost k takemu ključu <code>k</code> v izhodnem slovarju pa naj bo <code>h2[h1[k]]</code>.
-
-<br />
-
-<b>Primer:</b> pri <code>h1 = {&quot;ena&quot;: 1, &quot;dve&quot;: 2, &quot;tri&quot;: 3}</code> in <code>h2 = {1: &quot;ane&quot;, 3: &quot;irt&quot;}</code>	mora funkcija <code>Komp(h1, h2)</code> vrniti slovar <code>{&quot;ena&quot;: &quot;ane&quot;, &quot;tri&quot;: &quot;irt&quot;}</code>.<br />
-
-<br />
-
-(b) Takšno veriženje slovarjev bi se dalo posplošiti tudi na 3 ali več slovarjev. Napiši funkcijo <code>Komp3(h1, h2, h3)</code>, ki vrne nov slovar, v katerem ključu <code>k</code> pripada vrednost <code>h3[h2[h1[k]]]</code> (če je <code>k</code> prisoten kot ključ v <code>h1</code> in če je <code>h1[k]</code> prisoten kot ključ v <code>h2</code> in tako naprej).<br />
-
-<br />
-
-(c) Če imamo tri slovarje <code>h1</code>, <code>h2</code>, <code>h3</code>, ali je <code>Komp(Komp(h1, h2), h3)</code> enak slovarju <code>Komp(h1, Komp(h2, h3))</code>?<br />
-
-<br />
-
-(d) Napiši funkcijo <code>VerigaSlovarjev(t)</code>, ki dobi kot parameter tabelo <code>t</code> z dvema ali več slovarji in jih na tu opisani način sestavi v nov slovar, ki predstavlja preslikavo, ki jo dobimo, če najprej uporabimo preslikavo <code>t[0]</code>, nato preslikavo <code>t[1]</code> in tako naprej.
-
-</div></p><div id="viewq0b113g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b113g0" value="Rešitev (a)" id="btnenabledq0b113g0" onClick='showAnswer("q0b113g0",1,4)' /></div>
-<div id="hideq0b113g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b113g0" value="Skrij" onClick='showAnswer("q0b113g0",0,4)'/></div>
-<div id="sq0b113g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b113g0",0,4)'></div>
-</div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
-
-<div class="code">
-
-def Komp(h1, h2):<br />
-
-<span class="tab2">rezultat = {}</span><br />
-
-<span class="tab2">for k in h1:</span><br />
-
-<span class="tab4">k2 = h1[k]</span><br />
-
-<span class="tab4">if k2 in h2:</span><br />
-
-<span class="tab6">rezultat[k] = h2[k2]</span><br />
-
-<span class="tab2">return rezultat</span><br />
-
-<br />
-
-h1 = {&quot;ena&quot;: 1, &quot;dve&quot;: 2, &quot;tri&quot;: 3}<br />
-
-h2 = {1: &quot;ane&quot;, 3: &quot;irt&quot;}<br />
-
-print(Komp(h1, h2))<br />
-
-# izpiše {&quot;ena&quot;: &quot;ane&quot;, &quot;tri&quot;: &quot;irt&quot;}<br />
-
-</div></p>
-</div></div>
-<div id="viewq0b113g1" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b113g1" value="Rešitev (b)" id="btnenabledq0b113g1" onClick='showAnswer("q0b113g1",1,4)' /></div>
-<div id="hideq0b113g1" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b113g1" value="Skrij" onClick='showAnswer("q0b113g1",0,4)'/></div>
-<div id="sq0b113g1" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b113g1",0,4)'></div>
-</div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
-
-<div class="code">
-
-def Komp(h1, h2):<br />
-
-<span class="tab2">rezultat = {}</span><br />
-
-<span class="tab2">for k in h1:</span><br />
-
-<span class="tab4">k2 = h1[k]</span><br />
-
-<span class="tab4">if k2 in h2:</span><br />
-
-<span class="tab6">rezultat[k] = h2[k2]</span><br />
-
-<span class="tab2">return rezultat</span><br />
-
-<br />
-
-def Komp3(h1, h2, h3):<br />
-
-<span class="tab2">return Komp(h1, Komp(h2, h3))</span><br />
-
-<br />
-
-# Druga različica rešitve...<br />
-
-def Komp3_druga(h1, h2, h3):<br />
-
-<span class="tab2">h = {}</span><br />
-
-<span class="tab2">for k in h1:</span><br />
-
-<span class="tab4">v = h1[k]</span><br />
-
-<span class="tab4">if v not in h2: continue</span><br />
-
-<span class="tab4">v = h2[v]</span><br />
-
-<span class="tab4">if v not in h3: continue</span><br />
-
-<span class="tab4">h[k] = h3[v]</span><br />
-
-<span class="tab2">return h</span><br />
-
-<br />
-
-h1 = {&quot;ena&quot;: 1, &quot;dve&quot;: 2, &quot;tri&quot;: 3}<br />
-
-h2 = {1: &quot;ane&quot;, 3: &quot;irt&quot;}<br />
-
-h3 = {&quot;ane&quot;: &quot;one&quot;, &quot;irt&quot;: &quot;three&quot;}<br />
-
-print(Komp3(h1, h2, h3))<br />
-
-# izpiše {&quot;ena&quot;: &quot;one&quot;, &quot;tri&quot;: &quot;three&quot;}<br />
-
-print(Komp3_druga(h1, h2, h3))<br />
-
-# izpiše {&quot;ena&quot;: &quot;one&quot;, &quot;tri&quot;: &quot;three&quot;}<br />
-
-</div></p>
-</div></div>
-<div id="viewq0b113g2" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b113g2" value="Rešitev (c)" id="btnenabledq0b113g2" onClick='showAnswer("q0b113g2",1,4)' /></div>
-<div id="hideq0b113g2" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b113g2" value="Skrij" onClick='showAnswer("q0b113g2",0,4)'/></div>
-<div id="sq0b113g2" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b113g2",0,4)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
-
-Slovarja <code>Komp(Komp(h1, h2), h3)</code> in <code>Komp(h1, Komp(h2, h3))</code> sta res vedno enaka. Še več, sta tudi enaka slovarju <code>Komp3(h1, h2, h3)</code>. Dokaz, da je to res, spada bolj v matematiko kot v računalništvo, pa si ga vseeno oglejmo.<br />
-
-<br />
-
-<ul>
-
-	<li>Označimo <code>h12 = Komp(h1, h2)</code>, <code>h23 = Komp(h2, h3)</code>, <code>L = Komp(h12, h3)</code>, <code>D = Komp(h1, h23)</code>. Naloga sprašuje, ali je <code>L == D</code> (za vse možne <code>h1</code>, <code>h2</code>, <code>h3</code>).</li>
-
-	<li>Recimo, da je nek ključ <code>k</code> prisoten v <code>L</code> z vrednostjo <code>v</code>.<br />
-
-	(1) To pomeni, da je <code>k</code> prisoten v <code>h12</code>, da je <code>h12[k]</code> prisotna v <code>h3</code> in da je <code>h3[h12[k]] == v</code>.<br />
-
-	(2) Iz dejstva, da je <code>k</code> prisoten v <code>h12</code>, sledi tudi, da je <code>k</code> prisoten v <code>h1</code>, da je <code>h1[k]</code> prisotna v <code>h2</code> in da je <code>h2[h1[k]] == h12[k]</code>.<br />
-
-	(3) Označimo <code>u = h1[k]</code>; vidimo torej, da je <code>u</code> prisoten v <code>h2</code> in da je <code>h2[u] = h12[k]</code>.<br />
-
-	(4) Iz <code>h3[h12[k]] == v</code> (kar smo videli v (1)) lahko zdaj zaključimo, da je <code>h3[h2[u]] == v</code>.<br />
-
-	(5) Iz (3) in (4) zdaj dobimo, da je <code>u</code> prisoten v <code>h2</code>, da je <code>h2[u]</code> prisoten v <code>h3</code> in da je   <code>h3[h2[u]] == v</code>, torej je <code>u</code> prisoten kot ključ tudi v <code>h23</code> in to s pripadajočo vrednostjo <code>v</code>.<br />
-
-	(6) Ker je torej <code>k</code> prisoten v <code>h1</code> in je <code>h1[k]</code> (kar je enako <code>u</code>) prisotna kot ključ v <code>h23</code> z vrednostjo <code>v</code>, mora biti <code>k</code> prisoten kot ključ tudi v <code>Komp(h1, h23)</code> z vrednostjo <code>v</code>, torej je <code>D[k] == v</code>. Tako torej vidimo, da je vsak ključ, ki je prisoten v <code>L</code>, prisoten tudi v <code>D</code> in to z enako pripadajočo vrednostjo.</li>
-
-	<li>Dokaz v obratno smer (vsak ključ, ki je prisoten v <code>D</code>, je prisoten tudi v <code>L</code> in to z enako pripadajočo vrednostjo) gre na podoben način in ti ga prepustimo za vajo.</li>
-
-	<li>Oboje skupaj nam pove, da sta slovarja <code>L</code> in <code>D</code> res enaka.</li>
-
-</ul>
-
-</div></p>
-</div></div>
-<div id="viewq0b113g3" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b113g3" value="Rešitev (d)" id="btnenabledq0b113g3" onClick='showAnswer("q0b113g3",1,4)' /></div>
-<div id="hideq0b113g3" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b113g3" value="Skrij" onClick='showAnswer("q0b113g3",0,4)'/></div>
-<div id="sq0b113g3" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b113g3",0,4)'></div>
-</div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
-
-<div class="code">
-
-# Podnalogo (d) rešimo tako, da eno od rešitev<br />
-
-# podnaloge (b) posplošimo na večje število<br />
-
-# slovarjev:<br />
-
-def VerigaSlovarjev(t):<br />
-
-<span class="tab2">rezultat = {}</span><br />
-
-<span class="tab2">prvi = t[0]; ostali = t[1:]</span><br />
-
-<span class="tab2">for k in prvi:</span><br />
-
-<span class="tab4">ok = True</span><br />
-
-<span class="tab4">v = prvi[k]</span><br />
-
-<span class="tab4">for slovar in ostali:</span><br />
-
-<span class="tab6">if v not in slovar:</span><br />
-
-<span class="tab8">ok = False; break</span><br />
-
-<span class="tab6">v = slovar[v]</span><br />
-
-<span class="tab4">if ok:</span><br />
-
-<span class="tab6">rezultat[k] = v</span><br />
-
-<span class="tab2">return rezultat</span><br />
-
-<br />
-
-def VerigaSlovarjev_druga(t):<br />
-
-<span class="tab2">rezultat = t[0]</span><br />
-
-<span class="tab2">for slovar in t[1:]:</span><br />
-
-<span class="tab4">rezultat = Komp(rezultat, slovar)</span><br />
-
-<span class="tab2">return rezultat</span><br />
-
-<br />
-
-print(VerigaSlovarjev([h1, h2, h3]))<br />
-
-print(VerigaSlovarjev_druga([h1, h2, h3]))<br />
-
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- casestudy - besedilo z gumbi --> 
-  <div class="wrapper numbered2" id="wrap115">
-<span class="number2 number-red">11.</span><div class="box_dejstvo splosna_obvezna_znanja">
-    <span class="triangle triangle-red"></span>
-<div class="popupb">
-<p><div align="justify">
-
-<b>Konkordanca</b> nekega besedila je seznam vseh besed, ki se pojavljajo v njem, za vsako besedo pa so navedene vse njene pojavitve skupaj s kontekstom, recimo prejšnjih in naslednjih 5 besed. Takšen seznam pride prav pri preučevanju jezika in književnosti, da bolje razumemo rabo in pomen posameznih besed. Napiši program, ki prebere vhodno besedilo in izpiše njegovo konkordanco.
-
-</div></p><div id="viewq0b115g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b115g0" value="Rešitev" id="btnenabledq0b115g0" onClick='showAnswer("q0b115g0",1,1)' /></div>
-<div id="hideq0b115g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b115g0" value="Skrij" onClick='showAnswer("q0b115g0",0,1)'/></div>
-<div id="sq0b115g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b115g0",0,1)'></div>
-</div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
-
-<div class="code">
-
-# Predpostavimo, da v besedilu ni ločil in<br />
-
-# podobnih stvari, tako da ga lahko razbijemo<br />
-
-# na besede kar s funkcijo split().<br />
-
-def Konkordanca(besedilo):<br />
-
-<span class="tab2"># Predelajmo besedilo iz niza v seznam besed.</span><br />
-
-<span class="tab2">besedilo = besedilo.lower().split()</span><br />
-
-<span class="tab2">n = len(besedilo)</span><br />
-
-<span class="tab2"># Pripravimo si slovar, v katerem je za</span><br />
-
-<span class="tab2"># vsako besedo po en ključ, pripadajoča</span><br />
-
-<span class="tab2"># vrednost pa je seznam pojavitev</span><br />
-
-<span class="tab2"># (indeksov v tabelo &quot;besede&quot;).</span><br />
-
-<span class="tab2">pojavitve = {}</span><br />
-
-<span class="tab2">for i in range(n):</span><br />
-
-<span class="tab4">beseda = besedilo[i]</span><br />
-
-<span class="tab4">if beseda not in pojavitve:</span><br />
-
-<span class="tab6">pojavitve[beseda] = []</span><br />
-
-<span class="tab4">pojavitve[beseda].append(i)</span><br />
-
-<span class="tab2"># Pripravimo si urejen seznam besed.</span><br />
-
-<span class="tab2">besede = [beseda for beseda in pojavitve]</span><br />
-
-<span class="tab2">besede.sort()</span><br />
-
-<span class="tab2"># Izpišimo konkordanco.</span><br />
-
-<span class="tab2">kontekst = 5</span><br />
-
-<span class="tab2">for beseda in besede:</span><br />
-
-<span class="tab4">poj = pojavitve[beseda]</span><br />
-
-<span class="tab4"># Za vsako pojavitev sestavimo levi in</span><br />
-
-<span class="tab4"># desni kontekst, torej prejšnjih in</span><br />
-
-<span class="tab4"># naslednjih nekaj besed. Med levimi</span><br />
-
-<span class="tab4"># konteksti si zapomnimo dolžino</span><br />
-
-<span class="tab4"># najdaljšega.</span><br />
-
-<span class="tab4">levi = []; desni = []</span><br />
-
-<span class="tab4">maxLevi = 0</span><br />
-
-<span class="tab4">for i in poj:</span><br />
-
-<span class="tab6">leviKontekst = \</span><br />
-
-<span class="tab8">besedilo[max(i - kontekst, 0) : i]</span><br />
-
-<span class="tab6">desniKontekst = \</span><br />
-
-<span class="tab8">besedilo[i + 1 : i + 1 + kontekst]</span><br />
-
-<span class="tab6">leviKontekst = &quot; &quot;.join(leviKontekst)</span><br />
-
-<span class="tab6">desniKontekst = &quot; &quot;.join(desniKontekst)</span><br />
-
-<span class="tab6">maxLevi = max(maxLevi, len(leviKontekst))</span><br />
-
-<span class="tab6">levi.append(leviKontekst)</span><br />
-
-<span class="tab6">desni.append(desniKontekst)</span><br />
-
-<span class="tab4">print(beseda + &quot; (&quot; + str(len(poj))</span><br />
-
-<span class="tab10">+ &quot; pojavitev):&quot;)</span><br />
-
-<span class="tab4"># Zdaj lahko vse pojavitve skupaj s</span><br />
-
-<span class="tab4"># konteksti izpišemo, pri čemer jih</span><br />
-
-<span class="tab4"># z vrivanjem presledkov na začetku</span><br />
-
-<span class="tab4"># poravnajmo tako, da opazovana beseda</span><br />
-
-<span class="tab4"># pride v vsaki vrstici na isto mesto.</span><br />
-
-<span class="tab4"># Tako je izpis preglednejši.</span><br />
-
-<span class="tab4">for i in range(len(poj)):</span><br />
-
-<span class="tab6">leviKontekst = levi[i]</span><br />
-
-<span class="tab6">desniKontekst = desni[i]</span><br />
-
-<span class="tab6">print(&quot; &quot; * (maxLevi - len(leviKontekst)</span><br />
-
-<span class="tab12">+ 5) + leviKontekst + &quot; | &quot; +</span><br />
-
-<span class="tab12">beseda + &quot; | &quot; + desniKontekst)</span><br />
-
-<br />
-
-Konkordanca(&quot;vsi ljudje se rodijo svobodni in<br />
-
-<span class="tab12">imajo enako dostojanstvo in enake</span><br />
-
-<span class="tab12">pravice obdarjeni so z razumom in</span><br />
-
-<span class="tab12">vestjo in bi morali ravnati drug</span><br />
-
-<span class="tab12">z drugim kakor bratje&quot;)</span><br />
-
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<div class="paging-left"><a href="index12.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="../1301/index.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">210/423</span></div></div>
-</body></html>
+</html>

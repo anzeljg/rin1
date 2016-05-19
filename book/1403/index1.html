@@ -1,230 +1,237 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Created using eXeCute: http://exelearning.org -->
+<!DOCTYPE html>
+<html lang="sl">
+
 <head>
-<style type="text/css">
-@import url(../css/normalize.css);
-@import url(../css/main.css);
-@import url(../css/jquery-ui.css);
-@import url(../css/nav.css);
-@import url(../css/jsxgraph.css);
-@import url(../css/kalkulator.css);
-@import url(../css/lightbox.css);
-@import url(../css/jplayer.css);
-</style><title> Oddaljenost naprav v omrežju </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/eum.js"></script>
-<script type="text/javascript" src="../js/commoneum.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
-<script type="text/javascript" src="../js/options.js"></script>
-<script type="text/javascript" src="../js/kalkulator.js"></script>
-<script type="text/javascript" src="../js/jquery-exe.js"></script>
-<script type="text/javascript" src="../js/jquery-tools.js"></script>
-<script type="text/javascript" src="../js/gui/gui_core.js"></script>
-<script type="text/javascript" src="../js/gui/gui_help.js"></script>
-<script type="text/javascript" src="../js/lightbox.js"></script>
-<script type="text/javascript" src="../js/createjs.js"></script>
-<script type="text/javascript" src="../js/movieclip.js"></script>
-<script type="text/javascript" src="../js/povezovanje.js"></script>
-<script type="text/javascript" src="../js/underscore.js"></script>
-<script type="text/javascript" src="../js/transit.js"></script>
-<script type="text/javascript" src="../js/cloze.js"></script>
-<script type="text/javascript" src="../js/JSmol.js"></script>
-<script type="text/javascript" src="../js/jplayer.js"></script>
-<script type="text/x-mathjax-config">  
-MathJax.Hub.Config({
-   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
-    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
-    config:["TeX-AMS_HTML.js"]});
-</script>
-<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
-$(document).keydown(function(e){
-if (e.keyCode == 37) { 
- window.location = "index.html";
-  }if (e.keyCode == 39) {
- window.location = "index2.html";
-  }});
-</script><link rel="shortcut icon" href="../favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>Oddaljenost naprav v omrežju</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- vis.js - browser based visualization library -->
+	<link href="../css/vis.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-    <body>
-<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
-<input type="hidden" name="elo-id" id="elo-id" value="1"/>
-<!--navigacija-->
-    <nav id="nav">
-        <ul class="main">
-            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
-            <li class="topics"><a href="#">Kazalo</a></li>
-            <li class="pages"><a href="#">Strani</a></li>
-        </ul>
-    <ul>
-    <li id="textbook-title"><span>Omrežne naprave in njihovo povezovanje</span></li>
-    </ul>
-    <ul class="meta">
-            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
-            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
-            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.03.zip">Prenos</a></li>
-            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
-        </ul>
-    </nav>
-    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
-     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
-     <img src="../img/by-nc-sa.eu.png" height="30px">
-    </div></div>
-<section id="nav-tabbed">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul class="accordion">
-      <li class="on" id="menu001"><a href="#">Uvod</a>
-      <ul id="submenu001" class="sub-menu">
-        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
-        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
-      <ul id="submenu002" class="sub-menu">
-        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
-        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
-        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
-        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
-        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
-        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
-        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
-        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
-        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
-        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
-        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
-        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu003"><a href="#">Sistemi</a>
-      <ul id="submenu003" class="sub-menu">
-        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
-        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
-        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
-        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
-        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
-        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
-        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
-        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
-      <ul class="on" id="submenu004" class="sub-menu">
-        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
-        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
-        <li class="on"><a href="../1403/index.html" id="unit1403" style="color: black; font-weight: 600;">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
-        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
-        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
-        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
-        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
-        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
-      <ul id="submenu005" class="sub-menu">
-        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
-        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
-        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
-      </ul>
-      </li>
-    </ul>
-  </nav></section>
-</section>
 
-<section id="nav-pages">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul>
-      <li><a href="index.html" >Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-      <li class="on"><a href="#">Oddaljenost naprav v omrežju <span class="page_numbers">327</span></a></li>
-      <li><a href="index2.html" >Število naprav v omrežju <span class="page_numbers">328</span></a></li>
-      <li><a href="index3.html" >Vrste povezav med napravami <span class="page_numbers">329</span></a></li>
-      <li><a href="index4.html" >Topologije omrežja <span class="page_numbers">330</span></a></li>
-      <li><a href="index5.html" >Topologije omrežja <span class="page_numbers">331</span></a></li>
-      <li><a href="index6.html" >Topologije omrežja <span class="page_numbers">332</span></a></li>
-      <li><a href="index7.html" >Omrežne naprave <span class="page_numbers">333</span></a></li>
-      <li><a href="index8.html" >Povezava naprav v lokalno omrežje <span class="page_numbers">334</span></a></li>
-      <li><a href="index9.html" >Povzetek <span class="page_numbers">335</span></a></li>
-      <li><a href="index10.html" >Naloge <span class="page_numbers">336</span></a></li>
-    </ul>
-  </nav></section>
-</section>
+<body>
 
-<div class="container" id="nodeDecoration">
-            <nav class="breadcrumbs">
-                <ul>
-                <li style="float:left;"><span class="unit-path">Omrežne naprave in njihovo povezovanje | Oddaljenost naprav v omrežju</span></a></li> 
-        <li>&nbsp;</li>
-            </ul>
-            </nav>
+	<div id="wrapper">
 
-<section class="page page-left">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
+				  <div id="menu1" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1101/index.html">O učbeniku</a></li>
+					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
+				  <div id="menu2" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
+					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
+					<li><a href="../1203/index.html">Zanke</a></li>
+					<li><a href="../1204/index.html">Tabele</a></li>
+					<li><a href="../1205/index.html">Funkcije</a></li>
+					<li><a href="../1206/index.html">Nizi</a></li>
+					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
+					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
+					<li><a href="../1209/index.html">Zaporedje</a></li>
+					<li><a href="../1210/index.html">Urejanje</a></li>
+					<li><a href="../1211/index.html">Množica</a></li>
+					<li><a href="../1212/index.html">Slovar</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
+				  <div id="menu3" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
+					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
+					<li><a href="../1303/index.html">Ukazi</a></li>
+					<li><a href="../1304/index.html">Arhitektura računalnika</a></li>
+					<li><a href="../1305/index.html">Pomnilnik</a></li>
+					<li><a href="../1306/index.html">Operacijski sistem</a></li>
+					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
+					<li><a href="../1308/index.html">Uporabniki in varnost</a></li>
+					<li><a href="../1309/index.html">Procesi</a></li>
+					<li><a href="../1310/index.html">Vzporednost</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
+				  <div id="menu4" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
+					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
+					<li class="active"><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
+					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
+					<li><a href="../1405/index.html">Storitve interneta</a></li>
+					<li><a href="../1406/index.html">Svetovni splet</a></li>
+					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
+					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
+					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
+				  <div id="menu5" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
+					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
+					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
 
-<!-- Samostojno besedilo --> 
-  <div class='wrapper-top'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
 
-Računalniška omrežja lahko razdelimo po različnih kriterijih: oddaljenost naprav v omrežju, število naprav v omrežju, vrsta povezave med napravami.<br />
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
 
-<br />
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
 
-</div></p>
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Catalogue -->
+		<div id="catalogue" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
+					</div>
+					<div class="modal-body">
+						CIP - Kataložni zapis o publikaciji<br>
+						Narodna in univerzitetna knjižnica, Ljubljana<br>
+						<br>
+						659.2:004(075.3)(0.034.2)<br>
+						004(075.3)(0.034.2)<br>
+						<br>
+						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
+						<br>
+						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
+						<br>
+						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
+						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
+						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
+						<br>
+						1. Anželj, Gregor<br>
+						282126848<br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+<!-- Left column start -->
+<p align="justify">Računalniška omrežja lahko razdelimo po različnih kriterijih: oddaljenost naprav v omrežju, število naprav v omrežju, vrsta povezave med napravami.</p>
+
+<h1>Oddaljenost naprav v omrežju</h1>
+ 
+<p align="justify">Računalniško omrežje se lahko razprostira od delovne mize do celega sveta in celo vesolja. Glede na obseg omrežja ločimo različne vrste omrežij, najpomembnejše pa so: osebno računalniško omrežje (<i>ang. Personal Area Network - PAN</i>), lokalno računalniško omrežje (<i>ang. Local Area Network - LAN</i>), prostrano računalniško omrežje (<i>ang. Wide Area Network - WAN</i>).</p>
+
+<h4>Vaja</h4>
+
+<div class="alert alert-info" role="alert">
+<p align="justify">Razišči, kako poteka komunikacija med šolo in domom, s pomočjo interaktivnega grafa računalniških omrežij (razdeljenih glede na oddaljenost naprav) na desni.</p>
+
+<p align="justify">Med posameznimi omrežji se lahko premikaš tako, da klikneš ustrezen gumb pod interaktivnim grafom. Lahko pa klikneš tudi ustrezno vozlišče oz. napravo na grafu (npr. šola, dom, računalnik).</p>
+
+<p align="justify">Interaktivni graf je možno tudi približevati ali oddaljevati (npr. s koleščkom na miški).</p>
 </div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div><h1>Oddaljenost naprav v omrežju</h1>
- <div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
-
-Računalniško omrežje se lahko razprostira od delovne mize do celega sveta in celo vesolja. Glede na obseg omrežja ločimo različne vrste omrežij, najpomembnejše pa so: osebno računalniško omrežje (<i>ang. Personal Area Network - PAN</i>), lokalno računalniško omrežje (<i>ang. Local Area Network - LAN</i>), prostrano računalniško omrežje (<i>ang. Wide Area Network - WAN</i>).
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-<h2>Naloga</h2>  <div class='wrapper'>
-<div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<p><div align="justify">
-
-Razišči, kako poteka komunikacija med šolo in domom, s pomočjo interaktivnega grafa računalniških omrežij (razdeljenih glede na oddaljenost naprav) na desni.<br />
-
-<br />
-
-Med posameznimi omrežji se lahko premikaš tako, da klikneš ustrezen gumb pod interaktivnim grafom. Lahko pa klikneš tudi ustrezno vozlišče oz. napravo na grafu (npr. šola, dom, računalnik).<br />
-
-<br />
-
-Interaktivni graf je možno tudi približevati ali oddaljevati (npr. s koleščkom na miški).
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<section class="page page-right">
- <!-- applet --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <div class='interaktivnaNaloga'>
-<script type="text/javascript" src="vis.min.js"></script>
-<link href="vis.min.css" rel="stylesheet" type="text/css" />
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+						<br />
+<!-- Right column start -->
 <style type="text/css">
 #mynetwork {
   width: 500px;
   height: 500px;
   border: 1px solid #D6D9D8;
   background-color: #D6D9D8;
+  overflow: hidden;
 }
 span.network-manipulationUI.edit,
 span.network-manipulationUI.delete {
@@ -234,6 +241,71 @@ div.network-seperatorLine {
   background-color: transparent;
 }
 </style>
+<div id="mynetwork"></div>
+<div style="width:500px;margin-top:4px">
+<button id="wan" class="btn btn-danger" onclick="draw(nodesA, edgesA, typeA)">WAN</button>
+<button id="lan" class="btn btn-primary" onclick="draw(nodesB, edgesB, typeB)">Šolski LAN</button>
+<button id="lan2" class="btn btn-primary" onclick="draw(nodesC, edgesC, typeC)">Domači LAN</button>
+<button id="pan" class="btn btn-primary" onclick="draw(nodesD, edgesD, typeD)">PAN</button>
+</div>
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Pagination in Footer -->
+			<div class="col-md-12">
+				<center>
+				<ul class="pagination pagination-sm">
+					<li><a href="../1402/index.html" aria-label="Previous Unit"><span aria-hidden="true">&laquo;</span></a></li>
+					<li><a href="../1403/index.html" aria-label="Previous Page"><span aria-hidden="true">&#x2039;</span></a></li>
+					<li><a href="../1403/index.html">326</a></li>
+					<li class="active"><a href="#">327</a></li>
+					<li><a href="../1403/index2.html">328</a></li>
+					<li><a href="../1403/index3.html">329</a></li>
+					<li><a href="../1403/index4.html">330</a></li>
+					<li><a href="../1403/index5.html">331</a></li>
+					<li><a href="../1403/index6.html">332</a></li>
+					<li><a href="../1403/index7.html">333</a></li>
+					<li><a href="../1403/index8.html">334</a></li>
+					<li><a href="../1403/index9.html">335</a></li>
+					<li><a href="../1403/index10.html">336</a></li>
+					<li><a href="../1403/index2.html" aria-label="Next Page"><span aria-hidden="true">&#x203A;</span></a></li>
+					<li><a href="../1404/index.html" aria-label="Next Unit"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+				</center>
+			</div>
+
+		</div>
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="../js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
+
+	<!-- vis.js - browser based visualization library -->
+	<script src="../js/vis/vis.min.js"></script>
 
 <script type="text/javascript">
   var nodes = null;
@@ -241,15 +313,15 @@ div.network-seperatorLine {
   var network = null;
   var typeA = "wan";
   var nodesA = [
-    {id: 100, label: 'Internet', image: 'internet.png', shape: 'image'},
-    {id: 110, label: 'ISP (Arnes)', image: 'hub.png', shape: 'image'},
-    {id: 111, label: '\u0160ola 1', image: 'branch.png', shape: 'image'},
-    {id: 112, label: '\u0160ola 2', image: 'branch.png', shape: 'image'},
-    {id: 113, label: '\u0160olski center', image: 'headoffice.png', shape: 'image'},
-    {id: 120, label: 'ISP (Telekom)', image: 'hub.png', shape: 'image'},
-    {id: 121, label: 'Podjetje', image: 'factory.png', shape: 'image'},
-    {id: 122, label: 'Soseska', image: 'neighbourhood.png', shape: 'image'},
-    {id: 123, label: 'Dom', image: 'home.png', shape: 'image'}
+    {id: 100, label: 'Internet', image: 'img/internet.png', shape: 'image'},
+    {id: 110, label: 'ISP (Arnes)', image: 'img/hub.png', shape: 'image'},
+    {id: 111, label: '\u0160ola 1', image: 'img/branch.png', shape: 'image'},
+    {id: 112, label: '\u0160ola 2', image: 'img/branch.png', shape: 'image'},
+    {id: 113, label: '\u0160olski center', image: 'img/headoffice.png', shape: 'image'},
+    {id: 120, label: 'ISP (Telekom)', image: 'img/hub.png', shape: 'image'},
+    {id: 121, label: 'Podjetje', image: 'img/factory.png', shape: 'image'},
+    {id: 122, label: 'Soseska', image: 'img/neighbourhood.png', shape: 'image'},
+    {id: 123, label: 'Dom', image: 'img/home.png', shape: 'image'}
   ];
   var edgesA = [
     {from: 110, to: 100, length: LENGTH_MAIN, width: 3},
@@ -263,23 +335,23 @@ div.network-seperatorLine {
   ];
   var typeB = "lan";
   var nodesB = [
-    {id: 200, label: 'Internet', image: 'firewall2.png', shape: 'image'},
-    {id: 210, label: 'Usmerjevalnik', image: 'hub.png', shape: 'image'},
-    {id: 212, label: 'Stikalo 1', image: 'hub.png', shape: 'image'},
-    {id: 213, label: 'Stikalo 2', image: 'hub.png', shape: 'image'},
-    {id: 214, label: 'Brezžični\nusmerjevalnik', image: 'wireless_router.png', shape: 'image'},
-    {id: 221, label: 'Računalnik', image: 'computer.png', shape: 'image'},
-    {id: 222, label: 'Računalnik', image: 'computer.png', shape: 'image'},
-    {id: 223, label: 'Računalnik', image: 'computer.png', shape: 'image'},
-    {id: 224, label: 'Računalnik', image: 'computer.png', shape: 'image'},
-    {id: 225, label: 'Fotokopirni\nstroj', image: 'printer.png', shape: 'image'},
-    {id: 231, label: '\nSpletni\nstrežnik', image: 'server_web.png', shape: 'image'},
-    {id: 232, label: '\nPoštni\nstrežnik', image: 'server_mail.png', shape: 'image'},
-    {id: 233, label: '\nDatotečni\nstrežnik', image: 'server_file.png', shape: 'image'},
-    {id: 234, label: '\nAvtentikacijski\n(IdP) strežnik', image: 'server_idp.png', shape: 'image'},
-    {id: 241, label: 'Prenosnik', image: 'laptop.png', shape: 'image'},
-    {id: 242, label: 'Tablica', image: 'tablet_ipad.png', shape: 'image'},
-    {id: 243, label: 'Pametni telefon', image: 'smartphone.png', shape: 'image'}
+    {id: 200, label: 'Internet', image: 'img/firewall2.png', shape: 'image'},
+    {id: 210, label: 'Usmerjevalnik', image: 'img/hub.png', shape: 'image'},
+    {id: 212, label: 'Stikalo 1', image: 'img/hub.png', shape: 'image'},
+    {id: 213, label: 'Stikalo 2', image: 'img/hub.png', shape: 'image'},
+    {id: 214, label: 'Brezžični\nusmerjevalnik', image: 'img/wireless_router.png', shape: 'image'},
+    {id: 221, label: 'Računalnik', image: 'img/computer.png', shape: 'image'},
+    {id: 222, label: 'Računalnik', image: 'img/computer.png', shape: 'image'},
+    {id: 223, label: 'Računalnik', image: 'img/computer.png', shape: 'image'},
+    {id: 224, label: 'Računalnik', image: 'img/computer.png', shape: 'image'},
+    {id: 225, label: 'Fotokopirni\nstroj', image: 'img/printer.png', shape: 'image'},
+    {id: 231, label: '\nSpletni\nstrežnik', image: 'img/server_web.png', shape: 'image'},
+    {id: 232, label: '\nPoštni\nstrežnik', image: 'img/server_mail.png', shape: 'image'},
+    {id: 233, label: '\nDatotečni\nstrežnik', image: 'img/server_file.png', shape: 'image'},
+    {id: 234, label: '\nAvtentikacijski\n(IdP) strežnik', image: 'img/server_idp.png', shape: 'image'},
+    {id: 241, label: 'Prenosnik', image: 'img/laptop.png', shape: 'image'},
+    {id: 242, label: 'Tablica', image: 'img/tablet_ipad.png', shape: 'image'},
+    {id: 243, label: 'Pametni telefon', image: 'img/smartphone.png', shape: 'image'}
   ];
   var edgesB = [
     {from: 210, to: 200, length: LENGTH_MAIN, width: 3},
@@ -301,13 +373,13 @@ div.network-seperatorLine {
   ];
   var typeC = "lan2";
   var nodesC = [
-    {id: 300, label: 'Internet', image: 'firewall2.png', shape: 'image'},
-    {id: 310, label: 'ISP (Telekom)', image: 'hub.png', shape: 'image'},
-    {id: 311, label: 'Usmerjevalnik', image: 'wireless_router.png', shape: 'image'},
-    {id: 321, label: 'Računalnik', image: 'computer.png', shape: 'image'},
-    {id: 322, label: 'Prenosnik', image: 'laptop.png', shape: 'image'},
-    {id: 323, label: 'Tiskalnik', image: 'printer.png', shape: 'image'},
-    {id: 324, label: 'Pametni telefon', image: 'smartphone.png', shape: 'image'}
+    {id: 300, label: 'Internet', image: 'img/firewall2.png', shape: 'image'},
+    {id: 310, label: 'ISP (Telekom)', image: 'img/hub.png', shape: 'image'},
+    {id: 311, label: 'Usmerjevalnik', image: 'img/wireless_router.png', shape: 'image'},
+    {id: 321, label: 'Računalnik', image: 'img/computer.png', shape: 'image'},
+    {id: 322, label: 'Prenosnik', image: 'img/laptop.png', shape: 'image'},
+    {id: 323, label: 'Tiskalnik', image: 'img/printer.png', shape: 'image'},
+    {id: 324, label: 'Pametni telefon', image: 'img/smartphone.png', shape: 'image'}
   ];
   var edgesC = [
     {from: 310, to: 300, length: LENGTH_MAIN, width: 3},
@@ -319,15 +391,15 @@ div.network-seperatorLine {
   ];
   var typeD = "pan";
   var nodesD = [
-    {id: 400, label: 'Internet', image: 'firewall2.png', shape: 'image'},
-    {id: 410, label: 'Računalnik', image: 'computer.png', shape: 'image'},
-    {id: 421, label: 'Tiskalnik', image: 'printer.png', shape: 'image'},
-    {id: 422, label: 'Optični bralnik', image: 'scanner.png', shape: 'image'},
-    {id: 423, label: 'Fotoaparat', image: 'camera_photo.png', shape: 'image'},
-    {id: 424, label: 'Video kamera', image: 'camera_video.png', shape: 'image'},
-    {id: 425, label: 'Zunanji\ntrdi disk', image: 'harddrive.png', shape: 'image'},
-    {id: 426, label: 'Tipkovnica', image: 'keyboard.png', shape: 'image'},
-    {id: 427, label: 'Miška', image: 'mouse.png', shape: 'image'}
+    {id: 400, label: 'Internet', image: 'img/firewall2.png', shape: 'image'},
+    {id: 410, label: 'Računalnik', image: 'img/computer.png', shape: 'image'},
+    {id: 421, label: 'Tiskalnik', image: 'img/printer.png', shape: 'image'},
+    {id: 422, label: 'Optični bralnik', image: 'img/scanner.png', shape: 'image'},
+    {id: 423, label: 'Fotoaparat', image: 'img/camera_photo.png', shape: 'image'},
+    {id: 424, label: 'Video kamera', image: 'img/camera_video.png', shape: 'image'},
+    {id: 425, label: 'Zunanji\ntrdi disk', image: 'img/harddrive.png', shape: 'image'},
+    {id: 426, label: 'Tipkovnica', image: 'img/keyboard.png', shape: 'image'},
+    {id: 427, label: 'Miška', image: 'img/mouse.png', shape: 'image'}
   ];
   var edgesD = [
     {from: 410, to: 400, length: LENGTH_MAIN, width: 2},
@@ -340,30 +412,25 @@ div.network-seperatorLine {
     {from: 427, to: 410, length: LENGTH_SUB, style: 'dash-line'}
   ];
   window.onload = function() { draw(nodesA, edgesA, typeA); }
-
   var LENGTH_MAIN = 150;
   var LENGTH_SUB = 50;
-
   // Called when the Visualization API is loaded.
   function draw(n, e, t) {
     // Set all buttons to be blue
-    document.getElementById("wan").className = "btn-blue";
-    document.getElementById("lan").className = "btn-blue";
-    document.getElementById("lan2").className = "btn-blue";
-    document.getElementById("pan").className = "btn-blue";
+    document.getElementById("wan").className = "btn btn-primary";
+    document.getElementById("lan").className = "btn btn-primary";
+    document.getElementById("lan2").className = "btn btn-primary";
+    document.getElementById("pan").className = "btn btn-primary";
     // Set selected button to be orange
-    document.getElementById(t).className = "btn-orange";
-
+    document.getElementById(t).className = "btn btn-danger";
     // Create a data table with nodes.
     var nodes = new vis.DataSet();
     // Create a data table with links.
     var edges = new vis.DataSet();
-
     // create a network
     var container = document.getElementById('mynetwork');
     nodes.add(n);
     edges.add(e);
-
     var data = {
       nodes: nodes,
       edges: edges
@@ -377,15 +444,14 @@ div.network-seperatorLine {
       },
     };
     network = new vis.Network(container, data, options);
-
     // add event listener
     network.on('select', function(properties) {
       if (properties.nodes == 123) {
         // Update buttons
-        document.getElementById("wan").className = "btn-blue";
-        document.getElementById("lan").className = "btn-blue";
-        document.getElementById("lan2").className = "btn-orange";
-        document.getElementById("pan").className = "btn-blue";
+        document.getElementById("wan").className = "btn btn-primary";
+        document.getElementById("lan").className = "btn btn-primary";
+        document.getElementById("lan2").className = "btn btn-danger";
+        document.getElementById("pan").className = "btn btn-primary";
         // Update graph
         nodes.clear();
         edges.clear();
@@ -395,10 +461,10 @@ div.network-seperatorLine {
       }
       if (properties.nodes >= 111 && properties.nodes <= 113) {
         // Update buttons
-        document.getElementById("wan").className = "btn-blue";
-        document.getElementById("lan").className = "btn-orange";
-        document.getElementById("lan2").className = "btn-blue";
-        document.getElementById("pan").className = "btn-blue";
+        document.getElementById("wan").className = "btn btn-primary";
+        document.getElementById("lan").className = "btn btn-danger";
+        document.getElementById("lan2").className = "btn btn-primary";
+        document.getElementById("pan").className = "btn btn-primary";
         // Update graph
         nodes.clear();
         edges.clear();
@@ -408,10 +474,10 @@ div.network-seperatorLine {
       }
       if ((properties.nodes >= 221 && properties.nodes <= 224) || properties.nodes == 321) {
         // Update buttons
-        document.getElementById("wan").className = "btn-blue";
-        document.getElementById("lan").className = "btn-blue";
-        document.getElementById("lan2").className = "btn-blue";
-        document.getElementById("pan").className = "btn-orange";
+        document.getElementById("wan").className = "btn btn-primary";
+        document.getElementById("lan").className = "btn btn-primary";
+        document.getElementById("lan2").className = "btn btn-primary";
+        document.getElementById("pan").className = "btn btn-danger";
         // Update graph
         nodes.clear();
         edges.clear();
@@ -420,17 +486,9 @@ div.network-seperatorLine {
         redraw();
       }
     });
-
   }
 </script>
 
-<div id="mynetwork"></div>
-<button id="wan" class="btn-orange" onclick="draw(nodesA, edgesA, typeA)">WAN</button>
-<button id="lan" class="btn-blue" onclick="draw(nodesB, edgesB, typeB)">Šolski LAN</button>
-<button id="lan2" class="btn-blue" onclick="draw(nodesC, edgesC, typeC)">Domači LAN</button>
-<button id="pan" class="btn-blue" onclick="draw(nodesD, edgesD, typeD)">PAN</button></div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<div class="paging-left"><a href="index.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index2.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">327/423</span></div></div>
-</body></html>
+</body>
+
+</html>

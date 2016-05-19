@@ -1,0 +1,178 @@
+.ansGrayX {
+color:#777;
+font-family:OpenSymbol, Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size:24px;
+font-weight:700;
+line-height:20px;
+}
+.ansGreenCheck {
+color:#080;
+font-family:OpenSymbol, Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size:24px;
+font-weight:700;
+line-height:20px;
+}
+.ansRedX {
+color:red;
+font-family:OpenSymbol, Verdana, Arial, Geneva, Helvetica, sans-serif;
+font-size:24px;
+font-weight:700;
+line-height:20px;
+}
+.defMatchTable {
+background:transparent !important;
+border:0px solid transparent!important;
+border-collapse:separate!important;
+border-spacing:0 5px!important;
+margin:0px!important;
+}
+.defMatchTable tr {
+background-color:transparent!important;
+border:0px solid #E7F4F9!important;
+}
+.defMatchTable tbody td,
+.defMatchTable tbody tr:first-child {
+box-shadow:none!important;
+}
+.defMatchTable tr td {
+padding:0 5px!important;
+border:0px solid transparent!important;
+}
+.defMatchTable ul {
+margin-top:0px;
+}
+.definitionMatchDefinitions {
+list-style-type:none!important;
+width:200px;
+}
+.definitionMatchDefinitions li {
+-khtml-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+background:#FFF;
+border:1px solid #000;
+height:24px;
+margin:3px!important;
+text-align:center;
+user-select:none;
+}
+.definitionMatchTerms {
+list-style-type:none!important;
+margin:0!important;
+padding:0!important;
+width:150px;
+}
+.definitionMatchTerms li {
+-khtml-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+background:#A0FFFF;
+border:1px dotted #000;
+cursor:pointer;
+height:20px;
+margin:5px!important;
+text-align:center;
+user-select:none;
+}
+.definitionMatch_instruction {
+color:grey;
+font-style:italic;
+padding-top:2px!important;
+}
+.definitionMatch_placeholder {
+background:#A0FFFF;
+height:20px;
+margin:5px!important;
+}
+.definitionMatch_termBank {
+display:inline-block;
+min-height:20px!important;
+width:100%;
+}
+.definitionMatch_termBank .sortableContainer {
+border:2px dashed #D3D3D3;
+background-color:#f0f0f0;
+margin-top:5px;
+}
+.definitionMatch_termBucketHighlight {
+background:#0071FF !important;
+}
+.defnCol {
+padding-left:20px!important;
+width:450px!important;
+}
+.defnColCorr {
+border:0!important;
+width:20px;
+}
+.defnColUnselectedTerm {
+background:#ddd !important;
+border-bottom:1px solid grey!important;
+border-right:1px solid grey!important;
+border-top:1px solid grey!important;
+width:350px!important;
+}
+.defnRow {
+border:2px solid #0071FF!important;
+display:table-cell;
+height:100%;
+min-height:20px;
+width:180px!important;
+}
+.defn_termWrong {
+background:red !important;
+border-bottom:1px solid red!important;
+border-right:1px solid red!important;
+border-top:1px solid red!important;
+color:#fff!important;
+}
+.defn_termWrongRightBorder {
+border-right:2px solid red!important;
+}
+.sortableContainer {
+height:auto;
+list-style-type:none;
+margin:0;
+min-height:20px;
+padding:0;
+}
+.sortableContainer li {
+margin:4px!important;
+padding:4px!important;
+list-style-type:none!important;
+}
+.sortableContainer li.ui-sortable-helper {
+cursor:move!important;
+}
+.sortableContainer li:hover {
+cursor:pointer!important;
+}
+.termBucket {
+min-height:24px;
+width:100%!important;
+}
+.termCorrect {
+background:#58C24A !important;
+border:1px solid #58C24A!important;
+color:#FFF!important;
+line-height:1!important;
+}
+.termOutOfPalette {
+display:inline-block;
+margin:0!important;
+width:300px!important;
+border:0px solid transparent!important;
+background:transparent!important;
+line-height:1!important;
+}
+.unselectedTerm {
+background:#C8D6FF;
+border:1px solid #7AC4DD!important; /*#0071FF*/
+color:#000!important;
+display:inline-block;
+line-height:1!important;
+}

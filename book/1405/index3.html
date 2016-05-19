@@ -1,215 +1,309 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Created using eXeCute: http://exelearning.org -->
+<!DOCTYPE html>
+<html lang="sl">
+
 <head>
-<style type="text/css">
-@import url(../css/normalize.css);
-@import url(../css/main.css);
-@import url(../css/jquery-ui.css);
-@import url(../css/nav.css);
-@import url(../css/jsxgraph.css);
-@import url(../css/kalkulator.css);
-@import url(../css/lightbox.css);
-@import url(../css/jplayer.css);
-</style><title> Elektronska pošta in varnost </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/eum.js"></script>
-<script type="text/javascript" src="../js/commoneum.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
-<script type="text/javascript" src="../js/options.js"></script>
-<script type="text/javascript" src="../js/kalkulator.js"></script>
-<script type="text/javascript" src="../js/jquery-exe.js"></script>
-<script type="text/javascript" src="../js/jquery-tools.js"></script>
-<script type="text/javascript" src="../js/gui/gui_core.js"></script>
-<script type="text/javascript" src="../js/gui/gui_help.js"></script>
-<script type="text/javascript" src="../js/lightbox.js"></script>
-<script type="text/javascript" src="../js/createjs.js"></script>
-<script type="text/javascript" src="../js/movieclip.js"></script>
-<script type="text/javascript" src="../js/povezovanje.js"></script>
-<script type="text/javascript" src="../js/underscore.js"></script>
-<script type="text/javascript" src="../js/transit.js"></script>
-<script type="text/javascript" src="../js/cloze.js"></script>
-<script type="text/javascript" src="../js/JSmol.js"></script>
-<script type="text/javascript" src="../js/jplayer.js"></script>
-<script type="text/x-mathjax-config">  
-MathJax.Hub.Config({
-   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
-    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
-    config:["TeX-AMS_HTML.js"]});
-</script>
-<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
-$(document).keydown(function(e){
-if (e.keyCode == 37) { 
- window.location = "index2.html";
-  }if (e.keyCode == 39) {
- window.location = "index4.html";
-  }});
-</script><link rel="shortcut icon" href="../favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>Elektronska pošta in varnost</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- vis.js - browser based visualization library -->
+	<link href="../css/vis.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-    <body>
-<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
-<input type="hidden" name="elo-id" id="elo-id" value="1"/>
-<!--navigacija-->
-    <nav id="nav">
-        <ul class="main">
-            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
-            <li class="topics"><a href="#">Kazalo</a></li>
-            <li class="pages"><a href="#">Strani</a></li>
-        </ul>
-    <ul>
-    <li id="textbook-title"><span>Storitve interneta</span></li>
-    </ul>
-    <ul class="meta">
-            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
-            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
-            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.03.zip">Prenos</a></li>
-            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
-        </ul>
-    </nav>
-    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
-     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
-     <img src="../img/by-nc-sa.eu.png" height="30px">
-    </div></div>
-<section id="nav-tabbed">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul class="accordion">
-      <li class="on" id="menu001"><a href="#">Uvod</a>
-      <ul id="submenu001" class="sub-menu">
-        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
-        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
-      <ul id="submenu002" class="sub-menu">
-        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
-        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
-        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
-        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
-        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
-        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
-        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
-        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
-        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
-        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
-        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
-        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu003"><a href="#">Sistemi</a>
-      <ul id="submenu003" class="sub-menu">
-        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
-        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
-        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
-        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
-        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
-        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
-        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
-        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
-      <ul class="on" id="submenu004" class="sub-menu">
-        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
-        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
-        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
-        <li class="on"><a href="../1405/index.html" id="unit1405" style="color: black; font-weight: 600;">Storitve interneta <span class="page_numbers">345</span></a></li>
-        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
-        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
-        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
-        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
-      <ul id="submenu005" class="sub-menu">
-        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
-        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
-        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
-      </ul>
-      </li>
-    </ul>
-  </nav></section>
-</section>
 
-<section id="nav-pages">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul>
-      <li><a href="index.html" >Storitve interneta <span class="page_numbers">345</span></a></li>
-      <li><a href="index1.html" >Storitve interneta <span class="page_numbers">346</span></a></li>
-      <li><a href="index2.html" >Elektronska pošta <span class="page_numbers">347</span></a></li>
-      <li class="on"><a href="#">Elektronska pošta in varnost <span class="page_numbers">348</span></a></li>
-      <li><a href="index4.html" >Sistem domenskih imen - DNS <span class="page_numbers">349</span></a></li>
-      <li><a href="index5.html" >Sistem domenskih imen - DNS <span class="page_numbers">350</span></a></li>
-      <li><a href="index6.html" >Povzetek <span class="page_numbers">351</span></a></li>
-      <li><a href="index7.html" >Naloge <span class="page_numbers">352</span></a></li>
-      <li><a href="index8.html" >Naloge <span class="page_numbers">353</span></a></li>
-    </ul>
-  </nav></section>
-</section>
+<body>
 
-<div class="container" id="nodeDecoration">
-            <nav class="breadcrumbs">
-                <ul>
-                <li style="float:left;"><span class="unit-path">Storitve interneta | Elektronska pošta in varnost</span></a></li> 
-        <li>&nbsp;</li>
-            </ul>
-            </nav>
+	<div id="wrapper">
 
-<section class="page page-left">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
+				  <div id="menu1" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1101/index.html">O učbeniku</a></li>
+					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
+				  <div id="menu2" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
+					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
+					<li><a href="../1203/index.html">Zanke</a></li>
+					<li><a href="../1204/index.html">Tabele</a></li>
+					<li><a href="../1205/index.html">Funkcije</a></li>
+					<li><a href="../1206/index.html">Nizi</a></li>
+					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
+					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
+					<li><a href="../1209/index.html">Zaporedje</a></li>
+					<li><a href="../1210/index.html">Urejanje</a></li>
+					<li><a href="../1211/index.html">Množica</a></li>
+					<li><a href="../1212/index.html">Slovar</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
+				  <div id="menu3" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
+					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
+					<li><a href="../1303/index.html">Ukazi</a></li>
+					<li><a href="../1304/index.html">Arhitektura računalnika</a></li>
+					<li><a href="../1305/index.html">Pomnilnik</a></li>
+					<li><a href="../1306/index.html">Operacijski sistem</a></li>
+					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
+					<li><a href="../1308/index.html">Uporabniki in varnost</a></li>
+					<li><a href="../1309/index.html">Procesi</a></li>
+					<li><a href="../1310/index.html">Vzporednost</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
+				  <div id="menu4" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
+					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
+					<li><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
+					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
+					<li class="active"><a href="../1405/index.html">Storitve interneta</a></li>
+					<li><a href="../1406/index.html">Svetovni splet</a></li>
+					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
+					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
+					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
+				  <div id="menu5" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
+					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
+					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
 
-<!-- Samostojno besedilo --> 
-  <div class='wrapper-top'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
 
-Za delo z elektronsko pošto lahko uporabimo spletni vmesnik (webmail.arnes.si, www.gmail.com, …) ali pa na računalnik namestimo odjemalec za elektronsko pošto (Outlook, Thunderbird, …). 
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
 
-V prvem primeru si ogledujemo in urejamo elektronsko pošto na spletnem strežniku. Elektronska pošta se ne prenese na naš računalnik.<br />
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
 
-<br />
+			</div>
+		</div>
 
-V drugem primeru isto počnemo v odjemalcu na našem računalniku. Elektronska pošta se prenese ali prekopira na naš računalnik. Odjemalcu moramo nastaviti, kateri SMTP strežnik bomo uporabili pri pošiljanju in kateri POP3 ali IMAP strežnik za prenašanje pošte k nam. Nastaviti moramo tudi svojo identiteto (uporabniško ime in geslo).
+		<!-- Modal (popup) window: Catalogue -->
+		<div id="catalogue" class="modal fade" role="dialog">
+			<div class="modal-dialog">
 
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
+					</div>
+					<div class="modal-body">
+						CIP - Kataložni zapis o publikaciji<br>
+						Narodna in univerzitetna knjižnica, Ljubljana<br>
+						<br>
+						659.2:004(075.3)(0.034.2)<br>
+						004(075.3)(0.034.2)<br>
+						<br>
+						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
+						<br>
+						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
+						<br>
+						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
+						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
+						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
+						<br>
+						1. Anželj, Gregor<br>
+						282126848<br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<br />
+<!-- Left column start -->
+<p align="justify">Za delo z elektronsko pošto lahko uporabimo spletni vmesnik (webmail.arnes.si, www.gmail.com, …) ali pa na računalnik namestimo odjemalec za elektronsko pošto (Outlook, Thunderbird, …). V prvem primeru si ogledujemo in urejamo elektronsko pošto na spletnem strežniku. Elektronska pošta se ne prenese na naš računalnik.</p>
+
+<p align="justify">V drugem primeru isto počnemo v odjemalcu na našem računalniku. Elektronska pošta se prenese ali prekopira na naš računalnik. Odjemalcu moramo nastaviti, kateri SMTP strežnik bomo uporabili pri pošiljanju in kateri POP3 ali IMAP strežnik za prenašanje pošte k nam. Nastaviti moramo tudi svojo identiteto (uporabniško ime in geslo).</p>
 
 <h2>Elektronski naslovi</h2>
 
-Za naslavljanje prejemnika elektronske pošte mora vsak uporabnik imeti svoj elektronski naslov. Da dosežemo neponovljivost naslova, se le-ta deli v dva dela, ločena z znakom @ — lokalni del in ime domene. Lokalni del je ime uporabnikovega poštnega predala na poštnem strežniku. Ime domene pa je ime, dodeljeno poštnemu strežniku preko sistema DNS (<i>ang. Domain Name System</i>).
+<p align="justify">Za naslavljanje prejemnika elektronske pošte mora vsak uporabnik imeti svoj elektronski naslov. Da dosežemo neponovljivost naslova, se le-ta deli v dva dela, ločena z znakom @ — lokalni del in ime domene. Lokalni del je ime uporabnikovega poštnega predala na poštnem strežniku. Ime domene pa je ime, dodeljeno poštnemu strežniku preko sistema DNS (<i>ang. Domain Name System</i>).</p>
 
-</div></p>
+<h4>Vaja</h4>
+<div class="alert alert-info" role="alert">
+<p align="justify">Vnesi svoj ali kateri koli drug e-poštni naslov in preveri, ali je veljaven.</p>
+<br />
+<form onSubmit='validate(); return false;'>
+<input size="45" id='email'>
+<button type='submit' id='validate' class="btn btn-info"><span class="fa fa-check"></span> Preveri</button>
+</form>
+<div id='answer_div'> </div>
 </div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
- <!-- applet --> 
-<h2>Naloga</h2>  <div class='wrapper'>
-<div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<p><div align="justify">
 
-Vnesi svoj ali kateri koli drug e-poštni naslov in preveri, ali je veljaven.
+<h1>Elektronska pošta in varnost</h1>
 
-</div></p>
-<div class='interaktivnaNaloga'>
-  <form onSubmit='validate(); return false;'>
-  <input size="50" id='email'>
-  <button type='submit' id='validate' class="btn-blue">Preveri</button>
-  </form>
-  <div id='answer_div'> </div>
+<p align="justify">Elektronska pošta je zaradi svojih lastnosti zelo primerna za razne oblike prevar ali neželjenih sporočil. Poglejmo si nekaj najbolj pogostih:</p>
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+<!-- Right column start -->
+<h2>Neželjena sporočila (<i>ang. spam</i>)</h2>
+
+<p align="justify">Elektronsko pošto oglaševalci ali razni prodajalci pogosto izkoristijo za množično pošiljanje oglasov, tudi takih, ki si jih uporabnik ne želi. Poštni predali vsebujejo možnost, da lahko tako pošto glede na vsebino ali glede na naslov s katerega prihaja, uvrstimo na listo neželjenih sporočil. Tako bo sistem sam to pošto preusmeril v ustrezno mapo, da ne bo na seznamu prejetih. Pogosto ponudniki elektronske pošte ponujajo vključitev spam filtra, ki na osnovi algoritma ugotavlja, ali neka pošta sodi med neželjeno pošto ali ne.</p>
+
+<h2>Poštne prevare (<i>ang. phishing</i>)</h2>
+
+<p align="justify">Napadalec poskuša s pomočjo sporočila prepričati žrtev, da mu posreduje uporabniško ime in geslo, naslov spol, ipd. V sporočilu je lahko tudi povezava, na katero naj bi kliknili in vpisali podatke. S klikom na povezavo se žrtev poveže na spletno stran napadalca. Ta stran lahko izgleda popolnoma enako kot stran storitve, za katero je geslo aktualno (banka, poštni predal, ...). Zlorabo lahko opazimo v URL naslovu, ki ni tak kot običajno.</p>
+
+<h2>Odpiranje pripetih datotek</h2>
+
+<p align="justify">Pri datotekah, ki so pripete poštnemu sporočilu, moramo biti previdni. Z njimi se okuži veliko računalnikov. Odpiramo datoteke o katerih je govora v samem sporočilu in s tem vemo, kaj vsebujejo. Če nam pošiljatelj nič ne govori o kaki priponki, je velika verjetnost, da je v datoteki zlonamerna koda. Pogosto zlonamerno datoteko sporočilu pripne virus na pošiljateljevem računalniku brez njegove vednosti. Zato je pomembno, da pošiljatelja obvestite, če ste dobili sumljivo priponko.</p>
+
+<h2>Množična pisma</h2>
+
+<p align="justify">Omenimo še množična pisma, ki sama po sebi niso nevarna, so pa pogosto moteča za uporabnika. Vsebina takih pisem se pogosto konča takole: »Razpošlji to vsebino na vsaj 10 naslovov in v treh dneh se bo zgodilo ...«. Prepošiljanje takih pisem sodi k neetičnemu obnašanju na internetu, saj po nepotrebnem obremenjujejo omrežje. Pošiljanje množičnih pisem uporabnikom, ki niso privolili v prejemanje določene pošte, je po slovenski zakonodaji kaznivo.</p>
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Pagination in Footer -->
+			<div class="col-md-12">
+				<center>
+				<ul class="pagination pagination-sm">
+					<li><a href="../1404/index.html" aria-label="Previous Unit"><span aria-hidden="true">&laquo;</span></a></li>
+					<li><a href="../1405/index2.html" aria-label="Previous Page"><span aria-hidden="true">&#x2039;</span></a></li>
+					<li><a href="../1405/index.html">345</a></li>
+					<li><a href="../1405/index1.html">346</a></li>
+					<li><a href="../1405/index2.html">347</a></li>
+					<li class="active"><a href="#">348</a></li>
+					<li><a href="../1405/index4.html">349</a></li>
+					<li><a href="../1405/index5.html">350</a></li>
+					<li><a href="../1405/index6.html">351</a></li>
+					<li><a href="../1405/index7.html">352</a></li>
+					<li><a href="../1405/index8.html">353</a></li>
+					<li><a href="../1405/index4.html" aria-label="Next Page"><span aria-hidden="true">&#x203A;</span></a></li>
+					<li><a href="../1406/index.html" aria-label="Next Unit"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+				</center>
+			</div>
+
+		</div>
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="../js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
+
+	<!-- vis.js - browser based visualization library -->
+	<script src="../js/vis/vis.min.js"></script>
+
 <script>
 function validateEmail(email) { 
     // http://stackoverflow.com/a/46181/11236
@@ -217,7 +311,6 @@ function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:čČćĆđĐšŠžŽ\s@\"]+(\.[^<>()[\]\\.,;:čČćĆđĐšŠžŽ\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
-
 function validate(){
   $("#result").text("");
   var email = $("#email").val();
@@ -230,58 +323,9 @@ function validate(){
   }
   return false;
 }
-
 $("form").bind("submit", validate);
-</script></div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><br />
+</script>
 
-<h1>Elektronska pošta in varnost</h1>
+</body>
 
-<div align="justify">
-
-Elektronska pošta je zaradi svojih lastnosti zelo primerna za razne oblike prevar ali neželjenih sporočil. Poglejmo si nekaj najbolj pogostih:
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<section class="page page-right">
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
-
-<h2>Neželjena sporočila (<i>ang. spam</i>)</h2>
-
-Elektronsko pošto oglaševalci ali razni prodajalci pogosto izkoristijo za množično pošiljanje oglasov, tudi takih, ki si jih uporabnik ne želi. Poštni predali vsebujejo možnost, da lahko tako pošto glede na vsebino ali glede na naslov s katerega prihaja, uvrstimo na listo neželjenih sporočil. Tako bo sistem sam to pošto preusmeril v ustrezno mapo, da ne bo na seznamu prejetih. Pogosto ponudniki elektronske pošte ponujajo vključitev spam filtra, ki na osnovi algoritma ugotavlja, ali neka pošta sodi med neželjeno pošto ali ne.<br />
-
-<br />
-
-<h2>Poštne prevare (<i>ang. phishing</i>)</h2>
-
-Napadalec poskuša s pomočjo sporočila prepričati žrtev, da mu posreduje uporabniško ime in geslo, naslov spol, ipd. V sporočilu je lahko tudi povezava, na katero naj bi kliknili in vpisali podatke. S klikom na povezavo se žrtev poveže na spletno stran napadalca. Ta stran lahko izgleda popolnoma enako kot stran storitve, za katero je geslo aktualno (banka, poštni predal, ...). Zlorabo lahko opazimo v URL naslovu, ki ni tak kot običajno.<br />
-
-<br />
-
-<h2>Odpiranje pripetih datotek</h2>
-
-Pri datotekah, ki so pripete poštnemu sporočilu, moramo biti previdni. Z njimi se okuži veliko računalnikov. Odpiramo datoteke o katerih je govora v samem sporočilu in s tem vemo, kaj vsebujejo. Če nam pošiljatelj nič ne govori o kaki priponki, je velika verjetnost, da je v datoteki zlonamerna koda. Pogosto zlonamerno datoteko sporočilu pripne virus na pošiljateljevem računalniku brez njegove vednosti. Zato je pomembno, da pošiljatelja obvestite, če ste dobili sumljivo priponko.<br />
-
-<br />
-
-<h2>Množična pisma</h2>
-
-Omenimo še množična pisma, ki sama po sebi niso nevarna, so pa pogosto moteča za uporabnika. Vsebina takih pisem se pogosto konča takole: »Razpošlji to vsebino na vsaj 10 naslovov in v treh dneh se bo zgodilo ...«. Prepošiljanje takih pisem sodi k neetičnemu obnašanju na internetu, saj po nepotrebnem obremenjujejo omrežje. Pošiljanje množičnih pisem uporabnikom, ki niso privolili v prejemanje določene pošte, je po slovenski zakonodaji kaznivo.
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<div class="paging-left"><a href="index2.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index4.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">348/423</span></div></div>
-</body></html>
+</html>

@@ -1,536 +1,594 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Created using eXeCute: http://exelearning.org -->
+<!DOCTYPE html>
+<html lang="sl">
+
 <head>
-<style type="text/css">
-@import url(../css/normalize.css);
-@import url(../css/main.css);
-@import url(../css/jquery-ui.css);
-@import url(../css/nav.css);
-@import url(../css/jsxgraph.css);
-@import url(../css/kalkulator.css);
-@import url(../css/lightbox.css);
-@import url(../css/jplayer.css);
-</style><title> Naloge </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/eum.js"></script>
-<script type="text/javascript" src="../js/commoneum.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
-<link rel="stylesheet" href="../css/codemirrorepl.css">
-<script type="text/javascript" src="../js/skulpt/codemirrorepl.js"></script>
-<script type="text/javascript" src="../js/skulpt/repl.js"></script>
-<script type="text/javascript" src="../js/skulpt/skulpt.js"></script>
-<script type="text/javascript" src="../js/skulpt/skulpt-stdlib.js"></script>
-<script type="text/javascript" src="../js/skulpt/python.js"></script>
-<script type="text/javascript" src="../js/options.js"></script>
-<script type="text/javascript" src="../js/kalkulator.js"></script>
-<script type="text/javascript" src="../js/jquery-exe.js"></script>
-<script type="text/javascript" src="../js/jquery-tools.js"></script>
-<script type="text/javascript" src="../js/gui/gui_core.js"></script>
-<script type="text/javascript" src="../js/gui/gui_help.js"></script>
-<script type="text/javascript" src="../js/lightbox.js"></script>
-<script type="text/javascript" src="../js/createjs.js"></script>
-<script type="text/javascript" src="../js/movieclip.js"></script>
-<script type="text/javascript" src="../js/povezovanje.js"></script>
-<script type="text/javascript" src="../js/underscore.js"></script>
-<script type="text/javascript" src="../js/transit.js"></script>
-<script type="text/javascript" src="../js/cloze.js"></script>
-<script type="text/javascript" src="../js/JSmol.js"></script>
-<script type="text/javascript" src="../js/jplayer.js"></script>
-<script type="text/x-mathjax-config">  
-MathJax.Hub.Config({
-   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
-    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
-    config:["TeX-AMS_HTML.js"]});
-</script>
-<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
-$(document).keydown(function(e){
-if (e.keyCode == 37) { 
- window.location = "index14.html";
-  }if (e.keyCode == 39) {
- window.location = "../1205/index.html";
-  }});
-</script><link rel="shortcut icon" href="../favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>Naloge</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- CodeMirror -->
+	<link href="../css/codemirrorepl.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-    <body>
-<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
-<input type="hidden" name="elo-id" id="elo-id" value="1"/>
-<!--navigacija-->
-    <nav id="nav">
-        <ul class="main">
-            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
-            <li class="topics"><a href="#">Kazalo</a></li>
-            <li class="pages"><a href="#">Strani</a></li>
-        </ul>
-    <ul>
-    <li id="textbook-title"><span>Tabele</span></li>
-    </ul>
-    <ul class="meta">
-            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
-            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
-            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.03.zip">Prenos</a></li>
-            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
-        </ul>
-    </nav>
-    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
-     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
-     <img src="../img/by-nc-sa.eu.png" height="30px">
-    </div></div>
-<section id="nav-tabbed">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul class="accordion">
-      <li class="on" id="menu001"><a href="#">Uvod</a>
-      <ul id="submenu001" class="sub-menu">
-        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
-        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
-      <ul class="on" id="submenu002" class="sub-menu">
-        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
-        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
-        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
-        <li class="on"><a href="../1204/index.html" id="unit1204" style="color: black; font-weight: 600;">Tabele <span class="page_numbers">55</span></a></li>
-        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
-        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
-        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
-        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
-        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
-        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
-        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
-        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu003"><a href="#">Sistemi</a>
-      <ul id="submenu003" class="sub-menu">
-        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
-        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
-        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
-        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
-        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
-        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
-        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
-        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
-      <ul id="submenu004" class="sub-menu">
-        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
-        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
-        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
-        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
-        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
-        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
-        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
-        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
-      <ul id="submenu005" class="sub-menu">
-        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
-        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
-        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
-      </ul>
-      </li>
-    </ul>
-  </nav></section>
-</section>
 
-<section id="nav-pages">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul>
-      <li><a href="index.html" >Tabele <span class="page_numbers">55</span></a></li>
-      <li><a href="index1.html" >Tabela <span class="page_numbers">56</span></a></li>
-      <li><a href="index2.html" >Dostop do elementov tabele <span class="page_numbers">57</span></a></li>
-      <li><a href="index3.html" >Odsek tabele <span class="page_numbers">58</span></a></li>
-      <li><a href="index4.html" >Sprehod po elementih tabele <span class="page_numbers">59</span></a></li>
-      <li><a href="index5.html" >Sprehod po elementih tabele <span class="page_numbers">60</span></a></li>
-      <li><a href="index6.html" >Sprehod po indeksih tabele <span class="page_numbers">61</span></a></li>
-      <li><a href="index7.html" >Spreminjanje, dodajanje in odstranjevanje elementov <span class="page_numbers">62</span></a></li>
-      <li><a href="index8.html" >Spreminjanje, dodajanje in odstranjevanje elementov <span class="page_numbers">63</span></a></li>
-      <li><a href="index9.html" >*Jedrnata definicija tabele <span class="page_numbers">64</span></a></li>
-      <li><a href="index10.html" >*Prirejanje vrednosti tabelaričnega tipa <span class="page_numbers">65</span></a></li>
-      <li><a href="index11.html" >Povzetek <span class="page_numbers">66</span></a></li>
-      <li><a href="index12.html" >Naloge <span class="page_numbers">67</span></a></li>
-      <li><a href="index13.html" >Naloge <span class="page_numbers">68</span></a></li>
-      <li><a href="index14.html" >Naloge <span class="page_numbers">69</span></a></li>
-      <li class="on"><a href="#">Naloge <span class="page_numbers">70</span></a></li>
-    </ul>
-  </nav></section>
-</section>
+<body>
 
-<div class="container" id="nodeDecoration">
-            <nav class="breadcrumbs">
-                <ul>
-                <li style="float:left;"><span class="unit-path">Tabele | Naloge</span></a></li> 
-        <li>&nbsp;</li>
-            </ul>
-            </nav>
+	<div id="wrapper">
 
-<section class="page page-left">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
+				  <div id="menu1" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1101/index.html">O učbeniku</a></li>
+					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
+				  <div id="menu2" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
+					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
+					<li><a href="../1203/index.html">Zanke</a></li>
+					<li class="active"><a href="../1204/index.html">Tabele</a></li>
+					<li><a href="../1205/index.html">Funkcije</a></li>
+					<li><a href="../1206/index.html">Nizi</a></li>
+					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
+					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
+					<li><a href="../1209/index.html">Zaporedje</a></li>
+					<li><a href="../1210/index.html">Urejanje</a></li>
+					<li><a href="../1211/index.html">Množica</a></li>
+					<li><a href="../1212/index.html">Slovar</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
+				  <div id="menu3" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
+					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
+					<li><a href="../1303/index.html">Ukazi</a></li>
+					<li><a href="../1304/index.html">Arhitektura računalnika</a></li>
+					<li><a href="../1305/index.html">Pomnilnik</a></li>
+					<li><a href="../1306/index.html">Operacijski sistem</a></li>
+					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
+					<li><a href="../1308/index.html">Uporabniki in varnost</a></li>
+					<li><a href="../1309/index.html">Procesi</a></li>
+					<li><a href="../1310/index.html">Vzporednost</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
+				  <div id="menu4" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
+					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
+					<li><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
+					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
+					<li><a href="../1405/index.html">Storitve interneta</a></li>
+					<li><a href="../1406/index.html">Svetovni splet</a></li>
+					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
+					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
+					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
+				  <div id="menu5" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
+					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
+					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
+
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Catalogue -->
+		<div id="catalogue" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
+					</div>
+					<div class="modal-body">
+						CIP - Kataložni zapis o publikaciji<br>
+						Narodna in univerzitetna knjižnica, Ljubljana<br>
+						<br>
+						659.2:004(075.3)(0.034.2)<br>
+						004(075.3)(0.034.2)<br>
+						<br>
+						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
+						<br>
+						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
+						<br>
+						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
+						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
+						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
+						<br>
+						1. Anželj, Gregor<br>
+						282126848<br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Hint 10 -->
+		<div id="hint10" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Namig</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Nalogo najlažje rešiš tako, da s pomočjo funkcije <code>sorted</code> najprej izdelaš urejeno kopijo tabele.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 10 -->
+		<div id="solution10" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+# Program izpiše srednji element v podani tabeli ob predpostavki, da tabela
+# vsebuje same različne elemente in da je število elementov liho.
+tabela = [50, 20, 80, 90, 70, 60, 40]
+
+# Izdelamo urejeno kopijo tabele.
+urejena = sorted(tabela)
+
+# Srednji element se v urejeni kopiji nahaja točno na sredini
+# (npr. na indeksu 3, če je tabela dolga 7 elementov).
+indeksSrednjega = len(urejena) // 2
+print(urejena[indeksSrednjega])
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Hint 111 -->
+		<div id="hint111" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Namig</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Koliko krogov ima izštevanka?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Hint 112 -->
+		<div id="hint112" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Namig</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">V vsakem krogu najprej ugotovi, kdo izpade. Natančneje: določi indeks otroka, ki izpade. Si lahko morda pomagaš z ostankom pri deljenju?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Hint 113 -->
+		<div id="hint113" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Namig</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Ko ugotoviš, kdo izpade, moraš element na tem indeksu samo še odstraniti iz tabele <code>otroci</code>.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 11 -->
+		<div id="solution11" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+# Program izpiše zaporedje imen otrok, ki izpadejo pri izštevanki.
+
+# imena otrok
+otroci = ['Ana', 'Bojan', 'Cvetka', 'Dejan', 'Eva']
+
+# število besed izštevanke
+stBesed = 9
+
+# Izštevanka ima en krog manj, kot je otrok.
+stKrogov = len(otroci) - 1
+
+# stOtrokVIgri: število otrok, ki so še vedno v igri
+stOtrokVIgri = len(otroci)
+
+for krog in range(stKrogov):
+  # Določimo otroka, ki izpade v trenutnem krogu.
+  indeksIzpad = (stBesed - 1) % stOtrokVIgri
+
+  # Izpišemo ime izpadlega otroka.
+  print(otroci[indeksIzpad])
+
+  # Izločimo izpadlega otroka iz igre.
+  otroci[indeksIzpad : indeksIzpad + 1] = []
+
+  # Število otrok v igri se zmanjša za 1.
+  stOtrokVIgri -= 1
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Hint 12 -->
+		<div id="hint12" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Namig</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Najprej reši lažji problem: po vsaki prebrani ničli izpiši dolžino trenutnega strnjenega zaporedja ničel. Vzdržuj spremenljivko, ki hrani to dolžino. Kaj moraš narediti, ko pri sprehodu po tabeli naletiš na ničlo, in kaj, ko naletiš na število, različno od 0?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 12 -->
+		<div id="solution12" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+<pre>
+# Program izpiše dolžino najdaljšega strnjenega zaporedja ničel
+# v podani tabeli.
+tabela = [0, 6, 5, 0, 0, 0, 0, -1, 0, 0, 0, 10, 5]
+
+# dolžina trenutnega zaporedja ničel
+dolzinaTreZaporedja = 0
+
+# dolžina doslej najdaljšega zaporedja ničel
+dolzinaNajZaporedja = 0
+
+for element in tabela:
+  if element == 0:
+    # Prebrali smo ničlo; trenutno zaporedje ničel se podaljša.
+    dolzinaTreZaporedja += 1
+  else:
+    # Prebrali smo število, različno od 0.
+    # Trenutno zaporedje ničel je spet prazno.
+    dolzinaTreZaporedja = 0
+
+  # Če je trenutno zaporedje ničel daljše od doslej najdaljšega,
+  # posodobimo spremenljivko dolzinaNajZaporedja.
+  if dolzinaTreZaporedja &gt; dolzinaNajZaporedja:
+    dolzinaNajZaporedja = dolzinaTreZaporedja
+
+print(dolzinaNajZaporedja)
+</pre>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+<!-- Left column start -->
 <h1>Naloge</h1>
- <div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- casestudy - besedilo z gumbi --> 
-  <div class="wrapper numbered" id="wrap93">
-<span class="number number-blue">10.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<div class="popupb">
-<p><style>
 
-.code{font-family:monospace;padding:0px 4px;margin-top:4px;background-color:#eee;}
-
-</style>
-
-<div align="justify">
-
-Napiši program, ki v podani tabeli lihe dolžine s samimi različnimi elementi poišče element, ki se po velikosti uvršča točno na sredino. Na primer, za tabelo<br />
-
-<div class="code">
-
-tabela = [50, 20, 80, 90, 70, 60, 40]<br />
-
+<div class="alert alert-info" role="alert">
+<p>
+	<span class="label label-primary"><b>10</b></span>
+	<span class="fa fa-star pull-right"></span>
+</p>
+<p align="justify">Napiši program, ki v podani tabeli lihe dolžine s samimi različnimi elementi poišče element, ki se po velikosti uvršča točno na sredino. Na primer, za tabelo
+<pre>
+tabela = [50, 20, 80, 90, 70, 60, 40]
+</pre>
+bi program izpisal 60.</p>
+<p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#hint10"><span class="fa fa-question"></span> Namig</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution10"><span class="fa fa-check"></span> Rešitev</button>
+</p>
 </div>
 
-bi program izpisal <code>60</code>.
-
-</div></p><div id="viewq0b93g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b93g0" value="Namig" id="btnenabledq0b93g0" onClick='showAnswer("q0b93g0",1,2)' /></div>
-<div id="hideq0b93g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b93g0" value="Skrij" onClick='showAnswer("q0b93g0",0,2)'/></div>
-<div id="sq0b93g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b93g0",0,2)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
-
-Nalogo najlažje rešiš tako, da s pomočjo funkcije <code>sorted</code> najprej izdelaš urejeno kopijo tabele.
-
-</div></p>
-</div></div>
-<div id="viewq0b93g1" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b93g1" value="Rešitev" id="btnenabledq0b93g1" onClick='showAnswer("q0b93g1",1,2)' /></div>
-<div id="hideq0b93g1" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b93g1" value="Skrij" onClick='showAnswer("q0b93g1",0,2)'/></div>
-<div id="sq0b93g1" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b93g1",0,2)'></div>
-</div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
-
-<div class="code">
-
-# Program izpiše srednji element v podani<br />
-
-# tabeli ob predpostavki, da tabela vsebuje<br />
-
-# same različne elemente in da je število<br />
-
-# elementov liho.<br />
-
-tabela = [50, 20, 80, 90, 70, 60, 40]<br />
-
-<br />
-
-# Izdelamo urejeno kopijo tabele.<br />
-
-urejena = sorted(tabela)<br />
-
-<br />
-
-# Srednji element se v urejeni kopiji nahaja<br />
-
-# točno na sredini (npr. na indeksu 3, če je<br />
-
-# tabela dolga 7 elementov).<br />
-
-indeksSrednjega = len(urejena) // 2<br />
-
-print(urejena[indeksSrednjega])<br />
-
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- casestudy - besedilo z gumbi --> 
-  <div class="wrapper numbered" id="wrap94">
-<span class="number number-blue">11.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<div class="popupb">
-<p><style>
-
-.code{font-family:monospace;padding:0px 4px;margin-top:4px;background-color:#eee;}
-
-</style>
-
-<div align="justify">
-
-Otroci stojijo v ravni vrsti in se s pomočjo zunanjega »izštevalca« igrajo izštevanko. Izštevalec v vsakem krogu izštevanke šteje od 1 do <code>stBesed</code> in pri tem s prstom potuje po otrocih. Prične pri prvem otroku v vrsti (od tistih, ki so še ostali). Ko pride do konca vrste, ponovno nadaljuje pri prvem otroku. Igra se zaključi, ko ostane samo še en otrok.<br />
-
-<br />
-
-Napiši program, ki za podano tabelo imen otrok in število <code>stBesed</code> izpiše imena otrok, ki izpadejo v posameznih krogih izštevanke. V primeru definicij<br />
-
-<div class="code">
-
-otroci = [’Ana’, ’Bojan’, ’Cvetka’, ’Dejan’, ’Eva’]<br />
-
-stBesed = 9<br />
-
-</div>
-
+<div class="alert alert-info" role="alert">
+<p>
+	<span class="label label-primary"><b>11</b></span>
+	<span class="fa fa-star pull-right"></span>
+</p>
+<p align="justify">Otroci stojijo v ravni vrsti in se s pomočjo zunanjega »izštevalca« igrajo izštevanko. Izštevalec v vsakem krogu izštevanke šteje od 1 do <code>stBesed</code> in pri tem s prstom potuje po otrocih. Prične pri prvem otroku v vrsti (od tistih, ki so še ostali). Ko pride do konca vrste, ponovno nadaljuje pri prvem otroku. Igra se zaključi, ko ostane samo še en otrok.</p>
+<p align="justify">Napiši program, ki za podano tabelo imen otrok in število <code>stBesed</code> izpiše imena otrok, ki izpadejo v posameznih krogih izštevanke. V primeru definicij
+<pre>
+otroci = [’Ana’, ’Bojan’, ’Cvetka’, ’Dejan’, ’Eva’]
+stBesed = 9
+</pre>
 bi program izpisal sledeče:
-
-<div class="code">
-
-Dejan<br />
-
-Ana<br />
-
-Eva<br />
-
-Bojan<br />
-
+<pre>
+Dejan
+Ana
+Eva
+Bojan
+</pre></p>
+<p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#hint111"><span class="fa fa-question"></span> Namig 1</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#hint112"><span class="fa fa-question"></span> Namig 2</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#hint113"><span class="fa fa-question"></span> Namig 3</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution11"><span class="fa fa-check"></span> Rešitev</button>
+</p>
 </div>
-
-</div></p><div id="viewq0b94g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b94g0" value="Namig 1" id="btnenabledq0b94g0" onClick='showAnswer("q0b94g0",1,4)' /></div>
-<div id="hideq0b94g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b94g0" value="Skrij" onClick='showAnswer("q0b94g0",0,4)'/></div>
-<div id="sq0b94g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b94g0",0,4)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
-
-Koliko krogov ima izštevanka?
-
-</div></p>
-</div></div>
-<div id="viewq0b94g1" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b94g1" value="Namig 2" id="btnenabledq0b94g1" onClick='showAnswer("q0b94g1",1,4)' /></div>
-<div id="hideq0b94g1" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b94g1" value="Skrij" onClick='showAnswer("q0b94g1",0,4)'/></div>
-<div id="sq0b94g1" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b94g1",0,4)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
-
-V vsakem krogu najprej ugotovi, kdo izpade. Natančneje: določi indeks otroka, ki izpade. Si lahko morda pomagaš z ostankom pri deljenju?
-
-</div></p>
-</div></div>
-<div id="viewq0b94g2" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b94g2" value="Namig 3" id="btnenabledq0b94g2" onClick='showAnswer("q0b94g2",1,4)' /></div>
-<div id="hideq0b94g2" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b94g2" value="Skrij" onClick='showAnswer("q0b94g2",0,4)'/></div>
-<div id="sq0b94g2" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b94g2",0,4)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
-
-Ko ugotoviš, kdo izpade, moraš element na tem indeksu samo še odstraniti iz tabele <code>otroci</code>.
-
-</div></p>
-</div></div>
-<div id="viewq0b94g3" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b94g3" value="Rešitev" id="btnenabledq0b94g3" onClick='showAnswer("q0b94g3",1,4)' /></div>
-<div id="hideq0b94g3" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b94g3" value="Skrij" onClick='showAnswer("q0b94g3",0,4)'/></div>
-<div id="sq0b94g3" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b94g3",0,4)'></div>
-</div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
-
-<div class="code">
-
-# Program izpiše zaporedje imen otrok, ki<br />
-
-# izpadejo pri izštevanki.<br />
-
-<br />
-
-# imena otrok<br />
-
-otroci = ['Ana', 'Bojan', 'Cvetka', 'Dejan',<br />
-
-<span class="tab10">'Eva']</span><br />
-
-<br />
-
-# število besed izštevanke<br />
-
-stBesed = 9<br />
-
-<br />
-
-# Izštevanka ima en krog manj, kot je otrok.<br />
-
-stKrogov = len(otroci) - 1<br />
-
-<br />
-
-# stOtrokVIgri: število otrok, ki so še vedno<br />
-
-# v igri<br />
-
-stOtrokVIgri = len(otroci)<br />
-
-<br />
-
-for krog in range(stKrogov):<br />
-
-<span class="tab2"># Določimo otroka, ki izpade v trenutnem</span><br />
-
-<span class="tab2"># krogu.</span><br />
-
-<span class="tab2">indeksIzpad = (stBesed - 1) % stOtrokVIgri</span><br />
-
-<br />
-
-<span class="tab2"># Izpišemo ime izpadlega otroka.</span><br />
-
-<span class="tab2">print(otroci[indeksIzpad])</span><br />
-
-<br />
-
-<span class="tab2"># Izločimo izpadlega otroka iz igre.</span><br />
-
-<span class="tab2">otroci[indeksIzpad : indeksIzpad + 1] = []</span><br />
-
-<br />
-
-<span class="tab2"># Število otrok v igri se zmanjša za 1.</span><br />
-
-<span class="tab2">stOtrokVIgri -= 1</span><br />
-
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<section class="page page-right">
-<!-- casestudy - besedilo z gumbi --> 
-  <div class="wrapper numbered2" id="wrap96">
-<span class="number2 number-red">12.</span><div class="box_dejstvo splosna_obvezna_znanja">
-    <span class="triangle triangle-red"></span>
-<div class="popupb">
-<p><style>
-
-.code{font-family:monospace;padding:0px 4px;margin-top:4px;background-color:#eee;}
-
-</style>
-
-<div align="justify">
-
-Napiši program, ki izpiše dolžino najdaljšega strnjenega zaporedja ničel v podani tabeli. Na primer, za tabelo<br />
-
-<div class="code">
-
-tabela = [0, 6, 5, 0, 0, 0, 0, -1, 0, 0, 0, 10]<br />
-
-</div>
-
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+						<br />
+<!-- Right column start -->
+<div class="alert alert-danger" role="alert">
+<p>
+	<span class="label label-danger"><b>12</b></span>
+	<span class="fa fa-star pull-right"></span>
+	<span class="fa fa-star pull-right"></span>
+</p>
+<p align="justify">Napiši program, ki izpiše dolžino najdaljšega strnjenega zaporedja ničel v podani tabeli. Na primer, za tabelo
+<pre>
+tabela = [0, 6, 5, 0, 0, 0, 0, -1, 0, 0, 0, 10]
+</pre>
 naj program izpiše število 4, za tabelo
-
-<div class="code">
-
-tabela = [1, 6, 5, -1, 3, 7]<br />
-
+<pre>
+tabela = [1, 6, 5, -1, 3, 7]
+</pre>
+pa število 0.</p>
+<p>
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hint12"><span class="fa fa-question"></span> Namig</button>
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution12"><span class="fa fa-check"></span> Rešitev</button>
+</p>
 </div>
 
-pa število 0.
-
-</div></p><div id="viewq0b96g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b96g0" value="Namig" id="btnenabledq0b96g0" onClick='showAnswer("q0b96g0",1,2)' /></div>
-<div id="hideq0b96g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b96g0" value="Skrij" onClick='showAnswer("q0b96g0",0,2)'/></div>
-<div id="sq0b96g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b96g0",0,2)'></div>
+<div>
+<form>
+<p><textarea id="code"></textarea></p>
+<p>
+<a href="#" class="btn btn-primary"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-primary"  onclick="clearit()">Počisti</a>
+</p>
+</form>
 </div>
-<div class="feedback-content-container"><p><div align="justify">
+<pre id="output"></pre>
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
 
-Najprej reši lažji problem: po vsaki prebrani ničli izpiši dolžino trenutnega strnjenega zaporedja ničel. Vzdržuj spremenljivko, ki hrani to dolžino. Kaj moraš narediti, ko pri sprehodu po tabeli naletiš na ničlo, in kaj, ko naletiš na število, različno od 0?
+			<!-- Page Pagination in Footer -->
+			<div class="col-md-12">
+				<center>
+				<ul class="pagination pagination-sm">
+					<li><a href="../1203/index.html" aria-label="Previous Unit"><span aria-hidden="true">&laquo;</span></a></li>
+					<li><a href="../1204/index14.html" aria-label="Previous Page"><span aria-hidden="true">&#x2039;</span></a></li>
+					<li><a href="../1204/index.html">55</a></li>
+					<li><a href="../1204/index1.html">56</a></li>
+					<li><a href="../1204/index2.html">57</a></li>
+					<li><a href="../1204/index3.html">58</a></li>
+					<li><a href="../1204/index4.html">59</a></li>
+					<li><a href="../1204/index5.html">60</a></li>
+					<li><a href="../1204/index6.html">61</a></li>
+					<li><a href="../1204/index7.html">62</a></li>
+					<li><a href="../1204/index8.html">63</a></li>
+					<li><a href="../1204/index9.html">64</a></li>
+					<li><a href="../1204/index10.html">65</a></li>
+					<li><a href="../1204/index11.html">66</a></li>
+					<li><a href="../1204/index12.html">67</a></li>
+					<li><a href="../1204/index13.html">68</a></li>
+					<li><a href="../1204/index14.html">69</a></li>
+					<li class="active"><a href="#">70</a></li>
+					<li><a href="../1205/index.html" aria-label="Next Page"><span aria-hidden="true">&#x203A;</span></a></li>
+					<li><a href="../1205/index.html" aria-label="Next Unit"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+				</center>
+			</div>
 
-</div></p>
-</div></div>
-<div id="viewq0b96g1" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b96g1" value="Rešitev" id="btnenabledq0b96g1" onClick='showAnswer("q0b96g1",1,2)' /></div>
-<div id="hideq0b96g1" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b96g1" value="Skrij" onClick='showAnswer("q0b96g1",0,2)'/></div>
-<div id="sq0b96g1" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b96g1",0,2)'></div>
-</div>
-<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" type="text/css" />
+		</div>
+		<!-- /#page-content-wrapper -->
 
-<div class="code">
+	</div>
+	<!-- /#wrapper -->
 
-# Program izpiše dolžino najdaljšega<br />
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
 
-# strnjenega zaporedja ničel v podani<br />
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
 
-# tabeli.<br />
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="../js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
 
-tabela = [0, 6, 5, 0, 0, 0, 0, -1, 0, 0, 0,<br />
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
 
-<span class="tab10">10, 5]</span><br />
+	<!-- eXe Project -->
+	<script src="../js/exe/common.js"></script>
 
-<br />
+	<!-- Skulpt and CodeMirror -->
+	<script src="../js/skulpt/codemirrorepl.js"></script>
+	<script src="../js/skulpt/repl.js"></script>
+	<script src="../js/skulpt/skulpt.js"></script>
+	<script src="../js/skulpt/skulpt-stdlib.js"></script>
+	<script src="../js/skulpt/python.js"></script>
+	<script>Sk.python3 = true;</script>
 
-# dolžina trenutnega zaporedja ničel<br />
-
-dolzinaTreZaporedja = 0<br />
-
-<br />
-
-# dolžina doslej najdaljšega zaporedja ničel<br />
-
-dolzinaNajZaporedja = 0<br />
-
-<br />
-
-for element in tabela:<br />
-
-<span class="tab2">if element == 0:</span><br />
-
-<span class="tab4"># Prebrali smo ničlo; trenutno zaporedje</span><br />
-
-<span class="tab4"># ničel se podaljša.</span><br />
-
-<span class="tab4">dolzinaTreZaporedja += 1</span><br />
-
-<span class="tab2">else:</span><br />
-
-<span class="tab4"># Prebrali smo število, različno od 0.</span><br />
-
-<span class="tab4"># Trenutno zaporedje ničel je spet prazno.</span><br />
-
-<span class="tab4">dolzinaTreZaporedja = 0</span><br />
-
-<span class="tab2"># Če je trenutno zaporedje ničel daljše</span><br />
-
-<span class="tab2"># od doslej najdaljšega, posodobimo</span><br />
-
-<span class="tab2"># spremenljivko dolzinaNajZaporedja.</span><br />
-
-<span class="tab2">if dolzinaTreZaporedja &gt; dolzinaNajZaporedja:</span><br />
-
-<span class="tab4">dolzinaNajZaporedja = dolzinaTreZaporedja</span><br />
-
-<br />
-
-print(dolzinaNajZaporedja)<br />
-
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
- <!-- applet --> 
-  <div class="wrapper numbered2" id="wrap97">
-<div class="splosna_obvezna_znanja">
- <div class='interaktivnaNaloga'>
 <script type="text/javascript">
 function outf(text) {
   var mypre = document.getElementById("output");
@@ -561,18 +619,6 @@ function clearit() {
 }
 </script>
 
-<div style="width:500px">
-<form>
-<textarea id="code"></textarea>
-<button type="button" class="btn-blue"  onclick="runit()">Izvedi</button>
-<button type="button" class="btn-blue"  onclick="clearit()">Počisti</button>
-</form>
-</div>
-
-<div class="rounded" style="width:500px">
-<pre id="output"></pre>
-</div>
-
 <script>
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
@@ -580,10 +626,9 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   mode: "python",
   theme: "mbo"
 });
-editor.setSize(500, 420);
-</script></div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<div class="paging-left"><a href="index14.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="../1205/index.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">70/423</span></div></div>
-</body></html>
+editor.setSize('100%', 420);
+</script>
+
+</body>
+
+</html>

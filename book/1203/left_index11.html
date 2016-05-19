@@ -1,0 +1,88 @@
+
+
+<h1>Naloge</h1>
+ 
+<!-- casestudy - besedilo z gumbi --> 
+  <div class="wrapper numbered" id="wrap67">
+<span class="number number-blue">10.<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue">
+<div class="popupb">
+<p align="justify">
+Napiši program, ki po vrsti izpiše vse datume v letu 2014, vsakega v svojo vrstico. Izpis naj se torej začne s <code>1.1.2014</code> in konča z <code>31.12.2014</code>.
+</p><div id="viewq0b67g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b67g0" value="Rešitev" id="btnenabledq0b67g0" onClick='showAnswer("q0b67g0",1,1)' /></div>
+<div id="hideq0b67g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b67g0" value="Skrij" onClick='showAnswer("q0b67g0",0,1)'/></div>
+<div id="sq0b67g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b67g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" />
+<div align="justify">
+<div class="code">
+leto = 2014
+for m in range(1, 13):
+  # februar, 2014 ni prestopno leto
+  if m == 2:
+    steviloDni = 28
+  # april, maj, september, november
+  elif m == 4 or m == 6 or m == 9 or m == 11:
+    steviloDni = 30
+  # drugi meseci
+  else:
+    steviloDni = 31
+  for d in range(1, steviloDni+1):
+    datum = str(d) + &quot;.&quot; + str(m) + &quot;.&quot;
+    datum = datum + str(leto)
+    print(datum)
+</div>
+</p>
+</div></div>
+</div>
+<!-- casestudy - besedilo z gumbi --> 
+  <div class="wrapper numbered" id="wrap68">
+<span class="number number-blue">11.<div class="box_aktivnost splosna_obvezna_znanja">
+      <span class="triangle triangle-blue">
+<div class="popupb">
+<p align="justify">
+Rešitev prejšnje naloge dopolni tako, da bo program izpisal le vsako prvo nedeljo v mesecu.</p>
+
+<p align="justify"><b>Koristen podatek:</b> prvi januar 2014 je bil sreda.
+</p><div id="viewq0b68g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b68g0" value="Rešitev" id="btnenabledq0b68g0" onClick='showAnswer("q0b68g0",1,1)' /></div>
+<div id="hideq0b68g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b68g0" value="Skrij" onClick='showAnswer("q0b68g0",0,1)'/></div>
+<div id="sq0b68g0" class="feedback-content-top button-hover hideall" style=" display:none;">
+<div class="feedback-draggable">
+<div class="close" onclick='showAnswer("q0b68g0",0,1)'></div>
+</div>
+<div class="feedback-content-container"><p><link href="codeformatting.css" rel="stylesheet" />
+<div align="justify">
+<div class="code">
+leto = 2014
+for m in range(1, 13):
+  # januar (1.1.2014 = sreda)
+  if m == 1:
+    prviDan = 3
+  elif m == 3:
+    prviDan = (prviDan + 28) % 7
+  # meseci, katerih predhodniki imajo 30 dni
+  elif m == 5 or m == 7 or m == 10 or m == 12:
+    prviDan = (prviDan + 30) % 7
+  # drugi meseci
+  else:
+    prviDan = (prviDan + 31) % 7
+  odmik = 7 - prviDan
+  d = 1 + odmik % 7
+  datum = str(d) + &quot;.&quot; + str(m) + &quot;.&quot;
+  datum = datum + str(leto)
+  print(datum)
+</div>
+</p>
+</div></div>
+</div>
+  <div class="wrapper numbered" id="wrap78">
+<span class="number number-red">12.<div class="box_dejstvo splosna_obvezna_znanja">
+    <span class="triangle triangle-red">
+<p align="justify">
+Stavka <code>break</code> in <code>continue</code> sta zelo prikladna, nista pa nujno potrebna. Programe, ki si jih videl doslej v tej enoti in so uporabljali stavka <code>break</code> in/ali <code>continue</code>, predelaj tako, da teh stavkov ne bodo uporabljali, ob tem pa naj ne postanejo nič manj učinkoviti. Z drugimi besedami, tvoja predelava naj nič ne spremeni števila zank in števila iteracij posamezne zanke.</p>
+
+<p align="justify"><b>Namig:</b>
+O teh stvareh je lažje razmišljati, če najprej vse zanke for spremeniš v zanke <code>while</code>.
+</p>

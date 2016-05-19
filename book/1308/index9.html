@@ -1,348 +1,413 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Created using eXeCute: http://exelearning.org -->
+<!DOCTYPE html>
+<html lang="sl">
+
 <head>
-<style type="text/css">
-@import url(../css/normalize.css);
-@import url(../css/main.css);
-@import url(../css/jquery-ui.css);
-@import url(../css/nav.css);
-@import url(../css/jsxgraph.css);
-@import url(../css/kalkulator.css);
-@import url(../css/lightbox.css);
-@import url(../css/jplayer.css);
-</style><title> Naloge </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/eum.js"></script>
-<script type="text/javascript" src="../js/commoneum.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
-<script type="text/javascript" src="../js/options.js"></script>
-<script type="text/javascript" src="../js/kalkulator.js"></script>
-<script type="text/javascript" src="../js/jquery-exe.js"></script>
-<script type="text/javascript" src="../js/jquery-tools.js"></script>
-<script type="text/javascript" src="../js/gui/gui_core.js"></script>
-<script type="text/javascript" src="../js/gui/gui_help.js"></script>
-<script type="text/javascript" src="../js/lightbox.js"></script>
-<script type="text/javascript" src="../js/createjs.js"></script>
-<script type="text/javascript" src="../js/movieclip.js"></script>
-<script type="text/javascript" src="../js/povezovanje.js"></script>
-<script type="text/javascript" src="../js/underscore.js"></script>
-<script type="text/javascript" src="../js/transit.js"></script>
-<script type="text/javascript" src="../js/cloze.js"></script>
-<script type="text/javascript" src="../js/JSmol.js"></script>
-<script type="text/javascript" src="../js/jplayer.js"></script>
-<script type="text/x-mathjax-config">  
-MathJax.Hub.Config({
-   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
-    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
-    config:["TeX-AMS_HTML.js"]});
-</script>
-<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
-$(document).keydown(function(e){
-if (e.keyCode == 37) { 
- window.location = "index8.html";
-  }if (e.keyCode == 39) {
- window.location = "index10.html";
-  }});
-</script><link rel="shortcut icon" href="../favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>Naloge</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/h5utils.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-    <body>
-<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
-<input type="hidden" name="elo-id" id="elo-id" value="1"/>
-<!--navigacija-->
-    <nav id="nav">
-        <ul class="main">
-            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
-            <li class="topics"><a href="#">Kazalo</a></li>
-            <li class="pages"><a href="#">Strani</a></li>
-        </ul>
-    <ul>
-    <li id="textbook-title"><span>Uporabniki in varnost</span></li>
-    </ul>
-    <ul class="meta">
-            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
-            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
-            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.03.zip">Prenos</a></li>
-            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
-        </ul>
-    </nav>
-    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
-     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
-     <img src="../img/by-nc-sa.eu.png" height="30px">
-    </div></div>
-<section id="nav-tabbed">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul class="accordion">
-      <li class="on" id="menu001"><a href="#">Uvod</a>
-      <ul id="submenu001" class="sub-menu">
-        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
-        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
-      <ul id="submenu002" class="sub-menu">
-        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
-        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
-        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
-        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
-        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
-        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
-        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
-        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
-        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
-        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
-        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
-        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu003"><a href="#">Sistemi</a>
-      <ul class="on" id="submenu003" class="sub-menu">
-        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
-        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
-        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
-        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
-        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
-        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
-        <li class="on"><a href="../1308/index.html" id="unit1308" style="color: black; font-weight: 600;">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
-        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
-      <ul id="submenu004" class="sub-menu">
-        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
-        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
-        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
-        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
-        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
-        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
-        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
-        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
-      <ul id="submenu005" class="sub-menu">
-        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
-        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
-        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
-      </ul>
-      </li>
-    </ul>
-  </nav></section>
-</section>
 
-<section id="nav-pages">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul>
-      <li><a href="index.html" >Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-      <li><a href="index1.html" >Primer IAAA <span class="page_numbers">282</span></a></li>
-      <li><a href="index2.html" >Identifikacija <span class="page_numbers">283</span></a></li>
-      <li><a href="index3.html" >Avtentikacija s skupno skrivnostjo <span class="page_numbers">284</span></a></li>
-      <li><a href="index4.html" >Neobrnljive funkcije <span class="page_numbers">285</span></a></li>
-      <li><a href="index5.html" >Avtentikacija z izzivom <span class="page_numbers">286</span></a></li>
-      <li><a href="index6.html" >Druge oblike avtentikacije <span class="page_numbers">287</span></a></li>
-      <li><a href="index7.html" >Avtorizacija in beleženje <span class="page_numbers">288</span></a></li>
-      <li><a href="index8.html" >Povzetek <span class="page_numbers">289</span></a></li>
-      <li class="on"><a href="#">Naloge <span class="page_numbers">290</span></a></li>
-      <li><a href="index10.html" >Naloge <span class="page_numbers">291</span></a></li>
-    </ul>
-  </nav></section>
-</section>
+<body>
 
-<div class="container" id="nodeDecoration">
-            <nav class="breadcrumbs">
-                <ul>
-                <li style="float:left;"><span class="unit-path">Uporabniki in varnost | Naloge</span></a></li> 
-        <li>&nbsp;</li>
-            </ul>
-            </nav>
+	<div id="wrapper">
 
-<section class="page page-left">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
+				  <div id="menu1" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1101/index.html">O učbeniku</a></li>
+					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
+				  <div id="menu2" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
+					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
+					<li><a href="../1203/index.html">Zanke</a></li>
+					<li><a href="../1204/index.html">Tabele</a></li>
+					<li><a href="../1205/index.html">Funkcije</a></li>
+					<li><a href="../1206/index.html">Nizi</a></li>
+					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
+					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
+					<li><a href="../1209/index.html">Zaporedje</a></li>
+					<li><a href="../1210/index.html">Urejanje</a></li>
+					<li><a href="../1211/index.html">Množica</a></li>
+					<li><a href="../1212/index.html">Slovar</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
+				  <div id="menu3" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
+					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
+					<li><a href="../1303/index.html">Ukazi</a></li>
+					<li><a href="../1304/index.html">Arhitektura računalnika</a></li>
+					<li><a href="../1305/index.html">Pomnilnik</a></li>
+					<li><a href="../1306/index.html">Operacijski sistem</a></li>
+					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
+					<li class="active"><a href="../1308/index.html">Uporabniki in varnost</a></li>
+					<li><a href="../1309/index.html">Procesi</a></li>
+					<li><a href="../1310/index.html">Vzporednost</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
+				  <div id="menu4" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
+					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
+					<li><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
+					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
+					<li><a href="../1405/index.html">Storitve interneta</a></li>
+					<li><a href="../1406/index.html">Svetovni splet</a></li>
+					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
+					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
+					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
+				  <div id="menu5" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
+					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
+					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
 
-<!-- multichoice -Vecizbirno --> 
-  <div class="wrapper numbered" id="wrap141_13">
-<span class="number number-green">1.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<h3><div align="justify">
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
 
-Avtentikacijo z uporabo gesla so poznali najmanj že v časih antičnega Rima. Vsakdo, ki bi želel vstopiti v vojaški tabor, naj bi moral poznati skrito geslo. Zelo znana je fraza »Sezam, odpri se,« iz zgodbe Ali Baba in štirideset razbojnikov, s katero protagonist odpre skrivni prehod v skali. Za kakšno obliko avtentikacije gre v teh primerih?
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
 
-</div></h3>
-<div class="input-row"><input type="radio" name="option141_13" id="i141_16" onclick="getFeedback(0,4,'141_13','multi')"/>
-<label class="checkbox-label" id="taans141_16"><p>Avtentikacija s skupno skrivnostjo.</p></label>
- </div>
-<div class="input-row"><input type="radio" name="option141_13" id="i141_600" onclick="getFeedback(1,4,'141_13','multi')"/>
-<label class="checkbox-label" id="taans141_600"><p>Avtentikacija z izzivom.</p></label>
- </div>
-<div class="input-row"><input type="radio" name="option141_13" id="i141_603" onclick="getFeedback(2,4,'141_13','multi')"/>
-<label class="checkbox-label" id="taans141_603"><p>Avtentikacija z uporabo biometričnih parametrov.</p></label>
- </div>
-<div class="input-row"><input type="radio" name="option141_13" id="i141_606" onclick="getFeedback(3,4,'141_13','multi')"/>
-<label class="checkbox-label" id="taans141_606"><p>Tu sploh ne gre za avtentikacijo, temveč identifikacijo.</p></label>
- </div>
-<div id="sa0b141_13" class="feedback-content-top button-hover hideall" style="display: none;" even_steven="6"><div class="feedback-draggable">
-<div class="close" onclick='showAnswer("a0b141_13",3,1)'></div></div>
-<div id="taf141_16" class="feedback-content-container pravilenOdgovor"><p>Pravilno.</p></div></div>
-<div id="sa1b141_13" class="feedback-content-top button-hover hideall" style="display: none;" even_steven="7"><div class="feedback-draggable">
-<div class="close" onclick='showAnswer("a1b141_13",3,1)'></div></div>
-<div id="taf141_600" class="feedback-content-container napacenOdgovor"><p>Napačno.</p></div></div>
-<div id="sa2b141_13" class="feedback-content-top button-hover hideall" style="display: none;" even_steven="9"><div class="feedback-draggable">
-<div class="close" onclick='showAnswer("a2b141_13",3,1)'></div></div>
-<div id="taf141_603" class="feedback-content-container napacenOdgovor"><p>Napačno.</p></div></div>
-<div id="sa3b141_13" class="feedback-content-top button-hover hideall" style="display: none;" even_steven="9"><div class="feedback-draggable">
-<div class="close" onclick='showAnswer("a3b141_13",3,1)'></div></div>
-<div id="taf141_606" class="feedback-content-container napacenOdgovor"><p>Napačno.</p></div></div>
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Catalogue -->
+		<div id="catalogue" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
+					</div>
+					<div class="modal-body">
+						CIP - Kataložni zapis o publikaciji<br>
+						Narodna in univerzitetna knjižnica, Ljubljana<br>
+						<br>
+						659.2:004(075.3)(0.034.2)<br>
+						004(075.3)(0.034.2)<br>
+						<br>
+						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
+						<br>
+						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
+						<br>
+						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
+						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
+						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
+						<br>
+						1. Anželj, Gregor<br>
+						282126848<br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: True -->
+		<div id="true" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-sm">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Odgovor</h4>
+					</div>
+					<div class="modal-body bg-success">
+						<p class="text-success">Odgovor je pravilen.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: False -->
+		<div id="false" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-sm">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Odgovor</h4>
+					</div>
+					<div class="modal-body bg-danger">
+						<p class="text-danger">Odgovor je napačen.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Hint 3 -->
+		<div id="hint3" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Namig</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">V uporabniški lupini uporabi ukaz <code>ls -l</code> ali ustrezno grafično orodje.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 3 -->
+		<div id="solution3" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Pravice za dostop do datotek na Unix in tudi GNU/Linux sistemu so urejene v tri tako imenovane kolobarje. Najbolj zunanji kolobar predstavljajo vsi uporabniki (angl. <i>other</i>). Ta kolobar vsebuje naslednji kolobar, v katerem so uporabniki iz iste skupine (angl. <i>group</i>) kot lastnik datoteke. Najbolj notranji kolobar pa predstavlja lastnik datoteke (angl. <i>user</i>). Uporabniki iz vsakega od kolobarjev imajo lahko eno ali več od naslednjih pravic: branje iz datoteke (angl. <i>read</i>) označeno s črko <b>r</b>; pisanje v datoteko (angl. <i>write</i>) označeno s črko <b>w</b>; ali izvajanje datoteke kot programa (angl. <i>execute</i>) označeno s črko <b>x</b>. Za izpis imen datotek, podatkov o njihovem lastništvu in pravicah za dostop uporabite ukaz <code>ls -l</code>. Primer izpisa:</p>
+						<p align="center"><img src="img/unix-permissions.png" class="img-responsive" /></p>
+						<p align="justify">V našem primeru je lastnik datoteke iz najbolj notranjega kolobarja <i>peterzmeda</i>, medtem ko je ime skupine srednjega kolobarja <i>uporabniki</i>. <i>Datoteko1</i> lahko lahko berejo in zaganjajo vsi uporabniki, medtem ko lahko vanjo piše samo njen lastnik in uporabniki skupine, ki ji pripada. <i>Datoteko2</i> smejo brati in pisati samo <i>peterzmeda</i> in uporabniki njegove skupine, medtem ko ima na <i>datoteki3</i> pravico za branje in pisanje samo njen lastnik.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Hint 5 -->
+		<div id="hint5" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Namig</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Poglej, v čem se razlikujejo pravice ene skupine uporabnikov od druge skupine.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Image 5 -->
+		<div id="image5" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-lg">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Slika</h4>
+					</div>
+					<div class="modal-body">
+						<p align="center"><img src="img/pravice-kontrolne-joined.3.jpg" class="img-responsive" /></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+<!-- Left column start -->
+<h1>Naloge</h1>
+
+<div class="alert alert-info" role="alert">
+<p>
+	<span class="label label-primary"><b>1</b></span>
+</p>
+<p align="justify">Avtentikacijo z uporabo gesla so poznali najmanj že v časih antičnega Rima. Vsakdo, ki bi želel vstopiti v vojaški tabor, naj bi moral poznati skrito geslo. Zelo znana je fraza »Sezam, odpri se,« iz zgodbe Ali Baba in štirideset razbojnikov, s katero protagonist odpre skrivni prehod v skali. Za kakšno obliko avtentikacije gre v teh primerih?</p>
+<p>
+<div class="input-row">
+	<input type="radio" name="option141_13" id="i141_16" data-toggle="modal" data-target="#true" />
+	<label class="checkbox-label" id="taans141_16">Avtentikacija s skupno skrivnostjo.</label>
 </div>
+<div class="input-row">
+	<input type="radio" name="option141_13" id="i141_600" data-toggle="modal" data-target="#false" />
+	<label class="checkbox-label" id="taans141_600">Avtentikacija z izzivom.</label>
 </div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- dopolnjevanje - Cloze --> 
-  <div class="wrapper numbered" id="wrap142">
-<span class="number number-green">2.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<h3>Izračunaj:</h3>
+<div class="input-row">
+	<input type="radio" name="option141_13" id="i141_603" data-toggle="modal" data-target="#false" />
+	<label class="checkbox-label" id="taans141_603">Avtentikacija z uporabo biometričnih parametrov.</label>
+</div>
+<div class="input-row">
+	<input type="radio" name="option141_13" id="i141_606" data-toggle="modal" data-target="#false" />
+	<label class="checkbox-label" id="taans141_606">Tu sploh ne gre za avtentikacijo, temveč identifikacijo.</label>
+</div>
+</p>
+</div>
+
+<div class="alert alert-info" role="alert">
+<p>
+	<span class="label label-primary"><b>2</b></span>
+</p>
+<p align="justify">Izračunaj:</p>
+<p>
 <div id="cloze142_7" class="clozeBlock">
-<input type="hidden" name="clozeFlag142_7.strictMarking" id="clozeFlag142_7.strictMarking" value="false"/>
-
-<input type="hidden" name="clozeFlag142_7.checkCaps" id="clozeFlag142_7.checkCaps" value="false"/>
-
-<input type="hidden" name="clozeFlag142_7.instantMarking" id="clozeFlag142_7.instantMarking" value="false"/>
-
-<input type="hidden" name="clozeFlag142_7.listing" id="clozeFlag142_7.listing" value="0"/>
-
-<input type="hidden" name="clozeFlag142_7.dropdown" id="clozeFlag142_7.dropdown" value="False"/>
-
-<input type="hidden" name="clozeFlag142_7.equallength" id="clozeFlag142_7.equallength" value="False"/>
-
-
-
-<p>
-
-34 % 7 = 
-<u>6</u>
-
-
+	<input type="hidden" name="clozeFlag142_7.strictMarking" id="clozeFlag142_7.strictMarking" value="false"/>
+	<input type="hidden" name="clozeFlag142_7.checkCaps" id="clozeFlag142_7.checkCaps" value="false"/>
+	<input type="hidden" name="clozeFlag142_7.instantMarking" id="clozeFlag142_7.instantMarking" value="false"/>
+	<input type="hidden" name="clozeFlag142_7.listing" id="clozeFlag142_7.listing" value="0"/>
+	<input type="hidden" name="clozeFlag142_7.dropdown" id="clozeFlag142_7.dropdown" value="False"/>
+	<input type="hidden" name="clozeFlag142_7.equallength" id="clozeFlag142_7.equallength" value="False"/>
+	<p>34 % 7 = <u>6</u></p>
+	<p>64 % 2 = <u>0</u></p>
+	<p>19 % 3 = <u>1</u></p>
+	<p>100 % 25 = <u>0</u></p>
+	<div class="blockb">
+		<button class="btn btn-info" name="submit142_7" id="submit142_7" onClick='clozeSubmit("142_7")'><span class="fa fa-question"></span> Preveri</button>
+		<button class="btn btn-info" name="restart142_7" style="display: none;" id="restart142_7" onClick='clozeRestart("142_7")'><span class="fa fa-refresh"></span>  Začni znova</button>
+		<span id="clozeScore72_7" class="rezultat"></span>
+		<button class="btn btn-success" name="142_7showAnswersButton" style="display: none;" id="showAnswersButton142_7" onClick='fillClozeInputs("142_7")'><span class="fa fa-check"></span>  Prikaži odgovore</button>
+	</div>
+</div>
 </p>
+</div>
 
+<div class="alert alert-info" role="alert">
 <p>
-
-64 % 2 = 
-<u>0</u>
-
-
+	<span class="label label-primary"><b>3</b></span>
+	<span class="fa fa-star pull-right"></span>
 </p>
-
+<p align="justify">Preveri kako je s pravicami za dostop do datotek na operacijskem sistemu GNU/Linux!</p>
 <p>
-
-19 % 3 = 
-<u>1</u>
-
-
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#hint3"><span class="fa fa-question"></span> Namig</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution3"><span class="fa fa-check"></span> Rešitev</button>
 </p>
-
+</div>
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+						<br />
+<!-- Right column start -->
+<div class="alert alert-info" role="alert">
 <p>
-
-100 % 25 = 
-<u>0</u>
- 
-
+	<span class="label label-primary"><b>4</b></span>
+	<span class="fa fa-star pull-right"></span>
 </p>
-
-
-<div class="blockb">
-
-<input type="button" class="btn-blue" name="submit142_7" value="Preveri" id="submit142_7" onClick='clozeSubmit("142_7")'/>
-<input type="button" class="btn-blue" name="restart142_7" value="Za&#269;ni znova" style="display: none;" id="restart142_7" onClick='clozeRestart("142_7")'/>
-<span id="clozeScore142_7" class="rezultat"></span>
-<input type="button" class="btn-orange" name="142_7showAnswersButton" value="Prika&#382;i odgovore" style="display: none;" id="showAnswersButton142_7" onClick='fillClozeInputs("142_7")'/>
-</div>
-</div></div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- casestudy - besedilo z gumbi --> 
-  <div class="wrapper numbered" id="wrap136">
-<span class="number number-blue">3.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<div class="popupb">
-<p><div align="justify">
-
-Preveri kako je s pravicami za dostop do datotek na operacijskem sistemu GNU/Linux!
-
-</div></p><div id="viewq0b136g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b136g0" value="Namig" id="btnenabledq0b136g0" onClick='showAnswer("q0b136g0",1,2)' /></div>
-<div id="hideq0b136g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b136g0" value="Skrij" onClick='showAnswer("q0b136g0",0,2)'/></div>
-<div id="sq0b136g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b136g0",0,2)'></div>
-</div>
-<div class="feedback-content-container"><p>V uporabniški lupini uporabi ukaz <code>ls -l</code> ali ustrezno grafično orodje.</p>
-</div></div>
-<div id="viewq0b136g1" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b136g1" value="Rešitev" id="btnenabledq0b136g1" onClick='showAnswer("q0b136g1",1,2)' /></div>
-<div id="hideq0b136g1" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b136g1" value="Skrij" onClick='showAnswer("q0b136g1",0,2)'/></div>
-<div id="sq0b136g1" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b136g1",0,2)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
-
-Pravice za dostop do datotek na Unix in tudi GNU/Linux sistemu so 
-
-urejene v tri takoimenovane kolobarje. Najbolj zunanji kolobar 
-
-predstavljajo vsi uporabniki (angl. <i>other</i>). Ta kolobar vsebuje naslednji kolobar, v katerem so uporabniki iz iste skupine (angl. <i>group</i>) kot lastnik datoteke. Najbolj notranji kolobar pa predstavlja lastnik datoteke (angl. <i>user</i>). Uporabniki iz vsakega od kolobarjev imajo lahko eno ali več od naslednjih pravic: branje iz datoteke (angl. <i>read</i>) označeno s črko <b>r</b>; pisanje v datoteko (angl. <i>write</i>) označeno s črko <b>w</b>; ali izvajanje datoteke kot programa (angl. <i>execute</i>) označeno s črko <b>x</b>. Za izpis imen datotek, podatkov o njihovem lastništvu in pravicah za dostop uporabite ukaz <code>ls -l</code>. Primer izpisa:
-
-</div>
-
-<div align="justify">
-
-<br />
-
-</div>
-
-<div align="justify">
-
-<img src="unix-permissions.png" height="57" width="482" />
-
-</div>
-
-<div align="justify">
-
-<br />
-
-</div>
-
-<div align="justify">
-
-V našem primeru je lastnik datoteke iz najbolj notranjega kolobarja <i>peterzmeda</i>, medtem ko je ime skupine srednjega kolobarja <i>uporabniki</i>. <i>Datoteko1</i>
-
-lahko lahko berejo in zaganjajo vsi uporabniki, medtem ko lahko vanjo 
-
-piše samo njen lastnik in uporabniki skupine, ki ji pripada. <i>Datoteko2</i> smejo brati in pisati samo <i>peterzmeda</i> in uporabniki njegove skupine, medtem ko ima na <i>datoteki3</i> pravico za branje in pisanje samo njen lastnik.
-
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<section class="page page-right">
-<!-- multiselect vec izbir --> 
-  <div class="wrapper numbered2" id="wrap140">
-<span class="number2 number-blue">4.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<h3><div align="justify">
-
-Katere od naslednjih trditev veljajo za avtentikacijo z izzivom:<br />
-
-
-
-</div></h3>
+<p align="justify">Katere od naslednjih trditev veljajo za avtentikacijo z izzivom:</p>
+<p>
 <div class="input-row">
   <span id ="140_190_2"><input type="checkbox" id="140_190" value="False" /></span>
   <label class="checkbox-label" id="taans140_190">Geslo pozna samo uporabnik.</label>
@@ -363,50 +428,83 @@ Katere od naslednjih trditev veljajo za avtentikacijo z izzivom:<br />
   <span id ="140_194_2"><input type="checkbox" id="140_194" value="False" /></span>
   <label class="checkbox-label" id="taans140_194">Strežnik uporabniko vedno pošlje isti izziv.</label>
 </div>
-<input type="button" class="btn-blue" name="submitSelect" id="fb140_19" value="Prika&#382;i odzive" onClick='showFeedback(5,"140_19")'/></div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- casestudy - besedilo z gumbi --> 
-  <div class="wrapper numbered2" id="wrap138">
-<span class="number2 number-green">5.</span><div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<h3><div align="justify">
-
-Sliki opisujeta pravice profesorjev in dijakov za mapo Kontrolne naloge:
-
+</p>
+<p>
+<button type="button" class="btn btn-info" name="submitSelect" id="fb140_19" onClick='showFeedback(5,"140_19")'><span class="fa fa-check"></span> Prikaži odzive</button>
+</p>
 </div>
 
-<div align="justify">
-
-<br />
-
-<div style="text-align: center">
-
-<img src="pravice-kontrolne-joined.3.jpg" height="178" width="282" />
-
+<div class="alert alert-info" role="alert">
+<p>
+	<span class="label label-primary"><b>5</b></span>
+</p>
+<p align="justify">Sliki opisujeta pravice profesorjev in dijakov za mapo <i>Kontrolne naloge</i>:</p>
+<p align="center"><a href="#" data-toggle="modal" data-target="#image5"><img src="img/pravice-kontrolne-joined.3.jpg" width="90%" class="img-responsive" /></a></p>
+<p align="justify">V čem se razlikujejo pravice dijakov in profesorjev za to mapo?</p>
+<p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#hint5"><span class="fa fa-question"></span> Namig</button>
+</p>
 </div>
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
 
-<br />
+			<!-- Page Pagination in Footer -->
+			<div class="col-md-12">
+				<center>
+				<ul class="pagination pagination-sm">
+					<li><a href="../1307/index.html" aria-label="Previous Unit"><span aria-hidden="true">&laquo;</span></a></li>
+					<li><a href="../1308/index8.html" aria-label="Previous Page"><span aria-hidden="true">&#x2039;</span></a></li>
+					<li><a href="../1308/index.html">281</a></li>
+					<li><a href="../1308/index1.html">282</a></li>
+					<li><a href="../1308/index2.html">283</a></li>
+					<li><a href="../1308/index3.html">284</a></li>
+					<li><a href="../1308/index4.html">285</a></li>
+					<li><a href="../1308/index5.html">286</a></li>
+					<li><a href="../1308/index6.html">287</a></li>
+					<li><a href="../1308/index7.html">288</a></li>
+					<li><a href="../1308/index8.html">289</a></li>
+					<li class="active"><a href="#">290</a></li>
+					<li><a href="../1308/index10.html">291</a></li>
+					<li><a href="../1308/index10.html" aria-label="Next Page"><span aria-hidden="true">&#x203A;</span></a></li>
+					<li><a href="../1309/index.html" aria-label="Next Unit"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+				</center>
+			</div>
 
-V čem se razlikujejo pravice dijakov in profesorjev za to mapo? 
+		</div>
+		<!-- /#page-content-wrapper -->
 
-</div></h3>
-<div class="popupb">
-<p></p><div id="viewq0b138g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b138g0" value="Namig" id="btnenabledq0b138g0" onClick='showAnswer("q0b138g0",1,1)' /></div>
-<div id="hideq0b138g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b138g0" value="Skrij" onClick='showAnswer("q0b138g0",0,1)'/></div>
-<div id="sq0b138g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b138g0",0,1)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
+	</div>
+	<!-- /#wrapper -->
 
-Poglej, v čem se razlikujejo pravice ene skupine uporabnikov od druge skupine.
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
 
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<div class="paging-left"><a href="index8.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index10.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">290/423</span></div></div>
-</body></html>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="../js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
+
+	<!-- eXe Project -->
+	<script src="../js/exe/common.js"></script>
+	<script src="../js/exe/cloze.js"></script>
+
+</body>
+
+</html>

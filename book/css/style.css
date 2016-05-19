@@ -1,0 +1,50 @@
+h1 {
+  font-size: 24px; /* original: 36px */
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 18px; /* original: 30px */
+  font-weight: bold;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.carousel-indicators {
+  bottom: -5px;
+}
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+}
+
+table.survey tbody tr {
+  border-top: 1px solid #31708f;
+}
+table.survey thead th,
+table.survey tbody td {
+  padding: 4px;
+}
+
+div.input-row span {
+  padding: 4px 2px 1px 3px;
+}
+label.checkbox-label {
+  font-weight: normal;
+  display: inline;
+}
+
+.skulpt-controls,
+.first-answer {
+  padding-top: 5px;
+}

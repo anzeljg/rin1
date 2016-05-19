@@ -1,346 +1,351 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Created using eXeCute: http://exelearning.org -->
+<!DOCTYPE html>
+<html lang="sl">
+
 <head>
-<style type="text/css">
-@import url(../css/normalize.css);
-@import url(../css/main.css);
-@import url(../css/jquery-ui.css);
-@import url(../css/nav.css);
-@import url(../css/jsxgraph.css);
-@import url(../css/kalkulator.css);
-@import url(../css/lightbox.css);
-@import url(../css/jplayer.css);
-</style><title> Von Neumannova arhitektura </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/eum.js"></script>
-<script type="text/javascript" src="../js/commoneum.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
-<script type="text/javascript" src="../js/options.js"></script>
-<script type="text/javascript" src="../js/kalkulator.js"></script>
-<script type="text/javascript" src="../js/jquery-exe.js"></script>
-<script type="text/javascript" src="../js/jquery-tools.js"></script>
-<script type="text/javascript" src="../js/gui/gui_core.js"></script>
-<script type="text/javascript" src="../js/gui/gui_help.js"></script>
-<script type="text/javascript" src="../js/lightbox.js"></script>
-<script type="text/javascript" src="../js/createjs.js"></script>
-<script type="text/javascript" src="../js/movieclip.js"></script>
-<script type="text/javascript" src="../js/povezovanje.js"></script>
-<script type="text/javascript" src="../js/underscore.js"></script>
-<script type="text/javascript" src="../js/transit.js"></script>
-<script type="text/javascript" src="../js/cloze.js"></script>
-<script type="text/javascript" src="../js/JSmol.js"></script>
-<script type="text/javascript" src="../js/jplayer.js"></script>
-<script type="text/x-mathjax-config">  
-MathJax.Hub.Config({
-   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
-    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
-    config:["TeX-AMS_HTML.js"]});
-</script>
-<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
-$(document).keydown(function(e){
-if (e.keyCode == 37) { 
- window.location = "index1.html";
-  }if (e.keyCode == 39) {
- window.location = "index3.html";
-  }});
-</script><link rel="shortcut icon" href="../favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>Von Neumannova arhitektura</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-    <body>
-<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
-<input type="hidden" name="elo-id" id="elo-id" value="1"/>
-<!--navigacija-->
-    <nav id="nav">
-        <ul class="main">
-            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
-            <li class="topics"><a href="#">Kazalo</a></li>
-            <li class="pages"><a href="#">Strani</a></li>
-        </ul>
-    <ul>
-    <li id="textbook-title"><span>Arhitektura računalnika</span></li>
-    </ul>
-    <ul class="meta">
-            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
-            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
-            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.03.zip">Prenos</a></li>
-            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
-        </ul>
-    </nav>
-    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
-     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
-     <img src="../img/by-nc-sa.eu.png" height="30px">
-    </div></div>
-<section id="nav-tabbed">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul class="accordion">
-      <li class="on" id="menu001"><a href="#">Uvod</a>
-      <ul id="submenu001" class="sub-menu">
-        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
-        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
-      <ul id="submenu002" class="sub-menu">
-        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
-        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
-        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
-        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
-        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
-        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
-        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
-        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
-        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
-        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
-        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
-        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu003"><a href="#">Sistemi</a>
-      <ul class="on" id="submenu003" class="sub-menu">
-        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
-        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
-        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
-        <li class="on"><a href="../1304/index.html" id="unit1304" style="color: black; font-weight: 600;">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
-        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
-        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
-        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
-        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
-      <ul id="submenu004" class="sub-menu">
-        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
-        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
-        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
-        <li class="on"><a href="../1405/index.html" id="unit1405">Storitve interneta <span class="page_numbers">345</span></a></li>
-        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
-        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
-        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
-        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
-      <ul id="submenu005" class="sub-menu">
-        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
-        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
-        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
-      </ul>
-      </li>
-    </ul>
-  </nav></section>
-</section>
 
-<section id="nav-pages">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul>
-      <li><a href="index.html" >Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-      <li><a href="index1.html" >ENIAC <span class="page_numbers">243</span></a></li>
-      <li class="on"><a href="#">Von Neumannova arhitektura <span class="page_numbers">244</span></a></li>
-      <li><a href="index3.html" >Razširjena von Neumannova arhitektura <span class="page_numbers">245</span></a></li>
-      <li><a href="index4.html" >Matična plošča osebnega računalnika <span class="page_numbers">246</span></a></li>
-      <li><a href="index5.html" >Sestavljanje namiznega osebnega računalnika <span class="page_numbers">247</span></a></li>
-      <li><a href="index6.html" >Povzetek <span class="page_numbers">248</span></a></li>
-      <li><a href="index7.html" >Naloge <span class="page_numbers">249</span></a></li>
-    </ul>
-  </nav></section>
-</section>
+<body>
 
-<div class="container" id="nodeDecoration">
-            <nav class="breadcrumbs">
-                <ul>
-                <li style="float:left;"><span class="unit-path">Arhitektura računalnika | Von Neumannova arhitektura</span></a></li> 
-        <li>&nbsp;</li>
-            </ul>
-            </nav>
+	<div id="wrapper">
 
-<section class="page page-left">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
+				  <div id="menu1" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1101/index.html">O učbeniku</a></li>
+					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
+				  <div id="menu2" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
+					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
+					<li><a href="../1203/index.html">Zanke</a></li>
+					<li><a href="../1204/index.html">Tabele</a></li>
+					<li><a href="../1205/index.html">Funkcije</a></li>
+					<li><a href="../1206/index.html">Nizi</a></li>
+					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
+					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
+					<li><a href="../1209/index.html">Zaporedje</a></li>
+					<li><a href="../1210/index.html">Urejanje</a></li>
+					<li><a href="../1211/index.html">Množica</a></li>
+					<li><a href="../1212/index.html">Slovar</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
+				  <div id="menu3" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
+					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
+					<li><a href="../1303/index.html">Ukazi</a></li>
+					<li class="active"><a href="../1304/index.html">Arhitektura računalnika</a></li>
+					<li><a href="../1305/index.html">Pomnilnik</a></li>
+					<li><a href="../1306/index.html">Operacijski sistem</a></li>
+					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
+					<li><a href="../1308/index.html">Uporabniki in varnost</a></li>
+					<li><a href="../1309/index.html">Procesi</a></li>
+					<li><a href="../1310/index.html">Vzporednost</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
+				  <div id="menu4" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
+					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
+					<li><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
+					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
+					<li><a href="../1405/index.html">Storitve interneta</a></li>
+					<li><a href="../1406/index.html">Svetovni splet</a></li>
+					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
+					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
+					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
+				  <div id="menu5" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
+					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
+					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
+
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Catalogue -->
+		<div id="catalogue" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
+					</div>
+					<div class="modal-body">
+						CIP - Kataložni zapis o publikaciji<br>
+						Narodna in univerzitetna knjižnica, Ljubljana<br>
+						<br>
+						659.2:004(075.3)(0.034.2)<br>
+						004(075.3)(0.034.2)<br>
+						<br>
+						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
+						<br>
+						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
+						<br>
+						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
+						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
+						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
+						<br>
+						1. Anželj, Gregor<br>
+						282126848<br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Comment 1 -->
+		<div id="comment1" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Komentar</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Včasih programer želi prekiniti zaporedno izvajanje ukazov (na primer pri uporabi zank ali pogojnih stavkov), a kako to zapovedati CPE v poglavju o ukazih.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Solution 1 -->
+		<div id="solution1" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Rešitev</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Vzporedno izvajanje programa oziroma ukazov lahko dosežemo na dva osnovna načina. Prvi je, da hkrati uporabimo več CPE (večprocesorski ali večjedrni sistem), in drugi s cevovodnim izvajanjem ukazov. Slednje se dogaja danes v vsakem procesorju. Pri opisu izvajanja ukaza smo opredelili kot primer pet korakov. Če ponazorimo cevovodno izvajanje, slednje pomeni, da se najprej prične izvajati prvi korak prvega ukaza. Nato sledi izvajanje drugega koraka prvega ukaza, vendar se <b>hkrati </b>prične izvajati že tudi prvi korak naslednjega ukaza in tako naprej.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+<!-- Left column start -->
 <h1>Von Neumannova arhitektura</h1>
- <div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
+ 
+<p align="justify">Poleg tega, da imamo pri von Neumannovi arhitekturi program v pomnilniku, zanjo velja še preprosto shema soodvisnosti gradnikov:</p>
 
-Poleg tega, da imamo pri von Neumannovi arhitekturi program v pomnilniku, zanjo velja še preprosto shema soodvisnosti gradnikov:
+<p align="center"><img src="img/von-neumann-640.png" width="75%" class="img-responsive" /></p>
 
-</div></p>
+<p align="justify">Sestoji iz 3 sklopov: <b>centralne procesne enote</b> (CPE), <b>pomnilnika</b> ter <b>vhodno-izhodnih naprav</b>. Osrednjo vlogo ima CPE, ki izvaja program tako, da prevzema ukaze enega za drugim iz pomnilnika ter jih izvršuje. Ukaz praviloma opravi neko operacijo nad podatki, ki jim rečemo operandi. Operandi so lahko prav tako shranjeni v pomnilniku ali pa so prebrani iz vhodno-izhodnih naprav. Vhodno-izhodne naprave omogočajo komunikacijo CPE z okolico. Tipične vhodno-izhodne naprave so tipkovnica, zaslon, omrežna kartica, grafična kartica idr.</p>
+
+<p align="justify">CPE vsebuje:
+<ul align="justify">
+	<li><b>Registre</b>, v katerih lahko hrani operande s katerimi računa.</li>
+	<li><b>Aritmetično-logično enoto</b>, ki zna izvajati zahtevane aritmetične in logične operacije. </li>
+	<li><b>Kontrolno enoto</b>, ki nadzira delovanje CPE.</li>
+</ul>
+</p>
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+<!-- Right column start -->
+<h2>Programski števec</h2>
+
+<p align="justify">Kontrolna enota najprej prebere ukaz iz glavnega pomnilnika. Ukaz se v glavnem pomnilniku nahaja na naslovu, ki ga hrani <b>programski števec</b> (<i>ang. program counter, PC</i>). Programski števec je eden od registrov v centralni procesni enoti, ki ima zelo pomembno vlogo, da hrani naslov naslednjega ukaza, ki se naj izvede. Vsakič ko se prevzame ukaz iz pomnilnika, se vrednost programskega števca samodejno poveča za 1, kar običajno zapišemo kot: <b><i>PC = PC + 1</i></b>.</p>
+
+<div class="alert alert-danger" role="alert">
+<p align="justify">To pravilo je značilno za von Neumannovo arhitekturo in zagotavlja, da se ukazi jemljejo iz pomnilnika zaporedoma. Poleg tega pravilo zagotavlja zaporedno izvajanje ukazov, kot jih je programer zapisal v programu.</p>
+<p>
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#comment1"><span class="fa fa-check"></span> Komentar</button>
+</p>
 </div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div style="text-align: center">
 
-<img src="von-neumann-640.png" height="318" width="360" />
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
-
-Sestoji iz 3 sklopov: <b>centralne procesne enote</b> (CPE), <b>pomnilnika</b> ter <b>vhodno-izhodnih naprav</b>. Osrednjo vlogo ima CPE, ki izvaja program tako, da prevzema ukaze enega za drugim iz pomnilnika ter jih izvršuje. Ukaz praviloma opravi neko operacijo nad podatki, ki jim rečemo operandi. Operandi so lahko prav tako shranjeni v pomnilniku ali pa so prebrani iz vhodno-izhodnih naprav. Vhodno-izhodne naprave omogočajo komunikacijo CPE z okolico. Tipične vhodno-izhodne naprave so tipkovnica, zaslon, omrežna kartica, grafična kartica idr.
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><p align="justify">
-
-CPE vsebuje:
-
+<p align="justify">Izvajanje ukaza se v splošnem dogaja v več zaporednih korakih:
+<ol align="justify">
+	<li>Ko je ukaz dostavljen iz pomnilnika do kontrolne enote, ga le-ta začne dekodirati.</li>
+	<li>Dekodiranje ukaza je postopek, s katerim se iz ukaza ugotavlja, kakšna operacija naj se izvede v aritmetično-logični enoti in kje so operandi, potrebni za izvajanje ukaza.</li>
+	<li>Operandi so najpogosteje v registrih in, če jih tam ni, jih dobimo iz pomnilnika ali vhodno-izhodne enote.</li>
+	<li>Pripravljeni operandi se prenesejo na vhod aritmetično-logične enote, ki nad njimi izvede zahtevano operacijo.</li>
+	<li>V zadnjem koraku se rezultat operacije shrani bodisi v notranje registre, pomnilnik ali na vhodno-izhodno enoto.</li>
+</ol>
 </p>
 
-<div align="justify">
-
-<ul>
-
-	<li><b>Registre</b>, v katerih lahko hrani operande s katerimi računa.</li>
-
-	<li><b>Aritmetično-logično enoto</b>, ki zna izvajati zahtevane aritmetične in logične operacije. </li>
-
-	<li><b>Kontrolno enoto</b>, ki nadzira delovanje CPE.</li>
-
-</ul>
-
+<div class="alert alert-info" role="alert">
+<p align="justify">Dandanes pohitrimo izvajanje naših programov na računalnikih s tem, da jih izvajamo vzporedno. Sedaj, ko poznaš kako izgleda von Neumannova arhitektura in ko veš, kako izgleda CPE, ali si znaš zamisliti, kako doseči povzporejanje izvajanja programov?</p>
+<p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
+</p>
 </div>
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
 
-<p align="justify">
+			<!-- Page Pagination in Footer -->
+			<div class="col-md-12">
+				<center>
+				<ul class="pagination pagination-sm">
+					<li><a href="../1303/index.html" aria-label="Previous Unit"><span aria-hidden="true">&laquo;</span></a></li>
+					<li><a href="../1304/index1.html" aria-label="Previous Page"><span aria-hidden="true">&#x2039;</span></a></li>
+					<li><a href="../1304/index.html">242</a></li>
+					<li><a href="../1304/index1.html">243</a></li>
+					<li class="active"><a href="#">244</a></li>
+					<li><a href="../1304/index3.html">245</a></li>
+					<li><a href="../1304/index4.html">246</a></li>
+					<li><a href="../1304/index5.html">247</a></li>
+					<li><a href="../1304/index6.html">248</a></li>
+					<li><a href="../1304/index7.html">249</a></li>
+					<li><a href="../1304/index3.html" aria-label="Next Page"><span aria-hidden="true">&#x203A;</span></a></li>
+					<li><a href="../1305/index.html" aria-label="Next Unit"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+				</center>
+			</div>
 
-&nbsp;
+		</div>
+		<!-- /#page-content-wrapper -->
 
-</p></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<section class="page page-right">
-<!-- Samostojno besedilo --> 
-<h2>Programski števec</h2>  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
+	</div>
+	<!-- /#wrapper -->
 
-Kontrolna enota najprej prebere ukaz iz glavnega pomnilnika. Ukaz se v glavnem pomnilniku nahaja na naslovu, ki ga hrani <b>programski števec</b> (<i>ang. program counter, PC</i>).
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
 
-Programski števec je eden od registrov v centralni procesni enoti, ki 
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
 
-ima zelo pomembno vlogo, da hrani naslov naslednjega ukaza, ki se naj izvede. Vsakič ko se
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="../js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
 
-prevzame ukaz iz pomnilnika, se vrednost programskega števca samodejno poveča za 1, kar običajno zapišemo kot: <b><i>PC = PC + 1</i></b>.
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
 
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- casestudy - besedilo z gumbi --> 
-  <div class='wrapper'>
-<div class="box_dejstvo splosna_obvezna_znanja">
-    <span class="triangle triangle-red"></span>
-<div class="popupb">
-<p><div align="justify">
+	<!-- eXe Project -->
+	<script src="../js/exe/common.js"></script>
 
-To pravilo je značilno za von Neumannovo arhitekturo in zagotavlja, da se ukazi jemljejo iz pomnilnika zaporedoma. Poleg tega pravilo zagotavlja zaporedno izvajanje ukazov, kot jih je programer zapisal v programu.
+</body>
 
-</div></p><div id="viewq0b73g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b73g0" value="Komentar" id="btnenabledq0b73g0" onClick='showAnswer("q0b73g0",1,1)' /></div>
-<div id="hideq0b73g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b73g0" value="Skrij" onClick='showAnswer("q0b73g0",0,1)'/></div>
-<div id="sq0b73g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b73g0",0,1)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
-
-Včasih programer želi prekiniti zaporedno izvajanje ukazov (na primer pri uporabi zank ali pogojnih stavkov), a kako to zapovedati CPE v poglavju o ukazih.
-
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><style>
-
-ol#mylist {
-
-list-style: decimal inside !important;
-
-margin-left: 20px!important;
-
-}
-
-ol#mylist li {
-
-list-style: decimal !important;
-
-padding-bottom: 2px!important;
-
-}
-
-</style>
-
-<div align="justify">
-
-Izvajanje ukaza se v splošnem dogaja v več zaporednih korakih:
-
-<ol id="mylist">
-
-	<li>Ko je ukaz dostavljen iz pomnilnika do kontrolne enote, ga le-ta začne dekodirati.</li>
-
-	<li>Dekodiranje ukaza je postopek, s katerim se iz ukaza ugotavlja, kakšna operacija naj se izvede v aritmetično-logični enoti in kje so operandi, potrebni za izvajanje ukaza.</li>
-
-	<li>Operandi so najpogosteje v registrih in, če jih tam ni, jih dobimo iz pomnilnika ali vhodno-izhodne enote.</li>
-
-	<li>Pripravljeni operandi se prenesejo na vhod aritmetično-logične enote, ki nad njimi izvede zahtevano operacijo.</li>
-
-	<li>V zadnjem koraku se rezultat operacije shrani bodisi v notranje registre, pomnilnik ali na vhodno-izhodno enoto.</li>
-
-</ol>
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- casestudy - besedilo z gumbi --> 
-  <div class='wrapper'>
-<div class="box_aktivnost splosna_obvezna_znanja">
-      <span class="triangle triangle-blue"></span>
-<div class="popupb">
-<p><div align="justify">
-
-Dandanes pohitrimo izvajanje naših programov na računalnikih s tem, da jih izvajamo vzporedno. Sedaj, ko poznaš kako izgleda von Neumannova arhitektura in ko veš, kako izgleda CPE, ali si znaš zamisliti, kako doseči povzporejanje izvajanja programov?<br />
-
-</div></p><div id="viewq0b75g0" class="showall" style="display:inline;"><input type="button" class="btn-green" name="btnshowq0b75g0" value="Odgovor" id="btnenabledq0b75g0" onClick='showAnswer("q0b75g0",1,1)' /></div>
-<div id="hideq0b75g0" class="hideall" style="display:none;"><input type="button" class="btn-orange" name="btnshowq0b75g0" value="Skrij" onClick='showAnswer("q0b75g0",0,1)'/></div>
-<div id="sq0b75g0" class="feedback-content-top button-hover hideall" style=" display:none;">
-<div class="feedback-draggable">
-<div class="close" onclick='showAnswer("q0b75g0",0,1)'></div>
-</div>
-<div class="feedback-content-container"><p><div align="justify">
-
-Vzporedno izvajanje programa oziroma ukazov lahko dosežemo na dva osnovna načina. Prvi je, da hkrati uporabimo več CPE (večprocesorski ali večjedrni sistem), in drugi s cevovodnim izvajanjem ukazov. Slednje se dogaja danes v vsakem procesorju. Pri opisu izvajanja ukaza smo opredelili kot primer pet korakov. Če ponazorimo cevovodno izvajanje, slednje pomeni, da se najprej prične izvajati prvi korak prvega ukaza. Nato sledi izvajanje drugega koraka prvega ukaza, vendar se <b>hkrati </b>prične izvajati že tudi prvi korak naslednjega ukaza in tako naprej.<br />
-
-</div></p>
-</div></div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<div class="paging-left"><a href="index1.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index3.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">244/423</span></div></div>
-</body></html>
+</html>

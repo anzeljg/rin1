@@ -1,267 +1,260 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<!-- Created using eXeCute: http://exelearning.org -->
+<!DOCTYPE html>
+<html lang="sl">
+
 <head>
-<style type="text/css">
-@import url(../css/normalize.css);
-@import url(../css/main.css);
-@import url(../css/jquery-ui.css);
-@import url(../css/nav.css);
-@import url(../css/jsxgraph.css);
-@import url(../css/kalkulator.css);
-@import url(../css/lightbox.css);
-@import url(../css/jplayer.css);
-</style><title> Elektronska pošta </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/eum.js"></script>
-<script type="text/javascript" src="../js/commoneum.js"></script>
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.js"></script>
-<script type="text/javascript" src="../js/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../js/jsxgraphcore_095.js"></script>
-<script type="text/javascript" src="../js/options.js"></script>
-<script type="text/javascript" src="../js/kalkulator.js"></script>
-<script type="text/javascript" src="../js/jquery-exe.js"></script>
-<script type="text/javascript" src="../js/jquery-tools.js"></script>
-<script type="text/javascript" src="../js/gui/gui_core.js"></script>
-<script type="text/javascript" src="../js/gui/gui_help.js"></script>
-<script type="text/javascript" src="../js/lightbox.js"></script>
-<script type="text/javascript" src="../js/createjs.js"></script>
-<script type="text/javascript" src="../js/movieclip.js"></script>
-<script type="text/javascript" src="../js/povezovanje.js"></script>
-<script type="text/javascript" src="../js/underscore.js"></script>
-<script type="text/javascript" src="../js/transit.js"></script>
-<script type="text/javascript" src="../js/cloze.js"></script>
-<script type="text/javascript" src="../js/JSmol.js"></script>
-<script type="text/javascript" src="../js/jplayer.js"></script>
-<script type="text/x-mathjax-config">  
-MathJax.Hub.Config({
-   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
-    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
-    config:["TeX-AMS_HTML.js"]});
-</script>
-<script type="text/javascript" src="../js/MathJax/MathJax.js"></script><script>
-$(document).keydown(function(e){
-if (e.keyCode == 37) { 
- window.location = "index1.html";
-  }if (e.keyCode == 39) {
- window.location = "index3.html";
-  }});
-</script><link rel="shortcut icon" href="../favicon.ico" />
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../favicon.ico" />
+
+	<title>Elektronska pošta</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- vis.js - browser based visualization library -->
+	<link href="../css/vis.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-    <body>
-<input type="hidden" name="elo-language" id="elo-language" value="sl"/>
-<input type="hidden" name="elo-id" id="elo-id" value="1"/>
-<!--navigacija-->
-    <nav id="nav">
-        <ul class="main">
-            <li class="shelf"><a href="../../index.html">Knji&#382;na polica</a></li>
-            <li class="topics"><a href="#">Kazalo</a></li>
-            <li class="pages"><a href="#">Strani</a></li>
-        </ul>
-    <ul>
-    <li id="textbook-title"><span>Storitve interneta</span></li>
-    </ul>
-    <ul class="meta">
-            <li class="cc"><a href="#" onClick='showPopup ("show_cclicenca", "", "", "", "", 1 , "div.feedback-draggable",50);'>Licenca</a></li>
-            <li class="print"><a href="../1901/index.html">Kolofon</a></li>
-            <li class="edit"><a href="../1901/index1.html">Viri</a></li>
-            <li class="download"><a href="http://github.com/anzeljg/rin1/archive/v1.03.zip">Prenos</a></li>
-            <li class="speech"><a href="mailto:eUcbenik@lusy.fri.uni-lj.si">Komentarji</a></li>
-        </ul>
-    </nav>
-    <div id="show_cclicenca" class="feedback-content-top button-hover hideall" style=" display:none; width:520px;"><div class="feedback-draggable">Licenca<div class="close" onclick="hidePopup()"></div></div><div class="feedback-content-container">
-     To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:<br><br><b>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji</b>.<br> <br>Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmno&#382;evati, distribuirati, javno priob&#269;evati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. &#268;e uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.<br>
-     <img src="../img/by-nc-sa.eu.png" height="30px">
-    </div></div>
-<section id="nav-tabbed">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul class="accordion">
-      <li class="on" id="menu001"><a href="#">Uvod</a>
-      <ul id="submenu001" class="sub-menu">
-        <li class="on"><a href="../1101/index.html" id="unit1101">O učbeniku <span class="page_numbers">1</span></a></li>
-        <li class="on"><a href="../1102/index.html" id="unit1102">Informatika okoli nas <span class="page_numbers">4</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu002"><a href="#">Programiranje in algoritmi</a>
-      <ul id="submenu002" class="sub-menu">
-        <li class="on"><a href="../1201/index.html" id="unit1201">Osnovni koncepti programiranja <span class="page_numbers">13</span></a></li>
-        <li class="on"><a href="../1202/index.html" id="unit1202">Izdelava samostojnih programov in pogojni stavki <span class="page_numbers">25</span></a></li>
-        <li class="on"><a href="../1203/index.html" id="unit1203">Zanke <span class="page_numbers">43</span></a></li>
-        <li class="on"><a href="../1204/index.html" id="unit1204">Tabele <span class="page_numbers">55</span></a></li>
-        <li class="on"><a href="../1205/index.html" id="unit1205">Funkcije <span class="page_numbers">71</span></a></li>
-        <li class="on"><a href="../1206/index.html" id="unit1206">Nizi <span class="page_numbers">89</span></a></li>
-        <li class="on"><a href="../1207/index.html" id="unit1207">Osnovni pojmi algoritmike <span class="page_numbers">101</span></a></li>
-        <li class="on"><a href="../1208/index.html" id="unit1208">Poraba časa in časovna zahtevnost <span class="page_numbers">117</span></a></li>
-        <li class="on"><a href="../1209/index.html" id="unit1209">Zaporedje <span class="page_numbers">136</span></a></li>
-        <li class="on"><a href="../1210/index.html" id="unit1210">Urejanje <span class="page_numbers">159</span></a></li>
-        <li class="on"><a href="../1211/index.html" id="unit1211">Množica <span class="page_numbers">176</span></a></li>
-        <li class="on"><a href="../1212/index.html" id="unit1212">Slovar <span class="page_numbers">197</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu003"><a href="#">Sistemi</a>
-      <ul id="submenu003" class="sub-menu">
-        <li class="on"><a href="../1301/index.html" id="unit1301">Strojna oprema, programska oprema in OS <span class="page_numbers">211</span></a></li>
-        <li class="on"><a href="../1302/index.html" id="unit1302">Bitna predstavitev <span class="page_numbers">225</span></a></li>
-        <li class="on"><a href="../1303/index.html" id="unit1303">Ukazi <span class="page_numbers">234</span></a></li>
-        <li class="on"><a href="../1304/index.html" id="unit1304">Arhitektura računalnika <span class="page_numbers">242</span></a></li>
-        <li class="on"><a href="../1305/index.html" id="unit1305">Pomnilnik <span class="page_numbers">250</span></a></li>
-        <li class="on"><a href="../1306/index.html" id="unit1306">Operacijski sistem <span class="page_numbers">257</span></a></li>
-        <li class="on"><a href="../1307/index.html" id="unit1307">Datoteke in organizacija podatkov <span class="page_numbers">271</span></a></li>
-        <li class="on"><a href="../1308/index.html" id="unit1308">Uporabniki in varnost <span class="page_numbers">281</span></a></li>
-        <li class="on"><a href="../1309/index.html" id="unit1309">Procesi <span class="page_numbers">292</span></a></li>
-        <li class="on"><a href="../1310/index.html" id="unit1310">Vzporednost <span class="page_numbers">303</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu004"><a href="#">Omrežja in porazdeljeni sistemi</a>
-      <ul class="on" id="submenu004" class="sub-menu">
-        <li class="on"><a href="../1401/index.html" id="unit1401">Utemeljitev pomena omrežij in komuniciranja <span class="page_numbers">311</span></a></li>
-        <li class="on"><a href="../1402/index.html" id="unit1402">Od električnega signala do objave slike na Facebooku <span class="page_numbers">318</span></a></li>
-        <li class="on"><a href="../1403/index.html" id="unit1403">Omrežne naprave in njihovo povezovanje <span class="page_numbers">326</span></a></li>
-        <li class="on"><a href="../1404/index.html" id="unit1404">Naslovi in naslavljanje v internetu <span class="page_numbers">337</span></a></li>
-        <li class="on"><a href="../1405/index.html" id="unit1405" style="color: black; font-weight: 600;">Storitve interneta <span class="page_numbers">345</span></a></li>
-        <li class="on"><a href="../1406/index.html" id="unit1406">Svetovni splet <span class="page_numbers">354</span></a></li>
-        <li class="on"><a href="../1407/index.html" id="unit1407">Aplikacijske storitve <span class="page_numbers">364</span></a></li>
-        <li class="on"><a href="../1408/index.html" id="unit1408">Nestandardne storitve <span class="page_numbers">372</span></a></li>
-        <li class="on"><a href="../1409/index.html" id="unit1409">Varnost, zanesljivost in zaščita <span class="page_numbers">380</span></a></li>
-      </ul>
-      </li>
-      <li class="on" id="menu005"><a href="#">Informatika in družba</a>
-      <ul id="submenu005" class="sub-menu">
-        <li class="on"><a href="../1501/index.html" id="unit1501">Družba in razvoj informacijskih tehnologij <span class="page_numbers">388</span></a></li>
-        <li class="on"><a href="../1502/index.html" id="unit1502">Upravljanje interneta <span class="page_numbers">397</span></a></li>
-        <li class="on"><a href="../1503/index.html" id="unit1503">Vplivi informacijskih tehnologij na posameznika <span class="page_numbers">403</span></a></li>
-      </ul>
-      </li>
-    </ul>
-  </nav></section>
-</section>
 
-<section id="nav-pages">
-  <nav class="tabs"></nav>
-  <section class="content"><nav>
-    <ul>
-      <li><a href="index.html" >Storitve interneta <span class="page_numbers">345</span></a></li>
-      <li><a href="index1.html" >Storitve interneta <span class="page_numbers">346</span></a></li>
-      <li class="on"><a href="#">Elektronska pošta <span class="page_numbers">347</span></a></li>
-      <li><a href="index3.html" >Elektronska pošta in varnost <span class="page_numbers">348</span></a></li>
-      <li><a href="index4.html" >Sistem domenskih imen - DNS <span class="page_numbers">349</span></a></li>
-      <li><a href="index5.html" >Sistem domenskih imen - DNS <span class="page_numbers">350</span></a></li>
-      <li><a href="index6.html" >Povzetek <span class="page_numbers">351</span></a></li>
-      <li><a href="index7.html" >Naloge <span class="page_numbers">352</span></a></li>
-      <li><a href="index8.html" >Naloge <span class="page_numbers">353</span></a></li>
-    </ul>
-  </nav></section>
-</section>
+<body>
 
-<div class="container" id="nodeDecoration">
-            <nav class="breadcrumbs">
-                <ul>
-                <li style="float:left;"><span class="unit-path">Storitve interneta | Elektronska pošta</span></a></li> 
-        <li>&nbsp;</li>
-            </ul>
-            </nav>
+	<div id="wrapper">
 
-<section class="page page-left">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu1" role="button" aria-expanded="false">Uvod</a>
+				  <div id="menu1" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1101/index.html">O učbeniku</a></li>
+					<li><a href="../1102/index.html">Informatika okoli nas</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu2" role="button" aria-expanded="false">Programiranje in algoritmi</a>
+				  <div id="menu2" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1201/index.html">Osnovni koncepti programiranja</a></li>
+					<li><a href="../1202/index.html">Izdelava samostojnih programov in pogojni stavki</a></li>
+					<li><a href="../1203/index.html">Zanke</a></li>
+					<li><a href="../1204/index.html">Tabele</a></li>
+					<li><a href="../1205/index.html">Funkcije</a></li>
+					<li><a href="../1206/index.html">Nizi</a></li>
+					<li><a href="../1207/index.html">Osnovni pojmi algoritmike</a></li>
+					<li><a href="../1208/index.html">Poraba časa in časovna zahtevnost</a></li>
+					<li><a href="../1209/index.html">Zaporedje</a></li>
+					<li><a href="../1210/index.html">Urejanje</a></li>
+					<li><a href="../1211/index.html">Množica</a></li>
+					<li><a href="../1212/index.html">Slovar</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu3" role="button" aria-expanded="false">Sistemi</a>
+				  <div id="menu3" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1301/index.html">Strojna oprema, programska oprema in OS</a></li>
+					<li><a href="../1302/index.html">Bitna predstavitev</a></li>
+					<li><a href="../1303/index.html">Ukazi</a></li>
+					<li><a href="../1304/index.html">Arhitektura računalnika</a></li>
+					<li><a href="../1305/index.html">Pomnilnik</a></li>
+					<li><a href="../1306/index.html">Operacijski sistem</a></li>
+					<li><a href="../1307/index.html">Datoteke in organizacija podatkov</a></li>
+					<li><a href="../1308/index.html">Uporabniki in varnost</a></li>
+					<li><a href="../1309/index.html">Procesi</a></li>
+					<li><a href="../1310/index.html">Vzporednost</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu4" role="button" aria-expanded="false">Omrežja in porazdeljeni sistemi</a>
+				  <div id="menu4" class="collapse in">
+					<ul class="sidebar-subnav">
+					<li><a href="../1401/index.html">Utemeljitev pomena omrežij in komuniciranja</a></li>
+					<li><a href="../1402/index.html">Od električnega signala do objave slike na Facebooku</a></li>
+					<li><a href="../1403/index.html">Omrežne naprave in njihovo povezovanje</a></li>
+					<li><a href="../1404/index.html">Naslovi in naslavljanje v internetu</a></li>
+					<li class="active"><a href="../1405/index.html">Storitve interneta</a></li>
+					<li><a href="../1406/index.html">Svetovni splet</a></li>
+					<li><a href="../1407/index.html">Aplikacijske storitve</a></li>
+					<li><a href="../1408/index.html">Nestandardne storitve</a></li>
+					<li><a href="../1409/index.html">Varnost, zanesljivost in zaščita</a></li>
+					</ul>
+				  </div>
+				</li>
+				<li>
+				  <a href="#" data-toggle="collapse" data-target="#menu5" role="button" aria-expanded="false">Informatika in družba</a>
+				  <div id="menu5" class="collapse">
+					<ul class="sidebar-subnav">
+					<li><a href="../1501/index.html">Družba in razvoj informacijskih tehnologij</a></li>
+					<li><a href="../1502/index.html">Upravljanje interneta</a></li>
+					<li><a href="../1503/index.html">Vplivi informacijskih tehnologij na posameznika</a></li>
+					</ul>
+				  </div>
+				</li>
+			</ul>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="../index.html">Računalništvo in informatika 1</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#menu-toggle" id="menu-toggle" title="Pokaži/Skrij kazalo"><span class="fa fa-file-text-o"></span> Kazalo</a></li>
+					<li><a href="#license" title="Licenca" data-toggle="modal" data-target="#license"><span class="fa fa-creative-commons"></span> Licenca</a></li>
+					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
+					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
+					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		</nav>
+
+		<!-- Modal (popup) window: License -->
+		<div id="license" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Catalogue -->
+		<div id="catalogue" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
+					</div>
+					<div class="modal-body">
+						CIP - Kataložni zapis o publikaciji<br>
+						Narodna in univerzitetna knjižnica, Ljubljana<br>
+						<br>
+						659.2:004(075.3)(0.034.2)<br>
+						004(075.3)(0.034.2)<br>
+						<br>
+						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
+						<br>
+						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
+						<br>
+						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
+						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
+						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
+						<br>
+						1. Anželj, Gregor<br>
+						282126848<br>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Protokol -->
+		<div id="protokol" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Protokol</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify">Predstavljaj si, da te prijatelj pokliče po telefonu. Pritisneš tipko za sprejem klica, a se ne oglasiš. Prijatelj pričakuje, da se boš po vzpostavitvi zveze oglasil, zato čaka. Šele po nekem času bo verjetno kaj rekel. In šele potem, če mu boš odgovoril, bo stekel pogovor.</p>
+						<p align="justify">Takim napisanim ali nenapisanim pravilom, kako poteka nek proces (v tem primeru telefonski klic) pravimo protokoli.</p>
+						<p align="justify">Pri telefonskem klicu velja nenapisano pravilo, da se prvi oglasi tisti, ki prejme klic. Ko se oglasi, mu klicatelj sporoči namen klica. Potem poteka pogovor, ki se na koncu zaključi s pozdravom. Oba, klicatelj in klicani vesta, da se pogovor lahko zaključi. To je protokol telefoniranja.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+<!-- Left column start -->
 <h1>Elektronska pošta</h1>
- <div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
-
-Elektronska pošta je bila ena prvih storitev interneta. Hitrost, njena prednost pred klasično pošto je navdušila uporabnike. Obenem pa je ohranila pomembno prednost klasične pošte: sporočilo uporabnika počaka, dokler ga ne prebere. V začetku so sporočila vsebovale le znake, pripenjanje slik in multimedijskih izdelkov se je razmahnilo šele mnogo kasneje...<br />
-
-<br />
-
-Sistem elektronske pošte temelji na delovanju poštnih strežnikov, kjer se zbirajo sporočila. Uporabniki se z računalnikom priključimo na poštni strežnik in preberemo ali napišemo in odpošljemo sporočila.<br />
-
-<br />
-
-Poglejmo si delovanje elektronske pošte na primeru dopisovanja Roka in Ane. Rok napiše in <a href="#" onclick="path([10, 1, 2])">pošlje</a> Ani sporočilo. Program na njegovem računalniku uporabi <b>SMTP</b> (<i>ang. Simple Mail Transfer Protocol</i>) <a href="#" onclick="showPopup('protokol', '', '', '', '', 1 , 'div.feedback-draggable', 50);">protokol</a> za povezavo s strežnikom odhodne pošte (SMTP strežnik). Strežnik pošlje pošto preko interneta do Aninega poštnega strežnika. Pošta na strežniku počaka, dokler jo Anin program za elektronsko pošto ne <a href="#" onclick="path([20])">prebere</a> s <b>POP3</b> (<i>ang. Post Office Protocol V.3</i>) ali <b>IMAP</b> (<i>ang. Internet Mail Access Protocol</i>) protokolom in prikaže na zaslonu. Ko Ana odgovori na prejeto pošto, se proces ponovi v obratni smeri.
-
-</div>
-
-<div id="protokol" class="feedback-content-top button-hover hideall" style="display: none; width: 520px">
-
-<div class="feedback-draggable">
-
-Protokol
-
-<div class="close" onclick="hidePopup()">
-
-</div>
-
-</div>
-
-<div class="feedback-content-container">
-
-<div align="justify">
-
-Predstavljaj si, da te prijatelj pokliče po telefonu. Pritisneš tipko za sprejem klica, a se ne oglasiš. Prijatelj pričakuje, da se boš po vzpostavitvi zveze oglasil, zato čaka. Šele po nekem času bo verjetno kaj rekel. In šele potem, če mu boš odgovoril, bo stekel pogovor.<br />
-
-<br />
-
-Takim napisanim ali nenapisanim pravilom, kako poteka nek proces (v tem primeru telefonski klic) pravimo protokoli.<br />
-
-<br />
-
  
+<p align="justify">Elektronska pošta je bila ena prvih storitev interneta. Hitrost, njena prednost pred klasično pošto je navdušila uporabnike. Obenem pa je ohranila pomembno prednost klasične pošte: sporočilo uporabnika počaka, dokler ga ne prebere. V začetku so sporočila vsebovale le znake, pripenjanje slik in multimedijskih izdelkov se je razmahnilo šele mnogo kasneje...</p>
 
-Pri telefonskem klicu velja nenapisano pravilo, da se prvi oglasi tisti, ki prejme klic. Ko se oglasi, mu klicatelj sporoči namen klica. Potem poteka pogovor, ki se na koncu zaključi s pozdravom. Oba, klicatelj in klicani vesta, da se pogovor lahko zaključi. To je protokol telefoniranja.
+<p align="justify">Sistem elektronske pošte temelji na delovanju poštnih strežnikov, kjer se zbirajo sporočila. Uporabniki se z računalnikom priključimo na poštni strežnik in preberemo ali napišemo in odpošljemo sporočila.</p>
 
-</div>
+<p align="justify">Poglejmo si delovanje elektronske pošte na primeru dopisovanja Roka in Ane. Rok napiše in <a href="#" onclick="path([10, 1, 2])">pošlje</a> Ani sporočilo. Program na njegovem računalniku uporabi <b>SMTP</b> (<i>ang. Simple Mail Transfer Protocol</i>) <a href="#" data-toggle="modal" data-target="#protokol">protokol</a> za povezavo s strežnikom odhodne pošte (SMTP strežnik). Strežnik pošlje pošto preko interneta do Aninega poštnega strežnika. Pošta na strežniku počaka, dokler jo Anin program za elektronsko pošto ne <a href="#" onclick="path([20])">prebere</a> s <b>POP3</b> (<i>ang. Post Office Protocol V.3</i>) ali <b>IMAP</b> (<i>ang. Internet Mail Access Protocol</i>) protokolom in prikaže na zaslonu. Ko Ana odgovori na prejeto pošto, se proces ponovi v obratni smeri.</p>
 
-</div>
+<p align="justify">SMTP protokol skrbi za prenos elektronske pošte od pošiljateljevega računalnika do prejemnikovega strežnika. Včasih je tudi za pošiljanje elektronske pošte (za povezavo naprave in SMTP strežnika) potrebno uporabniško ime in geslo. Že samo ime pove, da je to enostaven protokol. Zaradi svoje enostavnosti ima hudo omejitev. Prenaša lahko samo znake, zapisane v 7-bitni ASCII kodi. Kako pa potem lahko prenašamo z elektronsko pošto tudi znake č, ž, š, slike, zvok, video, programe.</p>
 
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
+<p align="justify">Zato je bil razvit dodatek <b>MIME</b> (<i>ang. Multipurpose Internet Mail Extension</i>), ki na pošiljateljevi strani pretvori podatke, ki niso v ASCII obliki v 7-bitno ASCII obliko in na prejemnikovi strani nazaj v originalno obliko.</p>
+<!-- Left column end -->
+					</div>
+					<div class="col-md-6">
+						<br />
+<!-- Right column start -->
+<p align="justify">POP3 protokol je namenjen prenosu elektronske pošte iz strežnika na prejemnikov računalnik. Z uporabo uporabniškega imena in gesla dostopa do strežnika in prenese na računalnik vso prispelo pošto. Protokol ima kar nekaj pomanjkljivosti: ne zna prenesti samo naslovov sporočil, ne moremo organizirati pošte na strežniku, ne moremo preveriti vsebine pred prenosom.</p>
 
-SMTP protokol skrbi za prenos elektronske pošte od pošiljateljevega računalnika do prejemnikovega strežnika. Včasih je tudi za pošiljanje elektronske pošte (za povezavo naprave in SMTP strežnika) potrebno uporabniško ime in geslo. Že samo ime pove, da je to enostaven protokol. Zaradi svoje enostavnosti ima hudo omejitev. Prenaša lahko samo znake, zapisane v 7-bitni ASCII kodi. Kako pa potem lahko prenašamo z elektronsko pošto tudi znake č, ž, š, slike, zvok, video, programe.<br />
+<p align="justify">Zato se vedno bolj uporablja IMAP protokol, ki te pomanjkljivosti odpravlja in omogoča tudi rokovanje s skladiščem pošte na strežniku.</p>
 
-<br />
-
-Zato je bil razvit dodatek <b>MIME</b> (<i>ang. Multipurpose Internet Mail Extension</i>), ki na pošiljateljevi strani pretvori podatke, ki niso v ASCII obliki v 7-bitno ASCII obliko in na prejemnikovi strani nazaj v originalno obliko.
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<section class="page page-right">
-<!-- Samostojno besedilo --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <p><div align="justify">
-
-POP3 protokol je namenjen prenosu elektronske pošte iz strežnika na prejemnikov računalnik. Z uporabo uporabniškega imena in gesla dostopa do strežnika in prenese na računalnik vso prispelo pošto. Protokol ima kar nekaj pomanjkljivosti: ne zna prenesti samo naslovov sporočil, ne moremo organizirati pošte na strežniku, ne moremo preveriti vsebine pred prenosom.<br />
-
-<br />
-
-Zato se vedno bolj uporablja IMAP protokol, ki te pomanjkljivosti odpravlja in omogoča tudi rokovanje s skladiščem pošte na strežniku.
-
-</div></p>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div>
- <!-- applet --> 
-  <div class='wrapper'>
-<div class="splosna_obvezna_znanja">
- <div class='interaktivnaNaloga'>
-<script type="text/javascript" src="vis.min.js"></script>
-<link href="vis.min.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 #mynetwork {
   width: 500px;
   height: 400px;
   border: 1px solid #D6D9D8;
   background-color: #D6D9D8;
+  overflow: hidden;
 }
 span.network-manipulationUI.edit,
 span.network-manipulationUI.delete {
@@ -271,20 +264,88 @@ div.network-seperatorLine {
   background-color: transparent;
 }
 </style>
+<div id="mynetwork"></div>
+<div style="width:500px;margin-top:4px">
+	<span style="float:left">
+		Ana: 
+		<button id="send_ana" class="btn btn-primary" onclick="path([20, 2, 1])">Pošlji</button>
+		<button id="recieve_ana" class="btn btn-primary" onclick="path([20])">Prejmi</button>
+	</span>
+	<span style="float:right">
+		Rok: 
+		<button id="send_rok" class="btn btn-primary" onclick="path([10, 1, 2])">Pošlji</button>
+		<button id="recieve_rok" class="btn btn-primary" onclick="path([10])">Prejmi</button>
+	</span>
+</div>
+<!-- Right column end -->
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Pagination in Footer -->
+			<div class="col-md-12">
+				<center>
+				<ul class="pagination pagination-sm">
+					<li><a href="../1404/index.html" aria-label="Previous Unit"><span aria-hidden="true">&laquo;</span></a></li>
+					<li><a href="../1405/index1.html" aria-label="Previous Page"><span aria-hidden="true">&#x2039;</span></a></li>
+					<li><a href="../1405/index.html">345</a></li>
+					<li><a href="../1405/index1.html">346</a></li>
+					<li class="active"><a href="#">347</a></li>
+					<li><a href="../1405/index3.html">348</a></li>
+					<li><a href="../1405/index4.html">349</a></li>
+					<li><a href="../1405/index5.html">350</a></li>
+					<li><a href="../1405/index6.html">351</a></li>
+					<li><a href="../1405/index7.html">352</a></li>
+					<li><a href="../1405/index8.html">353</a></li>
+					<li><a href="../1405/index3.html" aria-label="Next Page"><span aria-hidden="true">&#x203A;</span></a></li>
+					<li><a href="../1406/index.html" aria-label="Next Unit"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+				</center>
+			</div>
+
+		</div>
+		<!-- /#page-content-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- rPage: Highly responsive pagination for Bootstrap -->
+	<script src="../js/responsive-paginate.js"></script>
+	<script>
+	$(document).ready(function () {
+		$(".pagination").rPage();
+	});
+	</script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+	});
+	</script>
+
+	<!-- vis.js - browser based visualization library -->
+	<script src="../js/vis/vis.min.js"></script>
 
 <script type="text/javascript">
   var LENGTH_MAIN = 150;
   var LENGTH_SUB = 50;
-
   var nodes = new vis.DataSet();
   var edges = new vis.DataSet();
   var network;
   var nodeData = [
-    {id: 0, label: 'Internet', image: 'internet.png', shape: 'image'},
-    {id: 1, label: '\nE-poštni\nstrežnik', image: 'server_mail.png', shape: 'image'},
-    {id: 2, label: '\nE-poštni\nstrežnik', image: 'server_mail.png', shape: 'image'},
-    {id: 10, label: 'Rok', image: 'computer.png', shape: 'image'},
-    {id: 20, label: 'Ana', image: 'computer.png', shape: 'image'}
+    {id: 0, label: 'Internet', image: 'img/internet.png', shape: 'image'},
+    {id: 1, label: '\nE-poštni\nstrežnik', image: 'img/server_mail.png', shape: 'image'},
+    {id: 2, label: '\nE-poštni\nstrežnik', image: 'img/server_mail.png', shape: 'image'},
+    {id: 10, label: 'Rok', image: 'img/computer.png', shape: 'image'},
+    {id: 20, label: 'Ana', image: 'img/computer.png', shape: 'image'}
   ];
   var edgeData = [
     {id: 1, from: 0, to: 1, length: LENGTH_SUB, width: 2},
@@ -293,7 +354,6 @@ div.network-seperatorLine {
     {id: 20, from: 2, to: 20, length: LENGTH_SUB, width: 1}
   ];
   window.onload = function() { draw(nodes, edges); }
-
   // Called when the Visualization API is loaded.
   function draw() {
     // create a network
@@ -315,7 +375,6 @@ div.network-seperatorLine {
     };
     network = new vis.Network(container, data, options);
   }
-
   function path(links) {
 	// Gradually recolor all edges in a path
 	var i = 0;
@@ -333,22 +392,6 @@ div.network-seperatorLine {
   }
 </script>
 
-<div id="mynetwork"></div>
-<div>
-<span style="float:left">
-Ana: 
-<button id="send_ana" class="btn-blue" onclick="path([20, 2, 1])">Pošlji</button>
-<button id="recieve_ana" class="btn-blue" onclick="path([20])">Prejmi</button>
-</span>
-<span style="float:right">
-Rok: 
-<button id="send_rok" class="btn-blue" onclick="path([10, 1, 2])">Pošlji</button>
-<button id="recieve_rok" class="btn-blue" onclick="path([10])">Prejmi</button>
-</span>
-</div>
-</div>
-</div>
-</div>
-<div style="clear:both;height:1px;overflow:hidden;"></div></section>
-<div class="paging-left"><a href="index1.html"><span id="a">&lt;</span><span id="b">NAZAJ</span></a></div><div class="paging-right"><a href="index3.html"><span id="a">&gt;</span><span id="b">NAPREJ</span></a><span id="n">347/423</span></div></div>
-</body></html>
+</body>
+
+</html>
