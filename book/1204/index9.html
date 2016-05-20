@@ -133,7 +133,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.01.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -235,8 +235,7 @@ print(tabela)
 					</div>
 					<div class="modal-body">
 <pre>
-tabela = [[j for j in range(1, i+1)]
-           for i in range(1, 11)]
+tabela = [[j for j in range(1, i+1)] for i in range(1, 11)]
 print(tabela)
 </pre>
 					</div>
@@ -279,11 +278,13 @@ for <i>števec</i> in <i>obseg</i>:
 <textarea id="code"># Tabela, sestavljena iz desetih elementov 3
 tabela = [3 for i in range(10)]
 print(tabela)
+
 # Tabela z elementi 1, 2, ... , 10
 # Spremenljivka i potuje od 0 do 9, zato ji, ko
 # tvorimo posamezne elemente, prištejemo 1.
 tabela = [i + 1 for i in range(10)]
 print(tabela)
+
 # Tabela s prvimi desetimi večkratniki števila 3
 tabela = [i for i in range(3, 31) if i % 3 == 0]
 # ali (učinkoviteje)
@@ -320,7 +321,7 @@ print(tabela)</textarea>
 </p>
 <p align="justify">Če se ti naloga zdi pretežka, poskusi najprej zgraditi takšno tabelo z zanko in funkcijo <code>append</code>.</p>
 <p>
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution2"><span class="fa fa-check"></span> Rešitev</button>
 </p>
 </div>
 <!-- Right column end -->

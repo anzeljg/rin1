@@ -133,7 +133,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.01.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -233,18 +233,21 @@
   for d in range(danOd, danDo + 1):
     vsota += meritve[d]
   print(d, vsota / (danDo - danOd + 1))
+
 # Preberimo vhodne podatke
 n = int(input("Vnesi število dni: "))
 meritve = []
 for i in range(n):
   t = int(input("Vnesi temperaturo: "))
   meritve.append(t)
+
 # Poiščimo dan z najvišjo temperaturo.
 naj = 0
 for d in range(n):
   if meritve[d] > meritve[naj]: naj = d
 # Izpišimo ga, kot zahteva besedilo naloge.
 Izpisi()
+
 # Poiščimo dan z najnižjo temperaturo.
 naj = 0
 for d in range(n):

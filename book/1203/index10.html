@@ -133,7 +133,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.01.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -284,6 +284,7 @@ for n in range(2, 5001):
             break
     if not jePrastevilo:
         continue
+
     # ali vsebuje tri enice?
     nn = n;
     stEnic = 0
@@ -293,6 +294,7 @@ for n in range(2, 5001):
         nn = nn // 10
     if stEnic &lt; 3:
         continue
+
     # ali je del pitagorejske trojice?
     pitagorejskaTrojica = False
     for a in range(2, n // 2):
@@ -302,6 +304,7 @@ for n in range(2, 5001):
             break
     if not pitagorejskaTrojica:
         continue
+
     # izpis ustreznega števila
     print(n)
 </pre>

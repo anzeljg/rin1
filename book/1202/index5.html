@@ -133,7 +133,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.01.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -242,11 +242,13 @@ uraZacetka = int(input('Vnesi uro začetka: '))
 minZacetka = int(input('Vnesi minuto začetka: '))
 uraKonca = int(input('Vnesi uro konca: '))
 minKonca = int(input('Vnesi minuto konca: '))
+
 # izračunamo porabo časa v urah.
 razlikaUr = uraKonca - uraZacetka
 razlikaMin = minKonca - minZacetka
 porabaCasaVMin = 60 * razlikaUr + razlikaMin
 porabaCasaVUrah = porabaCasaVMin / 60.0
+
 # izračunamo in izpišemo povprečno hitrost v km/h.
 povprecnaHitrost = pot / porabaCasaVUrah
 izpis = 'Vozil(a) si s povprečno hitrostjo '
@@ -384,7 +386,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   mode: "python",
   theme: "mbo"
 });
-editor.setSize('100%', 240);
+editor.setSize('100%', 260);
 </script>
 
 </body>

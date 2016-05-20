@@ -133,7 +133,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.01.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -268,6 +268,7 @@
     if c == ')': vOklepaju = False
     if not vOklepaju: s += c
   return t
+
 # primer a
 a = PobrisiOklepaje("ena(dve)tri(stiri) pet")
 print(a)
@@ -276,11 +277,11 @@ b = PobrisiOklepaje("ena(dve(tri)stiri)pet")
 print(b)</textarea>
 </p>
 <p>
-<a href="#" class="btn btn-primary" onclick="runit2()"><span class="fa fa-play"></span> Izvedi</a>
-<a href="#" class="btn btn-primary" onclick="clearit2()">Počisti</a>
-<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#hint1"><span class="fa fa-question"></span> Namig</a>
-<a href="#" class="btn btn-primary" onclick="solveit2a()"><span class="fa fa-check"></span> Rešitev (a)</a>
-<a href="#" class="btn btn-primary" onclick="solveit2b()"><span class="fa fa-check"></span> Rešitev (b)</a>
+<a href="#" class="btn btn-info" onclick="runit2()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-info" onclick="clearit2()">Počisti</a>
+<a href="#" class="btn btn-info" data-toggle="modal" data-target="#hint1"><span class="fa fa-question"></span> Namig</a>
+<a href="#" class="btn btn-info" onclick="solveit2a()"><span class="fa fa-check"></span> Rešitev (a)</a>
+<a href="#" class="btn btn-info" onclick="solveit2b()"><span class="fa fa-check"></span> Rešitev (b)</a>
 </p>
 </form>
 </div>
@@ -324,13 +325,14 @@ dvanajst
   for s in t:
     print(" " * (len(s) - dolzina))
     print(t)
+
 Izpisi(["sest", "dvanajst", "sedem", "tri"])</textarea>
 </p>
 <p>
-<a href="#" class="btn btn-primary" onclick="runit3()"><span class="fa fa-play"></span> Izvedi</a>
-<a href="#" class="btn btn-primary" onclick="clearit3()">Počisti</a>
-<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#hint2"><span class="fa fa-question"></span> Namig</a>
-<a href="#" class="btn btn-primary" onclick="solveit3()"><span class="fa fa-check"></span> Rešitev</a>
+<a href="#" class="btn btn-info" onclick="runit3()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-info" onclick="clearit3()">Počisti</a>
+<a href="#" class="btn btn-info" data-toggle="modal" data-target="#hint2"><span class="fa fa-question"></span> Namig</a>
+<a href="#" class="btn btn-info" onclick="solveit3()"><span class="fa fa-check"></span> Rešitev</a>
 </p>
 </form>
 </div>

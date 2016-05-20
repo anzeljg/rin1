@@ -133,7 +133,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.01.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -288,17 +288,20 @@
 <form>
 <p>
 <textarea id="code">import sklad as sk
+
 # Vrne True, če so oklepaji v podanem nizu
 # zaključeni in pravilno gnezdeni.
 # Sicer vrne False.
 def Oklepaji(niz):
   sklad = sk.Ustvari()
+
   for znakIzNiza in niz:
     if (znakIzNiza == '(' or
         znakIzNiza == '[' or
         znakIzNiza == '{'):
       # predklepaj
       sk.Dodaj(sklad, znakIzNiza)
+
     elif (znakIzNiza == ')' or
           znakIzNiza == ']' or
           znakIzNiza == '}'):
@@ -309,6 +312,7 @@ def Oklepaji(niz):
       znakSSklada = sk.Odvzemi(sklad)
       if not SeUjema(znakSSklada, znakIzNiza):
         return False
+
   return sk.JePrazen(sklad)
 
 # Vrne True, če se podani predklepaj ujema

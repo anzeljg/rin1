@@ -133,7 +133,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.00.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.01.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -285,11 +285,13 @@
   if n > 0:
     Druga(n - 1)
   print("konec prve " + str(n))
+
 def Druga(n):
   print("začetek druge " + str(n))
   if n > 0:
     Prva(n - 1)
   print("konec druge " + str(n))
+
 Prva(3)</textarea>
 </p>
 <p>
@@ -320,6 +322,7 @@ Prva(3)</textarea>
 <p>
 <textarea id="code2">import turtle 
 t = turtle.Turtle()
+
 def koch(dolzina, iteracije):
   if (iteracije == 1):
     t.forward(dolzina / 3.0)
@@ -337,6 +340,7 @@ def koch(dolzina, iteracije):
     koch(dolzina / 3.0, iteracije - 1)
     t.left(60)
     koch(dolzina / 3.0, iteracije - 1)
+
 def snezinka(dolzina, iteracije):
   i = str(iteracije)
   print("Kochova snežinka: iteracija " + i)
@@ -351,12 +355,13 @@ def snezinka(dolzina, iteracije):
     for i in range(3):
       koch(dolzina, iteracije)
       t.right(120)
+
 snezinka(150, 3)</textarea>
 </p>
 <p>
-<a href="#" class="btn btn-primary"  onclick="runit2()"><span class="fa fa-play"></span> Izvedi</a>
-<a href="#" class="btn btn-primary"  onclick="clearit2()">Počisti</a>
-<a href="#" class="btn btn-primary"  data-toggle="modal" data-target="#instructions"><span class="fa fa-file-text"></span> Navodila</a>
+<a href="#" class="btn btn-danger"  onclick="runit2()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-danger"  onclick="clearit2()">Počisti</a>
+<a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#instructions"><span class="fa fa-file-text"></span> Navodila</a>
 </p>
 </form>
 </div>
