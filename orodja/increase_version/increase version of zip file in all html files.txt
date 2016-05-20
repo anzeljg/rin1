@@ -1,0 +1,14 @@
+# Sequence of lines of a complex PowerShell command.
+#
+# Purpose of that command is to replace "v2.00.zip" string
+# to "v2.01.zip" string recursively for each html file.
+# That is: to change version of the zip file in all html
+# files in all subfolders
+#
+# The command should be run in PowerShell in "book" folder!
+#
+
+gci -r -include "*.html" |
+ foreach-object { $a = $_.fullname; ( get-content $a ) |
+ foreach-object { $_ -replace "v2.00.zip","v2.01.zip" }  | 
+set-content $a }
