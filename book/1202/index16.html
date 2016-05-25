@@ -133,7 +133,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-print"></span> Kolofon</a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span> Viri</a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span> Komentar</a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.01.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
+					<li><a href="http://github.com/anzeljg/rin1/archive/v2.02.zip" title="Prenos"><span class="fa fa-download"></span> Prenos</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -224,7 +224,7 @@ else:
   else:
     steviloDni = 31
 
-print('Mesec ima ' + str(steviloDni) + ' dni.')
+  print('Mesec ima ' + str(steviloDni) + ' dni.')
 </pre>
 					</div>
 					<div class="modal-footer">
@@ -282,8 +282,10 @@ kolicnik2 = c2 / m2
 # Čokoladici primerjamo po izračunanem količniku.
 if kolicnik1 &lt; kolicnik2:
   print('Prva se bolj splača.')
-else:
+elif kolicnik1 > kolicnik2:
   print('Druga se bolj splača.')
+else:
+  print('Obe sta enakovredni.')
 </pre>
 					</div>
 					<div class="modal-footer">
@@ -329,7 +331,7 @@ Mesec ima 30 dni.
 	<span class="label label-primary"><b>7</b></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Sladkosnedi Miha se v trgovini odloča med dvema čokoladicama, ki sta mu obe enako všeč. Prva tehta <i>m<sub>1</sub></i> gramov in stane <i>c<sub>1</sub></i> evrov, druga pa tehta <i>m<sub>2</sub></i> gramov in stane <i>c<sub>2</sub></i> evrov. Napiši program, ki prebere števila <i>m<sub>1</sub></i>, <i>m<sub>2</sub></i>, <i>c<sub>1</sub></i> in <i>c<sub>2</sub></i> ter izpiše, katera čokoladica je cenejša na enoto mase in se mu jo zato bolj splača kupiti. Primer:
+<p align="justify">Sladkosnedi Miha se v trgovini odloča med dvema čokoladicama, ki sta mu obe enako všeč. Prva tehta <i>m<sub>1</sub></i> gramov in stane <i>c<sub>1</sub></i> evrov, druga pa tehta <i>m<sub>2</sub></i> gramov in stane <i>c<sub>2</sub></i> evrov. Napiši program, ki prebere števila <i>m<sub>1</sub></i>, <i>m<sub>2</sub></i>, <i>c<sub>1</sub></i> in <i>c<sub>2</sub></i> ter izpiše, katera čokoladica je cenejša na enoto mase in se mu jo zato bolj splača kupiti. Če obe čokoladici na enoto mase staneta enako, naj program izpiše besedilo <i>»Obe sta enakovredni.«</i> Primer:
 <pre>
 Koliko gramov tehta prva? <u>100</u>
 Koliko evrov stane prva? <u>2</u>
