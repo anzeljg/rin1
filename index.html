@@ -1,15 +1,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="book/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="book/favicon.ico" />
+    <title>Knjižnica / Library</title>
+	<link href="flipster/bootstrap.min.css" rel="stylesheet">
+    <link href="flipster/jquery.flipster.min.css" rel="stylesheet" />
+    <script src="flipster/jquery.min.js"></script>
+    <script src="flipster/jquery.flipster.min.js"></script>
 </head>
 
 <body style="background-color:#dddddd">
 
-<center>
-<a href="book/index.html"><img src="book/book.png" border="0"></a>
-<a href="http://www.ric.si/splosna_matura/predmeti/informatika/#spomladanski_rok_2015"><img src="matura.png" border="0"></a>
-</center>
+<div id="flat">
+  <ul>
+    <li>
+        <a href="book/index.html"><img src="book/book.png" border="0" class="img-responsive"></a><br/>
+        <center>Starejšo različico si lahko ogledate <a href="https://lusy.fri.uni-lj.si/ucbenik/RIN1-1.03/index.html">tukaj</a>.</center>
+    </li>
+    <li>
+        <a href="http://www.ric.si/splosna_matura/predmeti/informatika/"><img src="matura.png" border="0" class="img-responsive"></a>
+    </li>
+  </ul>
+</div>
+
+<script>
+jQuery("#flat").flipster({
+    start: 0, // Start with first book
+    style: 'flat',
+    spacing: -0.25,
+    loop: true,
+    buttons: true
+});
+</script>
 
 </body>
 </html>
