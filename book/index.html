@@ -198,6 +198,26 @@
 		$("#wrapper").toggleClass("toggled");
 	});
 	</script>
+
+<!-- CookieCuttr -->
+<script type="text/javascript" src="cc/jquery.cookie.js"></script>
+<script type="text/javascript" src="cc/jquery.cookiecuttr.js"></script>
+<link rel="stylesheet" href="cc/cookiecuttr.css">
+<script type="text/javascript" src="cc/google-analytics.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	jQuery.cookieCuttr({
+		cookieDeclineButton: true,
+		cookieAnalyticsMessage: 'Spletišče za sledenje ogledov uporablja piškotke, vendar ne shranjujemo osebnih informacij.',
+		cookieAcceptButtonText: 'Sprejmi',
+		cookieDeclineButtonText: 'Zavrni',
+		cookieWhatAreTheyLink: 'cookies.html',
+		cookieWhatAreLinkText: 'Kaj so piškotki?',
+		cookieNotificationLocationBottom: true
+	});	
+});
+</script>
+
 </body>
 
 </html>
