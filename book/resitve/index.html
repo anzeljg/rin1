@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="favicon.ico" />
+
+	<title>RIN 1 - Rešitve</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="../css/simple-sidebar.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body onload="javascript:go()">
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+		</div>
+
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">Računalništvo in informatika 1</a>
+			</div>
+		</div>
+		</nav>
+
+		<!-- Modal (popup) window: License -->
+		<div id="copyright" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Licenca</h4>
+					</div>
+					<div class="modal-body">
+						<p>To delo je na voljo pod pogoji slovenske licence Creative Commons 2.5:</p>
+						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
+						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
+						<p><img src="img/by-nc-sa.eu.png" height="35" border="0"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+					    <center>
+						<img src="resitve.png"><br /><br />
+                        <form name="form" method="post" action="index.html">
+                            <input type="text" id="code" name="code" placeholder="0101">
+                            <a class="btn btn-primary" href="javascript:go()">Pojdi!</a>
+                        </form>
+						</center>
+					</div>
+				</div>
+			</div>
+
+    </div>
+
+<script>
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+function go() {
+  var code;
+  var param = getUrlParameter('id');
+  if (param != '') {
+    code = param;
+  } else {
+    code = document.forms['form'].elements['code'].value;
+  }
+  var codes = {
+    '0201': '../1102/index8.html',
+    '0202': '../1102/index8.html',
+    '0203': '../1102/index8.html',
+    '0301': '../1201/index1.html',
+    '0302': '../1201/index6.html',
+    '0303': '../1201/index10.html',
+    '0304': '../1201/index10.html',
+    '0305': '../1201/index10.html',
+    '0306': '../1201/index10.html',
+    '0307': '../1201/index10.html',
+    '0308': '../1201/index10.html',
+    '0309': '../1201/index10.html',
+    '0310': '../1201/index11.html',
+    '0311': '../1201/index11.html',
+    '0312': '../1201/index11.html',
+    '0313': '../1201/index11.html',
+    '0314': '../1201/index11.html',
+    '0315': '../1201/index11.html',
+    '0401': '../1202/index1.html',
+    '0402': '../1202/index14.html',
+    '0403': '../1202/index14.html',
+    '0404': '../1202/index14.html',
+    '0405': '../1202/index15.html',
+    '0406': '../1202/index15.html',
+    '0407': '../1202/index16.html',
+    '0408': '../1202/index16.html',
+    '0409': '../1202/index17.html',
+    '0410': '../1202/index17.html',
+    '0501': '../1203/index2.html',
+    '0502': '../1203/index9.html',
+    '0503': '../1203/index9.html',
+    '0504': '../1203/index9.html',
+    '0505': '../1203/index9.html',
+    '0506': '../1203/index9.html',
+    '0507': '../1203/index10.html',
+    '0508': '../1203/index10.html',
+    '0509': '../1203/index10.html',
+    '0510': '../1203/index10.html',
+    '0511': '../1203/index11.html',
+    '0512': '../1203/index11.html',
+    '0513': '../1203/index11.html',
+    '0514': '../1203/index11.html',
+    '0601': '../1204/index2.html',
+    '0602': '../1204/index4.html',
+    '0603': '../1204/index12.html',
+    '0604': '../1204/index12.html',
+    '0605': '../1204/index12.html',
+    '0606': '../1204/index12.html',
+    '0607': '../1204/index13.html',
+    '0608': '../1204/index13.html',
+    '0609': '../1204/index13.html',
+    '0610': '../1204/index14.html',
+    '0611': '../1204/index14.html',
+    '0612': '../1204/index15.html',
+    '0613': '../1204/index15.html',
+    '0614': '../1204/index15.html',
+    '0701': '../1205/index11.html',
+    '0702': '../1205/index14.html',
+    '0703': '../1205/index14.html',
+    '0704': '../1205/index14.html',
+    '0705': '../1205/index15.html',
+    '0706': '../1205/index15.html',
+    '0707': '../1205/index16.html',
+    '0708': '../1205/index16.html',
+    '0709': '../1205/index17.html',
+    '0710': '../1205/index17.html',
+    '0801': '../1206/index8.html',
+    '0802': '../1206/index8.html',
+    '0803': '../1206/index9.html',
+    '0804': '../1206/index9.html',
+    '0805': '../1206/index9.html',
+    '0806': '../1206/index9.html',
+    '0807': '../1206/index10.html',
+    '0808': '../1206/index10.html',
+    '0809': '../1206/index10.html',
+    '0810': '../1206/index11.html',
+    '0811': '../1206/index11.html',
+    '0812': '../1206/index11.html',
+    '0813': '../1206/index11.html',
+    '0901': '../1207/index14.html',
+    '0902': '../1207/index14.html',
+    '0903': '../1207/index14.html',
+    '0904': '../1207/index14.html',
+    '0905': '../1207/index14.html',
+    '0906': '../1207/index14.html',
+    '0907': '../1207/index15.html',
+    '0908': '../1207/index15.html',
+    '0909': '../1207/index15.html',
+    '0910': '../1207/index15.html',
+    '0911': '../1207/index15.html',
+    '0912': '../1207/index15.html',
+    '1001': '../1208/index6.html',
+    '1002': '../1208/index15.html',
+    '1003': '../1208/index15.html',
+    '1004': '../1208/index16.html',
+    '1005': '../1208/index16.html',
+    '1006': '../1208/index17.html',
+    '1007': '../1208/index17.html',
+    '1008': '../1208/index18.html',
+    '1101': '../1209/index14.html',
+    '1102': '../1209/index15.html',
+    '1103': '../1209/index18.html',
+    '1104': '../1209/index18.html',
+    '1105': '../1209/index18.html',
+    '1106': '../1209/index19.html',
+    '1107': '../1209/index19.html',
+    '1108': '../1209/index19.html',
+    '1109': '../1209/index20.html',
+    '1110': '../1209/index21.html',
+    '1111': '../1209/index22.html',
+    '1112': '../1209/index22.html',
+    '1201': '../1210/index1.html',
+    '1202': '../1210/index2.html',
+    '1203': '../1210/index4.html',
+    '1204': '../1210/index5.html',
+    '1205': '../1210/index6.html',
+    '1206': '../1210/index8.html',
+    '1207': '../1210/index9.html',
+    '1208': '../1210/index11.html',
+    '1209': '../1210/index13.html',
+    '1210': '../1210/index13.html',
+    '1211': '../1210/index14.html',
+    '1212': '../1210/index14.html',
+    '1213': '../1210/index15.html',
+    '1214': '../1210/index16.html',
+    '1301': '../1211/index8.html',
+    '1302': '../1211/index16.html',
+    '1303': '../1211/index19.html',
+    '1304': '../1211/index19.html',
+    '1305': '../1211/index19.html',
+    '1306': '../1211/index19.html',
+    '1307': '../1211/index20.html',
+    '1308': '../1211/index20.html',
+    '1309': '../1211/index20.html',
+    '1401': '../1212/index6.html',
+    '1402': '../1212/index7.html',
+    '1403': '../1212/index10.html',
+    '1404': '../1212/index10.html',
+    '1405': '../1212/index10.html',
+    '1406': '../1212/index10.html',
+    '1407': '../1212/index11.html',
+    '1408': '../1212/index11.html',
+    '1409': '../1212/index11.html',
+    '1410': '../1212/index12.html',
+    '1411': '../1212/index13.html',
+    '1412': '../1212/index13.html',
+    '1413': '../1212/index13.html',
+    '1501': '../1301/index1.html',
+    '1502': '../1301/index12.html',
+    '1503': '../1301/index12.html',
+    '1504': '../1301/index12.html',
+    '1505': '../1301/index12.html',
+    '1506': '../1301/index12.html',
+    '1507': '../1301/index13.html',
+    '1508': '../1301/index13.html',
+    '1509': '../1301/index13.html',
+    '1510': '../1301/index13.html',
+    '1511': '../1301/index13.html',
+    '1601': '../1302/index8.html',
+    '1602': '../1302/index8.html',
+    '1603': '../1302/index8.html',
+    '1604': '../1302/index8.html',
+    '1605': '../1302/index8.html',
+    '1606': '../1302/index8.html',
+    '1701': '../1303/index5.html',
+    '1702': '../1303/index7.html',
+    '1703': '../1303/index7.html',
+    '1704': '../1303/index7.html',
+    '1705': '../1303/index7.html',
+    '1706': '../1303/index7.html',
+    '1707': '../1303/index7.html',
+    '1708': '../1303/index7.html',
+    '1801': '../1304/index5.html',
+    '1802': '../1304/index7.html',
+    '1803': '../1304/index7.html',
+    '1804': '../1304/index7.html',
+    '1805': '../1304/index7.html',
+    '1901': '../1305/index6.html',
+    '1902': '../1305/index6.html',
+    '1903': '../1305/index6.html',
+    '1904': '../1305/index6.html',
+    '1905': '../1305/index6.html',
+    '2001': '../1306/index8.html',
+    '2002': '../1306/index12.html',
+    '2003': '../1306/index12.html',
+    '2004': '../1306/index12.html',
+    '2005': '../1306/index12.html',
+    '2006': '../1306/index12.html',
+    '2007': '../1306/index13.html',
+    '2008': '../1306/index13.html',
+    '2101': '../1307/index9.html',
+    '2102': '../1307/index9.html',
+    '2201': '../1308/index9.html',
+    '2202': '../1308/index9.html',
+    '2203': '../1308/index9.html',
+    '2204': '../1308/index9.html',
+    '2205': '../1308/index9.html',
+    '2206': '../1308/index10.html',
+    '2207': '../1308/index10.html',
+    '2208': '../1308/index10.html',
+    '2301': '../1309/index2.html',
+    '2302': '../1309/index4.html',
+    '2303': '../1309/index5.html',
+    '2304': '../1309/index6.html',
+    '2305': '../1309/index9.html',
+    '2306': '../1309/index9.html',
+    '2307': '../1309/index9.html',
+    '2308': '../1309/index10.html',
+    '2401': '../1310/index5.html',
+    '2402': '../1310/index5.html',
+    '2403': '../1310/index7.html',
+    '2404': '../1310/index7.html',
+    '2405': '../1310/index7.html',
+    '2406': '../1310/index7.html',
+    '2501': '../1401/index4.html',
+    '2502': '../1401/index6.html',
+    '2503': '../1401/index6.html',
+    '2504': '../1401/index6.html',
+    '2505': '../1401/index6.html',
+    '2601': '../1402/index2.html',
+    '2602': '../1402/index7.html',
+    '2603': '../1402/index7.html',
+    '2604': '../1402/index7.html',
+    '2701': '../1403/index4.html',
+    '2702': '../1403/index5.html',
+    '2703': '../1403/index5.html',
+    '2704': '../1403/index6.html',
+    '2705': '../1403/index10.html',
+    '2706': '../1403/index10.html',
+    '2707': '../1403/index10.html',
+    '2708': '../1403/index10.html',
+    '2709': '../1403/index10.html',
+    '2710': '../1403/index10.html',
+    '2801': '../1404/index1.html',
+    '2802': '../1404/index3.html',
+    '2803': '../1404/index3.html',
+    '2804': '../1404/index7.html',
+    '2805': '../1404/index7.html',
+    '2806': '../1404/index7.html',
+    '2807': '../1404/index7.html',
+    '2808': '../1404/index7.html',
+    '2809': '../1404/index7.html',
+    '2901': '../1405/index7.html',
+    '2902': '../1405/index7.html',
+    '2903': '../1405/index7.html',
+    '2904': '../1405/index7.html',
+    '2905': '../1405/index8.html',
+    '2906': '../1405/index8.html',
+    '3001': '../1406/index6.html',
+    '3002': '../1406/index9.html',
+    '3003': '../1406/index9.html',
+    '3004': '../1406/index9.html',
+    '3101': '../1407/index2.html',
+    '3102': '../1407/index7.html',
+    '3103': '../1407/index7.html',
+    '3104': '../1407/index7.html',
+    '3105': '../1407/index7.html',
+    '3106': '../1407/index7.html',
+    '3201': '../1408/index6.html',
+    '3202': '../1408/index6.html',
+    '3203': '../1408/index6.html',
+    '3204': '../1408/index6.html',
+    '3205': '../1408/index6.html',
+    '3206': '../1408/index7.html',
+    '3301': '../1409/index5.html',
+    '3302': '../1409/index7.html',
+    '3303': '../1409/index7.html',
+    '3304': '../1409/index7.html',
+    '3401': '../1501/index2.html',
+    '3402': '../1501/index7.html',
+    '3403': '../1501/index7.html',
+    '3404': '../1501/index7.html',
+    '3405': '../1501/index7.html',
+    '3406': '../1501/index8.html',
+    '3407': '../1501/index8.html',
+    '3501': '../1502/index3.html',
+    '3502': '../1502/index5.html',
+    '3503': '../1502/index5.html',
+    '3504': '../1502/index5.html',
+    '3505': '../1502/index5.html',
+    '3506': '../1502/index5.html',
+    '3601': '../1503/index4.html',
+    '3602': '../1503/index6.html',
+    '3603': '../1503/index8.html',
+    '3604': '../1503/index13.html',
+    '3605': '../1503/index13.html',
+    '3606': '../1503/index13.html',
+    '3607': '../1503/index13.html',
+    '3608': '../1503/index13.html',
+    '3609': '../1503/index13.html',
+    '3610': '../1503/index13.html',
+  };
+  if (codes.hasOwnProperty(code)) {
+      window.location = codes[code];
+  }
+}
+</script>
+
+</body>
+</html>
