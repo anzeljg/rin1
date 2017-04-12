@@ -266,7 +266,7 @@ Piramida(4)
 					<div class="modal-body">
 <pre>
 def JePodniz(s, t):
-  for i in range(0, len(s)-len(t)):
+  for i in range(0, len(s)-len(t)+1):
     if s[i:len(t)+i] == t:
       return True
   return False
