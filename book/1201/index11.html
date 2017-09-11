@@ -601,6 +601,20 @@ rezultat
 <script type="text/javascript" src="../cc/google-analytics.js"></script>
 <script type="text/javascript" src="../cc/setup.cookiecuttr.js"></script>
 
+
+<script>
+document.body.addEventListener("keydown", function (event) {
+    var code = event.keyCode || event.which;
+    var alt  = event.altKey;
+    if (alt && code === 33 /* Alt+PgUp */) {
+        window.location.replace("../1201/index10.html");
+    }
+    if (alt && code === 34 /* Alt+PgDn */) {
+        window.location.replace("../1202/index.html");
+    }
+});
+</script>
+
 </body>
 
 </html>

@@ -642,6 +642,20 @@ editor.setSize('100%', 420);
 <script type="text/javascript" src="../cc/google-analytics.js"></script>
 <script type="text/javascript" src="../cc/setup.cookiecuttr.js"></script>
 
+
+<script>
+document.body.addEventListener("keydown", function (event) {
+    var code = event.keyCode || event.which;
+    var alt  = event.altKey;
+    if (alt && code === 33 /* Alt+PgUp */) {
+        window.location.replace("../1204/index14.html");
+    }
+    if (alt && code === 34 /* Alt+PgDn */) {
+        window.location.replace("../1205/index.html");
+    }
+});
+</script>
+
 </body>
 
 </html>

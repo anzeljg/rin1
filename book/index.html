@@ -223,6 +223,20 @@ $(document).ready(function () {
 });
 </script>
 
+
+<script>
+document.body.addEventListener("keydown", function (event) {
+    var code = event.keyCode || event.which;
+    var alt  = event.altKey;
+    if (alt && code === 33 /* Alt+PgUp */) {
+        window.location.replace("");
+    }
+    if (alt && code === 34 /* Alt+PgDn */) {
+        window.location.replace("1101/index.html");
+    }
+});
+</script>
+
 </body>
 
 </html>
