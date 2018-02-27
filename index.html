@@ -2,39 +2,45 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="book/favicon.ico" />
-    <title>Knjižnica / Library</title>
-	<link href="flipster/bootstrap.min.css" rel="stylesheet">
-    <link href="flipster/jquery.flipster.min.css" rel="stylesheet" />
-    <script src="flipster/jquery.min.js"></script>
-    <script src="flipster/jquery.flipster.min.js"></script>
+    <title>Knjižnica</title>
+    <link href="covers/bootstrap.min.css" rel="stylesheet">
+    <script src="covers/jquery.min.js"></script>
+<style>
+.cover {
+    border: 1px solid #333333;
+	box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.2);
+}
+</style>
 </head>
 
 <body style="background-color:#dddddd">
 
-<div id="flat">
-  <ul>
-    <li>
-        <a href="book/index.html"><img src="book/book.png" border="0" width="90%" class="img-responsive"></a><br/>
-        <center>Starejšo različico si lahko ogledate <a href="https://lusy.fri.uni-lj.si/ucbenik/RIN1-1.03/index.html">tukaj</a>.</center>
-    </li>
-    <li>
-        <a href="http://bankanalog.ric.si/"><img src="banka.png" border="0" width="90%" class="img-responsive"></a><br>&nbsp;
-    </li>
-    <li>
-        <a href="http://www.ric.si/splosna_matura/predmeti/informatika/"><img src="matura.png" border="0" width="90%" class="img-responsive"></a><br>&nbsp;
-    </li>
-  </ul>
-</div>
-
-<script>
-jQuery("#flat").flipster({
-    start: 0, // Start with first book
-    style: 'flat',
-    spacing: -0.4,
-    loop: true,
-    buttons: true
-});
-</script>
+<br><br>
+<div id="container" style="width:80%;margin:auto;">
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <a href="http://anzeljg.github.io/rpi/rpi/index.html"><img src="http://anzeljg.github.io/rpi/rpi/cover.png" class="cover img-responsive"></a><br>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <a href="http://anzeljg.github.io/prog/prog/index.html"><img src="http://anzeljg.github.io/prog/prog/cover.png" class="cover img-responsive"></a><br>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <a href="http://anzeljg.github.io/rin1/book/index.html"><img src="http://anzeljg.github.io/rin1/book/cover.png" class="cover img-responsive"></a>
+                    <center>Starejšo različico si lahko ogledate <a href="https://lusy.fri.uni-lj.si/ucbenik/RIN1-1.03/index.html">tukaj</a>.</center><br>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <a href="http://www.ric.si/splosna_matura/predmeti/informatika/"><img src="covers/matura.png" class="cover img-responsive"></a><br>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <a href="http://bankanalog.ric.si/"><img src="covers/banka.png" class="cover img-responsive"></a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
 
 </body>
 </html>
