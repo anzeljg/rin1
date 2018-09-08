@@ -108,15 +108,15 @@ function clozeSubmit(ident){
 			}
 
 			if(cloze_poljeNizov.indexOf(cloze_vrednost)!=-1){
-				$(this).css({"background-color" : "#33FF00"}); //green
+				$(this).css({"background-color" : "#DFF0D8"}); //green
 				cloze_pst++;
 				cloze_temp_polje[cloze_temp_id].splice(cloze_poljeNizov.indexOf(cloze_vrednost),1);
 			}
 			else
-				$(this).css({"background-color" : "#FE2E2E"}); //red
+				$(this).css({"background-color" : "#F2DEDE"}); //red
 		}
 		else
-				$(this).css({"background-color" : "#FE2E2E"}); //red
+				$(this).css({"background-color" : "#F2DEDE"}); //red
 	});
 	var resultText = "Tvoj rezultat je ";
 	if (getAttributeValue("elo-language","sl")== "en"){
@@ -156,7 +156,7 @@ function fillClozeInputs(ident) {
 	var cloze_isListing=document.getElementById("clozeFlag"+ident+".listing");
 	if($(cloze_isListing).attr('value')=='0') {
 		$('#cloze'+ident+' .clozeVnos').each(function(){
-			$(this).css({"background-color" : "#33FF00"}); //green
+			$(this).css({"background-color" : "#DFF0D8"}); //green
 			$(this).prop('value', cloze_polje[$(this).attr('id')][0]);
 		});
 	}
@@ -164,7 +164,7 @@ function fillClozeInputs(ident) {
 		var cloze_tempSt1=$(cloze_isListing).prop('value');
 		var cloze_tempSt2=0;
 		$('#cloze'+ident+' .clozeVnos').each(function(){
-			$(this).css({"background-color" : "#33FF00"}); //green
+			$(this).css({"background-color" : "#DFF0D8"}); //green
 			var cloze_temp_id=$(this).attr('id')
 			cloze_temp_id=cloze_temp_id.substr(0,cloze_temp_id.indexOf('-'));
 			$(this).prop('value', cloze_polje[cloze_temp_id][cloze_tempSt2]);
@@ -225,22 +225,22 @@ function cloze_IM_preveri(id,ident){
 				}
 			}
 			if(cloze_numInput==cloze_numTest){
-				$(cloze_el).css({"background-color" : "#33FF00"}); //green
+				$(cloze_el).css({"background-color" : "#DFF0D8"}); //green
 			}
 			else
-				$(cloze_el).css({"background-color" : "#FE2E2E"}); //red
+				$(cloze_el).css({"background-color" : "#F2DEDE"}); //red
 		}
 		
 		else{	
 			if(cloze_poljeNizov.indexOf(cloze_vrednost)!=-1){
-				$(cloze_el).css({"background-color" : "#33FF00"}); //green
+				$(cloze_el).css({"background-color" : "#DFF0D8"}); //green
 			}
 			else
-				$(cloze_el).css({"background-color" : "#FE2E2E"}); //red
+				$(cloze_el).css({"background-color" : "#F2DEDE"}); //red
 		}
 	}
 	else
-		$(cloze_el).css({"background-color" : "#FE2E2E"}); //red
+		$(cloze_el).css({"background-color" : "#F2DEDE"}); //red
 }
 
 

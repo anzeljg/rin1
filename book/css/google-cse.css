@@ -6,10 +6,16 @@ input.gsc-search-button-v2 {
     padding: 5px 26px !important;
     width: 68px !important;
 }
-
+.gsc-control-cse {
+    padding-top: 10px !important;
+    padding-bottom: 5px !important;
+	font-family: Arial, Helevetica, sans-serif;
+	border-color: #F8F8F8;
+    background-color: #F8F8F8;
+}
 #google_cse_wrapper {
     width: 300px;
     margin-left: 30px;
-    height: 55px;
+    height: 50px !important;
     float: right;
 }
