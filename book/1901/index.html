@@ -21,6 +21,16 @@
 
 	<link href="../css/style.css" rel="stylesheet">
 
+	<!-- CIP style -->
+	<style>
+	#cip {
+	    text-align: left;
+		padding: 10px;
+		margin: 0px 20px;
+		border: 1px solid #333;
+	}
+	</style>
+
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -135,7 +145,7 @@
 					<li><a href="../1901/index.html" title="Kolofon"><span class="fa fa-book"></span></a></li>
 					<li><a href="../1901/index1.html" title="Viri"><span class="fa fa-paperclip"></span></a></li>
 					<li><a href="mailto:eUcbenik@lusy.fri.uni-lj.si" title="Komentar"><span class="fa fa-commenting-o"></span></a></li>
-					<li><a href="http://github.com/anzeljg/rin1/archive/v2.11.zip" title="Prenos"><span class="fa fa-download"></span></a></li>
+					<li><a href="https://github.com/anzeljg/rin1/releases/latest" target="_blank" title="Prenos"><span class="fa fa-download"></span></a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -156,42 +166,6 @@
 						<p><strong>priznanje avtorstva - nekomercialno - deljenje pod enakimi pogoji.</strong></p>
 						<p align="justify">Celotna licenca je na voljo na spletu na naslovu <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/si/" target="_blank">http://creativecommons.org/licenses/by-nc-sa/2.5/si/</a>. V skladu s to licenco je dovoljeno vsakemu uporabniku delo razmnoževati, distribuirati, javno priobčevati, dajati v najem in tudi predelovati, vendar samo v nekomercialne namene in ob pogoju, da navede avtorja oziroma avtorje in izdajatelja tega dela. Če uporabnik delo predela, kar pomeni, da ga spremeni, preoblikuje, prevede ali uporabi to delo v svojem delu, lahko predelavo dela ponudi na voljo le pod pogoji, ki so enaki pogojem iz te licence oziroma pod enako licenco.</p>
 						<p><img src="../img/by-nc-sa.eu.png" height="35" border="0"></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- Modal (popup) window: Catalogue -->
-		<div id="catalogue" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">CIP - Kataložni zapis o publikaciji</h4>
-					</div>
-					<div class="modal-body">
-						CIP - Kataložni zapis o publikaciji<br>
-						Narodna in univerzitetna knjižnica, Ljubljana<br>
-						<br>
-						659.2:004(075.3)(0.034.2)<br>
-						004(075.3)(0.034.2)<br>
-						<br>
-						RAČUNALNIŠTVO in informatika 1 [Elektronski vir] : e-učbenik za informatiko v gimnaziji / Gregor Anželj ... [et al.]. - El. knjiga. - Koper : Založba Univerze na Primorskem ; Ljubljana : Založba Fakulete za računalništvo in informatiko ; Maribor : Fakuleta za elektrotehniko, računalništvo in informatiko, 2015<br>
-						<br>
-						Način dostopa (URL): <a href="http://lusy.fri.uni-lj.si/ucbenik/">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
-						<br>
-						ISBN 978-961-6984-12-6 (Založba Univerze na Primorskem, html)<br>
-						ISBN 978-961-6209-86-1 (Založba Fakulete za računalništvo in informatiko, html)<br>
-						ISBN 978-961-248-498-9 (Fakuleta za elektrotehniko, računalništvo in informatiko, html)<br>
-						<br>
-						1. Anželj, Gregor<br>
-						282126848<br>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -232,12 +206,15 @@
 							<br>
 							<a href="http://lusy.fri.uni-lj.si/ucbenik/" target="_blank">http://lusy.fri.uni-lj.si/ucbenik/</a><br>
 							<br>
-							ISBN 978-961-6984-12-6 (UP)<br>
-							ISBN 978-961-6209-86-1 (UL FRI)<br>
-							ISBN 978-961-248-498-9 (UM FERI)<br>
-							<br>
-							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#catalogue">CIP - Kataložni zapis o publikaciji</button>
-							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#license">Licenca</button>
+							<div id="cip">
+							    Kataložni zapis o publikaciji (CIP) pripravili v Narodni in univerzitetni knjižnici v Ljubljani<br>
+								<br>
+								<a href="http://cobiss.si" target="_blank">COBISS.SI</a>-ID=<a href="https://plus.cobiss.si/opac7/bib/282126848" target="_blank">282126848</a><br>
+								<br>
+								ISBN 978-961-6984-12-6 (html) UP<br>
+								ISBN 978-961-6209-86-1 (html) UL FRI<br>
+								ISBN 978-961-248-498-9 (html) UM FERI
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-5">
@@ -248,17 +225,17 @@
 							Titov trg 4, SI-6000 Koper (zanjo: prof. dr. Dragan Marušič)<br>
 							<i>Glavni urednik:</i> izr. prof. dr. Jonatan Vinkler<br>
 							<i>Vodja založbe:</i> Alen Ježovnik<br>
-							Koper 2015<br>
+							Koper, 2015<br>
 							<br>
 							Založba Fakultete za računalništvo in informatiko,<br>Univerza v Ljubljani,<br>
 							Večna pot 113, SI-1000 Ljubljana (zanjo: prof. dr. Nikolaj Zimic)<br>
 							<i>Glavni urednik in vodja založbe:</i> prof. dr. Franc Solina<br>
-							Ljubljana 2015<br>
+							Ljubljana, 2015<br>
 							<br>
 							Založba Fakultete za elektrotehniko, računalništvo in informatiko,<br>Univerza v Mariboru,<br>
 							Smetanova 17, SI-2000 Maribor  (zanjo: prof. dr. Borut Žalik)<br>
-							<i>Glavni urednik:</i> prof. dr. Matej Črepinšek<br>
-							Maribor 2015<br>
+							<i>Glavni urednik:</i> dr. Matej Črepinšek<br>
+							Maribor, 2015<br>
 							<br>
 							<img src="img/logo-up-famnit.png" height="125" width="215">
 							<img src="img/logo-ul-fri.png" height="125" width="215">
