@@ -14,6 +14,7 @@
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-toggle.min.css" rel="stylesheet">
 
 	<!-- CodeMirror -->
 	<link href="../css/codemirrorepl.css" rel="stylesheet">
@@ -244,19 +245,20 @@ print(prodaja)</textarea>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
 <a href="#" class="btn btn-primary"  onclick="clearit()">Počisti</a>
+<input type="checkbox" id="theme" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
 <pre id="output"></pre>
-
-<p>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanation">Dolge vrstice in znak \</button>
-</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
+<p>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#explanation">Dolge vrstice in znak \</button>
+</p>
+
 <p align="justify">Po dolgotrajnem tipkanju Liza sicer dobi želeni podatek, ampak to je šele vsota; rada bi naredila še veliko drugih izračunov. Kako bo šele naslednje leto, ko namerava zbirati podatke za vsak <i>dan</i> posebej ...</p>
 
 <p align="justify">Pomagajmo ji! Za tovrstne primere je skoraj v vseh programskih jezikih možno uporabiti <b>tabelo</b>. Tabela je zaporedje podatkov, ki imajo (praviloma) soroden pomen. V pythonu jo zapišemo tako, da njene podatke navedemo znotraj oglatih oklepajev in jih ločimo z vejicami:
@@ -311,6 +313,7 @@ print(prodaja)</textarea>
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap-toggle.min.js"></script>
 
 	<!-- rPage: Highly responsive pagination for Bootstrap -->
 	<script src="../js/responsive-paginate.js"></script>
@@ -374,10 +377,11 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  theme: "mbo"
+  theme: "rin-light"
 });
 editor.setSize('100%', 330);
 </script>
+<script src="../js/skulpt/theme.js"></script>
 
 
 <!-- CookieCuttr -->

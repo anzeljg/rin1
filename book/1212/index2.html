@@ -14,6 +14,7 @@
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-toggle.min.css" rel="stylesheet">
 
 	<!-- CodeMirror -->
 	<link href="../css/codemirrorepl.css" rel="stylesheet">
@@ -187,6 +188,7 @@ a = h["štiri"] # napaka, ključa "štiri"
 </p>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
+<input type="checkbox" id="theme" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -204,6 +206,7 @@ print(h) # izpiše vsebino seznama</textarea>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit2()"><span class="fa fa-play"></span> Izvedi</a>
 <a href="#" class="btn btn-primary"  onclick="clearit2()">Počisti</a>
+<input type="checkbox" id="theme2" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -223,6 +226,7 @@ print(h.get("pet", 456)) # izpiše 456</textarea>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit3()"><span class="fa fa-play"></span> Izvedi</a>
 <a href="#" class="btn btn-primary"  onclick="clearit3()">Počisti</a>
+<input type="checkbox" id="theme3" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -245,6 +249,7 @@ a = h["ena"] # napaka, ključa "ena" ni v slovarju</textarea>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit4()"><span class="fa fa-play"></span> Izvedi</a>
 <a href="#" class="btn btn-primary"  onclick="clearit4()">Počisti</a>
+<input type="checkbox" id="theme4" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -265,6 +270,7 @@ print(len(h)) # izpiše 3</textarea>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit5()"><span class="fa fa-play"></span> Izvedi</a>
 <a href="#" class="btn btn-primary"  onclick="clearit5()">Počisti</a>
+<input type="checkbox" id="theme5" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -283,6 +289,7 @@ for k in h:
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit6()"><span class="fa fa-play"></span> Izvedi</a>
 <a href="#" class="btn btn-primary"  onclick="clearit6()">Počisti</a>
+<input type="checkbox" id="theme6" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -329,6 +336,7 @@ for k in h:
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap-toggle.min.js"></script>
 
 	<!-- rPage: Highly responsive pagination for Bootstrap -->
 	<script src="../js/responsive-paginate.js"></script>
@@ -388,9 +396,9 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  theme: "mbo"
+  theme: "rin-light"
 });
-editor.setSize('100%', 60);
+editor.setSize('100%', 65);
 </script>
 
 <script type="text/javascript">
@@ -428,9 +436,9 @@ var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  theme: "mbo"
+  theme: "rin-light"
 });
-editor2.setSize('100%', 60);
+editor2.setSize('100%', 65);
 </script>
 
 <script type="text/javascript">
@@ -468,7 +476,7 @@ var editor3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  theme: "mbo"
+  theme: "rin-light"
 });
 editor3.setSize('100%', 100);
 </script>
@@ -508,9 +516,9 @@ var editor4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  theme: "mbo"
+  theme: "rin-light"
 });
-editor4.setSize('100%', 80);
+editor4.setSize('100%', 85);
 </script>
 
 <script type="text/javascript">
@@ -548,9 +556,9 @@ var editor5 = CodeMirror.fromTextArea(document.getElementById("code5"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  theme: "mbo"
+  theme: "rin-light"
 });
-editor5.setSize('100%', 110);
+editor5.setSize('100%', 120);
 </script>
 
 <script type="text/javascript">
@@ -588,10 +596,11 @@ var editor6 = CodeMirror.fromTextArea(document.getElementById("code6"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  theme: "mbo"
+  theme: "rin-light"
 });
-editor6.setSize('100%', 80);
+editor6.setSize('100%', 85);
 </script>
+<script src="../js/skulpt/theme.js"></script>
 
 
 <!-- CookieCuttr -->

@@ -14,6 +14,7 @@
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-toggle.min.css" rel="stylesheet">
 
 	<!-- CodeMirror -->
 	<link href="../css/codemirrorepl.css" rel="stylesheet">
@@ -239,7 +240,8 @@ print(Prepletene("PbREPeseLEdTiEloNO"))
 
 <p class="skulpt-controls">
 <button type="button" class="btn btn-primary"  onclick="runit2()"><span class="fa fa-play"></span> Izvedi</button>
-<button type="button" class="btn btn-primary"  onclick="clearit2()"><span class="fa fa-refresh"></span> Počisti</button>
+<button type="button" class="btn btn-primary"  onclick="clearit2()">Počisti</button>
+<input type="checkbox" id="theme2" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -283,6 +285,7 @@ print(Prepletene("PbREPeseLEdTiEloNO"))
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap-toggle.min.js"></script>
 
 	<!-- rPage: Highly responsive pagination for Bootstrap -->
 	<script src="../js/responsive-paginate.js"></script>
@@ -347,10 +350,11 @@ function solveit2a() {
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
-  theme: "mbo"
+  theme: "rin-light"
 });
 editor2.setSize("100%", 250);
 </script>
+<script src="../js/skulpt/theme.js"></script>
 
 
 <!-- CookieCuttr -->

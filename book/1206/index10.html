@@ -14,6 +14,7 @@
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-toggle.min.css" rel="stylesheet">
 
 	<!-- CodeMirror -->
 	<link href="../css/codemirrorepl.css" rel="stylesheet">
@@ -382,6 +383,7 @@ in tako naprej.</p>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
 <a href="#" class="btn btn-primary"  onclick="clearit()">Počisti</a>
+<input type="checkbox" id="theme" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -426,6 +428,7 @@ in tako naprej.</p>
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap-toggle.min.js"></script>
 
 	<!-- rPage: Highly responsive pagination for Bootstrap -->
 	<script src="../js/responsive-paginate.js"></script>
@@ -489,10 +492,11 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  theme: "mbo"
+  theme: "rin-light"
 });
 editor.setSize('100%', 400);
 </script>
+<script src="../js/skulpt/theme.js"></script>
 
 
 <!-- CookieCuttr -->

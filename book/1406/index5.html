@@ -234,14 +234,16 @@
 
 <h2>Aktivne spletne strani</h2>
 
-<p align="justify">Aktivne spletne strani omogočajo izvajanje programa v uporabnikovem brskalniku. Tako lahko pripravimo npr. interaktivne animacije, zemljevide, ipd. Sestavni del spletnega sestavka je programska koda, ki je lahko v izvršni obliki (npr. Java apleti) ali v izvorni obliki (npr. JavaScript). Izgled aktivnih spletnih strani si lahko ogledamo kar v našem učbeniku (animacija »Pošiljanje HTTP zahteve«).</p>
+<p align="justify">Aktivne spletne strani omogočajo izvajanje programa v uporabnikovem brskalniku. Tako lahko pripravimo npr. interaktivne animacije, zemljevide, ipd. Sestavni del spletnega sestavka je programska koda, ki je lahko v izvršni obliki (npr. Java apleti) ali v izvorni obliki (npr. JavaScript). Izgled aktivnih spletnih strani si lahko ogledamo kar v učbeniku (animacija »Pošiljanje HTTP zahteve«).</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 <!-- Right column start -->
 <h2>Dinamične spletne strani</h2>
 
-<p align="justify">Dinamične spletne strani strežnik zgradi šele takrat, ko odjemalec zahteva spletni sestavek. Glede na zahtevo odjemalca ali glede na stanje podatkov na strežniku je lahko stran iz trenutka v trenutek drugačna. Zahtevo odjemalca strežnik posreduje programu, ki npr. nekaj izračuna, poišče podatke na strežniku, rezultate vgradi v spletni sestavek. Šele nato strežnik spletni sestavek pošlje odjemalcu. Primer dinamične spletne strani je na primer stran z zadetki iskanja na iskalniku Google. Vsebina je odvisna predvsem od uporabnikovega iskalnega niza. Pa tudi če uporabnik uporabi isti iskalni niz, so lahko zadetki v različnih časovnih obdobjih različni (spletne strani ugašajo, pojavljajo se nove...).</p>
+<p align="justify">Dinamične spletne strani strežnik zgradi šele takrat, ko odjemalec zahteva spletni sestavek. Glede na zahtevo odjemalca ali glede na stanje podatkov na strežniku je lahko stran iz trenutka v trenutek drugačna. Zahtevo odjemalca strežnik posreduje programu, ki npr. nekaj izračuna, poišče podatke na strežniku, rezultate vgradi v spletni sestavek.</p>
+
+<p align="justify">Šele nato strežnik spletni sestavek pošlje odjemalcu. Primer dinamične spletne strani je na primer stran z zadetki iskanja na iskalniku Google. Vsebina je odvisna predvsem od uporabnikovega iskalnega niza. Pa tudi če uporabnik uporabi isti iskalni niz, so lahko zadetki v različnih časovnih obdobjih različni (spletne strani ugašajo, pojavljajo se nove...).</p>
 
 <p align="justify">Strežnik za zapis spletnega sestavka, ki ga bo  poslal odjemalcu, lahko uporablja različne tehnologije. Pri nekaterih se pri vsaki zahtevi celotni sestavek zgradi na novo (Common Gateway Interface – CGI), pri drugih (na primer Hypertext Preprocessor – PHP, Active Server Pages – ASP, Java Server Pages – JSP) pa so nekateri deli sestavka statični, drugi deli strani pa se zgradijo vsakič na novo.</p>
 
@@ -336,9 +338,10 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "xml",
-  theme: "mbo"
+  theme: "rin-light",
+  readOnly: true,
 });
-editor.setSize('100%', 210);
+editor.setSize('100%', 206);
 </script>
 
 <script type="text/javascript">
