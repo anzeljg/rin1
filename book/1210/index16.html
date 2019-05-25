@@ -295,9 +295,10 @@ def JePredE(x, y):
 <!-- Left column start -->
 <h1>Naloge</h1>
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-danger" role="alert">
 <p>
-	<span class="label label-primary"><b>6</b></span>
+	<span class="label label-danger"><b>6</b></span>
+	<span class="fa fa-star pull-right"></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
 <p align="justify">Doslej smo v naših postopkih urejanja primerjali elemente vhodne tabele z operatorjem <code>&lt;</code>. Koristna razširitev urejanja je, da pripravimo svojo funkcijo oblike <code>JePred(x, y)</code>, ki primerja dva elementa vhodne tabele in vrne <code>True</code>, če mora <code>x</code> v želenem vrstnem redu priti pred <code>y</code>, sicer pa vrne <code>False</code>. Taki funkciji pravimo <b>primerjalna funkcija</b> ali <b>komparator</b>.</p>
@@ -332,14 +333,14 @@ print(a) # izpiše [8, 7, 5, 3, 2]
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<div class="alert alert-info" role="alert">
+<div class="alert alert-danger" role="alert">
 <p align="justify">(a) Zgoraj smo videli, kako predelati primerjavo oblike <code>a[i] &lt; a[j]</code>, da uporabi namesto operatorja <code>&lt;</code> funkcijo <code>JePred</code>. Kako pa bi bilo treba predelati primerjave oblike <code>a[i] &lt;= a[j]</code>, <code>a[i] &gt; a[j]</code> in <code>a[i] &gt;= a[j]</code>?<br />
 (b) Na tu opisani način predelaj postopke za urejanje, ki smo jih predstavili v tej učni enoti (npr. <code>UrejanjeZVstavljanjem</code> in <code>UrejanjeZIzbiranjem</code>) tako, da bodo kot parameter dobili primerjalno funkcijo in jo uporabljali za primerjanje elementov vhodne tabele.<br />
 (c) Zgoraj smo videli primerjalno funkcijo <code>JeVecji</code>, ki poskrbi za to, da bodo elementi vhodne tabele urejeni padajoče namesto naraščajoče. Recimo pa, da hočemo urejati cela števila tako, da pridejo v končnem vrstnem redu najprej vsa liha števila, urejena padajoče, nato pa vsa soda števila, urejena naraščajoče. Iz tabele <code>[5, 8, 7, 2, 3]</code> bi pri tem vrstnem redu na primer nastala tabela <code>[7, 5, 3, 2, 8]</code>. Napiši primerjalno funkcijo, s katero se bo dalo urediti elemente v tem vrstnem redu.<br />
 (d) Napiši primerjalno funkcijo, s katero se bo dalo urediti tabelo nizov oblike <code>"Ime Priimek"</code> tako, da bodo nizi urejeni abecedno po priimkih, tisti z enakim priimkom pa abecedno po imenih. Da bo lažje, predpostavi, da so vsa imena in priimki le enobesedni in da vsebujejo le črke angleške abecede, pri čemer je prva črka imena ali priimka velika, vse ostale pa male.<br />
 (e) Napiši primerjalno funkcijo, s katero se bo dalo urediti tabelo nizov po naraščajoči dolžini, tiste z enako dolžino pa v leksikografskem vrstnem redu (to je isti red, ki ga na nizih dobimo že z operatorjem <code>&lt;</code>).</p>
 <p>
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution6"><span class="fa fa-check"></span> Rešitev</button>
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution6"><span class="fa fa-check"></span> Rešitev</button>
 </p>
 </div>
 <!-- Right column end -->

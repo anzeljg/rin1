@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="granzelj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-05-02 11:53:47 PM"/>
+        <attribute name="created" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6Mzg6MjYgQU07MjcxNQ=="/>
+        <attribute name="edited" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDUtMDI7MTE6NTM6NDcgUE07MzsyODQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prvo, drugo, tretje" type="Integer" array="False" size=""/>
+            <declare name="manjse12, vecje12, srednje" type="Integer" array="False" size=""/>
+            <input variable="prvo"/>
+            <input variable="drugo"/>
+            <input variable="tretje"/>
+            <if expression="prvo &lt; drugo">
+                <then>
+                    <assign variable="manjse12" expression="prvo"/>
+                    <assign variable="vecje12" expression="drugo"/>
+                </then>
+                <else>
+                    <assign variable="manjse12" expression="drugo"/>
+                    <assign variable="vecje12" expression="prvo"/>
+                </else>
+            </if>
+            <if expression="tretje &lt; manjse12">
+                <then>
+                    <assign variable="srednje" expression="manjse12"/>
+                </then>
+                <else>
+                    <if expression="tretje &gt; vecje12">
+                        <then>
+                            <assign variable="srednje" expression="vecje12"/>
+                        </then>
+                        <else>
+                            <assign variable="srednje" expression="tretje"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="srednje" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

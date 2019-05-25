@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="granzelj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-04-30 11:47:08 AM"/>
+        <attribute name="created" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6NDM6MjQgQU07MjcwOQ=="/>
+        <attribute name="edited" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6NDc6MDggQU07MTsyODIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, vsota" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="vsota" expression="0"/>
+            <while expression="i &lt; n">
+                <assign variable="i" expression="i + 1"/>
+                <assign variable="vsota" expression="vsota + i"/>
+            </while>
+            <output expression="vsota" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

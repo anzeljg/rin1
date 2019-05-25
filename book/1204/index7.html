@@ -247,6 +247,263 @@ for indeks in range(len(tabela)):
 			</div>
 		</div>
 
+		<!-- Modal (popup) window: Trace table 3 -->
+		<div id="trace3" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Sledenje programu: Indeks meseca z najnižjo prodajo</h4>
+					</div>
+					<div class="modal-body">
+<p><pre>
+1    prodaja = [182, 250, 225, 315, 328, 160,
+2               51, 36, 340, 280, 378, 320]
+3    indeksMin = 0
+4    for indeks in range(len(prodaja)):
+5      if prodaja[indeks] < prodaja[indeksMin]:
+6        indeksMin = indeks
+7    print(indeksMin)
+</pre></p>
+					  <p align="justify">Pri sledenju gornjemu programu s pomočjo papirja in svinčnika, bo vrednost spremenljivke <code>prodaja</code> in izraza <code>len(prodaja)</code> vedno enaka oziroma se ne bo spreminjala. Zato te spremenljivke in tega izraza ne bomo zapisovali v tabelo.</p>
+					  <p align="justify">Zapišimo torej v tabelo, kako se spreminjajo vrednosti spremenljivk in izrazov v gornjem programu. Naslovi stolpcev tabele bodo naslednji:
+					  <ul align="justify">
+					    <li><b>Korak</b> predstavlja zaporedno številko koraka v sledenju programa</li>
+					    <li><b>#</b> predstavlja vrstico kode v kateri se zgodi sprememba vrednosti spremenljivke ali izraza</li>
+					    <li><b><code>indeksMin</code></b> predstavlja, kako se spreminjajo vrednosti te spremenljivke</li>
+					    <li><b><code>indeks</code></b> predstavlja, kako se spreminjajo vrednosti te spremenljivke</li>
+					    <li><b><code>prodaja[indeks] &lt; prodaja[indeksMin]</code></b> predstavlja, kako se spreminjajo vrednosti tega izraza</li>
+					  </ul></p>
+					  <div class="table-responsive">
+						<table class="table table-striped table-condensed">
+						  <thead>
+							<tr>
+							  <th class="text-center">Korak</th>
+							  <th class="text-center"><span class="text-muted">#</span></th>
+							  <th class="text-center"><tt>indeksMin</tt></th>
+							  <th class="text-center"><tt>indeks</tt></th>
+							  <th class="text-center"><tt>prodaja[indeks] &lt; prodaja[indeksMin]</tt></th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr class="text-center">
+							  <td>1</td>
+							  <td class="text-muted">3</td>
+							  <td>0</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>2</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>0</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>3</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>182 &lt; 182 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>4</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>1</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>5</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>250 &lt; 182 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>6</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>2</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>7</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>225 &lt; 182 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>8</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>3</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>9</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>315 &lt; 182 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>10</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>4</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>11</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>328 &lt; 182 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>12</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>5</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>13</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>160 &lt; 182 &rarr; <tt>True</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>14</td>
+							  <td class="text-muted">6</td>
+							  <td>5</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>15</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>6</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>16</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>51 &lt; 160 &rarr; <tt>True</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>17</td>
+							  <td class="text-muted">6</td>
+							  <td>6</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>18</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>7</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>19</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>36 &lt; 51 &rarr; <tt>True</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>20</td>
+							  <td class="text-muted">6</td>
+							  <td>7</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>21</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>8</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>22</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>340 &lt; 36 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>23</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>9</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>24</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>280 &lt; 36 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>25</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>10</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>26</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>378 &lt; 36 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>27</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>11</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>28</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>320 &lt; 36 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center" style="border-bottom:1px solid #ccc;">
+							  <td>29</td>
+							  <td class="text-muted">7</td>
+							  <td><b>7</b></td>
+							  <td></td>
+							  <td></td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					  <p align="justify">V koraku 29 se izvede vrstica 7 <code>print(indeksMin)</code>. Ker je vrednost spremenljivke <code>indeksMin</code> v tem trenuktu oziroma pri tem koraku enaka 7, se torej izpiše 7.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
@@ -260,6 +517,9 @@ for indeks in range(len(tabela)):
 
 <div class="alert alert-info" role="alert">
 <p align="justify">Po korakih »izvedi« gornji program s svinčnikom in papirjem.</p>
+<p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#trace3"><span class="fa fa-search"></span> Sledenje programu</button>
+</p>
 </div>
 
 <h4>V razmislek</h4>

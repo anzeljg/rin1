@@ -169,6 +169,27 @@
 			</div>
 		</div>
 
+		<!-- Modal (popup) window: Flowgorithm -->
+		<div id="flowgorithm" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Flowgorithm</h4>
+					</div>
+					<div class="modal-body">
+						<p align="justify"><img src="img/flowgorithm.png" height="128" width="128" align="left" border="0" style="margin-right:10px"><a href="http://www.flowgorithm.org/" target="_blank">Flowgorithm</a> je program (za operacijski sistem Windows), ki omogoča izdelavo diagramov poteka (<i>ang. flowchart</i>) in njihovo izvajanje. Ko je logika problema razumljiva in jo zapišeš s pomočjo diagrama poteka, je precej enostavno to pretvoriti v program v izbranem programskem jeziku. Flowgorithm omogoča pretvorbo iz diagrama poteka v več kot 18 različnih programskih jezikov.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
@@ -179,7 +200,15 @@
 
 <p align="justify">Z diagramom poteka lahko korake izvajanja algoritma prikažemo grafično. Oglejmo si, kako bi naš algoritem za problem MIN3 zapisali z diagramom poteka:</p>
 
+<div class="alert alert-warning" role="alert">
 <p align="center"><img src="img/diagram_min3.svg" onerror="this.src='diagram_min3.png'" class="img-responsive"></p>
+<p>
+<div class="btn-group" role="group" aria-label="...">
+	<button type="button" id="flow1" class="btn btn-warning"><span class="fa fa-sitemap"></span> Diagram poteka</button>
+	<button type="button" class="btn btn-warning" title="Flowgorithm" data-toggle="modal" data-target="#flowgorithm"><span class="fa fa-info"></span></button>
+</div>
+</p>
+</div>
 
 <p align="justify">Diagramov poteka ni težko razumeti. Z elipsami označujemo začetek in konec algoritma, s paralelogrami vhod in izhod, z rombi pogoje, s pravokotniki pa osnovne stavke, kot so npr. prirejanja. S puščicami označujemo zaporedje izvajanja stavkov.</p>
 
@@ -215,7 +244,15 @@ print(vsotaPrvihN(5)) # Izpiše 15</textarea>
 
 <p align="justify">Sedaj pa isti algoritem zapišimo še z diagramom poteka:</p>
 
+<div class="alert alert-warning" role="alert">
 <p align="center"><img src="img/diagram_vsotaPrvihN.svg" onerror="this.src='diagram_vsotaPrvihN.png'" width="60%" class="img-responsive"></p>
+<p>
+<div class="btn-group" role="group" aria-label="...">
+	<button type="button" id="flow2" class="btn btn-warning"><span class="fa fa-sitemap"></span> Diagram poteka</button>
+	<button type="button" class="btn btn-warning" title="Flowgorithm" data-toggle="modal" data-target="#flowgorithm"><span class="fa fa-info"></span></button>
+</div>
+</p>
+</div>
 
 <p align="justify">Po izvedbi stavkov <code>i += 1</code> in <code>vsota += i</code> skočimo nazaj na preverjanje pogoja <code>i < n</code> in tako dosežemo, da se stavka izvajata, dokler je pogoj izpolnjen. Ko pogoj ni več izpolnjen, sporočimo, da spremenljivka <code>vsota</code> vsebuje izhod algoritma, in algoritem
 zaključimo.</p>
@@ -332,6 +369,45 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 editor.setSize('100%', 175);
 </script>
 <script src="../js/skulpt/theme.js"></script>
+
+<!-- Download Flowgorithm file(s) -->
+<script>
+  $("#flow1").click(function() {
+    var data = '<?xml version="1.0"?><flowgorithm fileversion="2.11"><attributes><attribute name="name" value=""/><attribute name="authors" value="granzelj"/><attribute name="about" value=""/><attribute name="saved" value="2019-04-30 11:43:04 AM"/><attribute name="created" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6Mzg6MjYgQU07MjcxNQ=="/><attribute name="edited" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6NDM6MDQgQU07MTsyODE1"/></attributes><function name="Main" type="None" variable=""><parameters/><body><declare name="a, b, c, naj" type="Integer" array="False" size=""/><input variable="a"/><input variable="b"/><input variable="c"/><if expression="a &lt; b"><then><if expression="a &lt; c"><then><assign variable="naj" expression="a"/></then><else><assign variable="naj" expression="c"/></else></if></then><else><if expression="b &lt; c"><then><assign variable="naj" expression="b"/></then><else><assign variable="naj" expression="c"/></else></if></else></if><output expression="naj" newline="True"/></body></function></flowgorithm>';
+    var blob = new Blob([data], {type: 'text/xml'});
+    var filename = 'min3.fprg';
+    if (window.navigator.msSaveOrOpenBlob) {
+      window.navigator.msSaveBlob(blob, filename);
+    }
+    else {
+      var elem = window.document.createElement('a');
+      elem.href = window.URL.createObjectURL(blob);
+      elem.download = filename;
+      document.body.appendChild(elem);
+      elem.click();
+      document.body.removeChild(elem);
+      window.URL.revokeObjectURL(blob);
+    }
+  });
+
+  $("#flow2").click(function() {
+    var data = '<?xml version="1.0"?><flowgorithm fileversion="2.11"><attributes><attribute name="name" value=""/><attribute name="authors" value="granzelj"/><attribute name="about" value=""/><attribute name="saved" value="2019-04-30 11:47:08 AM"/><attribute name="created" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6NDM6MjQgQU07MjcwOQ=="/><attribute name="edited" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6NDc6MDggQU07MTsyODIz"/></attributes><function name="Main" type="None" variable=""><parameters/><body><declare name="n, i, vsota" type="Integer" array="False" size=""/><input variable="n"/><assign variable="i" expression="0"/><assign variable="vsota" expression="0"/><while expression="i &lt; n"><assign variable="i" expression="i + 1"/><assign variable="vsota" expression="vsota + i"/></while><output expression="vsota" newline="True"/></body></function></flowgorithm>';
+    var blob = new Blob([data], {type: 'text/xml'});
+    var filename = 'vsotaPrvihN.fprg';
+    if (window.navigator.msSaveOrOpenBlob) {
+      window.navigator.msSaveBlob(blob, filename);
+    }
+    else {
+      var elem = window.document.createElement('a');
+      elem.href = window.URL.createObjectURL(blob);
+      elem.download = filename;
+      document.body.appendChild(elem);
+      elem.click();
+      document.body.removeChild(elem);
+      window.URL.revokeObjectURL(blob);
+    }
+  });
+</script>
 
 
 <!-- CookieCuttr -->

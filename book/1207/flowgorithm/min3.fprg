@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="granzelj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-04-30 11:43:04 AM"/>
+        <attribute name="created" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6Mzg6MjYgQU07MjcxNQ=="/>
+        <attribute name="edited" value="Z3JhbnplbGo7R0lNQi1IUC04OzIwMTktMDQtMzA7MTE6NDM6MDQgQU07MTsyODE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, naj" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a &lt; b">
+                <then>
+                    <if expression="a &lt; c">
+                        <then>
+                            <assign variable="naj" expression="a"/>
+                        </then>
+                        <else>
+                            <assign variable="naj" expression="c"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="b &lt; c">
+                        <then>
+                            <assign variable="naj" expression="b"/>
+                        </then>
+                        <else>
+                            <assign variable="naj" expression="c"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="naj" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

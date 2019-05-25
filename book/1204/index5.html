@@ -281,6 +281,487 @@ else:
 			</div>
 		</div>
 
+		<!-- Modal (popup) window: Trace table 1 -->
+		<div id="trace1" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Sledenje programu: Vsota tabele</h4>
+					</div>
+					<div class="modal-body">
+<p><pre>
+1    prodaja = [182, 250, 225, 315, 328, 160,
+2               51, 36, 340, 280, 378, 320]
+3    prodajaLeto = 0
+4    for prodajaMesec in prodaja:
+5      prodajaLeto = prodajaLeto + prodajaMesec
+6    print(prodajaLeto)
+</pre></p>
+					  <p align="justify">Pri sledenju gornjemu programu s pomočjo papirja in svinčnika, bo vrednost spremenljivke <code>prodaja</code> vedno enaka oziroma se ne bo spreminjala. Zato te spremenljivke ne bomo zapisovali v tabelo.</p>
+					  <p align="justify">Zapišimo torej v tabelo, kako se spreminjajo vrednosti spremenljivk in izrazov v gornjem programu. Naslovi stolpcev tabele bodo naslednji:
+					  <ul align="justify">
+					    <li><b>Korak</b> predstavlja zaporedno številko koraka v sledenju programa</li>
+					    <li><b>#</b> predstavlja vrstico kode v kateri se zgodi sprememba vrednosti spremenljivke ali izraza</li>
+					    <li><b><code>prodajaLeto</code></b> predstavlja vsoto vrednosti v tabeli</li>
+					    <li><b><code>prodajaMesec</code></b> predstavlja vsako posamezno vrednost v tabeli</li>
+					  </ul></p>
+					  <div class="table-responsive">
+						<table class="table table-striped table-condensed">
+						  <thead>
+							<tr>
+							  <th class="text-center">Korak</th>
+							  <th class="text-center"><span class="text-muted">#</span></th>
+							  <th class="text-center"><tt>prodajaLeto</tt></th>
+							  <th class="text-center"><tt>prodajaMesec</tt></th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr class="text-center">
+							  <td>1</td>
+							  <td class="text-muted">3</td>
+							  <td>0</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>2</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>182</td>
+							</tr>
+							<tr class="text-center">
+							  <td>3</td>
+							  <td class="text-muted">5</td>
+							  <td>182</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>4</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>250</td>
+							</tr>
+							<tr class="text-center">
+							  <td>5</td>
+							  <td class="text-muted">5</td>
+							  <td>432</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>6</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>225</td>
+							</tr>
+							<tr class="text-center">
+							  <td>7</td>
+							  <td class="text-muted">5</td>
+							  <td>657</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>8</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>315</td>
+							</tr>
+							<tr class="text-center">
+							  <td>9</td>
+							  <td class="text-muted">5</td>
+							  <td>972</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>10</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>328</td>
+							</tr>
+							<tr class="text-center">
+							  <td>11</td>
+							  <td class="text-muted">5</td>
+							  <td>1300</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>12</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>160</td>
+							</tr>
+							<tr class="text-center">
+							  <td>13</td>
+							  <td class="text-muted">5</td>
+							  <td>1460</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>14</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>51</td>
+							</tr>
+							<tr class="text-center">
+							  <td>15</td>
+							  <td class="text-muted">5</td>
+							  <td>1511</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>16</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>36</td>
+							</tr>
+							<tr class="text-center">
+							  <td>17</td>
+							  <td class="text-muted">5</td>
+							  <td>1547</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>18</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>340</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>19</td>
+							  <td class="text-muted">5</td>
+							  <td>1887</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>20</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>280</td>
+							</tr>
+							<tr class="text-center">
+							  <td>21</td>
+							  <td class="text-muted">5</td>
+							  <td>2167</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>22</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>378</td>
+							</tr>
+							<tr class="text-center">
+							  <td>23</td>
+							  <td class="text-muted">5</td>
+							  <td>2545</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>24</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>320</td>
+							</tr>
+							<tr class="text-center">
+							  <td>25</td>
+							  <td class="text-muted">5</td>
+							  <td>2865</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center" style="border-bottom:1px solid #ccc;">
+							  <td>26</td>
+							  <td class="text-muted">6</td>
+							  <td><b>2865</b></td>
+							  <td></td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					  <p align="justify">V koraku 26 se izvede vrstica 6 <code>print(prodajaLeto)</code>. Ker je vrednost spremenljivke <code>prodajaLeto</code> v tem trenuktu oziroma pri tem koraku enaka 2865, se torej izpiše 2865.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Modal (popup) window: Trace table 2 -->
+		<div id="trace2" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Sledenje programu: Iskanje največje vrednosti</h4>
+					</div>
+					<div class="modal-body">
+<p><pre>
+1    prodaja = [182, 250, 225, 315, 328, 160,
+2               51, 36, 340, 280, 378, 320]
+3    najProdaja = prodaja[0]
+4    for prodajaMesec in prodaja:
+5      if prodajaMesec > najProdaja:
+6        najProdaja = prodajaMesec
+7    print(najProdaja)
+</pre></p>
+					  <p align="justify">Pri sledenju gornjemu programu s pomočjo papirja in svinčnika, bo vrednost spremenljivke <code>prodaja</code> vedno enaka oziroma se ne bo spreminjala. Zato te spremenljivke ne bomo zapisovali v tabelo.</p>
+					  <p align="justify">Zapišimo torej v tabelo, kako se spreminjajo vrednosti spremenljivk in izrazov v gornjem programu. Naslovi stolpcev tabele bodo naslednji:
+					  <ul align="justify">
+					    <li><b>Korak</b> predstavlja zaporedno številko koraka v sledenju programa</li>
+					    <li><b>#</b> predstavlja vrstico kode v kateri se zgodi sprememba vrednosti spremenljivke ali izraza</li>
+					    <li><b><code>najProdaja</code></b> predstavlja vrednost meseca z največjo prodajo</li>
+					    <li><b><code>prodajaMesec</code></b> predstavlja vrednost prodaje v posameznem mesecu</li>
+					    <li><b><code>prodajaMesec &lt; najProdaja</code></b> predstavlja, kako se spreminjajo vrednosti tega izraza</li>
+					  </ul></p>
+					  <div class="table-responsive">
+						<table class="table table-striped table-condensed">
+						  <thead>
+							<tr>
+							  <th class="text-center">Korak</th>
+							  <th class="text-center"><span class="text-muted">#</span></th>
+							  <th class="text-center"><tt>najProdaja</tt></th>
+							  <th class="text-center"><tt>prodajaMesec</tt></th>
+							  <th class="text-center"><tt>prodajaMesec &gt; najProdaja</tt></th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr class="text-center">
+							  <td>1</td>
+							  <td class="text-muted">3</td>
+							  <td>182</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>2</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>182</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>3</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>182 &gt; 182 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>4</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>250</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>5</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>250 &gt; 182 &rarr; <tt>True</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>6</td>
+							  <td class="text-muted">6</td>
+							  <td>250</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>7</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>225</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>8</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>225 &gt; 250 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>9</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>315</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>10</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>315 &gt; 250 &rarr; <tt>True</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>11</td>
+							  <td class="text-muted">6</td>
+							  <td>315</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>12</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>328</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>13</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>328 &gt; 315 &rarr; <tt>True</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>14</td>
+							  <td class="text-muted">6</td>
+							  <td>328</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>15</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>160</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>16</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>160 &gt; 328 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>17</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>51</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>18</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>51 &gt; 328 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>19</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>36</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>20</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>36 &gt; 328 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>21</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>340</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>22</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>340 &gt; 328 &rarr; <tt>True</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>23</td>
+							  <td class="text-muted">6</td>
+							  <td>340</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>24</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>280</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>25</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>280 &gt; 340 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>26</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>378</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>27</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>378 &gt; 340 &rarr; <tt>True</tt></td>
+							</tr>
+							<tr class="text-center">
+							  <td>28</td>
+							  <td class="text-muted">6</td>
+							  <td>378</td>
+							  <td></td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>29</td>
+							  <td class="text-muted">4</td>
+							  <td></td>
+							  <td>320</td>
+							  <td></td>
+							</tr>
+							<tr class="text-center">
+							  <td>30</td>
+							  <td class="text-muted">5</td>
+							  <td></td>
+							  <td></td>
+							  <td>320 &gt; 378 &rarr; <tt>False</tt></td>
+							</tr>
+							<tr class="text-center" style="border-bottom:1px solid #ccc;">
+							  <td>31</td>
+							  <td class="text-muted">7</td>
+							  <td><b>378</b></td>
+							  <td></td>
+							  <td></td>
+							</tr>
+						  </tbody>
+						</table>
+					  </div>
+					  <!-- tabela naj bo nad to vrstico! -->
+					  <p align="justify">V koraku 31 se izvede vrstica 7 <code>print(najProdaja)</code>. Ker je vrednost spremenljivke <code>najProdaja</code> v tem trenuktu oziroma pri tem koraku enaka 378, se torej izpiše 378.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
@@ -293,6 +774,10 @@ else:
 
 <div class="alert alert-info" role="alert">
 <p align="justify">Vzemi svinčnik in kos papirja ter <i>po korakih</i> »izvedi« program za izračun vsote tabele in program za iskanje največje vrednosti. Kakšne so vrednosti posameznih spremenljivk po posameznih korakih izvajanja?</p>
+<p>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#trace1"><span class="fa fa-search"></span> Sledenje programu 1</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#trace2"><span class="fa fa-search"></span> Sledenje programu 2</button>
+</p>
 </div>
 
 <h4>Vaja</h4>
