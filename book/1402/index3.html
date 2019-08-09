@@ -181,18 +181,18 @@
 <p align="justify">Spletni brskalnik in strežnik tako dolga kot tudi kratka sporočila protokola HTTP izročita procesu, ki skrbi za prenos – imenujemo ga tudi transportni protokol. Navadno se pri spletnem brskanju kot transportni protokol uporablja protokol TCP, ki je tako razširjen in pomemben, da je skupaj z internetnim protokolom IP poskrbel za poimenovanje celotnega sklada internetnih protokolov: TCP/IP.
 </p>
 <p align="justify">
-Transportni protokol predpisuje pravila za prenos podatkov vseh aplikacij, ki tečejo na enem računalniku. Transportni proces pregleda vsako aplikacijsko sporočilo  (v našem primeru zahtevo HTTP ali pa odgovor HTTP) in ga po potrebi razkosa na več manjših delov.</p>
+Transportni protokol predpisuje pravila za prenos podatkov vseh aplikacij, ki se izvajajo v nekem računalniku. Transportni proces pregleda vsako aplikacijsko sporočilo  (v našem primeru zahtevo HTTP ali pa odgovor HTTP) in ga po potrebi razbije na več manjših delov.</p>
 
-<p align="justify">Te dele imenujemo segmenti. Vsak segment opremi z naslovom aplikacije, kateri je namenjen – temu naslovu rečemo številka vrat (<i>ang. port number</i>), na katerih posluša aplikacija (na primer spletni strežnik, poštni strežnik, strežnik vaše najljubše spletne igre... in podobno). Naslov je potreben zato, da bo sprejemni transportni proces na drugi strani lahko ugotovil, kateri aplikaciji na njegovem računalniku so namenjeni. Segmente nato odpošlje v omrežje.</p>
+<p align="justify">Te dele imenujemo segmenti. Vsak segment opremi z naslovom aplikacije, ki ji je ta namenjen – ta naslov se imenuje številka vrat (<i>ang. port number</i>), na katerih posluša aplikacija (na primer spletni strežnik, poštni strežnik, strežnik tvoje najljubše spletne igre in podobno). Naslov je potreben zato, da bo sprejemni transportni proces na drugi strani lahko ugotovil, kateri aplikaciji so namenjeni. Segmente nato odpošlje v omrežje.</p>
 
-<p align="justify">Na sprejemni strani segmenti dospejo do procesa TCP, torej do transportne plasti, ki jim odstrani transportne glave, jih po potrebi sestavi skupaj in jih v skladu z njihovim ciljnim naslovom izroči ciljni aplikaciji, v našem primeru spletnemu strežniku.</p>
-
-<p align="justify">V primeru protokola TCP sprejemna stran tudi potrdi vsak prejeti segment, po domače povedano, odpošlje nazaj paketek posebne oblike, ki pomeni potrditev, da je bil osnovni segment pravilno prenešen in sprejet.</p>
+<p align="justify">Na sprejemni strani segmenti dospejo do procesa TCP, torej do transportne plasti, ki jim odstrani transportne glave, jih po potrebi sestavi skupaj in jih v skladu z njihovim ciljnim naslovom posreduje ciljni aplikaciji, v našem primeru spletnemu strežniku.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
+<p align="justify">V primeru protokola TCP sprejemna stran tudi potrdi vsak prejeti segment, po domače povedano, odpošlje nazaj paketek posebne oblike, ki pomeni potrditev, da je bil osnovni segment pravilno prenesen in sprejet.</p>
+
 <script>
   var ratio = 0.71;
   var floor = Math.floor;

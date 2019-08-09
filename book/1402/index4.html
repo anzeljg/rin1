@@ -178,18 +178,20 @@
  
 <p align="center"><img src="img/TCPIP_omrezna_plast.png" class="img-responsive" /></p>
 
-<p align="justify">Kot vidimo, tudi z opisom delovanja transportne plasti še nismo prišli do električnih signalov. V resnici si moramo prej ogledati še več podrobnosti – kako delujeta še dve komunikacijski plasti. Kar nadaljujmo z omrežno plastjo...</p>
+<p align="justify">Opisali smo delovanje transportne plasti, pa še vedno nismo obravnavali električnih signalov. Pravzaprav moramo pred tem preučiti še nekaj podrobnosti – delovanje še dveh drugih komunikacijskih plasti. V nadaljevanju bomo opisali omrežno plast.</p>
 
-<p align="justify">Transportna plast na strani spletnega brskalnika segmente vrže v omrežje – vendar kaj sploh to pomeni? V resnici vsak segment posebej izroči drugemu procesu, ki še vedno teče na istem računalniku. Ta proces, ki mu pravimo omrežni proces, deluje po pravilih internetnega protokola – IP. Najpomembnejša naloga omrežne plasti in s tem internetnega protokola je iskanje poti po omrežju od izvora do cilja.</p>
+<p align="justify">Transportna plast na strani spletnega brskalnika segmente prenese v omrežje – vendar kaj sploh to pomeni? Vsak segment posebej posreduje drugemu procesu, ki se še vedno izvaja v istem računalniku. Ta proces, ki ga imenujemo omrežni proces, deluje po pravilih internetnega protokola – IP. Najpomembnejša naloga omrežne plasti in s tem internetnega protokola je iskanje poti po omrežju od izvora do cilja.</p>
 
-<p align="justify">Omrežni proces segmente opremi z glavo, v kateri so še dodatni podatki za usmerjanje po internetnem omrežju do cilja. Najpomembnejši od teh podatkov je naslov IP ciljnega računalnika. Na podlagi naslova IP vsako omrežno vozlišče (rečemo jim tudi usmerjevalniki) odloči, kam bo poslalo omrežni paket v naslednjem skoku po omrežju. Tako je najpomembnejša naloga omrežne plasti, da za vsak paket posebej poišče pot do ciljnega računalnika.</p>
+<p align="justify">Omrežni proces segmente opremi z glavo, v kateri so tudi dodatni podatki za usmerjanje po internetnem omrežju do cilja. Najpomembnejši od teh podatkov je naslov IP ciljnega računalnika. Na podlagi naslova IP vsako omrežno vozlišče (imenovano tudi usmerjevalnik) odloči, kam bo poslalo omrežni paket v naslednjem skoku po omrežju. Tako je najpomembnejša naloga omrežne plasti, da za vsak paket posebej poišče pot do ciljnega računalnika.</p>
 
-<p align="justify">Omrežna plast se na vsakem skoku zanese na povezavo, da bo prenesla paket od trenutne do sosednje naprave. Ker so povezave lahko različnih tehnologij, so tudi protokoli na povezavni plasti zelo različni. Naštejmo samo nekaj imen, gotovo ste katero od teh že kdaj slišali: Ethernet, BlueTooth, WiFi ali IEEE 802.11 in podobna. Glavna naloga povezavne plasti je torej prenos paketa med dvema sosednjima napravama.</p>
+<p align="justify">Omrežna plast na vsakem skoku predvideva, da bo povezava prenesla paket od trenutne do sosednje naprave. Ker so povezave lahko različnih tehnologij, so tudi protokoli na povezavni plasti zelo različni.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
+<p align="justify">Naštejmo samo nekaj imen, gotovo si za katero od teh že kdaj slišal(-a): Ethernet, Bluetooth, Wi-Fi ali IEEE 802.11 ipd. Glavna naloga povezavne plasti je torej prenos paketa med sosednjima napravama.</p>
+
 <script>
   var ratio = 0.71;
   var floor = Math.floor;

@@ -177,11 +177,11 @@
 <h1>Povezavna in fizična plast</h1>
  
 <p align="center">
-<img src="img/TCPIP_povezavna_plast.png" class="img-responsive" />
+<img src="img/TCPIP_povezavna_plast.png" class="img-responsive" style="margin-bottom:5px" />
 <img src="img/TCPIP_fizicna_plast.png" class="img-responsive" />
 </p>
 
-<p align="justify">Šele povezavna plast ima neposreden dostop do fizične povezave, na primer žice, ki je najnižja plast v komunikacijskem sistemu. Povezavna plast od fizične pričakuje storitev prenosa signalov – povezavni paketek, ki je sestavljen iz logičnih ničel in enic, pretvori v signale dveh vrst: take, ki opisujejo ničle in take, ki opisujejo enice. Signal odpošlje na povezavo in na drugi strani – na sosednji napravi, ki nihanje elektromagnetnih valov prevede nazaj v ničle in enice.</p>
+<p align="justify">Šele povezavna plast ima neposreden dostop do fizične povezave, na primer žice, ki je najnižja plast v komunikacijskem sistemu. Povezavna plast od fizične pričakuje storitev prenosa signalov – povezavni paketek, ki je sestavljen iz logičnih ničel in enic, pretvori v signale dveh vrst: take, ki opisujejo ničle, in take, ki opisujejo enice. Signal odpošlje v povezavo in na drugi strani – v sosednji napravi se nihanje elektromagnetnih valov prevede nazaj v ničle in enice.</p>
 
 <script>
   var ratio = 0.71;
@@ -540,13 +540,13 @@
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Šele ko električni signal doseže zadnji računalnik v verigi (to je Facebookov strežnik), se sproži povezavna plast na njemu, preveri pravilnost prenosa, izlušči paket IP in ga izroči omrežni plasti.</p>
+<p align="justify">Šele ko električni signal doseže zadnji računalnik v verigi (to je Facebookov strežnik), se sproži povezavna plast, ki preveri pravilnost prenosa, izlušči paket IP in ga posreduje omrežni plasti.</p>
 
-<p align="justify">Tudi omrežna plast preveri pravilnost prenosa, izlušči segment TCP in ga izroči transportni plasti.</p>
+<p align="justify">Tudi omrežna plast preveri pravilnost prenosa, izlušči segment TCP in ga posreduje transportni plasti.</p>
 
-<p align="justify">Transportna plast odpošlje potrditev, izlušči aplikacijsko sporočilo in ga (če je potrebno) sestavi skupaj s sosednjimi paketki v aplikacijsko sporočilo protokola HTTP. To sporočilo doseže aplikacijo – spletni strežnik, ki ga prebere in ugotovi, katero spletno strani si je zaželel videti odjemalec. Zato sestavi primerno oblikovan odgovor HTTP in ga vrne odjemalcu.</p>
+<p align="justify">Transportna plast odpošlje potrditev, izlušči aplikacijsko sporočilo in ga (če je treba) sestavi skupaj s sosednjimi paketki v aplikacijsko sporočilo protokola HTTP. To sporočilo doseže aplikacijo – spletni strežnik, ki ga prebere in ugotovi, katero spletno stran želi videti odjemalec. Nato sestavi primerno oblikovan odgovor HTTP in ga vrne odjemalcu.</p>
 
-<p align="justify">In že smo spet na začetku. Namreč – kaj pomenijo besede »vrne odjemalcu«? Da, prav ste uganili, spet steče celotna v tem poglavju opisana veriga. Pretvarjanje v dvojiško obliko, transportna plast, omrežna plast, povezavna plast, fizična plast z električnim signalom ... in na drugi strani nazaj... in tako dalje, dokler se Klemen ne naveliča brskati po spletu.</p>
+<p align="justify">In že smo spet na začetku. Kaj namreč pomeni izraz »vrne odjemalcu«? Da, pravilno si uganil(-a), znova se izvede celotna veriga, opisana v tem poglavju – pretvarjanje v dvojiško obliko, transportna plast, omrežna plast, povezavna plast, fizična plast z električnim signalom ... in na drugi strani nazaj ... in tako dalje, dokler se Klemen ne naveliča brskati po spletu.</p>
 <!-- Right column end -->
 					</div>
 				</div>

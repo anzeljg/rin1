@@ -176,9 +176,9 @@
 <!-- Left column start -->
 <h1>Aplikacijska plast</h1>
  
-<p align="center"><img src="img/TCPIP_aplikacijska_plast2.png" class="img-responsive" /></p>
+<p align="center"><img src="img/TCPIP_aplikacijska_plast.png" class="img-responsive" /></p>
 
-<p align="justify">Ko želi Klemen na Facebooku v svoj status napisati »Kako lepo jutro!« in pripeti še fotografijo sončnega vzhoda, ki jo je ravno posnel, bo njegov spletni brskalnik naredil iz tega dve sporočili po standardu protokola <b>HTTP</b> (<i>ang. HyperText Transfer Protokol</i>). Eno sporočilo bo vsebovalo besedilo, drugo pa fotografijo. Prav vsako sporočilo protokola HTTP se začne s predpisanim delom, ki mu rečemo glava. Glava vsebuje podatke, ki so potrebni zato, da sporočilo najde pot prek interneta do ciljnega strežnika. Med drugim je v glavi tudi spletni naslov cilja, ki je v našem primeru nekaj podobnega kot <u>http://www.facebook.com</u>. Glavi sledijo podatki, torej besedilo oziroma fotografija.</p>
+<p align="justify">Ko želi Klemen na Facebooku v statusno polje vnesti »Kako lepo jutro!« in pripeti še fotografijo sončnega vzhoda, ki jo je ravnokar posnel, bo njegov spletni brskalnik naredil iz tega dve sporočili po standardu protokola <b>HTTP</b> (<i>ang. HyperText Transfer Protokol</i>). Eno sporočilo bo vsebovalo besedilo, drugo pa fotografijo. Prav vsako sporočilo protokola HTTP se začne s predpisanim delom, ki ga imenujemo glava. Glava vsebuje vse potrebne podatke, da sporočilo najde pot prek interneta do ciljnega strežnika. Med drugim je v glavi tudi spletni naslov cilja, ki je v našem primeru nekaj podobnega kot <u>http://www.facebook.com</u>. Glavi sledijo podatki, torej besedilo oziroma fotografija.</p>
 
 <script>
   var ratio = 0.71;
@@ -513,9 +513,9 @@
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Brskalnik pošlje to HTTP sporočilo spletnemu strežniku Facebook. Spletni strežnik odstrani glavo, besedilo in fotografijo pa shrani med Klemnove podatke in jih od tistega trenutka dalje prikazuje na Klemnovi časovnici. Ker se pogovarjata dve aplikaciji (spletni strežnik in spletni brskalnik), rečemo temu aplikacijska povezava. Včasih rečemo tudi, da se komunikacija dogaja na aplikacijski plasti.</p>
+<p align="justify">Brskalnik to sporočilo HTTP pošlje spletnemu strežniku Facebook. Spletni strežnik odstrani glavo, besedilo in fotografijo pa shrani med Klemnove podatke in jih od tistega trenutka dalje prikazuje na Klemnovi časovnici. Ker pri tem komunicirata aplikaciji (spletni strežnik in spletni brskalnik), to imenujemo aplikacijska povezava. Včasih pravimo tudi, da komunikacija poteka na aplikacijski plasti.</p>
 
-<p align="justify">Kje pa pridejo električni signali, boste vprašali? Res je, tukaj smo velik del vmesnega dogajanja izpustili. Pa si ga poglejmo še malo bolj podrobno. Ko spletni brskalnik oblikuje aplikacijsko sporočilo po predpisih protokola HTTP, je to sporočilo lahko tudi zelo dolgo, na primer če vsebuje veliko sliko ali zelo dolg dokument. Preden je besedilno sporočilo ali pa slika pripravljena za prenos na drugo stran, je treba sporočilo zapisati v primerno obliko. Vsi že veste, da je za računalnik primerna oblika predvsem dvojiška, torej zapis iz ničel in enic. Vsaka črka, ali pa vsaka pika slike dobi svojo kodo, sestavljeno iz ničel in enic. Pri tem se uporabijo natančno določena pravila, ki omogočijo, da se kasneje na sprejemnikovi strani ničle in enice spet preslikajo nazaj v začetno sporočilo ali sliko.</p>
+<p align="justify">Kje pa pridejo nastopijo signali, boš vprašal(-a)? Res je, tukaj smo velik del vmesnega dogajanja izpustili. Pa si zadevo oglejmo še malo bolj podrobno. Ko spletni brskalnik oblikuje aplikacijsko sporočilo po predpisih protokola HTTP, je to sporočilo lahko tudi zelo dolgo, na primer če vsebuje veliko sliko ali zelo dolg dokument. Preden je besedilno sporočilo (ali slika) pripravljeno za prenos na drugo stran, je treba sporočilo zapisati v primerno obliko. Gotovo že veš, da je za računalnik primerna oblika predvsem dvojiška, torej zapis iz ničel in enic. Vsaki črki oziroma slikovni piki se dodeli koda, sestavljena iz ničel in enic. Pri tem se uporabijo natančno določena pravila, ki omogočijo, da se nato na sprejemnikovi strani ničle in enice spet preslikajo nazaj v začetno sporočilo ali sliko.</p>
 
 <script>
   var ratio = 0.71;
