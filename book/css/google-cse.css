@@ -6,6 +6,9 @@ input.gsc-search-button-v2 {
     padding: 5px 26px !important;
     width: 68px !important;
 }
+.gsc-input-box {
+    height: 32px !important;
+}
 .gsc-control-cse {
     padding-top: 8px !important;
     padding-bottom: 0px !important;
