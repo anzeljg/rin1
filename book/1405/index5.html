@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="../favicon.ico" />
 
-	<title>Sistem domenskih imen - DNS</title>
+	<title>Sistem domenskih imen – DNS</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -176,7 +176,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Primeri DNS zapisov</h4>
+						<h4 class="modal-title">Primeri zapisov DNS</h4>
 					</div>
 					<div class="modal-body">
 						<pre>
@@ -200,42 +200,42 @@ karenadomena.com.      NS     dns.karenadomena.com.</pre>
 				<div class="row">
 					<div class="col-md-6">
 <!-- Left column start -->
-<h1>Sistem domenskih imen - DNS</h1>
+<h1>Sistem domenskih imen – DNS</h1>
  
 <h2>Splošno o DNS</h2>
 
 <p align="justify">DNS je porazdeljena oz. distribuirana (<i>ang. distributed</i>) podatkovna baza, v kateri so shranjeni različni podatki:
 <ul style="text-align:justify">
-	<li>Preslikave med IP naslovom in imenom strežnika (A in AAAA zapisi). A zapis (<i>ang. Address record</i>) preslika IPv4 naslov v ime strežnika in obratno, AAAA zapis (<i>ang. IPv6 address record</i>) preslika IPv6 naslov v ime strežnika in obratno.</li>
-	<li>Preslikave med IP naslovom in imenom računalnika (PTR zapisi). PTR zapis (<i>ang. PoinTeR record</i>) preslika IP naslov končne naprave v ime naprave in obratno.</li>
-	<li>CNAME zapisi oz. aliasi (<i>ang. Canonical Name</i>). CNAME zapis pove v kateri domeni so podatki za nadaljne iskanje IP naslova.</li>
-	<li>Zapisi za usmerjanje pošte (MX zapisi). MX zapis (<i>ang. Mail eXchange record</i>) preslika ime domene v spisek strežnikov elektronske pošte za to domeno.</li>
-	<li>Zapisi o domenskih strežnikih (NS zapisi). NS zapis (<i>ang. Name Server record</i>) preslika ime domene v spisek DNS strežnikov za to domeno.</li>
+	<li>Preslikave med IP-naslovom in imenom strežnika (zapisi A in AAAA). Zapis A (<i>ang. Address record</i>) preslika naslov IPv4 v ime strežnika in obratno, zapis AAAA (<i>ang. IPv6 address record</i>) preslika naslov IPv6 v ime strežnika in obratno.</li>
+	<li>Preslikave med IP-naslovom in imenom računalnika (zapisi PTR). Zapis PTR (<i>ang. PoinTeR record</i>) preslika IP-naslov končne naprave v ime naprave in obratno.</li>
+	<li>Zapisi CNAME oz. aliasi (<i>ang. Canonical Name</i>). Zapis CNAME označuje, v kateri domeni so podatki za nadaljnje iskanje IP-naslova.</li>
+	<li>Zapisi za usmerjanje pošte (zapisi MX). Zapis MX (<i>ang. Mail eXchange record</i>) preslika ime domene v spisek strežnikov elektronske pošte za to domeno.</li>
+	<li>Zapisi o domenskih strežnikih (zapisi NS). Zapis NS (<i>ang. Name Server record</i>) preslika ime domene v spisek strežnikov DNS za to domeno.</li>
 </ul>
 </p>
 
-<p><button class="btn btn-primary" data-toggle="modal" data-target="#example">Primeri DNS zapisov</button></p>
+<p><button class="btn btn-primary" data-toggle="modal" data-target="#example">Primeri zapisov DNS</button></p>
 
-<p align="justify">V DNS svetu v grobem poznamo dva tipa DNS strežnikov:
+<p align="justify">V svetu DNS v grobem poznamo dva tipa strežnikov DNS:
 <ul style="text-align:justify">
 	<li>avtoritativni strežnik in</li>
 	<li>rekurzivni strežnik</li>
 </ul>
 </p>
 
-<p align="justify">Prvi ima podatke o domeni, drugi pa zna najti podatke o domeni. Za vsako domeno naj bi bilo več avtoritativnih strežnikov. Avtoritativni strežniki nastopajo v dveh vlogah:
+<p align="justify">Prvi ima podatke o domeni, drugi pa lahko te podatke poišče. Za vsako domeno naj bi bilo več avtoritativnih strežnikov. Avtoritativni strežniki nastopajo v dveh vlogah:
 <ul style="text-align:justify">
-	<li>gospodar (<i>ang. master</i>) = domenski strežnik, ki ima osnovno kopijo podatkov o domeni in</li>
-	<li>suženj (<i>ang. slave</i>) = domenski strežnik, ki ima kopijo podatkov o domeni (kopijo dobi iz &quot;master&quot; strežnika).</li>
+	<li>gospodar (<i>ang. master</i>) = domenski strežnik, ki ima osnovno kopijo podatkov o domeni, in</li>
+	<li>suženj (<i>ang. slave</i>) = domenski strežnik, ki ima kopijo podatkov o domeni (kopijo pridobi iz »master« strežnika).</li>
 </ul>
 </p>
 
-<p align="justify">Priporočljivo je, da poleg &quot;master&quot; strežnika, obstaja vsaj še en &quot;slave&quot; strežnik, ki je po možnosti na kakšni drugi lokaciji.</p>
+<p align="justify">Priporočljivo je, da poleg »master« strežnika obstaja vsaj še en »slave« strežnik, ki je po možnosti na neki drugi lokaciji.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 <!-- Right column start -->
-<h2>Primer DNS iskanja</h2>
+<h2>Primer iskanja DNS</h2>
 
 <style type="text/css">
 #mynetwork {
@@ -257,20 +257,20 @@ div.network-seperatorLine {
 <div id="mynetwork"></div>
 <p><button id="query" class="btn btn-primary" onclick="path([1, 2, 3, 4, 5, 6, 7, 8])">Poizvedi</button></p>
 
-<p align="justify">Ko v spletni brskalnik vtipkamo npr. <code>www.acm.si</code>, se zgodijo naslednje DNS poizvedbe:
+<p align="justify">Ko v spletni brskalnik vnesemo na primer <code>www.acm.si</code>, se izvedejo naslednje poizvedbe DNS:
 <ol style="text-align:justify">
-	<li>računalnik vpraša rekurzivni DNS strežnik, ki ga imate nastavljenega za internetno povezavo, po ustreznih zapisih za <code>www.acm.si</code>,</li>
+	<li>računalnik v rekurzivni strežnik DNS, nastavljen za internetno povezavo, pošlje poizvedbo o ustreznih zapisih za <code>www.acm.si</code>,</li>
 	<li>rekurzivni strežnik posreduje zahtevo avtoritativnim strežnikom za <code>.</code> (root),</li>
-	<li><code>.</code> (root) strežniki vrnejo spisek DNS strežnikov za <code>.si</code>,</li>
-	<li>rekurzivni strežnik nato posreduje zahtevo na avtoritativne strežnike za <code>.si</code>,</li>
+	<li>Strežniki <code>.</code> (root) vrnejo spisek strežnikov DNS za <code>.si</code>,</li>
+	<li>rekurzivni strežnik nato posreduje zahtevo v avtoritativne strežnike za <code>.si</code>,</li>
 	<li>avtoritativni strežniki za <code>.si</code> vrnejo spisek avtoritativnih strežnikov za <code>acm.si</code>,</li>
 	<li>rekurzivni strežnik nato posreduje zahtevo avtoritativnim strežnikom za <code>acm.si</code>,</li>
-	<li>ker avtoritativni strežniki za <code>acm.si</code> vedo odgovor na naše vprašanje oz. poizvedbo, vrnejo rekurzivnemu strežniku ustrezne podatke (<code>www.acm.si</code> je alias za <code>acm.si</code>, ki ima IP naslov 193.2.76.35),</li>
-	<li>rekurzivni strežnik računalniku posreduje odgovor, ki ga je dobil (<code>www.acm.si</code> je alias za <code>acm.si</code>, ki ima IP naslov 193.2.76.35).</li>
+	<li>ker avtoritativni strežniki za <code>acm.si</code> imajo odgovor na našo poizvedbo, vrnejo rekurzivnemu strežniku ustrezne podatke (<code>www.acm.si</code> je alias za <code>acm.si</code>, ki ima IP-naslov 193.2.76.35),</li>
+	<li>rekurzivni strežnik računalniku posreduje odgovor, ki ga je prejel (<code>www.acm.si</code> je alias za <code>acm.si</code>, ki ima IP-naslov 193.2.76.35).</li>
 </ol>
 </p>
 
-<p align="justify">V resnici ni nujno, da pride do vseh teh poizvedb, saj si rekurzivni strežniki za nekaj časa "zapomnijo" odgovor, ki so ga dobili z avtoritativnih strežnikov. Za koliko časa si zapomnijo odgovor, je odvisno od različnih nastavitev.</p>
+<p align="justify">V resnici ni nujno, da pride do vseh teh poizvedb, saj si rekurzivni strežniki za nekaj časa »zapomnijo« odgovor, ki so ga prejeli od avtoritativnih strežnikov. Kako dolgo si zapomnijo odgovor, je odvisno od različnih nastavitev.</p>
 <!-- Right column end -->
 					</div>
 				</div>

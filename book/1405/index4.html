@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="../favicon.ico" />
 
-	<title>Sistem domenskih imen - DNS</title>
+	<title>Sistem domenskih imen – DNS</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -177,13 +177,13 @@
 				<div class="row">
 					<div class="col-md-6">
 <!-- Left column start -->
-<h1>Sistem domenskih imen - DNS</h1>
+<h1>Sistem domenskih imen – DNS</h1>
  
-<p align="justify">V prejšnji enoti smo že povedali, da ima vsaka naprava v internetu svoj IP naslov. Ljudje pa  si lažje kot množico številk zapomnimo besede. Zato napravam poleg IP naslovov dodelimo še imena. Tudi organizacijskim enotam (šola, podjetje, ustanova, ...) dodelimo imena. Tudi države in mednarodne skupine imajo dodeljena svoja imena.</p>
+<p align="justify">V prejšnji enoti smo že povedali, da ima vsaka naprava v internetu svoj IP-naslov. Ljudje pa  si lažje kot množico številk zapomnimo besede. Zato napravam poleg IP-naslovov dodelimo še imena. Tudi organizacijskim enotam (šola, podjetje, ustanova, ...) dodelimo imena. Tudi države in mednarodne skupine imajo dodeljena svoja imena.</p>
 
-<p align="justify">Na internetu so skupine računalnikov ali uporabnikov (pogosto iz iste organizacije) povezani v domeno. Zapis domene je sestavljen iz imen, ločenih s piko. Imena so običajno smiselno izbrana. Tak npr. ime domene arnes.si pomeni, da je to domena organizacije Arnes v Sloveniji. Domeno organizacija ali posameznik lahko registrira pri t.i. registratorjih. Ali je domena prosta za registracijo ali ne, pa lahko poizvemo s storitvijo WHOIS.</p>
+<p align="justify">Na internetu so skupine računalnikov ali uporabnikov (pogosto iz iste organizacije) povezane v domeno. Zapis domene je sestavljen iz imen, ločenih s piko. Imena so običajno smiselno izbrana. Tako na primer ime domene <code>arnes.si</code> pomeni, da je to domena organizacije Arnes v Sloveniji. Domeno lahko organizacija ali posameznik registrira pri t.i. registratorjih. Ali je domena prosta za registracijo, pa lahko poizvemo s storitvijo WHOIS.</p>
 
-<p align="justify">Za povezavo med imeni in IP naslovi skrbijo DNS strežniki, ki so povezani v sistem DNS. Računalniki v omrežju dostopajo do DNS strežnikov, da iz imena npr. spletne strani pridobijo IP naslov za komunikacijo z WWW strežnikom, na katerem je dosegljiva spletna stran.</p>
+<p align="justify">Za povezavo med imeni in IP-naslovi skrbijo strežniki DNS, ki so povezani v sistem DNS. Računalniki v omrežju dostopajo do strežnikov DNS, da iz imena na primer spletne strani pridobijo IP-naslov za komunikacijo s strežnikom WWW, v katerem je dosegljiva spletna stran.</p>
 
 <h2>Način delovanja DNS</h2>
 
@@ -210,7 +210,7 @@ div.network-seperatorLine {
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Domene poimenujemo različno, glede na položaj v drevesu:
+<p align="justify">Domene poimenujemo različno glede na položaj v drevesu:
 <ul style="text-align:justify">
 	<li><code>.</code> je korenska (<i>ang. root</i>) domena</li>
 	<li><code>.si</code>, <code>.at</code>, <code>.eu</code>, <code>.com</code> so vrhnje domene,</li>
@@ -219,14 +219,14 @@ div.network-seperatorLine {
 </ul>
 </p>
 
-<p align="justify">Vsaka domena je (lahko) v upravljanju drugega vzdrževalca. Vsaka domena vsebuje zgoraj omenjene DNS zapise. V root domena in vrhnje domene vsebujejo večinoma samo NS zapise in nujne A/AAAA zapise, ki usmerjajo druge DNS strežnike na DNS strežnike, ki imajo podatke o želeni domeni.</p>
+<p align="justify">Vsaka domena je (lahko) v upravljanju drugega vzdrževalca. Vsaka domena vsebuje zgoraj omenjene zapise DNS. Korenska domena in vrhnje domene vsebujejo večinoma samo zapise NS in obvezne zapise A/AAAA, ki usmerjajo druge strežnike DNS do strežnikov DNS, ki imajo podatke o želeni domeni.</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Povleci posamezno točko preko DNS strežnika v obe smeri ter opazuj, kako se IP naslov spremeni v ime domene ter ime domene nazaj v IP naslov.</p>
+<p align="justify">Povleci posamezno točko prek strežnika DNS v obe smeri ter opazuj, kako se IP-naslov spremeni v ime domene ter ime domene nazaj v IP-naslov.</p>
 
-<p align="justify">Čeprav pri slikovnih ponazoritvah za strežnik uporabljamo ikono računalnika, se moramo zavedati da na enem računalniku lahko hkrati teče več strežniških programov. Ikona računalnika v spodnji nalogi tako pravzaprav  pomeni DNS strežniški program, ne pa fizičnega računalnika.</p>
+<p align="justify">Čeprav pri slikovnih ponazoritvah za strežnik uporabljamo ikono računalnika, moramo upoštevati, da se lahko v enem računalniku hkrati izvaja več strežniških programov. Ikona računalnika v spodnji nalogi tako pravzaprav označuje program strežnika DNS, ne pa fizičnega računalnika.</p>
 
 <div id="jxgbox71" class="jxgbox" style="width:400px;height:215px;margin:10px auto;"></div>
 <button type="button" class="btn btn-info" id="buttonReset71" onclick="reset71()"><span class="fa fa-refresh"></span> Ponastavi</button>

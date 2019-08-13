@@ -199,23 +199,23 @@
 <!-- Left column start -->
 <h1>Elektronska pošta</h1>
  
-<p align="justify">Elektronska pošta je bila ena prvih storitev interneta. Hitrost, njena prednost pred klasično pošto je navdušila uporabnike. Obenem pa je ohranila pomembno prednost klasične pošte: sporočilo uporabnika počaka, dokler ga ne prebere. V začetku so sporočila vsebovale le znake, pripenjanje slik in multimedijskih izdelkov se je razmahnilo šele mnogo kasneje...</p>
+<p align="justify">Elektronska pošta je bila ena prvih storitev interneta. Hitrost, njena prednost v primerjavi z navadno pošto je navdušila uporabnike. Obenem pa je ohranila pomembno lastnost navadne pošte: sporočilo uporabnika počaka, dokler ga ta ne prebere. Na začetku so sporočila vsebovala le znake, pripenjanje slik in multimedijskih izdelkov se je razmahnilo šele mnogo pozneje ...</p>
 
-<p align="justify">Sistem elektronske pošte temelji na delovanju poštnih strežnikov, kjer se zbirajo sporočila. Uporabniki se z računalnikom priključimo na poštni strežnik in preberemo ali napišemo in odpošljemo sporočila.</p>
+<p align="justify">Sistem elektronske pošte temelji na delovanju poštnih strežnikov, v katerih se zbirajo sporočila. Uporabniki se z računalnikom povežemo s poštnim strežnikom ter preberemo ali napišemo in odpošljemo sporočila.</p>
 
-<p align="justify">Poglejmo si delovanje elektronske pošte na primeru dopisovanja Roka in Ane. Rok napiše in <a href="#" onclick="path([10, 1, 2])">pošlje</a> Ani sporočilo. Program na njegovem računalniku uporabi <b>SMTP</b> (<i>ang. Simple Mail Transfer Protocol</i>) <a href="#" data-toggle="modal" data-target="#protokol">protokol</a> za povezavo s strežnikom odhodne pošte (SMTP strežnik). Strežnik pošlje pošto preko interneta do Aninega poštnega strežnika. Pošta na strežniku počaka, dokler jo Anin program za elektronsko pošto ne <a href="#" onclick="path([20])">prebere</a> s <b>POP3</b> (<i>ang. Post Office Protocol V.3</i>) ali <b>IMAP</b> (<i>ang. Internet Mail Access Protocol</i>) protokolom in prikaže na zaslonu. Ko Ana odgovori na prejeto pošto, se proces ponovi v obratni smeri.</p>
+<p align="justify">Poglejmo si delovanje elektronske pošte s primerom dopisovanja Roka in Ane. Rok napiše in <a href="#" onclick="path([10, 1, 2])">pošlje</a> Ani sporočilo. Program v njegovem računalniku uporabi <a href="#" data-toggle="modal" data-target="#protokol">protokol</a> <b>SMTP</b> (<i>ang. Simple Mail Transfer Protocol</i>) za povezavo s strežnikom odhodne pošte (SMTP strežnik). Strežnik pošlje pošto preko interneta do Aninega poštnega strežnika. Pošta v strežniku počaka, dokler jo Anin program za elektronsko pošto ne <a href="#" onclick="path([20])">prebere</a> s protokolom <b>POP3</b> (<i>ang. Post Office Protocol V.3</i>) ali <b>IMAP</b> (<i>ang. Internet Mail Access Protocol</i>) in prikaže na zaslonu. Ko Ana odgovori na prejeto pošto, se proces ponovi v obratni smeri.</p>
 
-<p align="justify">SMTP protokol skrbi za prenos elektronske pošte od pošiljateljevega računalnika do prejemnikovega strežnika. Včasih je tudi za pošiljanje elektronske pošte (za povezavo naprave in SMTP strežnika) potrebno uporabniško ime in geslo. Že samo ime pove, da je to enostaven protokol. Zaradi svoje enostavnosti ima hudo omejitev. Prenaša lahko samo znake, zapisane v 7-bitni ASCII kodi. Kako pa potem lahko prenašamo z elektronsko pošto tudi znake č, ž, š, slike, zvok, video, programe.</p>
+<p align="justify">Protokol SMTP skrbi za prenos elektronske pošte od pošiljateljevega računalnika do prejemnikovega strežnika. Včasih je tudi za pošiljanje elektronske pošte (za povezavo naprave in strežnika SMTP) treba vnesti uporabniško ime in geslo. Že samo ime nakazuje, da je to enostaven protokol. Zaradi svoje enostavnosti ima strogo omejitev. Prenaša lahko samo znake, zapisane v 7-bitni kodi ASCII. Kako pa potem lahko prenašamo z elektronsko pošto tudi znake č, ž, š, slike, zvok, video, programe ipd.?</p>
 
-<p align="justify">Zato je bil razvit dodatek <b>MIME</b> (<i>ang. Multipurpose Internet Mail Extension</i>), ki na pošiljateljevi strani pretvori podatke, ki niso v ASCII obliki v 7-bitno ASCII obliko in na prejemnikovi strani nazaj v originalno obliko.</p>
+<p align="justify">V ta namen je bil razvit dodatek <b>MIME</b> (<i>ang. Multipurpose Internet Mail Extension</i>), ki na pošiljateljevi strani pretvori podatke, ki niso v obliki ASCII, v 7-bitno obliko ASCII, in na prejemnikovi strani nazaj v prvotno obliko.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">POP3 protokol je namenjen prenosu elektronske pošte iz strežnika na prejemnikov računalnik. Z uporabo uporabniškega imena in gesla dostopa do strežnika in prenese na računalnik vso prispelo pošto. Protokol ima kar nekaj pomanjkljivosti: ne zna prenesti samo naslovov sporočil, ne moremo organizirati pošte na strežniku, ne moremo preveriti vsebine pred prenosom.</p>
+<p align="justify">Protokol POP3 je namenjen prenosu elektronske pošte iz strežnika v prejemnikov računalnik. Z uporabo uporabniškega imena in gesla dostopa do strežnika in prenese v računalnik vso prispelo pošto. Protokol ima kar nekaj pomanjkljivosti: ne omogoča prenosa zgolj naslovov sporočil, ne moremo organizirati pošte v strežniku, ne moremo preveriti vsebine pred prenosom.</p>
 
-<p align="justify">Zato se vedno bolj uporablja IMAP protokol, ki te pomanjkljivosti odpravlja in omogoča tudi rokovanje s skladiščem pošte na strežniku.</p>
+<p align="justify">Zato se vedno bolj uporablja protokol IMAP, ki te pomanjkljivosti odpravlja in omogoča tudi upravljanje skladišča pošte v strežniku.</p>
 
 <style type="text/css">
 #mynetwork {
