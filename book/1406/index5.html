@@ -183,12 +183,12 @@
 					</div>
 					<div class="modal-body">
 						<p><ol style="text-align:justify">
-							<li>Brskalnik pošlje strežniku HTTP zahtevo.</li>
-							<li>Strežnik zažene program, ki obdela HTTP zahtevo.</li>
-							<li>Program odpre predlogo spletne strani (v skladu s HTTP zahtevo).</li>
-							<li>Program poišče podatke iz podatkovne baze (v skladu s HTTP zahtevo).</li>
+							<li>Brskalnik pošlje strežniku zahtevo HTTP.</li>
+							<li>Strežnik zažene program, ki obdela zahtevo HTTP.</li>
+							<li>Program odpre predlogo spletne strani (v skladu z zahtevo HTTP).</li>
+							<li>Program poišče podatke iz podatkovne baze (v skladu z zahtevo HTTP).</li>
 							<li>Program iz predloge in podatkov ustvari dinamično spletno stran.</li>
-							<li>Strežnik pošlje brskalniku ustvarjeno spletno stran kot HTTP odgovor.</li>
+							<li>Strežnik pošlje brskalniku ustvarjeno spletno stran kot odgovor HTTP.</li>
 						</ol></p>
 					</div>
 					<div class="modal-footer">
@@ -207,14 +207,14 @@
 <!-- Left column start -->
 <h1>Različne vrste spletnih strani</h1>
  
-<p align="justify"><b>XML</b> (<i>ang. eXtensible Markup Language</i>) je jezik za opis podatkov. Z njim opišemo, kaj pomeni nek podatek, kakšna je vrsta podatka in kakšna je njegova vrednost. Tako npr. zapis:</p>
+<p align="justify"><b>XML</b> (<i>ang. eXtensible Markup Language</i>) je jezik za opis podatkov. Z njim opišemo, kaj pomeni nek podatek, katere vrste je podatek in kaj je njegova vrednost. Tako na primer zapis:</p>
 <pre>
 &lt;vozilo&gt;
   &lt;tip&gt;osebni avto&lt;/tip&gt;
 &lt;/vozilo&gt;
 </pre>
 
-<p align="justify">pomeni, da gre za vozilo vrste osebni avto. XML v nasprotju s HTML ni namenjen za prikazovanje podatkov, ampak njihovemu shranjevanju, izmenjevanju in kasneje običajno iskanju. Iskanje po XML dokumentu je bistveno hitrejše, saj iskalniku ni treba prečesati celotnega dokumenta, ampak samo značke, ki iskanju ustrezajo. Značke niso predpisane, lahko jih določimo sami.</p>
+<p align="justify">pomeni, da gre za vozilo vrste osebni avto. XML v nasprotju s HTML ni namenjen za prikazovanje podatkov, ampak njihovemu shranjevanju, izmenjevanju in pozneje običajno iskanju. Iskanje po dokumentu XML je bistveno hitrejše, saj iskalniku ni treba prečesati celotnega dokumenta, ampak samo značke, ki iskanju ustrezajo. Značke niso predpisane, lahko jih določimo sami.</p>
 
 <div style="min-width:450px;width:100%">
 <textarea id="code"><?xml version="1.0" encoding="UTF-8"?>
@@ -234,23 +234,23 @@
 
 <h2>Aktivne spletne strani</h2>
 
-<p align="justify">Aktivne spletne strani omogočajo izvajanje programa v uporabnikovem brskalniku. Tako lahko pripravimo npr. interaktivne animacije, zemljevide, ipd. Sestavni del spletnega sestavka je programska koda, ki je lahko v izvršni obliki (npr. Java apleti) ali v izvorni obliki (npr. JavaScript). Izgled aktivnih spletnih strani si lahko ogledamo kar v učbeniku (animacija »Pošiljanje HTTP zahteve«).</p>
+<p align="justify">Aktivne spletne strani omogočajo izvajanje programa v uporabnikovem brskalniku. Tako lahko pripravimo na primer interaktivne animacije, zemljevide ipd. Sestavni del spletnega sestavka je programska koda, ki je lahko v izvršni obliki (npr. programčki Java) ali v izvorni obliki (npr. JavaScript). Videz aktivnih spletnih strani si lahko ogledaš kar v učbeniku (animacija »Pošiljanje zahteve HTTP«).</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 <!-- Right column start -->
 <h2>Dinamične spletne strani</h2>
 
-<p align="justify">Dinamične spletne strani strežnik zgradi šele takrat, ko odjemalec zahteva spletni sestavek. Glede na zahtevo odjemalca ali glede na stanje podatkov na strežniku je lahko stran iz trenutka v trenutek drugačna. Zahtevo odjemalca strežnik posreduje programu, ki npr. nekaj izračuna, poišče podatke na strežniku, rezultate vgradi v spletni sestavek.</p>
+<p align="justify">Dinamične spletne strani strežnik izdela šele takrat, ko odjemalec zahteva spletni sestavek. Glede na zahtevo odjemalca ali glede na stanje podatkov v strežniku je lahko stran iz trenutka v trenutek drugačna. Zahtevo odjemalca strežnik posreduje programu, ki recimo nekaj izračuna, poišče podatke v strežniku, rezultate vdela v spletni sestavek.</p>
 
-<p align="justify">Šele nato strežnik spletni sestavek pošlje odjemalcu. Primer dinamične spletne strani je na primer stran z zadetki iskanja na iskalniku Google. Vsebina je odvisna predvsem od uporabnikovega iskalnega niza. Pa tudi če uporabnik uporabi isti iskalni niz, so lahko zadetki v različnih časovnih obdobjih različni (spletne strani ugašajo, pojavljajo se nove...).</p>
+<p align="justify">Šele nato strežnik spletni sestavek pošlje odjemalcu. Primer dinamične spletne strani je stran z zadetki iskanja v iskalniku Google. Vsebina je odvisna predvsem od uporabnikovega iskalnega niza. Pa tudi če uporabnik uporabi isti iskalni niz, so lahko zadetki v različnih časovnih obdobjih različni (spletne strani se zapirajo, pojavljajo se nove ...).</p>
 
-<p align="justify">Strežnik za zapis spletnega sestavka, ki ga bo  poslal odjemalcu, lahko uporablja različne tehnologije. Pri nekaterih se pri vsaki zahtevi celotni sestavek zgradi na novo (Common Gateway Interface – CGI), pri drugih (na primer Hypertext Preprocessor – PHP, Active Server Pages – ASP, Java Server Pages – JSP) pa so nekateri deli sestavka statični, drugi deli strani pa se zgradijo vsakič na novo.</p>
+<p align="justify">Strežnik za zapis spletnega sestavka, ki ga bo  poslal odjemalcu, lahko uporablja različne tehnologije. Pri nekaterih se pri vsaki zahtevi celoten sestavek zgradi na novo (Common Gateway Interface – CGI), pri drugih (na primer Hypertext Preprocessor – PHP, Active Server Pages – ASP, Java Server Pages – JSP) pa so nekateri deli sestavka statični, drugi deli strani pa se izdelajo vsakič na novo.</p>
 
 <style type="text/css">
 #mynetwork {
   width: 500px;
-  height: 260px;
+  height: 320px;
   border: 1px solid #D6D9D8;
   background-color: #D6D9D8;
 }
@@ -265,7 +265,7 @@ div.network-seperatorLine {
 
 <div id="mynetwork" style="margin-bottom:4px"></div>
 <p>
-<button id="query" class="btn btn-primary" onclick="path([0, 1, 2, 3, 4, 5])">Pošlji HTTP zahtevo</button>
+<button id="query" class="btn btn-primary" onclick="path([0, 1, 2, 3, 4, 5])">Pošlji zahtevo HTTP</button>
 <button class="btn btn-primary" data-toggle="modal" data-target="#info">Opis postopka</button>
 </p>
 
@@ -341,7 +341,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   theme: "rin-light",
   readOnly: true,
 });
-editor.setSize('100%', 206);
+editor.setSize('100%', 245);
 </script>
 
 <script type="text/javascript">

@@ -180,8 +180,8 @@
 					</div>
 					<div class="modal-body">
 						<p><ol style="text-align:justify">
-							<li>Brskalnik pošlje strežniku HTTP zahtevo.</li>
-							<li>Strežnik pošlje brskalniku statično spletno stran kot HTTP odgovor.</li>
+							<li>Brskalnik pošlje strežniku zahtevo HTTP.</li>
+							<li>Strežnik pošlje brskalniku statično spletno stran kot odgovor HTTP.</li>
 						</ol></p>
 					</div>
 					<div class="modal-footer">
@@ -200,22 +200,25 @@
 <!-- Left column start -->
 <h1>Svetovni splet</h1>
  
-<p align="justify">Svetovni splet (WWW) potrebuje za delovanje poleg komunikacijskih povezav še spletni strežnik, brskalnik na uporabnikovi napravi in protokol (zbirko dogovorov), ki se ga držita tako strežnik kot brskalnik.</p>
+<p align="justify">Svetovni splet (WWW) potrebuje za delovanje poleg komunikacijskih povezav še spletni strežnik, brskalnik v uporabnikovi napravi in protokol (zbirko dogovorov), ki ga uporabljata tako strežnik kot brskalnik.</p>
 
-<p align="justify"><b>Spletni strežnik</b> vsebuje spletne sestavke, ki sestavljajo spletno stran organizacije, združenja, skupine, ipd. Njegova naloga je sprejemati zahteve, ki jih pošiljajo brskalniki prek interneta. Brskalniki navadno od strežnika zahtevajo kako spletno stran in strežnik bodisi vrne zahtevano spletno stran ali pa odgovori, da ta ni na voljo.</p>
+<p align="justify"><b>Spletni strežnik</b> vsebuje spletne sestavke, ki sestavljajo spletno stran organizacije, združenja, skupine, ipd. Njegova naloga je sprejemati zahteve, ki jih pošiljajo brskalniki prek interneta. Brskalniki navadno od strežnika zahtevajo neko spletno stran in strežnik bodisi vrne zahtevano spletno stran ali pa odgovori, da ta ni na voljo.</p>
 
-<p align="justify"><b>Brskalnik</b> je program, nameščen na uporabnikovem računalniku. Z njegovo pomočjo uporabnik pošilja strežnikom zahteve za določen objekt - spletno stran, sliko, spletni obrazec in podobno. Spletni strežnik, na katerem je objekt shranjen, tega pošlje brskalniku v obliki HTML, JPG ali druge datoteke. Brskalnik ugotovi za kakšno vrsto datoteke gre in prikaže vsebino. Brskalnik tudi izvede uporabnikove akcije (klik na povezavo, sliko, gumb ipd.).</p>
+<p align="justify"><b>Brskalnik</b> je program, nameščen v uporabnikovem računalniku. Z njegovo pomočjo uporabnik pošilja strežnikom zahteve za določen objekt – spletno stran, sliko, spletni obrazec in podobno. Spletni strežnik, v katerem je objekt shranjen, ta objekt pošlje brskalniku v obliki HTML, JPG ali druge datoteke. Brskalnik zazna, za kakšno vrsto datoteke gre, in prikaže vsebino. Brskalnik tudi izvede uporabnikova dejanja (klik povezave, slike, gumba ipd.).</p>
 
-<p align="justify"><b>HTTP protokol</b> je zbirka dogovorov za dostopanje do objektov, ki so na voljo na spletnih strežnikih. Odjemalec (brskalnik) pošlje zahtevo strežniku, strežnik zahtevo obdela in pošlje odjemalcu odgovor. Najpomembnejši stvari, ki ju določa protokol HTTP, sta obliki dveh sporočil:
+<p align="justify"><b>Protokol HTTP</b> je zbirka dogovorov za dostopanje do objektov, ki so na voljo v spletnih strežnikih. Odjemalec (brskalnik) pošlje zahtevo strežniku, strežnik zahtevo obdela in pošlje odjemalcu odgovor. Najpomembnejši stvari, ki ju določa protokol HTTP, sta obliki dveh sporočil – zahteve 
+in odgovora:
 <ul style="text-align:justify">
-	<li>zahteva HTTP – s tem sporočilom uporabnik zahteva prenos objekta od spletnega strežnika k sebi</li>
-	<li>odgovor HTTP – v tem sporočilu spletni strežnik uporabniku pošlje zahtevani objekt</li>
+	<li>zahteva HTTP – s tem sporočilom uporabnik zahteva prenos objekta od spletnega strežnika k sebi,</li>
+	<li>odgovor HTTP – v tem sporočilu spletni strežnik uporabniku pošlje zahtevani objekt.</li>
 </ul>
 </p>
 
 <p align="center">
 <img src="img/spletni_naslov.png" class="img-responsive" />
 </p>
+
+<p align="justify"><b>Spletni naslov</b> (<i>ang. Uniform Resource Locator – URL</i>) enolično opiše mesto na spletu, kjer je shranjen spletni sestavek. Sestavljen je iz treh delov, ki opisujejo protokol, gostitelja in pot do sestavka.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -239,15 +242,15 @@ div.network-seperatorLine {
 
 <div id="mynetwork" style="margin-bottom:4px"></div>
 <p>
-<button id="query" class="btn btn-primary" onclick="path([0, 1])">Pošlji HTTP zahtevo</button>
+<button id="query" class="btn btn-primary" onclick="path([0, 1])">Pošlji zahtevo HTTP</button>
 <button class="btn btn-primary" data-toggle="modal" data-target="#info">Opis postopka</button>
 </p>
 
-<p align="justify"><b>Spletni naslov</b> (<i>ang. Uniform Resource Locator – URL</i>) enolično opiše mesto na spletu, kjer je shranjen spletni sestavek. Sestavljen je iz treh delov ki opisujejo protokol, gostitelja in pot do sestavka.</p>
+<p align="justify">Protokol je najpogosteje HTTP oziroma njegova varna različica HTTPS, uporabljamo pa lahko tudi druge protokole (FTP, ...).</p>
 
-<p align="justify">Protokol je najbolj pogosto HTTP oziroma njegova varna različica HTTPS, uporabljamo pa lahko tudi druge protokole (FTP, ...).</p>
+<p align="justify">Gostitelj je ime strežnika na internetu, ki gosti spletno stran (npr. <code>pop3.arnes.si:995</code>, <code>bober.acm.si</code>). Ime strežnika je sestavljeno iz imena domene in številke vrat (<i>ang. port</i>). Številka vrat mora biti navedena, če ne gre za privzeto številko (80 za HTTP in 443 za HTTPS).</p>
 
-<p align="justify">Gostitelj je ime strežnika na internetu, ki gosti spletno stran (npr. <code>www.arnes.si</code>, <code>bober.acm.si</code>). Pot do sestavka je relativna pot od korenskega imenika spletnega strežnika do sestavka. Tako npr. pot <code>dijaki/tekmovanja/rezultati.html</code> pomeni, da se sestavek <code>rezultati_bobra.html</code> nahaja v podmapi <code>tekmovanja</code>, ki je podmapa mape <code>dijaki</code>, mape na spletni strani.</p>
+<p align="justify">Pot do sestavka je relativna pot od korenskega imenika spletnega strežnika do sestavka. Tako na primer pot <code>dijaki/tekmovanja/rezultati.html</code> pomeni, da se sestavek <code>rezultati.html</code> nahaja v podimeniku <code>tekmovanja</code>, ki je podimenik imenika <code>dijaki</code>, podimenika korenskega imenika.</p>
 
 <h4>Vaja</h4>
 <div class="alert alert-info" role="alert">
@@ -425,7 +428,6 @@ line-height:1!important;
 .termOutOfPalette {
 display:inline-block;
 margin:0!important;
-width:105px!important;
 border:0px solid transparent!important;
 background:transparent!important;
 line-height:1!important;
@@ -446,32 +448,37 @@ line-height:1!important;
 	<div class="definitionMatch_termBank">
 	<ul id="Q1_terms" class="sortableContainer ui-sortable" style="border">
 		<li class="ui-state-default unselectedTerm" termnum="1">http://</li>
+		<li class="ui-state-default unselectedTerm" termnum="4">/tekmovanje/</li>
+		<li class="ui-state-default unselectedTerm" termnum="3">:80</li>
 		<li class="ui-state-default unselectedTerm" termnum="2">bober.acm.si</li>
-		<li class="ui-state-default unselectedTerm" termnum="3">/tekmovanje/</li>
-		<li class="ui-state-default unselectedTerm" termnum="4">rezultati.html</li>
+		<li class="ui-state-default unselectedTerm" termnum="5">rezultati.html</li>
 	</ul>
 	</div>
 	<br />
 	<table class="tDefault defMatchTable" border="1">
 	<tr>
-		<td class="unselectedTerm defnRow" style="width:105px!important;height:28px!important;">
+		<td class="unselectedTerm defnRow" style="width:60px!important;height:28px!important;">
 			<ul id="Q1_termBucket1" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
 		</td>
-		<td class="unselectedTerm defnRow" style="width:105px!important;height:28px!important;">
+		<td class="unselectedTerm defnRow" style="width:100!important;height:28px!important;">
 			<ul id="Q1_termBucket2" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
 		</td>
-		<td class="unselectedTerm defnRow" style="width:105px!important;height:28px!important;">
+		<td class="unselectedTerm defnRow" style="width:40!important;height:28px!important;">
 			<ul id="Q1_termBucket3" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
 		</td>
-		<td class="unselectedTerm defnRow" style="width:20px!important;height:28px!important;">
+		<td class="unselectedTerm defnRow" style="width:100!important;height:28px!important;">
 			<ul id="Q1_termBucket4" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
+		</td>
+		<td class="unselectedTerm defnRow" style="width:100!important;height:28px!important;">
+			<ul id="Q1_termBucket5" class="sortableContainer termBucket ui-sortable" dummy="0"></ul>
 		</td>
 	</tr>
 	<tr>
-		<td id="Q1_correctness1" class="defnColCorr" style="width:100px!important;text-align:center;"></td>
-		<td id="Q1_correctness2" class="defnColCorr" style="width:100px!important;text-align:center;"></td>
-		<td id="Q1_correctness3" class="defnColCorr" style="width:100px!important;text-align:center;"></td>
-		<td id="Q1_correctness4" class="defnColCorr" style="width:100px!important;text-align:center;"></td>
+		<td width="60"  id="Q1_correctness1" class="defnColCorr" style="width:60px!important;text-align:center;"></td>
+		<td width="100" id="Q1_correctness2" class="defnColCorr" style="width:100px!important;text-align:center;"></td>
+		<td width="40"  id="Q1_correctness3" class="defnColCorr" style="width:40px!important;text-align:center;"></td>
+		<td width="100" id="Q1_correctness4" class="defnColCorr" style="width:100px!important;text-align:center;"></td>
+		<td width="100" id="Q1_correctness5" class="defnColCorr" style="width:100px!important;text-align:center;"></td>
 	</tr>
 	</table>
 	<button type="button" class="btn btn-info"  id="Q1_resetButton"><span class="fa fa-refresh"></span> Ponastavi</button>
