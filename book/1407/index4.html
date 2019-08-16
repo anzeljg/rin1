@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="../favicon.ico" />
 
-	<title>Deljenje datotek - BitTorrent</title>
+	<title>Deljenje datotek – BitTorrent</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -174,11 +174,11 @@
 				<div class="row">
 					<div class="col-md-6">
 <!-- Left column start -->
-<h1>Deljenje datotek - BitTorrent</h1>
+<h1>Deljenje datotek – BitTorrent</h1>
  
-<p align="justify">Sledilnik (<i>ang. tracker</i>) je strežnik, ki pomaga pri komunikaciji med odjemalci posameznega roja. Vodi evidenco vseh članov roja in te podatke posreduje članom, tako da si lahko med seboj neposredno izmenjujejo manjkajoče koščke datoteke. V datoteki s končnico <code>.torrent</code> je naveden naslov sledilnika ali tudi več sledilnikov, ki so zadolženi za nadzor posamezenega roja.</p>
+<p align="justify">Sledilnik (<i>ang. tracker</i>) je strežnik, ki pomaga pri komunikaciji med odjemalci posameznega roja. Vodi evidenco vseh članov roja in te podatke posreduje članom, tako da si lahko med seboj neposredno izmenjujejo manjkajoče delčke datotek. V datoteki s končnico <code>.torrent</code> je naveden naslov sledilnika ali tudi več sledilnikov, ki so zadolženi za nadzor posameznega roja.</p>
 
-<p align="justify">Ko si Peter zaželi prenesti najnovejšo različico operacijskega sistema Linux (npr. distribucijo Ubuntu), najprej s pomočjo Googla ali katerega od iskalnih strežnikov poišče ustrezno datoteko torrent za to distribucijo Linuxa. S pomočjo programa - odjemalca za protokol BitTorrent (npr. μtorrent) odpre datoteko torrent in odjemalec se poveže s sledilnikom za iskano datoteko. Od sledilnika dobi podatke o sejalcih in pijavkah in začne vzpostavljati povezave z njimi. Počasi začnejo z različnih računalnikov pritekati koščki datoteke. Če je sejalcev in pijavk veliko, gre prenos hitreje, če pa jih je malo ali imajo počasne internetne povezave, gre prenos počasneje. Včasih se prenos kar ustavi, ker sploh ni na voljo vseh koščkov datoteke - vsem pijavkam manjka isti del programskega paketa. Če imamo srečo, se bo kasneje pojavil še kak odjemalec, ki ima manjkajoči košček, če ne pa se lahko za hitro namestitev obrišemo pod nosom.</p>
+<p align="justify">Ko si Peter zaželi prenesti najnovejšo različico operacijskega sistema Linux (npr. distribucijo Ubuntu), najprej s pomočjo Googla ali enega od iskalnih strežnikov poišče ustrezno datoteko torrent za to distribucijo Linuxa. S pomočjo programa – odjemalca za protokol BitTorrent (npr. μtorrent) odpre datoteko torrent in odjemalec se poveže s sledilnikom za iskano datoteko. Od sledilnika pridobi podatke o sejalcih in pijavkah ter začne vzpostavljati povezave z njimi. Počasi se začnejo iz različnih računalnikov prenašati delčki datoteke. Če je sejalcev in pijavk veliko, poteka prenos hitreje, če pa jih je malo ali imajo počasne internetne povezave, poteka prenos počasneje. Včasih se prenos kar ustavi, ker sploh ni na voljo vseh delčkov datoteke – vsem pijavkam manjka isti del programskega paketa. Če imamo srečo, se bo pozneje pojavil odjemalec, ki ima manjkajoči delček, sicer pa se lahko za hitro namestitev obrišemo pod nosom.</p>
 
 <div class="alert alert-danger" role="alert">
 <p align="justify">Protokol BitTorrent je namenjen za izmenjavo datotek med uporabniki, ki se ne zanašajo na osrednji strežnik, ampak si datoteke po koščkih izmenjujejo med seboj. Zato lahko bolj učinkovito izrabljajo komunikacijske povezave, v omrežjih pa ne pride do ozkih grl – zasičenih povezav pri preobremenjenem strežniku.</p>
@@ -189,7 +189,7 @@
 <!-- Right column start -->
 <h4>Vaja</h4>
 <div class="alert alert-info" role="alert">
-<p align="justify">Spremljaj, kako bodo sejalci delili koščke datoteke, ki jo želi Peter. Ko bo Peter prejel vse koščke razen zadnjega, vklopi sejalca 6, ki ima manjkajoči košček in ga bo delil s Petrom. Peter bo tako prejel celotno datoteko.</p>
+<p align="justify">Spremljaj, kako bodo sejalci delili delčke datoteke, ki jo želi Peter. Ko bo Peter prejel vse delčke razen zadnjega, vklopi sejalca 6, ki ima manjkajoči delček in ga bo delil s Petrom. Peter bo tako prejel celotno datoteko.</p>
 <style>
 #container_naloga9 {
 position: relative;
@@ -197,6 +197,7 @@ width: 100%;
 height: 100%;
 max-width: 450px;
 max-height: 450px;
+margin-top: 10px;
 }
 #image_task9{
 width: 100%;
