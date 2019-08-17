@@ -200,7 +200,7 @@
 						<h4 class="modal-title">Razlaga slike</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Slika prikazuje tipično izvedbo delovanja omrežja botnet. Botneti se največ uporabljajo za izvajanje napadov DDoS (porazdeljeni DoS) in pošiljanje neželene elektronske pošte. Napadalec najprej okuži računalnike nič hudega slutečih uporabnikov z npr. trojanskim konjem. Okuženi računalniki se javijo strežniku, kjer je nadzorni center botneta, ki ga seveda kontrolira napadalec. Od tu napadalec pošilja ukaze svojemu omrežju botnet. Napadalec sprejema naročila od svojih strank – za pošiljanje pošte ali pa za napadanje strežnikov njihovih sovražnikov ali konkurentov. Za vsako naročilo preko nadzornega centra pošlje navodila okuženim računalnikom in ti začnejo bodisi pošiljati elektronsko pošto, ali pa izvajati DoS napad na določeno tarčo. Danes večji botneti vključujejo tudi po dva ali tri milijone okuženih računalnikov, zato so napadi navadno precej uspešni.</p>
+						<p align="justify">Slika prikazuje običajno izvedbo delovanja omrežja botnet. Botneti se največ uporabljajo za izvajanje napadov DDoS (porazdeljeni DoS) in pošiljanje neželene elektronske pošte. Napadalec najprej okuži računalnike nič hudega slutečih uporabnikov recimo s trojanskim konjem. Okuženi računalniki se javijo strežniku, v katerem je nadzorno središče botneta, ki ga seveda kontrolira napadalec. Od tu napadalec pošilja ukaze svojemu omrežju botnet. Napadalec sprejema naročila od svojih strank – za pošiljanje pošte ali pa za napadanje strežnikov svojih sovražnikov ali konkurentov. Za vsako naročilo prek nadzornega središča pošlje navodila okuženim računalnikom in ti začnejo bodisi pošiljati elektronsko pošto ali pa izvajati napad DoS na določeno tarčo. Danes večji botneti vključujejo tudi po dva ali tri milijone okuženih računalnikov, zato so napadi navadno precej uspešni.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -219,25 +219,25 @@
 <h1>Vrste napadov</h1>
  
 <p align="justify">
-Večkrat lahko v novicah zasledimo omembo <b>napada z ohromitvijo storitve</b> (<i>ang. Denial of Service - DoS</i>). Vsak strežnik, na primer spletni strežnik, ima določene omejitve glede tega, koliko uporabnikov ga lahko naenkrat uporablja.</p>
+Večkrat lahko v novicah zasledimo omembo <b>napada z ohromitvijo storitve</b> (<i>ang. Denial of Service – DoS</i>). Vsak strežnik, na primer spletni strežnik, ima določene omejitve glede tega, koliko uporabnikov ga lahko naenkrat uporablja.</p>
 
-<p align="justify">Napadalec izvede napad s preobremenjevanjem strežnikov, torej s pošiljanjem velikega števila zahtev, s čimer oponaša veliko število hkratnih uporabnikov. Zaradi preobremenitve strežnika je videti, kot da se ta ne odziva več, čeprav v resnici mrzlično procesira napadalčeve zahteve.</p>
+<p align="justify">Napadalec izvede napad s preobremenjevanjem strežnikov, torej s pošiljanjem velikega števila zahtev, s čimer posnema veliko število hkratnih uporabnikov. Zaradi preobremenitve strežnika je videti, kot da se ta ne odziva več, čeprav dejansko mrzlično procesira napadalčeve zahteve.</p>
 
-<p align="justify">Napadalec tako doseže, da storitve vsaj začasno (dokler traja napad) niso dostopne upravičenim uporabnikom, ali pa so odzivni časi nepredvidljivo dolgi. Če napad poteka hkrati z več različnih računalnikov, od koder se pošiljajo napadalčeve zahteve, govorimo o <b>porazdeljenem napadu z ohromitvijo</b> (<i>ang. Distributed Denial of Sevice – DDoS</i>).</p>
+<p align="justify">Napadalec tako doseže, da storitve vsaj začasno (dokler traja napad) niso dostopne upravičenim uporabnikom ali pa so odzivni časi nepredvidljivo dolgi. Če napad poteka hkrati iz več različnih računalnikov, od koder se pošiljajo napadalčeve zahteve, govorimo o <b>porazdeljenem napadu z ohromitvijo</b> (<i>ang. Distributed Denial of Sevice – DDoS</i>).</p>
 
-<p align="justify">Niso pa vse preobremenitve strežnikov zlonamerne. Včasih so le posledica bolj ali manj naključnega dviga zanimanja med običajnimi uporabniki. Pri manjših spletiščih je dovolj že, da povezavo na njihovo stran v svoji objavi povzame kakšno večje spletišče in naval novih uporabnikov nepričakovano ohromi manjše spletišče. Enak učinek se pojavi, če povezavo objavi kakšna znana osebnost (temu rečemo tudi <i>VIPDoS</i>). V šolah lahko doživijo manjši »napad« na njihove strežnike takrat, ko velika skupina učencev čaka na objavo rezultatov pomembnih izpitov, morda mature, in ob določeni uri neprestano svoje osvežuje brskalnike. Na davčni upravi pa se lahko zgodi kaj podobnega zadnji dan pred rokom za oddajo davčnih napovedi.</p>
+<p align="justify">Niso pa vse preobremenitve strežnikov zlonamerne. Včasih so le posledica bolj ali manj naključnega povečanja zanimanja med običajnimi uporabniki. Pri manjših spletiščih je dovolj že, da povezavo na njihovo stran v svoji objavi povzame kakšno večje spletišče in naval novih uporabnikov nepričakovano ohromi manjše spletišče. Enak učinek se pojavi, če povezavo objavi neka znana osebnost (temu rečemo tudi <i>VIPDoS</i>). Šole lahko izkusijo manjši »napad« na njihove strežnike takrat, ko velika skupina učencev čaka na objavo rezultatov pomembnih izpitov, morda mature, in ob določeni uri neprestano osvežuje svoje brskalnike. Na davčni upravi pa se lahko zgodi nekaj podobnega zadnji dan pred rokom za oddajo davčnih napovedi.</p>
 
 <h1>Zaščita pred napadi</h1>
  
-<p align="justify">Kako pa omrežni administratorji vedo, kakšne tehnike uporabljajo napadalci? Pri tem seveda predpostavimo, da zlobneži ne objavljajo ravno svojih najboljših trikov na novičarskih portalih in v časopisih.</p>
+<p align="justify">Kako pa omrežni skrbniki vedo, kakšne tehnike uporabljajo napadalci? Pri tem seveda predpostavimo, da zlobneži ravno ne objavljajo svojih najboljših trikov na novičarskih portalih in v časopisih.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Za medsebojno komunikacijo uporabljajo pred javnostjo skrite, specializirane forume ali spletne tržnice, do katerih lahko dostopajo samo tisti, ki zanje vedo. Temu nelegalnemu delu interneta pravimo tudi <b>temni internet</b> (<i>ang. darknet</i>). Do njega dostopajo predvsem preko posebnih protokolov, ki zabrišejo sledi, od kod prihaja odjemalec (<b>anonimizacija prometa</b>). Najbolj znano takšno omrežje se imenuje Tor. Primarni cilj projekta Tor seveda ni pomagati kriminalcem pri njihovemu početju, ampak je nastal kot projekt, s katerim je ameriška mornarica dodala vladnim komunikacijam dodatno varnostno komponento.</p>
+<p align="justify">Za medsebojno komunikacijo uporabljajo pred javnostjo skrite, specializirane forume ali spletne tržnice, do katerih lahko dostopajo samo tisti, ki zanje vedo. Temu nezakonitemu delu interneta pravimo tudi <b>temni internet</b> (<i>ang. darknet</i>). Do njega dostopajo predvsem prek posebnih protokolov, ki sledi o izvoru odjemalca (<b>anonimizacija prometa</b>). Najbolj znano tako omrežje se imenuje Tor. Primarni cilj projekta Tor seveda ni pomagati kriminalcem pri njihovem početju, temveč gre za projekt, s katerim je ameriška mornarica dodala vladnim komunikacijam dodatno varnostno komponento.</p>
 
-<p align="justify">Danes omrežje, ki ga sestavlja več tisoč strežnikov, ki si naključno med seboj preusmerjajo promet in s tem zabrišejo izvorni naslov IP, uporabljajo tudi novinarji, aktivisti za svobodo govora, varnostni strokovnjaki, znanstveniki in tudi čisto navadni uporabniki, ki želijo ostati anonimni pri uporabi interneta.</p>
+<p align="justify">Danes omrežje, ki ga sestavlja več tisoč strežnikov, ki si naključno med seboj preusmerjajo promet in s tem zabrišejo izvorni naslov IP, uporabljajo tudi novinarji, aktivisti za svobodo govora, varnostni strokovnjaki, znanstveniki in tudi povsem navadni uporabniki, ki želijo ostati anonimni pri uporabi interneta.</p>
 
 <p align="center">
 <img src="img/Botnet.png" class="img-responsive" />
