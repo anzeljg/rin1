@@ -176,7 +176,7 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">2<sup>64</sup> = 18 446 744 073 709 551 616, kar je v primeru 8-bitnih pomnilniških besed kar 17 milijard GiB ali drugače 16 EiB (eksabajt). Takšna količina pomnilnika bistveno presega ne samo potrebe, ampak tudi tehnološke zmožnosti današnjih osebnih in celo superračunalnikov. V resnici imajo sodobni procesorji za osebne računalnike, na primer tisti iz Intelovih serij Core i3, i5 in i7, za naslavljanje predvidenih samo 52 bitov, kar je sicer še vedno 100 000-krat več od tipičnih velikosti glavnega pomnilnika v letu 2015 (med 8 in 32 GiB).</p>
+						<p align="justify">2<sup>64</sup> = 18 446 744 073 709 551 616, kar je v primeru 8-bitnih pomnilniških besed kar 17 milijard GiB ali drugače 16 EiB (eksabajt). Taka količina pomnilnika bistveno presega ne samo potrebe, ampak tudi tehnološke zmožnosti današnjih osebnih računalnikov in celo superračunalnikov. V resnici imajo sodobni procesorji za osebne računalnike, na primer tisti iz Intelovih serij Core i3, i5 in i7, za naslavljanje predvidenih samo 52 bitov, kar je sicer še vedno 100.000-krat več od tipičnih velikosti glavnega pomnilnika v letu 2015 (med 8 in 32 GiB).</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -197,7 +197,7 @@
 						<h4 class="modal-title">Namig</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Programerji vidijo svet preko vhodno-izhodnih vodil kot sta USB, I<sup>2</sup>C in podobno. Če te zanima, kako delujejo vodila, pobrskaj po spletu. V resnici so za programerja vodila dostopna preko programskih knjižnic.</p>
+						<p align="justify">Programerji vidijo svet prek vhodno-izhodnih vodil kot so USB, I<sup>2</sup>C ipd. Če te zanima, kako delujejo vodila, pobrskaj po spletu. Vodila so za programerje dejansko dostopna prek programskih knjižnic.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -215,16 +215,16 @@
 <!-- Left column start -->
 <h1>Načini naslavljanja operandov</h1>
  
-<p align="justify">Operand je v ukazu ponavadi podan z naslovom, kjer se nahaja. Če je operand pomnilniški, potem je naslov <b>naslov pomnilniške besede</b> in, če je operand registrski, potem je naslov <b>naslov registra</b> - običajno zaporedna številka registra.</p>
+<p align="justify">Operand je v ukazu ponavadi podan z naslovom, kjer se nahaja. Če je operand pomnilniški, potem je naslov <b>naslov pomnilniške besede</b>, če pa je operand registrski, je naslov <b>naslov registra</b> – običajno zaporedna številka registra.</p>
 
 <p align="justify">Z enobitnim naslovom opišemo zgolj naslova <i>0</i> in <i>1</i>. Z dvema bitoma lahko določimo štiri naslove: <i>00</i>, <i>01</i>, <i>10</i> in <i>11</i>. Za naslavljanje 16 registrov tako potrebujemo 4 bite: <i>2<sup>4</sup> = 2 &middot; 2 &middot; 2 &middot; 2 = 16</i>. Po drugi strani za naslavljanje pomnilniških besed potrebujemo bistveno več bitov. Predpostavimo, da imamo na voljo 4 GiB pomnilnika. V tem primeru potrebujemo kar 32 bitov za zapis vseh možnih naslovov (<i>2<sup>32</sup> = 4 294 967 296</i>).</p>
 
 <div class="alert alert-success" role="alert">
-<p align="justify">Omenili smo že možnost hrambe operanda tudi v samem ukazu. Takšnemu načinu podajanja operandov pravimo <b>takošnje naslavljanje</b> (<i>ang. immediate addressing</i>).</p>
+<p align="justify">Omenili smo že možnost hrambe operanda tudi v samem ukazu. Tak način podajanja operandov imenujemo <b>takošnje naslavljanje</b> (<i>ang. immediate addressing</i>).</p>
 </div>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Nikjer nismo omenili, kako naslavljamo vhodno-izhodne enote oziroma kako iz njih dobimo podatke. Z vhodno-izhodnimi enotami CPE upravlja tako, da jim pošilja ukaze in podatke oziroma iz njih bere podatke in poročila o dejavnosti (<i>ang. status</i>). CPE ukaze in podatke z vhodno-izhodnimi enotami izmenjuje na podoben način, kot bi pisal oziroma bral pomnilniške lokacije, kar pomeni, da imamo za vhodno-izhodne enote podoben naslovni prostor kot za pomnilnik. Na nekaterih računalnikih je lahko vhodno-izhodni naslovni prostor prepleten (vključen) kar v pomnilniški naslovni prostor (<i>ang. memory mapped</i>).</p>
+<p align="justify">Nikjer nismo omenili, kako naslavljamo vhodno-izhodne enote oziroma kako iz njih dobimo podatke. Z vhodno-izhodnimi enotami CPE upravlja tako, da jim pošilja ukaze in podatke oziroma iz njih bere podatke in poročila o dejavnosti (<i>ang. status</i>). CPE ukaze in podatke z vhodno-izhodnimi enotami izmenjuje na podoben način, kot bi pisala ali brala pomnilniške lokacije, kar pomeni, da imamo za vhodno-izhodne enote podoben naslovni prostor kot za pomnilnik. Pri nekaterih računalnikih je lahko vhodno-izhodni naslovni prostor preslikan (vključen) kar v pomnilniški naslovni prostor (<i>ang. memory mapped</i>).</p>
 </div>
 
 <h4>Vaja</h4>
@@ -243,15 +243,15 @@
 
 <h2>Aritmetične in logične operacije</h2>
 
-<p align="justify">Aritmetično-logični ukazi imajo običajno tri operande. Nad dvema izmed operandov se bo izvšila operacija, medtem ko tretji operand podaja, kam naj se shrani rezultat. Primer ukaza, ki sešteje registra <i>R1</i> in <i>R2</i> in rezultat shrani v register <i>R3</i>, je:</p>
+<p align="justify">Aritmetično-logični ukazi imajo običajno tri operande. Za dva operanda se bo izvšila operacija, medtem ko tretji operand podaja, kam naj se shrani rezultat. Primer ukaza, ki sešteje registra <i>R1</i> in <i>R2</i> ter rezultat shrani v register <i>R3</i>, je:</p>
 
 <p align="center"><img src="img/sestej-small.png" height="39" width="300" /></p>
 
-<div align="justify">Podobno bi izgledali ukazi za ostale aritmetične in logične operacije, samo njihova operacijska koda bi se razlikovala.</p>
+<div align="justify">Podobno bi bili videti ukazi za ostale aritmetične in logične operacije, samo njihova operacijska koda bi se razlikovala.</p>
 
 <h2>Prenosi podatkov</h2>
 
-<p align="justify">CPE lahko tudi samo prenaša podatke med različnimi deli računalnika. Najobičajnejši prenos je iz pomnilnika v register (<i>LOAD</i>) oz. iz registra v pomnilnik (<i>STORE</i>). Možen je tudi prenos med dvema registroma oz. dvema pomnilniškima naslovoma. Ukazi za prenos podatkov imajo ponavadi dva operanda: eden pove, iz kje beremo (izvor informacije), drugi pove, kam informacijo pišemo (ponor informacije). Kot primer si oglejmo ukaz, ki vrednost v registru <i>R1</i> shrani na pomnilniški naslov <i>addr</i>:</p>
+<p align="justify">CPE lahko tudi samo prenaša podatke med različnimi deli računalnika. Najobičajnejši prenos je iz pomnilnika v register (<i>LOAD</i>) oz. iz registra v pomnilnik (<i>STORE</i>). Možen je tudi prenos med dvema registroma oz. dvema pomnilniškima naslovoma. Ukazi za prenos podatkov imajo ponavadi dva operanda: eden določa, od kod beremo (izvor informacije), drugi določa, kam informacijo pišemo (ponor informacije). Kot primer si oglejmo ukaz, ki vrednost v registru <i>R1</i> shrani na pomnilniški naslov <i>addr</i>:</p>
 
 <p align="center"><img src="img/store-small.png" height="39" width="300" /></p>
 

@@ -176,7 +176,7 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify"><code>IN X</code>, kjer je operacijska koda nespremenjena, medtem ko 12 bitov hrani <code>X</code> in določa napravo. Podobno velja za <code>OUT X</code>.</p>
+						<p align="justify"><code>IN X</code>, pri čemer je operacijska koda nespremenjena, medtem ko 12 bitov hrani <code>X</code> in določa napravo. Podobno velja za <code>OUT X</code>.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -544,23 +544,23 @@ bo v registru <code>R0</code> shranjena vrednost 0.</p>
 <!-- Left column start -->
 <h1>Ukazi preprostega računalnika</h1>
 
-<p align="justify">Za potrebe naše učne enote bomo definirali preprost računalnik z von Neumannovo arhitekturo. Njegova CPE bo imela en sam 8-bitni register <code>R0</code> ter aritmetično-logično enoto, ki zna seštevati in odštevati 8-bitne operande. Glavni pomnilnik bo velikosti 4096 (2<sup>12</sup>) 8-bitnih pomnilniških besed. Za naslavljanje vseh pomnilniških besed bomo torej potrebovali 12 bitov. Programski števec (<code>PC</code>), ki hrani naslov naslednjega ukaza v pomnilniku, mora biti zato prav tako 12-biten. Računalnik bo imel vhodno-izhodni sistem, na katerega bosta priklopljena samo tipkovnica in zaslon.</p>
+<p align="justify">Za potrebe naše učne enote bomo definirali preprost računalnik s von Neumannovo arhitekturo. Njegova CPE bo imela en sam 8-bitni register <code>R0</code> ter aritmetično-logično enoto, ki lahko sešteva in odšteva 8-bitne operande. Glavni pomnilnik bo velikosti 4096 (2<sup>12</sup>) 8-bitnih pomnilniških besed. Za naslavljanje vseh pomnilniških besed bomo torej potrebovali 12 bitov. Programski števec (<code>PC</code>), ki hrani naslov naslednjega ukaza v pomnilniku, mora biti zato prav tako 12-biten. Računalnik bo imel vhodno-izhodni sistem, na katerega bosta priklopljena samo tipkovnica in zaslon.</p>
 
 <p align="justify">CPE bo imela zelo preprost nabor ukazov naslednjega formata:</p>
 
 <p align="center"><img src="img/ukazi2-immediate-small.png" height="60" width="330" /></p>
 
-<p align="justify">Zgornji štirje biti (biti 15 do 12 vključno) so operacijska koda, medtem ko spodnjih 12 bitov (od bita 11 do 0) določa naslov v pomnilniku ali konstanto pri takojšnjem naslavljanju. Naslova registra R0 v ukazu ne potrebujemo, saj imamo en sam register.</p>
+<p align="justify">Zgornji štirje biti (od 15 do vključno 12) so operacijska koda, medtem ko spodnjih 12 bitov (od bita 11 do 0) določa naslov v pomnilniku ali konstanto pri takojšnjem naslavljanju. Naslova registra R0 v ukazu ne potrebujemo, saj imamo en sam register.</p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Operande, ki v ukazih niso izrecno navedeni (v našem primeru register R0) imenujemo <b>implicitni operandi</b>, medtem ko je naslov v pomnilniku v našem primeru t.i. <b>eksplicitni operand</b>.</p>
+<p align="justify">Operande, ki v ukazih niso izrecno navedeni (v našem primeru register R0), imenujemo <b>implicitni operandi</b>, medtem ko je naslov v pomnilniku v našem primeru t.i. <b>eksplicitni operand</b>.</p>
 <p align="justify">Poglej v Slovar slovenskega knjižnega jezika, kaj točno pomeni impliciten in ekspliciten.</p>
 </div>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Naš računalnik ima samo eno vhodno in izhodno enoto, pri večih bi seveda ukaza <code>IN</code> in <code>OUT</code> tudi potrebovala naslov. Predlagaj format ukaza.</p>
+<p align="justify">Naš računalnik ima samo eno vhodno in izhodno enoto, pri večjem številu bi seveda ukaza <code>IN</code> in <code>OUT</code> tudi potrebovala naslov. Predlagaj format ukaza.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -570,7 +570,7 @@ bo v registru <code>R0</code> shranjena vrednost 0.</p>
 					<div class="col-md-6">
 						
 <!-- Right column start -->
-<p align="justify">Naš računalnik bo poznal 10 ukazov, ki jih opisuje spodnja tabela (na ukaz lahko klikneš in si ogledaš primer uporabe):</p>
+<p align="justify">Naš računalnik bo poznal 10 ukazov, ki jih opisuje spodnja tabela (ukaz lahko klikneš in si ogledaš primer uporabe):</p>
 
 <p>
 <table width="100%" class="table-condensed table-striped table-bordered">

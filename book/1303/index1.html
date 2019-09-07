@@ -194,16 +194,16 @@
 <!-- Left column start -->
 <h1>Ukazi strojnega jezika</h1>
  
-<p align="justify">Delovanje vsakega današnjega računalnika je določeno z zaporedjem ukazov, ki jih CPE, kot smo spoznali pri opisu von Neumannove arhitekture, jemlje iz glavnega pomnilnika in jih praviloma izvršuje enega za drugim. Kaj pa sploh so ukazi? Ukazi hranijo informacijo o <b>operaciji</b>, ki naj jo izvede CPE in o morebitnih operandih operacije. V resnici smo operacije že posredno srečali v poglavju o programiranju in vključujejo osnovne aritmetične operacije (seštevanje, odštevanje, množenje in deljenje); logične operacije kot sta logični in (konjukcija, <i>ang. AND</i>) in logični ali (disjunkcija, <i>ang. OR</i>); operacije za prenos podatkov med pomnilnikom, registri in vhodno/izhodnimi napravami; ter operacije za skok, katere pa bomo spoznali v nadaljevanju (prim. pogojni stavek v poglavju o programiranju). Ukaz prav tako hrani informacijo o <b>operandu</b>, nad katerim naj se operacija izvrši.</p>
+<p align="justify">Delovanje vsakega današnjega računalnika je določeno z zaporedjem ukazov, ki jih CPE, kot smo spoznali pri opisu von Neumannove arhitekture, pridobiva iz glavnega pomnilnika in jih praviloma izvršuje enega za drugim. Kaj pa sploh so ukazi? Ukazi hranijo informacijo o <b>operaciji</b>, ki naj jo izvede CPE, in o morebitnih operandih operacije. Operacije, s katerimi smo se posredno že srečali v poglavju o programiranju, vključujejo osnovne aritmetične operacije (seštevanje, odštevanje, množenje in deljenje); logične operacije, kot sta logični in (konjukcija, <i>ang. AND</i>) ter logični ali (disjunkcija, <i>ang. OR</i>); operacije za prenos podatkov med pomnilnikom, registri in vhodno-izhodnimi napravami; ter operacije za skok, ki pa jih bomo spoznali v nadaljevanju (prim. pogojni stavek v poglavju o programiranju). Ukaz prav tako hrani informacijo o <b>operandu</b>, za katerega naj se operacija izvrši.</p>
 
-<p align="justify">Spoznali smo že, da so vse informacije, ki jih skladišči računalnik, v obliki ničel in enic in z ukazi ni nič drugače. Vsak ukaz je tako zaporedje ničel in enic, ki ima za CPE točno določen pomen. Ukazi so razdeljeni v več polj, tj. skupin bitov, pri čemer ima vsako polje svoj pomen. Poglejmo si preprost primer:</p>
+<p align="justify">Spoznali smo že, da so vse informacije, ki jih skladišči računalnik, v obliki ničel in enic – z ukazi ni nič drugače. Vsak ukaz je tako zaporedje ničel in enic, ki ima za CPE točno določen pomen. Ukazi so razdeljeni v več polj, tj. skupin bitov, pri čemer ima vsako polje svoj pomen. Poglejmo si preprost primer:</p>
 
 <p align="center"><img src="img/ukazi1.png" height="54" width="400" /></p>
 
 <p align="justify">Prvi biti v ukazu opredeljujejo operacijsko kodo, ki določa operacijo, medtem ko preostanek ukaza podaja, kje se nahajajo operandi in kako naj CPE do njih dostopa.</p>
 
 <div class="alert alert-success" role="alert">
-<p align="justify">Razdelitvi bitov na posamezna polja, ki hranijo informacijo o operaciji in operandih, pravimo <b>format ukaza</b>.</p>
+<p align="justify">Razdelitev bitov na posamezna polja, ki hranijo informacijo o operaciji in operandih, imenujemo <b>format ukaza</b>.</p>
 </div>
 <!-- Left column end -->
 					</div>
@@ -211,10 +211,10 @@
 <!-- Right column start -->
 <h1>Mesto nahajanja operandov</h1>
  
-<p align="justify">Operandi so v računalniku shranjeni bodisi v glavnem pomnilniku, v pomnilniku neke vhodno-izhodne naprave, lahko so vsebovani že v samem ukazu ali pa se nahajajo v majhnem pomnilniku znotraj CPE, ki mu rečemo <b>registri</b>.</p>
+<p align="justify">Operandi so v računalniku shranjeni v glavnem pomnilniku, v pomnilniku neke vhodno-izhodne naprave, lahko so vsebovani že v samem ukazu ali pa se nahajajo v majhnem pomnilniku znotraj CPE, ki ga imenujemo <b>registri</b>.</p>
 
 <div class="alert alert-danger" role="alert">
-<p align="justify"><b>Register</b> je majhen pomnilnik v centralni procesni enoti. V današnjih CPE register tipično hrani 8, 16, 32 ali 64 bitov.</p>
+<p align="justify"><b>Register</b> je majhen pomnilnik v centralni procesni enoti. V današnjih CPE register običajno hrani 8, 16, 32 ali 64 bitov.</p>
 </div>
 
 <p align="justify">V vsakem registru znotraj CPE lahko hranimo en operand. Nekatere CPE imajo le po en register, nekatere dva, druge pa tudi 16 ali celo 32.</p>
@@ -222,11 +222,11 @@
 <p align="justify">Zakaj bi sploh želeli operande hraniti v registrih znotraj CPE? S pomočjo registrov se izognemo odvečnim dostopom do pomnilnika, ki v primerjavi z dostopom do registrov zahtevajo bistveno več časa. Tako lahko npr. vmesne rezultate programa hranimo v registrih in v pomnilnik zapišemo šele končni rezultat, s čimer dosežemo pomembne pohitritve.</p>
 
 <div class="alert alert-success" role="alert">
-<p align="justify">Operandom, ki so shranjeni v pomnilnku pravimo <b>pomnilniški operandi</b>, operandom v registrih pa <b>registrski operandi</b>.</p>
+<p align="justify">Operande, ki so shranjeni v pomnilniku, imenujemo <b>pomnilniški operandi</b>, operande v registrih pa <b>registrski operandi</b>.</p>
 </div>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Enega od registrov smo srečali že pri opisu von Neumannove arhitekture. Kako se imenuje in čemu služi?</p>
+<p align="justify">Enega od registrov smo spoznali že pri opisu von Neumannove arhitekture. Kako se imenuje in kaj je njegova funkcija?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>

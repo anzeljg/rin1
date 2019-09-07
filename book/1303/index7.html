@@ -176,7 +176,7 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Da lahko zapišemo vseh 65 536 naslovov, potrebujemo 16 bitov. Za operacijsko kodo potrebujemo najmanj 5 bitov: 2<sup>5</sup> = 32, dve kombinaciji bitov bosta ostali prosti. Potrebujemo torej 5 + 3 &middot; 16 = 53 bitov.</p>
+						<p align="justify">Da lahko zapišemo vseh 65.536 naslovov, potrebujemo 16 bitov. Za operacijsko kodo potrebujemo najmanj 5 bitov: 2<sup>5</sup> = 32, dve kombinaciji bitov bosta ostali prosti. Potrebujemo torej 5 + 3 &middot; 16 = 53 bitov.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -244,7 +244,7 @@
 						<h4 class="modal-title">Namig</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">V višjem programskem jeziku, kot je Python, bi program izgledal takole:
+						<p align="justify">V višjem programskem jeziku, kot je Python, bi bil program videti takole:
 <pre>
 stevec = 2015
 while stevec > 0
@@ -274,18 +274,18 @@ Ker v strojnem jeziku nimamo zanke while, si pomagaj z enim od pogojnih skočnih
 					<div class="modal-body">
 						<p align="justify">
 <pre>
-10: CLR       ; najprej pobrisemo R0
-11: ADDI 2015 ; preko registra R0 shranimo
-12: STORE 111 ; na naslov 111 stevilo ponovitev zanke
+10: CLR       ; najprej pobriši R0
+11: ADDI 2015 ; prek registra R0 shrani
+12: STORE 111 ; na naslov 111 število ponovitev zanke
 13: LOAD 111
-14: JZ 22     ; ali smo ze dovoljkrat izpisali 3
+14: JZ 22     ; ali smo že dovoljkrat izpisali 3
 15: CLR
 16: ADDI 3
-17: OUT       ; izpisemo 3
+17: OUT       ; izpiši 3
 18: LOAD 111
 19: SUBI 1
-20: STORE 111 ; in odstejemo 1 od stevca
-21: JUMP 13   ; skoci na zacetek zanke
+20: STORE 111 ; in odštej 1 od števca
+21: JUMP 13   ; skoči na začetek zanke
 22:           ; konec programa
 </pre>
 </p>
@@ -360,8 +360,8 @@ Ker v strojnem jeziku nimamo zanke while, si pomagaj z enim od pogojnih skočnih
 12: STORE 200 ; in jo shrani na naslov 200
 13: IN        ; preberi drugo vrednost v R0
 14: SUBI 48   ; pretvori kodo v številko
-15: ADD 200   ; pristej ji vrednost na naslovu 200
-16: JZ 10     ; ce je vrednost R0 0, skoci na prvi ukaz
+15: ADD 200   ; prištej ji vrednost na naslovu 200
+16: JZ 10     ; če je vrednost R0 0, skoči na prvi ukaz
 17: ADDI 48   ; pretvori število v njegovo kodo
 18: OUT       ; rezultat v R0 izpiši na zaslon
 </pre>
@@ -389,7 +389,7 @@ Ker v strojnem jeziku nimamo zanke while, si pomagaj z enim od pogojnih skočnih
 	<span class="label label-primary"><b>1</b></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Recimo, da načrtujemo format ukaza za računalnik, ki bo lahko dostopal do 65.536 (2<sup>16</sup>) besed. V ukazih želimo poleg operacijske kode imeti 3 pomnilniške operande. Vseh ukazov, ki jih bo računalnik znal izvajati, bo 30. Najmanj koliko bitov bodo dolgi ukazi?</p>
+<p align="justify">Recimo, da načrtujemo format ukaza za računalnik, ki bo lahko dostopal do 65.536 (2<sup>16</sup>) besed. V ukazih želimo poleg operacijske kode uporabiti 3 pomnilniške operande. Vseh ukazov, ki jih bo računalnik lahko izvedel, bo 30. Najmanj koliko bitov bodo dolgi ukazi?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -400,7 +400,7 @@ Ker v strojnem jeziku nimamo zanke while, si pomagaj z enim od pogojnih skočnih
 	<span class="label label-primary"><b>2</b></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Opiši, kaj naredijo naslednji v dvojiški obliki zapisani ukazi na CPE, ki smo jo opisali?
+<p align="justify">Opiši, kaj sprožijo naslednji v dvojiški obliki zapisani ukazi v CPE, ki smo jo opisali?
 <ul>
 	<li><tt>110000000000</tt></li>
 	<li><tt>101000000100</tt></li>
@@ -463,7 +463,7 @@ Kakšen bo sedaj rezultat programa?</p>
 	<span class="fa fa-star pull-right"></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Recimo, da bi med ukaze našega procesorja radi vpeljali še ukaz, ki naredi bitni izključujoči (ekskluzivni) ali (<i>ang. xor</i>) med operandoma - podobno kot imamo (bitni) logični ali. Poišči kakšna operacija je to izključujoči ali. V katero skupino ukazov meniš, da sodi ta ukaz? Na koncu mu moraš določiti še operacijsko kodo.</p>
+<p align="justify">Recimo, da bi med ukaze našega procesorja radi vpeljali še ukaz, ki naredi bitni izključujoči (ekskluzivni) ali (<i>ang. xor</i>) med operandoma – podobno kot imamo (bitni) logični ali. Poišči kakšna operacija je izključujoči ali. V katero skupino ukazov meniš, da sodi ta ukaz? Na koncu mu moraš določiti še operacijsko kodo.</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution6"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -476,7 +476,7 @@ Kakšen bo sedaj rezultat programa?</p>
 	<span class="fa fa-star pull-right"></span>
 </p>
 <p align="justify">Zaradi poenostavitve razlage smo <a href="index5.html" target="_blank">v primeru programa</a> predpostavili, da je koda številke, ki jo prebere ukaz <code>IN</code> enaka sami številki. Slednje običajno ni res. Najprej preberemo samo eno števko in poleg tega je slednja zakodirana v neko številko. Podobno kodiranje smo srečali v poglavju o programiranju, kjer smo v namen dekodiranja uporabili posebno funkcijo <code>int</code>.</p>
-<p align="justify">Posebno pogosto uporabljana koda je ASCII koda (poišči na spletu), kjer je koda števke 0 enaka 48, koda števke 1 enaka 49 in tako naprej do števke 9, ki ima kodo 57. Popravi program tako, da bo upošteval, da je prebrana vrednost koda števke in ne sama številka. Podobno moramo seveda, če želimo izpisati neko števko, izpisati njeno kodo.</p>
+<p align="justify">Posebno pogosto uporabljana koda je koda ASCII (poišči na spletu), pri kateri je koda števke 0 enaka 48, koda števke 1 enaka 49 in tako naprej do števke 9, ki ima kodo 57. Popravi program tako, da bo upošteval, da je prebrana vrednost koda števke in ne sama številka. Podobno moramo seveda, če želimo izpisati neko števko, izpisati njeno kodo.</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution7"><span class="fa fa-check"></span> Rešitev</button>
 </p>

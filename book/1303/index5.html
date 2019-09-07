@@ -180,7 +180,7 @@
 					</div>
 					<div class="modal-body">
 						<p align="justify">CPE bi vrednost izvedla kot ukaz in v našem primeru bi bil to ukaz z operacijsko kodo 0, kar pomeni, da bi se izvedel ukaz <code>ADD</code>.</p>
-						<p align="justify">Če pa je naš program slabo napisan ter dovoljuje vnos poljubnih vrednosti, ki jih potem CPE izvaja, lahko nepridipravi to izkoristijo. V resnici na ta način vdrejo v naš računalnik, samo prave ukaze morajo podtakniti naši CPE.</p>
+						<p align="justify">Če pa je naš program slabo napisan ter dovoljuje vnos poljubnih vrednosti, ki jih potem CPE izvaja, lahko nepridipravi to izkoristijo. Če CPE podtaknejo ustrezne ukaze, lahko dejansko vdrejo v naš računalnik.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -198,18 +198,18 @@
 <!-- Left column start -->
 <h1>Primer programa</h1>
 
-<p align="justify">Poglejmo si sedaj primer programa s katerim preberemo dve vrednosti iz tipkovnice, ju seštejemo in rezultat zapišemo na zaslon. V primeru, da je rezultat 0, bomo skočili nazaj na prvi ukaz s pomočjo pogojnega skoka <code>JZ</code>:</p>
+<p align="justify">Poglejmo si sedaj primer programa, s katerim preberemo dve vrednosti iz tipkovnice, ju seštejemo in rezultat zapišemo na zaslon. Če je rezultat 0, bomo skočili nazaj na prvi ukaz s pomočjo pogojnega skoka <code>JZ</code>:</p>
 <pre>
 10: IN        ; preberi prvo vrednost iz tipkovnice v R0
 11: STORE 200 ; in jo shrani v pomnilnik na naslov 200
 12: IN        ; preberi drugo vrednost v R0
-13: ADD 200   ; pristej ji vrednost na naslovu 200
-14: JZ 10     ; ce je vrednost R0 0, skoci na prvi ukaz
+13: ADD 200   ; prištej ji vrednost na naslovu 200
+14: JZ 10     ; če je vrednost R0 0, skoči na prvi ukaz
 15: OUT       ; rezultat v R0 izpiši na zaslon
 </pre>
 </p>
 
-<p align="justify">Ukazi bi bili v pomnilniku v binarni obliki zapisani takole:
+<p align="justify">Ukazi bi bili v pomnilniku v dvojiški obliki zapisani takole:
 <pre>
 IN             1000000000000000
 STORE 200      0011000011001000
@@ -221,13 +221,13 @@ OUT            1001000000000000
 </p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Na desni si oglej potek programa s pomočjo animacije. Klikni na gumb <b>Začni</b>, da zaženeš animacijo. Z drsnikom lahko spreminjaš njeno hitrost ali pa se z gumboma <b>Nazaj</b> in <b>Naprej</b> korakoma premikaš skozi potek programa. Navpično navedena števila zraven tabele, ki predstavlja pomnilnik, so naslovi pomnilniških besed.</p>
+<p align="justify">Na desni si oglej potek programa s pomočjo animacije. Klikni gumb <b>Začni</b>, da zaženeš animacijo. Z drsnikom lahko spreminjaš njeno hitrost ali pa se z gumboma <b>Nazaj</b> in <b>Naprej</b> po korakih pomikaš skozi potek programa. Navpično navedena števila zraven tabele, ki predstavlja pomnilnik, so naslovi pomnilniških besed.</p>
 </div>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Ob koncu animacije na desni boš opazil, da smo v pomnilniški besedi z naslovom 200 pustili število 3. Kaj bi se zgodilo, če bi CPE zaporedoma naprej prevzemala ukaze in prišla do tega naslova?</p>
+<p align="justify">Ob koncu animacije na desni boš opazil(-a), da smo v pomnilniški besedi z naslovom 200 pustili število 3. Kaj bi se zgodilo, če bi CPE zaporedoma prevzemala ukaze in dosegla ta naslov?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -279,10 +279,6 @@ OUT            1001000000000000
 	<div id="slider_uk" onchange="update();"></div>
 </div>
 </p>
-<!--<p>
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#hint1"><span class="fa fa-question"></span> Namig</button>
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
-</p>-->
 <!-- Right column end -->
 					</div>
 				</div>

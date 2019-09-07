@@ -176,7 +176,7 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Prvi štirje biti so operacijska koda, naslednji trije so naslov registra ter preostalih 9 bitov predstavlja naslov pomnilnika. Na primer,
+						<p align="justify">Prvi štirje biti so operacijska koda, naslednji trije so naslov registra ter preostalih 9 bitov predstavlja naslov pomnilnika. Primer:
 <pre>
 <i>LOAD R5, 257</i>: <u>0111 101 1</u> <u>00000001</u>.
 </pre></p>
@@ -218,20 +218,20 @@
 <!-- Left column start -->
 <h2>Skoki</h2>
 
-<p align="justify">V CPE s von Neumannovo arhitekturo hranimo naslov naslednjega ukaza, ki se bo izvedel, v posebnem registru PC. V resnici lahko tudi v ta register vpišemo poljubno vrednost, kar ima za posledico prekinitev običajnega zaporedja izvajanja ukazov in nadaljevanje na povsem drugem mestu - temu pravimo skok.</p>
+<p align="justify">V CPE s von Neumannovo arhitekturo hranimo naslov naslednjega ukaza, ki se bo izvedel, v posebnem registru PC. Poleg tega lahko v ta register dejansko vpišemo poljubno vrednost, kar ima za posledico prekinitev običajnega zaporedja izvajanja ukazov in nadaljevanje na povsem drugem mestu – temu pravimo skok.</p>
 
 <p align="justify">Skok izvedemo s pomočjo t.i. <b>skočnih ukazov</b>. Poznamo dva tipa skočnih ukazov: <b>pogojne skoke</b> (<i>ang. conditional branch</i>) in <b>brezpogojne skoke</b> (<i>ang. uncoditional branch</i>, <i>jump</i>). Brezpogojni skoki vedno spremenijo vrednost registra PC, pri pogojnih skokih pa se vrednost spremeni le, če je izpolnjen nek pogoj.</p>
 
 <p align="justify">Prevajalniki in tolmači pogojne stavke in zanke, ki smo jih spoznali pri visokonivojskem jeziku Python, prevedejo v skočne ukaze v strojnem jeziku, ki jih nato CPE izvede.</p>
 
-<p align="justify">Oglejmo si primer pogojnega skoka JZ (<i>ang. Jump if Zero</i>), ki bo v primeru, da je vrednost v registru <i>R1</i> enaka nič, v register PC zapisal naslov <i>addr</i>:</p>
+<p align="justify">Oglejmo si primer pogojnega skoka JZ (<i>ang. Jump if Zero</i>), ki bo, če bo vrednost v registru <i>R1</i> enaka nič, v register PC zapisal naslov <i>addr</i>:</p>
 
 <p align="center"><img src="img/jz.png" height="39" width="300" /></p>
 
 <h4>Za zvedave</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Nekatere CPE pri preverjanju, ali je pogoj izpolnjen, namesto vrednosti poljubnega registra uporabljajo t.i. <b>statusne bite</b> (<i>ang. status flag bits</i>). Ti so običajno del večjega registra, imenovanega <b>statusni register</b> in se samodejno spreminjajo glede na ukaz in rezultat operacije. Če bi bil npr. rezultat operacije odštevanja 0, bi se v statusnem registru nastavil pogojni bit imenovan Z (<i>ang. zero</i>) na 1, sicer bi bil 0. Če bi bil rezultat iste operacije negativen, bi se nastavil bit N (<i>ang. negative</i>). Kadar je rezultat aritmetične operacije prevelik, da bi ga bilo mogoče zapisati v register, se uporabljata še bita prenosa (<i>ang. carry</i>) in preliva (<i>ang. overflow</i>).</p>
+<p align="justify">Nekatere CPE pri preverjanju, ali je pogoj izpolnjen, namesto vrednosti poljubnega registra uporabljajo t.i. <b>statusne bite</b> (<i>ang. status flag bits</i>). Ti so običajno del večjega registra, imenovanega <b>statusni register</b>, in se samodejno spreminjajo glede na ukaz in rezultat operacije. Če bi bil npr. rezultat operacije odštevanja 0, bi se pogojni bit, imenovan Z (<i>ang. zero</i>), v statusnem registru nastavil na 1, sicer bi bil 0. Če bi bil rezultat iste operacije negativen, bi se nastavil bit N (<i>ang. negative</i>). Kadar je rezultat aritmetične operacije prevelik, da bi ga bilo mogoče zapisati v register, se uporabljata še bit prenosa (<i>ang. carry</i>) in bit preliva (<i>ang. overflow</i>).</p>
 </div>
 <!-- Left column end -->
 					</div>
@@ -243,14 +243,14 @@
 <pre>
 <b>ADD R5, R0, R4 </b>
 </pre>
-bi tako bil z biti zapisan kot prikazuje spodnja slika:</p>
+bi tako bil z biti zapisan, kot prikazuje spodnja slika:</p>
 
 <p align="center"><img src="img/add-biti-small.png" height="127" width="320" /></p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Vključeni smo bili v ekipo, ki načrtuje novo CPE, v katerem so vsi ukazi lahko dvobajtni in je operacijska koda 4-bitna ter ima 8 registrov. Za nalogo smo dobili določiti format ukaza <code>LOAD</code>. Zapiši primer bitnega zapisa ukaza <code>LOAD</code>.</p>
+<p align="justify">Vključeni smo bili v ekipo, ki načrtuje novo CPE, v katerem so vsi ukazi lahko dvobajtni in je operacijska koda 4-bitna ter ima 8 registrov. Naša naloga je določiti format ukaza <code>LOAD</code>. Zapiši primer bitnega zapisa ukaza <code>LOAD</code>.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -259,7 +259,7 @@ bi tako bil z biti zapisan kot prikazuje spodnja slika:</p>
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kako velik je lahko pomnilnik, pri našem CPE glede na ukaz <code>LOAD</code>?</p>
+<p align="justify">Kako velik je lahko pomnilnik pri naši CPE glede na ukaz <code>LOAD</code>?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution2"><span class="fa fa-check"></span> Rešitev</button>
 </p>
