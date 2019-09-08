@@ -173,13 +173,13 @@
 <!-- Left column start -->
 <h1>Pomnilnik</h1>
  
-<p align="justify">V prejšnji enoti smo videli, da je pomnilnik eden od osnovnih gradnikov von Neumannovih računalnikov. Delimo ga na <b>glavni pomnilnik</b> (imenovan tudi primarni, delovni oz. hitri pomnilnik) in <b>pomožni pomnilnik</b> (sekundarni, zunanji pomnilnik). Do glavnega pomnilnika ima centralna procesna enota neposreden dostop, medtem ko je pomožni pomnilnik dostopen zgolj posredno, preko vhodno-izhodnega sistema.</p>
+<p align="justify">V prejšnji enoti smo videli, da je pomnilnik eden od osnovnih gradnikov von Neumannovih računalnikov. Delimo ga na <b>glavni pomnilnik</b> (imenovan tudi primarni, delovni oz. hitri pomnilnik) in <b>pomožni pomnilnik</b> (sekundarni, zunanji pomnilnik). Do glavnega pomnilnika ima centralna procesna enota neposreden dostop, medtem ko je pomožni pomnilnik dostopen zgolj posredno prek vhodno-izhodnega sistema.</p>
 
-<p align="justify">V glavnem pomnilniku so shranjeni ukazi programa, ki ga izvršuje centralna procesna enota, in podatki, ki jih program potrebuje, prav tako se vanj shranjujejo rezultati izvršenih ukazov. Glavni pomnilnik današnjih računalnikov je v obliki integriranih vezij, tj. elektronskih vezij izdelanih na majhnih silicijevih ploščicah - čipih. Izdelan je v tehnologiji, ki ne omogoča trajnega hranjenja informacije. Ob odklopu napajanja se njegova vsebina izgubi. Zato potrebujemo pomožni pomnilnik, ki je obstojen, tj. ohranja vsebino tudi brez priključenega vira električne energije.</p>
+<p align="justify">V glavnem pomnilniku so shranjeni ukazi programa, ki jih izvršuje centralna procesna enota, in podatki, ki jih program potrebuje, prav tako se vanj shranjujejo rezultati izvršenih ukazov. Glavni pomnilnik današnjih računalnikov je v obliki integriranih vezij, tj. elektronskih vezij, izdelanih na majhnih silicijevih ploščicah – čipih. Uporablja tehnologijo, ki ne omogoča trajnega hranjenja informacije. Ob odklopu napajanja se njegova vsebina izgubi. Zato potrebujemo pomožni pomnilnik, ki je obstojen, tj. ohranja vsebino tudi brez priključenega vira električne energije.</p>
 
-<p align="justify">Pomožni pomnilnik predstavljajo naprave kot so trdi diski, optični pogoni (CD, DVD, BluRay) in naprave s t.i. bliskovnim pomnilnikom (<i>ang. flash memory</i>), kot so USB »ključi« (<i>ang. USB flash drives</i>), spominske kartice in diski SSD (<i>ang. solid-state drive</i>). Pomožni pomnilnik je običajno 100-krat do 1 000-krat večji od glavnega pomnilnika, a obenem bistveno počasnejši. Dostop do podatkov shranjenih v njem traja do 1 000 000-krat dlje kot dostop do podatkov v glavnem pomnilniku.</p>
+<p align="justify">Pomožni pomnilnik predstavljajo naprave, kot so trdi diski, optični pogoni (CD, DVD, BluRay) in naprave s t.i. bliskovnim pomnilnikom (<i>ang. flash memory</i>), kot so USB-ključi (<i>ang. USB flash drive</i>), spominske kartice in diski SSD (<i>ang. solid-state drive</i>). Pomožni pomnilnik je običajno 100-krat do 1000-krat večji od glavnega pomnilnika, a obenem bistveno počasnejši. Dostop do podatkov, shranjenih v njem, traja do 1.000.000-krat dlje kot dostop do podatkov v glavnem pomnilniku.</p>
 
-<p align="justify">Delitev pomnilnika na glavni pomnilnik in pomožni pomnilnik obstaja že skozi vso zgodovino računalništva in je posledica dejstva, da s trenutno obstoječimi tehnologijami še ne moremo izdelati pomnilnika, ki bi bil hkrati hiter, velik, obstojen in pri tem zapovrh še poceni. Glavni pomnilnik današnjih računalnikov je zato sestavljen iz večih pomnilniških naprav, izdelanih v različnih tehnologijah. Naprave so med seboj povezane v t.i. <b>pomnilniško hierarhijo</b>, v kateri s pomočjo majhnih in hitrih pomnilniških naprav skušamo prikriti počasnost večjih pomnilnikov.</p>
+<p align="justify">Delitev pomnilnika na glavni pomnilnik in pomožni pomnilnik obstaja že skozi vso zgodovino računalništva in je posledica dejstva, da s trenutno obstoječimi tehnologijami še ne moremo izdelati pomnilnika, ki bi bil hkrati hiter, velik, obstojen in za povrhu še poceni. Glavni pomnilnik današnjih računalnikov je zato sestavljen iz več pomnilniških naprav, ki uporabljajo različne tehnologije. Naprave so med seboj povezane v t.i. <b>pomnilniško hierarhijo</b>, v kateri s pomočjo majhnih in hitrih pomnilniških naprav skušamo prikriti počasnost večjih pomnilnikov.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -187,18 +187,18 @@
 <!-- Right column start -->
 <h1>Glavni pomnilnik</h1>
  
-<p align="justify">Glavni pomnilnik je z vidika programerja videti kot linearno zaporedje <b>pomnilniških besed</b>, v katere pišemo in iz katerih beremo vsebino. Pri tem dolžina vsebine ni poljubna, temveč je omejena na število bitov, ki sestavlja pomnilniško besedo. Dolžina besede je danes največkrat 8 bitov.</p>
+<p align="justify">Glavni pomnilnik je z vidika programerja videti kot linearno zaporedje <b>pomnilniških besed</b>, v katere zapisujemo in iz katerih beremo vsebino. Pri tem dolžina vsebine ni poljubna, temveč je omejena na število bitov, ki sestavlja pomnilniško besedo. Dolžina besede je danes največkrat 8 bitov.</p>
 
 <div class="alert alert-danger" role="alert">
 <p align="justify">Za zaporedje dolžine 8 bitov uporabljamo enoto <b>bajt</b>.</p>
 </div>
 
-<p align="justify">Vsaka pomnilniška beseda ima svoj enoličen <b>naslov</b>. Branju in pisanju v pomnilnik pravimo<b> pomnilniški dostop</b>. Centralna procesna enota mora najprej izstaviti naslov pomnilniške besede do katere želi dostopati, nato pa opravi sam dostop.</p>
+<p align="justify">Vsaka pomnilniška beseda ima svoj enoličen <b>naslov</b>. Branju in zapisovanju v pomnilnik pravimo<b> pomnilniški dostop</b>. Centralna procesna enota mora najprej izstaviti naslov pomnilniške besede, do katere želi dostopati, nato pa opravi sam dostop.</p>
 
 <p align="center"><img src="img/memory-small.png" width="80%" class="img-responsive" />
 <i>Organizacija pomnilnika, kot ga vidi programer.</i></p>
 
-<p align="justify">Dolžina pomnilniške besede hkrati predstavlja najmanjšo količino bitov, do katerih dostopamo z enim pomnilniškim dostopom. To pomeni, da ne moremo dostopati do posameznih bitov v pomnilniški besedi. Drugače povedano, centralna procesna enota prebere vse bite iz ene besede ali pa piše v vse bite v besedi.</p>
+<p align="justify">Dolžina pomnilniške besede hkrati predstavlja najmanjšo količino bitov, do katerih dostopamo z enim pomnilniškim dostopom. To pomeni, da ne moremo dostopati do posameznih bitov v pomnilniški besedi. Drugače povedano, centralna procesna enota prebere vse bite iz ene besede ali pa zapiše v vse bite v besedi.</p>
 <!-- Right column end -->
 					</div>
 				</div>

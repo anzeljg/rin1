@@ -174,9 +174,9 @@
 <h1>Pomnilniška hierarhija</h1>
  
 <p align="justify">Vsi pomnilniki so v današnjih računalnikih urejeni v pomnilniško hierarhijo.
-Pomnilniki se med seboj razlikujejo po tehnologiji izdelave, ceni in velikosti. Z njihovo ureditvijo v hierarhijo skušamo doseči, da bi velik, poceni, a hkrati počasen pomnilnik videti skoraj tako hiter kot majhen pomnilnik izdelan v bistveno hitrejši in dražji tehnologiji.</p>
+Pomnilniki se med seboj razlikujejo po tehnologiji izdelave, ceni in velikosti. Z njihovo ureditvijo v hierarhijo skušamo doseči, da bi velik, poceni, a hkrati počasen pomnilnik videti skoraj tako hiter kot majhen pomnilnik z bistveno hitrejšo in dražjo tehnologijo.</p>
 
-<p align="justify">Najbližje centralni procesni enoti, ponavadi kar na istem čipu kot CPE, je majhen in hiter pomnilnik izdelan v tehnologiji SRAM. Temu pomnilniku pravimo <b>predpomnilnik</b> (angl. <i>cache</i>). Na sliki je označen z L1 (angl. <i>level 1</i>). Običajno imamo danes med predpomnilnikom L1 in glavnim pomnilnikom RAM še eden ali dva nivoja predpomnilnika (L2, L3). Vsak je večji, a počasnejši od prejšnjega. Pomnilnik RAM, izdelan v tehnologiji DRAM, je nato povezan s pomnilnikom za trajno skladiščenje, npr. diskom SSD, ki je največji in najpočasnejši člen v verigi.</p>
+<p align="justify">Najbližje centralni procesni enoti, ponavadi kar na istem čipu kot CPE, je majhen in hiter pomnilnik s tehnologijo SRAM. Imenuje se <b>predpomnilnik</b> (angl. <i>cache</i>). Na sliki je označen z L1 (angl. <i>level 1</i>). Običajno se danes med predpomnilnikom L1 in glavnim pomnilnikom RAM uporablja še en nivo (ali dva nivoja) predpomnilnika (L2, L3). Vsak je večji, a počasnejši od prejšnjega. Pomnilnik RAM s tehnologijo DRAM je nato povezan s pomnilnikom za trajno skladiščenje, npr. diskom SSD, ki je največji in najpočasnejši člen v verigi.</p>
 
 <style>
 #container_pomnilnik {
@@ -239,18 +239,17 @@ Pomnilniki se med seboj razlikujejo po tehnologiji izdelave, ceni in velikosti. 
     <button id="button_pomnilnik" class="btn btn-primary" onclick="run_animation_pomnilnik();"><span class="fa fa-play"></span> Začni prenos</button>
 </p>
 
-<p align="justify">Centralna procesna enota v današnjih računalnikih lahko dostopa le do predpomnilnika L1. Če podatkov oz. ukazov, ki jih CPE potrebuje za nadaljevanje izvajanja programa, ni v predpomnilniku L1, jih je vanj potrebno prenesti iz predpomnilnika L2. Če podatka ni niti v predpomnilniku L2, ga je najprej potrebno prenesti iz glavnega pomnilnika v predpomnilnik L2 in nato iz L2 v L1. V skrajnem primeru je podatek samo v pomožnem pomnilniku. Pritisni na gumb <i>Začni prenos</i>, da si ogledaš, kako se v tem primeru podatek prenaša med nivoji.</p>
+<p align="justify">Centralna procesna enota v današnjih računalnikih lahko dostopa le do predpomnilnika L1. Če podatkov oz. ukazov, ki jih CPE potrebuje za nadaljevanje izvajanja programa, ni v predpomnilniku L1, jih je vanj treba prenesti iz predpomnilnika L2. Če podatka ni niti v predpomnilniku L2, ga je najprej treba prenesti iz glavnega pomnilnika v predpomnilnik L2 in nato iz L2 v L1. V skrajnem primeru je podatek samo v pomožnem pomnilniku. Pritisni gumb <i>Začni prenos</i>, da si ogledaš, kako se v tem primeru podatek prenaša med nivoji.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Takšnim dostopom, pri katerih je potreben prenos podatkov s počasnejših nivojev hierarhije, pravimo <b>zgrešitve</b> v predpomnilniku in se jim skušamo v čim večji meri izogniti. Pri tem nam pomaga lastnost von Neumannovih računalnikov, da pogosto 
-dostopajo do naslovov v pomnilniku, ki so si blizu eden drugega in da se posamezni naslovi v kratkem časovnem intervalu pojavljajo večkrat. Tej lastnosti pravimo tudi <b>lokalnost pomnilniških dostopov</b>.</p>
+<p align="justify">Dostope, pri katerih je potreben prenos podatkov s počasnejših nivojev hierarhije, imenujemo <b>zgrešitve</b> v predpomnilniku in se jim skušamo v čim večji meri izogniti. Pri tem nam pomaga lastnost von Neumannovih računalnikov, da pogosto dostopajo do naslovov v pomnilniku, ki so si blizu med seboj, in da se posamezni naslovi v kratkem časovnem intervalu pojavljajo večkrat. Tej lastnosti pravimo tudi <b>lokalnost pomnilniških dostopov</b>.</p>
 
-<p align="justify">Lokalnost pomnilniških dostopov je posledica lastnosti von Neumannovih računalnikov, ki smo jo omenili že v prejšnjem poglavju, namreč da centralna procesna enota ukaze iz pomnilnika prevzema enega za drugim, z zaporednih naslovov. Prav tako k nastanku lokalnosti dostopov pripomore način programiranja z uporabo podprogramov, zank in tabel, ki smo jih spoznali v poglavjih o programiranju.</p>
+<p align="justify">Lokalnost pomnilniških dostopov je posledica lastnosti von Neumannovih računalnikov, ki smo jo omenili že v prejšnjem poglavju, namreč da centralna procesna enota ukaze iz pomnilnika enega za drugim prevzema z zaporednih naslovov. Prav tako k nastanku lokalnosti dostopov pripomore način programiranja z uporabo podprogramov, zank in tabel, ki smo jih spoznali v poglavjih o programiranju.</p>
 
-<p align="justify">Lokalnost je hkrati predpogoj, da pomnilniška hierarhija učinkovito deluje oz. da je takšna ureditev pomnilnika sploh smiselna. Lokalnost s pridom izkoristimo tako, da ob zgrešitvi v predpomnilniku iz glavnega pomnilnika ne prenesemo samo vsebine z enega samega naslova, ampak hkrati prenesemo še vsebino večjega števila sosednjih naslovov. Centralni procesni enoti tako že vnaprej &quot;tlakujemo&quot; predpomnilnik z vsebino, ki jo bo najverjetneje že kmalu potrebovala. S tem ji bistveno pohitrimo naslednje dostope do pomnilnika, vse dokler ne pride do nove zgrešitve v predpomnilniku. Le tako nam uspe z majhnim, hitrim in dragim predpomnilnikom delno prikriti počasnost velikega, poceni pomnilnika.</p>
+<p align="justify">Lokalnost je hkrati predpogoj, da pomnilniška hierarhija učinkovito deluje oz. da je takšna ureditev pomnilnika sploh smiselna. Lokalnost s pridom izkoristimo tako, da ob zgrešitvi v predpomnilniku iz glavnega pomnilnika ne prenesemo samo vsebine z enega samega naslova, ampak hkrati prenesemo še vsebino z več sosednjih naslovov. Centralni procesni enoti tako že vnaprej &quot;tlakujemo&quot; predpomnilnik z vsebino, ki jo bo najverjetneje že kmalu potrebovala. S tem ji bistveno pohitrimo naslednje dostope do pomnilnika, vse dokler ne pride do nove zgrešitve v predpomnilniku. Le tako nam uspe z majhnim, hitrim in dragim predpomnilnikom delno prikriti počasnost velikega, poceni pomnilnika.</p>
 <!-- Right column end -->
 					</div>
 				</div>
