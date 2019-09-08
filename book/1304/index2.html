@@ -176,7 +176,7 @@
 						<h4 class="modal-title">Komentar</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Včasih programer želi prekiniti zaporedno izvajanje ukazov (na primer pri uporabi zank ali pogojnih stavkov), a kako to zapovedati CPE v poglavju o ukazih.</p>
+						<p align="justify">Včasih programer želi prekiniti zaporedno izvajanje ukazov (na primer pri uporabi zank ali pogojnih stavkov). Kako to zapovedati CPE, izvemo v poglavju o ukazih.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -197,7 +197,7 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Vzporedno izvajanje programa oziroma ukazov lahko dosežemo na dva osnovna načina. Prvi je, da hkrati uporabimo več CPE (večprocesorski ali večjedrni sistem), in drugi s cevovodnim izvajanjem ukazov. Slednje se dogaja danes v vsakem procesorju. Pri opisu izvajanja ukaza smo opredelili kot primer pet korakov. Če ponazorimo cevovodno izvajanje, slednje pomeni, da se najprej prične izvajati prvi korak prvega ukaza. Nato sledi izvajanje drugega koraka prvega ukaza, vendar se <b>hkrati </b>prične izvajati že tudi prvi korak naslednjega ukaza in tako naprej.</p>
+						<p align="justify">Vzporedno izvajanje programa oziroma ukazov lahko dosežemo na dva osnovna načina. Prvi je, da hkrati uporabimo več CPE (večprocesorski ali večjedrni sistem), in drugi s cevovodnim izvajanjem ukazov. Slednje se izvaja danes v vsakem procesorju. Pri opisu izvajanja ukaza smo kot primer opredelili pet korakov. Če ponazorimo cevovodno izvajanje, to pomeni, da se najprej prične izvajati prvi korak prvega ukaza. Nato sledi izvajanje drugega koraka prvega ukaza, vendar se <b>hkrati</b> prične izvajati že tudi prvi korak naslednjega ukaza in tako naprej.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -215,17 +215,17 @@
 <!-- Left column start -->
 <h1>Von Neumannova arhitektura</h1>
  
-<p align="justify">Poleg tega, da imamo pri von Neumannovi arhitekturi program v pomnilniku, zanjo velja še preprosto shema soodvisnosti gradnikov:</p>
+<p align="justify">Poleg tega, da imamo pri von Neumannovi arhitekturi program v pomnilniku, zanjo velja še preprosta shema soodvisnosti gradnikov:</p>
 
 <p align="center"><img src="img/von-neumann-640.png" width="75%" class="img-responsive" /></p>
 
-<p align="justify">Sestoji iz 3 sklopov: <b>centralne procesne enote</b> (CPE), <b>pomnilnika</b> ter <b>vhodno-izhodnih naprav</b>. Osrednjo vlogo ima CPE, ki izvaja program tako, da prevzema ukaze enega za drugim iz pomnilnika ter jih izvršuje. Ukaz praviloma opravi neko operacijo nad podatki, ki jim rečemo operandi. Operandi so lahko prav tako shranjeni v pomnilniku ali pa so prebrani iz vhodno-izhodnih naprav. Vhodno-izhodne naprave omogočajo komunikacijo CPE z okolico. Tipične vhodno-izhodne naprave so tipkovnica, zaslon, omrežna kartica, grafična kartica idr.</p>
+<p align="justify">Sestavljena je iz treh sklopov: <b>centralne procesne enote</b> (CPE), <b>pomnilnika</b> ter <b>vhodno-izhodnih naprav</b>. Osrednjo vlogo ima CPE, ki izvaja program tako, da prevzema ukaze enega za drugim iz pomnilnika ter jih izvršuje. Ukaz praviloma opravi neko operacijo na podatkih, ki jih imenujemo operandi. Operandi so lahko prav tako shranjeni v pomnilniku ali pa so prebrani iz vhodno-izhodnih naprav. Vhodno-izhodne naprave omogočajo komunikacijo CPE z okolico. Tipične vhodno-izhodne naprave so tipkovnica, zaslon, omrežna kartica, grafična kartica idr.</p>
 
 <p align="justify">CPE vsebuje:
 <ul align="justify">
-	<li><b>Registre</b>, v katerih lahko hrani operande s katerimi računa.</li>
-	<li><b>Aritmetično-logično enoto</b>, ki zna izvajati zahtevane aritmetične in logične operacije. </li>
-	<li><b>Kontrolno enoto</b>, ki nadzira delovanje CPE.</li>
+	<li><b>registre</b>, v katerih lahko hrani operande, s katerimi računa;</li>
+	<li><b>aritmetično-logično enoto</b>, ki lahko izvaja zahtevane aritmetične in logične operacije;</li>
+	<li><b>kontrolno enoto</b>, ki nadzira delovanje CPE.</li>
 </ul>
 </p>
 <!-- Left column end -->
@@ -237,24 +237,24 @@
 <p align="justify">Kontrolna enota najprej prebere ukaz iz glavnega pomnilnika. Ukaz se v glavnem pomnilniku nahaja na naslovu, ki ga hrani <b>programski števec</b> (<i>ang. program counter, PC</i>). Programski števec je eden od registrov v centralni procesni enoti, ki ima zelo pomembno vlogo, da hrani naslov naslednjega ukaza, ki se naj izvede. Vsakič ko se prevzame ukaz iz pomnilnika, se vrednost programskega števca samodejno poveča za 1, kar običajno zapišemo kot: <b><i>PC = PC + 1</i></b>.</p>
 
 <div class="alert alert-danger" role="alert">
-<p align="justify">To pravilo je značilno za von Neumannovo arhitekturo in zagotavlja, da se ukazi jemljejo iz pomnilnika zaporedoma. Poleg tega pravilo zagotavlja zaporedno izvajanje ukazov, kot jih je programer zapisal v programu.</p>
+<p align="justify">To pravilo je značilno za von Neumannovo arhitekturo in zagotavlja, da se ukazi pridobivajo iz pomnilnika zaporedoma. Poleg tega pravilo zagotavlja zaporedno izvajanje ukazov, kot jih je programer zapisal v programu.</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#comment1"><span class="fa fa-check"></span> Komentar</button>
 </p>
 </div>
 
-<p align="justify">Izvajanje ukaza se v splošnem dogaja v več zaporednih korakih:
+<p align="justify">Ukaz se na splošno izvaja v več zaporednih korakih:
 <ol align="justify">
-	<li>Ko je ukaz dostavljen iz pomnilnika do kontrolne enote, ga le-ta začne dekodirati.</li>
+	<li>Ko je ukaz dostavljen iz pomnilnika do kontrolne enote, ga ta začne dekodirati.</li>
 	<li>Dekodiranje ukaza je postopek, s katerim se iz ukaza ugotavlja, kakšna operacija naj se izvede v aritmetično-logični enoti in kje so operandi, potrebni za izvajanje ukaza.</li>
-	<li>Operandi so najpogosteje v registrih in, če jih tam ni, jih dobimo iz pomnilnika ali vhodno-izhodne enote.</li>
-	<li>Pripravljeni operandi se prenesejo na vhod aritmetično-logične enote, ki nad njimi izvede zahtevano operacijo.</li>
-	<li>V zadnjem koraku se rezultat operacije shrani bodisi v notranje registre, pomnilnik ali na vhodno-izhodno enoto.</li>
+	<li>Operandi so najpogosteje v registrih. Če jih tam ni, jih dobimo iz pomnilnika ali vhodno-izhodne enote.</li>
+	<li>Pripravljeni operandi se prenesejo na vhod aritmetično-logične enote, ki na njih izvede zahtevano operacijo.</li>
+	<li>V zadnjem koraku se rezultat operacije shrani bodisi v notranje registre, pomnilnik ali vhodno-izhodno enoto.</li>
 </ol>
 </p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Dandanes pohitrimo izvajanje naših programov na računalnikih s tem, da jih izvajamo vzporedno. Sedaj, ko poznaš kako izgleda von Neumannova arhitektura in ko veš, kako izgleda CPE, ali si znaš zamisliti, kako doseči povzporejanje izvajanja programov?</p>
+<p align="justify">Izvajanje računalniških programov v današnjem času pohitrimo tako, da jih izvajamo vzporedno. Zdaj ko si seznanjen(-a) s von Neumannovo arhitekturo in zgradbo CPE, ali si znaš zamisliti, kako doseči povzporejanje izvajanja programov?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>
