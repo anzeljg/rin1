@@ -173,18 +173,18 @@
 <!-- Left column start -->
 <h1>Ustroj in delovanje operacijskega sistema</h1>
  
-<p align="justify">Kako sodelujejo posamezni deli programske opreme si poglejmo na primeru pisanja besedila.</p>
+<p align="justify">Da preverimo, kako sodelujejo posamezni deli programske opreme, si oglejmo primer pisanja besedila.</p>
 
-<p align="justify">Naš uporabniški program je urejevalnik besedila. Poleg njega imamo še sistemski program, ki skrbi za tiskanje dokumentov in seveda jedro ter sistemske knjižnice. Ko uporabnik pritisne tipko poljubne črke na tipkovnici (poskusi na sliki desno), to zazna jedro. Ker programi, vključno z jedrom, med tem lahko počnejo nekaj drugega, jih moramo prekiniti v njihovem delu in zato pravimo, da se ob pritisku tipke sproži <b>prekinitev</b> (<i>ang. interrupt</i>). Jedro posreduje urejevalniku obvestilo o pritisnjeni tipki in le-ta uvrsti novo črko v besedilo. Sedaj mora urejevalnik črko prikazati še na zaslonu. Ker je za prikazovanje na zaslonu zadolženo jedro, mu mora urejevalnik posredovati zahtevo. Ker delujeta urejevalnik in jedro v različnih načinih delovanja, to stori z uporabo <b>sistemskega klica</b> (<i>ang. system call</i>), ki je skrit v sistemski knjižnici. Ko jedro dobi zahtevo, da prikaže novo črko na zaslonu, jo seveda prikaže.</p>
+<p align="justify">Naš uporabniški program je urejevalnik besedila. Poleg njega imamo še sistemski program, ki skrbi za tiskanje dokumentov, in seveda jedro ter sistemske knjižnice. Ko uporabnik pritisne tipko poljubne črke na tipkovnici (poskusi na sliki desno), to zazna jedro. Ker programi, vključno z jedrom, med tem lahko počnejo kaj drugega, moramo njihovo delo prekiniti. Zato pravimo, da se ob pritisku tipke sproži <b>prekinitev</b> (<i>ang. interrupt</i>). Jedro posreduje urejevalniku obvestilo o pritisnjeni tipki in ta uvrsti novo črko v besedilo. Sedaj mora urejevalnik črko prikazati še na zaslonu. Ker je za prikazovanje na zaslonu zadolženo jedro, mu mora urejevalnik posredovati zahtevo. Ker delujeta urejevalnik in jedro v različnih načinih delovanja, to stori z uporabo <b>sistemskega klica</b> (<i>ang. system call</i>), ki je skrit v sistemski knjižnici. Ko jedro dobi zahtevo, da prikaže novo črko na zaslonu, jo seveda prikaže.</p>
 
-<p align="justify">Če se odločimo, da bi natisnili dokument, to zahtevamo s pritiskom na ustrezno ikono (poskusi na primeru desno). Prvi del postopka, ki prenese zahtevo od miške do urejevalnika je enak kot prej pri pritisku na tipko. Razlika je seveda v rezultatu. Urejevalnik pošlje dokument, spet preko sistemskega klica, operacijskemu sistemu, ki ga preko jedra preda sistemskemu programu. Slednji nato dokument natisne – ponovno preko sistemskega klica in jedra.</p>
+<p align="justify">Če se odločimo, da bi natisnili dokument, to zahtevamo s pritiskom ustrezne ikone (poskusi to storiti v desnem primeru). Prvi del postopka, ki prenese zahtevo od miške do urejevalnika, prejšnjemu pri pritisku tipke. Razlika je seveda v rezultatu. Urejevalnik pošlje dokument, znova prek sistemskega klica, operacijskemu sistemu, ki ga prek jedra posreduje sistemskemu programu. Slednji nato dokument natisne – ponovno prek sistemskega klica in jedra.</p>
 
-<p align="justify">Tipkanje besedila se dogaja tako hitro, da uporabnik ne občuti čakanja ter prehajanja iz uporabniškega v jedrni način in nazaj. Samo za primerjavo, če pišemo zelo hitro, lahko napišemo okoli 7 znakov na sekundo. Računalnik pa lahko v eni sekundi obdela tudi milijardo ukazov.</p>
+<p align="justify">Vnašanje besedila se izvaja tako hitro, da uporabnik ne občuti čakanja ter prehajanja iz uporabniškega v jedrni način in nazaj. Samo za primerjavo, če tipkamo zelo hitro, lahko vnesemo okoli 7 znakov na sekundo. Računalnik pa lahko v eni sekundi obdela tudi milijardo ukazov.</p>
 
 <h4>V razmislek</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Razmisli, kaj dela operacijski sistem medtem, ko čaka na novi ukaz.</p>
+<p align="justify">Razmisli, katere funkcije izvaja operacijski sistem, medtem ko čaka na novi ukaz.</p>
 </div>
 <!-- Left column end -->
 					</div>
