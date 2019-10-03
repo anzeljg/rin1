@@ -243,16 +243,16 @@
 					<div class="col-md-6">
 						<br />
 <!-- Left column start -->
-<p align="justify">Ker zelo pogosto velikost bloka ni dovolj za zapis celotne datoteke, se dogovorimo, da se na začetku bloka nahaja dovolj pomnilnika za naslov do naslednjega bloka ali zapis, ki nam pove, da se v tem bloku datoteka konča - EOF (<i>ang. end-of-file</i>).</p>
+<p align="justify">Ker blok zelo pogosto ni dovolj velik za zapis celotne datoteke, se dogovorimo, da se na začetku bloka nahaja dovolj pomnilnika za naslov do naslednjega bloka ali zapis, ki nam pove, da se v tem bloku datoteka konča – EOF (<i>ang. end-of-file</i>).</p>
 
 <div class="alert alert-info" role="alert">
 <p align="justify">V naši pomnilni enoti so zapisane tri datoteke z besedilom.</p>
 <p align="center"><a href="#" data-toggle="modal" data-target="#image1"><img src="img/zapis_datoteke_v_bloke.png" class="img-responsive" /></a>
 <i>Na sliki vidimo 10 blokov iz naše pomnilne enote. Vsak blok je velik 8 bajtov.</i></p>
 <p><ul align="justify">
-	<li>1. datoteka se nahaja v bloku 2 in bloku 3 in ima vsebino &quot;Vsebina datoteke&quot;.</li>
-	<li>2. datoteka se nahaja v bloku 5 in ima vsebino &quot;Kakadu.&quot;.</li>
-	<li>3. datoteka se začne v bloku 1 in ima vsebino &quot;Datoteko zapišemo v zaporedje blokov.&quot;. </li>
+	<li>1. datoteka se nahaja v bloku 2 in bloku 3 ter ima vsebino »Vsebina datoteke«.</li>
+	<li>2. datoteka se nahaja v bloku 5 ter ima vsebino »Kakadu.«.</li>
+	<li>3. datoteka se začne v bloku 1 ter ima vsebino »Datoteko zapišemo v zaporedje blokov.«. </li>
 </ul></p>
 <p align="justify">V katerih blokih je zapisana 3. datoteka?</p>
 <p>
@@ -274,7 +274,7 @@
 </p>
 </div>
 
-<p align="justify">Iz zgleda vidimo, da datoteka ni nujno zapisana v zaporednih blokih. Če so zaporedni bloki na voljo (niso zasedeni z drugimi podatki), se datoteka seveda zapiše v zaporedne bloke. Če pa ni dovolj prostih zaporednih blokov, se zasedejo bloki, ki so na voljo.</p>
+<p align="justify">Primer kaže, da datoteka ni nujno zapisana v zaporednih blokih. Če so zaporedni bloki na voljo (niso zasedeni z drugimi podatki), se datoteka seveda zapiše v zaporedne bloke. Če pa ni dovolj prostih zaporednih blokov, se zasedejo bloki, ki so na voljo.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -286,13 +286,13 @@
 
 <h2>Bloki in podatkovni nosilec</h2>
 
-<p align="justify">Podatkovni nosilec (kot je disk) je urejen v vrsto blokov določene velikost.</p>
+<p align="justify">Podatkovni nosilec (kot je disk) je urejen v vrsto blokov določene velikosti.</p>
 
 <p align="center"><a href="#" data-toggle="modal" data-target="#image2"><img src="img/bloki_OsX.png" class="img-responsive" /></a>
 <i>V konzoli so izpisani osnovni podatki o podatkovnih nosilcih (ime nosilca, velikost posameznega bloka, število blokov na nosilcu, velikost nosilca v bajtih)</i></p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Na sliki vidimo, da je podatkovni nosilec &quot;/dev/disk1&quot; sestavljen iz blokov, ki so veliki 512 B. Podatkovni nosilec vsebuje 974 368 768 blokov. </p>
+<p align="justify">Na sliki vidimo, da je podatkovni nosilec »/dev/disk1« sestavljen iz blokov, ki so veliki 512 B. Podatkovni nosilec vsebuje 974.368.768 blokov.</p>
 <p align="justify">Koliko GB pomnilnika je velik naš disk?</p>
 <p>
 <div id="cloze96_7" class="clozeBlock">

@@ -175,13 +175,13 @@
  
 <p align="justify">V uvodu smo povedali, da so podatki na pomnilni enoti, kot je disk, zapisani v obliki datoteke. <b>Datoteka je torej osnovna organizacijska enota z računalnikom zapisanih podatkov.</b> Ker poznamo kar nekaj različnih vrst podatkov, smo ugotovili, da te podatke zapisujemo v različne vrste datotek. Na primer slike so drugače zapisane v datoteko kot besedilo, video ali zvok. Če želimo datoteko uporabiti (si datoteko s sliko ogledati ali datoteko z zvokom poslušati), potrebujemo vrsti datoteke primerno programsko in strojno opremo.</p>
 
-<p align="justify">V datoteko zapisujemo tudi programe. Takim datotekam rečemo <b>izvršljive datoteke</b> (<i>ang. executable file</i>). Ob zagonu takšne datoteke se izvede v njej zapisano zaporedje ukazov oziroma program.</p>
+<p align="justify">V datoteko zapisujemo tudi programe. Take datoteke imenujemo <b>izvršljive datoteke</b> (<i>ang. executable file</i>). Ob zagonu takšne datoteke se izvede v njej zapisano zaporedje ukazov oziroma program.</p>
 
 <h2>Vrste datotek</h2>
 
-<p align="justify">Ker je vsaka datoteka na nivoju pomnilne enote zapisana v obliki nizov ničel in enic (bitov), datoteke običajno ločimo eno od druge po podaljšku datoteke, ki je del njenega imena. Ime datoteke je običajno sestavljeno iz imena, pike in podaljška datoteke. Podaljšek datoteke operacijskemu sistemu (in tudi nam) pove, kakšna je vrsta datoteke in posledično, s katerim programom se jo da zagnati.</p>
+<p align="justify">Ker je vsaka datoteka na nivoju pomnilne enote zapisana v obliki nizov ničel in enic (bitov), datoteke običajno ločimo eno od druge po priponi datoteke, ki je del njenega imena. Ime datoteke je običajno sestavljeno iz imena, pike in pripone datoteke. Pripona datoteke operacijskemu sistemu (in tudi nam) sporoča, katere vrste je datoteka in (posledično) s katerim programom jo lahko zaženemo.</p>
 
-<p align="justify">V tabeli na desni si oglejmo nekatere najbolj pogoste vrste datotek in njihove tipične podaljške.</p>
+<p align="justify">V tabeli na desni si oglejmo nekatere najbolj pogoste vrste datotek in njihove običajne pripone.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -191,30 +191,30 @@
 <table width="100%" class="table-condensed table-striped table-bordered">
 	<tbody>
 		<tr>
-			<td><b>Vrsta vsebine</b></td>
-			<td><b>Podaljšek v obliki &quot;.podaljsek&quot;</b></td>
-			<td><b>Opis</b></td>
+			<td width="15%"><b>Vrsta vsebine</b></td>
+			<td width="20%"><b>Pripona  v obliki ».pripona«</b></td>
+			<td width="65%"><b>Opis</b></td>
 		</tr>
 		<tr>
 			<td>Besedilo</td>
 			<td>.txt</td>
-			<td class="small" align="justify">Besedilo v ASCII obliki: čisto besedilo napisano v urejevalnikih, ki ne uporabljajo oblikovanja besedila. Ti programi so Notepad, Emacs, Crimson Editor in mnogi drugi.</td>
+			<td class="small" align="justify">Besedilo v obliki ASCII: očiščeno besedilo, zapisano v urejevalnikih, ki ne uporabljajo oblikovanja besedila. Ti programi so Notepad, Emacs, Crimson Editor in mnogi drugi.</td>
 		</tr>
 		<tr>
 			<td> </td>
 			<td>.c, .py, .php, .htm ...</td>
-			<td class="small" align="justify">V to skupino ASCII besedila spada tudi izvorna koda programov.</td>
+			<td class="small" align="justify">V to skupino besedil ASCII spada tudi izvorna koda programov.</td>
 		</tr>
 		<tr>
 			<td> </td>
 			<td>.doc(x), .odt, .pages ... </td>
-			<td class="small" align="justify">Oblikovno obogateno besedilo zapisno v urejevalniku besedil, ki je namenjen oblikovanju besedila. Primeri so MS Word, OpenOffice, iWork Pages in mnogi drugi.</td>
+			<td class="small" align="justify">Oblikovno obogateno besedilo, zapisno v urejevalniku besedil, ki je namenjen oblikovanju besedila. Primeri so MS Word, OpenOffice, iWork Pages in mnogi drugi.</td>
 		</tr>
 		<tr>
 			<td>Slike</td>
 			<td>.bmp, .jpg, .png, .gif ... <br />
 			</td>
-			<td class="small" align="justify">Točkovne slike. BMP predstavja sliko v nezgoščenem točkovnem zapisu. Slike s podaljškom jpg, png in gif uporabljajo principe zgoščevanja zapisa. Zato zasedejo manj prostora v pomnilni enoti in so primerne npr. za objavo na spletu.  <br />
+			<td class="small" align="justify">Točkovne slike. BMP predstavja sliko v nezgoščenem točkovnem zapisu. Slike s pripono jpg, png in gif uporabljajo načela zgoščevanja zapisa. Zato zasedejo manj prostora v pomnilni enoti in so primerne na primer za objavo na spletu.  <br />
 			</td>
 		</tr>
 		<tr>
@@ -230,19 +230,19 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Zgoščeni podatki<br />
+			<td>Stisnjeni podatki<br />
 			</td>
 			<td>.zip, .arj ...<br />
 			</td>
-			<td class="small" align="justify">Zgoščeni podatki, ki so zgoščeni s postopkom zgoščevanja brez izgube podatkov. Zgoščene podatke namreč moramo razširiti nazaj v izvorne, če jih želimo ponovno uporabiti.<br />
+			<td class="small" align="justify">Podatki, ki so stisnjeni s postopkom stiskanja brez izgube podatkov. Stisnjene podatke namreč moramo razširiti nazaj v izvorne, če jih želimo ponovno uporabiti.<br />
 			</td>
 		</tr>
 		<tr>
 			<td>Izvršljiva datoteka<br />
 			</td>
-			<td>.exe, .bat. ...<br />
+			<td>.exe, .bat ...<br />
 			</td>
-			<td class="small" align="justify">Datoteke, ki vsebujejo izvedljiv program. Izvršljive datoteke v operacijskem sistemu Unix nimajo podaljška. <br />
+			<td class="small" align="justify">Datoteke, ki vsebujejo izvedljiv program. Izvršljive datoteke v operacijskem sistemu Unix nimajo pripone.<br />
 			</td>
 		</tr>
 	</tbody>
