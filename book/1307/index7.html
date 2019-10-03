@@ -220,12 +220,12 @@
 					</div>
 					<div class="modal-body">
 						<p align="justify">En blok je velik 512 B.<br />
-						Število blokov na disku je 974 368 768.<br />
-						Celoten disk vsebuje 974 368 768 &middot; 512 B = 498 876 809 216 B.<br />
+						Število blokov na disku je 974.368.768.<br />
+						Celoten disk vsebuje 974.368.768 &middot; 512 B = 498.876.809.216 B.<br />
 						Če želimo velikost diska prikazati v GB, moramo B pretvoriti.<br />
-						Velikost diska = 498 876 809 216 B / 1024 = 487 184 384 kB<br />
-						487 184 384 kB /1024 = 475 766 MB<br />
-						475 766 MB /1024 = 464,6 GB<br />
+						Velikost diska = 498.876.809.216 B / 1024 = 487.184.384 kB<br />
+						487.184.384 kB / 1024 = 475.766 MB<br />
+						475.766 MB / 1024 = 464,6 GB<br />
 						Naš disk je velik 464,6 GB.</p>
 					</div>
 					<div class="modal-footer">
@@ -243,16 +243,16 @@
 					<div class="col-md-6">
 						<br />
 <!-- Left column start -->
-<p align="justify">Ker zelo pogosto velikost bloka ni dovolj za zapis celotne datoteke, se dogovorimo, da se na začetku bloka nahaja dovolj pomnilnika za naslov do naslednjega bloka ali zapis, ki nam pove, da se v tem bloku datoteka konča - EOF (<i>ang. end-of-file</i>).</p>
+<p align="justify">Ker blok zelo pogosto ni dovolj velik za zapis celotne datoteke, se dogovorimo, da se na začetku bloka nahaja dovolj pomnilnika za naslov do naslednjega bloka ali zapis, ki nam pove, da se v tem bloku datoteka konča – EOF (<i>ang. end-of-file</i>).</p>
 
 <div class="alert alert-info" role="alert">
 <p align="justify">V naši pomnilni enoti so zapisane tri datoteke z besedilom.</p>
 <p align="center"><a href="#" data-toggle="modal" data-target="#image1"><img src="img/zapis_datoteke_v_bloke.png" class="img-responsive" /></a>
 <i>Na sliki vidimo 10 blokov iz naše pomnilne enote. Vsak blok je velik 8 bajtov.</i></p>
 <p><ul align="justify">
-	<li>1. datoteka se nahaja v bloku 2 in bloku 3 in ima vsebino &quot;Vsebina datoteke&quot;.</li>
-	<li>2. datoteka se nahaja v bloku 5 in ima vsebino &quot;Kakadu.&quot;.</li>
-	<li>3. datoteka se začne v bloku 1 in ima vsebino &quot;Datoteko zapišemo v zaporedje blokov.&quot;. </li>
+	<li>1. datoteka se nahaja v bloku 2 in bloku 3 ter ima vsebino »Vsebina datoteke«.</li>
+	<li>2. datoteka se nahaja v bloku 5 ter ima vsebino »Kakadu.«.</li>
+	<li>3. datoteka se začne v bloku 1 ter ima vsebino »Datoteko zapišemo v zaporedje blokov.«. </li>
 </ul></p>
 <p align="justify">V katerih blokih je zapisana 3. datoteka?</p>
 <p>
@@ -268,13 +268,13 @@
 		<button class="btn btn-info" name="submit53_7" id="submit53_7" onClick='clozeSubmit("53_7")'><span class="fa fa-question"></span> Preveri</button>
 		<button class="btn btn-info" name="restart53_7" style="display: none;" id="restart53_7" onClick='clozeRestart("53_7")'><span class="fa fa-refresh"></span>  Začni znova</button>
 		<span id="clozeScore53_7" class="rezultat"></span>
-		<button class="btn btn-success" name="53_7showAnswersButton" style="display: none;" id="showAnswersButton53_7" onClick='fillClozeInputs("53_7")' data-toggle="modal" data-target="#solution"><span class="fa fa-check"></span>  Prikaži odgovore</button>
+		<button class="btn btn-success" name="53_7showAnswersButton" style="display: none;" id="showAnswersButton53_7" onClick='fillClozeInputs("53_7")'><span class="fa fa-check"></span>  Prikaži odgovore</button>
 	</div>
 </div>
 </p>
 </div>
 
-<p align="justify">Iz zgleda vidimo, da datoteka ni nujno zapisana v zaporednih blokih. Če so zaporedni bloki na voljo (niso zasedeni z drugimi podatki), se datoteka seveda zapiše v zaporedne bloke. Če pa ni dovolj prostih zaporednih blokov, se zasedejo bloki, ki so na voljo.</p>
+<p align="justify">Primer kaže, da datoteka ni nujno zapisana v zaporednih blokih. Če so zaporedni bloki na voljo (niso zasedeni z drugimi podatki), se datoteka seveda zapiše v zaporedne bloke. Če pa ni dovolj prostih zaporednih blokov, se zasedejo bloki, ki so na voljo.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -286,13 +286,13 @@
 
 <h2>Bloki in podatkovni nosilec</h2>
 
-<p align="justify">Podatkovni nosilec (kot je disk) je urejen v vrsto blokov določene velikost.</p>
+<p align="justify">Podatkovni nosilec (kot je disk) je urejen v vrsto blokov določene velikosti.</p>
 
 <p align="center"><a href="#" data-toggle="modal" data-target="#image2"><img src="img/bloki_OsX.png" class="img-responsive" /></a>
 <i>V konzoli so izpisani osnovni podatki o podatkovnih nosilcih (ime nosilca, velikost posameznega bloka, število blokov na nosilcu, velikost nosilca v bajtih)</i></p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Na sliki vidimo, da je podatkovni nosilec &quot;/dev/disk1&quot; sestavljen iz blokov, ki so veliki 512 B. Podatkovni nosilec vsebuje 974 368 768 blokov. </p>
+<p align="justify">Na sliki vidimo, da je podatkovni nosilec »/dev/disk1« sestavljen iz blokov, ki so veliki 512 B. Podatkovni nosilec vsebuje 974.368.768 blokov.</p>
 <p align="justify">Koliko GB pomnilnika je velik naš disk?</p>
 <p>
 <div id="cloze96_7" class="clozeBlock">
@@ -302,7 +302,7 @@
 	<input type="hidden" name="clozeFlag96_7.listing" id="clozeFlag96_7.listing" value="0"/>
 	<input type="hidden" name="clozeFlag96_7.dropdown" id="clozeFlag96_7.dropdown" value="False"/>
 	<input type="hidden" name="clozeFlag96_7.equallength" id="clozeFlag96_7.equallength" value="False"/>
-	<p>Naš disk je velik <u>464,6</u> GB. (rezultat zaokroži na eno decimalno mesto)</p>
+	<p>Naš disk je velik <u>464,6</u> GB. (Rezultat zaokroži na eno decimalno mesto).</p>
 	<div class="blockb">
 		<button class="btn btn-info" name="submit96_7" id="submit96_7" onClick='clozeSubmit("96_7")'><span class="fa fa-question"></span> Preveri</button>
 		<button class="btn btn-info" name="restart96_7" style="display: none;" id="restart96_7" onClick='clozeRestart("96_7")'><span class="fa fa-refresh"></span>  Začni znova</button>

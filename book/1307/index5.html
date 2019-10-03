@@ -215,9 +215,9 @@
 <!-- Left column start -->
 <h1>Organizacija diska (Windows)</h1>
  
-<p align="justify">Operacijski sistem Windows svoje particije označuje s črkami. Sistemska particija dobi oznako <tt>C:</tt>, ostale particije pa naslednje črke po abecedi. Črke dobijo tudi pogoni CD/DVD, USB ključki, spominske kartice in (nekdaj) disketniki. Pogona za diskete sta imela rezervirani prvi dve črki v abecedi (<tt>A:</tt> in <tt>B:</tt>), ostalim pogonom pa se črke dodajajo v (poljubnem) vrstnem redu. V operacijskem sistemu namreč lahko particijam spreminjamo črke.</p>
+<p align="justify">Operacijski sistem Windows svoje particije označuje s črkami. Sistemska particija dobi oznako <tt>C:</tt>, ostale particije pa naslednje črke po abecedi. Črke se dodelijo tudi pogonom CD/DVD, USB-ključkom, spominskim karticam in (nekdaj) disketnikom. Pogona za diskete sta imela rezervirani prvi dve črki v abecedi (<tt>A:</tt> in <tt>B:</tt>), ostalim pogonom pa se črke dodajajo v (poljubnem) vrstnem redu. V operacijskem sistemu namreč lahko particijam spreminjamo črke.</p>
 
-<p align="center"><a href="#" data-toggle="modal" data-target="#image1"><img src="img/particije_disk_management_win_avtorstvo_mirko.png" class="img-responsive" /></a>
+<p align="center"><a href="#" data-toggle="modal" data-target="#image1"><img src="img/particije_disk_management_win.png" class="img-responsive" /></a>
 <i>Shema pomnilnih enot v OS Windows. Razdeljene so na particije, kjer ima vsaka particija določen en datotečni sistem.</i></p>
 <!-- Left column end -->
 					</div>
@@ -225,11 +225,11 @@
 <!-- Right column start -->
 <h1>Organizacija diska (Unix/Linux)</h1>
  
-<p align="justify">Operacijski sistem Unix naprave ali pogone obravnava kot datoteke v imeniku <tt>/dev/</tt>. Sistemski disk vidi kot datoteko <tt>/dev/hda</tt> ali <tt>/dev/sda</tt> v primeru SATA in SCSI diska. Drugi disk vidi kot <tt>/dev/hdb</tt>, tretji kot <tt>/dev/hdc</tt> itd. Primarne particije si razdelijo prve štiri številke (od <tt>/dev/hda1</tt> do <tt>/dev/hda4</tt>), logične particije pa zasedajo številke od <tt>/dev/hda5</tt> naprej.<br />
-V mapi <tt>/dev/</tt> se sicer nahajajo tudi V/I naprave, o katerih pa bomo več povedali kasneje.</p>
+<p align="justify">Operacijski sistem Unix naprave ali pogone obravnava kot datoteke v imeniku <tt>/dev/</tt>. Sistemski disk zaznava kot datoteko <tt>/dev/hda</tt> ali <tt>/dev/sda</tt> v primeru diska SATA in SCSI. Drugi disk zaznava kot <tt>/dev/hdb</tt>, tretji kot <tt>/dev/hdc</tt> itd. Primarne particije si razdelijo prve štiri številke (od <tt>/dev/hda1</tt> do <tt>/dev/hda4</tt>), logične particije pa zasedajo številke od <tt>/dev/hda5</tt> naprej.<br />
+V mapi <tt>/dev/</tt> se sicer nahajajo tudi vzhodno-izhodne naprave, o katerih pa bomo več povedali v nadaljevanju.</p>
 
 <p align="center"><a href="#" data-toggle="modal" data-target="#image2"><img src="img/particije_linux_gparted.png" class="img-responsive" /></a>
-<i>Shema pomnilnih enot v Unix sistemu (Program GParted), ki zajema en SATA disk - <tt>/dev/sda</tt>. Razdeljen na 2 primarni particiji (<tt>sda1</tt> in <tt>sda2</tt>) ter na razširjeno particijo <tt>sda3</tt>, ki je naprej razdeljena na logične particije <tt>sda5</tt> in <tt>sda6</tt>. Particiji <tt>sda1</tt> in <tt>sda2</tt> vsebujeta "Windows" datotečni sistem, <tt>sda5</tt> in <tt>sda6</tt> pa datotečni sistem, namenjen operacijskemu sistemu "Unix".</i></p>
+<i>Shema pomnilnih enot v sistemu Unix (Program GParted), ki zajema en disk SATA – <tt>/dev/sda</tt>. Razdeljen na 2 primarni particiji (<tt>sda1</tt> in <tt>sda2</tt>) ter na razširjeno particijo <tt>sda3</tt>, ki je naprej razdeljena na logični particiji <tt>sda5</tt> in <tt>sda6</tt>. Particiji <tt>sda1</tt> in <tt>sda2</tt> vsebujeta datotečni sistem »Windows«, <tt>sda5</tt> in <tt>sda6</tt> pa datotečni sistem, namenjen operacijskemu sistemu "Unix".</i></p>
 <!-- Right column end -->
 					</div>
 				</div>

@@ -177,7 +177,7 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Za vsak imenik po en <code>..</code>. Seveda je treba med imeniki dodati tudi <code>\</code>.</p>
+						<p align="justify">Za vsak imenik en »..«. Seveda je treba med imeniki dodati tudi »\«.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -194,18 +194,18 @@
 					<div class="col-md-6">
 						<br />
 <!-- Left column start -->
-<p align="justify">Vsak imenik ima dva prav posebna imenika, in sicer <b>imenik &quot;.&quot;</b> in <b>imenik &quot;..&quot;</b>. Imenik &quot;.&quot; pomeni &quot;trenutni delovni imenik&quot;. Imenik &quot;..&quot; pa je nadomestno ime za očeta trenutnega imenika.</p>
+<p align="justify">Vsak imenik ima dva prav posebna imenika, in sicer <b>imenik ».«</b> in <b>imenik »..«</b>. Imenik ».« pomeni »trenutni delovni imenik«. Imenik »..« pa je nadomestno ime za očeta trenutnega imenika.</p>
 
-<p align="justify">Poglejmo na zgledu: če je trenutni delovni imenik imenik <tt>sile</tt>, zapišemo relativno pot do datoteke <tt>naloga_gibanje.txt</tt> tako: 
+<p align="justify">Primer: če je trenutni delovni imenik imenik <tt>sile</tt>, zapišemo relativno pot do datoteke <tt>naloga_gibanje.txt</tt> tako: 
 <pre>
 ..\gibanje\naloga_gibanje.txt 
 </pre>
 </p>
 
-<p align="justify">Z imenikom &quot;..&quot; se vrnemo iz imenika <tt>sile</tt> v imenik <tt>fizika</tt>; za en imenik nazaj po drevesni strukturi. Preostali del poti je relativna pot iz imenika <tt>fizika</tt> do datoteke <tt>vaje_gibanje.txt</tt>.</p>
+<p align="justify">Z imenikom »..« se vrnemo iz imenika <tt>sile</tt> v imenik <tt>fizika</tt>; za en imenik nazaj po drevesni strukturi. Preostali del poti je relativna pot iz imenika <tt>fizika</tt> do datoteke <tt>vaje_gibanje.txt</tt>.</p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kakšen ukaz bi pa morali napisati, da bi se vrnili v drevesni strukturi za dva imenika nazaj v operacijskem sistemu Windows?</p>
+<p align="justify">Kakšen ukaz bi pa morali napisati, da bi se vrnili v drevesni strukturi dva imenika nazaj v operacijskem sistemu Windows?</p>
 <p>
 <div id="cloze73_7" class="clozeBlock">
 	<input type="hidden" name="clozeFlag73_7.strictMarking" id="clozeFlag73_7.strictMarking" value="true"/>
@@ -230,13 +230,13 @@
 <!-- Right column start -->
 <h1>Organizacija diska in particije</h1>
  
-<p align="justify">Pomnilna enota (na primer trdi disk) je &quot;logično&quot; razdeljen na particije, ki so naprej formatirane po pravilih nekega datotečnega sistema.</p>
+<p align="justify">Pomnilna enota (na primer trdi disk) je »logično« razdeljen na particije, ki so naprej formatirane po pravilih nekega datotečnega sistema.</p>
 
-<p align="justify"><b>Particija </b>(<i>ang. partition</i>) je del trdega diska. Postopku ustvarjanja particije pravimo <b>particioniranje</b> (<i>ang. partitioning</i>). S tem postopkom razdeljujemo disk. Ko ustvarimo novo particijo, si z njo še ne moremo nič pomagati.  Particijo je namreč treba urediti v <b>datotečni sistem</b> (<i>ang. file system</i>). Postopku ustvarjanja datotečnega sistema na particiji pravimo <b>formatiranje</b> (<i>ang. formatting</i>). Datotečnih sistemov poznamo več in so del operacijskega sistema. O njih nekoliko kasneje.</p>
+<p align="justify"><b>Particija </b>(<i>ang. partition</i>) je del trdega diska. Postopek ustvarjanja particije imenujemo <b>particioniranje</b> (<i>ang. partitioning</i>). S tem postopkom razdeljujemo disk. Ko ustvarimo novo particijo, si z njo še ne moremo nič pomagati. Particijo je namreč treba urediti v <b>datotečni sistem</b> (<i>ang. file system</i>). Postopek ustvarjanja datotečnega sistema na particiji imenujemo <b>formatiranje</b> (<i>ang. formatting</i>). Datotečnih sistemov poznamo več in so del operacijskega sistema. O njih nekoliko pozneje.</p>
 
-<p align="justify">Trdi disk lahko vsebuje več particij, ki so formatirane oziroma urejene v iste ali različne datotečne sisteme. To pomeni, da lahko imamo na istem trdem disku tudi več operacijskih sistemov. V takem primeru si ob zagon računalnika iz menija izberemo, kateri operacijski sistem bomo zagnali (<i>ang. Dual Boot</i>). Prednosti večjega števila particij je več. Ena izmed njih je, da lahko s particijo ločimo podatke in sistem. S tem lahko poenostavimo ohranjanje podatkov ob morebitni težavi z operacijskim sistemom. Lahko pa z manjšimi particijami tudi pohitrimo delovanje sistema.</p>
+<p align="justify">Trdi disk lahko vsebuje več particij, ki so formatirane oziroma urejene v iste ali različne datotečne sisteme. To pomeni, da lahko imamo na istem trdem disku tudi več operacijskih sistemov. V takem primeru si ob zagonu računalnika iz menija izberemo, kateri operacijski sistem bomo zagnali (<i>ang. Dual Boot</i>). Prednosti večjega števila particij je več. Ena izmed njih je, da lahko s particijo ločimo podatke in sistem. S tem lahko poenostavimo ohranjanje podatkov ob morebitni težavi z operacijskim sistemom. Lahko pa z manjšimi particijami tudi pohitrimo delovanje sistema.</p>
 
-<p align="justify">Poznamo dve vrsti particij: <b>primarno particijo</b> (<i>ang. primary partition</i>) in <b>razširjeno particijo</b> (<i>ang. extended partition</i>). Disk lahko razdelimo na največ štiri particije. Ustvarimo lahko štiri primarne particije, ali pa tri primarne in eno razširjeno particijo, če particij potrebujemo več. Z razširjeno particijo namreč presežemo omejitev števila primarnih particij, saj razširjena particija lahko vsebuje več <b>logičnih particij </b>ali<b> pogonov</b> (<i>ang. logical drive</i>). Primarne particije in logične particije navzven delujejo enako: določen imajo en datotečni sistem. Razlikujejo se v tem, da je mogoče operacijski sistem zagnati le iz primarne particije.</p>
+<p align="justify">Poznamo dve vrsti particij: <b>primarno particijo</b> (<i>ang. primary partition</i>) in <b>razširjeno particijo</b> (<i>ang. extended partition</i>). Disk lahko razdelimo na največ štiri particije. Ustvarimo lahko štiri primarne particije ali pa tri primarne in eno razširjeno particijo, če potrebujemo več particij. Z razširjeno particijo namreč presežemo omejitev števila primarnih particij, saj razširjena particija lahko vsebuje več <b>logičnih particij</b> ali <b>pogonov</b> (<i>ang. logical drive</i>). Primarne particije in logične particije navzven delujejo enako: določen imajo en datotečni sistem. Razlikujejo se v tem, da je mogoče operacijski sistem zagnati le iz primarne particije.</p>
 <!-- Right column end -->
 					</div>
 				</div>

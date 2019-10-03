@@ -177,7 +177,7 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Vsak znak za zapis potrebuje 1 B. Za zapis 37 znakov potrebujemo pet blokov, saj je 4 &middot; 8 B = 32 B; štirje bloki so torej premalo za vse znake (37 &gt; 32). Ko zapišemo vse črke v naše bloke, ugotovimo, da nam ostanejo v zadnjem bloku 3 B nezasedeni.</p>
+						<p align="justify">Vsak znak za zapis potrebuje 1 B. Za zapis 37 znakov potrebujemo pet blokov, saj je 4 &middot; 8 B = 32 B; štirje bloki so torej premalo za vse znake (37 &gt; 32). Ko zapišemo vse črke v bloke, ugotovimo, da nam ostanejo v zadnjem bloku 3 B nezasedeni.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -200,10 +200,10 @@
 <div class="alert alert-info" role="alert">
 <p align="justify">Najpogostejši datotečni sistemi so naslednji:
 <ul align="justify">
-	<li><b>FAT </b>(<i>ang. File Allocation Table</i>)  je datotečni sistem operacijskega sistema MS-DOS. Je starejši datotečni sistem in ni primeren za velike diske. Imena datotek so omejena na 8 znakov za ime in 3 znake za podaljšek. Težave ima s fragmentiranostjo podatkov. Še vedno se uporablja na manjših medijih, kot so USB ključki in spominske kartice.</li>
-	<li><b>NTFS </b>(<i>ang. New Technology File System</i>) je datotečni sistem operacijskega sistema Windows. Omogoča dolga imena, učinkovito izrabo prostora na velikih diskih (do 4GB) in nadzor nad uporabo datotek. Novejše različice omogočajo tudi določanje kvot uporabnikom, enkripcijo in stiskanje podatkov.</li>
-	<li><b>ReFS </b>(<i>ang. Resilient File System</i>) je nov Microsoftov datotečni sistem. Podporo zanj so uvedli v operacijskem sistemu Server 2012 R2 in Windows 8.1 (64 bitna različica). Sistem je še nov in se še ni popolnoma uveljavil, naj bi pa v prihodnosti nadomestil NTFS.</li>
-	<li><b>Ext </b>(<i>ang. Extended File System</i>) je datotečni sistem operacijskega sistema Unix. Omogoča uporabo dolgih imen, nadzor nad uporabo datotek, določanje kvot uporabnikom, novejše različice pa vodijo tudi evidenco sprememb na datotečnem sistemu.</li>
+	<li><b>FAT </b>(<i>ang. File Allocation Table</i>)  je datotečni sistem operacijskega sistema MS-DOS. Je starejši datotečni sistem in ni primeren za velike diske. Imena datotek so omejena na 8 znakov za ime in 3 znake za pripono. Težave ima s fragmentiranostjo podatkov. Še vedno se uporablja na manjših medijih, kot so USB-ključki in spominske kartice.</li>
+	<li><b>NTFS </b>(<i>ang. New Technology File System</i>) je datotečni sistem operacijskega sistema Windows. Omogoča dolga imena, učinkovito rabo prostora na velikih diskih (do 4 GB) in nadzor nad uporabo datotek. Novejše različice omogočajo tudi določanje kvot uporabnikom, enkripcijo in stiskanje podatkov.</li>
+	<li><b>ReFS </b>(<i>ang. Resilient File System</i>) je nov Microsoftov datotečni sistem. Podporo zanj so uvedli v operacijskem sistemu Server 2012 R2 in Windows 8.1 (64-bitna različica). Sistem je še nov in se še ni popolnoma uveljavil, naj bi pa v prihodnosti nadomestil NTFS.</li>
+	<li><b>Ext </b>(<i>ang. Extended File System</i>) je datotečni sistem operacijskega sistema Unix. Omogoča uporabo dolgih imen, nadzor nad uporabo datotek, določanje kvot uporabnikom, novejše različice pa vodijo tudi evidenco sprememb v datotečnem sistemu.</li>
 	<li><b>Hfs </b>(<i>ang. Hierarchical File System</i>) je datotečni sistem operacijskega sistema Mac OS X. Po različici operacijskega sistema Mac OS 8.1 Hfs nadomesti nov, izboljšan datotečni sistem Hfs Plus. </li>
 	<li><b>Cdfs </b>(<i>ang. Compact Disc File System</i>) je datotečni sistem za optične enote, kot je CD.</li>
 </ul></p>
@@ -216,16 +216,16 @@
 <p align="justify">V datotečnem sistemu najdemo naslednje elemente:
 <ul align="justify">
 	<li><b>blok</b> (<i>ang. block</i>): določeno število bajtov (npr. 512, 1024, 4096 B) velik prostor v datotečnem sistemu, v katerem so zapisani dejanski podatki. Disk je v datotečnem sistemu razdeljen na bloke. Datoteka je zapisana v zaporedju blokov.</li>
-	<li><b>superblok</b> (<i>ang. superblock</i>): najpomembnejši zapis za datotečni sistem. Vsebuje podatke o lastnostih datotečnega sistema kot so velikost, število blokov itd. Ta zapis je na datotečnem sistemu zapisan večkrat (varnostne kopije).</li>
+	<li><b>superblok</b> (<i>ang. superblock</i>): najpomembnejši zapis za datotečni sistem. Vsebuje podatke o lastnostih datotečnega sistema kot, so velikost, število blokov itd. Ta zapis je v datotečnem sistemu zapisan večkrat (varnostne kopije).</li>
 </ul>
 </p>
 
 <h2>Bloki in datoteke</h2>
 
-<p align="justify">Datoteka je na pomnilni enoti zapisana v zaporedju blokov. To pomeni, da ko želimo datoteko zapisati na pomnilno enoto, dobimo dodeljen blok, v katerega našo datoteko zapišemo. Ker pa je datoteka zelo pogosto večja, kot je velik blok, potrebujemo za zapis datoteke več blokov. Na zgledu si poglejmo, kako datoteko zapišemov v blok(e).</p>
+<p align="justify">Datoteka je na pomnilni enoti zapisana v zaporedju blokov. To pomeni, da ko želimo datoteko zapisati na pomnilno enoto, dobimo dodeljen blok, v katerega našo datoteko zapišemo. Ker pa je datoteka zelo pogosto večja od bloka, potrebujemo za zapis datoteke več blokov. Oglejmo si primer, kako datoteko zapišemo v blok(-e).</p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Predstavljajmo si, da je vsak blok velik 8 bajtov (B). Ustvarimo datoteko in vanjo zapišemo besedilo &quot;Datoteko zapišemo v zaporedje blokov&quot;.</p>
+<p align="justify">Predstavljajmo si, da je vsak blok velik 8 bajtov (B). Ustvarimo datoteko in vanjo zapišemo besedilo »Datoteko zapišemo v zaporedje blokov«.</p>
 <p align="justify">Besedilo je dolgo 37 znakov (tudi presledek je znak). Koliko blokov potrebujemo za zapis datoteke v pomnilno enoto?</p>
 <p>
 <div id="cloze92_7" class="clozeBlock">
