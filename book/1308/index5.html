@@ -173,26 +173,22 @@
 <!-- Left column start -->
 <h1>Avtentikacija z izzivom</h1>
  
-<p align="justify">Napad s ponavljanjem je uspešen v primeru, da ostaja poslano avtentikacijsko sporočilo s kriptiranim geslom nespremenjeno. Zato ga poskusimo nadzorovano spreminjati. Zaradi krajšega zapisa označimo naš računalnik kot A in sistem za elektronsko pošto kot B. Postopek avtentikacije je sledeč:</p>
+<p align="justify">Napad s ponavljanjem uspe, kadar ostaja poslano avtentikacijsko sporočilo s kriptiranim geslom nespremenjeno. Zato ga poskusimo nadzorovano spreminjati. Zaradi krajšega zapisa označimo naš računalnik kot A in sistem za elektronsko pošto kot B. Postopek avtentikacije je tak:</p>
 
-<p align="justify">A in B imata skupno skrivnost, na primer število 7, in sta vnaprej dogovorjena, da bosta vse računala po modulu 3. Z drugimi besedami <i>y = (7 &middot; x) % 3</i>. Ostaja vprašanje, kako naj se A in B dogovorita o tem, kakšen naj bo <i>x</i>.
-<ul align="justify">
-	<li>1. A pošlje B zahtevo za avtentikacijo.</li>
-	<li>
-	2. B pošlje A-ju neko poljubno naključno število, ki mu pravimo izziv. Recimo, da je to število 2015. To je tudi naš <i>x</i>.</li>
-	<li>
-	3. A naračuna <i>y</i>, ki je 2 ter ga pošlje nazaj B-ju.</li>
-	<li>
-	4. B lahko na podlagi izziva in skupne skrivnosti sam naračuna <i>y</i> ter preveri, da je prejeti y pravilni.
-	</li>
-</ul>
+<p align="justify">A in B imata skupno skrivnost, na primer število 7, in sta vnaprej dogovorjena, da bosta vse računala po modulu 3. Z drugimi besedami, <i>y = (7 &middot; x) % 3</i>. Ostaja vprašanje, kako naj se A in B dogovorita o tem, kaj naj bo <i>x</i>.
+<ol align="justify">
+	<li>A pošlje B zahtevo za avtentikacijo.</li>
+	<li>B pošlje A-ju neko poljubno naključno število, ki se imenuje izziv. Recimo, da je to število 2015. To je tudi naš <i>x</i>.</li>
+	<li>A izračuna <i>y</i>, ki je 2, in ga pošlje nazaj B-ju.</li>
+	<li>B lahko na podlagi izziva in skupne skrivnosti sam izračuna <i>y</i> ter preveri, ali je prejeti <i>y</i> pravilen.</li>
+</ol>
 </p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Na sliki Petra Zmedo prijavi v sistem s pomočjo avtentikacije z izzivom, tako da klikneš na gumb <i>Avtentikacija</i>. Ponovi napad zlikovca s pritiskom na gumb <i>Napad</i>. Je napadalec še vedno uspešen?</p>
+<p align="justify">Na sliki Petra Zmedo prijavi v sistem s pomočjo avtentikacije z izzivom, tako da klikneš gumb <i>Avtentikacija</i>. Ponovi napad zlikovca s pritiskom gumba <i>Napad</i>. Je napadalec še vedno uspešen?</p>
 </div>
 
-<p align="justify">Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemogoče, ker imamo v resničnem protokolu opravka z večdesetmestnimi števili. Po drugi strani pa ne more uporabiti prejšnje vrednosti <i>y</i>, ker B pošlje vedno nov izziv in dobimo vedno drugo vrednost <i>y</i>.</p>
+<p align="justify">Napadelc lahko sicer poskuša uganiti vrednost <i>y</i>, a je to takorekoč nemogoče, ker imamo v dejanskem protokolu opravka z večdesetmestnimi števili. Po drugi strani pa ne more uporabiti prejšnje vrednosti <i>y</i>, ker B pošlje vedno nov izziv in dobimo vedno drugo vrednost <i>y</i>.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -265,10 +261,10 @@
     <div id="napadalec_tekst_4">Peter<br /> 2017</div>
 </div>
 
-<p align="justify">Opisan način avtentikacije je zelo pogost, saj ga srečamo pri avtentikaciji v spletne banke ter še kje. Nenazadnje je enak princip osnova protokola CHAP, ki se uporablja tudi pri uporabi omrežja EDUROAM.</p>
+<p align="justify">Opisani način avtentikacije je zelo pogost, saj se uporablja pri avtentikaciji v spletne banke ter še kje. Nenazadnje je enak princip osnova protokola CHAP, ki se uporablja tudi pri uporabi omrežja EDUROAM.</p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kaj več o protokolu CHAP, ki je kratica za angleški izraz <i>Challenge-Handshake Authentication Protocol</i> si preberi na spletu ali poišči dokument RFC 1994.</p>
+<p align="justify">Več o protokolu CHAP, ki je kratica za angleški izraz <i>Challenge-Handshake Authentication Protocol</i>, preberi na spletu ali poišči dokument RFC 1994.</p>
 </div>
 <!-- Right column end -->
 					</div>

@@ -173,7 +173,7 @@
 <!-- Left column start -->
 <h1>Avtentikacija</h1>
  
-<p align="justify">Avtentikacijo z geslom smo omenili že v uvodu. Spomnimo se, da za dostop do našega poštnega nabiralnika uporabljamo geslo, ki ga poznamo le mi in sistem za elektronsko pošto. Temu pravimo <b>avtentikacija s skupno skrivnostjo</b>, saj geslo predstavlja tisti podatek, ki je skupen in poznan le nam in sistemu, v katerega se prijavljamo. Poglejmo, kaj se zgodi ob avtentikaciji.</p>
+<p align="justify">Avtentikacijo z geslom smo omenili že v uvodu. Spomnimo se, da za dostop do našega poštnega nabiralnika uporabljamo geslo, ki ga poznamo le mi in sistem za elektronsko pošto. To imenujemo <b>avtentikacija s skupno skrivnostjo</b>, saj geslo predstavlja podatek, ki je skupen in znan le nam ter sistemu, v katerega se prijavljamo. Poglejmo, kaj se zgodi ob avtentikaciji.</p>
 
 <style>
 #scene_container_1 {
@@ -219,22 +219,22 @@
     <div id="tekst_zmeda" >Uporabniško ime: <strong>Peter</strong> <br/>Geslo: <strong>zmeda$3</strong></div>
 </div>
 
-<p align="justify">To pa se lahko kaj hitro spremeni, če zlonamerni napadalec prisluškuje podatkom na liniji, po kateri se prenašajo podatki med našim računalnikom in sistemom za elektronsko pošto. Ko vnesemo svoje uporabniško ime in geslo, se morata oba podatka prenesti do oddaljenega sistema in prisluškovalcu očitno ne bo težko razbrati našega gesla in se naslednjič prijaviti z našo identiteto, ne da bi enkrat samkrat ugibal geslo.</p>
+<p align="justify">To pa se lahko kaj hitro spremeni, če zlonamerni napadalec prisluškuje podatkom na liniji, po kateri se prenašajo podatki med našim računalnikom in sistemom za elektronsko pošto. Ko vnesemo svoje uporabniško ime in geslo, se morata oba podatka prenesti do oddaljenega sistema. Prisluškovalcu tako očitno ne bo težko razbrati našega gesla in se naslednjič prijaviti z našimi podatki, ne da bi enkrat samkrat ugibal geslo.</p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Na sliki desno klikni na gumb <i>Avtentikacija </i>in počakaj, da nepridiprav prestreže geslo. Nato klikni na gumb <i>Napad</i> in opazuj, kaj se zgodi!</p>
+<p align="justify">Na sliki desno klikni gumb <i>Avtentikacija </i>in počakaj, da nepridiprav prestreže geslo. Nato klikni gumb <i>Napad</i> in opazuj, kaj se zgodi!</p>
 </div>
 
-<p align="justify">Kako bi lahko prenos podatkov zavarovali pred prisluškovalcem? Prva ideja, ki se nam utrne je, da prenesemo gesla v kriptirani obliki. A s tem v resnici nismo rešili težave. Če je prisluškovalec malo bolj tehnično podkovan, bo zlahka dosegel, da s svojega računalnika pošlje natanko takšno sporočilo kot mi. Resda ne bo poznal našega nešifriranega gesla, a če malo pomislimo, to niti ni potrebno.</p>
+<p align="justify">Kako bi lahko prenos podatkov zavarovali pred prisluškovalcem? Najprej pomislimo na to, da prenesemo gesla v kriptirani obliki. A s tem pravzaprav ne odpravimo težave. Če je prisluškovalec malo bolj tehnično podkovan, bo zlahka dosegel, da iz svojega računalnika pošlje povsem enako sporočilo, kot bi ga poslali mi. Resda ne bo poznal našega nešifriranega gesla, a če malo pomislimo, to niti ni potrebno.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Sistem sedaj pričakuje, da bo prejel šifrirano geslo. Prisluškovalec preprosto posname sporočilo, ki smo ga poslali v postopku avtentikacije in posnetek kasneje še enkrat pošlje sistemu. Slednji ne bo mogel razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
+<p align="justify">Sistem sedaj pričakuje, da bo prejel šifrirano geslo. Prisluškovalec preprosto posname sporočilo, ki smo ga poslali v postopku avtentikacije, in posnetek nato znova pošlje sistemu. Slednji ne bo mogel razločevati med izvirnikom in posnetkom, saj sta popolnoma enaka.</p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Pritisni na gumb <i>Vklopi kriptiranje</i> in poizkusi ponoviti napad!</p>
+<p align="justify">Pritisni gumb <i>Vklopi kriptiranje</i> in poizkusi ponoviti napad!</p>
 </div>
 
 <style>
@@ -309,10 +309,10 @@
 </div>
 
 <div class="alert alert-success" role="alert">
-<p align="justify">Tovrstnemu napadu pravimo napad s ponavljanjem (angl. <i>replay attack</i>), saj gre za ponovno uporabo sporočila, ki je bilo poslano v postopku avtentikacije. Ta oblika napada je ena izmed pogostejših v zgodovini uporabe Interneta.</p>
+<p align="justify">Tovrstnemu napadu pravimo napad s ponavljanjem (angl. <i>replay attack</i>), saj gre za ponovno uporabo sporočila, ki je bilo poslano v postopku avtentikacije. Ta oblika napada je ena izmed pogostejših v zgodovini uporabe interneta.</p>
 </div>
 
-<p align="justify">Za obrambo pred napadom s ponavljanjem je bil definiran avtentikacijski protokol CHAP (angl. <i>Challenge Handshake Authentication Protocol</i>). Predno ga opišemo pa še nekaj osnovne matematike.</p>
+<p align="justify">Za obrambo pred napadom s ponavljanjem je bil definiran avtentikacijski protokol CHAP (angl. <i>Challenge Handshake Authentication Protocol</i>). Preden ga opišemo, pa predelajmo še nekaj osnovne matematike.</p>
 <!-- Right column end -->
 					</div>
 				</div>
