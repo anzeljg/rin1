@@ -167,7 +167,7 @@
 
 		<!-- Modal (popup) window: Rešitev -->
 		<div id="solution" class="modal fade" role="dialog">
-			<div class="modal-dialog">
+			<div class="modal-dialog modal-lg">
 
 				<!-- Modal content-->
 				<div class="modal-content">
@@ -176,62 +176,99 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Prilagamo kodo rešitve, medtem ko sama razlaga rešitve presega raven tega učbenika:</p>
+						<p align="justify">Prilagamo kodo rešitve v programskem jeziku C++, medtem ko sama razlaga rešitve presega raven tega učbenika:</p>
 						<p>
 <pre>
-import sys
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+#include &lt;map&gt;
+#include &lt;cassert&gt;
+using namespace std;
 
-def sign(x):
-  return 1 if x > 0 else (-1 if x < 0 else 0)
+typedef struct {
+  int a; int b; int c;
+} triple;
 
-def integral(pot, l, d):
-  """
-  Ploščina pod lomljenko pot od x = l do x = d.
-  """
-  def get_y(x_1, y_1, x_2, y_2, x):
-    k = (y_2 - y_1) / (x_2 - x_1)
-    return y_1 + k * (x - x_1)
-  l, d = min(l, d), max(l, d)
-  pl = 0
-  for i in range(len(pot)-1):
-    x_1, y_1 = pot[i]
-    x_2, y_2 = pot[i+1]
-    if x_2 <= l: continue
-    if d <= x_1: continue
-    x_l = max(x_1, l)
-    x_d = min(x_2, d)
-    pl += (x_d - x_l) * get_y(x_1, y_1, x_2, y_2, (x_l + x_d) / 2)
-  return pl
+bool operator &lt; (const triple &t1, const triple &t2) {
+  if (t1.a == t2.a) {
+    if (t1.b == t2.b) return t1.c &lt; t2.c;
+    else return t1.b &lt; t2.b;
+  } else return t1.a &lt; t2.a;
+}
 
-n, p, q = map(int, sys.stdin.readline().split())
-razmerje = p / q
-grunt = [tuple(map(int, sys.stdin.readline().split())) for i in range(n)]
-x_min = min(x for x, _ in grunt)
-x_max = max(x for x, _ in grunt)
-grunt.append(grunt[0])
-odsek = {-1: [], 0: [], 1: []}
-for i in range(n):
-  u, v = grunt[i:i+2]
-  smer = sign(v[0] - u[0])
-  odsek[smer].append(u)
-  odsek[smer].append(v)
-zgoraj = sorted(set(odsek[1]))
-spodaj = sorted(set(odsek[-1]))
-if integral(spodaj, x_min, x_max) > integral(zgoraj, x_min, x_max):
-  spodaj, zgoraj = zgoraj, spodaj
-# Bisekcija
-eps = 1e-5
-a = x_min
-b = x_max
-while b - a > eps:
-  c = (a + b) / 2
-  zahod = integral(zgoraj, x_min, c) - integral(spodaj, x_min, c)
-  vzhod = integral(zgoraj, c, x_max) - integral(spodaj, c, x_max)
-  if zahod / vzhod < razmerje:
-    a = c
-  else:
-    b = c
-print(c)
+#define P2 20
+#define MAXN 1 &lt;&lt; P2
+
+int P[P2+1][MAXN];
+int N, k, cnt;
+triple L[MAXN];
+int id2pos[MAXN], pos2id[MAXN];
+
+void suffixArray(const string &s) {
+  N = s.size();
+  for (int i = 0; i &lt; N; i++) P[0][i] = (int)s[i];
+  for (k = 1, cnt = 1; cnt &lt; N; k++, cnt *= 2) {
+    for (int i = 0; i &lt; N; i++) { L[i].a = P[k-1][i]; L[i].b = (i+cnt &lt; N) ? P[k-1][i+cnt]:-1; L[i].c = i; }
+    sort(L, L+N);
+    for (int i = 0; i &lt; N; i++) {
+      if (i != 0 && L[i].a == L[i-1].a && L[i].b == L[i-1].b) P[k][L[i].c] = P[k][L[i-1].c];
+      else P[k][L[i].c] = i;
+    }
+  }
+  for (int i = 0; i &lt; N; i++) {
+    pos2id[i] = L[i].c;
+    id2pos[L[i].c] = i;
+  }
+}
+
+int lcp(int x, int y) {
+  int r = 0;
+  if (x == y) return N-x;
+  for (int len = k-1, size = 1 &lt;&lt; len; len &gt;= 0 && x &lt; N && y &lt; N; len--, size /= 2) {
+    if (P[len][x] == P[len][y]) { r += size; x += size; y += size; }
+  }
+  return r;
+}
+
+int id2gene[MAXN];
+
+int main() {
+  int ng;
+  cin &gt;&gt; ng;
+  assert(2 &lt;= ng);
+  string s, si;
+  int tot = 0;
+  for (int i = 0; i &lt; ng; i++) {
+    cin &gt;&gt; si;
+    assert(3 &lt;= si.size());
+    tot += si.size();
+    if (i != 0) s += '#';
+    for (int j = 0; j &lt; si.size(); j++) id2gene[s.size()+j] = i;
+    s += si;
+  }
+  assert(tot &lt;= 500000);
+  suffixArray(s);
+  int p = 0;
+  long long r = 0;
+  map&lt;int,int&gt; f;
+  for (int i = 0, j = 0; j &lt; s.size(); j++) {
+    f[id2gene[pos2id[j]]]++;
+    while (f[id2gene[pos2id[i]]] &gt; 1) {
+      f[id2gene[pos2id[i]]]--;
+      i++;
+    }
+    if (f.size() == ng) {
+      int l = lcp(pos2id[i], pos2id[j]);
+      int d = l - p;
+      if (d &gt; 0) r += d;
+      p = l;
+    }
+  }
+  cout &lt;&lt; r &lt;&lt; endl;
+  return 0;
+}
 </pre>
 						</p>
 					</div>
@@ -266,7 +303,7 @@ print(c)
 					</div>
 					<div class="col-md-6">
 <!-- Right column start -->
-<h4>Primer naloge</h4>
+<h4>Primer naloge <span class="small">(Avtor: Tomaž Hočevar, 3. kolo UPM 2014)</span></h4>
 <div class="alert alert-info" role="alert">
 <p align="justify">Biologi so našli več živalskih vrst, ki imajo zanimivo lastnost – v temi se svetijo! Upajo, da bodo z odkritjem odgovornega gena za vedno rešili problem skrivanja hišnih ljubljenčkov (npr. hrčkov pod posteljo). Določili so genske zapise vseh živali, sedaj pa jih zanima, kateri deli zapisa oz. geni so skupni vsem živalim in so zato kandidati za nadaljnje raziskovanje.</p>
 
