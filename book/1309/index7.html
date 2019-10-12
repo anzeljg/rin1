@@ -215,9 +215,9 @@
 <!-- Left column start -->
 <h1>Življenje procesov in drevo procesov</h1>
  
-<p align="justify">Za procese pravimo, da imajo svoj <b>življenjski ciklus</b> (<i>ang. life cycle</i>): najprej jih mora nekdo ustvariti, nato se izvajajo, ali so pripravljeni na izvajanje oziroma čakajo na kakšen vir ter na koncu umrejo. V našem primeru je mama, ko je poklicala Tino, ustvarila nov proces, ki se je tudi nemudoma pričel izvajati. Ko je Tina večerjo skuhala, je ta proces tudi umrl.</p>
+<p align="justify">Za procese pravimo, da imajo svoj <b>življenjski ciklus</b> (<i>ang. life cycle</i>): najprej jih mora nekdo ustvariti, nato se izvajajo, so pripravljeni na izvajanje oziroma čakajo na nek vir ter na koncu umrejo. V našem primeru je mama, ko je poklicala Tino, ustvarila nov proces, ki se je tudi nemudoma pričel izvajati. Ko je Tina večerjo skuhala, je ta proces umrl.</p>
 
-<p align="justify">V računalniku ni nič drugače. Procesi se rojevajo in umirajo ter vmes opravijo koristno delo. Tvorjenje novega procesa se zgodi s postopkom, ki mu rečemo <b>vejitev </b>(<i>ang. fork</i>). Ob tvorjenju dobi vsak proces svoje ime, ki mu pravimo s tujko <b>PID </b>(<i>ang. process ID</i>). Novo ustvarjeni proces se izvaja, dokler ne konča svoje naloge ali ga operacijski sistem ne umakne iz izvajanja v stanje pripravljenosti. Če povzamemo, nov proces vedno ustvari nek že izvajajoč se proces. Vsem novim procesom pravimo <b>otroci </b>(<i>ang. children</i>) procesa, ki jih je ustvaril.</p>
+<p align="justify">V računalniku ni nič drugače. Procesi se rojevajo in umirajo ter vmes opravijo koristno delo. Tvorjenje novega procesa se zgodi s postopkom, ki se imenuje <b>vejitev</b> (<i>ang. fork</i>). Ob tvorjenju dobi vsak proces svoje ime, ki ga označujemo s tujko <b>PID</b> (<i>ang. process ID</i>). Na novo ustvarjeni proces se izvaja, dokler ne konča svoje naloge ali ga operacijski sistem ne umakne iz izvajanja v stanje pripravljenosti. Če povzamemo, nov proces vedno nastane na podlagi nekega že izvajajočega se procesa. Vsem novim procesom pravimo <b>otroci</b> (<i>ang. children</i>) procesa, ki jih je ustvaril.</p>
 
 <p align="justify">Seveda, postavi se nam vprašanje: »Kako se je ustvaril prvi proces?« No, prvi proces se ustvari ob nalaganju operacijskega sistema.</p>
 
@@ -231,16 +231,16 @@
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Velja pa tudi obratno. Namreč, če zapremo urejevalnik besedila, s tem ustavimo glavni proces urejanja ter tudi vse njegove otroke, ki so bili ustvarjeni pri urejanju besedila.</p>
+<p align="justify">Velja pa tudi obratno. Če namreč zapremo urejevalnik besedila, s tem ustavimo glavni proces urejanja ter tudi vse njegove otroke, ki so bili ustvarjeni pri urejanju besedila.</p>
 
-<p align="justify">Včasih nam kakšen proces še posebej nagaja in se nikakor ne odziva. Ostaja nam še zadnja možnost in sicer, da proces ustavimo ročno – ga <b>ubijemo </b>(<i>ang. kill</i>). Z drugimi besedami postavimo process v stanje <b>KONEC</b>. V MS Windows to naredimo s pomočjo <b>Upravitelja opravil</b>, v Mac OS X pa s pomočjo <b>Activity Monitorja</b>. V GNU Linux in FreeBSD lahko to opravimo v ukazni vrstici z ukazom <code>kill pid</code>, kjer je <i>pid</i> ime (številka) procesa.</p>
+<p align="justify">Včasih nam nek proces še posebej nagaja in se nikakor ne odziva. Ostaja nam še zadnja možnost in sicer, da proces ustavimo ročno – ga <b>ubijemo </b>(<i>ang. kill</i>). Z drugimi besedami, proces preklopimo v stanje <b>KONEC</b>. V MS Windows to naredimo s pomočjo <b>Upravitelja opravil</b>, v Mac OS X pa s pomočjo <b>Activity Monitorja</b>. V GNU Linux in FreeBSD lahko to opravimo v ukazni vrstici z ukazom <code>kill pid</code>, pri čemer je <i>pid</i> ime (številka) procesa.</p>
 
 <p align="center">
 <a href="#" data-toggle="modal" data-target="#image2"><img src="img/end_process.png" width="300" class="img-responsive" /></a>
 <i>Ročna ustavitev procesa v Upravitelju opravil</i></p>
 
 <div class="alert alert-success" role="alert">
-<p align="justify">Si že kdaj prekinil določen proces na svojem računalniku? Zakaj?</p>
+<p align="justify">Si že kdaj prekinil(-a) nek proces v svojem računalniku? Zakaj?</p>
 </div>
 <!-- Right column end -->
 					</div>

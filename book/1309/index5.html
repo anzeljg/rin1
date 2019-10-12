@@ -176,15 +176,15 @@
 <!-- Left column start -->
 <h1>Uporaba pomnilnika</h1>
  
-<p align="justify">Vsak proces si misli, da ima svoj kos pomnilnika. Zato temu rečemo <b>navidezni pomnilnik</b> (<i>ang. virtual memory</i>) in je povsem neodvisen od (navideznega) pomnilnika ostalih procesov, ki se hkrati izvajajo. Problem nastane, ko je skupna velikost vseh navideznih pomnilnikov posameznih procesov večja od velikosti fizičnega pomnilnika. Takrat operacijski sistem začasno prestavi del vsebine navideznega pomnilnika enega od neizvajajočih se procesov na disk in s tem sprosti fizični pomnilnik. Temu postopku pravimo <b>izmenjava </b>(<i>ang. swap</i>).</p>
+<p align="justify">Vsak proces predvideva, da ima svoj del pomnilnika, ki ga imenujemo <b>navidezni pomnilnik</b> (<i>ang. virtual memory</i>) in je povsem neodvisen od (navideznega) pomnilnika ostalih procesov, ki se hkrati izvajajo. Problem nastane, ko je skupna velikost vseh navideznih pomnilnikov posameznih procesov večja od velikosti fizičnega pomnilnika. Takrat operacijski sistem začasno prestavi del vsebine navideznega pomnilnika enega od neizvajajočih se procesov na disk in s tem sprosti fizični pomnilnik. Temu postopku pravimo <b>izmenjava</b> (<i>ang. swap</i>).</p>
 
-<p align="justify">Težava nastopi, če se prične izvajati proces, katerega del navideznega pomnilnika je operacijski sistem odstavil na disk. V tem trenutku se mora narediti v fizičnem pomnilniku prostor za umaknjene podatke. To se naredi v dveh korakih in sicer se umakne del navideznega pomnilnika nekega drugega procesa na disk in nato se prestavi umaknjeni del navideznega pomnilnika prvega procesa nazaj v fizični pomnilnik. Če se to dogaja prepogosto, postane naš računalnik neskončno počasen.</p>
+<p align="justify">Težava nastopi, če se prične izvajati proces, katerega del navideznega pomnilnika je operacijski sistem odstavil na disk. V tem trenutku se mora v fizičnem pomnilniku ustvariti prostor za umaknjene podatke. To se izvede v dveh korakih: del navideznega pomnilnika nekega drugega procesa se prestavi na disk, umaknjeni del navideznega pomnilnika prvega procesa pa nazaj v fizični pomnilnik. Če se to dogaja prepogosto, postane naš računalnik izjemno počasen.</p>
 
 <p align="center"><img src="img/pomnilnik.png" width="40%" class="img-responsive" />
 <i>Shema pomnilnika </i></p>
 
 <div class="alert alert-success" role="alert">
-<p align="justify">Takšnemu načinu upravljanja s pomnilnikom pravimo <b>ostranjevanje </b>(<i>paging</i>) oziroma delitev na strani.</p>
+<p align="justify">Tak način upravljanja s pomnilnikom imenujemo <b>ostranjevanje</b> (<i>ang. paging</i>) oziroma delitev na strani.</p>
 </div>
 <!-- Left column end -->
 					</div>
@@ -192,7 +192,7 @@
 						<br />
 <!-- Right column start -->
 <div class="alert alert-info" role="alert">
-<p align="justify">Poglejmo kaj se zgodi, če imamo tri procese, v pomnilniku pa je prostora le za dva.</p>
+<p align="justify">Oglejmo si, kaj se zgodi, če imamo tri procese, v pomnilniku pa je prostora le za dva.</p>
 	<style>
     #container_iz_animation {
         position: relative;
@@ -230,7 +230,7 @@
 </div>
 
 <div class="alert alert-success" role="alert">
-<p align="justify">Kateri proces umakniti iz pomnilnika? Najbolje bi bilo, da iz pomnilnika umaknemo tisti proces, ki ga bomo najkasneje v prihodnosti izvajali. Žal pa nismo jasnovidni in ne poznamo prihodnosti, zato za približek vzamemo kar proces, ki najdlje ni bil uporabljen.</p>
+<p align="justify">Kateri proces umakniti iz pomnilnika? Najbolje bi bilo, da iz pomnilnika umaknemo tisti proces, ki ga bomo v prihodnosti izvajali najpozneje. Žal pa nismo jasnovidni in ne poznamo prihodnosti, zato za približek vzamemo kar proces, ki najdlje ni bil uporabljen.</p>
 </div>
 <!-- Right column end -->
 					</div>

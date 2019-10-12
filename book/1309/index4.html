@@ -176,23 +176,23 @@
 <!-- Left column start -->
 <h1>Razvrščanje procesov</h1>
  
-<p align="justify">Operacijski sistem upravlja s procesi in daje vsakemu procesu občutek, kot da ima celoten sistem na razpolago povsem zase.</p>
+<p align="justify">Operacijski sistem upravlja s procesi tako, da vsak proces predvideva, da ima celoten sistem na razpolago povsem zase.</p>
 
-<p align="justify">Kateri procesi se bodo izvajali, kdaj in koliko dolgo, določa del operacijskega sistema, ki mu rečemo <b>razvrščevalnik </b>(<i>ang. scheduler</i>). Le ta razvršča procese na različne načine. Nekateri od teh načinov so:</p>
+<p align="justify">Kateri procesi se bodo izvajali, kdaj in kako dolgo, določa del operacijskega sistema, ki ga imenujemo <b>razvrščevalnik</b> (<i>ang. scheduler</i>). Ta razvršča procese na različne načine. Nekateri od teh načinov so:</p>
 
-<p align="justify"><b>1. Prvi pride, prvi melje </b>(<i>ang. FIFO – First In First Out</i>)</p>
+<h2>1. Prvi pride, prvi melje</b> (<i>ang. FIFO – First In First Out</i>)</h2>
 
-<p align="justify">Najenostavnejši način razporejanja je kar »prvi pride, prvi melje«. Procesi so razporejeni v vrsto glede na čas prihoda in se tako tudi izvedejo.</p>
+<p align="justify">Najenostavnejši način razporejanja je kar »prvi pride, prvi melje«. Procesi so razporejeni v vrsto glede na čas začetka in se tako tudi izvedejo.</p>
 
 <div class="alert alert-info" role="alert">
 <p align="justify">Animacija načina »prvi pride, prvi melje« je enaka kot animacija zaporedne obdelave opravil.</p>
 <p align="center"><img src="img/zap13.png" class="img-responsive" />
-<i>Stanje po zaključenih vseh procesih.</i></p>
+<i>Stanje po dokončanih vseh procesih.</i></p>
 </div>
 
-<p align="justify"><b>2. Najkrajši najprej </b>(<i>ang. SRT – Shortest Remaining Time</i>)</p>
+<h2>2. Najkrajši najprej</b> (<i>ang. SRT – Shortest Remaining Time</i>)</h2>
 
-<p align="justify">Način »najkrajši najprej« razporedi procese glede na dolžino. Najprej pridejo na vrsto krajši procesi in nato daljši. Razvrščevalnik mora dobro oceniti, koliko časa bo kakšen proces potreboval, da se zaključi.</p>
+<p align="justify">Način »najkrajši najprej« razporedi procese glede na dolžino. Najprej pridejo na vrsto krajši procesi in nato daljši. Razvrščevalnik mora dobro oceniti, koliko časa bo kakšen proces potreboval za izvedbo.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -236,14 +236,14 @@
 	</div>
 </div>
 
-<p align="justify"><b>3. Kroženje </b>(<i>ang. Round-Robin</i>)</p>
+<h2>3. Kroženje</b> (<i>ang. Round-Robin</i>)</h2>
 
 <p align="justify">Razvrščevalnik priredi vsakemu procesu enak časovni interval in med njimi kroži. Čakalni čas je odvisen le od števila procesov in ne več od njihove dolžine.</p>
 
 <div class="alert alert-info" role="alert">
 <p align="justify">Animacija načina kroženja je enaka animaciji večopravilne obdelave opravil.</p>
 <p align="center"><img src="img/vec18.png" class="img-responsive" />
-<i>Stanje po zaključenih vseh procesih.</i></p>
+<i>Stanje po dokončanih vseh procesih.</i></p>
 </div>
 
 <div class="alert alert-success" role="alert">

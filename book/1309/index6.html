@@ -176,13 +176,13 @@
 <!-- Left column start -->
 <h1>Stanje procesa</h1>
  
-<p align="justify">Tina ima nov robotski komplet Lego Mindstorm. Končno ga ima čas sestaviti, saj staršev ni doma, mlajši brat pa se igra v svoji sobi. S spletne strani si je natisnila navodila (<b>PROGRAM</b>), kako naj sestavi robotka, in si jih je pripravila zraven kompleta. Pripravila si je tudi vse potrebne sestavne dele: lego palčke, kolesa, osnovne kocke, različne senzorje (<b>VHODNI PODATKI</b>) in začela po navodilih sestavljati robotka (<b>PROCES</b>). Po telefonu jo pokliče mama in naroči, da naj takoj pripravi večerjo za brata, recept pa ji je pustila na kuhinjskem pultu. Tina si označi v navodilih, kje je ostala (<b>STANJE </b>trenutnega procesa sestavljanja robotka), odide v kuhinjo in po maminih navodilih pripravi večerjo za brata (izvaja proces kuhanja večerje). Tina (<b>CPE</b>) je torej preklopila iz prvega procesa (sestavljanje robotka) na drugega z višjo prioriteto (kuhanje večerje). Smo opazili, da ima vsak proces svoj program (navodila za sestavljanje robotka in recept za večerjo). Ko Tina skuha večerjo, gre nazaj k svojemu robotku in nadaljuje točno tam, kjer je prej končala.</p>
+<p align="justify">Tina ima nov robotski komplet Lego Mindstorm. Končno ga ima čas sestaviti, saj staršev ni doma, mlajši brat pa se igra v svoji sobi. S spletne strani je natisnila navodila (<b>PROGRAM</b>), kako naj sestavi robotka, in jih priložila kompletu. Pripravila si je tudi vse potrebne sestavne dele: lego palčke, kolesa, osnovne kocke, različne senzorje (<b>VHODNI PODATKI</b>) in začela po navodilih sestavljati robotka (<b>PROCES</b>). Po telefonu jo pokliče mama in naroči, da naj takoj pripravi večerjo za brata. Recept ji je pustila na kuhinjskem pultu. Tina si označi v navodilih, kje je ostala (<b>STANJE</b> trenutnega procesa sestavljanja robotka), odide v kuhinjo in po maminih navodilih pripravi večerjo za brata (izvaja proces kuhanja večerje). Tina (<b>CPE</b>) je torej preklopila s prvega procesa (sestavljanje robotka) na drugega z višjo prioriteto (kuhanje večerje). Vidimo, da ima vsak proces svoj program (navodila za sestavljanje robotka in recept za večerjo). Ko Tina skuha večerjo, se vrne k svojemu robotku in nadaljuje točno tam, kjer je prej končala.</p>
 
 <div class="alert alert-danger" role="alert">
-<p align="justify">Kako bi izgledalo, če bi Tina hkrati sestavljala dva robotka?</p>
+<p align="justify">Kako bi bilo videti, če bi Tina hkrati sestavljala dva robotka?</p>
 </div>
 
-<p align="justify">Proces je torej neka aktivnost, ki ima kodo programa, vhodne podatke, izhodne podatke in stanje (do kje je procesor prišel v izvajanju programa).</p>
+<p align="justify">Proces je torej neka dejavnost, ki ima kodo programa, vhodne podatke, izhodne podatke in stanje (stopnja, do katere je procesor izvedel program).</p>
 
 <div class="alert alert-success" role="alert">
 <p align="justify">Shemo, ki prikazuje stanja procesa, imenujemo tudi <b>končni avtomat</b> (<i>ang. finite automaton</i>).</p>
@@ -195,17 +195,17 @@
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Med izvajanjem proces prehaja med različnimi stanji - Tina je morala prekiniti proces sestavljanja robotka, opravila proces kuhanja večerje in nato spet nadaljevala prvi proces. Proces je lahko torej v stanju:</p>
+<p align="justify">Med izvajanjem proces prehaja med različnimi stanji – Tina je morala prekiniti proces sestavljanja robotka, opravila proces kuhanja večerje in nato spet nadaljevala prvi proces. Proces je lahko torej v stanju:</p>
 
 <p><ul align="justify">
 	<li>izvajanja (<i>ang. running</i>): proces za izvajanje uporablja CPE,</li>
 	<li>čakanja (<i>ang. ready</i>): proces čaka, da pride na vrsto,</li>
-	<li>spanja  (<i>ang. blocked</i>): ni pripravljen na izvajanje, saj čaka na nek vir – podatke,  na V/I naprave ali kaj tretjega, kar bomo spoznali kasneje.</li>
+	<li>spanja  (<i>ang. blocked</i>): ni pripravljen na izvajanje, saj čaka na nek vir – podatke, vzhodno-izhodne naprave ali drug vir, ki ga bomo spoznali pozneje.</li>
 </ul>
 </p>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kako se stanja procesov spreminjajo v zgodbici, kjer Tina najprej sestavlja robotka, nato pa kuha večerjo.</p>
+<p align="justify">Kako se stanja procesov spreminjajo v zgodbici, v kateri Tina najprej sestavlja robotka, nato pa kuha večerjo.</p>
 	<style>
     #container_pr_animation {
         position: relative;

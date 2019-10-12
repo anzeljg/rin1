@@ -20,6 +20,13 @@
 	<link href="../css/font-awesome.min.css" rel="stylesheet">
 
 	<link href="../css/style.css" rel="stylesheet">
+	<style>
+		blockquote {
+			font-size: 1em;
+			font-style: italic;
+			margin-bottom: 10px;
+		}
+	</style>
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -173,26 +180,26 @@
 <!-- Left column start -->
 <h1>Kaj je proces</h1>
  
-<p align="justify">Se še spomniš primera pisanja in tiskanja besedila v poglavju Operacijski sistem? Če si pozabil, ga še enkrat hitro preglej!</p>
+<p align="justify">Se še spomniš primera <a href="../1306/index5.html">pisanja in tiskanja besedila</a> v učni enoti Operacijski sistem? Če si pozabil(-a), ga še enkrat hitro preglej!</p>
 
-<p align="justify">Govorili smo o programih, vendar smo to naredili malce poenostavljeno. Dejansko si programe lahko predstavljamo kot recepte za kuhanje, ki sami po sebi ne naredijo slastne jedi. Slastno jed dobimo šele, ko recepte uporabimo in v skladu z njimi iz sestavin skuhamo jed. Podobno programe uporabimo (to je poženemo) v računalniku. Ko se program prične izvajati, pa ne govorimo več o programu, ampak o <b>procesu</b>. Le ta je samo-zaključena enota izvajanja programa, vključno z vrednostmi njegovih spremenljivk. Očitno lahko isti recept hkrati uporabimo in prav tako se lahko isti program izvaja v dveh procesih.</p>
+<p align="justify">Obravnavali smo programe, a malce poenostavljeno. Dejansko si programe lahko predstavljamo kot recepte za kuhanje, ki sami po sebi ne pripravijo slastne jedi. Slastno jed dobimo šele, ko recepte uporabimo in v skladu z njimi iz sestavin skuhamo jed. Podobno programe uporabimo (zaženemo) v računalniku. Ko se program prične izvajati, pa ne govorimo več o programu, ampak o <b>procesu</b>. Proces je zaključena enota izvajanja programa, vključno z vrednostmi njegovih spremenljivk. Isti recept lahko hkrati uporabimo v dveh procesih, enako kot se lahko v dveh procesih izvaja isti program.</p>
 
-<p align="justify">Ko smo govorili o izvajanju programov, nas je zanimalo tudi, kaj dela računalnik vmes, ko čaka na novi ukaz (takrat smo govorili o pritisku na tipko). V resnici računalnika ne uporabljamo samo za eno opravilo naenkrat. Ker, če bi ga uporabljali samo za eno opravilo naenkrat, bi kar nekaj časa čakali na zaključek prejšnjega opravila. Takšnemu zaporednemu izvajanju opravil pravimo <b>zaporedni </b>ali <b>paketni način obdelave</b>.</p>
+<p align="justify">Ko smo govorili o izvajanju programov, nas je zanimalo tudi, katere funkcije izvaja operacijski sistem, medtem ko čaka na novi ukaz (takrat smo govorili o pritisku tipke). Računalnika dejansko ne uporabljamo samo za eno opravilo naenkrat. Če bi ga uporabljali samo za eno opravilo naenkrat, bi kar nekaj časa čakali na dokončanje prejšnjega opravila. Tako zaporedno izvajanje opravil imenujemo <b>zaporedni</b> ali <b>paketni način obdelave</b>.</p>
 
 <p align="center">
 <img src="img/zaporedni_procesi.png" width="75%" class="img-responsive" /><br />
 <i>Primer zaporedne obdelave opravil.</i>
 </p>
 
-<p align="justify">V resnici običajno ne uporabljamo računalnika na paketni način. Kot primer si poglejmo, kako je dijakinja Maja včeraj popoldne uporabljala računalnik:</p>
+<p align="justify">V računalniku se paketni način običajno ne uporablja. Oglejmo si primer, kako je dijakinja Maja včeraj popoldne uporabljala računalnik:</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p><blockquote align="justify"><small>Najprej je naredila  video šolske predstave, ki ga želi izvoziti v določenem formatu.  Izvoz traja kakšno uro. Vmes piše nalogo v urejevalniku besedila, ima hkrati odprt brskalnik, kjer išče informacije. Vmes občasno pokuka še na socialna omrežja za zanimivimi informacijami. Nalogo shranjuje na priklopljen USB ključek, medtem ko se video shranjuje na disk. Odjemalec elektronske pošte vsake toliko časa pogleda, če je prišla kakšna nova pošta in jo o tem obvesti. Poleg tega se je mimo Majine sobe sprehodil še njen brat s telefonom, na katerem ima vklopljen <i>bluetooth</i> in njen računalnik prepozna bratov telefon.</small></blockquote></p>
+<p><blockquote align="justify">Najprej je izdelala videoposnetek šolske predstave, ki ga želi izvoziti v določenem formatu. Izvoz traja kakšno uro. Medtem piše nalogo v urejevalniku besedila, ima hkrati odprt brskalnik, s katerim išče informacije. Vmes občasno preveri morebitne zanimivosti v družabnih omrežjih. Nalogo shranjuje na priklopljen USB-ključek, medtem ko se video shranjuje na disk. Odjemalec elektronske pošte vsake toliko preveri, ali je prispela nova pošta, in jo o tem obvesti. V tem času se mimo Majine sobe sprehodi Majin brat z mobilnim telefonom, v katerem je omogočena povezava Bluetooth. Majin računalnik prepozna bratov telefon.</blockquote></p>
 
-<p align="justify">V računalniku torej poteka hkrati precej opravil, ki se izvajajo v različnih procesih (programih v izvajanju). Pa se res procesi izvajajo hkrati? No, lahko, če ima naš računalnik več procesorjev ali več jeder. Vendar praviloma je število procesov, ki se želijo hkrati izvajati, mnogo večje od števila procesorjev in jeder v našem računalniku. Zato se procesi dejansko ne izvajajo hkrati. Če primerjaš spodnji sliki v času med 0 in 5, izgleda, kot da se v prvem primeru izvajata le dva procesa, medtem ko se v drugem primeru izvaja vseh pet. Ta navidezna vzporednost nam da kvečjemu občutek, da se procesi izvajajo hitreje. Operacijski sistem namreč vsakemu procesu, ki naj bi se izvajal, dodeli (<i>ang. schedule</i>) CPE za določen čas. Pravimo, da operacijski sistem preklaplja med procesi. Ker pa to dela zares hitro, uporabnik preklapljanja sploh ne zasledi. Takšnemu načinu pa pravimo <b>večopravilen način</b> (<i>ang. multitasking</i>) v obliki <b>dodeljevanja časa</b> (<i>ang. time-sharing</i>). Primer večopravilne obdelave opravil prikazuje slika spodaj:</p>
+<p align="justify">V računalniku torej poteka hkrati precej opravil, ki se izvajajo v različnih procesih (programih v izvajanju). Pa se res procesi izvajajo hkrati? No, lahko se, če ima naš računalnik več procesorjev ali več jeder. Vendar praviloma je število procesov, ki se želijo hkrati izvajati, mnogo večje od števila procesorjev in jeder v našem računalniku. Zato se procesi dejansko ne izvajajo hkrati. Če primerjaš spodnji sliki v času med 0 in 5, je videti, kot da se v prvem primeru izvajata le dva procesa, medtem ko se v drugem primeru izvaja vseh pet. Ta navidezna vzporednost nam da kvečjemu občutek, da se procesi izvajajo hitreje. Operacijski sistem namreč vsakemu procesu, ki naj bi se izvajal, dodeli (<i>ang. schedule</i>) CPE za določen čas. Pravimo, da operacijski sistem preklaplja med procesi. Ker pa to poteka zares hitro, uporabnik preklapljanja sploh ne zasledi. Tak način imenujemo <b>večopravilen način</b> (<i>ang. multitasking</i>) v obliki <b>dodeljevanja časa</b> (<i>ang. time-sharing</i>). Primer večopravilne obdelave opravil prikazuje slika spodaj:</p>
 
 <p align="justify"><img src="img/vecopravilni_procesi3.png" width="75%" class="img-responsive" /></p>
 <!-- Right column end -->
