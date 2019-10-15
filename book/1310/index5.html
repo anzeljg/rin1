@@ -179,7 +179,7 @@
 						<h4 class="modal-title">Semafor</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Konstrukt semafor je uvedel Edsgar Dijkstra, ki je atomični operaciji pridobivanja kartice in njenega vračanja imenovali <b>P</b> in <b>V</b>. Poišči zakaj takšni imeni?</p>
+						<p align="justify">Konstrukt semafor je uvedel Edsgar Dijkstra, ki je atomični operaciji pridobivanja kartice in njenega vračanja poimenoval <b>P</b> in <b>V</b>. Ugotovi, zakaj je izbral ti imeni.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -218,10 +218,9 @@
 <!-- Left column start -->
 <h1>Semafor in monitor</h1>
  
-<p align="justify">
-Razvrščanje ljudi z listki s številkami je prav dobra rešitev, kot smo videli pri delikatesi. Kaj pa pri bolj uradnih organih? Recimo v obveščevalnih organizacijah, kot so SOVA, MI5, FBI, CIA in tudi Butalski Špijon? Ko v Butalah prideš do skrivnega laboratorija, pred njim naletiš na varnostnika. Varnostnik da vsakemu obiskovalcu kartico z napisom <b>gost</b> in le-ta lahko nato vstopi v laboratorij. Da pa ima varnostnik vse obiskovalce pod nadzorom, ima le eno kartico in vstop v laboratorij dovoli le enemu naenkrat. Šele ko pride prvi obiskovalec ven in vrne kartico, jo varnostnik da naslednjemu obiskovalcu, ter tako naprej.</p>
+<p align="justify">Razvrščanje na podlagi listkov s številkami je prav dobra rešitev, kot smo videli pri delikatesi. Kako pa se obnese pri bolj uradnih organih, recimo v obveščevalnih organizacijah, kot so SOVA, MI5, FBI, CIA in tudi Butalski Špijon? Ko v Butalah prideš do skrivnega laboratorija, pred njim naletiš na varnostnika. Varnostnik vsakemu obiskovalcu izroči kartico z napisom <b>gost</b>, ki omogoča vstop v laboratorij. Da pa ima varnostnik vse obiskovalce pod nadzorom, ima le eno kartico in vstop v laboratorij dovoli le enemu naenkrat. Šele ko prvi obiskovalec izstopi in vrne kartico, jo varnostnik izroči naslednjemu obiskovalcu ter tako naprej.</p>
 
-<p align="justify">Takšen način razporejanja poimenujemo tudi <a href="#" data-toggle="modal" data-target="#semafor"><b>semafor</b></a>, ki ima dve operaciji: <b>pridobi kartico</b> in <b>vrni kartico</b>, medtem ko je laboratorij pri programiranju običajno skupno mesto v pomnilniku.</p>
+<p align="justify">Tak način razporejanja imenujemo tudi <a href="#" data-toggle="modal" data-target="#semafor"><b>semafor</b></a>, ki ima dve operaciji: <b>pridobi kartico</b> in <b>vrni kartico</b>, medtem ko je laboratorij pri programiranju običajno skupno mesto v pomnilniku.</p>
 
 <p align="justify">Simulacija delčka uporabe semaforja:</p>
 
@@ -270,11 +269,11 @@ Razvrščanje ljudi z listki s številkami je prav dobra rešitev, kot smo videl
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Pri Butalskem Špijonu imajo novo tajno nalogo. Tako tajno, da en agent ne ve za drugega kaj počne, samo rezultate vpisujejo v skupno knjigo. Knjiga je v laboratoriju in agent pride v laboratorij, si sposodi knjigo, vanjo vpiše svoje ugotovitve ter jo vrne nazaj. Vendar so se odločili, da za usklajevanje ne bodo uporabili semaforja, ker je zadnjič Laudon Štimani preprosto pozabil vrniti kartico ter nihče več ni mogel v laboratorij.</p>
+<p align="justify">Pri Butalskem Špijonu imajo novo tajno nalogo. Tako tajno, da agenti ne vedo, kaj počnejo drugi agenti, temveč zgolj vpisujejo rezultate v skupno knjigo. Knjiga je v laboratoriju in agent pride v laboratorij, si sposodi knjigo, vanjo vpiše svoje ugotovitve ter jo vrne nazaj. Odločili so se, da za usklajevanje ne bodo uporabljali semaforja, ker je zadnjič Laudon Štimani preprosto pozabil vrniti kartico, tako da nihče več ni mogel v laboratorij.</p>
 
-<p align="justify">V vsakem trenutku bo veljalo, da je lahko v laboratoriju največ en agent. Le-ti bodo tako vstopali v laboratorij posamič (<b>čakalna vrsta vstopa</b>). Če bo knjiga (<b>VIR</b>) v laboratoriju, jo bodo vzeli in odšli z njo iz laboratorija ter, če je ne bo tam, se bodo postavili v drugo vrsto (<b>čakalna vrsta na vir</b>). Ko bodo knjigo odrabili, jo bodo prinesli nazaj v laboratorij in <b>signalizirali</b> (prižig žarnice na spodnji animaciji) morebitnemu prvemu v čakalni vrsti na vir, da je knjiga na voljo. Slednji bo seveda nemudoma vstopil v laboratorij, pobral knjigo in odšel z njo iz laboratorija.</p>
+<p align="justify">V vsakem trenutku bo veljalo, da je lahko v laboratoriju največ en agent. V laboratorij bodo tako vstopali posamično (<b>čakalna vrsta vstopa</b>). Če bo knjiga (<b>VIR</b>) v laboratoriju, jo bodo vzeli in odšli z njo iz laboratorija, če pa je ne bo tam, se bodo postavili v drugo vrsto (<b>čakalna vrsta za vir</b>). Ko bodo knjigo uporabili, jo bodo prinesli nazaj v laboratorij in <b>signalizirali</b> (vklop žarnice na spodnji animaciji) morebitnemu prvemu v čakalni vrsti za vir, da je knjiga na voljo. Slednji bo seveda nemudoma vstopil v laboratorij, pobral knjigo in odšel z njo iz laboratorija.</p>
 
-<p align="justify">Konstrukt, ki ga tokrat uporabljamo za nadzor dostopa do skupnega vira se imenuje <a href="#" data-toggle="modal" data-target="#monitor"><b>monitor</b></a>. Slednji nudi tri atomične operacije: <b>vstopi</b> (<i>ang. call</i>), s katero proces (v našem primeru agent) vstopi v monitor; <b>izstopi</b> (<i>ang. return</i>), s katero izstopi iz njega; <b>počakaj</b> (<i>ang. wait</i>), s katero se postavi v vrsto za vir; in <b>signaliziraj</b> (<i>ang. signal</i> ali <i>notify</i>), s katero omogočimo prvemu v čakalni vrsti na vir, da vstopi v monitor. V monitorju je v vsakem trenutku največ en proces.</p>
+<p align="justify">Konstrukt, ki ga tokrat uporabljamo za nadzor dostopa do skupnega vira, se imenuje <a href="#" data-toggle="modal" data-target="#monitor"><b>monitor</b></a>. Slednji ponuja štiri atomične operacije: <b>vstopi</b> (<i>ang. call</i>), s katero proces (v našem primeru agent) vstopi v monitor; <b>izstopi</b> (<i>ang. return</i>), s katero izstopi iz njega; <b>počakaj</b> (<i>ang. wait</i>), s katero se postavi v vrsto za vir; in <b>signaliziraj</b> (<i>ang. signal</i> ali <i>notify</i>), s katero omogočimo prvemu v čakalni vrsti za vir, da vstopi v monitor. V monitorju je v vsakem trenutku največ en proces.</p>
 
 <div class="alert alert-info" role="alert">
 	<style>
