@@ -290,11 +290,11 @@ print(min3b(19, 23, 27))</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Kako lahko različne algoritme primerjamo med seboj? Algoritmi, ki ne dajejo pravilnih rezultatov ali pa se pri nekaterih vhodih ne ustavijo, nas običajno ne zanimajo. Pravilne in ustavljive algoritme pa lahko primerjamo po sledečih kriterijih:</p>
+<p align="justify">Kako lahko različne algoritme primerjamo med seboj? Algoritmi, ki ne dajejo pravilnih rezultatov ali pa se pri nekaterih vhodih ne ustavijo, nas običajno ne zanimajo. Pravilne in ustavljive algoritme pa lahko primerjamo po teh kriterijih:</p>
 
 <p align="justify">
 <ul align="justify">
-	<li><b>Poraba časa</b>: Med dvema algoritmoma za podani problem bomo seveda raje izbrali tistega, ki bo za svoje izvajanje na računalniku pri večini vhodov (ali pa vsaj pri »povprečnem« vhodu) porabil manj časa. Ta kriterij je tako pomemben, da mu namenjamo celotno naslednjo učno enoto.</li>
+	<li><b>Poraba časa</b>: Med dvema algoritmoma za podani problem bomo seveda raje izbrali tistega, ki bo za svoje izvajanje z računalnikom pri večini vhodov (ali pa vsaj pri »povprečnem« vhodu) porabil manj časa. Ta kriterij je tako pomemben, da mu namenjamo celotno naslednjo učno enoto.</li>
 </ul>
 </p>
 <!-- Left column end -->
@@ -304,13 +304,13 @@ print(min3b(19, 23, 27))</textarea>
 <!-- Right column start -->
 <p align="justify">
 <ul align="justify">
-	<li><b>Poraba prostora</b>: V računalniku imamo resda na voljo zelo veliko pomnilniškega prostora, vendar pa je ta še vedno omejen. Če delamo z velikimi množicami podatkov, moramo paziti, da algoritem ne porabi preveč dodatnega pomnilniškega prostora za svoje izvajanje.</li>
+	<li><b>Poraba prostora</b>: V računalniku imamo resda na voljo zelo veliko pomnilniškega prostora, vendar pa je ta še vedno omejen. Če obdelujemo velike množice podatkov, moramo paziti, da algoritem ne porabi preveč dodatnega pomnilniškega prostora za svoje izvajanje.</li>
 	<li><b>Razumljivost</b>: Če pri porabi časa ali prostora ni bistvenih razlik, imamo raje algoritme, ki jih lažje razumemo.</li>
 	<li><b>Prilagodljivost</b>: Kako enostavno lahko algoritem prilagodimo tako, da bo deloval tudi za večje ali splošnejše različice problema?</li>
 </ul>
 </p>
 
-<p align="justify">Primerjajmo algoritma za problem MIN3. Kot bomo videli v naslednji učni enoti, lahko porabo časa ocenimo tako, da štejemo osnovne korake izvajanja algoritma; v našem primeru so to medsebojne primerjave dveh števil in prirejanja. Pri obeh algoritmih imamo pri poljubnem vhodu po dve primerjavi: pri prvem algoritmu najprej primerjamo prvo število z drugim, nato pa še manjše od obeh s tretjim, pri drugem algoritmu pa primerjamo najprej drugo, nato pa še tretje število s spremenljivko naj. Pri drugem algoritmu nekaj dodatnega časa vzamejo prirejanja, ki jih je lahko več kot pri prvem. Zaradi hitrosti današnjih računalnikov pa je ta razlika zanemarljiva. Glede porabe prostora sta oba algoritma enakovredna: poleg treh vhodnih spremenljivk oba uporabljata še spremenljivko <code>naj</code>. Razumljivost je subjektiven kriterij, zato presojo o tem prepuščamo našim bralkam in bralcem. Glede prilagodljivosti pa ima drugi algoritem prednost pred prvim. To boš spoznal(-a) pri reševanju naslednje naloge:</p>
+<p align="justify">Primerjajmo algoritma za problem MIN3. Kot bomo videli v naslednji učni enoti, lahko porabo časa ocenimo tako, da štejemo osnovne korake izvajanja algoritma; v našem primeru so to medsebojne primerjave dveh števil in prirejanja. Pri obeh algoritmih imamo pri poljubnem vhodu po dve primerjavi: pri prvem algoritmu najprej primerjamo prvo število z drugim, nato pa še manjše od obeh s tretjim, pri drugem algoritmu pa primerjamo najprej drugo, nato pa še tretje število s spremenljivko naj. Pri drugem algoritmu nekaj dodatnega časa vzamejo prirejanja, ki jih je lahko več kot pri prvem. Zaradi hitrosti današnjih računalnikov pa je ta razlika zanemarljiva. Glede porabe prostora sta oba algoritma enakovredna: poleg treh vhodnih spremenljivk uporabljata še spremenljivko <code>naj</code>. Razumljivost je subjektiven kriterij, zato presojo o tem prepuščamo vam, našim bralkam in bralcem. Glede prilagodljivosti pa ima drugi algoritem prednost pred prvim. To boš spoznal(-a) pri reševanju naslednje naloge:</p>
 
 <h4>Vaja</h4>
 

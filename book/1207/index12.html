@@ -179,9 +179,9 @@
 
 <p align="justify">Algoritem je <b>ustavljiv</b>, če se <b>pri vseh veljavnih vhodih</b> prej ali slej ustavi. Ni pomembno, po koliko korakih oziroma po kolikšnem času se ustavi. Pomembno je le, da se ustavi. Ustavljivost je vprašljiva le tedaj, ko algoritem vsebuje zanke ali rekurzivne klice funkcij. V nasprotnem primeru se namreč algoritem vedno ustavi.</p>
 
-<p align="justify">Ustavljivosti v splošnem ni mogoče dokazati. Za nekatere algoritme namreč ne znamo (ali celo ne moremo) ugotoviti, ali se ustavijo pri <b>vseh</b> veljavnih vhodih. Enega od takšnih algoritmov bomo spoznali kasneje, sedaj pa si oglejmo pravilo, ki nam lahko pomaga vsaj pri nekaterih enostavnih zankah. Enojno zanko lahko proglasimo za ustavljivo, če nam uspe na podlagi spremenljivk, ki nastopajo v programu, zapisati izraz, čigar vrednost je na začetku vsakega obhoda zanke neko pozitivno celo število, obenem pa se v <b>vsakem</b> obhodu zanke zmanjša vsaj za 1. Ker takšen izraz ne more pasti pod 1 (razen morda v zadnjem obhodu zanke), se zanka gotovo prej ali slej ustavi. Na primer, če je začetna vrednost izraza enaka 10, se bo zanka izvedla kvečjemu 10-krat.</p>
+<p align="justify">Ustavljivosti v splošnem ni mogoče dokazati. Za nekatere algoritme namreč ne znamo (ali celo ne moremo) ugotoviti, ali se ustavijo pri <b>vseh</b> veljavnih vhodih. Enega od takšnih algoritmov bomo spoznali pozneje, sedaj pa si oglejmo pravilo, ki nam lahko pomaga vsaj pri nekaterih enostavnih zankah. Enojno zanko lahko opredelimo kot ustavljivo, če nam uspe na podlagi spremenljivk, ki nastopajo v programu, zapisati izraz, čigar vrednost je na začetku vsakega obhoda zanke neko pozitivno celo število, obenem pa se v <b>vsakem</b> obhodu zanke zmanjša vsaj za 1. Ker takšen izraz ne more biti manj kot 1 (razen morda v zadnjem obhodu zanke), se zanka gotovo prej ali slej ustavi. Na primer če je začetna vrednost izraza enaka 10, se bo zanka izvedla kvečjemu 10-krat.</p>
 
-<p align="justify">Dokažimo ustavljivost sledečega algoritma:</p>
+<p align="justify">Dokažimo ustavljivost tega algoritma:</p>
 
 <div>
 <form>
@@ -235,7 +235,7 @@
 </div>
 <pre id="output2"></pre>
 
-<p align="justify">Ali pri vseh pozitivnih celih številih <i>n</i> prej ali slej pridemo do enice in se ustavimo? Odgovor se glasi: <b>ne vemo!</b> Doslej še nikomur ni uspelo dokazati oziroma ovreči te t.i. Collatzove domneve. (Domnevo bi ovrgli, če bi našli število <i>n</i>, pri katerem se algoritem ne ustavi.) Že pri nekaterih razmeroma majhnih številih je pot do enice kar dolga (npr. 15 → 46 → 23 → 70 → 35 → 106 → 53 → 160 → 80 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1), kljub temu pa je računalnikarjem in matematikom s sistematičnim poganjanjem programa uspelo pokazati, da do enice prej ali slej vodijo vsa števila do najmanj 10<sup>18</sup>. Žal pa to še ni dokaz, saj je celih števil neskončno. Zaenkrat problem še vedno ostaja odprt; morda ga boš rešil(-a) prav ti!</p>
+<p align="justify">Ali pri vseh pozitivnih celih številih <i>n</i> prej ali slej pridemo do enice in se ustavimo? Odgovor se glasi: <b>ne vemo!</b> Doslej še nikomur ni uspelo dokazati oziroma ovreči te t.i. Collatzove domneve. (Domnevo bi ovrgli, če bi našli število <i>n</i>, pri katerem se algoritem ne ustavi.) Že pri nekaterih razmeroma majhnih številih je pot do enice kar dolga (npr. 15 → 46 → 23 → 70 → 35 → 106 → 53 → 160 → 80 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1), kljub temu pa je računalnikarjem in matematikom s sistematičnim izvajanjem programa uspelo pokazati, da do enice prej ali slej vodijo vsa števila do najmanj 10<sup>18</sup>. Žal pa to še ni dokaz, saj je celih števil neskončno. Zaenkrat problem še vedno ostaja odprt; morda ga boš rešil(-a) prav ti!</p>
 <!-- Right column end -->
 					</div>
 				</div>

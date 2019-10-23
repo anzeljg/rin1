@@ -179,7 +179,7 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Postopamo na povsem enak način kot pri dokazu pravilnosti algoritma za iskanje minimuma v tabeli. Trditev dokažemo s popolno indukcijo. Na podlagi trditve sklepamo, da spremenljivka vsota po koncu zanke (torej po zaključku <i>n</i>-tega obhoda zanke) vsebuje vsoto vseh <i>n</i> števil.</p>
+						<p align="justify">Postopamo na povsem enak način kot pri dokazu pravilnosti algoritma za iskanje minimuma v tabeli. Trditev dokažemo s popolno indukcijo. Na podlagi trditve sklepamo, da spremenljivka vsota po koncu zanke (torej po dokončanju <i>n</i>-tega obhoda zanke) vsebuje vsoto vseh <i>n</i> števil.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -197,17 +197,17 @@
 <!-- Left column start -->
 <h1>*Pravilnost algoritma</h1>
 
-<p align="justify">Pravilnost gornjega algoritma najlažje dokažemo tako, da najprej dokažemo sledečo pomožno trditev:</p>
+<p align="justify">Pravilnost zgornjega algoritma najlažje dokažemo tako, da najprej dokažemo to pomožno trditev:</p>
 
 <div class="alert alert-warning" role="alert">
-<p align="justify">Naj bo <i>n</i> število elementov tabele (in obenem število obhodov zanke). Po zaključku <i>i</i>-tega obhoda zanke (kjer je <i>i</i> ∈ {1, . . . , <i>n</i>}) spremenljivka <code>naj</code> vsebuje najmanjše med prvimi <i>i</i> števili tabele.</p>
+<p align="justify">Naj bo <i>n</i> število elementov tabele (in obenem število obhodov zanke). Po koncu <i>i</i>-tega obhoda zanke (kjer je <i>i</i> ∈ {1, . . . , <i>n</i>}) spremenljivka <code>naj</code> vsebuje najmanjše med prvimi <i>i</i> števili tabele.</p>
 </div>
 
 <p align="justify">Trditev dokažemo s popolno indukcijo.</p>
 
 <p align="justify">Za <i>i</i> = 1 trditve ni težko preveriti: spremenljivka <code>naj</code> po prvem obhodu zanke vsebuje prvi element tabele, ta pa je seveda najmanjši med prvimi <i>i</i> elementi tabele, če je <i>i</i> = 1.</p>
 
-<p align="justify">Sedaj pa predpostavimo, da trditev velja za nek <i>i</i> &lt; <i>n</i>, in preverimo, ali velja tudi za <i>i</i>+1. Recimo, da spremenljivka <code>naj</code> po <i>i</i> obhodih zanke res vsebuje najmanjše izmed prvih <i>i</i> števil v tabeli. V naslednjem obhodu zanke obravnavamo število, ki je v tabeli na mestu <i>i</i>+1. Če je to število manjše od doslej najmanjšega, se priredi spremenljivki <code>naj</code>, tako da <code>naj</code> sedaj vsebuje najmanjše število izmed prvih <i>i</i>+1 elementov tabele. V nasprotnem primeru — če število na mestu <i>i</i> + 1 ni manjše od najmanjšega med prvimi <i>i</i> elementi — pa spremenljivka <code>naj</code> prav tako vsebuje najmanjše število izmed prvih <i>i</i> + 1 elementov tabele, saj ostane nespremenjena. Trditev torej velja tudi za <i>i</i>+1, popolna indukcija pa nam zagotavlja, da velja za vse <i>i</i> ∈ {1, . . . , <i>n</i>}.</p>
+<p align="justify">Sedaj pa predpostavimo, da trditev velja za nek <i>i</i> &lt; <i>n</i>, in preverimo, ali velja tudi za <i>i</i>+1. Recimo, da spremenljivka <code>naj</code> po <i>i</i> obhodih zanke res vsebuje najmanjše izmed prvih <i>i</i> števil v tabeli. V naslednjem obhodu zanke obravnavamo število, ki je v tabeli na mestu <i>i</i>+1. Če je to število manjše od doslej najmanjšega, se priredi spremenljivki <code>naj</code>, tako da <code>naj</code> sedaj vsebuje najmanjše število izmed prvih <i>i</i>+1 elementov tabele. V nasprotnem primeru – če število na mestu <i>i</i> + 1 ni manjše od najmanjšega med prvimi <i>i</i> elementi – pa spremenljivka <code>naj</code> prav tako vsebuje najmanjše število izmed prvih <i>i</i> + 1 elementov tabele, saj ostane nespremenjena. Trditev torej velja tudi za <i>i</i>+1, popolna indukcija pa nam zagotavlja, da velja za vse <i>i</i> ∈ {1, . . . , <i>n</i>}.</p>
 
 <p align="justify">Kaj pa spremenljivka <code>naj</code> vsebuje po vseh <i>n</i> obhodih zanke? Sodeč po trditvi, ki smo jo pravkar dokazali, vsebuje najmanjše število izmed prvih <i>n</i> elementov tabele, torej najmanjši element <b>celotne</b> tabele! Funkcija potemtakem dokazano vrača pravilne vrednosti.</p>
 <!-- Left column end -->
@@ -217,7 +217,7 @@
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Dokaži pravilnost sledečega algoritma za vsoto prvih <i>n</i> pozitivnih celih števil:
+<p align="justify">Dokaži pravilnost spodnjega algoritma za vsoto prvih <i>n</i> pozitivnih celih števil:
 <pre>
 def vsotaPrvihN(n):
   i = 0
@@ -227,7 +227,7 @@ def vsotaPrvihN(n):
     vsota += i
   return vsota
 </pre>
-Pomagaj si z dokazom sledeče pomožne trditve: Po zaključku <i>i</i>-tega obhoda zanke spremenljivka <code>vsota</code> vsebuje vsoto prvih <i>i</i> števil.</p>
+Pomagaj si z dokazom navedene pomožne trditve: po koncu <i>i</i>-tega obhoda zanke spremenljivka <code>vsota</code> vsebuje vsoto prvih <i>i</i> števil.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>

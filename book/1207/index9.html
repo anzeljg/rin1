@@ -212,7 +212,7 @@ def zmnozek(a, b):
 # Koda za preverjanje delovanja algoritma.
 
 # Funkcijo poženemo za vse pare celih števil od 1 do vključno 10
-# in preštejemo, pri koliko parih se obe funkciji ujemata.
+# in preštejemo, pri koliko parih se funkciji ujemata.
 stPravilnih = 0
 stNapacnih = 0
 
@@ -266,7 +266,7 @@ print('Št. napačnih rezultatov:', stNapacnih)
 <!-- Left column start -->
 <h1>Različni algoritmi za isti problem</h1>
 
-<p align="justify">Vidimo, da je drugi algoritem veliko lažje prilagoditi na večji problem. Še več: drugi algoritem zlahka prilagodimo tako, da bo deloval za splošen problem iskanja najmanjšega števila v neprazni tabeli:</p>
+<p align="justify">Vidimo, da je drugi algoritem veliko lažje prilagoditi večjemu problemu. Še več: drugi algoritem zlahka prilagodimo tako, da bo deloval za splošen problem iskanja najmanjšega števila v neprazni tabeli:</p>
 
 <div>
 <form>
@@ -292,14 +292,14 @@ print(minTabela(t))</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Prvega algoritma sploh ne bi mogli tako posplošiti, saj bi potrebovali poljubno globoko vgnezdene pogojne stavke. Če bi ga želeli prilagoditi za delovanje na tabeli števil, bi nujno morali uvesti dodatne spremenljivke, s čimer pa bi seveda dobili precej drugačen algoritem. Naš drugi algoritem za problem MIN3 je torej nedvomno prilagodljivejši od prvega.</p>
+<p align="justify">Prvega algoritma ne bi mogli tako posplošiti, saj bi potrebovali poljubno globoko vgnezdene pogojne stavke. Če bi ga želeli prilagoditi za delovanje v tabeli števil, bi nujno morali uvesti dodatne spremenljivke, s čimer pa bi seveda dobili precej drugačen algoritem. Naš drugi algoritem za problem MIN3 je torej nedvomno prilagodljivejši od prvega.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 <!-- Right column start -->
 <h1>*Pravilnost algoritma</h1>
 
-<p align="justify">Algoritem za podani problem je pravilen, ko za <b>vsak</b> konkreten vhod, ki ustreza podanim omejitvam, proizvede izhod, ki je skladen z definicijo problema. Če je množica veljavnih vhodov končna, potem lahko pravilnost algoritma preverimo tako, da za vsak veljaven vhod izvršimo algoritem in primerjamo njegov izhod s pričakovanim.</p>
+<p align="justify">Algoritem za podani problem je pravilen, ko za <b>vsak</b> konkreten vhod, ki ustreza podanim omejitvam, ustvari izhod, ki je skladen z definicijo problema. Če je množica veljavnih vhodov končna, potem lahko pravilnost algoritma preverimo tako, da za vsak veljaven vhod izvršimo algoritem in primerjamo njegov izhod s pričakovanim.</p>
 
 <h4>Vaja</h4>
 
@@ -313,7 +313,7 @@ print(minTabela(t))</textarea>
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Poišči (ali ponovno napiši) svojo pythonovo funkcijo, ki problem množenja rešuje s seštevanjem. Napiši in preizkusi program, ki rezultate tvoje funkcije preveri za vse pare celih števil <i>a</i> in <i>b</i> z lastnostima 1 ≤ <i>a</i> ≤ 10 in 1 ≤ <i>b</i> ≤ 10. Rezultate svoje funkcije primerjaj z rezultati pythonovega operatorja <code>*</code>.</p>
+<p align="justify">Poišči (ali ponovno napiši) svojo pythonovo funkcijo, ki problem množenja rešuje s seštevanjem. Napiši in preizkusi program, ki rezultate tvoje funkcije preveri za vse pare celih števil <i>a</i> in <i>b</i> z lastnostma 1 ≤ <i>a</i> ≤ 10 in 1 ≤ <i>b</i> ≤ 10. Rezultate svoje funkcije primerjaj z rezultati pythonovega operatorja <code>*</code>.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution2"><span class="fa fa-check"></span> Rešitev</button>
 </p>

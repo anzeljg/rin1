@@ -234,7 +234,7 @@
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Pravilnost moramo pokazati za vse trojice vhodnih števil <i>a</i>, <i>b</i> in <i>c</i>. Pričnimo takole: Recimo, da je število <i>a</i> manjše tako od <i>b</i> kot od <i>c</i>. To pomeni, da velja <i>a</i> &lt; <i>b</i> in hkrati <i>a</i> &lt; <i>c</i>. Za ta primer bi moral biti izhod algoritma enak <i>a</i>. Pa je res? Seveda! Ker po predpostavki velja <i>a</i> &lt; <i>b</i>, je pogoj v prvem pogojnem stavku izpolnjen. Zaradi <i>a</i> &lt; <i>c</i> je pogoj izpolnjen tudi v drugem pogojnem stavku, kar pomeni, da funkcija vrne število <i>a</i>. Na ta način smo pokrili že ogromno možnih vhodov (npr. vhod <i>a</i> = 2, <i>b</i> = 3, <i>c</i> = 4 ali pa vhod <i>a</i> = −50, <i>b</i> = −30, <i>c</i> = −40), ne pa še vseh. Lahko se zgodi, da je število <i>b</i> najmanjše (<i>b</i> &lt; <i>a</i> in <i>b</i> &lt; <i>c</i>). Tudi v tem primeru ni težko preveriti, da se rezultat funkcije (število <i>b</i>) ujema s pričakovanim izhodom. Preverimo še možnost, da je število <i>c</i> najmanjše (torej <i>c</i> &lt; <i>a</i> in <i>c</i> &lt; <i>b</i>). V tem primeru bi moral biti rezultat funkcije enak <i>c</i>. Drži! Funkcija vrne <i>c</i> tako v primeru, ko je število <i>a</i> manjše od števila <i>b</i>, kot tudi v nasprotnem primeru.</p>
+<p align="justify">Pravilnost moramo pokazati za vse trojice vhodnih števil <i>a</i>, <i>b</i> in <i>c</i>. Pričnimo takole: recimo da je število <i>a</i> manjše tako od <i>b</i> kot od <i>c</i>. To pomeni, da velja <i>a</i> &lt; <i>b</i> in hkrati <i>a</i> &lt; <i>c</i>. Za ta primer bi moral biti izhod algoritma enak <i>a</i>. Pa je res? Seveda! Ker po predpostavki velja <i>a</i> &lt; <i>b</i>, je pogoj v prvem pogojnem stavku izpolnjen. Zaradi <i>a</i> &lt; <i>c</i> je pogoj izpolnjen tudi v drugem pogojnem stavku, kar pomeni, da funkcija vrne število <i>a</i>. Na ta način smo zajeli že ogromno možnih vhodov (npr. vhod <i>a</i> = 2, <i>b</i> = 3, <i>c</i> = 4 ali pa vhod <i>a</i> = −50, <i>b</i> = −30, <i>c</i> = −40), ne pa še vseh. Lahko se zgodi, da je število <i>b</i> najmanjše (<i>b</i> &lt; <i>a</i> in <i>b</i> &lt; <i>c</i>). Tudi v tem primeru ni težko preveriti, ali se rezultat funkcije (število <i>b</i>) ujema s pričakovanim izhodom. Preverimo še možnost, da je število <i>c</i> najmanjše (torej <i>c</i> &lt; <i>a</i> in <i>c</i> &lt; <i>b</i>). V tem primeru bi moral biti rezultat funkcije enak <i>c</i>. Drži! Funkcija vrne <i>c</i> tako v primeru, ko je število <i>a</i> manjše od števila <i>b</i>, kot tudi v nasprotnem primeru.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -249,7 +249,7 @@
 	<li><i>c</i> &lt; <i>a</i> in <i>c</i> &lt; <i>b</i></li>
 </ul>
 </p>
-<p align="justify">Vendar pa s temi primeri nismo pokrili celotne množice veljavnih vhodov, zato naš dokaz še ni povsem zaključen. Katere primere moramo še obravnavati?</p>
+<p align="justify">Vendar pa s temi primeri nismo zajeli celotne množice veljavnih vhodov, zato naš dokaz še ni povsem končan. Katere primere moramo še obravnavati?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -285,7 +285,7 @@
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Preden se lotimo dokaza, izvedi gornjo funkcijo na papirju, in sicer za tabelo <code>[3, 5, 2, 8, 4, 10, 6]</code>. Kaj vsebuje spremenljivka <code>naj</code> po prvem, drugem, tretjem, ... obhodu zanke? Kaj vsebuje po <i>i</i>-tem obhodu zanke?</p>
+<p align="justify">Preden se lotimo dokaza, izvedi zgornjo funkcijo na papirju, in sicer za tabelo <code>[3, 5, 2, 8, 4, 10, 6]</code>. Kaj vsebuje spremenljivka <code>naj</code> po prvem, drugem, tretjem, ... obhodu zanke? Kaj vsebuje po <i>i</i>-tem obhodu zanke?</p>
 </div>
 <!-- Right column end -->
 					</div>
