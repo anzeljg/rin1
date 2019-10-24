@@ -225,7 +225,7 @@ print("- povprečno " + str(povprecno) + " ms")
 <!-- Left column start -->
 <h1>Merjenje časa</h1>
 
-<p align="justify">Kako naj sploh opišemo, koliko časa porabi ta postopek? Zdaj ko ga imamo že implementiranega v nekem konkretnem programskem jeziku, ga lahko poženemo na nekih konkretnih podatkih in izmerimo, koliko sekund (ali milisekund, mikrosekund ipd.) se je izvajal. Da ne bomo ob računalniku stali s štoparico, lahko uporabimo kakšno od funkcij za merjenje časa, ki so že vgrajene v skoraj vsak programski jezik.</p>
+<p align="justify">Kako naj opišemo, koliko časa traja ta postopek? Zdaj ko ga imamo že implementiranega v nekem konkretnem programskem jeziku, ga lahko zaženemo na nekih konkretnih podatkih in izmerimo, koliko sekund (ali milisekund, mikrosekund ipd.) se je izvajal. Da ne bomo ob računalniku stali s štoparico, lahko uporabimo eno od funkcij za merjenje časa, ki so že vgrajene v skoraj vsak programski jezik.</p>
 
 <p align="justify">V pythonu lahko to na primer naredimo takole:</p>
 
@@ -265,14 +265,14 @@ print("Poraba časa: " + str(cas) + " milisekund")</textarea>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">S takšnimi meritvami časa je podobno kot z meritvami v fiziki — so bolj ali manj nenatančne, izpostavljene raznim vrstam merskih napak in podobno. Če poženemo isto meritev po večkrat, bomo dobili različne rezultate, odvisno od stvari, na katere nimamo veliko vpliva (npr. kaj se ta hip še dogaja na računalniku). Pri naših meritvah hitrosti izvajanja programa na levi so bili dobljeni časi med 38 do 126 milisekund.</p>
+<p align="justify">S takšnimi meritvami časa je podobno kot z meritvami v fiziki – so bolj ali manj nenatančne, izpostavljene raznim vrstam merskih napak in podobno. Če isto meritev zaženemo večkrat, bomo dobili različne rezultate, odvisno od stvari, na katere nimamo veliko vpliva (npr. kaj se ta hip še dogaja v računalniku). Pri naših meritvah hitrosti izvajanja programa na levi so bili dobljeni časi med 38 do 126 milisekund.</p>
 
-<p align="justify">Mimogrede, v pythonu obstaja za merjenje časa izvajanja še ena, malo bolj zapletena možnost — modul <code>timeit</code> — vendar ta merske napake le zmanjša, ne more pa se jim čisto izogniti.</p>
+<p align="justify">Mimogrede, v pythonu obstaja za merjenje časa izvajanja tudi malo bolj zapletena možnost – modul <code>timeit</code> – vendar ta merske napake le zmanjša, ne more pa se jim čisto izogniti.</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Dopolni primer na levi tako, da bo meritev časa ponovil stokrat (pri istih <code>a</code> in <code>s</code>) in na koncu izpisal najmanjšo, največjo in povprečno porabo časa po vseh stotih poskusih.</p>
+<p align="justify">Dopolni primer tako, da bo program meritev časa ponovil stokrat (pri istih <code>a</code> in <code>s</code>) ter na koncu izpisal najmanjšo, največjo in povprečno porabo časa po vseh stotih poskusih.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>

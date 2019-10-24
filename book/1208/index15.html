@@ -217,7 +217,7 @@ Trikotnik(4)
 <p align="justify">V najslabšem primeru je časovna zahtevnost <i>O(n * m)</i>, če mora iti pri vsakem <i>i</i> notranja zanka (po <i>j</i>) vse do <i>m</i>. Do tega pride, če stavek <code>if</code> nikoli ne opazi neujemanja (ali pa šele čisto na koncu, pri <i>j</i> = <i>m</i> - 1), na primer če je <code>s = "a" * n</code> in <code>p = "a" * m</code>.</p>
 
 <p align="justify">Rešitev (e):</p>
-<p align="justify">Brez stavka <code>break</code> bi funkcija še vedno vračala pravilne rezultate, le da bi se zdaj notranja zanka vedno izvedla do konca (vseh <i>m</i> iteracij), tako da bi funkcija porabila več časa kot prej. V najslabšem primeru je sicer časovna zahtevnost enaka kot prej — <i>O(n * m)</i>. Pri mnogih vrstah nizov, npr. z besedilom v naravnih jezikih, pa notranja zanka pri večini <i>i</i>-jev izvede le malo iteracij, ker se kmalu pojavi kakšno neujemanje med <code>s[i + j]</code> in <code>p[j]</code>; zato tisti stavek <code>break</code> prihrani veliko časa in brez njega bi bila funkcija občutno počasnejša.</p>
+<p align="justify">Brez stavka <code>break</code> bi funkcija še vedno vračala pravilne rezultate, le da bi se zdaj notranja zanka vedno izvedla do konca (vseh <i>m</i> iteracij), tako da bi funkcija porabila več časa kot prej. V najslabšem primeru je sicer časovna zahtevnost enaka kot prej – <i>O(n * m)</i>. Pri mnogih vrstah nizov, npr. z besedilom v naravnih jezikih, pa notranja zanka pri večini <i>i</i>-jev izvede le malo iteracij, ker se kmalu pojavi kakšno neujemanje med <code>s[i + j]</code> in <code>p[j]</code>; zato tisti stavek <code>break</code> prihrani veliko časa in brez njega bi bila funkcija občutno počasnejša.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -306,11 +306,11 @@ print(Prestej(s, p))</textarea>
 </div>
 <pre id="output2"></pre>
 </p>
-<p align="justify">(a) Preizkusi to funkcijo na nekaj primerih nizov <code>s</code> in <code>p</code> in se prepričaj, da res deluje.<br />
-(b) Kako se funkcija obnaša v primerih, ko se pojavitve podniza prekrivajo? (Na primer: <code>Prestej("banana", "ana")</code>.<br />
+<p align="justify">(a) Preizkusi to funkcijo na nekaj primerih nizov <code>s</code> in <code>p</code> ter se prepričaj, da res deluje.<br />
+(b) Kako se funkcija obnaša v primerih, ko se pojavitve podniza prekrivajo? Na primer: <code>Prestej("banana", "ana")</code>.<br />
 (c) Kakšna je (v najslabšem primeru) časovna zahtevnost te funkcije v odvisnosti od <i>n</i> (dolžine niza <code>s</code>) in <i>m</i> (dolžine niza <code>p</code>)?<br />
 (d) Opiši, kakšna morata biti pri danih <i>n</i> in <i>m</i> konkretna niza <code>s</code> in <code>p</code>, da funkcija porabi največ časa, kolikor je mogoče pri teh <i>n</i> in <i>m</i>.<br />
-(e) Recimo, da bi  iz gornje funkcije pobrisali vrstico s stavkom <code>break</code>. Kako bi to vplivalo na rezultate, ki jih funkcija vrača? Kako bi vplivalo na njeno časovno zahtevnost?</p>
+(e) Recimo, da bi  iz zgornje funkcije pobrisali vrstico s stavkom <code>break</code>. Kako bi to vplivalo na rezultate, ki jih funkcija vrača? Kako bi vplivalo na njeno časovno zahtevnost?</p>
 </div>
 <!-- Right column end -->
 					</div>

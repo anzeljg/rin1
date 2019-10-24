@@ -192,7 +192,7 @@
 
 <p align="justify">Vidimo torej, da je funkcija <code>NajdiVsoto2</code> sicer res hitrejša od prvotne rešitve <code>NajdiVsoto</code>, vendar čas izvajanja pri obeh narašča približno enako hitro v odvisnosti od velikosti vhodnih podatkov (torej od <i>n</i>); funkcija <code>NajdiVsoto</code> se v vsakem primeru izvaja približno dvakrat tako dolgo kot funkcija <code>NajdiVsoto2</code>.</p>
 
-<p align="justify">Veliko bolj dramatična pa je razlika med tema dvema funkcijama in našo zadnjo rešitvijo, <code>NajdiVsoto3</code>. Na prvi pogled se mogoče celo zdi, da pri tej slednji čas izvajanja sploh ni odvisen od <i>n</i>. Če jo pogledamo pobliže, vidimo, da to sicer ni res in da tudi pri tej funkciji čas narašča z <i>n</i>-jem, vendar veliko počasneje kot pri prvih dveh:</p>
+<p align="justify">Veliko opaznejša pa je razlika med tema dvema funkcijama in našo zadnjo rešitvijo, <code>NajdiVsoto3</code>. Na prvi pogled se mogoče celo zdi, da pri slednji čas izvajanja sploh ni odvisen od <i>n</i>. Če jo pogledamo od blizu, vidimo, da to sicer ni res in da tudi pri tej funkciji čas narašča z <i>n</i>, vendar veliko počasneje kot pri prvih dveh:</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -205,7 +205,7 @@
 <div id="mygraph2"></div>
 </p>
 
-<p align="justify">Čas izvajanja pri funkciji <code>NajdiVsoto3</code> narašča približno premosorazmerno z <i>n</i>, pri funkcijah <code>NajdiVsoto</code> in <code>NajdiVsoto2</code> pa narašča veliko hitreje od <i>n</i> — tam pravzaprav narašča približno premosorazmerno z <i>n<sup>2</sup></i>. Matematično bi rekli, da je čas izvajanja pri <code>NajdiVsoto3</code> linearna funkcija <i>n</i>-ja, pri <code>NajdiVsoto</code> in <code>NajdiVsoto2</code> pa kvadratna funkcija <i>n</i>-ja. (Tidve funkciji na primer za <i>n</i> = 500 porabita 25-krat toliko časa kot za <i>n</i> = 100. Za obdelavo 5-krat večjega primerka problema sta torej porabili <i>5<sup>2</sup> = 25</i>-krat več časa. Pri funkciji <code>NajdiVsoto3</code> pa za 5-krat večji problem porabimo le 5-krat več časa.)</p>
+<p align="justify">Čas izvajanja pri funkciji <code>NajdiVsoto3</code> narašča približno premosorazmerno z <i>n</i>, pri funkcijah <code>NajdiVsoto</code> in <code>NajdiVsoto2</code> pa narašča veliko hitreje od <i>n</i> – tam pravzaprav narašča približno premosorazmerno z <i>n<sup>2</sup></i>. Matematično bi rekli, da je čas izvajanja pri <code>NajdiVsoto3</code> linearna funkcija <i>n</i>, pri <code>NajdiVsoto</code> in <code>NajdiVsoto2</code> pa kvadratna funkcija <i>n</i>. (Ti funkciji na primer za <i>n</i> = 500 porabita 25-krat toliko časa kot za <i>n</i> = 100. Za obdelavo 5-krat večjega primerka problema sta torej porabili <i>5<sup>2</sup> = 25</i>-krat več časa. Pri funkciji <code>NajdiVsoto3</code> pa za 5-krat večji problem porabimo le 5-krat več časa.)</p>
 
 <p align="justify">Pri prvih dveh funkcijah smo videli, da ne glede na to, kako velik <i>n</i> gledamo, se <code>NajdiVsoto</code> izvaja približno dvakrat tako dolgo kot <code>NajdiVsoto2</code>. Ko pa primerjamo čas izvajanja teh dveh funkcij s funkcijo <code>NajdiVsoto3</code>, vidimo, da to razmerje narašča prek vseh meja (premosorazmerno z <i>n</i>-jem). Pri <i>n</i> = 100 se je <code>NajdiVsoto</code> izvajala 17-krat tako dolgo kot <code>NajdiVsoto3</code>, pri <i>n</i> = 500 pa že 82-krat tako dolgo:</p>
 

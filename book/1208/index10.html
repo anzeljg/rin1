@@ -214,9 +214,9 @@ print(NajdiVsoto3(a, s)) # vrne False</textarea>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Zunanja zanka, po <code>i</code>, tudi tu naredi največ <i>n</i> iteracij (v resnici največ <i>n</i> - 1, vendar pri razmišljanju o časovni zahtevnosti takšne malenkosti niso zares pomembne).</p>
+<p align="justify">Zunanja zanka, po <code>i</code>, tudi tu izvede največ <i>n</i> iteracij (dejansko največ <i>n</i> - 1, vendar pri razmišljanju o časovni zahtevnosti takšne malenkosti niso zares pomembne).</p>
 
-<p align="justify">Notranja zanka, po <code>j</code>, pa zdaj izvede največ <i>n</i> iteracij <b>v vseh ponovitvah zunanje zanke skupaj</b> — torej ne <i>n</i> iteracij pri vsakem <i>i</i>, ampak <i>n</i> iteracij pri vseh <i>i</i>-jih skupaj.</p>
+<p align="justify">Notranja zanka, po <code>j</code>, pa zdaj izvede največ <i>n</i> iteracij <b>v vseh ponovitvah zunanje zanke skupaj</b> – torej ne <i>n</i> iteracij pri vsakem <i>i</i>, ampak <i>n</i> iteracij pri vseh <i>i</i> skupaj.</p>
 
 <p align="justify">To je posledica dejstva, da se <i>j</i> začne pri <i>n</i> - 1, v vsaki iteraciji notranje zanke se zmanjša za 1, poleg tega pa <i>j</i> nikoli ne more pasti pod 0 (saj se celoten postopek konča, ko postane <i>j ≤ i</i>).</p>
 

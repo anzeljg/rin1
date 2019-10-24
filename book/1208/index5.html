@@ -256,7 +256,7 @@
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Do še boljše rešitve pa pridemo z naslednjim razmislekom. Spomnimo se, da nam naloga, ki jo rešujemo, zagotavlja, da bo tabela <code>a</code> urejena naraščajoče. (Doslej se na ta podatek nismo opirali — pravzaprav obe dosedanji rešitvi, <code>NajdiVsoto</code> in <code>NajdiVsoto2</code>, delujeta tudi za neurejene tabele.) Recimo, da smo pregledali nek konkreten par elementov tabele <code>a</code> in izračunali vsoto <code>a[i] + a[j]</code>. Če se izkaže, da je ta vsota prevelika (torej večja od <code>s</code>), lahko razmišljamo takole: če bi namesto elementa <code>a[j]</code> vzeli kakšnega od elementov, ki pridejo za njim (torej <code>a[j + 1]</code>, <code>a[j + 2]</code> itd.), bo tista vsota še bolj prevelika, saj so vsi ti kasnejši elementi večji od <code>a[j]</code>. Torej z nobenim od tistih <code>j</code>-jev, ki jih pri trenutem <code>i</code>-ju še nismo pregledali, ne bomo dobili iskane vsote; zato lahko nad trenutnim <code>i</code>-jem kar takoj obupamo in se posvetimo naslednjemu. Tako smo dobili:</p>
+<p align="justify">Do še boljše rešitve pa pridemo z naslednjim razmislekom. Spomnimo se, da nam naloga, ki jo rešujemo, zagotavlja, da bo tabela <code>a</code> urejena naraščajoče. (Doslej se na ta podatek nismo opirali – pravzaprav obe dosedanji rešitvi, <code>NajdiVsoto</code> in <code>NajdiVsoto2</code>, delujeta tudi za neurejene tabele.) Recimo, da smo pregledali nek konkreten par elementov tabele <code>a</code> in izračunali vsoto <code>a[i] + a[j]</code>. Če se izkaže, da je ta vsota prevelika (torej večja od <code>s</code>), lahko razmišljamo takole: če bi namesto elementa <code>a[j]</code> uporabili enega od elementov za njim (torej <code>a[j + 1]</code>, <code>a[j + 2]</code> itd.), bo ta prevelika vsota še večja, saj so vsi ti kasnejši elementi večji od <code>a[j]</code>. Torej z nobenim od tistih <code>j</code>, ki jih pri trenutem <code>i</code> še nismo pregledali, ne bomo dobili iskane vsote; zato lahko nad trenutnim <code>i</code> kar takoj obupamo in se posvetimo naslednjemu. Tako smo dobili:</p>
 
 <div>
 <form>
@@ -285,7 +285,7 @@ print(NajdiVsoto2b(a, s)) # vrne False</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Ta izboljšava sicer ne škoduje, res pa je, da v najslabšem primeru tudi ne koristi — lahko se na primer zgodi, da dobimo tako velik <code>s</code>, da pogoj <code>a[i] + a[j] &gt; s</code> sploh nikoli ni izpolnjen, zato do predčasne prekinitve notranje zanke nikoli ne pridemo. Vseeno pa je ta rešitev dobra osnova za naslednjo izboljšavo (ki pa bo koristna).</p>
+<p align="justify">Ta izboljšava sicer ne škoduje, res pa je, da v najslabšem primeru tudi ne koristi – lahko se na primer zgodi, da dobimo tako velik <code>s</code>, da pogoj <code>a[i] + a[j] &gt; s</code> sploh nikoli ni izpolnjen, zato do predčasne prekinitve notranje zanke nikoli ne pridemo. Vseeno pa je ta rešitev dobra osnova za naslednjo izboljšavo (ki pa bo koristna).</p>
 <!-- Right column end -->
 					</div>
 				</div>

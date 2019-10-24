@@ -176,21 +176,21 @@
 					<div class="col-md-6">
 						<br />
 <!-- Left column start -->
-<p align="justify">Pri vseh teh poskusih imamo sicer enako velike primerke problema — <i>n</i> = 100, kajti tabela <code>a</code> ima vsakič po 100 števil — vendar je čas izvajanja od primera do primera zelo različen. Naša funkcija <code>NajdiVsoto</code> se neha izvajati, čim najde par elementov z vsoto <code>a[i] + a[j] = s</code>, torej je čas izvajanja močno odvisen od tega, kako hitro najde prvi tak par. V najslabšem primeru (če para elementov z vsoto <code>s</code> sploh ni) mora funkcija pregledati čisto vse možne pare (do tega je na primer prišlo, ko smo imeli <code>a = [0, 1, ..., 99]</code> in <code>s = 12345</code>: do vsote 12345 pri tej tabeli <code>a</code> sploh ne moremo priti, saj je največja možna vsota dveh elementov v njej le <i>98 + 99 = 197</i>).</p>
+<p align="justify">Pri vseh teh poskusih imamo sicer enako velike primerke problema – <i>n</i> = 100, kajti tabela <code>a</code> ima vsakič po 100 števil – vendar je čas izvajanja od primera do primera zelo različen. Naša funkcija <code>NajdiVsoto</code> se neha izvajati, čim najde par elementov z vsoto <code>a[i] + a[j] = s</code>, torej je čas izvajanja zelo odvisen od tega, kako hitro najde prvi tak par. V najslabšem primeru (če para elementov z vsoto <code>s</code> sploh ni) mora funkcija pregledati čisto vse možne pare (do tega je na primer prišlo, ko smo imeli <code>a = [0, 1, ..., 99]</code> in <code>s = 12345</code>; do vsote 12345 pri tej tabeli <code>a</code> sploh ne moremo priti, saj je največja možna vsota dveh elementov v njej le <i>98 + 99 = 197</i>).</p>
 
-<p align="justify">Vidimo torej, da ko smo prej govorili o <i>T</i>(<i>n</i>) kot o času izvajanja na primerku problema velikosti <i>n</i>, je ta pojem pravzaprav precej nejasen. Primerkov problema velikosti <i>n</i> je veliko in čas izvajanja je na različnih primerkih lahko zelo različen. Praviloma nas pri razmišljanju o časovni zahtevnosti nekega postopka zanima predvsem to, kaj se lahko zgodi v najslabšem primeru, zato za <i>T</i>(<i>n</i>) vzamemo najdaljši čas izvajanja po vseh primerkih problema velikosti <i>n</i>. Tega se bomo držali tudi v našem učbeniku. (Še ena možnost je, da bi za <i>T</i>(<i>n</i>) vzeli nekakšno povprečje po vseh primerkih velikosti <i>n</i>, vendar se v praksi ponavadi izkaže, da je veliko težje oceniti takšno povprečje kot maksimum.)</p>
+<p align="justify">Vidimo torej, da ko smo prej govorili o <i>T</i>(<i>n</i>) kot o času izvajanja na primerku problema velikosti <i>n</i>, je ta pojem pravzaprav precej nejasen. Primerkov problema velikosti <i>n</i> je veliko in čas izvajanja je na različnih primerkih lahko zelo različen. Praviloma nas pri razmišljanju o časovni zahtevnosti nekega postopka zanima predvsem to, kaj se lahko zgodi v najslabšem primeru, zato za <i>T</i>(<i>n</i>) uporabimo najdaljši čas izvajanja po vseh primerkih problema velikosti <i>n</i>. Tega se bomo držali tudi v našem učbeniku. (Druga možnost je, da bi za <i>T</i>(<i>n</i>) vzeli nekakšno povprečje po vseh primerkih velikosti <i>n</i>, vendar se v praksi ponavadi izkaže, da je veliko težje oceniti takšno povprečje kot maksimum.)</p>
 
 <h1>Različno hitri algoritmi za isti problem</h1>
 
-<p align="justify">Funkcijo <code>NajdiVsoto</code>, s kakršno smo delali doslej, bi se dalo še izboljšati. Naša dosedanja funkcija mora za vsak par indeksov <code>i</code> in <code>j</code> izračunati vsoto <code>a[i] + a[j]</code> in jo primerjati s številom <code>s</code>. Tu imamo torej dva dostopa do tabele <code>a</code> (operatorji <code>[]</code>), eno seštevanje in eno primerjanje.</p>
+<p align="justify">Funkcijo <code>NajdiVsoto</code>, ki smo jo uporabljali doslej, bi se dalo še izboljšati. Naša dosedanja funkcija mora za vsak par indeksov <code>i</code> in <code>j</code> izračunati vsoto <code>a[i] + a[j]</code> ter jo primerjati s številom <code>s</code>. Tu imamo torej dva dostopa do tabele <code>a</code> (operatorji <code>[]</code>), eno seštevanje in eno primerjanje.</p>
 
-<p align="justify">Do malo hitrejše rešitve pridemo, če si pogoj <code>a[i] + a[j] == s</code> predstavljamo drugače: ta pogoj pravzaprav preverja, če <code>a[j]</code> pokrije razliko, kolikor številu <code>a[i]</code> še manjka do <code>s</code>. Z drugimi besedami, enakovreden pogoj je <code>a[j] == s - a[i]</code>. Ta razlika <code>s - a[i]</code> pa ni odvisna od <code>j</code>, ampak le od <code>i</code>.</p>
+<p align="justify">Do malo hitrejše rešitve pridemo, če si pogoj <code>a[i] + a[j] == s</code> predstavljamo drugače: ta pogoj pravzaprav preverja, če <code>a[j]</code> upošteva razliko (del, ki številu <code>a[i]</code> še manjka do <code>s</code>). Z drugimi besedami, enakovreden pogoj je <code>a[j] == s - a[i]</code>. Ta razlika <code>s - a[i]</code> pa ni odvisna od <code>j</code>, ampak le od <code>i</code>.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Ko se torej pri istem <code>i</code> (v isti iteraciji zunanje zanke) premikamo po različnih <code>j</code>, nam te razlike ni treba računati vsakič sproti; dovolj je že, če jo izračunamo le enkrat pri vsakem <code>i</code>. Tako dobimo naslednjo rešitev:</p>
+<p align="justify">Ko se torej pri istem <code>i</code> (v isti iteraciji zunanje zanke) pomikamo po različnih <code>j</code>, nam te razlike ni treba računati vsakič sproti; dovolj je že, če jo izračunamo le enkrat pri vsakem <code>i</code>. Tako dobimo naslednjo rešitev:</p>
 
 <div>
 <form>
@@ -225,7 +225,7 @@ print("Poraba časa: " + str(cas) + " milisekund")</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Zdaj imamo torej pri vsakem paru indeksov <code>i</code> in <code>j</code> le dve operaciji namesto štirih: en dostop do tabele <code>a</code> in eno primerjanje.  Zato si lahko predstavljamo, da se bo izvajala približno pol manj časa kot prvotna rešitev, saj se drugače obe funkciji obnašata enako — obe morata obdelati enako veliko parov <i>(i, j)</i>.</p>
+<p align="justify">Zdaj imamo torej pri vsakem paru indeksov <code>i</code> in <code>j</code> le dve operaciji namesto štirih: en dostop do tabele <code>a</code> in eno primerjanje.  Zato si lahko predstavljamo, da se bo izvajala približno pol manj časa kot prvotna rešitev, saj se drugače obe funkciji obnašata enako – obe morata obdelati enako število parov <i>(i, j)</i>.</p>
 <!-- Right column end -->
 					</div>
 				</div>

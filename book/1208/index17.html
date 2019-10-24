@@ -185,7 +185,7 @@
 <p align="justify">Rešitev (c):</p>
 <p align="justify">Funkcija <code>Vstavi</code> porabi največ časa takrat, ko je novi element manjši od vseh dotedanjih elementov tabele (takrat mora iti zanka po celi tabeli od konca pa čisto do začetka). Funkcija <code>Zdruzi</code> vstavlja elemente tabele <i>b</i> v kopijo tabele <i>a</i>; najbolj neugoden primer torej nastopi, če so vsi elementi tabele <i>b</i> manjši od vseh elementov tabele <i>a</i>. Časovna zahtevnost funkcije <code>Zdruzi</code> je v tem najslabšem primeru <i>O(m * n)</i>. O tem se prepričamo takole: zanka po elementih <i>b</i>-ja v funkciji <code>Zdruzi</code> v vsakem primeru izvede <i>m</i> iteracij; v vsaki iteraciji imamo en klic funkcije <code>Vstavi</code>, čas izvajanja tega klica pa je sorazmeren s tem, koliko elementov tabele <i>c</i> je večjih od <i>x</i> (trenutnega elementa tabele <i>b</i>). Večji od <i>x</i> so lahko v <i>c</i> le tisti elementi, ki so v <i>c</i> prišli iz <i>a</i>, kajti elementi, ki so v <i>c</i> prišli iz <i>b</i>, so gotovo manjši od <i>x</i> (to je posledica dejstva, da funkcija <code>Zdruzi</code> obdeluje elemente <i>b</i>-ja po vrsti, tabela <i>b</i> pa je urejena naraščajoče). Posamezni klic fukcije <code>Vstavi</code> torej vzame <i>O(n)</i> časa, celotno združevanje pa zato vzame <i>O(m * n)</i> časa.</p>
 <p align="justify">Rešitev (d):</p>
-<p align="justify">Najugodneje za funkcijo <code>Vstavi</code> je, če je novi element večji od vseh dotedanjih elementov tabele. Pri združevanju bo do tega prišlo, če bodo vsi elementi tabele <i>b</i> večji od vseh elementov tabele <i>a</i>. Takrat nam posamezni klic <code>Vstavi</code> vzame le <i>O(1)</i> časa, celoten postopek združevanja pa zato <i>O(n + m)</i> časa — <i>O(n)</i> za to, da skopiramo vsebino <i>a</i>-ja v <i>c</i>, nato pa <i>O(m)</i> za "vstavljanja" (ki so zdaj v resnici dodajanja na konec) elementov <i>b</i>-ja v <i>c</i>.</p>
+<p align="justify">Najugodneje za funkcijo <code>Vstavi</code> je, če je novi element večji od vseh dotedanjih elementov tabele. Pri združevanju bo do tega prišlo, če bodo vsi elementi tabele <i>b</i> večji od vseh elementov tabele <i>a</i>. Takrat nam posamezni klic <code>Vstavi</code> vzame le <i>O(1)</i> časa, celoten postopek združevanja pa zato <i>O(n + m)</i> časa – <i>O(n)</i> za to, da skopiramo vsebino <i>a</i>-ja v <i>c</i>, nato pa <i>O(m)</i> za "vstavljanja" (ki so zdaj v resnici dodajanja na konec) elementov <i>b</i>-ja v <i>c</i>.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -232,7 +232,7 @@
 </p>
 <p align="justify">(a) Napiši funkcijo <code>Vstavi(a, x)</code>, ki dobi urejeno tabelo <code>a</code> (vsi njeni elementi so cela števila) in vanjo vrine celo število <code>x</code> tako, da tabela tudi po tem ostane urejena. Pri tem ne uporabljaj že obstoječih funkcij za urejanje (npr. <code>sort</code>) ali pythonove funkcije za vrivanje elementa v tabelo (<code>insert</code>). Primer: če imamo <code>a = [10, 20, 30]</code>, mora po vrnitvi iz klica <code>Vstavi(a, 25)</code> tabela <code>a</code> biti enaka <code>[10, 20, 25, 30]</code>.<br />
 (b) Kakšna je časovna zahtevnost funkcije <code>Vstavi</code>?<br />
-(c) Recimo, da poleg tabele <code>a</code> dobimo še tabelo <code>b</code>, ki je tudi sama urejena naraščajoče, in da bi radi obe tabeli združili v novo tabelo, ki bo vsebovala elemente obeh vhodnih tabel in bo tudi sama urejena naraščajoče. To lahko naredimo takole:</p>
+(c) Recimo, da poleg tabele <code>a</code> dobimo tudi tabelo <code>b</code>, ki je tudi sama urejena naraščajoče, in da bi radi obe tabeli združili v novo tabelo, ki bo vsebovala elemente obeh vhodnih tabel in bo tudi sama urejena naraščajoče. To lahko naredimo takole:</p>
 <p>
 <div>
 <form>
@@ -271,7 +271,7 @@ def Zdruzi(a, b):
 	<span class="label label-primary"><b>6</b></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Problem združevanja dveh urejenih tabel iz prejšnje naloge lahko rešimo tudi bolj učinkovito, s postopkom, ki se imenuje <b>zlivanje</b>. Najprej se postavimo na začetek tabel <code>a</code> in <code>b</code> in pogledamo, katera ima tem mestu manjši element; tistega dodamo v izhodno tabelo in se premaknemo za eno mesto naprej po tabeli, iz katere je ta element prišel. To zdaj ponavljamo, dokler ne pridemo do konca obeh tabel:</p>
+<p align="justify">Problem združevanja dveh urejenih tabel iz prejšnje naloge lahko rešimo tudi učinkoviteje, s postopkom, ki se imenuje <b>zlivanje</b>. Najprej se postavimo na začetek tabel <code>a</code> in <code>b</code> ter pogledamo, katera ima na tem mestu manjši element; ta element dodamo v izhodno tabelo in se pomaknemo za eno mesto naprej po tabeli, iz katere izhaja ta element. To zdaj ponavljamo, dokler ne pridemo do konca obeh tabel:</p>
 <p>
 <div>
 <form>

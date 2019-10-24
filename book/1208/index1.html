@@ -177,7 +177,7 @@
 <!-- Left column start -->
 <h1>Poraba časa</h1>
 
-<p align="justify">Doslej smo se pri programiranju večinoma ukvarjali s tem, kako sploh napisati program, ki bo izračunal želeni rezultat. Vendar pa je pri reševanju problemov z računalnikom pomembno še nekaj drugega: naš program mora do rezultata priti dovolj hitro. Program, ki bi izračunal pravilni rezultat, vendar bi za to porabil sto let, nam ne pomaga kaj dosti.</p>
+<p align="justify">Doslej smo se pri programiranju večinoma ukvarjali s tem, kako sploh napisati program, ki bo izračunal želeni rezultat. Vendar pa je pri reševanju problemov z računalnikom pomembno še nekaj drugega: naš program mora do rezultata priti dovolj hitro. Program, ki bi izračunal pravilen rezultat, vendar bi za to porabil sto let, nam ne pomaga kaj dosti.</p>
 
 <p align="justify">Zato je, ko sestavljamo algoritem ali pišemo program za reševanje nekega problema, koristno razmisliti tudi o tem, koliko časa bo računalnik porabil za njegovo izvajanje. Pogosto se izkaže, da lahko isti problem rešimo na več različnih načinov in da so nekateri od njih veliko hitrejši, nekateri pa počasnejši.</p>
 
@@ -194,10 +194,10 @@
 <h4>Primer</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Napiši funkcijo <code>NajdiVsoto(a, s)</code>, ki preveri, ali v tabeli <code>a</code> obstaja kakšen tak par elementov, ki se seštejeta v <code>s</code>. Elementi tabele <code>a</code> so cela števila, urejena naraščajoče.</p>
+<p align="justify">Napiši funkcijo <code>NajdiVsoto(a, s)</code>, ki preveri, ali v tabeli <code>a</code> obstaja par elementov, ki se seštejeta v <code>s</code>. Elementi tabele <code>a</code> so cela števila, urejena naraščajoče.</p>
 </div>
 
-<p align="justify">Preproste rešitve te naloge ni težko zapisati. Naj bo <code>n</code> število elementov v tabeli <code>a</code>. Iščemo torej par elementov, recimo jima <code>a[i]</code> in <code>a[j]</code>, ki naj bi se seštela v <code>s</code>; pri tem smeta iti <code>i</code> in <code>j</code> od 0 do <code>n</code> - 1. Lahko gremo torej v zanki po vseh možnih <code>i</code>, nato pa pri vsakem <code>i</code> še z gnezdeno zanko po vseh možnih <code>j</code>. Za vsak par števcev lahko zdaj preverimo, če se pripadajoča elementa seštejeta v <code>s</code>.</p>
+<p align="justify">Preproste rešitve te naloge ni težko zapisati. Naj bo <code>n</code> število elementov v tabeli <code>a</code>. Iščemo torej par elementov, recimo jima <code>a[i]</code> in <code>a[j]</code>, ki naj bi se seštela v <code>s</code>; pri tem lahko imata <code>i</code> in <code>j</code> vrednosti od 0 do <code>n</code> - 1. Lahko gremo torej v zanki po vseh možnih <code>i</code>, nato pa pri vsakem <code>i</code> še z gnezdeno zanko po vseh možnih <code>j</code>. Za vsak par števcev lahko zdaj preverimo, če se pripadajoča elementa seštejeta v <code>s</code>.</p>
 
 <p align="justify">V pythonu bi ta postopek zapisali takole:</p>
 

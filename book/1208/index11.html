@@ -197,12 +197,12 @@
 <!-- Left column start -->
 <h1>*Še nekaj redov zahtevnosti</h1>
 
-<p align="justify">Poleg časovnih zahtevnosti reda <i>O(n)</i> (linearna) in <i>O(n<sup>2</sup>)</i> (kvadratna), ki smo ju videli v tej učni enoti, so seveda možne tudi druge, na primer <i>O(n<sup>3</sup>)</i>, <i>O(n<sup>4</sup>)</i> in podobno. Redom zahtevnosti oblike <i>O(n<sup>c</sup>)</i>, pri čemer je <i>c</i> neka konstanta, rečemo z eno besedo, da so <b>polinomske</b>.</p>
+<p align="justify">Poleg časovnih zahtevnosti reda <i>O(n)</i> (linearna) in <i>O(n<sup>2</sup>)</i> (kvadratna), ki smo ju videli v tej učni enoti, so seveda možne tudi druge, na primer <i>O(n<sup>3</sup>)</i>, <i>O(n<sup>4</sup>)</i> in podobno. Zahtevnosti oblike <i>O(n<sup>c</sup>)</i>, pri katerih je <i>c</i> neka konstanta, z eno besedo imenujemo <b>polinomske</b>.</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kakšna je časovna zahtevnost naslednje funkcije, ki vrne dolžino najdaljšega palindromnega podniza v danem nizu <code>s</code>? (Palindrom je tak niz, ki se od konca proti začetku bere enako kot od začetka proti koncu.) Za velikost problema, <i>n</i>, vzemi dolžino vhodnega niza <code>s</code>.</p>
+<p align="justify">Kakšna je časovna zahtevnost naslednje funkcije, ki vrne dolžino najdaljšega palindromnega podniza v danem nizu <code>s</code>? (Palindrom je tak niz, ki se od konca proti začetku bere enako kot od začetka proti koncu.) Za velikost problema <i>n</i> uporabi dolžino vhodnega niza <code>s</code>.</p>
 <p>
 <div>
 <form>
@@ -238,7 +238,7 @@ print(NajdaljsiPalindromniPodniz(t))</textarea>
 </p>
 </div>
 
-<p align="justify">Za vsak <i>n</i> opiši tudi, pri kakšnem nizu dolžine <i>n</i> bi bila ta najslabša možna časovna zahtevnost tudi v resnici dosežena.</p>
+<p align="justify">Za vsak <i>n</i> opiši tudi, pri kakšnem nizu dolžine <i>n</i> bi bila ta najslabša možna časovna zahtevnost tudi dejansko dosežena.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -262,7 +262,7 @@ print(NajdaljsiPalindromniPodniz(t))</textarea>
 </p>
 </div>
 
-<p align="justify">Še veliko hujše pa so časovne zahtevnosti oblike <i>O(2<sup>n</sup>)</i>, <i>O(3<sup>n</sup>)</i> in v splošnem <i>O(c<sup>n</sup>)</i> (za konstanten <i>c</i>); takim pravimo, da so <b>eksponentne</b> (ker imajo velikost problema, <i>n</i>, v eksponentu). Eksponentna zahtevnost narašča (pri dovolj velikih <i>n</i>) hitreje od vsake polinomske in postopki z eksponentno zahtevnostjo so v praksi ponavadi neuporabno počasni, razen mogoče za zelo majhne <i>n</i>. Zahtevnost <i>O(2<sup>n</sup>)</i> na primer pomeni, da če se <i>n</i> poveča za 1, se čas izvajanja kar podvoji (ker je 2<sup><i>n</i>+1</sup> = 2<sup><i>n</i></sup> &middot; 2<sup>1</sup> = 2<sup><i>n</i></sup> &middot; 2).</p>
+<p align="justify">Še veliko hujše pa so časovne zahtevnosti oblike <i>O(2<sup>n</sup>)</i>, <i>O(3<sup>n</sup>)</i> in v splošnem <i>O(c<sup>n</sup>)</i> (za konstanten <i>c</i>); te imenujemo <b>eksponentne</b> (ker imajo velikost problema, <i>n</i>, v eksponentu). Eksponentna zahtevnost narašča (pri dovolj velikih <i>n</i>) hitreje od vsake polinomske in postopki z eksponentno zahtevnostjo so v praksi ponavadi neuporabno počasni, razen mogoče za zelo majhne <i>n</i>. Zahtevnost <i>O(2<sup>n</sup>)</i> na primer pomeni, da če se <i>n</i> poveča za 1, se čas izvajanja kar podvoji (ker je 2<sup><i>n</i>+1</sup> = 2<sup><i>n</i></sup> &middot; 2<sup>1</sup> = 2<sup><i>n</i></sup> &middot; 2).</p>
 <!-- Right column end -->
 					</div>
 				</div>

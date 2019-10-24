@@ -179,7 +179,7 @@
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Do eksponentne zahtevnosti pogosto pride pri postopkih, ki temeljijo na rekurziji. Recimo, da sestavljamo cikcakasto pot, pri čemer je vsak korak lahko oblike <code>/</code> (gor in desno) ali pa <code>\</code> (dol in desno). Radi bi prešteli vse take cikcakaste poti, ki so dolge <i>n</i> korakov in ki se končajo <i>k</i> enot višje od začetnega položaja (<i>k</i> je lahko tudi negativen, kar pomeni, da konec črte leži nižje od začetnega položaja). Na primer, pri <i>n</i> = 3, <i>k</i> = 1 so take črte naslednje: <code>/\/</code>, <code>\//</code> in
+<p align="justify">Do eksponentne zahtevnosti pogosto pride pri postopkih, ki temeljijo na rekurziji. Recimo, da sestavljamo cikcakasto pot, pri čemer je vsak korak lahko oblike <code>/</code> (gor in desno) ali pa <code>\</code> (dol in desno). Radi bi prešteli vse take cikcakaste poti, ki so dolge <i>n</i> korakov in ki se končajo <i>k</i> enot višje od začetnega položaja (<i>k</i> je lahko tudi negativen, kar pomeni, da konec črte leži nižje od začetnega položaja). Na primer pri <i>n</i> = 3, <i>k</i> = 1 so take črte naslednje: <code>/\/</code>, <code>\//</code> in
 <code>//\</code>.</p>
 <p align="justify">To nalogo lahko (neučinkovito) rešimo takole:</p>
 <p>
@@ -220,7 +220,7 @@ print(stevilo)</textarea>
 <h4>Primer</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Po drugi strani pa obstajajo tudi postopki s časovno zahtevnostjo, ki je manjša od katerekoli polinomske. Oglejmo si na primer naslednji postopek, ki dobi urejeno tabelo <code>a</code> in poišče, kje se v njej pojavlja število <code>x</code>:</p>
+<p align="justify">Po drugi strani pa obstajajo tudi postopki s časovno zahtevnostjo, ki je manjša od katerekoli polinomske. Oglejmo si na primer naslednji postopek, ki dobi urejeno tabelo <code>a</code> in poišče, kje v njej se pojavlja število <code>x</code>:</p>
 <p>
 <div>
 <form>
@@ -370,7 +370,7 @@ function solveit2b() {
   editor2.setValue('def StevPoti(n, k):\n  global stKlicev\n  stKlicev += 1\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\nfor n in range(1, 11):\n  # Preizkusimo različne k-je (od -n do +n) in\n  # poglejmo, koliko klicev se izvede pri vsakem\n  # od njih. Videli bomo, da je število klicev\n  # odvisno le od n, ne pa tudi od k, in sicer\n  # je klicev vedno 2**(n + 1) - 1.\n  rezultati = []\n  for k in range(-n, n + 1):\n    stKlicev = 0\n    StevPoti(n, k)\n    rezultati.append(stKlicev)\n  print("n = %d: %s klicev" % (n, rezultati))');
 }
 function solveit2c() {
-  editor2.setValue('def StevPoti(n, k):\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\n# Učinkovitejšo rešitev dobimo, če si že\n# izračunane rezultate zapomnimo, tako da\n# jih kasneje ne računamo ponovno.\n# Spodnja rešitev jih hrani v tabeli "rez".\n# Ker je k lahko tudi negativen, bomo\n# rezultat za (n, k) hranili v rez[n][n+k].\n# (Če je k manjši od -n ali večji od n, pa\n# tako ali tako že iz opisa naloge vemo, da\n# bo rezultat 0, zato nam rezultatov za\n# takšne k ni treba hraniti v tabeli.)\ndef StevPoti2_(n, k, rez):\n  if k < -n or k > n: return 0\n  if n == 0: return 1\n  # Če rezultat za (n, k) še nimamo, ga\n  # izračunajmo zdaj in ga shranimo v tabelo.\n  if rez[n][k+n] < 0:\n    rez[n][k+n] = StevPoti2_(n-1, k-1, rez) + \\\n                  StevPoti2_(n-1, k+1, rez)\n  # Rezultat je zdaj v tabeli in ga lahko vrnemo.\n  return rez[n][k+n]\n\ndef StevPoti2(n, k):\n  rez = [[-1] * (2*nn+1) for nn in range(n+1)]\n  return StevPoti2_(n, k, rez)\n\nfor n in range(1, 10):\n  for k in range(-n - 3, n + 4):\n    assert StevPoti(n, k) == StevPoti2(n, k)');
+  editor2.setValue('def StevPoti(n, k):\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\n# Učinkovitejšo rešitev dobimo, če si že\n# izračunane rezultate zapomnimo, tako da\n# jih pozneje ne računamo ponovno.\n# Spodnja rešitev jih hrani v tabeli "rez".\n# Ker je k lahko tudi negativen, bomo\n# rezultat za (n, k) hranili v rez[n][n+k].\n# (Če je k manjši od -n ali večji od n, pa\n# tako ali tako že iz opisa naloge vemo, da\n# bo rezultat 0, zato nam rezultatov za\n# takšne k ni treba hraniti v tabeli.)\ndef StevPoti2_(n, k, rez):\n  if k < -n or k > n: return 0\n  if n == 0: return 1\n  # Če rezultat za (n, k) še nimamo, ga\n  # izračunajmo zdaj in ga shranimo v tabelo.\n  if rez[n][k+n] < 0:\n    rez[n][k+n] = StevPoti2_(n-1, k-1, rez) + \\\n                  StevPoti2_(n-1, k+1, rez)\n  # Rezultat je zdaj v tabeli in ga lahko vrnemo.\n  return rez[n][k+n]\n\ndef StevPoti2(n, k):\n  rez = [[-1] * (2*nn+1) for nn in range(n+1)]\n  return StevPoti2_(n, k, rez)\n\nfor n in range(1, 10):\n  for k in range(-n - 3, n + 4):\n    assert StevPoti(n, k) == StevPoti2(n, k)');
 }
 </script>
 
