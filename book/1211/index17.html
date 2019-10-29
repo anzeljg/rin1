@@ -177,11 +177,11 @@
 <!-- Left column start -->
 <h1>*Implementacija z dvojiškim iskalnim drevesom</h1>
 
-<p align="justify">Dvojiško drevo lahko v pythonu predstavimo podobno kot povezani seznam: s tabelo vozlišč. Vozlišče na indeksu 0 (glava) je predstavljeno s tabelo, ki vsebuje število elementov in indeks korena drevesa, vsa ostala vozlišča pa so predstavljena s tabelami, ki vsebujejo element v vozlišču ter indeksa njegovega levega in desnega naslednika. Kot neveljaven indeks nam bo ponovno služilo število 0. Podobno kot pri povezanem seznamu so lahko vozlišča v tabeli nanizana v poljubnem vrstnem redu; pomembno je le, da so med seboj pravilno povezana z indeksi. Oglejmo si primer:</p>
+<p align="justify">Dvojiško drevo lahko v pythonu predstavimo podobno kot povezani seznam: s tabelo vozlišč. Vozlišče na indeksu 0 (glava) je predstavljeno s tabelo, ki vsebuje število elementov in indeks korena drevesa, vsa ostala vozlišča pa so predstavljena s tabelami, ki vsebujejo element v vozlišču ter indeksa njegovega levega in desnega naslednika. Kot neveljaven indeks lahko ponovno uporabimo število 0. Podobno kot pri povezanem seznamu so lahko vozlišča v tabeli nanizana v poljubnem vrstnem redu; pomembno je le, da so med seboj pravilno povezana z indeksi. Oglejmo si primer:</p>
 
 <p align="center"><img src="img/tabelaVozlisc.svg" onerror="this.src='tabelaVozlisc.png'" class="img-responsive"></p>
 
-<p align="justify">Gornja tabela je v pythonu predstavljena tako:
+<p align="justify">Zgornja tabela je v pythonu predstavljena tako:
 <pre>
 drevo = [[7, 1], [20, 2, 6], [10, 3, 4],
          [7, 0, 0], [15, 5, 0], [12, 0, 0],
@@ -221,7 +221,7 @@ def JePrisoten(mnozica, element):
     else:
       indeksVozlisca = mnozica[indeksVozlisca][2]
 
-  # Postopek se lahko zaključi v vozlišču, ki
+  # Postopek se lahko konča v vozlišču, ki
   # vsebuje element, ali pa pri indeksu 0 (v tem
   # primeru vemo, da drevo ne vsebuje iskanega
   # elementa).

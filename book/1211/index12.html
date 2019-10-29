@@ -198,7 +198,7 @@
 <!-- Left column start -->
 <h1>Implementacija s tabelo logičnih vrednosti</h1>
 
-<p align="justify">Denimo, da se omejimo na množice, ki vsebujejo kvečjemu cela števila med 0 in vključno <i>Z</i> − 1, kjer je <i>Z</i> neko ne preveliko celo število. Takšno množico lahko predstavimo s tabelo z <i>Z</i> elementi logičnega tipa. Če število <i>i</i> pripada množici, ima element tabele na indeksu <i>i</i> vrednost <code>True</code>, sicer pa <code>False</code>. Na primer, če vzamemo <i>Z</i> = 10, potem množico {0, 2, 3, 7} predstavimo s sledečo tabelo:</p>
+<p align="justify">Denimo, da se omejimo na množice, ki vsebujejo kvečjemu cela števila med 0 in vključno <i>Z</i> − 1, pri čemer je <i>Z</i> neko ne preveliko celo število. Takšno množico lahko predstavimo s tabelo z <i>Z</i> elementi logičnega tipa. Če število <i>i</i> pripada množici, ima element tabele na indeksu <i>i</i> vrednost <code>True</code>, sicer pa <code>False</code>. Na primer če vzamemo <i>Z</i> = 10, potem množico {0, 2, 3, 7} predstavimo s to tabelo:</p>
 
 <p>
 <pre>
@@ -209,7 +209,7 @@
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kako bi z drugimi besedami opisal množico, ki jo predstavlja sledeča tabela z 2<i>k</i> elementi?
+<p align="justify">Kako bi z drugimi besedami opisal množico, ki jo predstavlja spodnja tabela z 2<i>k</i> elementi?
 <pre>
 [True, False, True, False, True, False, ..., True, False]
 </pre>
@@ -219,12 +219,12 @@
 </p>
 </div>
 
-<p align="justify">Tovrstna predstavitev množice je časovno izjemno učinkovita. Prisotnost števila <i>x</i> ∈ {0, 1, ... , <i>Z</i> − 1} preverimo tako, da preverimo vrednost elementa v tabeli na indeksu <i>x</i>. Število <i>x</i> v množico dodamo tako, da element tabele na indeksu <i>x</i> postavimo na <code>True</code>, pri odstranjevanju pa pripadajoči element tabele postavimo na <code>False</code>. Časovna zahtevnost vseh treh operacij znaša <i>O</i>(1), saj je čas, ki ga potrebujejo operacije, povsem neodvisen od števila elementov v množici, pa tudi od velikosti tabele. Oglejmo si modul <code>mnozicaTabelaLogicnih.py</code> (glej kodo na desni).</p>
+<p align="justify">Tovrstna predstavitev množice je časovno izjemno učinkovita. Prisotnost števila <i>x</i> ∈ {0, 1, ... , <i>Z</i> − 1} preverimo tako, da preverimo vrednost elementa v tabeli na indeksu <i>x</i>. Število <i>x</i> v množico dodamo tako, da element tabele na indeksu <i>x</i> postavimo na <code>True</code>, pri odstranjevanju pa pripadajoči element tabele postavimo na <code>False</code>. Časovna zahtevnost vseh treh operacij znaša <i>O</i>(1), saj je čas, ki ga potrebujejo operacije, povsem neodvisen od števila elementov v množici, pa tudi od velikosti tabele. Oglejmo si modul <code>mnozicaTabelaLogicnih.py</code> (glej kodo).</p>
 
 <h4>V razmislek</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kaj se zgodi, če s funkcijo <code>Dodaj</code> v množico dodamo celo število izven intervala med 0 in <i>Z</i> − 1 ali pa vrednost kakšnega drugega tipa?</p>
+<p align="justify">Kaj se zgodi, če s funkcijo <code>Dodaj</code> v množico dodamo celo število izven intervala med 0 in <i>Z</i> − 1 ali pa vrednost nekega drugega tipa?</p>
 </div>
 <!-- Left column end -->
 					</div>
@@ -240,7 +240,7 @@
 # Vrne prazno množico, ki lahko vsebuje kvečjemu
 # števila od 0 do vključno Z - 1.
 def Ustvari(Z):
-  # Na sledeči način najlažje ustvarimo tabelo,
+  # Na naslednji način najlažje ustvarimo tabelo,
   # sestavljeno iz Z elementov False.
   return [False] * Z
 
@@ -298,7 +298,7 @@ def main():
         str(JePrisoten(m, 3)))
   print('Množica m: ' + NizElementov(m))
 
-# Spomnimo se: s sledečima vrsticama dosežemo,
+# Spomnimo se: s spodnjima vrsticama dosežemo,
 # da lahko modul uporabljamo tudi kot samostojen
 # program.
 if __name__ == '__main__':

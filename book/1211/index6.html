@@ -218,7 +218,7 @@ print(ProsteUreZaVsajEnoOsebo(prosteUre))
 <p align="justify">Prijatelji bi se radi v petek dogovorili za urico ob soku, a imajo težave pri iskanju skupnega prostega termina. Pomagaj jim s funkcijo <code>SkupneProsteUre(prosteUre)</code>, ki sprejme tabelo množic prostih ur posameznih oseb in vrne množico ur, ob katerih so vse osebe proste.</p>
 </div>
 
-<p align="justify">Za primer vzemimo, da tabela prosteUre izgleda tako:
+<p align="justify">Za primer vzemimo, da je tabela <code>prosteUre</code> videti tako:
 <pre>
 [ set([15, 17, 18, 19]), set([14, 17, 19, 21]),
   set([17, 19, 22]), set([16, 17, 18, 19, 20]) ]
@@ -227,7 +227,7 @@ print(ProsteUreZaVsajEnoOsebo(prosteUre))
 
 <p align="justify">V tem primeru se lahko dobijo bodisi ob 17. ali pa ob 19. uri. Rezultat je torej množica <code>set([17, 19])</code>.</p>
 
-<p align="justify">Poiskati moramo torej vse elemente (proste ure), ki nastopajo v vseh množicah. Ti elementi tvorijo ravno <b>presek</b> vseh množic. Presek množic v tabeli izračunamo na podoben način, kot bi, na primer, izračunali vsoto števil v tabeli.</p>
+<p align="justify">Poiskati moramo torej vse elemente (proste ure), ki nastopajo v vseh množicah. Ti elementi tvorijo ravno <b>presek</b> vseh množic. Presek množic v tabeli izračunamo na podoben način, kot bi na primer izračunali vsoto števil v tabeli.</p>
 
 <p align="justify">Ustvarimo pomožno množico, recimo ji <code>m</code>, in jo nastavimo na kopijo prve množice v tabeli (<code>prosteUre[0]</code>). Nato se sprehodimo po tabeli <code>prosteUre</code> in vsakokrat izračunamo presek množice <code>m</code> in trenutne množice v tabeli. Rezultat ponovno zapišemo v množico <code>m</code>. Po prvem obhodu zanke bo množica <code>m</code> (še vedno) enaka množici <code>prosteUre[0]</code>, po drugem pa bo vsebovala skupne elemente prvih dveh množic v tabeli <code>prosteUre</code> (torej presek množic <code>prosteUre[0]</code> in <code>prosteUre[1]</code>). Po tretjem obhodu bo množica <code>m</code> vsebovala skupne elemente prvih treh množic itd. Zapišimo našo funkcijo:</p>
 <!-- Left column end -->
@@ -262,12 +262,12 @@ print(SkupneProsteUre(prosteUre))</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Kaj bi se zgodilo, če bi stavek <code>m = prosteUre[0].copy()</code> nadomestili s preprostejšim <code>m = prosteUre[0]</code>? Funkcija bi sicer še vedno delovala pravilno, bi pa imela nepričakovan stranski učinek, saj bi spremenila del svojega vhoda — množico <code>prosteUre[0]</code>! Če ne razumeš, zakaj, si oglej <a href="index5.html">tole</a>.</p>
+<p align="justify">Kaj bi se zgodilo, če bi stavek <code>m = prosteUre[0].copy()</code> nadomestili s preprostejšim <code>m = prosteUre[0]</code>? Funkcija bi sicer še vedno delovala pravilno, bi pa imela nepričakovan stranski učinek, saj bi spremenila del svojega vhoda – množico <code>prosteUre[0]</code>! Če ne razumeš, zakaj, si oglej <a href="index5.html">tole</a>.</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Napiši in preizkusi funkcijo <code>ProsteUreZaVsajEnoOsebo(prosteUre)</code>, ki sprejme tabelo množic prostih ur posameznih oseb in vrne množico vseh ur, v katerih je vsaj ena oseba prosta. V gornjem primeru bi funkcija vrnila sledečo množico:
+<p align="justify">Napiši in preizkusi funkcijo <code>ProsteUreZaVsajEnoOsebo(prosteUre)</code>, ki sprejme tabelo množic prostih ur posameznih oseb in vrne množico vseh ur, v katerih je vsaj ena oseba prosta. V zgornjem primeru bi funkcija vrnila to množico:
 <pre>
 set([14, 15, 16, 17, 18, 19, 20, 21, 22])
 </pre>

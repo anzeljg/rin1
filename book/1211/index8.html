@@ -256,7 +256,7 @@ print(VseCrke('francka bo psu zgradila hotel'))
 							<li>V množico <code>dosegljive</code> dodamo vse znance osebe 1, torej osebe 0, 5 in 7. Vsebina množice je sedaj {0, 1, 5, 7}, v tem koraku pa smo jo obogatili z osebama 5 in 7. Množica <code>dosegljive</code> sedaj poleg same osebe 0 in vseh njenih znancev vsebuje tudi vse znance njenih znancev.</li>
 							<li>V množico <code>dosegljive</code> dodamo vse znance oseb 5 in 7. Vsebina množice je sedaj {0, 1, 2, 5, 7}, obogatili pa smo jo z osebo 2.</li>
 							<li>V množico <code>dosegljive</code> dodamo vse znance osebe 2. Vsebina množice je sedaj {0, 1, 2, 4, 5, 7}, obogatili pa smo jo z osebo 4.</li>
-							<li>V množico <code>dosegljive</code> dodamo vse znance osebe 4. Vsebina množice se ne spremeni, kar pomeni, da se postopek zaključi. Množica <code>dosegljive</code> sedaj vsebuje vse iskane osebe.</li>
+							<li>V množico <code>dosegljive</code> dodamo vse znance osebe 4. Vsebina množice se ne spremeni, kar pomeni, da se postopek konča. Množica <code>dosegljive</code> sedaj vsebuje vse iskane osebe.</li>
 						</ul>
 						</p>
 					</div>
@@ -286,20 +286,20 @@ print(VseCrke('francka bo psu zgradila hotel'))
 </p>
 </div>
 
-<p align="justify">Sorodniki, prijatelji, sošolci, učitelji, sosedje, ... Gotovo poznaš vsaj kakih 100 ljudi. Sedaj pa si poskušaj predstavljati, koliko ljudi lahko »dosežeš« po dveh korakih; torej, kolikšno je skupno število znancev vseh tvojih znancev. Če ti to še ni dovolj, poskusi še s tremi koraki, torej z znanci znancev znancev. Če bi tako nadaljeval, bi po kakih šestih ali sedmih korakih poznal že večino sveta. V naslednji nalogi se bomo ukvarjali s podobnim problemom: zanimalo nas bo, katere osebe lahko podana oseba doseže po poljubnem številu korakov, če vemo, kateri ljudje se med sabo (neposredno) poznajo.</p>
+<p align="justify">Sorodniki, prijatelji, sošolci, učitelji, sosedje, ... Gotovo poznaš vsaj kakih 100 ljudi. Sedaj pa si poskušaj predstavljati, koliko ljudi lahko »dosežeš« po dveh korakih; torej, kolikšno je skupno število znancev vseh tvojih znancev. Če ti to še ni dovolj, poskusi še s tretjim korakom, torej z znanci znancev znancev. Če bi tako nadaljeval, bi po kakih šestih ali sedmih korakih poznal že večino ljudi na svetu. V naslednji nalogi se bomo ukvarjali s podobnim problemom: zanimalo nas bo, katere osebe lahko podana oseba doseže po poljubnem številu korakov, če vemo, kateri ljudje se med sabo (neposredno) poznajo.</p>
 
 <h4>*Primer 3</h4>
 
 <div class="alert alert-danger" role="alert">
 <p align="justify">Podanih je <i>n</i> oseb, oštevilčenih z indeksi 0, 1, ... , <i>n</i>−1. Tabela <code>poznanstva</code> podaja poznanstva med osebami. Prvi element tabele je množica indeksov oseb, ki so znanci osebe z indeksom 0, drugi element podaja indekse znancev osebe 1 itd.</p>
-<p align="justify">Napiši funkcijo <code>Dosegljive(poznanstva, oseba)</code>, ki za podano tabelo poznanstev in za podani indeks osebe vrne množico indeksov vseh oseb, ki so preko poljubno mnogo (vštevši 0) poznanstev »dosegljive« od podane osebe. Vrnjena množica mora torej vsebovati indeks podane osebe, indekse vseh njenih znancev, indekse vseh znancev njenih znancev itd.</p>
+<p align="justify">Napiši funkcijo <code>Dosegljive(poznanstva, oseba)</code>, ki za podano tabelo poznanstev in za podani indeks osebe vrne množico indeksov vseh oseb, ki so prek poljubno mnogo (vštevši 0) poznanstev »dosegljive« od podane osebe. Vrnjena množica mora torej vsebovati indeks podane osebe, indekse vseh njenih znancev, indekse vseh znancev njenih znancev itd.</p>
 </div>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Oglejmo si primer. Recimo, da velja <i>n</i> = 8 in da ima tabela <code>poznanstva</code> takšno vsebino:
+<p align="justify">Oglejmo si primer. Recimo, da velja <i>n</i> = 8 in da ima tabela <code>poznanstva</code> tako vsebino:
 <pre>
 [ set([1]), set([0, 5, 7]), set([4, 5]), set([6]),
   set([2]), set([1, 2, 7]), set([3]), set([1, 5]) ]
@@ -310,7 +310,7 @@ print(VseCrke('francka bo psu zgradila hotel'))
 
 <p align="center"><img src="img/poznanstva.svg" width="100%" onerror="this.src='poznanstva.png'" class="img-responsive"></p>
 
-<p align="justify">Množico oseb, dosegljivih od podane osebe (imenujmo jo <code>dosegljive</code>), gradimo postopoma. Ustvarimo jo kot prazno množico, nato vanjo dodamo podano osebo (dejansko njen indeks, a tega v nadaljevanju ne bomo več pisali), nato vse njene znance, nato vse znance njenih znancev itd. Postopek ponavljamo tako dolgo, dokler se množica <code>dosegljive</code> povečuje. Da se izognemo nenehnemu obravnavanju istih oseb, v vsakem koraku upoštevamo le tiste osebe, s katerimi smo množico <code>dosegljive</code> v prejšnjem koraku <b>obogatili</b> — torej osebe, ki jih pred prejšnjim korakom v množici še ni bilo. Oglejmo si <a href="#" data-toggle="modal" data-target="#build_tree">postopek</a> na primeru, ko nas zanima množica oseb, dosegljivih od osebe 0:</p>
+<p align="justify">Množico oseb, dosegljivih od podane osebe (imenujmo jo <code>dosegljive</code>), gradimo postopoma. Ustvarimo jo kot prazno množico, nato vanjo dodamo podano osebo (dejansko njen indeks, a tega v nadaljevanju ne bomo več pisali), nato vse njene znance, nato vse znance njenih znancev itd. Postopek ponavljamo tako dolgo, dokler se množica <code>dosegljive</code> povečuje. Da se izognemo nenehnemu obravnavanju istih oseb, v vsakem koraku upoštevamo le tiste osebe, s katerimi smo množico <code>dosegljive</code> v prejšnjem koraku <b>obogatili</b> – torej osebe, ki jih pred prejšnjim korakom v množici še ni bilo. Oglejmo si <a href="#" data-toggle="modal" data-target="#build_tree">postopek</a> na primeru, ko nas zanima množica oseb, dosegljivih od osebe 0:</p>
 
 <style type="text/css">
 #mynetwork {

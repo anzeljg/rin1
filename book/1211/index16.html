@@ -282,7 +282,7 @@
 
 <p align="center"><a href="#" data-toggle="modal" data-target="#image1"><img src="img/iskanjeVDrevesu.svg" onerror="this.src='iskanjeVDrevesu.png'" class="img-responsive"></a></p>
 
-<p align="justify">Element v dvojiško iskalno drevo najlažje dodamo kot nov list. Z iskalnim postopkom se spustimo po drevesu in na mestu, kjer na koncu pristanemo, dodamo nov list. Če na poti navzdol naletimo na vozlišče z elementom, enakim tistemu, ki ga želimo dodati, postopek prekinemo, saj drevo predstavlja množico, ki ne sme vsebovati podvojitev. Spodnja slika prikazuje dodajanje elementov 18 in 32 v drevo, s katerim se ukvarjamo:</p>
+<p align="justify">Element v dvojiško iskalno drevo najlažje dodamo kot nov list. Z iskalnim postopkom se spustimo po drevesu in na mestu, ki ga na koncu dosežemo, dodamo nov list. Če na poti navzdol naletimo na vozlišče z elementom, enakim tistemu, ki ga želimo dodati, postopek prekinemo, saj drevo predstavlja množico, ki ne sme vsebovati podvojitev. Spodnja slika prikazuje dodajanje elementov 18 in 32 v drevo, s katerim se ukvarjamo:</p>
 
 <p align="center"><a href="#" data-toggle="modal" data-target="#image2"><img src="img/dodajanjeVDrevo.svg" onerror="this.src='dodajanjeVDrevo.png'" class="img-responsive"></a></p>
 <!-- Left column end -->
@@ -298,11 +298,11 @@
 </p>
 </div>
 
-<p align="justify">Kolikšna je časovna zahtevnost iskanja in dodajanja elementov? Pri obeh operacijah potrebujemo kvečjemu toliko primerjav in pomikov, kot je nivojev drevesa. Kot smo že izračunali, ima popolnoma uravnoteženo dvojiško iskalno drevo z <i>n</i> elementi log<sub>2</sub>(<i>n</i> + 1) nivojev, kar nam dá časovno zahtevnost <i>O</i>(log<sub>2</sub><i>n</i>) (pri zapisu <i>O</i>(...) lahko zanemarimo nekatere konstantne člene in faktorje). Ta čas je bistveno boljši od časa <i>O(n)</i> pri tabeli elementov in le nekoliko slabši od časa <i>O</i>(1) pri tabeli logičnih vrednosti, pri čemer drevo nima nobene od omejitev te implementacije.</p>
+<p align="justify">Kolikšna je časovna zahtevnost iskanja in dodajanja elementov? Pri obeh operacijah potrebujemo kvečjemu toliko primerjav in pomikov, kot je nivojev drevesa. Kot smo že izračunali, ima popolnoma uravnoteženo dvojiško iskalno drevo z <i>n</i> elementi log<sub>2</sub>(<i>n</i> + 1) nivojev, kar zahteva časovno zahtevnost <i>O</i>(log<sub>2</sub><i>n</i>) (pri zapisu <i>O</i>(...) lahko zanemarimo nekatere konstantne člene in faktorje). Ta čas je bistveno krajši od časa <i>O(n)</i> pri tabeli elementov in le nekoliko daljši od časa <i>O</i>(1) pri tabeli logičnih vrednosti, pri čemer drevo nima nobene od omejitev te implementacije.</p>
 
-<p align="justify">Časovna zahtevnost <i>O</i>(log<sub>2</sub><i>n</i>) velja za drevesa, pri katerih so poti od korena do posameznih listov približno enako dolge. Pri skrajno neuravnoteženih drevesih, kjer ima vsako vozlišče (z izjemo edinega lista drevesa) enega samega naslednika, časovna zahtevnost iskanja in dodajanja postane <i>O(n)</i>. Zato se v praksi pri dodajanju elementov pogosto uporabljajo postopki, ki drevo sproti preurejajo tako, da je vedno približno uravnoteženo.</p>
+<p align="justify">Časovna zahtevnost <i>O</i>(log<sub>2</sub><i>n</i>) velja za drevesa, pri katerih so poti od korena do posameznih listov približno enako dolge. Pri skrajno neuravnoteženih drevesih, pri katerih ima vsako vozlišče (z izjemo edinega lista drevesa) enega samega naslednika, časovna zahtevnost iskanja in dodajanja postane <i>O(n)</i>. Zato se v praksi pri dodajanju elementov pogosto uporabljajo postopki, ki drevo sproti preurejajo tako, da je vedno približno uravnoteženo.</p>
 
-<p align="justify">Odstranjevanje elementov iz dvojiškega iskalnega drevesa je nekoliko težje, zato se z njim ne bomo ukvarjali. Povejmo le, da je časovna zahtevnost te operacije prav tako <i>O</i>(log<sub>2</sub><i>n</i>), če je drevo vsaj približno uravnoteženo.</p>
+<p align="justify">Odstranjevanje elementov iz dvojiškega iskalnega drevesa je nekoliko težje, zato se z njim ne bomo ukvarjali. Omenimo le, da je časovna zahtevnost te operacije prav tako <i>O</i>(log<sub>2</sub><i>n</i>), če je drevo vsaj približno uravnoteženo.</p>
 
 <h4>Simulacija</h4>
 

@@ -215,7 +215,7 @@ def OsebeNaRazdalji(poznanstva, oseba, razdalja):
   obogatitev = set([oseba])
   dosegljive.update(obogatitev)
 
-  # Po prvem koraku sledeče zanke bo množica 'obogatitev' vsebovala znance
+  # Po prvem koraku spodnje zanke bo množica 'obogatitev' vsebovala znance
   # podane osebe, po drugem znance znancev podane osebe (a brez neposrednih
   # znancev) itd.
   for r in range(razdalja):
@@ -261,14 +261,14 @@ for i in range(10):
 <!-- Left column start -->
 <h1>Primeri uporabe množice</h1>
 
-<p align="justify">Koda je nekoliko enostavnejša, če v vsakem koraku najprej izračunamo obogatitev množice <code>dosegljive</code> in množico šele potem dejansko obogatimo. V nasprotnem primeru bi namreč morali v glavni zanki vzdrževati dve množici (trenutno in tisto iz prejšnjega koraka) in obogatitev vsakokrat izračunati kot njuno razliko.</p>
+<p align="justify">Koda je nekoliko enostavnejša, če v vsakem koraku najprej izračunamo obogatitev množice <code>dosegljive</code> in množico dejansko obogatimo šele po tem. V nasprotnem primeru bi namreč morali v glavni zanki vzdrževati dve množici (trenutno in tisto iz prejšnjega koraka) ter obogatitev vsakokrat izračunati kot njuno razliko.</p>
 
 <div>
 <form>
 <p>
 <textarea id="code">def Dosegljive(poznanstva, oseba):
   dosegljive = set([])
-  #Množico na začetku obogatimo s podano osebo.
+  # Množico na začetku obogatimo s podano osebo.
   obogatitev = set([oseba])
   dosegljive.update(obogatitev)
   # Dokler se množica povečuje ...

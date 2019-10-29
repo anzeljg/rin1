@@ -200,7 +200,7 @@ set([-23.4, 'juha', (2, 3, 5), (True,)])
 <!-- Left column start -->
 <h1>Elementi množice</h1>
 
-<p align="justify">V pythonu so elementi tabele lahko kakršnegakoli tipa, elementi množic pa morajo biti <b>nespremenljivega tipa</b> (<i>ang. immutable type</i>). Spremenljivke nespremenljivega tipa lahko zgolj ustvarjamo, ne moremo pa spreminjati njihovih vrednosti. Tip <code>int</code>, denimo, je nespremenljiv, čeprav python dopušča zaporedje stavkov</p>
+<p align="justify">V pythonu so elementi tabele lahko kakršnegakoli tipa, elementi množic pa morajo biti <b>nespremenljivega tipa</b> (<i>ang. immutable type</i>). Spremenljivke nespremenljivega tipa lahko zgolj ustvarjamo, ne moremo pa spreminjati njihovih vrednosti. Tip <code>int</code> je denimo nespremenljiv, čeprav python dopušča zaporedje stavkov</p>
 
 <p>
 <pre>
@@ -209,7 +209,7 @@ a = a + 3
 </pre>
 </p>
 
-<p align="justify">ki navidez spremeni vrednost spremenljivke <code>a</code>.  Vendar pa se v resnici ustvari <b>nova</b> spremenljivka (nov prostorček v pomnilniku), ki se nato ponovno poimenuje kot <code>a</code>, stara spremenljivka <code>a</code> pa se izgubi.  Tipi <code>int</code>, <code>float</code>, <code>bool</code> in <code>str</code> (nizi) so nespremenljivi, tabele pa niso, saj, denimo, stavek <code>t[1] = 7</code> spremeni element <b>obstoječe</b> tabele. Zato tabele ne morejo nastopati kot elementi pythonove množice.</p>
+<p align="justify">ki navidez spremeni vrednost spremenljivke <code>a</code>.  Vendar pa se v resnici ustvari <b>nova</b> spremenljivka (nov prostorček v pomnilniku), ki se nato ponovno poimenuje kot <code>a</code>, stara spremenljivka <code>a</code> pa se izgubi.  Tipi <code>int</code>, <code>float</code>, <code>bool</code> in <code>str</code> (nizi) so nespremenljivi, tabele pa niso, saj denimo stavek <code>t[1] = 7</code> spremeni element <b>obstoječe</b> tabele. Zato tabele ne morejo nastopati kot elementi pythonove množice.</p>
 
 <p align="justify">Vendar pa python ponuja nespremenljivo alternativo tabelam: <b><i>n</i>-terice</b> (podatkovni tip <code>tuple</code>). <i>n</i>-terice se obnašajo enako kot tabele, le da jih zapisujemo v okroglih oklepajih, njihovih vrednosti pa ne moremo spreminjati:</p>
 

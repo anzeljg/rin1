@@ -177,9 +177,9 @@
 <!-- Left column start -->
 <h1>Implementacije</h1>
 
-<p align="justify">Če želimo množico implementirati (zapisati) v računalniku, moramo najprej poiskati način za hranjenje njenih elementov. Elemente lahko hranimo kar v tabeli, a bomo videli, da to ni edina možnost. Nato se moramo vprašati, kaj bi radi z množico počeli. Ukvarjali se bomo predvsem z najosnovnejšimi operacijami: preverjanje prisotnosti podanega elementa, dodajanje posameznih elementov (pri tem moramo paziti, da se nam v množici ne pojavijo podvojeni elementi) in odstranjevanje posameznih elementov. Ogledali si bomo tri podatkovne strukture za implementacijo množice, ki se med seboj po učinkovitosti posameznih operacij kar precej razlikujejo. Četrto možno implementacijo — razpršilno tabelo — si bomo ogledali v naslednji učni enoti.</p>
+<p align="justify">Če želimo množico implementirati (zapisati) v računalniku, moramo najprej poiskati način za hranjenje njenih elementov. Elemente lahko hranimo kar v tabeli, a bomo videli, da to ni edina možnost. Nato se moramo vprašati, kaj bi radi z množico počeli. Ukvarjali se bomo predvsem z najosnovnejšimi operacijami: preverjanje prisotnosti podanega elementa, dodajanje posameznih elementov (pri tem moramo paziti, da se nam v množici ne pojavijo podvojeni elementi) in odstranjevanje posameznih elementov. Ogledali si bomo tri podatkovne strukture za implementacijo množice, ki se med seboj po učinkovitosti posameznih operacij kar precej razlikujejo. Četrto možno implementacijo – razpršilno tabelo – si bomo ogledali v naslednji učni enoti.</p>
 
-<p align="justify">Operacije nad množico bomo implementirali kot sledeče funkcije:
+<p align="justify">Operacije na množici bomo implementirali kot naslednje funkcije:
 <ul align="justify">
 	<li><code>Ustvari()</code>: Vrne prazno množico.</li>
 	<li><code>JePrisoten(mnozica, element)</code>: Če podani element pripada podani množici, vrne <code>True</code>, sicer pa vrne <code>False</code>.</li>
@@ -197,7 +197,7 @@
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Implementacija množice s tabelo je enostavna, a neučinkovita. Zaradi sprehoda po tabeli imajo operacije <code>JePrisoten</code>, <code>Dodaj</code> in <code>Odstrani</code> časovno zahtevnost <i>O(n)</i>, pri čemer je <i>n</i> število elementov v množici. Dodajanje elementa na konec tabele je sicer učinkovito, vendar pa operacija <code>Dodaj</code> zaradi predhodnega preverjanja prisotnosti ni nič manj časovno potratna od funkcije <code>JePrisoten</code>.</p>
+<p align="justify">Implementacija množice s tabelo je enostavna, a neučinkovita. Zaradi sprehoda po tabeli imajo operacije <code>JePrisoten</code>, <code>Dodaj</code> in <code>Odstrani</code> časovno zahtevnost <i>O(n)</i>, pri čemer je <i>n</i> število elementov v množici. Dodajanje elementa na konec tabele je sicer učinkovito, vendar pa operacija <code>Dodaj</code> zaradi predhodnega preverjanja prisotnosti ni nič manj časovno neučinkovita od funkcije <code>JePrisoten</code>.</p>
 
 <div>
 <form>
@@ -266,7 +266,7 @@ def main():
         str(JePrisoten(m, 3)))
   print('Množica m: ' + NizElementov(m))
 
-# Spomnimo se: s sledečima vrsticama dosežemo,
+# Spomnimo se: s spodnjima vrsticama dosežemo,
 # da lahko modul uporabljamo tudi kot samostojen
 # program.
 if __name__ == '__main__':

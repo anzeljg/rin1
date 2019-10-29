@@ -325,10 +325,10 @@ def Odstrani(mnozica, element):
     del mnozica[indeks]
 
 # Če podani element v podani naraščajoče urejeni tabeli obstaja, vrne
-# njegov indeks. V nasprotnem primeru vrne vrednost (-mesto - 1), kjer
-# je 'mesto' indeks prvega elementa v tabeli, ki je večji od podanega
-# elementa (oziroma len(tabela), če je podani element večji od vseh
-# elementov tabele. Funkcija uporablja bisekcijo.
+# njegov indeks. V nasprotnem primeru vrne vrednost (-mesto - 1), pri
+# čemer je 'mesto' indeks prvega elementa v tabeli, ki je večji od
+# podanega elementa (oziroma len(tabela), če je podani element večji
+# od vseh elementov tabele. Funkcija uporablja bisekcijo.
 def _Poisci(tabela, element):
   levo = 0
   desno = len(tabela) - 1

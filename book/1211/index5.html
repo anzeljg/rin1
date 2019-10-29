@@ -207,7 +207,7 @@
 <!-- Left column start -->
 <h1>*Množice in spremenljivke tipa <tt>set</tt></h1>
 
-<p align="justify">Podobno kot pri spremenljivkah tabelaričnega tipa tudi spremenljivka tipa <code>set</code> v resnici vsebuje zgolj <b>kazalec</b> na množico (njen pomnilniški naslov), ne pa množice same. V večini primerov se nam tega dejstva sicer ni treba zavedati (zato ponavadi govorimo kar o »množici <code>a</code>«, ne pa — kar bi bilo bolj pravilno — o »množici, na katero kaže spremenljivka <code>a</code>«), včasih pa nas lahko neprijetno preseneti. Oglejmo si primer (in ga izvedimo):</p>
+<p align="justify">Podobno kot pri spremenljivkah tabelaričnega tipa tudi spremenljivka tipa <code>set</code> dejansko vsebuje zgolj <b>kazalec</b> na množico (njen pomnilniški naslov), ne pa množice same. V večini primerov se nam tega dejstva sicer ni treba zavedati (zato ponavadi govorimo kar o »množici <code>a</code>«, ne pa – kar bi bilo pravilneje – o »množici, na katero kaže spremenljivka <code>a</code>«), včasih pa nas lahko neprijetno preseneti. Oglejmo si primer (in ga izvedimo):</p>
 
 <div>
 <form>
@@ -233,9 +233,9 @@ print(b)</textarea>
 
 <p align="center"><img src="img/spremenljivka1.svg" onerror="this.src='spremenljivka1.png'" class="img-responsive"></p>
 
-<p align="justify">Če bi želeli narediti kopijo množice <code>a</code>, bi morali uporabiti stavek <code>c = a.copy()</code>.</p>
+<p align="justify">Če bi želeli ustvariti kopijo množice <code>a</code>, bi morali uporabiti stavek <code>c = a.copy()</code>.</p>
 
-<p align="justify">Kakšna pa je razlika med stavkoma <code>a = a.intersection(b)</code> in <code>a.intersection_update(b)</code>, o kateri smo govorili? Stavek <code>a = a.intersection(b)</code> izdela <b>novo</b> množico kot presek obeh množic in s spremenljivko <code>a</code> pokaže nanjo. V našem primeru bi to izgledalo nekako takole:</p>
+<p align="justify">Kakšna pa je razlika med stavkoma <code>a = a.intersection(b)</code> in <code>a.intersection_update(b)</code>, o kateri smo govorili? Stavek <code>a = a.intersection(b)</code> izdela <b>novo</b> množico kot presek obeh množic in s spremenljivko <code>a</code> pokaže nanjo. V našem primeru bi bilo to videti nekako takole:</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -256,7 +256,7 @@ print(b)</textarea>
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kaj se bo izpisalo po izvedbi sledečih stavkov?
+<p align="justify">Kaj se bo izpisalo po izvedbi spodnjih stavkov?
 <pre>
 &gt;&gt;&gt; a = set([1, 2, 3, 4])
 &gt;&gt;&gt; c = a
