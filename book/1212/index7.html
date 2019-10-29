@@ -216,8 +216,8 @@
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Težava nastopi, če imamo dva zaposlena z enakim imenom in priimkom. Lahko bi v ključ dodali še stolpec "Leto rojstva", vendar nam tudi to še ne more popolnoma zagotoviti, da se ne bosta dva človeka ujemala v vseh atributih ključa.</p>
-						<p align="justify">Boljša rešitev je, da dodamo v relacijo nek atribut, ki bo res enolično predstavljal vsakega posameznika (na primer EMŠO, davčna številka ali pa neka številka, ki jim jo pripišemo sami), in ta atribut uporabimo kot ključ.</p>
+						<p align="justify">Težava nastopi, če imamo dva zaposlena z enakim imenom in priimkom. Lahko bi v ključ dodali še stolpec "Leto rojstva", vendar nam tudi to še ne more popolnoma zagotoviti, da se ne bosta naključni osebi ujemali v vseh atributih ključa.</p>
+						<p align="justify">Boljša rešitev je, da dodamo v relacijo nek atribut, ki bo dejansko enolično predstavljal vsakega posameznika (na primer EMŠO, davčna številka ali pa neka številka, ki mu jo pripišemo sami), in ta atribut uporabimo kot ključ.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -321,12 +321,12 @@ table#sqlTable thead tr .headerSortDown, table#sqlTable thead tr .headerSortUp {
 </table>
 </p>
 
-<p align="justify">Pri vsaki relaciji ponavadi določimo enega ali več atributov, ki naj bi skupaj enolično določali vsak zapis. Za te atribute pravimo, da tvorijo <b>ključ</b> te relacije; to pomeni, da se nobena dva zapisa te relacije ne smeta ujemati v vseh atributih, ki tvorijo ključ. Relacijo si lahko zdaj predstavljamo kot slovar, saj je vsak zapis pravzaprav par <i>⟨ključ, pripadajoča vrednost⟩</i>, pri čemer pripadajočo vrednost tvorijo vsi tisti atributi, ki niso del ključa. V našem gornjem primeru bi bilo za ključ pametno vzeti atributa <code>Ime</code> in <code>Priimek</code>, pripadajočo vrednost pa bi potem tvorila atributa <code>Leto rojstva</code> in <code>Delovno mesto</code>.</p>
+<p align="justify">Pri vsaki relaciji ponavadi določimo enega ali več atributov, ki naj bi skupaj enolično določali vsak zapis. Za te atribute pravimo, da tvorijo <b>ključ</b> te relacije; to pomeni, da se nobena zapisa te relacije ne smeta ujemati v vseh atributih, ki tvorijo ključ. Relacijo si lahko zdaj predstavljamo kot slovar, saj je vsak zapis pravzaprav par <i>&lt;ključ, pripadajoča vrednost&gt;</i>, pri čemer pripadajočo vrednost tvorijo vsi tisti atributi, ki niso del ključa. V zgornjem primeru bi bilo za ključ smiselno uporabiti atributa <code>Ime</code> in <code>Priimek</code>, pripadajočo vrednost pa bi potem tvorila atributa <code>Leto rojstva</code> in <code>Delovno mesto</code>.</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Rekli smo, da se nobena dva zapisa ne smeta ujemati v vseh atributih ključa. Ali je potemtakem par atributov (ime, priimek) res primerna izbira za ključ naše relacije? Do kakšnih težav bi lahko pri takšnem ključu prišlo? Predlagaj boljšo rešitev.</p>
+<p align="justify">Spoznali smo, da se nobena zapisa ne smeta ujemati v vseh atributih ključa. Ali je potemtakem par atributov (ime, priimek) res primerna izbira za ključ naše relacije? Do kakšnih težav bi lahko pri takšnem ključu prišlo? Predlagaj boljšo rešitev.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -336,17 +336,17 @@ table#sqlTable thead tr .headerSortDown, table#sqlTable thead tr .headerSortUp {
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Operacije, ki jih ponavadi želimo delati na zapisih naše podatkovne baze, so prav tiste, ki smo jih v začetku te učne enote spoznali kot osnovne operacije na slovarjih: dodajanje zapisov, brisanje zapisov, iskanje zapisov po danem ključu ter branje ali spreminjanje pripadajoče vrednosti.</p>
+<p align="justify">Operacije, ki jih ponavadi želimo izvesti na zapisih naše podatkovne baze, so prav tiste, ki smo jih na začetku te učne enote spoznali kot osnovne operacije na slovarjih: dodajanje zapisov, brisanje zapisov, iskanje zapisov po danem ključu ter branje ali spreminjanje pripadajoče vrednosti.</p>
 
-<p align="justify">Tudi pri implementaciji podatkovnih baz se uporablja podobne podatkovne strukture kot za implementacijo slovarjev (drevesa in razpršene tabele), le malo so prilagojene temu, da se morajo podatki shranjevati na disk.</p>
+<p align="justify">Tudi pri implementaciji podatkovnih baz se uporabljajo podobne podatkovne strukture kot za implementacijo slovarjev (drevesa in razpršene tabele), ki pa so v tem primeru prilagojene temu, da se morajo podatki shranjevati na disk.</p>
 
 <h1>*Implementacija slovarja z razpršeno tabelo</h1>
 
-<p align="justify">Doslej smo videli, kaj slovar je in kako ga lahko uporabljamo. Zanimivo vprašanje pa je tudi: kako je slovar pravzaprav sploh implementiran? Ena možnost je drevo, ki smo ga spoznali v učni enoti o množicah; dopolniti ga moramo le s tem, da v vsakem vozlišču poleg ključa hranimo še pripadajočo vrednost. Ima pa implementacija slovarja z drevesom nekaj slabosti: ključe v drevesu se mora dati primerjati glede na nek vrstni red (to je zahteva, ki je slovar v splošnem drugače nima), poleg tega pa časovna zahtevnost operacij na drevesu ni konstantna, ampak je sorazmerna z globino drevesa. Zato si oglejmo še eno podatkovno strukturo, s katero lahko implementiramo slovar. Pravimo ji <b>razpršena tabela</b> (<b>hash table</b>).</p>
+<p align="justify">Doslej smo videli, kaj slovar je in kako ga lahko uporabljamo. Zanimivo vprašanje pa je tudi: kako je slovar pravzaprav sploh implementiran? Ena možnost je drevo, ki smo ga spoznali v učni enoti o množicah; dopolniti ga moramo le s tem, da v vsakem vozlišču poleg ključa hranimo tudi pripadajočo vrednost. Ima pa implementacija slovarja z drevesom nekaj slabosti: za ključe v drevesu mora biti omogočena primerjava glede na nek vrstni red (to je zahteva, ki je slovar v splošnem drugače nima), poleg tega pa časovna zahtevnost operacij na drevesu ni konstantna, ampak je sorazmerna z globino drevesa. Zato si oglejmo še eno podatkovno strukturo, s katero lahko implementiramo slovar. Pravimo ji <b>razpršena tabela</b> (<i>ang. <b>hash table</b></i>).</p>
 
-<p align="justify">Že na začetku te učne enote smo omenili, da je slovar v marsičem podoben tabeli, le da namesto indeksov (ki so majhna cela števila od 0 naprej) uporabljamo ključe (ki sploh niso nujno števila). Tako lahko pridemo na misel, da bi slovar lahko hranili v tabeli, če bi znali ključe nekako predelati v indekse.</p>
+<p align="justify">Že na začetku te učne enote smo omenili, da je slovar v marsičem podoben tabeli, le da namesto indeksov (ki so mala cela števila od 0 naprej) uporabljamo ključe (ki sploh niso nujno števila). Tako lahko pridemo na misel, da bi slovar lahko hranili v tabeli, če bi znali ključe nekako predelati v indekse.</p>
 
-<p align="justify">Pripravimo si tabelo z <i>m</i> celicami in si mislimo, da imamo funkcijo <i>h</i>, ki zna poljuben ključ <i>k</i> preslikati v indeks <i>h(k)</i>, ki je eno od števil <nobr>0, 1, 2, ..., <i>m</i> - 1</nobr>. Ko hoče uporabnik našega slovarja shraniti vanj nek konkreten ključ <i>k</i>, bomo izračunali <i>h(k)</i> in shranili ta ključ (ter pripadajočo vrednost) v naši tabeli na indeksu <i>h(k)</i>.</p>
+<p align="justify">Pripravimo si tabelo z <i>m</i> celicami in predvidimo, da imamo funkcijo <i>h</i>, ki zna poljuben ključ <i>k</i> preslikati v indeks <i>h(k)</i>, ki je eno od števil <nobr>0, 1, 2, ..., <i>m</i> - 1</nobr>. Ko želi uporabnik našega slovarja shraniti vanj nek določeni ključ <i>k</i>, bomo izračunali <i>h(k)</i> in shranili ta ključ (ter pripadajočo vrednost) v naši tabeli na indeksu <i>h(k)</i>.</p>
 
 <h4>Simulacija</h4>
 

@@ -200,7 +200,7 @@ def PoisciRime(besede):
   for koncnica in h:
     print(koncnica + ": " + str(h[koncnica]))
 
-  # Poglejmo, koliko skupin kakšne velikosti je nastalo.
+  # Poglejmo, koliko skupin neke velikosti je nastalo.
   stSkupin = {}
   maxVelikost = 0; maxSkupina = None
   for koncnica in h:
@@ -284,7 +284,7 @@ PoisciRime(besede)
 <h4>Vaja</h4>
 
 <div class="alert alert-danger" role="alert">
-<p align="justify">Poišči kakšno daljše besedilo in napiši program, ki ga prebere, razbije na besede (pri tem pobriše ločila, spremeni velike črke v male ipd.) in potem na seznamu vseh (različnih) besed iz tega besedila požene postopek iz prejšnje strani, za odkrivanje skupin rimajočih se besed. Katera tako dobljena skupina je največja?</p>
+<p align="justify">Poišči neko daljše besedilo in napiši program, ki ga prebere, razbije na besede (pri tem pobriše ločila, spremeni velike črke v male ipd.) in potem na seznamu vseh (različnih) besed iz tega besedila zažene postopek s prejšnje strani, za odkrivanje skupin rimajočih se besed. Katera tako dobljena skupina je največja?</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution2"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -293,7 +293,7 @@ PoisciRime(besede)
 <h4>Primer 3</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Napiši program, ki prebere zaporedje majhnih naravnih števil in za vsako prebrano število <i>n</i> sproti izpiše vrednost <i>n</i>! (ki je definirana kot <nobr>1 &middot; 2 &middot; 3 &middot; 4 &middot; ... &middot; (<i>n</i> - 1) &middot; <i>n</i>).</nobr> Predpostavi, da se vhodni podatki končajo s številom 0.</p>
+<p align="justify">Napiši program, ki prebere zaporedje malih naravnih števil in za vsako prebrano število <i>n</i> sproti izpiše vrednost <i>n</i>! (ki je definirana kot <nobr>1 &middot; 2 &middot; 3 &middot; 4 &middot; ... &middot; (<i>n</i> - 1) &middot; <i>n</i>).</nobr> Predpostavi, da se vhodni podatki končajo s številom 0.</p>
 </div>
 
 <p align="justify">Iz definicije v nalogi lahko opazimo, da velja <i>n</i>! = (<i>n</i> - 1)! &middot; <i>n</i>. Torej lahko te vrednosti računamo z zelo preprosto funkcijo (kot v primeru na desni). Glavni del programa pa mora le v zanki brati števila in izpisovati rezultate:</p>
@@ -323,7 +323,7 @@ while True:
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Slabost te rešitve je, da lahko ene in iste rezultate računa po večkrat. Če na primer v vhodnih podatkih dobimo <i>n</i> = 4, bomo pri računanju <code>f(4)</code> izračunali pred tem še <code>f(3)</code>, <code>f(2)</code> in <code>f(1)</code>. Če enkrat kasneje v vhodnih podatkih nastopi <i>n</i> = 3, bomo takrat spet računali <code>f(3)</code>, čeprav smo to vrednost že izračunali prej, ko smo obdelovali <i>n</i> = 4. Koristno bi torej bilo, če bi si funkcija <code>f</code> rezultate, ki jih izračuna, nekam shranjevala; če kasneje isti rezultat potrebuje še enkrat, lahko vrne shranjeno vrednost, namesto da ga računa ponovno. Tej tehniki pravimo <b>pomnjenje</b> ali s tujko <b>memoizacija</b> in pride prav marsikje, kjer po večkrat potrebujemo en in isti rezultat. V ta namen pride prav ravno slovar:</p>
+<p align="justify">Slabost te rešitve je, da lahko ene in iste rezultate računa večkrat. Če na primer v vhodnih podatkih dobimo <i>n</i> = 4, bomo pri računanju <code>f(4)</code> izračunali pred tem še <code>f(3)</code>, <code>f(2)</code> in <code>f(1)</code>. Če enkrat pozneje v vhodnih podatkih nastopi <i>n</i> = 3, bomo takrat spet računali <code>f(3)</code>, čeprav smo to vrednost že izračunali prej, ko smo obdelovali <i>n</i> = 4. Koristno bi torej bilo, če bi si funkcija <code>f</code> rezultate, ki jih izračuna, nekam shranjevala; če pozneje isti rezultat potrebuje še enkrat, lahko vrne shranjeno vrednost, namesto da ga računa ponovno. Tej tehniki pravimo <b>pomnjenje</b> ali s tujko <b>memorizacija</b> in pride prav marsikje, kjer večkrat potrebujemo en in isti rezultat. V ta namen pride prav ravno slovar:</p>
 
 <div>
 <form>

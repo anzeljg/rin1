@@ -183,8 +183,8 @@
 # Pri našem poskusu smo 1000-krat izračunali f(n) za vse n-je od 1 do 100.
 # Rešitev brez pomnjenja je porabila 2002 milisekundi, tista s pomnjenjem
 # pa 46 milisekund. Razliko v hitrosti si lahko razložimo takole: povprečna
-# vrednost n-ja je bila pri tem poskusu okrog 50, zato pri rešitvi brez
-# pomnjenja v povprečju izračunamo vsakič okrog 50 vrednosti funkcije, pri
+# vrednost n-ja je bila pri tem poskusu okoli 50, zato pri rešitvi brez
+# pomnjenja v povprečju izračunamo vsakič okoli 50 vrednosti funkcije, pri
 # rešitvi s pomnjenjem pa le enkrat pogledamo v slovar z že shranjenimi
 # rezultati. Zato bi pričakovali, da bo rešitev s pomnjenjem pri tem poskusu
 # približno 50-krat hitrejša. (V resnici je razlika malo manjša: 2002 / 46
@@ -230,7 +230,7 @@ for n in range(1, 101):
 					</div>
 					<div class="modal-body">
 						<p align="justify">Taki podatkovni strukturi rečemo Grid file. Več o njej lahko izveš:
-						<ul><li>na spletnem naslovu: <a href="http://en.wikipedia.org/wiki/Grid_file" target="_blank">http://en.wikipedia.org/wiki/Grid_file</a></li>
+						<ul><li>na spletnem naslovu: <a href="http://en.wikipedia.org/wiki/Grid_file" target="_blank">http://en.wikipedia.org/wiki/Grid_file</a>,</li>
 						<li>v članku: J. Nievergelt, H. Hinterberger, K. C. Sevcik: <i>"The Grid File: An Adaptable, Symmetric Multikey File Structure".</i> ACM TODS 9(1):38-71, March 1984.</li>
 						</ul>
 						</p>
@@ -263,19 +263,19 @@ for n in range(1, 101):
 <h4>Primer 4</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Na nekem redko poseljenem območju stoji <i>n</i> hiš; za vsako od njih poznamo koordinate — <i>i</i>-ta hiša stoji na točki (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>). Na to območje bo padel meteorit, ki bo zadel točko (<i>x</i>, <i>y</i>) in uničil vse hiše v razdalji <i>r</i> metrov od nje. Polmer <i>r</i> je znan vnaprej, koordinati (<i>x</i>, <i>y</i>) pa ne. Napiši funkcijo <code>Meteorit(x, y)</code>, ki za dana (<i>x</i>, <i>y</i>) izračuna, koliko hiš bo meteorit uničil, če pade na točko (<i>x</i>, <i>y</i>).</p>
+<p align="justify">Na nekem redko poseljenem območju stoji <i>n</i> hiš; za vsako od njih poznamo koordinate – <i>i</i>-ta hiša stoji na točki (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>). Na to območje bo padel meteorit, ki bo zadel točko (<i>x</i>, <i>y</i>) in uničil vse hiše na razdalji <i>r</i> metrov od nje. Polmer <i>r</i> je znan vnaprej, koordinati (<i>x</i>, <i>y</i>) pa ne. Napiši funkcijo <code>Meteorit(x, y)</code>, ki za dana <i>x</i> in <i>y</i> izračuna, koliko hiš bo meteorit uničil, če pade na točko (<i>x</i>, <i>y</i>).</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#curious"><span class="fa fa-thumb-tack"></span> Za radovedne</button>
 </p>
 </div>
 
-<p align="justify">To nalogo bi se dalo seveda zelo enostavno rešiti tako, da bi šla funkcija v zanki po vseh <i>n</i> hišah in za vsako preverila, če je od točke (<i>x</i>, <i>y</i>) oddaljena za manj kot <i>r</i>. Takšno rešitev lahko za vajo napišeš sam(a), mi pa si bomo tu raje ogledali, kako jo izboljšati. Poiščimo največjo in najmanjšo <i>x</i>- in <i>y</i>-koordinato po vseh hišah v naših vhodnih podatkih; tako dobimo nekakšno pravokotno območje, ki ga razdelimo na kvadratne celice velikosti <i>r × r</i>. Celice po vrsti oštevilčimo, kot kaže slika na desni. Podrobnosti tega, kako za poljubno točko izračunati številko celice, v kateri ta točka leži, lahko za vajo razmisliš sam(a).</p>
+<p align="justify">To nalogo bi se dalo seveda zelo enostavno rešiti tako, da bi funkcija v zanki obhodila vseh <i>n</i> hiš in za vsako preverila, če je od točke (<i>x</i>, <i>y</i>) oddaljena manj kot <i>r</i>. Takšno rešitev lahko za vajo napišeš sam(-a), mi pa si bomo tu raje ogledali, kako jo izboljšati. Poiščimo največjo in najmanjšo <i>x</i>- in <i>y</i>-koordinato po vseh hišah v naših vhodnih podatkih; tako dobimo nekakšno pravokotno območje, ki ga razdelimo na kvadratne celice velikosti <i>r × r</i>. Celice po vrsti oštevilčimo, kot kaže slika v nadaljevanju. Podrobnosti tega, kako za poljubno točko izračunati številko celice, v kateri ta točka leži, lahko za vajo razmisliš sam(-a).</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Pripravimo si zdaj slovar, v katerem bo za vsako neprazno celico (tako, ki vsebuje kakšno hišo) po en zapis: ključ naj bo številka celice, pripadajoča vrednost pa naj bo seznam hiš v tej celici. Ko izvemo za koordinate meteorita, moramo le pogledati, v kateri celici ležijo; ker so celice velike <i>r × r</i>, meteorit pa poruši le hiše, ki so od njega oddaljene največ <i>r</i>, to pomeni, da pridejo v poštev za rušenje le hiše, ki ležijo v isti celici kot meteorit ali pa v njenih neposrednih sosedah. To je torej največ 9 celic; za vsako od njih pogledamo v slovar, da dobimo seznam hiš v njej, in za vsako od teh hiš preverimo, ali bi jo meteorit porušil ali ne. Tako nam ni več treba pri vsakem klicu funkcije <code>Meteorit</code> pregledati vseh <i>n</i> hiš, ampak le majhen delež hiš (tiste, ki ležijo v devetih celicah).</p>
+<p align="justify">Pripravimo si zdaj slovar, v katerem bo za vsako neprazno celico (tako, ki vsebuje hišo) po en zapis: ključ naj bo številka celice, pripadajoča vrednost pa naj bo seznam hiš v tej celici. Ko izvemo koordinate meteorita, moramo le pogledati, v kateri celici ležijo; ker so celice velike <i>r × r</i>, meteorit pa poruši le hiše, ki so od njega oddaljene največ <i>r</i>, to pomeni, da pridejo v poštev za rušenje le hiše, ki so v isti celici kot meteorit ali pa v njenih neposrednih sosedah. To je torej največ 9 celic; za vsako od njih pogledamo v slovar, da dobimo seznam hiš v njej, in za vsako od teh hiš preverimo, ali bi jo meteorit porušil ali ne. Tako nam ni več treba pri vsakem klicu funkcije <code>Meteorit</code> pregledati vseh <i>n</i> hiš, ampak le majhen delež hiš (tiste, ki jih zajema devet celic).</p>
 
 <table id="meteor" border="0" cellpadding="0" cellspacing="0" width="500">
 <tr>

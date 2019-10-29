@@ -235,7 +235,7 @@ def h(k, m):
 for x in [1, 2, 10, 15, 1.2, 1.5, 123.45, "ena", "dve", "tri"]:
   print("hash(" + str(x) + ") = " + str(hash(x)))
 
-# V nekaterih verzijah pythona lahko opazimo, da v primerih, ko je x niz,
+# V nekaterih različicah pythona lahko opazimo, da v primerih, ko je x niz,
 # funkcija hash(x) pri vsakem izvajanju našega programa vrne drugačno
 # vrednost (pri istem x). To je varnostni ukrep; za več o tem glej npr.:
 # https://docs.python.org/3/reference/datamodel.html#object.__hash__
@@ -261,8 +261,8 @@ for x in [1, 2, 10, 15, 1.2, 1.5, 123.45, "ena", "dve", "tri"]:
 						<h4 class="modal-title">Namig</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">V pythonu je razprševalna funkcija del jezika — imenuje se <code>hash</code>. Kot parameter ji moramo podati ključ, ki nas zanima (ne pa tudi števila <i>m</i> — za računanje ostanka po deljenju z <i>m</i> moramo poskrbeti sami).</p>
-						<p align="justify">*(b) Izberi si nek konkreten <i>m</i> in napiši program, ki prebere zaporedje besed, za vsako besedo <code>x</code> izračuna indeks <code>hash(x) % m</code> in na koncu za vsak možni indeks od 0 do <i>m</i> - 1 izpiše, koliko različnih besed se je preslikalo v tisti indeks. Poženi ga na kakšnem malo daljšem besedilu. Kako enakomerno so se besede razpršile med vseh <i>m</i> možnih indeksov?</p>
+						<p align="justify">V pythonu je razprševalna funkcija del jezika – imenuje se <code>hash</code>. Kot parameter ji moramo podati ključ, ki nas zanima (ne pa tudi števila <i>m</i> – za računanje ostanka po deljenju z <i>m</i> moramo poskrbeti sami).</p>
+						<p align="justify">*(b) Izberi si določen <i>m</i> in napiši program, ki prebere zaporedje besed, za vsako besedo <code>x</code> izračuna indeks <code>hash(x) % m</code> in na koncu za vsak možni indeks od 0 do <i>m</i> - 1 izpiše, koliko različnih besed se je preslikalo v ta indeks. Zaženi ga na nekem malo daljšem besedilu. Kako enakomerno so se besede razpršile med vseh <i>m</i> možnih indeksov?</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -296,10 +296,10 @@ besede = f.read().split()
 f.close()
 PreizkusRazprsevanja(besede, 10)
 
-# Za poskus smo vzeli celotno besedilo romana "Deseti brat" in besede
-# razpršili na m = 10 indeksov. Bilo je 66810 besed, torej povprečno
-# 6681 na vsak indeks. Največje število besed, ki so se preslikale v
-# isti indeks, je bilo 10934, najmanjše pa 4740.
+# Za poskus smo uporabili celotno besedilo romana "Deseti brat" in
+# besede razpršili na m = 10 indeksov. Bilo je 66810 besed, torej
+# povprečno 6681 na vsak indeks. Največje število besed, ki so se
+# preslikale v isti indeks, je bilo 10934, najmanjše pa 4740.
 # Število besed po indeksih: [10934, 7114, 9516, 4740, 5858, 5217,
 # 5496, 5331, 7099, 5505]
 </pre>
@@ -320,22 +320,22 @@ PreizkusRazprsevanja(besede, 10)
 <!-- Left column start -->
 <h1>*Implementacija slovarja z razpršeno tabelo</h1>
 
-<p align="justify">Če hoče uporabnik kasneje preveriti, ali je ključ <i>k</i> prisoten v slovarju (in prebrati pripadajočo vrednost), točno vemo, kje bomo ta ključ našli v naši tabeli: na indeksu <i>h(k)</i>. Če ga ni tam, lahko zaključimo, da ga v slovarju sploh ni.</p>
+<p align="justify">Če želi uporabnik pozneje preveriti, ali je ključ <i>k</i> prisoten v slovarju (in prebrati pripadajočo vrednost), točno vemo, kje v tabeli bomo ta ključ našli: na indeksu <i>h(k)</i>. Če ga ni tam, lahko zaključimo, da ga v slovarju sploh ni.</p>
 
-<p align="justify">Lahko se zgodi, da se dva ali več ključev preslika v isti indeks — torej da za ključa <i>k</i><sub>1</sub> in <i>k</i><sub>2</sub> velja <i>h</i>(<i>k</i><sub>1</sub>) = <i>h</i>(<i>k</i><sub>2</sub>). Kaj naj naredimo, če hočemo v slovarju istočasno hraniti oba ključa?  Enostavna rešitev je na primer ta, da vsak element naše tabele v resnici ne hrani zgolj enega para <i>⟨ključ, vrednost⟩</i>, ampak zaporedje takih parov za vse ključe, ki so se preslikali v tisti indeks.</p>
+<p align="justify">Lahko se zgodi, da se v isti indeks preslikata vsaj dva ključa, torej da za ključa <i>k</i><sub>1</sub> in <i>k</i><sub>2</sub> velja <i>h</i>(<i>k</i><sub>1</sub>) = <i>h</i>(<i>k</i><sub>2</sub>). Kaj naj naredimo, če želimo v slovarju istočasno hraniti oba ključa?  Enostavna rešitev je na primer ta, da vsak element naše tabele dejansko ne hrani zgolj enega para <i>&lt;ključ, vrednost&gt;</i>, ampak zaporedje takih parov za vse ključe, ki so se preslikali v tisti indeks.</p>
 
 <p align="center"><img src="img/hashTabela.svg" onerror="this.src='hashTabela.png'" class="img-responsive"></p>
 
-<p align="justify">Če hoče uporabnik preveriti, ali je ključ <i>k</i> prisoten v slovarju, moramo zdaj iti po seznamu, na katerega kaže celica <i>h(k)</i> naše tabele, in preveriti, če je kakšen od ključev na tistem seznamu enak <i>k</i>. Če ga na tem seznamu ni, lahko zaključimo, da <i>k</i>-ja sploh ni v slovarju; če pa ga tam najdemo, bomo lahko tudi prebrali (ali spremenili) pripadajočo vrednost.</p>
+<p align="justify">Če želimo preveriti, ali je ključ <i>k</i> prisoten v slovarju, moramo zdaj pregledati seznam, na katerega kaže celica <i>h(k)</i> naše tabele, in preveriti, če je kateri od ključev na tem seznamu enak <i>k</i>. Če ga na seznamu ni, lahko zaključimo, da <i>k</i>-ja sploh ni v slovarju; če pa ga tam najdemo, bomo lahko tudi prebrali (ali spremenili) pripadajočo vrednost.</p>
 
-<p align="justify">Iz tega postopka lahko vidimo, da bodo operacije na našem slovarju tem hitrejše, čim krajši bodo ti seznami. Ne želimo si torej, da bi se veliko ključev preslikalo v isti indeks — funkcija <i>h</i> mora ključe čim bolj enakomerno razpršiti med vseh <i>m</i> možnih indeksov. Zato funkciji <i>h</i>
-pravimo <b>razprševalna funkcija</b>, tabeli pa <b>razpršena tabela</b>. (Poleg tega si tudi <i>m</i> načeloma izberemo tako, da je približno tolikšen, kolikor ključev hočemo hraniti v slovarju; tako bodo seznami ključev, ki se preslikajo v isti indeks, v povprečju dolgi le en ali dva elementa.)</p>
+<p align="justify">Iz tega postopka lahko ugotovimo, da hitrejše kot bodo operacije na našem slovarju, krajši bodo ti seznami. Ne želimo si torej, da bi se veliko ključev preslikalo v isti indeks – funkcija <i>h</i> mora ključe čim enakomerneje razpršiti med vseh <i>m</i> možnih indeksov. Zato funkciji <i>h</i>
+pravimo <b>razprševalna funkcija</b>, tabeli pa <b>razpršena tabela</b>. (Poleg tega si tudi <i>m</i> načeloma izberemo tako, da približno ustreza številu ključev, ki jih želimo hraniti v slovarju; tako bodo seznami ključev, ki se preslikajo v isti indeks, v povprečju dolgi le en ali dva elementa.)</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Razmislimo še o tem, kakšna bi bila primerna funkcija <i>h</i>. Če so naši ključi cela števila, lahko za <i>h(k)</i> vzamemo kar ostanek po deljenju števila <i>k</i> s številom <i>m</i> — ta ostanek je gotovo nekje med 0 in <i>m</i> - 1. Pri ključih drugih tipov je pogost prijem ta, da ključ najprej predelamo v neko (mogoče zelo veliko) celo število, nato pa vzamemo njegov ostanek po deljenju s <i>k</i>.  Na primer, recimo, da je ključ nek niz. Spomnimo se, da je niz zaporedje znakov in da ima vsak znak neko številsko kodo. Izberimo si nek <i>b</i>, zapišimo te kode po vrsti in si jih predstavljajmo kot števke nekega velikega celega števila v <i>b</i>-iškem sestavu; nato moramo le še vzeti njegov ostanek po deljenju z <i>m</i>.</p>
+<p align="justify">Razmislimo še o tem, kakšna bi bila primerna funkcija <i>h</i>. Če so naši ključi cela števila, lahko za <i>h(k)</i> uporabimo kar ostanek po deljenju števila <i>k</i> s številom <i>m</i> – ta ostanek je gotovo nekje med 0 in <i>m</i> - 1. Pri ključih drugih tipov je pogost prijem ta, da ključ najprej predelamo v neko (mogoče zelo veliko) celo število, nato pa uporabimo njegov ostanek po deljenju s <i>k</i>. Recimo, da je ključ nek niz. Spomnimo se, da je niz zaporedje znakov in da ima vsak znak neko številsko kodo. Izberimo si nek <i>b</i>, zapišimo te kode po vrsti in si jih predstavljajmo kot števke nekega velikega celega števila v <i>b</i>-iškem sestavu; nato moramo le še vzeti njegov ostanek po deljenju z <i>m</i>.</p>
 
 <p align="center"><img src="img/hashKljuc.svg" onerror="this.src='hashKljuc.png'" class="img-responsive"></p>
 
@@ -343,7 +343,7 @@ pravimo <b>razprševalna funkcija</b>, tabeli pa <b>razpršena tabela</b>. (Pole
 
 <div class="alert alert-danger" role="alert">
 <p align="justify">Napiši funkcijo <code>h(k, m)</code>, ki za poljuben niz <code>k</code> izračuna indeks po pravkar 
-opisanem postopku (za <i>b</i> vzemi na primer <i>b</i> = 100).</p>
+opisanem postopku (za <i>b</i> uporabi na primer <i>b</i> = 100).</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hint1"><span class="fa fa-question"></span> Namig</button>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
@@ -353,7 +353,7 @@ opisanem postopku (za <i>b</i> vzemi na primer <i>b</i> = 100).</p>
 <h4>Vaja</h4>
 
 <div class="alert alert-danger" role="alert">
-<p align="justify">V pythonu je razprševalna funkcija del jezika — imenuje se <code>hash</code>. Kot parameter ji moramo podati ključ, ki nas zanima (ne pa tudi števila <i>m</i> — za računanje ostanka po deljenju z <i>m</i> moramo poskrbeti sami).</p>
+<p align="justify">V pythonu je razprševalna funkcija del jezika – imenuje se <code>hash</code>. Kot parameter ji moramo podati ključ, ki nas zanima (ne pa tudi števila <i>m</i> – za računanje ostanka po deljenju z <i>m</i> moramo poskrbeti sami).</p>
 <p align="justify">(a) Napiši program, ki izpiše <code>hash(x)</code> za nekaj različnih vrednosti <code>x</code> različnih tipov (nekaj celih števil, nekaj realnih števil in nekaj nizov različnih dolžin).</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution2a"><span class="fa fa-check"></span> Rešitev (a)</button>

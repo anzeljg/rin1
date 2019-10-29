@@ -492,7 +492,7 @@ Konkordanca("vsi ljudje se rodijo svobodni in imajo enako dostojanstvo
 	<span class="fa fa-star pull-right"></span>
 </p>
 <p align="justify">(a) Napiši funkcijo <code>Obrni(slovar)</code>, ki vrne »obrnjeni« slovar, torej takega, v katerem bodo vloge ključev in vrednosti obrnjene. Primer: <code>Obrni({"ena": 11, "dve": 222})</code> mora vrniti slovar <code>{11: "ena", 222: "dve"}</code>.
-(Vrednosti nekaterih tipov se sicer v pythonu ne da uporabljati kot ključe, vendar predpostavi, da se v naših slovarjih to ne bo zgodilo — npr. da se kot vrednosti pojavljajo le nizi in cela števila.) Opiši, kako se obnaša tvoja rešitev v primerih, ko več ključem v vhodnem slovarju pripada enaka vrednost.</p>
+(Vrednosti nekaterih tipov se sicer v pythonu ne da uporabljati kot ključe, vendar predpostavi, da se v naših slovarjih to ne bo zgodilo – npr. da se kot vrednosti pojavljajo le nizi in cela števila.) Opiši, kako se obnaša tvoja rešitev v primerih, ko več ključem v vhodnem slovarju pripada enaka vrednost.</p>
 <p align="justify">(b) Kaj se zgodi, če slovar dvakrat obrnemo?  Z drugimi besedami, kako se razlikujeta slovarja <code>h</code> in <code>Obrni(Obrni(h))</code>? Pod katerimi pogoji sta enaka?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution9a"><span class="fa fa-check"></span> Rešitev (a)</button>
@@ -521,12 +521,12 @@ Konkordanca("vsi ljudje se rodijo svobodni in imajo enako dostojanstvo
 	<span class="label label-primary"><b>10</b></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Iz matematike se najbrž spomniš pojma preslikave in operacije kompozituma na preslikavah. Slovar pravzaprav ni nič drugega kot predstavitev preslikave v računalniku.</p><br />
+<p align="justify">Iz matematike se najbrž spomniš pojma <i>preslikave</i> in operacije kompozituma na preslikavah. Slovar pravzaprav ni nič drugega kot predstavitev preslikave v računalniku.</p><br />
 <p align="justify">(a) Napiši funkcijo <code>Komp(h1, h2)</code>, ki dobi dva slovarja in vrne nov slovar, v katerem so prisotni le tisti ključi <code>k</code> iz <code>h1</code>, za katere je vrednost <code>h1[k]</code> prisotna kot ključ v <code>h2</code>; pripadajoča vrednost k takemu ključu <code>k</code> v izhodnem slovarju pa naj bo <code>h2[h1[k]]</code>.<br />
 <b>Primer:</b> pri <code>h1 = {"ena": 1, "dve": 2, "tri": 3}</code> in <code>h2 = {1: "ane", 3: "irt"}</code>	mora funkcija <code>Komp(h1, h2)</code> vrniti slovar <code>{"ena": "ane", "tri": "irt"}</code>.</p><br />
 <p align="justify">(b) Takšno veriženje slovarjev bi se dalo posplošiti tudi na 3 ali več slovarjev. Napiši funkcijo <code>Komp3(h1, h2, h3)</code>, ki vrne nov slovar, v katerem ključu <code>k</code> pripada vrednost <code>h3[h2[h1[k]]]</code> (če je <code>k</code> prisoten kot ključ v <code>h1</code> in če je <code>h1[k]</code> prisoten kot ključ v <code>h2</code> in tako naprej).</p><br />
 <p align="justify">(c) Če imamo tri slovarje <code>h1</code>, <code>h2</code>, <code>h3</code>, ali je <code>Komp(Komp(h1, h2), h3)</code> enak slovarju <code>Komp(h1, Komp(h2, h3))</code>?</p><br />
-<p align="justify">(d) Napiši funkcijo <code>VerigaSlovarjev(t)</code>, ki dobi kot parameter tabelo <code>t</code> z dvema ali več slovarji in jih na tu opisani način sestavi v nov slovar, ki predstavlja preslikavo, ki jo dobimo, če najprej uporabimo preslikavo <code>t[0]</code>, nato preslikavo <code>t[1]</code> in tako naprej.</p>
+<p align="justify">(d) Napiši funkcijo <code>VerigaSlovarjev(t)</code>, ki dobi kot parameter tabelo <code>t</code> z dvema ali več slovarji in te slovarje na tu opisani način sestavi v nov slovar, ki predstavlja preslikavo, ki jo dobimo, če najprej uporabimo preslikavo <code>t[0]</code>, nato preslikavo <code>t[1]</code> in tako naprej.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution10a"><span class="fa fa-check"></span> Rešitev (a)</button>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution10b"><span class="fa fa-check"></span> Rešitev (b)</button>
@@ -540,7 +540,7 @@ Konkordanca("vsi ljudje se rodijo svobodni in imajo enako dostojanstvo
 	<span class="label label-danger"><b>11</b></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify"><b>Konkordanca</b> nekega besedila je seznam vseh besed, ki se pojavljajo v njem, za vsako besedo pa so navedene vse njene pojavitve skupaj s kontekstom, recimo prejšnjih in naslednjih 5 besed. Takšen seznam pride prav pri preučevanju jezika in književnosti, da bolje razumemo rabo in pomen posameznih besed. Napiši program, ki prebere vhodno besedilo in izpiše njegovo konkordanco.</p>
+<p align="justify"><b>Konkordanca</b> nekega besedila je seznam vseh besed, ki se pojavljajo v njem, za vsako besedo pa so navedene vse njene pojavitve skupaj s sobesedilom, recimo prejšnjih in naslednjih 5 besed. Takšen seznam pride prav pri preučevanju jezika in književnosti, da bolje razumemo rabo in pomen posameznih besed. Napiši program, ki prebere vhodno besedilo in izpiše njegovo konkordanco.</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution11"><span class="fa fa-check"></span> Rešitev</button>
 </p>

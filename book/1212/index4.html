@@ -229,7 +229,7 @@ print(RazbijNaBesede("Ena: dve-tri, \"štiri pet!\" -- šest sedem."))
 </p>
 </div>
 
-<p align="justify">Na koncu zanke v rešitvi na prejšnji strani (in v rešitvi spodaj) imamo v slovarju <code>h</code> vse besede skupaj s podatki o tem, kolikokrat se katera pojavi. Lahko jih zložimo v tabelo, pri čemer je vsak element par <i>⟨število pojavitev, beseda⟩</i> (ta par je pravzaprav tudi sam zase majhna tabela z dvema elementoma); uredimo jih padajoče in izpišemo prvih deset:</p>
+<p align="justify">Na koncu zanke v rešitvi na prejšnji strani (in v rešitvi spodaj) imamo v slovarju <code>h</code> vse besede skupaj s podatki o tem, kolikokrat se katera od njih pojavi. Lahko jih zložimo v tabelo, pri čemer je vsak element par <i>&lt;število pojavitev, beseda&gt;</i> (ta par je pravzaprav tudi sam zase majhna tabela z dvema elementoma); uredimo jih padajoče in izpišemo prvih deset:</p>
 
 <div>
 <form>
@@ -272,7 +272,7 @@ for [stev, beseda] in t:
 <p align="justify">Napiši funkcijo, ki v danem seznamu besed poišče vse skupine besed, ki se rimajo. Za namen te naloge recimo, da se dve besedi rimata, če se ujemata v vseh črkah od zadnjega samoglasnika do konca besede.</p>
 </div>
 
-<p align="justify">Iz besedila naloge sledi, da je skupina besed, ki se rimajo, enolično določena s končnim delom besede (od zadnjega samoglasnika naprej). Na primer, če imamo skupino besed <code>["zob", "grob", "tegob"]</code>, vidimo, da jim je skupna končnica <code>-ob</code>. Ker končnica enolično določa skupino rimajočih se besed, jo lahko uporabimo kot ključ v slovarju; pripadajoča vrednost k temu ključu pa bo seznam besed, ki se končajo na to končnico. Za vsako besedo iz vhodnega seznama izračunamo njeno končnico, poiščemo v slovarju seznam za to končnico (če te končnice še ni v slovarju, jo zdaj dodamo) in besedo dodamo vanj.</p>
+<p align="justify">Iz besedila naloge sledi, da je skupina besed, ki se rimajo, enolično določena s končnim delom besede (od zadnjega samoglasnika naprej). Če imamo na primer skupino besed <code>["zob", "grob", "tegob"]</code>, vidimo, da jim je skupna končnica <code>-ob</code>. Ker končnica enolično določa skupino rimajočih se besed, jo lahko uporabimo kot ključ v slovarju; pripadajoča vrednost k temu ključu pa bo seznam besed, ki se končajo na to končnico. Za vsako besedo iz vhodnega seznama izračunamo njeno končnico, poiščemo v slovarju seznam za to končnico (če te končnice še ni v slovarju, jo zdaj dodamo) in besedo dodamo vanj.</p>
 
 <div>
 <form>

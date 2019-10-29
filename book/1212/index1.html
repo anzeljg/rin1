@@ -177,13 +177,13 @@
 <!-- Left column start -->
 <h1>Slovar</h1>
 
-<p align="justify">Slovar je podatkovna struktura, ki si jo lahko predstavljamo kot razširitev tabele in množice.  Slovar vzdržuje množico parov oblike ⟨<i>ključ</i>, <i>vrednost</i>⟩, pri čemer so vsi ključi v slovarju različni.  Vsak par je zato enolično določen že s svojim ključem in vse operacije na njem izvajamo prek tega ključa. Ključe (in pripadajoče vrednosti) lahko dodajamo v slovar, brišemo iz njega, lahko pa za dani ključ preverimo, če je prisoten v slovarju, in preberemo ali spremenimo njegovo pripadajočo vrednost.</p>
+<p align="justify">Slovar je podatkovna struktura, ki si jo lahko predstavljamo kot razširitev tabele in množice.  Slovar vzdržuje množico parov oblike &lt;<i>ključ</i>, <i>vrednost</i>&gt;, pri čemer so vsi ključi v slovarju različni.  Vsak par je zato enolično določen že s svojim ključem in vse operacije na njem izvajamo prek tega ključa. Ključe (in pripadajoče vrednosti) lahko dodajamo v slovar, brišemo iz njega, lahko pa za dani ključ preverimo, ali je prisoten v slovarju, in preberemo ali spremenimo njegovo pripadajočo vrednost.</p>
 
-<p align="justify">Slovar je zato zelo podoben množici, pravzaprav ga dobimo tako, da v množici ob vsakem elementu (ključu) shranimo še pripadajočo vrednost.  Po načinu uporabe pa je slovar zelo podoben tudi tabeli: pri tabeli imamo zbirko vrednosti, do katerih dostopamo prek indeksov, indeksi pa so majhna cela števila od 0 naprej.  Če poznamo indeks, lahko hitro in učinkovito preberemo ali zapišemo vrednost na tistem indeksu v tabeli. Pri slovarju je podobno, le da namesto indeksov za dostopanje do vrednosti uporabljamo ključe, ki so načeloma lahko poljubnega tipa, ne le majhna cela števila.  Ključi so lahko na primer nizi (npr. imena in priimki), velika cela števila (kot je npr. EMŠO, ki je 13-mestno število), datumi, urejene <i>n</i>-terice in tako naprej.</p>
+<p align="justify">Slovar je zato zelo podoben množici, pravzaprav ga dobimo tako, da v množici ob vsakem elementu (ključu) shranimo še pripadajočo vrednost.  Po načinu uporabe pa je slovar zelo podoben tudi tabeli: pri tabeli imamo zbirko vrednosti, do katerih dostopamo prek indeksov, indeksi pa so mala cela števila od 0 naprej.  Če poznamo indeks, lahko hitro in učinkovito preberemo ali zapišemo vrednost na tistem indeksu v tabeli. Pri slovarju je podobno, le da namesto indeksov za dostopanje do vrednosti uporabljamo ključe, ki so načeloma lahko poljubnega tipa, ne le majhna cela števila.  Ključi so lahko na primer nizi (npr. imena in priimki), velika cela števila (kot je npr. EMŠO, ki je 13-mestno število), datumi, urejene <i>n</i>-terice in tako naprej.</p>
 
-<p align="justify">Ime »slovar« izvira iz dejstva, da v tej strukturi lahko na podlagi ključa poiščemo pripadajočo vrednost, podobno kot v običajnem slovarju na podlagi besede poiščemo njeno razlago ali prevod v drug jezik.  Še eno ime za to podatkovno strukturo pa je »preslikava«, ker nam preslika ključ v pripadajočo vrednost podobno kot preslikave v matematiki.</p>
+<p align="justify">Ime »slovar« izvira iz dejstva, da v tej strukturi lahko na podlagi ključa poiščemo pripadajočo vrednost, podobno kot v običajnem slovarju na podlagi besede poiščemo njeno razlago ali prevod v drug jezik. Drugo ime za to podatkovno strukturo pa je »preslikava«, ker nam preslika ključ v pripadajočo vrednost, podobno kot preslikave v matematiki.</p>
 
-<h1>Tipične operacije nad slovarjem</h1>
+<h1>Tipične operacije na slovarjih</h1>
 
 <p align="justify">Mnogi programski jeziki podpirajo slovar kot del jezika ali standardne knjižnice. V pythonu je delo s slovarjem podobno kot s tabelo. Nov slovar ustvarimo tako, da njegove elemente navedemo v zavitih oklepajih:</p>
 <!-- Left column end -->
@@ -200,7 +200,7 @@ g = {}
 </pre>
 </p>
 
-<p align="justify">Spremenljivka <code>h</code> po tem primeru vsebuje slovar s tremi ključi, in sicer nizi <code>"ena"</code>, <code>"dve"</code> in <code>"tri"</code>. Pripadajoča vrednost pri ključu <code>"ena"</code> je celo število 1 in tako naprej.</p>
+<p align="justify">Spremenljivka <code>h</code> v tem primeru vsebuje slovar s tremi ključi, ki so nizi <code>"ena"</code>, <code>"dve"</code> in <code>"tri"</code>. Pripadajoča vrednost pri ključu <code>"ena"</code> je celo število 1 in tako naprej.</p>
 
 <p align="justify">Podobno kot pri množici tudi pri slovarju ključi nimajo nobenega posebnega vrstnega reda. V naslednjem primeru sta slovarja <code>h</code> in <code>g</code> na koncu enaka:</p>
 
@@ -220,9 +220,9 @@ print(h == g) # izpiše True</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Tudi če slovar izpišemo s <code>print</code>, se ključi ne izpišejo nujno v kakšnem posebnem vrstnem redu.</p>
+<p align="justify">Tudi če slovar izpišemo s <code>print</code>, se ključi ne izpišejo nujno v nekem posebnem vrstnem redu.</p>
 
-<p align="justify">Do vrednosti, ki v slovarju pripada določenemu ključu, lahko pridemo z oglatimi oklepaji. Na enak način lahko to vrednost tudi spremenimo:</p>
+<p align="justify">Vrednost, ki v slovarju pripada določenemu ključu, lahko preberemo z oglatimi oklepaji. Na enak način lahko to vrednost tudi spremenimo:</p>
 
 <div>
 <form>

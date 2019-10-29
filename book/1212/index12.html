@@ -181,7 +181,7 @@
 	<span class="label label-primary"><b>8</b></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Naslednja funkcija dobi kot parameter tabelo stavkov in pripravi slovar, v katerem za vsako besedo piše, v katerih stavkih se pojavlja. Ključ v slovarju je torej beseda, pripadajoča vrednost pa je seznam s številkami stavkov. Pri tej nalogi predpostavimo, da v stavkih ni ločil in podobnih stvari, tako da klic <code>stavek.split</code> zadošča za razbijanje stavka na besede.</p>
+<p align="justify">Naslednja funkcija dobi kot parameter tabelo stavkov in pripravi slovar, v katerem je za vsako besedo navedeno, v katerih stavkih se pojavlja. Ključ v slovarju je torej beseda, pripadajoča vrednost pa je seznam s številkami stavkov. Pri tej nalogi predpostavimo, da v stavkih ni ločil in podobnih stvari, tako da klic <code>stavek.split</code> zadošča za razbijanje stavka na besede.</p>
 <p>
 <div>
 <form>
@@ -215,10 +215,10 @@
 						<br />
 <!-- Right column start -->
 <div class="alert alert-info" role="alert">
-<p align="justify">(a) V funkciji na desni je napaka; poišči jo in jo odpravi.</p><br />
-<p align="justify">(b) V funkciji na desni se lahko v seznamu pojavitev neke besede pojavi ista številka stavka po večkrat, če je tista beseda po večkrat nastopila v tem stavku. Spremeni funkcijo tako, da bo takšne večkratne pojavitve ignoriral (torej da bo upošteval le prvo pojavitev posamezne besede v stavku).</p><br />
+<p align="justify">(a) V funkciji je napaka; poišči jo in jo odpravi.</p><br />
+<p align="justify">(b) V funkciji se lahko v seznamu pojavitev neke besede pojavi ista številka stavka večkrat, če je ta beseda večkrat nastopila v tem stavku. Spremeni funkcijo tako, da bo take večkratne pojavitve prezrla (torej da bo upoštevala le prvo pojavitev posamezne besede v stavku).</p><br />
 <p align="justify">(c) Napiši funkcijo <code>StevSopojavitev(s1, s2, kazalo)</code>, ki kot parametre dobi besedi <code>s1</code> in <code>s2</code> ter slovar, ki ga je vrnila funkcija <code>KazaloPojavitev</code>, in vrne število stavkov, v katerih nastopata tako beseda <code>s1</code> kot beseda <code>s2</code>.</p><br />
-<p align="justify">(d) Poišči na internetu kakšno dovolj dolgo besedilo, ga razbij na stavke in poišči deset parov besed, ki se največkrat pojavijo v istem stavku. To lahko narediš tako, da najprej pripraviš kazalo s funkcijo <code>KazaloPojavitev</code> in nato za vsak par besed v kazalu pokličeš <code>StevSopojavitev</code>. Druga možnost pa je, da greš za vsak stavek z dvema zankama po vseh parih različnih besed v stavku in v nekem slovarju povečaš števec sopojavitev za vsakega od teh parov besed (par besed lahko uporabiš kot ključ v slovarju na primer tako, da ju stakneš v en sam niz oblike <code>beseda1 + " " + beseda2</code>). Preizkusi oba pristopa; rezultati morajo biti enaki, kateri pristop pa je hitrejši?</p>
+<p align="justify">(d) Poišči na internetu dovolj dolgo besedilo, ga razbij na stavke in poišči deset parov besed, ki se največkrat pojavijo v istem stavku. To lahko narediš tako, da najprej pripraviš kazalo s funkcijo <code>KazaloPojavitev</code> in nato za vsak par besed v kazalu pokličeš <code>StevSopojavitev</code>. Druga možnost pa je, da se za vsak stavek z dvema zankama sprehodiš po vseh parih različnih besed v stavku in v nekem slovarju povečaš števec sopojavitev za vsakega od teh parov besed (par besed lahko uporabiš kot ključ v slovarju na primer tako, da ju stakneš v en sam niz oblike <code>beseda1 + " " + beseda2</code>). Preizkusi oba pristopa; rezultati morajo biti enaki, kateri pristop pa je hitrejši?</p>
 </div>
 <!-- Right column end -->
 					</div>
