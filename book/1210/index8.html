@@ -178,13 +178,13 @@
 
 <p align="justify"><b>Zlivanje</b> je postopek, s katerim dve naraščajoči zaporedji združimo v novo zaporedje, ki vsebuje vse elemente vhodnih zaporedij in je tudi sámo naraščajoče.</p>
 
-<p align="justify">Označimo vhodni zaporedji z <i>a</i> = [<i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, ..., <i>a</i><sub><i>n</i>-1</sub>] in <i>b</i> = [<i>b</i><sub>0</sub>, <i>b</i><sub>1</sub>, ..., <i>b</i><sub><i>m</i>-1</sub>]. V izhodnem (združenem) zaporedju, ki ga skušamo zdaj sestaviti, bo moral biti na začetku tisti element, ki je najmanjši izmed vseh elementov v <i>a</i> in <i>b</i> skupaj. Opazimo lahko, da sta za ta element le dve možnosti: <i>a</i><sub>0</sub> in <i>b</i><sub>0</sub>. To je posledica dejstva, da sta <i>a</i> in <i>b</i> urejeni; zato so vsi kasnejši elementi zaporedja <i>a</i> večji od <i>a</i><sub>0</sub>, vsi kasnejši elementi zaporedja <i>b</i> pa so večji od <i>b</i><sub>0</sub>, torej nobeden od njih ne bo primeren za najmanjši element združenega zaporedja.</p>
+<p align="justify">Označimo vhodni zaporedji z <i>a</i> = [<i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, ..., <i>a</i><sub><i>n</i>-1</sub>] in <i>b</i> = [<i>b</i><sub>0</sub>, <i>b</i><sub>1</sub>, ..., <i>b</i><sub><i>m</i>-1</sub>]. V izhodnem (združenem) zaporedju, ki ga skušamo zdaj sestaviti, bo moral biti na začetku tisti element, ki je najmanjši izmed vseh elementov v <i>a</i> in <i>b</i> skupaj. Opazimo lahko, da sta za ta element le dve možnosti: <i>a</i><sub>0</sub> in <i>b</i><sub>0</sub>. To je posledica dejstva, da sta <i>a</i> in <i>b</i> urejeni; zato so vsi poznejši elementi zaporedja <i>a</i> večji od <i>a</i><sub>0</sub>, vsi poznejši elementi zaporedja <i>b</i> pa so večji od <i>b</i><sub>0</sub>, torej nobeden od njih ne bo primeren za najmanjši element združenega zaporedja.</p>
 
 <p align="justify">Poglejmo torej, kateri od <i>a</i><sub>0</sub> in <i>b</i><sub>0</sub> je manjši, in ga premaknimo od tam na začetek izhodnega zaporedja. Vhodno zaporedje, iz katerega je ta element prišel, je s tem izgubilo svoj prvi element in je zdaj malo krajše kot prej. Zdaj lahko spet primerjamo začetna elementa obeh vhodnih zaporedij, premaknemo manjšega od njiju na konec izhodnega zaporedja in tako naprej, dokler ne premaknemo vseh elementov.</p>
 
-<p align="justify">Pri izvedbi tega postopka v praksi moramo paziti še na eno podrobnost. Če imamo zaporedja predstavljena s tabelami, je brisanje prvega elementa tabele ponavadi precej draga operacija (ker je treba vse kasnejše elemente premakniti za eno mesto nazaj po tabeli). Zato elementov raje ne brišemo, pač pa si v neki spremenljivki zapomnimo, koliko elementov smo iz tistega zaporedja že premaknili v izhodno zaporedje. Če smo recimo iz <i>a</i>-ja premaknili v izhodno zaporedje že <i>i</i> elementov, potem moramo v naslednji primerjavi gledati element <i>a</i>[<i>i</i> ] (in ne na primer <i>a</i>[0]).</p>
+<p align="justify">Pri izvedbi tega postopka v praksi moramo paziti še na eno podrobnost. Če imamo zaporedja predstavljena s tabelami, je brisanje prvega elementa tabele ponavadi precej zamudna operacija (ker je treba vse poznejše elemente premakniti za eno mesto nazaj po tabeli). Zato elementov raje ne brišemo, pač pa si v neki spremenljivki zapomnimo, koliko elementov smo iz tistega zaporedja že premaknili v izhodno zaporedje. Če smo recimo iz <i>a</i>-ja premaknili v izhodno zaporedje že <i>i</i> elementov, potem moramo v naslednji primerjavi obravnavati element <i>a</i>[<i>i</i> ] (in ne na primer <i>a</i>[0]).</p>
 
-<p align="justify">Oglejmo si konkreten primer: recimo, da imamo zaporedji:
+<p align="justify">Oglejmo si konkreten primer. Recimo, da imamo zaporedji:
 <pre>
 a = [5, 6, 8, 10] in b = [1, 3, 7, 9]
 </pre>
@@ -195,13 +195,13 @@ a = [5, 6, 8, 10] in b = [1, 3, 7, 9]
 						<br />
 <!-- Right column start -->
 <p align="justify">Na začetku torej primerjamo 5 (prvi element <i>a</i>-ja) in 1 (prvi element <i>b</i>-ja); ker je 
-1 manjše od 5, premaknemo 1 iz <i>b</i>-ja v izhodno zaporedje (recimo mu <i>c</i>). Tako dobimo:
+1 manj kot 5, premaknemo 1 iz <i>b</i>-ja v izhodno zaporedje (recimo mu <i>c</i>). Tako dobimo:
 <pre>
 a = [5, 6, 8, 10], b = [3, 7, 9], c = [1]
 </pre>
 </p>
 
-<p align="justify">Zdaj primerjamo 5 (prvi element <i>a</i>-ja) in 3 (prvi element <i>b</i>-ja); 3 je manjše od 5, zato premaknemo 3 iz <i>b</i> v izhodno zaporedje <i>c</i>:
+<p align="justify">Zdaj primerjamo 5 (prvi element <i>a</i>-ja) in 3 (prvi element <i>b</i>-ja); 3 je manj kot 5, zato premaknemo 3 iz <i>b</i> v izhodno zaporedje <i>c</i>:
 <pre>
 a = [5, 6, 8, 10], b = [7, 9], c = [1, 3]
 </pre>
@@ -222,7 +222,7 @@ a = [10], b = [], c = [1, 3, 5, 6, 7, 8, 9]
 </pre>
 </p>
 
-<p align="justify">Zdaj se je vhodno zaporedje <i>b</i> že izpraznilo, <i>a</i> pa še ne. To pomeni, da so vsi preostali elementi <i>a</i>-ja večji od vseh elementov, ki so bili kdaj v <i>b</i>-ju, zato moramo le še premakniti ta preostanek <i>a</i>-ja na konec izhodnega zaporedja. Tako dobimo združeno urejeno zaporedje:
+<p align="justify">Zdaj se je vhodno zaporedje <i>b</i> že izpraznilo, <i>a</i> pa še ne. To pomeni, da so vsi preostali elementi <i>a</i>-ja večji od vseh elementov, ki so bili kadarkoli v <i>b</i>-ju, zato moramo le še premakniti ta preostanek <i>a</i>-ja na konec izhodnega zaporedja. Tako dobimo združeno urejeno zaporedje:
 <pre>
 c = [1, 3, 5, 6, 7, 8, 9, 10]
 </pre>

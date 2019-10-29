@@ -263,9 +263,9 @@ UrejanjeZZlivanjem2(tabela)
 </pre>
 </p>
 <p align="justify">Rešitev (c):</p>
-<p align="justify">Funkcija bi prej ali slej prišla do zaporedja dolžine 1 in ga poskušala razbiti na levi del dolžine 0 in desni del dolžine 1. Prvega bi nato poskušala razbiti na levi del dolžine 0 in desni del dolžine 0, prvega od teh dveh nato ravno tako itd. itd. Program bi se sčasoma sesul, ker bi mu na skladu zmanjkalo pomnilnika za vse te vgnezdene klice funkcije.</p>
+<p align="justify">Funkcija bi prej ali slej prišla do zaporedja dolžine 1 in ga poskušala razbiti na levi del dolžine 0 in desni del dolžine 1. Prvega bi nato poskušala razbiti na levi del dolžine 0 in desni del dolžine 0, prvega od teh dveh nato ravno tako itd. Program bi se sčasoma sesul, ker bi mu na skladu zmanjkalo pomnilnika za vse te vgnezdene klice funkcije.</p>
 <p align="justify">Rešitev (d):</p>
-<p align="justify">Vidimo lahko, da časovna zahtevnost narašča malenkost hitreje kot linearno — za 10x večjo tabelo porabimo malenkost več kot 10x več časa. Ta razlika je posledica faktorja <i>log(n)</i> v časovni zahtevnosti (ki je <i>O(n &middot; log n)</i>).</p>
+<p align="justify">Vidimo lahko, da časovna zahtevnost narašča malenkost hitreje kot linearno – za 10-krat večjo tabelo porabimo malenkost več kot 10-krat več časa. Ta razlika je posledica faktorja <i>log(n)</i> v časovni zahtevnosti (ki je <i>O(n &middot; log n)</i>).</p>
 <p align="justify">Rešitev (e):</p>
 <p align="justify">
 <pre>
@@ -386,7 +386,7 @@ print(UrejanjeZZlivanjem(tabela))</textarea>
 
 <div class="alert alert-info" role="alert">
 <p align="justify">(a) Dopolni funkcijo <code>ZlijZaporedji</code> tako, da bo na začetku vsake iteracije izpisala vsebino tabele <i>a</i> od indeksa <i>i</i> naprej, tabele <i>b</i> od indeksa <i>j</i> naprej in celotno tabelo <i>c</i>, podobno kot smo pisali v primeru zgoraj.<br />
-(b) Preizkusi jo na nekaj primerih vhodnih zaporedij <i>a</i> in <i>b</i> in se prepričaj, da deluje pravilno. Ali deluje tudi, če se v vhodnih zaporedjih pojavlja po več enakih elementov?</p>
+(b) Preizkusi jo na nekaj primerih vhodnih zaporedij <i>a</i> in <i>b</i> ter se prepričaj, da deluje pravilno. Ali deluje tudi, če se v vhodnih zaporedjih pojavlja več enakih elementov?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
 </p>
@@ -398,8 +398,8 @@ print(UrejanjeZZlivanjem(tabela))</textarea>
 <p align="justify">(a) Dopolni funkcijo <code>UrejanjeZZlivanjem</code> tako, da na začetku izpiše vhodno zaporedje <code>a</code>, pred vrnitvijo iz funkcije pa izpiše še končno urejeno zaporedje.<br />
 (b) Preizkusi jo na nekaj primerih različno dolgih vhodnih zaporedij <i>a</i> in se prepričaj, da deluje pravilno.<br />
 (c) Kaj se zgodi, če pozabimo na začetku posebej obravnavati primer, ko je <code>n &lt;= 1</code>?<br />
-(d) Izmeri čas izvajanja funkcije (brez dodatnega izpisa iz točke (a)) na več različno dolgih vhodnih zaporedjih in ga primerjaj s časi, ki si jih izmeril(a) v prejšnjih razdelkih pri urejanju z izbiranjem in urejanju z vstavljanjem.<br />
-(e) Dopolni funkcijo <code>UrejanjeZZlivanjem</code> tako, da v neki globalni tabeli šteje, kolikokrat je bila poklicana s tabelami kakšne dolžine. Preizkusi funkcijo na kakšnem zaporedju, čigar dolžina je potenca števila 2, na primer <i>n</i> = 2 &middot; 2 &middot; 2 &middot; 2 &middot; 2 = 32 in podobno.  Opazuj, koliko klicev na kako dolgih tabelah pri tem nastane.</p>
+(d) Izmeri čas izvajanja funkcije (brez dodatnega izpisa iz točke (a)) na več različno dolgih vhodnih zaporedjih in ga primerjaj s časi, ki si jih izmeril(-a) v prejšnjih razdelkih pri urejanju z izbiranjem in urejanju z vstavljanjem.<br />
+(e) Dopolni funkcijo <code>UrejanjeZZlivanjem</code> tako, da v neki globalni tabeli šteje, kolikokrat je bila poklicana s tabelami neke dolžine. Preizkusi funkcijo na nekem zaporedju, katerega dolžina je potenca števila 2, na primer <i>n</i> = 2 &middot; 2 &middot; 2 &middot; 2 &middot; 2 = 32 in podobno.  Opazuj, koliko klicev na kako dolgih tabelah pri tem nastane.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution2"><span class="fa fa-check"></span> Rešitev</button>
 </p>

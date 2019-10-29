@@ -176,25 +176,25 @@
 <!-- Left column start -->
 <h1>Urejanje z vstavljanjem</h1>
 
-<p align="justify">Recimo, da imamo že neko urejeno zaporedje in hočemo vanj vstaviti nov element tako, da bo zaporedje ostalo urejeno. Na primer:
+<p align="justify">Recimo, da imamo že neko urejeno zaporedje in želimo vanj vstaviti nov element tako, da bo zaporedje ostalo urejeno. Na primer:
 <pre>
 [2, 5, 7, 8 | 3]
 </pre>
 </p>
 
-<p align="justify">Tu imamo torej urejeno zaporedje <code>[2, 5, 7, 8]</code>, na koncu pa je še element 3, ki bi ga radi vstavili na pravo mesto, tako da bo potem zaporedje kot celota urejeno. Element 3 si zapomnimo, njegovo celico v tabeli pa si za zdaj predstavljajmo kot prazno:
+<p align="justify">Tu imamo torej urejeno zaporedje <code>[2, 5, 7, 8]</code>, na koncu pa je še element 3, ki bi ga radi vstavili na ustrezno mesto, tako da bo potem zaporedje kot celota urejeno. Element 3 si zapomnimo, njegovo celico v tabeli pa si za zdaj predstavljajmo kot prazno:
 <pre>
 [2, 5, 7, 8, ☐]
 </pre>
 </p>
 
-<p align="justify">Če hočemo vstaviti element 3 v zaporedje tako, da bo le-to ostalo urejeno, moramo vse elemente, ki so večji od 3, premakniti za eno mesto naprej. To je koristno početi od desne proti levi.  Za začetek vidimo, da je 8 večje od 3, zato jo premaknimo naprej:
+<p align="justify">Če želimo vstaviti element 3 v zaporedje tako, da bo le-to ostalo urejeno, moramo vse elemente, ki so večji od 3, premakniti za eno mesto naprej. To je koristno početi od desne proti levi.  Za začetek vidimo, da je 8 več kot 3, zato ga premaknimo naprej:
 <pre>
 [2, 5, 7, ☐, 8]
 </pre>
 </p>
 
-<p align="justify">Tudi 7 je večje od 3 in jo moramo premakniti naprej:
+<p align="justify">Tudi 7 je več kot 3 in ga moramo premakniti naprej:
 <pre>
 [2, 5, ☐, 7, 8]
 </pre>
@@ -206,7 +206,7 @@
 </pre>
 </p>
 
-<p align="justify">Zdaj vidimo, da 2 <b>ni</b> večje od 3, zato moramo element 3 vstaviti za 2 in postopek vstavljanja je končan.  Dobili smo urejeno zaporedje:
+<p align="justify">Zdaj vidimo, da 2 <b>ni</b> več kot 3, zato moramo element 3 vstaviti za 2 in postopek vstavljanja je končan.  Dobili smo urejeno zaporedje:
 <pre>
 [2, 3, 5, 7, 8]
 </pre>
@@ -218,13 +218,13 @@
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Začnimo z nekim neurejenim zaporedjem, recimo <code>[5, 8, 7, 2, 3]</code>. Njegov prvi element sam zase si lahko predstavljamo kot <b>urejeno</b> zaporedje dolžine 1:
+<p align="justify">Začnimo z nekim neurejenim zaporedjem, recimo <code>[5, 8, 7, 2, 3]</code>. Njegov prvi element si lahko ločeno predstavljamo kot <b>urejeno</b> zaporedje dolžine 1:
 <pre>
 [5 | 8, 7, 2, 3]
 </pre>
 </p>
 
-<p align="justify">Navpična črta označuje mejo med urejenim in neurejenim delom. Tik za neurejenim delom pride element 8; če ga vstavimo v urejeni del, se le-ta podaljša v <code>[5, 8]</code> in naša tabela dobi obliko:
+<p align="justify">Navpična črta označuje mejo med urejenim in neurejenim delom. Tik za neurejenim delom je element 8; če ga vstavimo v urejeni del, se le-ta podaljša v <code>[5, 8]</code> in naša tabela dobi obliko:
 <pre>
 [5, 8 | 7, 2, 3]
 </pre>
@@ -242,7 +242,7 @@
 </pre>
 </p>
 
-<p align="justify">Končno vstavimo v urejeni del tabele še zadnji element, 3 — to vstavljanje je prav tisto, ki smo si ga malo prej ogledali podrobneje — in tabela je v celoti urejena:
+<p align="justify">Končno vstavimo v urejeni del tabele še zadnji element, 3 – to vstavljanje je prav tisto, ki smo si ga malo prej ogledali podrobneje – in tabela je v celoti urejena:
 <pre>
 [2, 3, 5, 7, 8]
 </pre>
