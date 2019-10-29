@@ -179,7 +179,7 @@
 						<h4 class="modal-title">Namig</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Namesto da 10-krat kopiraš skoraj isto kodo, si pomagaj z zanko. Zunanja zanka se torej sprehaja po številu vstavljanj, za vsako število vstavljanj pa ustvari tabelo in vanjo vstavi elemente (za to seveda potrebuješ še eno zanko).</p>
+						<p align="justify">Namesto da 10-krat kopiraš skoraj enako kodo, si pomagaj z zanko. Zunanja zanka se torej sprehaja po številu vstavljanj, za vsako število vstavljanj pa ustvari tabelo in vanjo vstavi elemente (za to seveda potrebuješ še eno zanko).</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -245,7 +245,7 @@ for i in range(1, 11):
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Število premikov izračunamo takole. Ko vstavljamo prvi element, nam ni treba premakniti ničesar. Ko na začetek tabele vstavljamo drugi element, moramo premakniti edini element, ki je že v tabeli. Da lahko vstavimo tretji element, moramo premakniti obstoječa dva elementa. Preden vstavimo <i>n</i>-ti element, moramo premakniti vseh <i>n</i> − 1 obstoječih elementov. Pri zaporednem vstavljanju n elementov na začetek tabele je torej skupno število premikov enako 0 + 1 + 2 + ... + (<i>n</i> − 1). Ta vsota je enaka ½<i>n</i>(<i>n</i> − 1). Če tega nisi vedel(-a), poskusi dokazati (npr. s popolno indukcijo).</p>
+						<p align="justify">Število premikov izračunamo takole. Ko vstavljamo prvi element, nam ni treba premakniti ničesar. Ko na začetek tabele vstavljamo drugi element, moramo premakniti edini element, ki je že v tabeli. Da lahko vstavimo tretji element, moramo premakniti obstoječa elementa. Preden vstavimo <i>n</i>-ti element, moramo premakniti vseh <i>n</i> − 1 obstoječih elementov. Pri zaporednem vstavljanju n elementov na začetek tabele je torej skupno število premikov enako 0 + 1 + 2 + ... + (<i>n</i> − 1). Ta vsota je enaka ½<i>n</i>(<i>n</i> − 1). Če tega nisi vedel(-a), poskusi dokazati (npr. s popolno indukcijo).</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -332,13 +332,13 @@ for i in range(1, 11):
 
 <p align="center"><img src="img/tabelaPrestavljanje.svg" onerror="this.src='tabelaPrestavljanje.png'" class="img-responsive" /></p>
 
-<p align="justify">Seveda to namesto nas naredi pythonova funkcija <code>insert</code>, a časovna zahtevnost zato ni nič manjša. Pri dodajanju na začetek potrebujemo točno <i>n</i> premikov, če je <i>n</i> število elementov v tabeli pred dodajanjem. Pri vstavljanju na druge položaje je število premikov manjše, vendar pa je v povprečju (preko vseh možnih položajev vstavljanja) še vedno premosorazmerno s številom elementov. Časovna zahtevnost vstavljanja na poljubno mesto je potemtakem <i>O</i>(<i>n</i>).</p>
+<p align="justify">Seveda to namesto nas naredi pythonova funkcija <code>insert</code>, a časovna zahtevnost zato ni nič manjša. Pri dodajanju na začetek potrebujemo točno <i>n</i> premikov, če je <i>n</i> število elementov v tabeli pred dodajanjem. Pri vstavljanju na druge položaje je število premikov manjše, vendar pa je v povprečju (prek vseh možnih položajev vstavljanja) še vedno premosorazmerno s številom elementov. Časovna zahtevnost vstavljanja na poljubno mesto je potemtakem <i>O</i>(<i>n</i>).</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
 <p align="justify">Ustvari prazno tabelo, nato pa vanjo 10.000-krat vstavi isto število (katerokoli), in to vedno na začetek tabele. Izmeri čas izvajanja. Nato ponovno ustvari prazno tabelo in na začetek tabele 20.000-krat vstavi isto število. Ponovno izmeri čas izvajanja. Nato ponovi vajo še za 30.000 vstavljanj, 40.000 vstavljanj itd., vse do 100.000 vstavljanj istega števila na začetek tabele. Na papir skiciraj graf porabe časa v odvisnosti od števila vstavljanj.</p>
-<p align="justify"><b>Opomba:</b> Program za merjenje časa zapiši v datoteko in ga poženi v terminalu na tvojem računalniku, ne v vgrajenem pythonovem tolmaču. Če je tvoj računalnik (pre)hiter in tudi 100 000 vstavljanj obdela v manj kot sekundi, ponovi svoj poskus z 100.000 vstavljanji in nato nadaljuj z 200.000, 300.000 itd. Če se tvoj računalnik že pri 10.000 vstavljanjih »muči« nekaj sekund, pa prični s 1000 vstavljanji in nato nadaljuj za 2000, 3000 itd.</p>
+<p align="justify"><b>Opomba:</b> Program za merjenje časa zapiši v datoteko in ga zaženi v terminalu svojega računalnika, ne v vgrajenem pythonovem tolmaču. Če je tvoj računalnik (pre)hiter in tudi 100.000 vstavljanj obdela v manj kot sekundi, ponovi svoj poskus z 100.000 vstavljanji in nato nadaljuj z 200.000, 300.000 itd. Če se tvoj računalnik že pri 10.000 vstavljanjih »muči« nekaj sekund, pa prični s 1000 vstavljanji in nato nadaljuj za 2000, 3000 itd.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#hint1"><span class="fa fa-question"></span> Namig</button>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1"><span class="fa fa-check"></span> Rešitev</button>
@@ -352,7 +352,7 @@ for i in range(1, 11):
 <h4>Vaja</h4>
 
 <div class="alert alert-danger" role="alert">
-<p align="justify">Ali znaš natančno izračunati skupno število premikov elementov v tabeli, potrebnih za <i>n</i> vstavljanj na začetek? Na primer, koliko premikov je potrebnih pri <i>n</i> = 5 zaporednih vstavljanjih na začetek?</p>
+<p align="justify">Ali znaš natančno izračunati skupno število premikov elementov v tabeli, potrebnih za <i>n</i> vstavljanj na začetek? Na primer koliko premikov je potrebnih pri <i>n</i> = 5 zaporednih vstavljanjih na začetek?</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution2"><span class="fa fa-check"></span> Rešitev</button>
 </p>

@@ -218,7 +218,7 @@
 <!-- Left column start -->
 <h1>*Primerjava tabele elementov in povezanega seznama</h1>
 
-<p align="justify">Odločitev za implementacijo zaporedja s tabelo elementov ali s povezanim seznamom je odvisna od operacij, ki jih želimo izvajati na zaporedju. Ugotovili smo, da je tabela učinkovita pri dostopanju do poljubnega elementa ter pri dodajanju in odvzemanju na koncu, a neučinkovita pri dodajanju in odvzemanju na drugih položajih. V nasprotju s tabelo je povezani seznam učinkovit pri odvzemanju in dodajanju na poljubnih položajih, njegova slabost pa se pokaže pri dostopu do elementov. Seznam je učinkovit za zaporeden dostop do elementov, torej po vrsti od začetnega do končnega elementa ali pa od končnega do začetnega, ne pa za <b>naključen</b> dostop — torej za dostop do elementa na poljubnem položaju neodvisno od prejšnjih dostopov. V takem primeru je potreben sprehod po seznamu do vozlišča na iskanem položaju, kar nam (v povprečju preko vseh možnih položajev) dá časovno zahtevnost <i>O(n)</i>.</p>
+<p align="justify">Odločitev za implementacijo zaporedja s tabelo elementov ali s povezanim seznamom je odvisna od operacij, ki jih želimo izvajati na zaporedju. Ugotovili smo, da je tabela učinkovita pri dostopanju do poljubnega elementa ter pri dodajanju in odvzemanju na koncu, a neučinkovita pri dodajanju in odvzemanju na drugih položajih. V nasprotju s tabelo je povezani seznam učinkovit pri odvzemanju in dodajanju na poljubnih položajih, njegova slabost pa se pokaže pri dostopu do elementov. Seznam je učinkovit za zaporeden dostop do elementov, torej po vrsti od začetnega do končnega elementa ali pa od končnega do začetnega, ne pa za <b>naključen</b> dostop – torej za dostop do elementa na poljubnem položaju neodvisno od prejšnjih dostopov. V takem primeru je potreben sprehod po seznamu do vozlišča na iskanem položaju, kar (v povprečju prek vseh možnih položajev) zahteva časovno zahtevnost <i>O(n)</i>.</p>
 
 <p align="justify">Primerjajmo časovne zahtevnosti posameznih operacij:</p>
 
@@ -281,11 +281,11 @@
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Če pri zaporedju, ki ga želimo implementirati, pričakujemo veliko dodajanj in odvzemanj na nekončnih mestih, je torej bolje izbrati povezani seznam. V nasprotnem primeru pa se tabela elementov v teoriji obnese enako dobro, v praksi pa zaradi manjše porabe pomnilniškega prostora in enostavnejših operacij celo bolje od povezanega seznama. Povezani seznam namreč potrebuje približno trikrat toliko prostora kot tabela z istim številom elementov, saj za vsak element potrebujemo še prostor za hranjenje indeksa njegovega naslednika in predhodnika.</p>
+<p align="justify">Če pri zaporedju, ki ga želimo implementirati, pričakujemo veliko dodajanj in odvzemanj na nekončnih mestih, je torej bolje izbrati povezani seznam. V nasprotnem primeru pa se tabela elementov v teoriji obnese enako dobro, v praksi pa zaradi manjše porabe pomnilniškega prostora in enostavnejših operacij celo bolje od povezanega seznama. Povezani seznam namreč potrebuje približno trikrat toliko prostora kot tabela z istim številom elementov, saj za vsak element potrebujemo tudi prostor za hranjenje indeksa njegovega naslednika in predhodnika.</p>
 
 <h1>Vrsta in sklad</h1>
  
-<p align="justify">Vrsta in sklad sta posebna primera zaporedij, ki nam v programiranju večkrat prideta prav. Vrsta je zaporedje, pri katerem se elementi dodajajo samo na koncu, odvzemajo pa samo na začetku. Predstavljamo si jo lahko kot vrsto pred blagajno, v katero se nihče ne vriva in iz katere nihče predčasno ne izstopa. Sklad pa je zaporedje, v katerem se elementi tako dodajajo kot odvzemajo samo na koncu. Predstavljamo si ga lahko kot skladovnico enakih krožnikov, saj krožnik vedno postavimo na vrh, z vrha pa ga tudi vzamemo. Zaradi te analogije imenujemo začetek sklada tudi <b>dno</b>, konec pa <b>vrh</b>.</p>
+<p align="justify">Vrsta in sklad sta posebna primera zaporedij, ki nam pri programiranju večkrat prideta prav. Vrsta je zaporedje, pri katerem se elementi dodajajo samo na koncu, odvzemajo pa samo na začetku. Predstavljamo si jo lahko kot vrsto pred blagajno, v katero se nihče ne vriva in iz katere nihče predčasno ne izstopa. Sklad pa je zaporedje, v katerem se elementi tako dodajajo kot odvzemajo samo na koncu. Predstavljamo si ga lahko kot skladovnico enakih krožnikov, saj krožnik vedno postavimo na vrh, z vrha pa ga tudi vzamemo. Zaradi te analogije imenujemo začetek sklada tudi <b>dno</b>, konec pa <b>vrh</b>.</p>
 
 <h4>Vaja</h4>
 

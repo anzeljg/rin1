@@ -326,17 +326,17 @@ if __name__ == '__main__':
 	<span class="label label-primary"><b>7</b></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Prioritetna vrsta je zbirka elementov s sledečimi operacijami:
+<p align="justify">Prioritetna vrsta je zbirka elementov s temi operacijami:
 <ul align="justify">
 	<li><code>Ustvari(pvrsta)</code>: Ustvari prazno prioritetno vrsto.</li>
-	<li><code>Dodaj(pvrsta, element)</code>: Doda element v prioritetno vrsto (ni važno, na kateri položaj).</li>
+	<li><code>Dodaj(pvrsta, element)</code>: Doda element v prioritetno vrsto (ni pomembno, na kateri položaj).</li>
 	<li><code>Odvzemi(pvrsta)</code>: Odstrani največji element iz vrste in ga vrne kot rezultat. Če je takih elementov več, ni pomembno, katerega od njih odstrani.</li>
 	<li><code>JePrazna(pvrsta)</code>: Vrne <code>True</code>, če je prioritetna vrsta prazna, sicer pa vrne <code>False</code>.</li>
 </ul>
 </p>
-<p align="justify">Na primer, če v prazno prioritetno vrsto dodamo elemente 50, 70, 20 in 60 in potem štirikrat zaporedoma kličemo funkcijo <code>Odvzemi</code>, bo prvi klic odstranil in vrnil element 70, drugi element 60, tretji element 50, četrti pa še element 20. Kljub svojemu imenu prioritetna vrsta ni vrsta. Pravzaprav niti zaporedje ni, saj vrstni red dodajanja elementov ni bistven.</p>
-<p align="justify">Če prioritetno vrsto implementiramo s pomočjo tabele, imamo dve možnosti: (1) dodajanje v času <i>O</i>(1) in odvzemanje v času <i>O</i>(<i>n</i>); (2) dodajanje v času <i>O</i>(<i>n</i>) in odvzemanje v času <i>O</i>(1). Obakrat je <i>n</i> število elementov v prioritetni vrsti. Sprogramiraj in preizkusi obe možni implementaciji!</p>
-<p align="justify"><b>Opomba:</b> Obstajajo tudi učinkovitejše, a bolj zapletene implementacije prioritetne vrste, v katerih tako dodajanje kot odvzemanje potrebujeta čas <i>O</i>(log <i>n</i>).</p>
+<p align="justify">Na primer, če v prazno prioritetno vrsto dodamo elemente 50, 70, 20 in 60 ter potem štirikrat zaporedoma kličemo funkcijo <code>Odvzemi</code>, bo prvi klic odstranil in vrnil element 70, drugi element 60, tretji element 50, četrti pa element 20. Kljub svojemu imenu prioritetna vrsta ni vrsta. Pravzaprav niti zaporedje ni, saj vrstni red dodajanja elementov ni bistven.</p>
+<p align="justify">Če prioritetno vrsto implementiramo s pomočjo tabele, imamo dve možnosti: (1) dodajanje v času <i>O</i>(1) in odvzemanje v času <i>O</i>(<i>n</i>); (2) dodajanje v času <i>O</i>(<i>n</i>) in odvzemanje v času <i>O</i>(1). V obeh primerih je <i>n</i> število elementov v prioritetni vrsti. Sprogramiraj in preizkusi obe možni implementaciji!</p>
+<p align="justify"><b>Opomba:</b> Obstajajo tudi učinkovitejše, a bolj zapletene implementacije prioritetne vrste, v katerih tako dodajanje kot odvzemanje zahtevata čas <i>O</i>(log <i>n</i>).</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution71"><span class="fa fa-check"></span> Rešitev (možnost 1)</button>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution72"><span class="fa fa-check"></span> Rešitev (možnost 2)</button>

@@ -186,7 +186,7 @@ ps = [[4,3,1], ['A', 0, 2], ['Z', 1, 4], ['M', 4, 0], ['I', 2, 3]]
 </pre>
 </p>
 
-<p align="justify">Glava pove, da je seznam sestavljen iz štirih vozlišč (<code>ps[0][0]</code>) in da se začetno vozlišče nahaja na indeksu 3 (<code>ps[0][1]</code>). Vozlišče na indeksu 3 hrani element <code>'M'</code>; to je torej začetni element zaporedja. Ker je vrednost <code>ps[3][1]</code> enaka 4, ima naslednje vozlišče indeks 4. Drugi element zaporedja (element na položaju 1) je torej <code>'I'</code>. Naslednje vozlišče ima indeks 2 (element <code>'Z'</code>), nato pa nas povezava vodi do vozlišča na indeksu 1 (element <code>'A'</code>). Ker velja <code>ps[1][1] == 0</code>, je to vozlišče končno. Prikazani seznam torej hrani zaporedje <code>⟨'M', 'I', 'Z', 'A'⟩</code>.</p>
+<p align="justify">Glava pove, da je seznam sestavljen iz štirih vozlišč (<code>ps[0][0]</code>) in da se začetno vozlišče nahaja na indeksu 3 (<code>ps[0][1]</code>). Vozlišče na indeksu 3 hrani element <code>'M'</code>; to je torej začetni element zaporedja. Ker je vrednost <code>ps[3][1]</code> enaka 4, ima naslednje vozlišče indeks 4. Drugi element zaporedja (element na položaju 1) je torej <code>'I'</code>. Naslednje vozlišče ima indeks 2 (element <code>'Z'</code>), nato pa nas povezava vodi do vozlišča na indeksu 1 (element <code>'A'</code>). Ker velja <code>ps[1][1] == 0</code>, je to vozlišče končno. Prikazani seznam torej hrani zaporedje <code>&lt;'M', 'I', 'Z', 'A'&gt;</code>.</p>
 
 <h4>Vaja</h4>
 
@@ -198,16 +198,16 @@ ps = [[4,3,1], ['A', 0, 2], ['Z', 1, 4], ['M', 4, 0], ['I', 2, 3]]
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Povezani seznam si marsikdaj lažje predstavljamo, če ga predočimo takole:</p>
+<p align="justify">Povezani seznam si marsikdaj lažje predstavljamo, če je prikazan tako:</p>
 
 <p align="center"><img src="img/povezaniSeznamPuscice.svg" onerror="this.src='povezaniSeznamPuscice.png'" class="img-responsive"></p>
 
-<p align="justify">Vozlišča na gornji sliki so urejena po <b>položajih</b>, ne po indeksih v tabeli. Puščica predstavlja indeks ciljnega vozlišča, križ pa indeks 0.</p>
+<p align="justify">Vozlišča na zgornji sliki so urejena po <b>položajih</b>, ne po indeksih v tabeli. Puščica predstavlja indeks ciljnega vozlišča, križ pa indeks 0.</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kakšno zaporedje znakov predstavlja sledeči povezani seznam?
+<p align="justify">Katero zaporedje znakov predstavlja spodnji povezani seznam?
 <pre>
 [[5, 3, 4], ['A', 4, 5], ['B', 5, 3], ['C', 2, 0], ['D', 0, 1], ['E', 1, 2]]
 </pre>
@@ -278,7 +278,7 @@ table#sez td input {
   <td class="cell"><input type="text" id="c24" name="c24" maxlength="1" size="1" onchange="checkList(this)"></td>
   <td class="cell"><input type="text" id="c25" name="c25" maxlength="1" size="1" onchange="checkList(this)"></td>
   <td class="cell"><input type="text" id="c26" name="c26" maxlength="1" size="1" onchange="checkList(this)"></td>
-  <td align="left" style="border-bottom:1px solid #D9EDF7 !important">&nbsp;&nbsp;indeksi naslednikov</td>
+  <td align="left" style="border-bottom:1px solid #D9EDF7 !important">&nbsp;&nbsp;indeksi predhodnikov</td>
   <!-- This is hack: in order to remove black bottom border recolor it to the background color (= Bootstrap info class) -->
 </tr>
 <tr align="center">

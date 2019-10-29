@@ -299,7 +299,7 @@ def JePrazen(sklad):
 def Izpisi(sklad):
   print(sklad)
 
-# Ta funkcija se izvede, če datoteko poženemo
+# Ta funkcija se izvede, če datoteko zaženemo
 # kot samostojen program.
 def main():
   sklad = Ustvari()
@@ -366,7 +366,7 @@ if __name__ == '__main__':
 
 <div class="alert alert-info" role="alert">
 <p align="justify">(a) Dopolni modul <code>sklad.py</code> s funkcijo <code>Vrh</code>, ki vrne vrh sklada, a ga ne odvzame s sklada.</p>
-<p align="justify">(b) Dopolni modul <code>sklad.py</code> s funkcijo <code>Zamenjaj</code>, ki zamenja element na vrhu sklada z elementom pod njim. Na primer, sklad ⟨10, 20, 30, 40, 50⟩ se po opisani zamenjavi spremeni v sklad ⟨10, 20, 30, 50, 40⟩.</p>
+<p align="justify">(b) Dopolni modul <code>sklad.py</code> s funkcijo <code>Zamenjaj</code>, ki zamenja element na vrhu sklada z elementom pod njim. Na primer, sklad &lt;10, 20, 30, 40, 50&gt; se po opisani zamenjavi spremeni v sklad &lt;10, 20, 30, 50, 40&gt;.</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1a"><span class="fa fa-check"></span> Rešitev (a)</button>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution1b"><span class="fa fa-check"></span> Rešitev (b)</button>
@@ -381,7 +381,7 @@ if __name__ == '__main__':
 <p align="justify">Napiši funkcijo <code>Oklepaji(niz)</code>, ki sprejme niz, sestavljen iz okroglih, oglatih in zavitih oklepajev, in vrne <code>True</code>, če so vsi oklepaji zaključeni in pravilno gnezdeni, sicer pa vrne <code>False</code>. Na primer, za nize <code>'(())'</code>, <code>'[][]'</code> in <code>'[(){[]}]'</code> naj funkcija vrne <code>True</code>, za nize <code>'(()'</code>, <code>'[]]['</code>, <code>'{}}'</code> in <code>'[(){[}]]'</code> pa <code>False</code>.</p>
 </div>
 
-<p align="justify">Nalogo, ki se morda zdi zahtevna, brez večjih težav rešimo s skladom. Ustvarimo prazen sklad, nato pa se sprehodimo po znakih v nizu. Ko naletimo na predklepaj, ga dodamo na sklad. Ko naletimo na zaklepaj, odstranimo vrhnji predklepaj s sklada. Če se ta predklepaj ujema s pravkar prebranim zaklepajem, nadaljujemo z naslednjim znakom niza, sicer pa postopek takoj zaključimo in vrnemo <code>False</code>. Če pridemo do konca niza, preverimo, ali je sklad prazen; če je, vrnemo <code>True</code>, sicer pa vrnemo <code>False</code>.</p>
+<p align="justify">Nalogo, ki se morda zdi zahtevna, brez večjih težav rešimo s skladom. Ustvarimo prazen sklad, nato pa se sprehodimo po znakih v nizu. Ko naletimo na predklepaj, ga dodamo na sklad. Ko naletimo na zaklepaj, odstranimo vrhnji predklepaj s sklada. Če se ta predklepaj ujema s pravkar prebranim zaklepajem, nadaljujemo z naslednjim znakom niza, sicer pa postopek takoj končamo in vrnemo <code>False</code>. Če pridemo do konca niza, preverimo, ali je sklad prazen; če je, vrnemo <code>True</code>, sicer pa vrnemo <code>False</code>.</p>
 </div>
 <!-- Right column end -->
 					</div>

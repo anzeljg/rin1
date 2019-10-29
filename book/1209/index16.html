@@ -244,9 +244,9 @@
 </table>
 </p>
 
-<p align="justify">V primeru niza <code>'[(){[}]]'</code> pa bi se postopek zaključil že pri koraku (6), saj se prebrani zaklepaj <code>}</code> ne bi ujemal s predklepajem <code>[</code>, ki bi ga v tem koraku odvzeli s sklada.</p>
+<p align="justify">V primeru niza <code>'[(){[}]]'</code> pa bi se postopek končal že pri koraku (6), saj se prebrani zaklepaj <code>}</code> ne bi ujemal s predklepajem <code>[</code>, ki bi ga v tem koraku odvzeli s sklada.</p>
 
-<p align="justify">Zakaj opisana logika deluje? Zato, ker se na skladu vedno nahajajo tisti predklepaji, ki še niso zaključeni, in to po vrsti od najbolj zunanjega do najbolj notranjega (če gledamo od dna do vrha sklada). Na vrhu sklada se torej nahaja tisti predklepaj, ki ga moramo najprej zaključiti. Preveri sam(-a)!</p>
+<p align="justify">Zakaj opisana logika deluje? Zato, ker se na skladu vedno nahajajo tisti predklepaji, ki še niso zaključeni, in to po vrsti od skrajnega zunanjega do skrajnega notranjega (če gledamo od dna do vrha sklada). Na vrhu sklada se torej nahaja tisti predklepaj, ki ga moramo najprej zaključiti. Preveri sam(-a)!</p>
 
 <p align="justify">Zapišimo funkcijo <code>Oklepaji</code> skupaj s pomožno funkcijo <code>SeUjema</code> in kodo za preverjanje v datoteko <code>oklepaji.py</code>:</p>
 <!-- Left column end -->

@@ -176,12 +176,12 @@
 <!-- Left column start -->
 <h1>Implementacija s tabelo elementov</h1>
 
-<p align="justify">Zaporedje lahko na enostaven in naraven način predstavimo (implementiramo) s tabelo njegovih elementov. Elemente zaporedja v tabelo preprosto zapišemo po vrsti, potem pa do njih dostopamo s pomočjo indeksov (prvi element ima indeks 0, drugi 1 itd.). Recimo, zaporedje z elementi <code>'O'</code>, <code>'D'</code>, <code>'E'</code> in <code>'R'</code> predstavimo s tabelo <code>['O', 'D', 'E', 'R']</code>. Vrstni red elementov v tabeli je seveda natančno določen, prav tako pa se elementi v njej lahko ponavljajo. Tabela elementov torej podpira obe ključni lastnosti zaporedja. Ker smo najpomembnejše operacije za delo s tabelami že spoznali, jih s pomočjo naslednje naloge zgolj na hitro ponovimo:</p>
+<p align="justify">Zaporedje lahko na enostaven in naraven način predstavimo (implementiramo) s tabelo njegovih elementov. Elemente zaporedja v tabelo preprosto zapišemo po vrsti, potem pa do njih dostopamo s pomočjo indeksov (prvi element ima indeks 0, drugi 1 itd.). Recimo zaporedje z elementi <code>'O'</code>, <code>'D'</code>, <code>'E'</code> in <code>'R'</code> predstavimo s tabelo <code>['O', 'D', 'E', 'R']</code>. Vrstni red elementov v tabeli je seveda natančno določen, prav tako pa se elementi v njej lahko ponavljajo. Tabela elementov torej podpira obe ključni lastnosti zaporedja. Ker smo najpomembnejše operacije za delo s tabelami že spoznali, jih s pomočjo naslednje naloge zgolj na hitro ponovimo:</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kaj izpiše sledeči program? Nalogo najprej reši na papir, nato pa rezultat preveri s pomočjo interaktivnega tolmača:</p>
+<p align="justify">Kaj izpiše spodnji program? Nalogo najprej reši na papir, nato pa rezultat preveri s pomočjo interaktivnega tolmača:</p>
 <p>
 <div>
 <form>
@@ -226,13 +226,13 @@ print(t)</textarea>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Kako učinkovite so posamezne operacije? Njihova časovna zahtevnost je odvisna od predstavitve tabele v računalnikovem pomnilniku. Ta pa je sila enostavna: v pomnilniku so namreč elementi tabele nanizani drug za drugim, vsi pa zavzemajo enako količino pomnilniškega prostora (npr. <i>b</i> bajtov). Če poznamo pomnilniški naslov prvega elementa tabele (npr. <i>p</i>), potem vemo, da se element z indeksom <i>i</i> nahaja na naslovu <i>p</i> + <i>i</i> · <i>b</i>. Za lažjo predstavo je na sledeči sliki prikazan primer za <i>p</i> = 200 in <i>b</i> = 8:</p>
+<p align="justify">Kako učinkovite so posamezne operacije? Njihova časovna zahtevnost je odvisna od predstavitve tabele v računalnikovem pomnilniku. Ta pa je sila enostavna: v pomnilniku so namreč elementi tabele nanizani eden za drugim, vsi pa zavzemajo enako količino pomnilniškega prostora (npr. <i>b</i> bajtov). Če poznamo pomnilniški naslov prvega elementa tabele (npr. <i>p</i>), potem vemo, da se element z indeksom <i>i</i> nahaja na naslovu <i>p</i> + <i>i</i> · <i>b</i>. Za lažjo predstavo je na spodnji sliki prikazan primer za <i>p</i> = 200 in <i>b</i> = 8:</p>
 
 <p align="center"><img src="img/tabelaPomnilnik.svg" onerror="this.src='tabelaPomnilnik.png'" width="80%" class="img-responsive"></p>
 
 <p align="justify">Pomnilniški naslov elementa z indeksom i se vedno izračuna s preprostim množenjem in seštevanjem, ne glede na trenutno število elementov v tabeli. To pomeni, da je časovna zahtevnost operacije dostopa do posameznega elementa tabele (torej operacije <code>tabela[indeks]</code>) enaka <i>O</i>(1).</p>
 
-<p align="justify">Python poleg samih elementov tabele hrani tudi število elementov (dolžino tabele), kar pomeni, da se funkcija <code>len</code> prav tako izvrši v času <i>O</i>(1). Tudi časovna zahtevnost dodajanja na konec tabele je neodvisna od števila elementov v tabeli, saj se pomnilniški naslov, kamor se doda novi element, izračuna enostavno kot <i>p</i> + <i>n</i> · <i>b</i>, kjer je <i>n</i> trenutno število elementov. (Python za tabelo vnaprej rezervira določen del pomnilniškega prostora. Ko se ta prostor napolni, mora rezervirati nov, večji kos prostora in elemente tabele prekopirati vanj. Ta operacija traja <i>O</i>(<i>n</i>) časa, vendar pa je razmeroma redko potrebna, zato je povprečna časovna zahtevnost dodajanja elementov na konec tabele še vedno enaka <i>O</i>(1).)</p>
+<p align="justify">Python poleg samih elementov tabele hrani tudi število elementov (dolžino tabele), kar pomeni, da se funkcija <code>len</code> prav tako izvrši v času <i>O</i>(1). Tudi časovna zahtevnost dodajanja na konec tabele je neodvisna od števila elementov v tabeli, saj se pomnilniški naslov, kamor se doda novi element, izračuna enostavno kot <i>p</i> + <i>n</i> · <i>b</i>, pri čemer je <i>n</i> trenutno število elementov. (Python za tabelo vnaprej rezervira določen del pomnilniškega prostora. Ko se ta prostor zapolni, mora rezervirati nov, večji del prostora in elemente tabele prekopirati vanj. Ta operacija traja <i>O</i>(<i>n</i>) časa, vendar pa je razmeroma redko potrebna, zato je povprečna časovna zahtevnost dodajanja elementov na konec tabele še vedno enaka <i>O</i>(1).)</p>
 
 <p align="justify">Povsem drugače pa je z dodajanjem na začetku ali sredini, saj je treba v ta namen vse elemente od položaja vstavljanja do konca tabele prestaviti za eno mesto v desno. Na primer, če želimo na začetek tabele znakov <code>['O', 'D', 'E', 'R']</code> vstaviti znak <code>'M'</code>, potrebujemo štiri premike (glej sliko na naslednji strani!).</p>
 <!-- Right column end -->

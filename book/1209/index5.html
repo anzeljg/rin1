@@ -180,7 +180,7 @@
 
 <p align="justify">Kot smo videli, lahko zaporedje neposredno predstavimo s tabelo njegovih elementov, slabost te implementacije pa sta neučinkoviti operaciji vstavljanja in odstranjevanja elementov na nekončnem mestu. V tem razdelku si bomo ogledali implementacijo zaporedja, ki to slabost odpravlja.</p>
 
-<p align="justify">Z izrazom <b>položaj</b> bomo odslej označevali mesto v zaporedju. Domenimo se, da ima prvi element položaj 0, drugi položaj 1 itd. Recimo, v zaporedju z elementi <code>'O'</code>, <code>'D'</code>, <code>'E'</code> in <code>'R'</code> se na položaju 0 nahaja element <code>'O'</code>, na položaju 1 element <code>'D'</code> itd. Element na položaju 0 bomo imenovali tudi <b>začetni element zaporedja</b>, elementu na zadnjem položaju (torej na položaju, ki je za 1 manjši od dolžine zaporedja) pa bomo rekli <b>končni element zaporedja</b>. Če zaporedje predstavimo s tabelo njegovih elementov, je indeks elementa v tabeli enak kar položaju elementa v zaporedju.</p>
+<p align="justify">Z izrazom <b>položaj</b> bomo odslej označevali mesto v zaporedju. Domenimo se, da ima prvi element položaj 0, drugi položaj 1 itd. Recimo v zaporedju z elementi <code>'O'</code>, <code>'D'</code>, <code>'E'</code> in <code>'R'</code> se na položaju 0 nahaja element <code>'O'</code>, na položaju 1 element <code>'D'</code> itd. Element na položaju 0 bomo imenovali tudi <b>začetni element zaporedja</b>, elementu na zadnjem položaju (torej na položaju, ki je za 1 manjši od dolžine zaporedja) pa bomo rekli <b>končni element zaporedja</b>. Če zaporedje predstavimo s tabelo njegovih elementov, je indeks elementa v tabeli enak kar položaju elementa v zaporedju.</p>
 
 <p align="center"><img src="img/zaporedje.svg" onerror="this.src='zaporedje.png'" class="img-responsive"></p>
 
@@ -194,7 +194,7 @@
 
 <h2>Predstavitev povezanega seznama v pythonu</h2>
 
-<p align="justify">Povezani seznam je možno sprogramirati na več načinov. Izbrali bomo možnost, ki najbolj ustreza našemu trenutnemu znanju. Povezani seznam bomo predstavili s <b>tabelo vozlišč</b>. Vsako vozlišče je tabela s tremi elementi. Vozlišče na indeksu 0, imenovano <b>glava</b>, vsebuje
+<p align="justify">Povezani seznam je možno sprogramirati na več načinov. Izbrali bomo možnost, ki najbolj ustreza našemu trenutnemu znanju. Povezani seznam bomo predstavili s <b>tabelo vozlišč</b>. Vsako vozlišče je tabela s tremi elementi. Vozlišče na indeksu 0, imenovano <b>glava</b>, vsebuje:
 <ul align="justify">
 	<li>število elementov zaporedja;</li>
 	<li>indeks <b>začetnega vozlišča</b> (vozlišča, ki hrani začetni element zaporedja);</li>
@@ -202,7 +202,7 @@
 </ul>
 </p>
 
-<p align="justify">Če je seznam prazen, so vsi trije elementi glave enaki 0. Vsako izmed preostalih vozlišč pa vsebuje</p>
+<p align="justify">Če je seznam prazen, so vsi trije elementi glave enaki 0. Vsako izmed preostalih vozlišč pa vsebuje:</p>
 <ul align="justify">
 	<li>enega od elementov zaporedja;</li>
 	<li>indeks vozlišča, ki hrani naslednji element v zaporedju (0, če vozlišče nima naslednika);</li>

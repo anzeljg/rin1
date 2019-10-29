@@ -180,7 +180,7 @@
 						<h4 class="modal-title">Namig</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Spomni se na učno enoto o osnovnih pojmih algoritmike, kjer si prav tako množil(-a) s pomočjo seštevanja.</p>
+						<p align="justify">Spomni se učne enote o <a href="../1207/index.html">osnovnih pojmih algoritmike</a>, pri kateri si prav tako množil(-a) s pomočjo seštevanja.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -236,7 +236,7 @@ print(mnozenje(6, 3))
 <!-- Left column start -->
 <h1>Pythonov modul</h1>
 
-<p align="justify">V tej učni enoti se bomo prvič srečali s pythonovimi moduli. Modul je pythonova datoteka, ki je prvenstveno namenjena uvažanju v druge pythonove datoteke, ne samostojnemu zaganjanju. Če modul uvozimo, lahko kličemo funkcije, ki so zapisane v njem. Modul nam tako omogoča, da iste funkcije kličemo v več različnih pythonovih datotekah (samostojnih programih ali drugih modulih). Oglejmo si preprost primer. V datoteko <code>matematika.py</code> zapišimo sledeči funkciji:
+<p align="justify">V tej učni enoti se bomo prvič srečali s pythonovimi moduli. Modul je pythonova datoteka, ki je prvenstveno namenjena uvažanju v druge pythonove datoteke, ne samostojnemu zaganjanju. Če modul uvozimo, lahko kličemo funkcije, ki so zapisane v njem. Modul nam tako omogoča, da iste funkcije kličemo v več različnih pythonovih datotekah (samostojnih programih ali drugih modulih). Oglejmo si preprost primer. V datoteko <code>matematika.py</code> zapišimo ti funkciji:
 <pre>
 def vsota(a, b):
   return a + b
@@ -246,7 +246,7 @@ def razlika(a, b):
 </pre>
 </p>
 
-<p align="justify">V datoteko <code>test.py</code>, ki se mora nahajati v isti mapi kot datoteka <code>matematika.py</code>, pa zapišimo sledeče stavke:
+<p align="justify">V datoteko <code>test.py</code>, ki se mora nahajati v isti mapi kot datoteka <code>matematika.py</code>, pa zapišimo te stavke:
 <pre>
 # Uvozimo modul matematika.py
 import matematika
@@ -256,7 +256,7 @@ print(matematika.razlika(7, 2))
 </pre>
 </p>
 
-<p align="justify">Če program <code>test.py</code> poženemo, se seveda izpišeta števili 7 in 5.</p>
+<p align="justify">Če program <code>test.py</code> zaženemo, se seveda izpišeta števili 7 in 5.</p>
 
 <p align="justify">Stavek <code>import</code> ima več možnih oblik. Oblika
 <pre>
@@ -291,7 +291,7 @@ def main():
 
 if __name__ == '__main__':
   # Ta pogoj je izpolnjen samo v primeru, če
-  # datoteko poženemo kot samostojen program.
+  # datoteko zaženemo kot samostojen program.
   main()</textarea>
 </p>
 <p>
@@ -303,7 +303,7 @@ if __name__ == '__main__':
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Če datoteko <code>matematika.py</code> poženemo, se izvede funkcija <code>main</code>, s pomočjo katere lahko preverimo delovanje funkcij <code>vsota</code> in <code>razlika</code>. Modul pa še vedno lahko uvozimo v neko drugo datoteko. V tem primeru se funkcija <code>main</code> ne bo izvedla, razen če jo pokličemo.</p>
+<p align="justify">Če datoteko <code>matematika.py</code> zaženemo, se izvede funkcija <code>main</code>, s pomočjo katere lahko preverimo delovanje funkcij <code>vsota</code> in <code>razlika</code>. Modul pa še vedno lahko uvozimo v neko drugo datoteko. V tem primeru se funkcija <code>main</code> ne bo izvedla, razen če jo pokličemo.</p>
 
 <h4>Vaja</h4>
 

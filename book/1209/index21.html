@@ -302,14 +302,14 @@ if __name__ == '__main__':
 	<span class="fa fa-star pull-right"></span>
 	<span class="fa fa-star pull-right"></span>
 </p>
-<p align="justify">Vrsto (navadno, ne prioritetno), ki vsebuje največ <i>M</i> − 1 elementov, lahko učinkovito predstavimo s tabelo dolžine <i>M</i>, če si pomagamo z dvema dodatnima spremenljivkama (recimo <i>z</i> in <i>k</i>). Spremenljivka <i>z</i> podaja indeks začetnega, spremenljivka <i>k</i> pa indeks končnega elementa vrste v tabeli. Ko vrsto izdelamo, postavimo obe spremenljivki na 0, ko elemente dodajamo in odvzemamo, pa se ravnamo po sledečih pravilih:
+<p align="justify">Vrsto (navadno, ne prioritetno), ki vsebuje največ <i>M</i> − 1 elementov, lahko učinkovito predstavimo s tabelo dolžine <i>M</i>, če si pomagamo z dodatnima spremenljivkama (recimo <i>z</i> in <i>k</i>). Spremenljivka <i>z</i> podaja indeks začetnega, spremenljivka <i>k</i> pa indeks končnega elementa vrste v tabeli. Ko vrsto izdelamo, postavimo spremenljivki na 0, ko elemente dodajamo in odvzemamo, pa se ravnamo po teh pravilih:
 <ul align="justify">
 	<li>Element dodamo v vrsto tako, da ga v tabeli shranimo na indeks <i>k</i>, nato pa spremenljivko <i>k</i> povečamo za 1. Če spremenljivka postane enaka <i>M</i>, jo postavimo na 0.</li>
 	<li>Iz vrste odstranimo element enostavno tako, da spremenljivko <i>z</i> povečamo za 1. Če spremenljivka postane enaka <i>M</i>, jo postavimo na 0.</li>
 </ul>
 </p>
 <p align="justify">Če velja <i>k</i> &gt; <i>z</i>, potem so elementi vrste v tabeli shranjeni na indeksih <i>z</i>, <i>z</i> + 1, ..., <i>k</i> − 1. Če velja <i>k</i> &lt; <i>z</i>, potem so elementi vrste shranjeni na indeksih <i>z</i>, <i>z</i> + 1, ..., <i>M</i>, 0, 1, ..., <i>k</i> − 1. Če pa velja <i>k</i> = <i>z</i>, je vrsta prazna.</p>
-<p align="justify">Napiši in preizkusi modul <code>vrstaKroznaTabela.py</code>, v katerem je vrsta implementirana na opisani način — s <b>krožno tabelo</b>, kot temu včasih rečemo. Vrsto predstavi s tabelo <code>[<i>t</i>, <i>z</i>, <i>k</i>]</code>, kjer je <i>t</i> tabela, ki vsebuje podatke vrste, <i>z</i> in <i>k</i> pa sta zgoraj opisani spremenljivki. Funkcija <code>Ustvari</code> mora kot svoj parameter sprejeti maksimalno možno število elementov v vrsti (<i>M</i> − 1).</p>
+<p align="justify">Napiši in preizkusi modul <code>vrstaKroznaTabela.py</code>, v katerem je vrsta implementirana na opisani način – s <b>krožno tabelo</b>, kot to včasih imenujemo. Vrsto predstavi s tabelo <code>[<i>t</i>, <i>z</i>, <i>k</i>]</code>, pri čemer je <i>t</i> tabela, ki vsebuje podatke vrste, <i>z</i> in <i>k</i> pa sta zgoraj opisani spremenljivki. Funkcija <code>Ustvari</code> mora kot svoj parameter sprejeti največje mogoče število elementov v vrsti (<i>M</i> − 1).</p>
 <p>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#solution8"><span class="fa fa-check"></span> Rešitev</button>
 </p>

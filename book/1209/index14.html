@@ -227,9 +227,9 @@ Sklad ima povsem enakovreden nabor operacij.</p>
 
 <p align="justify">Ker sta vrsta in sklad posebna primera zaporedja, ju lahko implementiramo s tabelo elementov ali pa s povezanim seznamom. Če vrsto implementiramo s tabelo, bo dodajanje učinkovito, odvzemanje pa ne. (Zakaj?) Zato vrsto raje implementiramo s povezanim seznamom. Pri skladu pa elemente tako dodajamo kot odvzemamo samo na koncu. Za ti dve operaciji sta obe implementaciji učinkoviti, zaradi enostavnosti pa se raje odločimo za tabelo.</p>
 
-<p align="justify">Funkcije za delo z vrsto in skladom bomo zapisali v modula <code>vrsta.py</code> in <code>sklad.py</code>. Ker vrsto implementiramo s povezanim seznamom, v modulu <code>vrsta.py</code> uvozimo modul <code>povezaniSeznam.py</code>. Če si razdelek o povezanem seznamu preskočil(-a), nič hudega. Za razumevanje funkcij v modulu ti ni treba poznati podrobnosti zgradbe in operacij povezanega seznama.</p>
+<p align="justify">Funkcije za obdelavo vrste in sklada bomo zapisali v modula <code>vrsta.py</code> in <code>sklad.py</code>. Ker vrsto implementiramo s povezanim seznamom, v modulu <code>vrsta.py</code> uvozimo modul <code>povezaniSeznam.py</code>. Če si razdelek o povezanem seznamu preskočil(-a), nič hudega. Za razumevanje funkcij v modulu ti ni treba poznati podrobnosti zgradbe in operacij povezanega seznama.</p>
 
-<p align="justify">Datoteki <code>vrsta.py</code> in <code>sklad.py</code> izgledata takole:</p>
+<p align="justify">Datoteki <code>vrsta.py</code> in <code>sklad.py</code> sta videti takole:</p>
 
 <h4>Simulacija</h4>
 
@@ -278,7 +278,7 @@ def JePrazna(vrsta):
 def Izpisi(vrsta):
   print(sez.Zaporedje(vrsta))
 
-# Ta funkcija se izvede, če datoteko poženemo
+# Ta funkcija se izvede, če datoteko zaženemo
 # kot samostojen program.
 def main():
   vrsta = Ustvari()
