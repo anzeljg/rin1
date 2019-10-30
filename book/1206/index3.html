@@ -226,9 +226,9 @@ Znaki(32, 127)
 <!-- Left column start -->
 <h1>Znaki in urejenost nizov</h1>
 
-<p align="justify">Posamezni znak niza ima tudi svojo številsko kodo. Med znakom (v resnici nizom dolžine 1) in njegovo kodo lahko pretvarjamo s funkcijama <code>chr</code> in <code>ord</code>.</p>
+<p align="justify">Posamezni znak niza ima tudi svojo številsko kodo. Med znakom (pravzaprav nizom dolžine 1) in njegovo kodo lahko pretvarjamo s funkcijama <code>chr</code> in <code>ord</code>.</p>
 
-<p align="justify">To, katera koda pripada kateremu znaku, je določeno s standardom Unicode, o katerem bomo izvedeli več v enem od kasnejših poglavij tega učbenika.</p>
+<p align="justify">To, katera koda pripada kateremu znaku, je določeno s standardom Unicode, o katerem bomo izvedeli več v enem od kasnejših poznejših tega učbenika.</p>
 
 <div>
 <form>
@@ -263,7 +263,7 @@ print(chr(65))  # izpiše: A</textarea>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">S pomočjo teh številskih kod znakov lahko nize postavimo v nekakšen vrstni red, ki mu pravimo <b>leksikografski vrstni red</b>. V tem vrstnem redu primerjamo dva niza tako, da primerjamo istoležne znake obeh nizov, dokler ne naletimo na prvo neujemanje; tisti niz, ki ima tam znak z manjšo kodo, je v leksikografskem vrstnem redu pred drugim nizom. (Če sta niza različno dolga in pridemo prej do konca krajšega niza kot do kakšnega neujemanja, pa rečemo, da je krajši niz v leksikografskem vrstnem redu pred daljšim.)</p>
+<p align="justify">S pomočjo teh številskih kod znakov lahko nize postavimo v nekakšen vrstni red, ki mu pravimo <b>leksikografski vrstni red</b>. V tem vrstnem redu primerjamo dva niza tako, da primerjamo istoležne znake obeh nizov, dokler ne naletimo na prvo neujemanje; tisti niz, ki ima tam znak z manjšo kodo, je v leksikografskem vrstnem redu pred drugim nizom. (Če sta niza različno dolga in pridemo prej do konca krajšega niza kot do morebitnega neujemanja, pa določimo, da je krajši niz v leksikografskem vrstnem redu pred daljšim.)</p>
 
 <p align="justify">Nize lahko glede na ta vrstni red primerjamo z operatorji <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> in <code>&gt;=</code>. Z operatorjema <code>==</code> in <code>!=</code> lahko tudi preverimo, če sta dva niza enaka oz. različna.</p>
 
@@ -291,7 +291,7 @@ print("ab cde" < "abcde") # izpiše: True</textarea>
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">S tem, kar si se zgoraj naučil(a) o številskih kodah znakov, pojasni, zakaj so rezultati teh primerjav takšni, kot so. Opiši, kako se leksikografski vrstni red razlikuje od abecednega.</p>
+<p align="justify">Na podlagi tega, kar si se zgoraj naučil(-a) o številskih kodah znakov, pojasni, zakaj so rezultati teh primerjav takšni, kot so. Opiši, kako se leksikografski vrstni red razlikuje od abecednega.</p>
 </div>
 <!-- Right column end -->
 					</div>
