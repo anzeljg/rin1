@@ -232,7 +232,7 @@ for indeksMeseca in range(len(prodaja)):
 <!-- Left column start -->
 <h1>Sprehod po indeksih tabele</h1>
 
-<p align="justify">Pri sprehodu po tabeli včasih poleg trenutnega elementa potrebujemo tudi njegov indeks. V tem primeru lahko uporabimo sledečo zanko:
+<p align="justify">Pri sprehodu po tabeli včasih poleg trenutnega elementa potrebujemo tudi njegov indeks. V tem primeru lahko uporabimo to zanko:
 <pre>
 for indeks in range(len(tabela)):
   # indeks je indeks trenutnega elementa tabele
@@ -242,7 +242,7 @@ for indeks in range(len(tabela)):
 
 <p align="justify">Spremenljivka <code>indeks</code> prepotuje vse veljavne indekse tabele, od 0 do <nobr><code>len(tabela) - 1</code></nobr>. Do trenutnega elementa tabele dostopamo z izrazom <code>tabela[indeks]</code>.</p>
 
-<p align="justify">Vrnimo se k naši Lizi. V katerih mesecih je Liza prodala več kot 300 kilogramov sladkarij? Da bo naloga enostavnejša, bomo najprej izpisali indekse mesecev (njihove zaporedne številke minus ena). Januar ima torej indeks 0, februar 1 itd. Indeksi mesecev ustrezajo indeksom v tabeli, saj element na indeksu 0 predstavlja prodajo v januarju, element na indeksu 1 prodajo v februarju itd. Zato lahko naš problem rešimo tako, da se sprehodimo po indeksih tabele in vsakokrat pogledamo element na trenutnem indeksu. Če je večji od 300, potem vemo, da je Liza v mesecu s tem indeksom prodala več kot 300 kg sladkarij, zato indeks izpišemo.</p>
+<p align="justify">Vrnimo se k naši Lizi. V katerih mesecih je Liza prodala več kot 300 kilogramov sladkarij? Da bo naloga enostavnejša, bomo najprej izpisali indekse mesecev (njihove zaporedne številke, zmanjšane za ena). Januar ima torej indeks 0, februar 1 itd. Indeksi mesecev ustrezajo indeksom v tabeli, saj element na indeksu 0 predstavlja prodajo v januarju, element na indeksu 1 prodajo v februarju itd. Zato lahko naš problem rešimo tako, da se sprehodimo po indeksih tabele in vsakokrat pogledamo element na trenutnem indeksu. Če je večji od 300, potem vemo, da je Liza v mesecu s tem indeksom prodala več kot 300 kg sladkarij, zato indeks izpišemo.</p>
 
 <div>
 <form>
@@ -262,7 +262,7 @@ for indeksMeseca in range(len(prodaja)):
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Gornji program izpiše števila 3, 4, 8, 10 in 11, ki predstavljajo mesece april, maj, september, november in december.</p>
+<p align="justify">Zgornji program izpiše števila 3, 4, 8, 10 in 11, ki predstavljajo mesece april, maj, september, november in december.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -272,7 +272,7 @@ for indeksMeseca in range(len(prodaja)):
 
 <div class="alert alert-info" role="alert">
 
-<p align="justify">Popravi program tako, da bo izpisal <i>imena</i> mesecev, ko je bilo prodanih več kot 300 kilogramov sladkarij. Pomagaj si s sledečo tabelo:
+<p align="justify">Popravi program tako, da bo izpisal <i>imena</i> mesecev, ko je bilo prodanih več kot 300 kilogramov sladkarij. Pomagaj si s to tabelo:
 <pre>
 meseci = ['jan', 'feb', 'mar', 'apr', 'maj',
           'jun', 'jul', 'avg', 'sep', 'okt',

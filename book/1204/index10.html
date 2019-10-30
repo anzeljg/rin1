@@ -176,7 +176,7 @@
 <!-- Left column start -->
 <h1>*Prirejanje vrednosti tabelaričnega tipa</h1>
 
-<p align="justify">Oglejmo si sledeči primer:
+<p align="justify">Oglejmo si ta primer:
 <pre>
 &gt;&gt;&gt; a = [1, 2, 3]
 &gt;&gt;&gt; b = a
@@ -186,14 +186,14 @@
 </pre>
 </p>
 
-<p align="justify">Povsem pričakovano, kajne? Ko izpišemo še tabelo <code>b</code>, pa nas python šokira:
+<p align="justify">Povsem pričakovano, kajne? Ko izpišemo še tabelo <code>b</code>, pa nas python preseneti:
 <pre>
 &gt;&gt;&gt; b
 [1, 7, 3]
 </pre>
 </p>
 
-<p align="justify">Kako lahko sprememba tabele <code>a</code> vpliva na na tabelo <code>b</code>? Pričakovali bi, da stavek <code>b = a</code> ustvari <b>novo</b> tabelo <code>b</code> in vanjo skopira elemente tabele <code>a</code>. Vendar pa se to ne zgodi. Spremenljivka <code>a</code> namreč ne vsebuje celotne tabele <code>a</code>, pač pa zgolj njen <b>pomnilniški naslov</b>, torej mesto, kjer se tabela nahaja v računalnikovem pomnilniku. Pravimo, da je spremenljivka <code>a</code> zgolj <b>kazalec</b> na tabelo <nobr><code>[1, 2, 3]</code></nobr>. Ko izvedemo prireditev <code>b = a</code>, se v spremenljivko <code>b</code> prekopira zgolj pomnilniški naslov. Sedaj imamo torej dve spremenljivki, ki kažeta na isto tabelo:</p>
+<p align="justify">Kako lahko sprememba tabele <code>a</code> vpliva na tabelo <code>b</code>? Pričakovali bi, da stavek <code>b = a</code> ustvari <b>novo</b> tabelo <code>b</code> in vanjo skopira elemente tabele <code>a</code>. Vendar pa se to ne zgodi. Spremenljivka <code>a</code> namreč ne vsebuje celotne tabele <code>a</code>, pač pa zgolj njen <b>pomnilniški naslov</b>, torej mesto, kjer se tabela nahaja v računalnikovem pomnilniku. Pravimo, da je spremenljivka <code>a</code> zgolj <b>kazalec</b> na tabelo <nobr><code>[1, 2, 3]</code></nobr>. Ko izvedemo prireditev <code>b = a</code>, se v spremenljivko <code>b</code> skopira samo pomnilniški naslov. Sedaj imamo torej dve spremenljivki, ki kažeta na isto tabelo:</p>
 
 <p align="center"><img src="img/kazalci1a.svg" onerror="this.src='kazalci1a.png'"></p>
 
@@ -217,11 +217,11 @@
 </pre>
 </p>
 
-<p align="justify">Sedaj imamo dejansko dve ločeni tabeli, na kateri kažeta spremenljivki <code>a</code> in <code>b</code>:</p>
+<p align="justify">Sedaj imamo ločeni tabeli, na kateri kažeta spremenljivki <code>a</code> in <code>b</code>:</p>
 
 <p align="center"><img src="img/kazalci2.svg" onerror="this.src='kazalci2.png'"></p>
 
-<p align="justify">Pri preprostih podatkovnih tipih, kot so cela in realna števila, teh težav nimamo. Preizkusi sam(a)!</p>
+<p align="justify">Pri preprostih podatkovnih tipih, kot so cela in realna števila, teh težav nimamo. Preizkusi sam(-a)!</p>
 
 <div>
 <form>
