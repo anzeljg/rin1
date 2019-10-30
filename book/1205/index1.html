@@ -177,13 +177,13 @@
 <!-- Left column start -->
 <h1>Funkcije</h1>
 
-<p align="justify"><b>Funkcija</b> ali <b>podprogram</b> je zaporedje stavkov, ki smo mu nadeli neko ime. Od drugod v programu lahko potem to funkcijo <b>pokličemo</b> in s tem od računalnika zahtevamo, naj takrat izvede zaporedje stavkov, ki tvorijo funkcijo. Pri klicu lahko funkcija dobi tudi vhodne podatke (parametre) in na koncu vrne nek rezultat, ki ga lahko klicatelj funkcije uporablja pri nadaljnjem delu.</p>
+<p align="justify"><b>Funkcija</b> ali <b>podprogram</b> je zaporedje stavkov, ki smo mu določili neko ime. Od drugod v programu lahko potem to funkcijo <b>pokličemo</b> in s tem od računalnika zahtevamo, naj takrat izvede zaporedje stavkov, ki tvorijo funkcijo. Pri klicu lahko funkcija dobi tudi vhodne podatke (parametre) in na koncu vrne nek rezultat, ki ga lahko klicatelj funkcije uporablja pri nadaljnjem delu.</p>
 
 <p align="justify">Funkcije pridejo prav, ker lahko z njimi razdelimo program na manjše in bolj obvladljive dele. Ko funkcijo napišemo in se prepričamo, da deluje pravilno, jo lahko odtlej uporabljamo kot nekakšno »črno škatlico«, ne da bi morali vsakič znova razmišljati o podrobnostih tega, kako ta funkcija opravi svoje delo.</p>
 
-<p align="justify">Funkcija ponavadi rešuje nek zaokrožen in jasno določen podproblem znotraj širšega problema, ki ga rešuje celoten program. Funkcije torej razvijamo tako, da znotraj problema, ki ga rešujemo, opazimo nek primeren podproblem, razmislimo o tem, kakšne vhodne podatke bomo potrebovali pri reševanju tega podproblema, in nato napišemo zaporedje korakov (stavkov), ki rešijo ta podproblem.</p>
+<p align="justify">Funkcija ponavadi rešuje nek zaokrožen in jasno določen podproblem znotraj širšega problema, ki ga rešuje celoten program. Funkcije torej razvijamo tako, da znotraj problema, ki ga rešujemo, opazimo nek primeren podproblem, razmislimo o tem, katere vhodne podatke bomo potrebovali pri reševanju tega podproblema, in nato napišemo zaporedje korakov (stavkov), ki rešijo ta podproblem.</p>
 
-<p align="justify">Oglejmo si konkreten primer: naslednja zelo preprosta funkcija dobi kot parametra dve števili <code>a</code> in <code>b</code>, pogleda, katero od njiju je večje, in to večje število vrne kot rezultat funkcije.</p>
+<p align="justify">Oglejmo si konkreten primer: naslednja zelo preprosta funkcija dobi kot parametra števili <code>a</code> in <code>b</code>, pogleda, katero od njiju je večje, in to večje število vrne kot rezultat funkcije.</p>
 
 <p>
 <pre>
@@ -195,13 +195,13 @@ def Vecje(a, b):
 </pre>
 </p>
 
-<p align="justify">Stavek <code>def</code> pove, da gre za <b>deklaracijo</b> funkcije. Z njo pythonu povemo, kako naj bo naši funkciji ime (v tem primeru je to <code>Vecje</code>) in kateri stavki naj jo sestavljajo (to je blok zamaknjenih stavkov, ki sledijo stavku <code>def</code>; tej skupini stavkov pravimo <b>telo funkcije</b>). Tolmač na tem mestu teh stavkov še ne bo poskušal izvesti, pač pa si jih le zapomni za kasneje.</p>
+<p align="justify">Stavek <code>def</code> navaja, da gre za <b>deklaracijo</b> funkcije. Z njo pythonu sporočimo, kako naj bo naši funkciji ime (v tem primeru je to <code>Vecje</code>) in kateri stavki naj jo sestavljajo (to je blok zamaknjenih stavkov, ki sledijo stavku <code>def</code>; tej skupini stavkov pravimo <b>telo funkcije</b>). Tolmač na tem mestu teh stavkov še ne bo poskušal izvesti, pač pa si jih le zapomni za pozneje.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Za imenom funkcije smo v oklepajih tudi navedli, da ta funkcija pri klicu zahteva dva parametra, ki ju bo videla pod imenoma <code>a</code> in <code>b</code>. Funkcija lahko s parametri dela podobne stvari kot s spremenljivkami. V našem primeru ima funkcija dva parametra, v splošnem pa jih imajo lahko funkcije tudi več ali manj (lahko tudi nobenega).</p>
+<p align="justify">Za imenom funkcije smo v oklepajih tudi navedli, da ta funkcija pri klicu zahteva dva parametra, ki ju bo videla pod imenoma <code>a</code> in <code>b</code>. Funkcija lahko parametre uporablja podobno kot spremenljivke. V našem primeru ima funkcija dva parametra, v splošnem pa jih imajo lahko funkcije tudi več ali manj (lahko tudi nobenega).</p>
 
 <p align="justify">Kot vidimo v zgornjem primeru, se lahko v funkciji pojavlja stavek <code>return</code>. Ko tolmač pri izvajanju funkcije pride do tega stavka, se takoj vrne iz funkcije (preostanka telesa funkcije ne izvede) in vrne vrednost, ki je bila navedena za besedo <code>return</code>. V našem primeru torej naša funkcija vrne bodisi vrednost <code>a</code> bodisi <code>b</code>, odvisno od tega, katera je večja.</p>
 
@@ -229,7 +229,7 @@ print(c) # izpiše 50</textarea>
 <pre id="output"></pre>
 
 <p align="justify">Podizraz <code>Vecje(10, 20)</code> je <b>klic funkcije</b>; tolmač bo, da izračuna njegovo vrednost, izvedel telo funkcije <code>Vecje</code> in pri tem kot parameter <code>a</code> uporabil vrednost 10, kot parameter <code>b</code> pa vrednost 20. V tem konkretnem primeru funkcija vrne 20, kar potem tolmač vzame kot vrednost podizraza <code>Vecje(10, 20)</code>
-in s to vrednostjo računa naprej — v našem primeru se to vrednost sešteje s 30 in rezultat priredi spremenljivki <code>c</code>, tako da ima ta na koncu vrednost 50.</p>
+in s to vrednostjo računa naprej – v našem primeru se ta vrednost sešteje s 30 in rezultat priredi spremenljivki <code>c</code>, tako da ima ta na koncu vrednost 50.</p>
 <!-- Right column end -->
 					</div>
 				</div>

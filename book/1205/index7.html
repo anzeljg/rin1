@@ -179,7 +179,7 @@
 
 <p align="justify">V zadnjem primeru na prejšnji strani bomo pri stavku <code>print(produkt)</code> dobili napako: tolmač vidi, da je v telesu funkcije nek stavek (namreč <code>produkt = a * x</code>), ki spremenljivki <code>produkt</code> nekaj prireja, zato jo obravnava kot lokalno spremenljivko. Ko pride izvajanje do stavka <code>print(produkt)</code>, pa se prireditev <code>produkt = a * x</code> še ni izvedla, zato lokalna spremenljivka <code>produkt</code> še ni inicializirana in tolmač bo javil napako. Na tistem mestu sicer že obstaja globalna spremenljivka <code>produkt</code>, vendar te funkcija ne vidi, ker ima lokalno spremenljivko z enakim imenom.</p>
 
-<p align="justify">Kaj pa, če bi funkcija vendarle želela nekaj prirediti neki globalni spremenljivki (in ne ustvariti lokalne spremenljivke z istim imenom)? V pythonu lahko s stavkom <code>global</code> povemo, da hočemo uporabljati neko globalno spremenljivko in ne dobiti istoimenske lokalne spremenljivke:</p>
+<p align="justify">Kaj pa, če bi funkcija vendarle želela nekaj prirediti neki globalni spremenljivki (in ne ustvariti lokalne spremenljivke z istim imenom)? V pythonu lahko s stavkom <code>global</code> določimo, da hočemo uporabljati neko globalno spremenljivko in ne dobiti istoimenske lokalne spremenljivke:</p>
 
 <div>
 <form>
@@ -212,7 +212,7 @@ print(produkt) # izpiše: 200</textarea>
 <!-- Right column start -->
 <h1>Vračanje rezultata iz funkcije</h1>
 
-<p align="justify">Pogosto pride prav, če lahko funkcija vrne nek rezultat. Klicatelj potem ta rezultat vidi kot vrednost izraza, s katerim je funkcijo poklical, in lahko z njim dela naprej kot s kakršno koli drugo vrednostjo. Na primer:</p>
+<p align="justify">Pogosto pride prav, če lahko funkcija vrne nek rezultat. Klicatelj potem ta rezultat vidi kot vrednost izraza, s katerim je funkcijo poklical, in ga lahko nadalje obdeluje kot katerokoli drugo vrednost. Na primer:</p>
 
 <div>
 <form>
@@ -238,7 +238,7 @@ print(Povprecje(a)) # izpiše: 30.0</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Ko pride izvajanje funkcije do stavka <code>return</code>, se klic takoj konča (četudi za tem stavkom pridejo v telesu funkije še kakšni drugi stavki) in vrne vrednost izraza, ki smo ga napisali v stavku <code>return</code>. Ko na primer v zgornjem primeru glavni del programa pokliče <code>Povprecje(a)</code>, ta funkcija najprej pokliče funkcijo <code>Vsota</code>, ki sešteje elemente tabele in vrne njihovo vsoto; v našem primeru je to 90. Nato <code>Povprecje</code> pokliče še standardno pythonovo funkcijo <code>len</code>, ki vrne število elementov tabele (v našem primeru 3); rezultat izraza <code>Vsota(tabela) / len(tabela)</code> je torej 30 in to je vrednost, ki jo vrne funkcija <code>Povprecje</code>. Glavni del programa to vrednost poda kot parameter standardni pythonovi funkciji <code>print</code> in jo tako izpiše.</p>
+<p align="justify">Ko pride izvajanje funkcije do stavka <code>return</code>, se klic takoj konča (četudi za tem stavkom pridejo v telesu funkcije še drugi stavki) in vrne vrednost izraza, ki smo ga napisali v stavku <code>return</code>. Ko na primer v zgornjem primeru glavni del programa pokliče <code>Povprecje(a)</code>, ta funkcija najprej pokliče funkcijo <code>Vsota</code>, ki sešteje elemente tabele in vrne njihovo vsoto; v našem primeru je to 90. Nato <code>Povprecje</code> pokliče še standardno pythonovo funkcijo <code>len</code>, ki vrne število elementov tabele (v našem primeru 3); rezultat izraza <code>Vsota(tabela) / len(tabela)</code> je torej 30 in to je vrednost, ki jo vrne funkcija <code>Povprecje</code>. Glavni del programa to vrednost poda kot parameter standardni pythonovi funkciji <code>print</code> in jo tako izpiše.</p>
 <!-- Right column end -->
 					</div>
 				</div>

@@ -183,14 +183,14 @@
 <p align="justify">Napiši funkcijo <code>Kombinacije(t, k)</code>, ki kot parametra dobi tabelo <i>t</i> in naravno število <i>k</i> ter izpiše vse možne izbore <i>k</i> elementov tabele <i>t</i>. Primer: če je <code>t = [10, 20, 30]</code> in <code>k = 2</code>, moramo izpisati tri izbore: <code>[10, 20]</code>, <code>[10, 30]</code> in <code>[20, 30]</code>.</p>
 </div>
 
-<p align="justify">Začnimo kar pri prvem elementu tabele <i>t</i>: tega lahko vključimo v nek izbor ali pa ne. Če ga vključimo v izbor, moramo izbrati potem še <nobr><i>k</i> - 1</nobr> elementov iz preostanka tabele; če pa prvega elementa nismo vključili v izbor, moramo v nadaljevanju izbrati <i>k</i> elementov iz preostanka tabele.</p>
+<p align="justify">Začnimo kar pri prvem elementu tabele <i>t</i>: tega lahko vključimo v nek izbor ali pa ne. Če ga vključimo v izbor, moramo izbrati tudi <nobr><i>k</i> - 1</nobr> elementov iz preostanka tabele; če pa prvega elementa nismo vključili v izbor, moramo v nadaljevanju izbrati <i>k</i> elementov iz preostanka tabele.</p>
 
-<p align="justify">V vsakem primeru torej pridemo do podproblema, ki je podobne oblike kot prvotni problem, le da se ne začne pri prvem elementu tabele, ampak šele pri drugem. Zato bomo lahko, če primerno napišemo funkcijo za generiranje vseh možnih izborov, ta podproblem reševali z isto funkcijo kot prvotni problem (glej program na desni).</p>
+<p align="justify">V vsakem primeru torej pridemo do podproblema, ki je podobne oblike kot prvotni problem, le da se ne začne pri prvem elementu tabele, ampak šele pri drugem. Zato bomo lahko, če primerno napišemo funkcijo za generiranje vseh možnih izborov, ta podproblem reševali z isto funkcijo kot prvotni problem (glej program v nadaljevanju).</p>
 
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">(a) Preizkusi tu prikazano funkcijo <code>Kombinacije</code> še na kakšnem večjem primeru (na primer na tabeli s 5 elementi in s <code>k = 3</code>).<br />
+<p align="justify">(a) Preizkusi tu prikazano funkcijo <code>Kombinacije</code> še na večjem primeru (na primer na tabeli s 5 elementi in s <code>k = 3</code>).<br />
 (b) Na začetek in konec funkcije <code>NastejIzbore</code> dodaj stavke, ki izpišejo vrednosti parametrov, in z njihovo pomočjo opazuj, kako se gnezdijo klici funkcije in kaj se dogaja v njih.<br />
 (c) Spremeni funkciji tako, da izborov ne izpisujeta, pač pa vrneta število, ki	pove, koliko je takih izborov.</p>
 </div>
