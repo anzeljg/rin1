@@ -286,7 +286,7 @@
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kaj izpiše sledeči program, če je vrednost spremenljivke <code>tocke</code> enaka 3? Kaj se izpiše, če je enaka 7, 0, 10 oziroma 15?
+<p align="justify">Kaj izpiše spodnji program, če je vrednost spremenljivke <code>tocke</code> enaka 3? Kaj se izpiše, če je enaka 7, 0, 10 oziroma 15?
 <pre>
 tocke = int(input('Vnesi število točk: '))
 if tocke &gt; 10:
@@ -338,13 +338,13 @@ True
 </pre>
 </p>
 
-<p align="justify">Logične izraze lahko med seboj povezujemo z <b>logičnimi operatorji</b> <code>and</code>, <code>or</code> in <code>not</code>. Izraz <code>a and b</code> je resničen samo v primeru, če sta podizraza <code>a</code> in <code>b</code> oba resnična. Izraz <code>a or b</code> je resničen, če je vsaj eden od podizrazov resničen; neresničen je samo tedaj, ko sta oba podizraza neresnična. Izraz <code>not a</code> pa je resničen, če je podizraz <code>a</code> neresničen, in obratno.</p>
+<p align="justify">Logične izraze lahko med seboj povezujemo z <b>logičnimi operatorji</b> <code>and</code>, <code>or</code> in <code>not</code>. Izraz <code>a and b</code> je resničen, samo če sta resnična podizraza <code>a</code> in <code>b</code>. Izraz <code>a or b</code> je resničen, če je vsaj eden od podizrazov resničen; neresničen je samo tedaj, ko sta oba podizraza neresnična. Izraz <code>not a</code> pa je resničen, če je podizraz <code>a</code> neresničen, in obratno.</p>
 
 <p>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#table">Tabela logičnih operatorjev</button>
 </p>
 
-<p align="justify">Na primer, vrednost izraza <code>(3 &lt;= 5) and (6 == 3)</code> je enaka <code>False</code>, saj je prvi podizraz resničen, drugi pa neresničen. Vrednost izraza <code>(3 &lt;= 5) or (6 == 3)</code> pa je enaka <code>True</code>.</p>
+<p align="justify">Na primer vrednost izraza <code>(3 &lt;= 5) and (6 == 3)</code> je enaka <code>False</code>, saj je prvi podizraz resničen, drugi pa neresničen. Vrednost izraza <code>(3 &lt;= 5) or (6 == 3)</code> pa je enaka <code>True</code>.</p>
 
 <p align="justify">Oglejmo si primer uporabe logičnih operatorjev. Leto je prestopno, če je deljivo s 400 ali pa če je deljivo s 4, vendar ne s 100. Zapišimo to pravilo v obliki programa <code>prestopnoLeto.py</code>. Spomnimo se, da je število <i>a</i> deljivo s številom <i>b</i> natanko tedaj, ko je ostanek pri deljenju <i>a</i> z <i>b</i> enak 0.</p>
 

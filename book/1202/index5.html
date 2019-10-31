@@ -177,7 +177,7 @@
 <!-- Left column start -->
 <h1>Vhod in izhod</h1>
 
-<p align="justify">Ko spremenljivko <code>pot</code> izpišemo, vidimo, da jo je python shranil kot <b>niz</b>, ne kot število. Funkcija <code>input</code> namreč ne more vedeti, kakšen tip podatkov naj pričakuje, zato uporabnikov vnos vedno obravnava kot niz.</p>
+<p align="justify">Ko spremenljivko <code>pot</code> izpišemo, vidimo, da jo je python shranil kot <b>niz</b>, ne kot število. Funkcija <code>input</code> namreč ne more vedeti, katero vrsto podatkov naj pričakuje, zato uporabnikov vnos vedno obravnava kot niz.</p>
 
 <p align="justify">K sreči pa niz, ki predstavlja število, zlahka pretvorimo v dejansko število. Uporabimo operator <code>int</code> (za pretvorbo v celo število) oziroma <code>float</code> (za pretvorbo v realno število), ki smo ju spoznali že v prejšnji učni enoti.
 <pre>
@@ -233,9 +233,9 @@ print(izpis + str(povprecnaHitrost) + ' km/h.')</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Prevožena pot je v splošnem lahko realno število, zato smo rezultat funkcije <code>input</code> (uporabnikov vnos) pretvorili v vrednost tipa <code>float</code>. Tudi izpis je sedaj nekoliko bolj prijazen: najprej izpišemo niz Vozila(a) si s povprečno hitrostjo, nato vrednost spremenljivke <code>povprecnaHitrost</code>, nazadnje pa še niz <code>km/h</code>. Posamezne dele izpisa med seboj ločimo z znakom <code>+</code>.</p>
+<p align="justify">Prevožena pot je v splošnem lahko realno število, zato smo rezultat funkcije <code>input</code> (uporabnikov vnos) pretvorili v vrednost tipa <code>float</code>. Tudi izpis je sedaj nekoliko bolj prijazen: najprej izpišemo niz <i>Vozila(a) si s povprečno hitrostjo</i>, nato vrednost spremenljivke <code>povprecnaHitrost</code>, nazadnje pa še niz <code>km/h</code>. Posamezne dele izpisa med seboj ločimo z znakom <code>+</code>.</p>
 
-<p align="justify">Poženimo naš novi program v terminalu operacijskega sistema:
+<p align="justify">Zaženimo naš novi program v terminalu operacijskega sistema:
 <pre>
 &gt; python3 hitrostVhod.py
 Koliko kilometrov si prevozil(a)? <u>20</u>

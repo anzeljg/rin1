@@ -179,7 +179,7 @@
 						<h4 class="modal-title">Vprašanje</h4>
 					</div>
 					<div class="modal-body">
-<p align="justify">Python nam ne pusti združevanja nizov in števil. Operator <code>+</code> lahko uporabimo bodisi za seštevanje števil ali pa za združevanje (lepljenje) nizov. Če želimo niz sestaviti na podlagi vrednosti različnih tipov, moramo vse vrednosti, ki niso nizi, s pomočjo operatorja <code>str</code> pretvoriti v nize:
+<p align="justify">Python ne omogoča združevanja nizov in števil. Operator <code>+</code> lahko uporabimo bodisi za seštevanje števil ali pa za združevanje (lepljenje) nizov. Če želimo niz sestaviti na podlagi vrednosti različnih tipov, moramo vse vrednosti, ki niso nizi, s pomočjo operatorja <code>str</code> pretvoriti v nize:
 <pre>
 &gt;&gt;&gt; niz = 'Število ' + str(b) + ' gre ' + str(k) + '-krat v število ' + str(a) + '.'
 &gt;&gt;&gt; print(niz)
@@ -254,7 +254,7 @@ print(ime + izpis)
 <!-- Left column start -->
 <h1>Vhod in izhod</h1>
  
-<p align="justify">Python nam rezultat izpiše na veliko preveč decimalk natančno, a se s tem problemom ne bomo ukvarjali. Pomembneje je, da se naš program zna »pogovarjati« z uporabnikom: uporabnik programu poda <b>vhod</b>, program pa mu izpiše svoj <b>izhod</b>. V splošnem je <b>vhod</b> v program množica podatkov, ki jih program prejme. Vhod lahko — tako kot v našem primeru — vnese uporabnik, lahko pa ga program pridobi iz datoteke ali z interneta ali pa mu ga posreduje nek drug program. <b>Izhod</b> pa je skupno ime za vse podatke, ki jih program proizvede pri danem vhodu. V našem primeru smo izhod izpisali na zaslon, lahko pa ga program tudi zapiše v datoteko ali posreduje nekemu drugemu programu.</p>
+<p align="justify">Python nam rezultat izpiše na veliko preveč decimalk natančno, a se s tem problemom ne bomo ukvarjali. Pomembneje je, da se naš program zna »pogovarjati« z uporabnikom: uporabnik programu poda <b>vhod</b>, program pa mu izpiše svoj <b>izhod</b>. V splošnem je <b>vhod</b> v program množica podatkov, ki jih program prejme. Vhod lahko – tako kot v našem primeru – vnese uporabnik, lahko pa ga program pridobi iz datoteke ali z interneta ali pa mu ga posreduje nek drug program. <b>Izhod</b> pa je skupno ime za vse podatke, ki jih program ustvari pri danem vhodu. V našem primeru smo izhod izpisali na zaslon, lahko pa ga program tudi zapiše v datoteko ali posreduje nekemu drugemu programu.</p>
 
 <h4>V razmislek</h4>
 
@@ -313,7 +313,7 @@ TypeError: Can't convert 'int' object to str implicitly
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Napiši program, ki deluje po sledečem vzorcu:
+<p align="justify">Napiši program, ki deluje po tem vzorcu:
 <pre>
 Kako ti je ime? <u>Jaka</u>
 Vnesi svoje leto rojstva: <u>2000</u>

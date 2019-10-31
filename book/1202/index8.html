@@ -177,7 +177,7 @@
 <!-- Left column start -->
 <h1>Pogojni stavki</h1>
 
-<p align="justify">Vrnimo se k našemu primeru s plavalnim bazenom. Recimo, da bo vstopnica za otroke do vključno 5. leta starosti odslej zastonj. Polnoletni še vedno plačajo polno ceno, tisti vmes pa polovično. Nalogo sedaj rešimo tako, da se najprej vprašamo, ali je starost enaka najmanj 18 let. Če je, nastavimo spremenljivko <code>cena</code> na polno ceno, sicer pa preverimo še, ali je starost večja od 5 let. Če je, je cena polovična, sicer pa znaša 0:</p>
+<p align="justify">Vrnimo se k našemu primeru s plavalnim bazenom. Recimo, da bo vstopnica za otroke do vključno 5. leta starosti odslej zastonj. Polnoletni še vedno plačajo polno ceno, tisti vmes pa polovično. Nalogo sedaj rešimo tako, da se najprej vprašamo, ali je starost enaka najmanj 18 let. Če je, nastavimo spremenljivko <code>cena</code> na polno ceno, sicer pa preverimo tudi, ali je starost večja od 5 let. Če je, je cena polovična, sicer pa znaša 0:</p>
 
 <p align="center"><img src="img/diagram.svg" onerror="this.src='diagram.png'" class="img-responsive"></p>
 
@@ -224,7 +224,7 @@ print('Vstopnica zate stane ' + str(c) + ' EUR.')</textarea>
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Program sedaj beremo takole: Če je starost enaka najmanj 18, priredi spremenljivki <code>c</code> vrednost spremenljivke <code>cena</code>. V nasprotnem primeru preveri, ali je starost večja od 5. Če to drži, je cena polovična, sicer pa se bomo kopali zastonj.</p>
+<p align="justify">Program sedaj beremo takole: če je starost enaka najmanj 18, priredi spremenljivki <code>c</code> vrednost spremenljivke <code>cena</code>. V nasprotnem primeru preveri, ali je starost večja od 5. Če to drži, je cena polovična, sicer pa se bomo kopali zastonj.</p>
 
 <h4>V razmislek</h4>
 
@@ -232,7 +232,7 @@ print('Vstopnica zate stane ' + str(c) + ' EUR.')</textarea>
 <p align="justify">Bi se kaj spremenilo, če bi v zadnjem programu besedo <code>elif</code> nadomestili z besedo <code>if</code>? Preveri za različne starosti in pojasni rezultate!</p>
 </div>
 
-<p align="justify">V stavku <code>if-elif-elif-...-else</code> se vedno izvede <b>natanko en blok</b> (skupek stavkov). Če je pogoj izpolnjen že pri bloku <code>if</code>, se izvedejo stavki v tem bloku, vsi ostali bloki pa se preskočijo. V nasprotnem primeru se preveri pogoj pri prvem bloku <code>elif</code>; če je izpolnjen, se izvedejo pripadajoči stavki, preostali bloki pa se preskočijo. V nasprotnem primeru se preveri pogoj pri drugem bloku <code>elif</code> itd. Blok <code>else</code> se izvede le v primeru, če nobeden od pogojev pri blokih <code>if</code> in <code>elif</code> ni izpolnjen.</p>
+<p align="justify">V stavku <code>if-elif-elif-...-else</code> se vedno izvede <b>natanko en blok</b> (skupek stavkov). Če je pogoj izpolnjen že pri bloku <code>if</code>, se izvedejo stavki v tem bloku, vsi ostali bloki pa se preskočijo. V nasprotnem primeru se preveri pogoj pri prvem bloku <code>elif</code>; če je izpolnjen, se izvedejo pripadajoči stavki, preostali bloki pa se preskočijo. V nasprotnem primeru se preveri pogoj pri drugem bloku <code>elif</code> itd. Blok <code>else</code> se izvede le takrat, ko nobeden od pogojev pri blokih <code>if</code> in <code>elif</code> ni izpolnjen.</p>
 <!-- Right column end -->
 					</div>
 				</div>

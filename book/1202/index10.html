@@ -232,7 +232,7 @@ False
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">V primeru <code>b == 0</code> se izpiše <code>NE</code>. Brez kratkostičnega računanja bi python tudi v primeru <code>b == 0</code> izračunal logični izraz <code>a % b == 0</code>. Ker ostanka pri deljenju z ničlo ni mogoče izračunati, bi se izvajanje programa zaključilo z napako.</p>
+						<p align="justify">V primeru <code>b == 0</code> se izpiše <code>NE</code>. Brez kratkostičnega računanja bi python tudi v primeru <code>b == 0</code> izračunal logični izraz <code>a % b == 0</code>. Ker ostanka pri deljenju z ničlo ni mogoče izračunati, bi se izvajanje programa končalo z napako.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -254,7 +254,7 @@ False
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kakšne vrednosti imajo sledeči izrazi? Najprej odgovori, nato preveri!
+<p align="justify">Kakšne vrednosti imajo naslednji izrazi? Najprej odgovori, nato preveri!
 <pre>
 not (3 &lt;= 5) or (6 == 3)
 not ((3 &lt;= 5) and (6 == 3))
@@ -287,7 +287,7 @@ else:
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Poženimo program in vnesimo neko pozitivno celo število (npr. 3). Ker spremenljivka b ni definirana, bi se program moral še pred izpisom zaključiti z napako. Vendar pa se to ne zgodi. Program sporoči napako samo v primeru, če je vnešeno število negativno ali enako 0:
+<p align="justify">Zaženimo program in vnesimo neko pozitivno celo število (npr. 3). Ker spremenljivka b ni definirana, bi se program moral še pred izpisom končati z napako. Vendar pa se to ne zgodi. Program sporoči napako, samo če je vneseno število negativno ali enako 0:
 <pre>
 Vnesi celo število: <u>-2</u>
 Traceback (most recent call last):
@@ -301,11 +301,11 @@ NameError: name 'b' is not defined
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Kaj se tu dogaja? Če sta podizraza v logičnem izrazu povezana z operatorjem <code>or</code> in je prvi podizraz resničen, potem je celoten izraz resničen <b>ne glede na vrednost drugega podizraza</b>. Zato se drugi podizraz izračuna samo v primeru, če je prvi izraz neresničen. V izrazu <code>(a &gt; 0) or (a &lt; b)</code> se bo podizraz <code>a &lt; b</code> izračunal samo v primeru, če velja <code>a &lt;= 0</code>. V nasprotnem primeru se bo podizraz <code>a &lt; b</code> preskočil, zato python spremenljivke <code>b</code> sploh ne bo videl. Temu načinu računanja logičnih izrazov pravimo <b>kratkostično računanje</b>.</p>
+<p align="justify">Kaj se tu dogaja? Če sta podizraza v logičnem izrazu povezana z operatorjem <code>or</code> in je prvi podizraz resničen, je celoten izraz resničen <b>ne glede na vrednost drugega podizraza</b>. Zato se drugi podizraz izračuna, samo če je prvi izraz neresničen. V izrazu <code>(a &gt; 0) or (a &lt; b)</code> se bo podizraz <code>a &lt; b</code> izračunal samo v primeru, če velja <code>a &lt;= 0</code>. V nasprotnem primeru se bo podizraz <code>a &lt; b</code> preskočil, zato python spremenljivke <code>b</code> sploh ne bo obravnaval. Temu načinu računanja logičnih izrazov pravimo <b>kratkostično računanje</b>.</p>
 
-<p align="justify">Podobno velja za operator <code>and</code>. Če sta podizraza povezana z operatorjem <code>and</code> in je prvi podizraz neresničen, potem je vrednost celotnega izraza neresnična ne glede na vrednost drugega podizraza, zato se v takšnem primeru drugi podizraz enostavno preskoči.</p>
+<p align="justify">Podobno velja za operator <code>and</code>. Če sta podizraza povezana z operatorjem <code>and</code> in je prvi podizraz neresničen, je vrednost celotnega izraza neresnična ne glede na vrednost drugega podizraza, zato se v tem primeru drugi podizraz enostavno preskoči.</p>
 
-<p align="justify">Prejšnji primer se zdi nekoliko umeten, vendar pa nam kratkostično računanje logičnih izrazov velikokrat pride prav. Recimo pri programu za ugotavljanje, ali je prvo vnešeno število deljivo z drugim:</p>
+<p align="justify">Prejšnji primer se zdi nekoliko umeten, vendar pa nam kratkostično računanje logičnih izrazov velikokrat pride prav. Recimo pri programu za ugotavljanje, ali je prvo vneseno število deljivo z drugim:</p>
 
 <div>
 <form>
@@ -329,7 +329,7 @@ else:
 <h4>Vaja</h4>
 
 <div class="alert alert-info" role="alert">
-<p align="justify">Kaj se zgodi v primeru <code>b == 0</code>? Kaj bi se zgodilo v primeru, če python logičnih izrazov ne bi računal kratkostično?</p>
+<p align="justify">Kaj se zgodi v primeru <code>b == 0</code>? Kaj bi se zgodilo, če python logičnih izrazov ne bi računal kratkostično?</p>
 <p>
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#solution2"><span class="fa fa-check"></span> Rešitev</button>
 </p>

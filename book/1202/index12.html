@@ -186,15 +186,15 @@ ValueError: could not convert string to float: 'trideset'
 </pre>
 </p>
 
-<p align="justify">Program se takoj zaključi, in to z nič kaj prijaznim sporočilom. Nepričakovan uporabnikov vnos je namreč povzročil <b>izjemo</b>, usodno napako med izvajanjem programa. Funkcija <code>int</code> pač ne zna pretvoriti besedila <code>trideset</code> v število 30, zato <i>sproži</i> izjemo tipa <code>ValueError</code>.</p>
+<p align="justify">Program se takoj konča, in to z nič kaj prijaznim sporočilom. Nepričakovan uporabnikov vnos je namreč povzročil <b>izjemo</b>, usodno napako med izvajanjem programa. Funkcija <code>int</code> pač ne zna pretvoriti besedila <code>trideset</code> v število 30, zato <i>sproži</i> izjemo tipa <code>ValueError</code>.</p>
 
 <p align="justify">Python pozna veliko različnih tipov izjem, npr. <code>ZeroDivisionError</code> (izjema zaradi deljenja z ničlo), <code>NameError</code> (nedefinirana spremenljivka) itd.</p>
 
-<p align="justify">Seveda si program z vnosi, kot so <code>trideset</code> ali <code>hopsasa</code>, ne more kaj dosti pomagati, lahko pa se vsaj malo vljudneje zaključi. To lahko dosežemo tako, da morebitno izjemo <b>prestrežemo</b> s sestavljenim stavkom <code>try-except</code>.</p>
+<p align="justify">Seveda si program z vnosi, kot so <code>trideset</code> ali <code>hopsasa</code>, ne more kaj dosti pomagati, lahko pa se vsaj malo vljudneje konča. To lahko dosežemo tako, da morebitno izjemo <b>prestrežemo</b> s sestavljenim stavkom <code>try-except</code>.</p>
 
 <p align="justify">Kako deluje stavek <code>try-except</code>? Blok <code>try</code> se prične izvajati po običajnih pythonovih pravilih, torej stavek za stavkom. Če se kjerkoli med izvajanjem tega bloka sproži izjema, se takoj prične izvajati blok <code>except</code>. V nasprotnem primeru se blok <code>except</code> preskoči.</p>
 
-<p align="justify">Če pri izvajanju programa na desni uporabnik za pot vnese neko celo ali realno število, za vse ostale podatke pa cela števila, se izjema tipa <code>ValueError</code> ne sproži in program deluje enako kot doslej. V nasprotnem primeru pa program izpiše prijazno sporočilo in se pri priči zaključi. Brez klica <code>exit()</code> bi program pričel izvajati tudi stavke po stavku <code>try-except</code>, kar bi prej ali slej sprožilo še eno izjemo. Preizkusi sam in razmisli, zakaj!</p>
+<p align="justify">Če pri izvajanju programa na desni uporabnik za pot vnese neko celo ali realno število, za vse ostale podatke pa cela števila, se izjema tipa <code>ValueError</code> ne sproži in program deluje enako kot doslej. V nasprotnem primeru pa program izpiše prijazno sporočilo in se nemudoma konča. Brez klica <code>exit()</code> bi program pričel izvajati tudi stavke po stavku <code>try-except</code>, kar bi prej ali slej sprožilo še eno izjemo. Preizkusi sam in razmisli, zakaj!</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">

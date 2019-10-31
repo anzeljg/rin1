@@ -179,7 +179,7 @@
 						<h4 class="modal-title">Funkcija</h4>
 					</div>
 					<div class="modal-body">
-						<p align="justify">Več o funkcijah bomo povedali v učni enoti »Funkcije«. Zaenkrat si lahko funkcijo predstavljamo kot pythonov ukaz.</p>
+						<p align="justify">Funkcije bomo podrobneje obravnavali v učni enoti »Funkcije«. Zaenkrat si lahko funkcijo predstavljamo kot pythonov ukaz.</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
@@ -218,9 +218,9 @@
 <!-- Left column start -->
 <h1>Program, zapisan v datoteki</h1>
 
-<p align="justify">Eva, navdušena kolesarka in čedalje bolj zagnana programerka, postopek ponovi še za nekaj naslednjih tur, kmalu pa se naveliča vnašanja venomer istih vrstic, ki se razlikujejo le v podatkih. K sreči pa nam python omogoča, da zaporedje stavkov zapišemo v datoteko in ga nato samodejno izvajamo. Tako dobimo <b>program</b> — zaporedje stavkov, ki ga lahko poženemo (izvršimo). V tem razdelku si bomo ogledali, kako program zapišemo v datoteko in ga poženemo s pomočjo terminala.</p>
+<p align="justify">Eva, navdušena kolesarka in čedalje bolj zagnana programerka, postopek ponovi še za nekaj naslednjih tur, kmalu pa se naveliča vnašanja venomer istih vrstic, ki se razlikujejo le v podatkih. K sreči nam python omogoča, da zaporedje stavkov zapišemo v datoteko in ga nato samodejno izvajamo. Tako dobimo <b>program</b> – zaporedje stavkov, ki ga lahko zaženemo (izvršimo). V tem razdelku si bomo ogledali, kako program zapišemo v datoteko in ga zaženemo s pomočjo terminala.</p>
 
-<p align="justify">V urejevalniku ustvarimo datoteko z imenom <code>hitrost.py</code> (datoteke s pythonovimi programi morajo vedno imeti končnico <code>.py</code>) in vanjo zapišimo stavke za izračun in izpis povprečne hitrosti:</p>
+<p align="justify">V urejevalniku ustvarimo datoteko z imenom <code>hitrost.py</code> (datoteke s pythonovimi programi morajo vedno imeti končnico <code>.py</code>) ter vanjo zapišimo stavke za izračun in izpis povprečne hitrosti:</p>
 
 <p>
 <pre>
@@ -251,22 +251,22 @@ print(povprecnaHitrost)
 <!-- Right column start -->
 <p align="justify">Način, ki smo ga uporabljali v interaktivnem tolmaču, v programu namreč ne deluje; če bi namesto <code>print(povprecnaHitrost)</code> zapisali samo <code>povprecnaHitrost</code>, program ne bi izpisal ničesar. Vrstice, ki se pričnejo z znakom <i>#</i>, so <b>komentarji</b>. Pythonov tolmač komentarje preprosto preskoči, za naše razumevanje programa pa so pogosto nepogrešljivi.</p>
 
-<p align="justify">Datoteko <code>hitrost.py</code> moramo seveda shraniti. Priporočljivo jo je shraniti v posebno mapo, ki bo namenjena samo pythonovim programom. Programa nato ne poženemo v pythonovem interaktivnem tolmaču, ampak v terminalu (konzoli) operacijskega sistema.</p>
+<p align="justify">Datoteko <code>hitrost.py</code> moramo seveda shraniti. Priporočljivo jo je shraniti v posebno mapo, ki bo namenjena samo pythonovim programom. Programa nato ne zaženemo v pythonovem interaktivnem tolmaču, ampak v terminalu (konzoli) operacijskega sistema.</p>
 
 <p>
 <button class="btn btn-primary" data-toggle="modal" data-target="#terminal"><span class="fa fa-terminal"></span> Kako poženemo terminal?</button>
 </p>
 
-<p align="justify">V terminalu se moramo nato premakniti v mapo, kamor smo shranili program <code>hitrost.py</code>. Kako to naredimo? Recimo, da smo mapo poimenovali <code>mojiProgrami</code>. Če smo jo ustvarili na namizju (<code>Desktop</code> na angleških sistemih), potem se vanjo premaknemo takole:
+<p align="justify">V terminalu se moramo nato pomakniti v mapo, kamor smo shranili program <code>hitrost.py</code>. Kako to naredimo? Recimo, da smo mapo poimenovali <code>mojiProgrami</code>. Če smo jo ustvarili na namizju (<code>Desktop</code> pri angleških sistemih), potem se vanjo pomaknemo takole:
 <pre>
 &gt; cd Desktop
 &gt; cd mojiProgrami
 </pre>
 </p>
 
-<p align="justify">Znaka <code>&gt;</code> (oziroma <code>$</code> na Linux in OS X) ne pišemo; z njim zgolj označujemo, da smo v terminalu. Po vsaki vrstici moramo seveda pritisniti tipko <code>Enter</code>. Namesto <code>cd Desktop</code> bomo morda morali napisati <code>cd Namizje</code>. Če nismo prepričani, poženemo ukaz <code>ls -l</code> na sistemih Linux ali OS X oziroma <code>dir</code> na sistemu windows. Ta ukaz nam izpiše vsebino trenutne mape. Če v izpisu najdemo ime <code>Desktop</code>, poženemo ukaz <code>cd Desktop</code>, če vidimo ime <code>Namizje</code>, pa poženemo ukaz <code>cd Namizje</code>.</p>
+<p align="justify">Znaka <code>&gt;</code> (oziroma <code>$</code> pri Linux in OS X) ne pišemo; z njim zgolj označujemo, da smo v terminalu. Po vsaki vrstici moramo seveda pritisniti tipko <code>Enter</code>. Namesto <code>cd Desktop</code> bomo morda morali napisati <code>cd Namizje</code>. Če nismo prepričani, zaženemo ukaz <code>ls -l</code> pri sistemih Linux ali OS X oziroma <code>dir</code> pri sistemu windows. Ta ukaz nam izpiše vsebino trenutne mape. Če v izpisu najdemo ime <code>Desktop</code>, zaženemo ukaz <code>cd Desktop</code>, če vidimo ime <code>Namizje</code>, pa zaženemo ukaz <code>cd Namizje</code>.</p>
 
-<p align="justify">Ko se v terminalu pomaknemo v mapo, v katero smo shranili datoteko <code>hitrost.py</code>, jo poženemo s sledečim ukazom:
+<p align="justify">Ko se v terminalu pomaknemo v mapo, v katero smo shranili datoteko <code>hitrost.py</code>, jo zaženemo s tem ukazom:
 <pre>
 &gt; python3 hitrost.py
 </pre>
