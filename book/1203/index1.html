@@ -199,7 +199,7 @@
 <!-- Left column start -->
 <h1>Zanka while</h1>
  
-<p align="justify">Doslej smo videli, da računalnik načeloma izvaja stavke našega programa po vrsti, kot so zapisani v programu, vsakega po enkrat. S pogojnimi stavki smo se tudi naučili doseči, da izvajanje nek del programa preskoči (če pogoj ni izpolnjen). Kaj pa, če hočemo, da se nek del programa izvede po večkrat? Tedaj lahko uporabimo <b>zanko</b>.</p>
+<p align="justify">Doslej smo videli, da računalnik načeloma izvaja stavke našega programa po vrsti, kot so zapisani v programu, vsakega enkrat. S pogojnimi stavki smo se tudi naučili doseči, da izvajanje nek del programa preskoči (če pogoj ni izpolnjen). Kaj pa, če hočemo, da se nek del programa izvede večkrat? Tedaj lahko uporabimo <b>zanko</b>.</p>
 
 <h4>Primer</h4>
 
@@ -225,9 +225,9 @@ while n <= 10:
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Stavek <code>while</code> označuje, da gre za zanko; za njim pride pogoj za nadaljevanje — v našem primeru je to <code>n &lt;= 10</code>, torej se zanka izvaja, dokler je pogoj <code>n &lt;= 10</code> izpolnjen. Pri vsaki ponovitvi zanke se izvedeta stavka <code>print(n)</code> (ki izpiše trenutno vrednost <code>n</code>) in <code>n = n + 1</code> (ki poveča <code>n</code> za 1).</p>
+<p align="justify">Stavek <code>while</code> označuje, da gre za zanko; za njim pride pogoj za nadaljevanje – v našem primeru je to <code>n &lt;= 10</code>, torej se zanka izvaja, dokler je pogoj <code>n &lt;= 10</code> izpolnjen. Pri vsaki ponovitvi zanke se izvedeta stavka <code>print(n)</code> (ki izpiše trenutno vrednost <code>n</code>) in <code>n = n + 1</code> (ki poveča <code>n</code> za 1).</p>
 
-<p align="justify">Oglejmo si še en primer problema, ki ga je veliko lažje rešiti z zanko kot brez nje.</p>
+<p align="justify">Oglejmo si drug primer problema, ki ga je veliko lažje rešiti z zanko kot brez nje.</p>
 <!-- Left column end -->
 					</div>
 					<div class="col-md-6">
@@ -241,7 +241,7 @@ while n <= 10:
 </p>
 </div>
 
-<p align="justify">Če poskušamo to nalogo reševati ročno, se bomo hitro utrudili in najbrž tudi zmotili: računati moramo 2 · 1 = 2; 2 · 2 = 4; 2 · 4 = 8; 2 · 8 = 16; 2 · 16 = 32; in tako naprej še kar nekaj časa; in na koncu bi morali vse te zmnožke še sešteti. Dolgo, ponavljajoče se zaporedje enih in istih operacij je kot nalašč za reševanje z računalnikom. Poskusimo napisati program <code>sahovnica.py</code>, ki reši našo nalogo:
+<p align="justify">Če poskušamo to nalogo reševati ročno, se bomo hitro utrudili in najbrž tudi zmotili: računati moramo 2 · 1 = 2; 2 · 2 = 4; 2 · 4 = 8; 2 · 8 = 16; 2 · 16 = 32; in tako naprej še kar nekaj časa, pri čemer bi na koncu morali vse te zmnožke še sešteti. Dolgo, ponavljajoče se zaporedje enih in istih operacij je kot nalašč za reševanje z računalnikom. Poskusimo napisati program <code>sahovnica.py</code>, ki reši našo nalogo:
 <pre>
 skupajZrn = 0
 zrnNaPolju = 1 # število zrn na 1. polju

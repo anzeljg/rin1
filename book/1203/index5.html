@@ -192,7 +192,7 @@ for n in range(2, 101):
 </pre>
 </p>
 
-<p align="justify">Naloga pravi, da je <i>n</i> praštevilo, če je deljivo le z 1 in samim sabo, ne pa s kakšnim od števil od 2 do <i>n</i>-1. Torej je koristno, če gremo v zanki po vseh teh številih in za vsako od njih preverimo, če deli <i>n</i>. Če najdemo takega delitelja, potem vemo, da <i>n</i> ni praštevilo in ga ne smemo izpisati. To si lahko zapomnimo v spremenljivki, recimo ji <code>jePrastevilo</code>.</p>
+<p align="justify">Naloga pravi, da je <i>n</i> praštevilo, če je deljivo le z 1 in samim sabo, ne pa s katerim od števil od 2 do <i>n</i>-1. Torej je koristno, če gremo v zanki po vseh teh številih in za vsako od njih preverimo, če deli <i>n</i>. Če najdemo takega delitelja, potem vemo, da <i>n</i> ni praštevilo, in ga ne smemo izpisati. To si lahko zapomnimo v spremenljivki, recimo ji <code>jePrastevilo</code>.</p>
 
 <div>
 <form>
@@ -230,7 +230,7 @@ for d in range(2, n):
 
 <p align="justify">Čim pri nekem <i>d</i>-ju opazimo, da deli <i>n</i>, postavimo <code>jePrastevilo</code> na <code>False</code> in ta spremenljivka odtlej potem tudi ostane <code>False</code>. Tako je tudi prav, saj zdaj vemo, da je <i>n</i> sestavljeno število, ne pa praštevilo. Toda potem je odveč, da z zanko nadaljujemo in pregledujemo še vse preostale <i>d</i>-je. Bolje bi bilo zanko takoj prekiniti in tako prihraniti nekaj časa.</p>
 
-<p align="justify">V takih primerih pride prav <b>stavek <code>break</code></b>, ki izvajanje zanke, v kateri ga uporabimo, nemudoma prekine (računalnik niti ne dokonča trenutne iteracije zanke). Če imamo več gnezdenih zank, prekine <code>break</code> le najbolj notranjo zanko, v kateri se nahaja. Ko opazimo, da <i>d</i> deli <i>n</i>, bi se torej izvedel stavek <code>break</code>, ki prekine notranjo zanko (po <i>d</i>). Izvajanje se nadaljuje za to zanko, s stavkom <nobr><code>if jePrastevilo</code></nobr>.</p>
+<p align="justify">V takih primerih pride prav <b>stavek <code>break</code></b>, ki izvajanje zanke, v kateri ga uporabimo, nemudoma prekine (računalnik niti ne dokonča trenutne iteracije zanke). Če imamo več gnezdenih zank, prekine <code>break</code> le skrajno notranjo zanko, v kateri se nahaja. Ko opazimo, da <i>d</i> deli <i>n</i>, bi se torej izvedel stavek <code>break</code>, ki prekine notranjo zanko (po <i>d</i>). Izvajanje se nadaljuje za to zanko, s stavkom <nobr><code>if jePrastevilo</code></nobr>.</p>
 
 <div>
 <form>

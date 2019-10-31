@@ -177,7 +177,7 @@
 <!-- Left column start -->
 <h1>Skok na konec trenutne iteracije</h1>
  
-<p align="justify">Včasih nekje na sredi trenutne iteracije (zaporedja stavkov) naše zanke ugotovimo, da se s preostankom te iteracije pravzaprav nočemo ukvarjati. Takrat pride prav <b>stavek <code>continue</code></b>, s katerim poskrbimo, da izvajanje nemudoma skoči na konec trenutne iteracije.</p>
+<p align="justify">Včasih nekje sredi trenutne iteracije (zaporedja stavkov) naše zanke ugotovimo, da se s preostankom te iteracije pravzaprav nočemo ukvarjati. Takrat pride prav <b>stavek <code>continue</code></b>, s katerim poskrbimo, da izvajanje nemudoma skoči na konec trenutne iteracije.</p>
 
 <div>
 <form>
@@ -196,7 +196,7 @@
 </div>
 <pre id="output"></pre>
 
-<p align="justify">Ta program pri vsakem <i>n</i> preveri, če je njegova zadnja števka enaka 7; če ni, se izvede stavek <code>continue</code> in skoči na konec trenutne iteracije, tako da preskoči stavek <code>print(n)</code>. Program zato izpiše le števila 7, 17, 27, <nobr>... ,</nobr> 97. Pri uporabi tega stavka moramo biti pazljivi, da ne preskočimo tudi česa takega, česar ne bi smeli. Poskusimo prejšnji program zapisati z zanko <code>while</code> namesto <code>for</code>:</p>
+<p align="justify">Ta program pri vsakem <i>n</i> preveri, če je njegova zadnja števka enaka 7; če ni, se izvede stavek <code>continue</code> in skoči na konec trenutne iteracije, tako da preskoči stavek <code>print(n)</code>. Program zato izpiše le števila 7, 17, 27, <nobr>... ,</nobr> 97. Pri uporabi tega stavka moramo biti pazljivi, da ne preskočimo tudi česa takega, kar ne bi smeli. Poskusimo prejšnji program zapisati z zanko <code>while</code> namesto <code>for</code>:</p>
 
 <div>
 <form>
@@ -219,9 +219,9 @@ while n < 100:
 					<div class="col-md-6">
 						<br />
 <!-- Right column start -->
-<p align="justify">Če ta program poženemo, vidimo, da se ne zgodi nič koristnega. Pri <i>n</i> = 0 (v prvi iteraciji zanke) se izvede stavek <code>continue</code>, ki preskoči preostanek telesa zanke, torej tudi stavek <code>n = n + 1</code>. Ker se ta ne izvede, ostane <code>n</code> enak 0; v naslednji iteraciji zanke se isto dogajanje ponovi in tako naprej v nedogled. Temu rečemo, da se je program »zaciklal« v neskončni zanki. Da odpravimo to napako, moramo poskrbeti, da se pred <code>continue</code> zagotovo izvede tisto, kar je pač potrebno pred prehodom v naslednjo iteracijo zanke — v našem primeru je to povečevanje <code>n</code> za 1. Še varneje pa je, če <code>continue</code> uporabljamo le v zankah <code>for</code>, kjer za povečevanje števca skrbi računalnik in ga s <code>continue</code> ne moremo preskočiti.</p>
+<p align="justify">Če ta program zaženemo, vidimo, da se ne zgodi nič uporabnega. Pri <i>n</i> = 0 (v prvi iteraciji zanke) se izvede stavek <code>continue</code>, ki preskoči preostanek telesa zanke, torej tudi stavek <code>n = n + 1</code>. Ker se ta ne izvede, ostane <code>n</code> enak 0; v naslednji iteraciji zanke se isto dogajanje ponovi in tako naprej v nedogled. Temu rečemo, da se je program »zaciklal« v neskončni zanki. Da odpravimo to napako, moramo poskrbeti, da se pred <code>continue</code> zagotovo izvede tisto, kar je pač potrebno pred prehodom v naslednjo iteracijo zanke – v našem primeru je to povečevanje <code>n</code> za 1. Še varneje pa je, če <code>continue</code> uporabljamo le v zankah <code>for</code>, pri čemer za povečevanje števca skrbi računalnik in ga s <code>continue</code> ne moremo preskočiti.</p>
 
-<p align="justify">Oglejmo si še en primer, ki kaže, kako lahko s pomočjo stavka <code>continue</code> zmanjšamo potrebo po globokem gnezdenju pogojnih stavkov in tako naredimo zanko preglednejšo:
+<p align="justify">Oglejmo si drug primer, ki kaže, kako lahko s pomočjo stavka <code>continue</code> zmanjšamo potrebo po globokem gnezdenju pogojnih stavkov in tako naredimo zanko preglednejšo:
 <pre>
 for n in range(123):
   ...
