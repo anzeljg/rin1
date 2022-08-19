@@ -27,6 +27,9 @@
 	<!-- jQuery UI -->
 	<link href="../css/jquery-ui.css" rel="stylesheet">
 
+	<!-- jQuery TableSorter plugin -->
+	<link href="css/jquery.tablesorter.css" rel="stylesheet">
+
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -235,89 +238,49 @@
 <!-- Left column start -->
 <h1>Slovar kot temeljni gradnik podatkovnih baz</h1>
 
-<style>
-/* tables */
-table#sqlTable {
-	background-color: #CDCDCD !important;
-	margin:10px 0pt 15px !important;
-	width: 100% !important;
-	border: 1px solid #c0c0c0 !important;
-	text-align: left !important;
-}
-table#sqlTable thead tr th, table#sqlTable tfoot tr th {
-	background-color: #eeeeee !important;
-	border: 1px solid #c0c0c0 !important;
-	padding: 4px !important;
-	font-size: smaller;
-}
-table#sqlTable thead tr .header {
-	background-image: url("data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==") !important;
-	background-repeat: no-repeat !important;
-	background-position: center right !important;
-	cursor: pointer !important;
-}
-table#sqlTable tbody td {
-	color: #3D3D3D !important;
-	padding: 4px !important;
-	background-color: #FFF !important;
-	vertical-align: top !important;
-}
-table#sqlTable tbody tr.odd td {
-	background-color: #F0F0F6 !important;
-}
-table#sqlTable thead tr .headerSortUp {
-	background-image: url("data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7") !important;
-}
-table#sqlTable thead tr .headerSortDown {
-	background-image: url("data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7") !important;
-}
-table#sqlTable thead tr .headerSortDown, table#sqlTable thead tr .headerSortUp {
-	background-color: #8dbdd8 !important;
-}
-</style>
 <p align="justify">Slovar ni le koristna podatkovna struktura pri programiranju, pač pa pride prav tudi pri organizaciji podatkov v podatkovnih bazah. Podatkovna baza je ponavadi sestavljena iz ene ali več <b>relacij</b>, vsaka relacija pa je množica <b>zapisov</b>, pri čemer je vsak od njih opisan z več <b>atributi</b>. V praksi si relacijo ponavadi predstavljamo kot tabelo ali razpredelnico, pri čemer vrstice tabele predstavljajo zapise, stolpci pa atribute. Spodnja tabela na primer kaže, kakšna bi bila lahko relacija s podatki o zaposlenih v cirkusu. Ima štiri atribute in pet zapisov:
 
 <table id="sqlTable" class="tablesorter" border="1" width="100%">
-	<thead>
-		<tr>
-			<th style="width: 20%">Ime</th>
-			<th style="width: 20%">Priimek</th>
-			<th style="width: 20%">Leto rojstva</th>
-			<th style="width: 40%">Delovno mesto</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Marija</td>
-			<td>Novak</td>
-			<td style="text-align: center">1975</td>
-			<td>klovn</td>
-		</tr>
-		<tr>
-			<td>Franc</td>
-			<td>Horvat</td>
-			<td style="text-align: center">1984</td>
-			<td>akrobat na trapezu</td>
-		</tr>
-		<tr>
-			<td>Tone</td>
-			<td>Kranjc</td>
-			<td style="text-align: center">1989</td>
-			<td>požiralec ognja</td>
-		</tr>
-		<tr>
-			<td>Ana</td>
-			<td>Kovačič</td>
-			<td style="text-align: center">1983</td>
-			<td>akrobat na trapezu</td>
-		</tr>
-		<tr>
-			<td>Irena</td>
-			<td>Zupančič</td>
-			<td style="text-align: center">1977</td>
-			<td>krotilec levov</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th style="width: 20%">Ime</th>
+      <th style="width: 20%">Priimek</th>
+      <th style="width: 20%">Leto rojstva</th>
+      <th style="width: 40%">Delovno mesto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Marija</td>
+      <td>Novak</td>
+      <td style="text-align: center">1975</td>
+      <td>klovn</td>
+    </tr>
+    <tr>
+      <td>Franc</td>
+      <td>Horvat</td>
+      <td style="text-align: center">1984</td>
+      <td>akrobat na trapezu</td>
+    </tr>
+    <tr>
+      <td>Tone</td>
+      <td>Kranjc</td>
+      <td style="text-align: center">1989</td>
+      <td>požiralec ognja</td>
+    </tr>
+    <tr>
+      <td>Ana</td>
+      <td>Kovačič</td>
+      <td style="text-align: center">1983</td>
+      <td>akrobat na trapezu</td>
+    </tr>
+    <tr>
+      <td>Irena</td>
+      <td>Zupančič</td>
+      <td style="text-align: center">1977</td>
+      <td>krotilec levov</td>
+    </tr>
+  </tbody>
 </table>
 </p>
 

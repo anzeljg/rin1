@@ -48,3 +48,40 @@ label.checkbox-label {
 .first-answer {
   padding-top: 5px;
 }
+
+dd {
+  padding-bottom: 8px;
+}
+
+/*
+
+  Ruler Heading, e.g.:
+  ----- heading -----
+
+*/
+.ruler-heading {
+  overflow: hidden;
+  text-align: center;
+  color: #aaa;
+}
+
+.ruler-heading:before,
+.ruler-heading:after {
+  background-color: #ccc;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.ruler-heading:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.ruler-heading:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
