@@ -1,0 +1,24 @@
+/*
+ * Skulpt is Python 2, so make all string Unicode
+ * by default, by adding 'u' prefix to the string:
+ * =================================================
+ */
+
+FROM:
+function parsestrplus(a,b){var c,d;REQ(CHILD(b,0),TOK.T_STRING);d=new Sk.builtin.str("");for(c=0;c<NCH(b);++c)try{d=d.sq$concat(parsestr(a,CHILD(b,c).value))}catch(e){throw new Sk.builtin.SyntaxError("invalid string (possibly contains a unicode character)",a.c_filename,CHILD(b,c).lineno);}return d}
+
+TO:
+function parsestrplus(a,b){var c,d;REQ(CHILD(b,0),TOK.T_STRING);d=new Sk.builtin.str("");for(c=0;c<NCH(b);++c)try{d=d.sq$concat(parsestr(a,'u'+CHILD(b,c).value))}catch(e){throw new Sk.builtin.SyntaxError("invalid string (possibly contains a unicode character)",a.c_filename,CHILD(b,c).lineno);}return d}
+
+
+/*
+ * Change how 'input' function works:
+ * ===================================================
+ */
+
+FROM:
+Sk.builtin.raw_input=function(a){var b=a?a:"";return Sk.misceval.chain(Sk.importModule("sys",!1,!0),function(a){return Sk.inputfunTakesPrompt?Sk.misceval.callsimOrSuspend(Sk.builtin.file.$readline,a.$d.stdin,null,b):Sk.misceval.chain(void 0,function(){return Sk.misceval.callsimOrSuspend(a.$d.stdout.write,a.$d.stdout,new Sk.builtin.str(b))},function(){return Sk.misceval.callsimOrSuspend(a.$d.stdin.readline,a.$d.stdin)})})};
+
+TO:
+Sk.builtin.raw_input=function(e){var t;e=e?e.v:"";t=Sk.inputfun(e);return new Sk.builtin.str(t)};
+
