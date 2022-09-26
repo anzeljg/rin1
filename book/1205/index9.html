@@ -315,7 +315,9 @@ def koch(dolzina, iteracije):
 def snezinka(dolzina, iteracije):
   i = str(iteracije)
   print("Kochova snežinka: iteracija " + i)
-  t.setpos(- dolzina // 2, dolzina // 4)
+  t.penup()
+  t.setpos(- dolzina // 3, dolzina // 3)
+  t.pendown()
   if (iteracije == 0):
     t.forward(dolzina)
     t.right(120)
@@ -339,7 +341,7 @@ snezinka(150, 3)</textarea>
 </div>
 <pre id="output2"></pre>
 <div class="rounded" width="100%">
-<canvas id="mycanvas2" width="400" height="200"></canvas>
+  <div id="mycanvas2"></div>
 </div>
 </p>
 </div>
@@ -472,25 +474,25 @@ function runit2() {
     var prog = editor2.getValue();
     var mypre2 = document.getElementById("output2");
     mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
     Sk.pre = "output2";
     Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
+	$('#mycanvas2').show();
+    (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = "mycanvas2";
+	console.log(Sk);
+	Sk.TurtleGraphics.width  = 500;
+	Sk.TurtleGraphics.height = 200;
+    var myPromise = Sk.misceval.asyncToPromise(function() {
+        return Sk.importMainWithBody("<stdin>", false, prog, true);
+    });
+    myPromise.then(function(mod) {
+       console.log('success');
+    },
+    function(err) {
+        console.log(err.toString());
+    });
 }
 function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    // Clear canvas
-    var c = document.getElementById("mycanvas2");
-    var ctx = c.getContext("2d");
-    // Use the identity matrix while clearing the canvas
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0,0,400,200);
+    $('#mycanvas2').hide();
 }
 </script>
 
