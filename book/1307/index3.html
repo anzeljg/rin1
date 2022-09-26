@@ -180,19 +180,19 @@
 
 <p align="justify">Primer absolutno podane poti do datoteke v operacijskem sistemu Windows:
 <pre>
-d:\predmeti\fizika\sile\naloga_sile.txt
+d:\predmeti\fizika\sile\naloga-sile.txt
 </pre>
 </p>
 
 <p align="justify">Primer absolutno podane poti do datoteke v operacijskem sistemu Unix:
 <pre>
-/home/kakadu/predmeti/fizika/sile/naloga_sile.txt
+/home/kakadu/predmeti/fizika/sile/naloga-sile.txt
 </pre>
 </p>
 
-<p align="justify">V obeh primerih je absolutna pot sestavljena iz imen map, v katerih se nahaja datoteka. Pri operacijskem sistemu  Windows se pot začne z imenom pogona (<tt>d:</tt>), sledi mapa <tt>predmeti</tt>, v kateri se nahaja mapa <tt>fizika</tt>. V njej se nahaja mapa <tt>sile</tt>. V mapi sile se nahaja datoteka <tt>naloga_sile.txt</tt>. Mape medsebojno mejijo z znakom »<tt>\</tt>«.</p>
+<p align="justify">V obeh primerih je absolutna pot sestavljena iz imen map, v katerih se nahaja datoteka. Pri operacijskem sistemu  Windows se pot začne z imenom pogona (<tt>d:</tt>), sledi mapa <tt>predmeti</tt>, v kateri se nahaja mapa <tt>fizika</tt>. V njej se nahaja mapa <tt>sile</tt>. V mapi sile se nahaja datoteka <tt>naloga-sile.txt</tt>. Mape medsebojno mejijo z znakom »<tt>\</tt>«.</p>
 
-<p align="justify">V operacijskem sistemu Unix se absolutno ime začne v »korenskem imeniku«, ki se označi z »<tt>/</tt>«. V korenskem imeniku je mapa <tt>home</tt>, v kateri se nahaja mapa  uporabnika <tt>kakadu</tt>. V njej se nahaja mapa <tt>predmeti</tt>, v kateri se nahaja mapa <tt>fizika</tt>, v njej pa mapa <tt>sile</tt>. V mapi <tt>sile</tt> se nahaja datoteka <tt>naloga_sile.txt</tt>.</p>
+<p align="justify">V operacijskem sistemu Unix se absolutno ime začne v »korenskem imeniku«, ki se označi z »<tt>/</tt>«. V korenskem imeniku je mapa <tt>home</tt>, v kateri se nahaja mapa  uporabnika <tt>kakadu</tt>. V njej se nahaja mapa <tt>predmeti</tt>, v kateri se nahaja mapa <tt>fizika</tt>, v njej pa mapa <tt>sile</tt>. V mapi <tt>sile</tt> se nahaja datoteka <tt>naloga-sile.txt</tt>.</p>
 
 <h2>Trenutni delovni imenik in relativne poti</h2>
 
@@ -208,23 +208,23 @@ d:\
   predmeti
     fizika
       sile
-        naloga_sile.txt
-        vaje_sile.txt
+        naloga-sile.txt
+        vaje-sile.txt
       gibanje
-        naloga_gibanje.txt
-        vaje_gibanje.txt
+        naloga-gibanje.txt
+        vaje-gibanje.txt
 </pre>
 </p>
 
-<p align="justify">Recimo, da je naš trenutni delovni imenik imenik <tt>fizika</tt>. Absolutna pot do datoteke <tt>naloga_sile.txt</tt> je:
+<p align="justify">Recimo, da je naš trenutni delovni imenik imenik <tt>fizika</tt>. Absolutna pot do datoteke <tt>naloga-sile.txt</tt> je:
 <pre>
-d:\predmeti\fizika\sile\naloga_sile.txt 
+d:\predmeti\fizika\sile\naloga-sile.txt 
 </pre>
 </p>
 
 <p align="justify">Relativna pot do datoteke pa je:
 <pre>
-sile\naloga_sile.txt
+sile\naloga-sile.txt
 </pre>
 </p>
 
@@ -240,8 +240,8 @@ sile\naloga_sile.txt
 	<input type="hidden" name="clozeFlag66_7.listing" id="clozeFlag66_7.listing" value="0"/>
 	<input type="hidden" name="clozeFlag66_7.dropdown" id="clozeFlag66_7.dropdown" value="False"/>
 	<input type="hidden" name="clozeFlag66_7.equallength" id="clozeFlag66_7.equallength" value="False"/>
-	<p>Absolutna pot do datoteke <tt>naloga_gibanje.txt</tt> je: <u>d:\predmeti\fizika\gibanje\naloga_gibanje.txt</u></p>
-	<p>Relativna pot do datoteke pa je: <u>fizika\gibanje\naloga_gibanje.txt</u></p>
+	<p>Absolutna pot do datoteke <tt>naloga-gibanje.txt</tt> je: <u>d:\predmeti\fizika\gibanje\naloga-gibanje.txt</u></p>
+	<p>Relativna pot do datoteke pa je: <u>fizika\gibanje\naloga-gibanje.txt</u></p>
 	<div class="blockb">
 		<button class="btn btn-info" name="submit66_7" id="submit66_7" onClick='clozeSubmit("66_7")'><span class="fa fa-question"></span> Preveri</button>
 		<button class="btn btn-info" name="restart66_7" style="display: none;" id="restart66_7" onClick='clozeRestart("66_7")'><span class="fa fa-refresh"></span>  Začni znova</button>
