@@ -380,46 +380,41 @@ print(t)</textarea>
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
 }
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-}
-function solveit2() {
-  editor2.setValue('def Vstavi(a, x):\n  n = len(a); a.append(0)\n  # Elemente, ki so večji od x, premaknimo\n  # za eno mesto naprej. To moramo početi od\n  # konca tabele proti začetku, saj bi\n  # drugače posamezni element povozil tistega\n  # v naslednji celici.\n  while n > 0 and a[n - 1] > x:\n    a[n] = a[n - 1]\n    n -= 1\n  # Elementi a[0], ..., a[n - 1] so manjši\n  # ali enaki x, elementi od a[n + 1] pa so\n  # večji od x. Mesto a[n] je prazno\n  # (element, ki je prvotno stal tam, smo\n  # malo prej premaknili v a[n + 1]), zato\n  # lahko zdaj tja vpišemo x.\n  a[n] = x\n\ndef Zdruzi(a, b):\n  c = a[:] # izhodna tabela, za začetek je to\n           # kopija tabele a\n  # Dodajmo v izhodno tabelo še vse elemente\n  # tabele b.\n  for x in b: Vstavi(c, x)\n  return c\n\nx = [1, 3, 5, 7]\ny = [2, 4, 6, 8]\nz = Zdruzi(x, y)\nprint(z) # [1, 2, 3, 4, 5, 6, 7, 8]');
-}
-</script>
 
-<script>
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
+
+function runit2() {
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
+}
+
+function clearit2() {
+	$('#output2').text('');
+}
+
+function solveit2() {
+    editor2.setValue('def Vstavi(a, x):\n  n = len(a); a.append(0)\n  # Elemente, ki so večji od x, premaknimo\n  # za eno mesto naprej. To moramo početi od\n  # konca tabele proti začetku, saj bi\n  # drugače posamezni element povozil tistega\n  # v naslednji celici.\n  while n > 0 and a[n - 1] > x:\n    a[n] = a[n - 1]\n    n -= 1\n  # Elementi a[0], ..., a[n - 1] so manjši\n  # ali enaki x, elementi od a[n + 1] pa so\n  # večji od x. Mesto a[n] je prazno\n  # (element, ki je prvotno stal tam, smo\n  # malo prej premaknili v a[n + 1]), zato\n  # lahko zdaj tja vpišemo x.\n  a[n] = x\n\ndef Zdruzi(a, b):\n  c = a[:] # izhodna tabela, za začetek je to\n           # kopija tabele a\n  # Dodajmo v izhodno tabelo še vse elemente\n  # tabele b.\n  for x in b: Vstavi(c, x)\n  return c\n\nx = [1, 3, 5, 7]\ny = [2, 4, 6, 8]\nz = Zdruzi(x, y)\nprint(z) # [1, 2, 3, 4, 5, 6, 7, 8]');
+}
+
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -430,36 +425,26 @@ editor2.setSize('100%', 190);
 </script>
 
 <script type="text/javascript">
-function outf3(text) {
-  var mypre3 = document.getElementById("output3");
-  mypre3.innerHTML = mypre3.innerHTML + text;
-}
-function builtinRead3(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit3() {
-    var prog = editor3.getValue();
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-    Sk.canvas = "mycanvas3";
-    Sk.pre = "output3";
-    Sk.configure({output:outf3, read:builtinRead3});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit3() {
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-}
-</script>
+var output3 = $('#output3');
+var outf3 = function (text) {
+	output3.text(output3.text() + text);
+};
 
-<script>
+function runit3() {
+	Sk.configure({output: outf3, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor3.getValue(), true);
+		});
+	} catch(e) {
+		outf3(e.toString() + "\n")
+	}
+}
+
+function clearit3() {
+	$('#output3').text('');
+}
+
 var editor3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
   lineNumbers: true,
   matchBrackets: true,

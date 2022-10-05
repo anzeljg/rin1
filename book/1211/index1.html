@@ -181,6 +181,10 @@
 					</div>
 					<div class="modal-body">
 <pre>
+{2, 3, 5, 7, 11}
+</pre>
+<p>ali</p>
+<pre>
 set([2, 3, 5, 7, 11])
 </pre>
 					</div>
@@ -203,6 +207,10 @@ set([2, 3, 5, 7, 11])
 						<h4 class="modal-title">Rešitev</h4>
 					</div>
 					<div class="modal-body">
+<pre>
+{i * i for i in range(1, 101)}
+</pre>
+<p>ali</p>
 <pre>
 set([i * i for i in range(1, 101)])
 </pre>
@@ -234,11 +242,11 @@ set([i * i for i in range(1, 101)])
 <div>
 <form>
 <p>
-<textarea id="code">stevilke = set([1, 2, 3, 4, 5])
+<textarea id="code">stevilke = {1, 2, 3, 4, 5}
 print(stevilke) # izpiše vsebino množice
-samoglasniki = set(['a', 'e', 'i', 'o', 'u'])
+samoglasniki = {'a', 'e', 'i', 'o', 'u'}
 print(samoglasniki)
-imena = set(['Nika', 'Jure', 'Branko', 'Alenka'])
+imena = {'Nika', 'Jure', 'Branko', 'Alenka'}
 print(imena)</textarea>
 </p>
 <p>
@@ -254,7 +262,7 @@ print(imena)</textarea>
 <div>
 <form>
 <p>
-<textarea id="code2">s = set([30, 50, 50, 10, 50, 20, 30])
+<textarea id="code2">s = {30, 50, 50, 10, 50, 20, 30}
 print(s)</textarea>
 </p>
 <p>
@@ -292,18 +300,18 @@ print(s)</textarea>
 <h4>Izdelava množic v samostojnem interaktivnem tolmaču ali programu</h4>
 
 <div class="alert alert-danger" role="alert">
-<p align="justify">V pythonovem tolmaču, ki je vgrajen v ta učbenik, je množice mogoče ustvarjati samo z izrazi oblike <code>set(<i>tabela</i>)</code>. V samostojnem tolmaču, ki je nameščen v tvojem računalniku, pa lahko množico ustvariš tudi tako, da njene elemente našteješ znotraj para zavitih oklepajev. Tolmač bo množico zapisal na enak način:
+<p align="justify">V pythonu je množice mogoče ustvariti na dva načina. Pri pravem načinu elemente množice naštejemo znotraj para zavitih oklepajev. Pri drugem načinu pa uporabimo izraz oblike <code>set(<i>tabela</i>)</code>, kjer elemente množice funkciji <code>set</code> podamo v obliki tabele. Tolmač bo množico zapisal z zavitimi oklepaji:
 <pre>
-&gt;&gt;&gt; {1, 2, 3, 4, 5}
+&gt;&gt;&gt; set([1, 2, 3, 4, 5])
 {1, 2, 3, 4, 5}
-&gt;&gt;&gt; {'a', 'e', 'i', 'o', 'u'}
+&gt;&gt;&gt; set(['a', 'e', 'i', 'o', 'u'])
 {'e', 'i', 'u', 'a', 'o'}
-&gt;&gt;&gt; imena = {'Nika', 'Jure', 'Branko', 'Alenka'}
+&gt;&gt;&gt; imena = set(['Nika', 'Jure', 'Branko', 'Alenka'])
 &gt;&gt;&gt; imena
 {'Alenka', 'Branko', 'Nika', 'Jure'}
 </pre>
 </p>
-<p align="justify"><b>Pozor:</b> prazno množico lahko ustvariš samo z izrazom <code>set()</code> ali <code>set([])</code>. Izraz <code>{}</code> namreč ne ustvari prazne množice, pač pa – kot bomo spoznali v naslednji učni enoti – prazen slovar.</p>
+<p align="justify"><b>Pozor:</b> prazno množico lahko ustvariš samo z izrazom <code>set()</code> ali <code>set([])</code>. Izraz <code>{}</code> namreč ne ustvari prazne množice, pač pa &ndash; kot bomo spoznali v naslednji učni enoti &ndash; prazen slovar.</p>
 </div>
 <!-- Right column end -->
 					</div>
@@ -377,43 +385,37 @@ print(s)</textarea>
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf(text) {
-  var mypre = document.getElementById("output");
-  mypre.innerHTML = mypre.innerHTML + text;
-}
-function builtinRead(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit() {
-    var prog = editor.getValue();
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-    Sk.canvas = "mycanvas";
-    Sk.pre = "output";
-    Sk.configure({output:outf, read:builtinRead});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit() {
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -424,36 +426,26 @@ editor.setSize('100%', 120);
 </script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
-}
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-}
-</script>
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
 
-<script>
+function runit2() {
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
+}
+
+function clearit2() {
+	$('#output2').text('');
+}
+
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,

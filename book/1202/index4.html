@@ -302,7 +302,7 @@ Koliko km si prevozil(a)? <u>30</u>
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
 	<script src="../js/skulpt/repl.js"></script>
-	<script src="../js/skulpt/skulpt.min.js"></script>
+	<script src="../js/skulpt/skulpt-0.9.7.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
 	<script>Sk.python3 = true;</script>
@@ -321,8 +321,6 @@ function runit() {
     var prog = editor.getValue();
     var mypre = document.getElementById("output");
     mypre.innerHTML = '';
-    Sk.canvas = "mycanvas";
-    Sk.pre = "output";
     Sk.configure({output:outf, read:builtinRead});
     try {
         eval(Sk.importMainWithBody("<stdin>",false,prog));

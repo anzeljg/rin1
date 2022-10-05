@@ -207,11 +207,11 @@ def JePodmnozica(a, b):
   return len(a.difference(b)) == 0
 
 S = set([3, 4, 5])
-print(JePodmnozica(S, set([2, 3, 4, 5, 6])))
+print(JePodmnozica(S, {2, 3, 4, 5, 6}))
 print(JePodmnozica(S, S))
-print(JePodmnozica(S, set([3, 4])))
-print(JePodmnozica(S, set([3, 5, 6, 7])))
-print(JePodmnozica(set([]), S))
+print(JePodmnozica(S, {3, 4}))
+print(JePodmnozica(S, {3, 5, 6, 7}))
+print(JePodmnozica(set(), S))
 </pre>
 					</div>
 					<div class="modal-footer">
@@ -236,13 +236,13 @@ print(JePodmnozica(set([]), S))
 <pre>
 # Vrne novo množico, ki vsebuje dvakratnike elementov podane množice.
 def Dvakratniki(mnozica):
-  novaMnozica = set([])
+  novaMnozica = set()
   for element in mnozica:
     novaMnozica.add(2 * element)
   return novaMnozica
 
-print(Dvakratniki(set([2, 3, 5, 7])))
-print(Dvakratniki(set([])))
+print(Dvakratniki({2, 3, 5, 7}))
+print(Dvakratniki(set()))
 </pre>
 					</div>
 					<div class="modal-footer">
@@ -301,8 +301,8 @@ print(Dvakratniki(set([])))
 <div>
 <form>
 <p>
-<textarea id="code">a = set([2, 4, 6, 8, 10, 12])
-b = set([3, 6, 9, 12, 15, 18])
+<textarea id="code">a = {2, 4, 6, 8, 10, 12}
+b = {3, 6, 9, 12, 15, 18}
 print(a.intersection(b))
 print(a)
 a.intersection_update(b)
@@ -328,10 +328,10 @@ print(a)</textarea>
 <div class="alert alert-info" role="alert">
 <p align="justify">Katere elemente vsebuje množica <code>m</code> po izvedbi sledečih stavkov? Nalogo najprej reši na papir, nato pa rešitev preveri v pythonovem tolmaču.
 <pre>
-m = set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-m.intersection_update(set([6, 7, 8, 9, 10, 11, 12]))
-m.difference_update(set([7, 8, 13, 14]))
-m.update(set([2, 3, 4, 9, 10]))
+m = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+m.intersection_update({6, 7, 8, 9, 10, 11, 12})
+m.difference_update({7, 8, 13, 14})
+m.update({2, 3, 4, 9, 10})
 </pre>
 </p>
 </div>
@@ -366,7 +366,7 @@ for <i>element</i> in <i>množica</i>:
 </div>
 
 <div class="alert alert-danger" role="alert">
-<p align="justify">V interaktivnem učbeniku lahko za delo z množicami uporabljaš funkcije <code>intersection</code>, <code>union</code> itd. V tolmaču, ki je naložen v tvojem računalniku, pa lahko poleg funkcij uporabljaš tudi naslednje operatorje:</p>
+<p align="justify">Za delo z množicami uporabljaš funkcije <code>intersection</code>, <code>union</code> itd. Poleg funkcij oziroma namesto funkcij pa lahko uporabljaš tudi naslednje operatorje:</p>
 <p>
 <table width="100%" class="table-condensed table-striped table-bordered" style="background-color:white">
 	<tr>
@@ -471,43 +471,37 @@ for <i>element</i> in <i>množica</i>:
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf(text) {
-  var mypre = document.getElementById("output");
-  mypre.innerHTML = mypre.innerHTML + text;
-}
-function builtinRead(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit() {
-    var prog = editor.getValue();
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-    Sk.canvas = "mycanvas";
-    Sk.pre = "output";
-    Sk.configure({output:outf, read:builtinRead});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit() {
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,

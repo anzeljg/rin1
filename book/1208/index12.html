@@ -329,52 +329,49 @@ print(Poisci(tabela, stevilo))</textarea>
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
 }
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-}
-function solveit2a() {
-  editor2.setValue('def StevPoti(n, k):\n  global stKlicev\n  stKlicev += 1\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\nstKlicev = 0\nstevilo = StevPoti(3, 1)\nprint(str(stevilo)+" ("+str(stKlicev)+" klicev)")');
-}
-function solveit2b() {
-  editor2.setValue('def StevPoti(n, k):\n  global stKlicev\n  stKlicev += 1\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\nfor n in range(1, 11):\n  # Preizkusimo različne k-je (od -n do +n) in\n  # poglejmo, koliko klicev se izvede pri vsakem\n  # od njih. Videli bomo, da je število klicev\n  # odvisno le od n, ne pa tudi od k, in sicer\n  # je klicev vedno 2**(n + 1) - 1.\n  rezultati = []\n  for k in range(-n, n + 1):\n    stKlicev = 0\n    StevPoti(n, k)\n    rezultati.append(stKlicev)\n  print("n = %d: %s klicev" % (n, rezultati))');
-}
-function solveit2c() {
-  editor2.setValue('def StevPoti(n, k):\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\n# Učinkovitejšo rešitev dobimo, če si že\n# izračunane rezultate zapomnimo, tako da\n# jih pozneje ne računamo ponovno.\n# Spodnja rešitev jih hrani v tabeli "rez".\n# Ker je k lahko tudi negativen, bomo\n# rezultat za (n, k) hranili v rez[n][n+k].\n# (Če je k manjši od -n ali večji od n, pa\n# tako ali tako že iz opisa naloge vemo, da\n# bo rezultat 0, zato nam rezultatov za\n# takšne k ni treba hraniti v tabeli.)\ndef StevPoti2_(n, k, rez):\n  if k < -n or k > n: return 0\n  if n == 0: return 1\n  # Če rezultat za (n, k) še nimamo, ga\n  # izračunajmo zdaj in ga shranimo v tabelo.\n  if rez[n][k+n] < 0:\n    rez[n][k+n] = StevPoti2_(n-1, k-1, rez) + \\\n                  StevPoti2_(n-1, k+1, rez)\n  # Rezultat je zdaj v tabeli in ga lahko vrnemo.\n  return rez[n][k+n]\n\ndef StevPoti2(n, k):\n  rez = [[-1] * (2*nn+1) for nn in range(n+1)]\n  return StevPoti2_(n, k, rez)\n\nfor n in range(1, 10):\n  for k in range(-n - 3, n + 4):\n    assert StevPoti(n, k) == StevPoti2(n, k)');
-}
-</script>
 
-<script>
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
+
+function runit2() {
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
+}
+
+function clearit2() {
+	$('#output2').text('');
+}
+
+function solveit2a() {
+    editor2.setValue('def StevPoti(n, k):\n  global stKlicev\n  stKlicev += 1\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\nstKlicev = 0\nstevilo = StevPoti(3, 1)\nprint(str(stevilo)+" ("+str(stKlicev)+" klicev)")');
+}
+
+function solveit2b() {
+    editor2.setValue('def StevPoti(n, k):\n  global stKlicev\n  stKlicev += 1\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\nfor n in range(1, 11):\n  # Preizkusimo različne k-je (od -n do +n) in\n  # poglejmo, koliko klicev se izvede pri vsakem\n  # od njih. Videli bomo, da je število klicev\n  # odvisno le od n, ne pa tudi od k, in sicer\n  # je klicev vedno 2**(n + 1) - 1.\n  rezultati = []\n  for k in range(-n, n + 1):\n    stKlicev = 0\n    StevPoti(n, k)\n    rezultati.append(stKlicev)\n  print("n = %d: %s klicev" % (n, rezultati))');
+}
+
+function solveit2c() {
+    editor2.setValue('def StevPoti(n, k):\n  if n == 0:\n    if k == 0: return 1\n    else: return 0\n  else:\n    return StevPoti(n-1, k-1) + StevPoti(n-1, k+1)\n\n# Učinkovitejšo rešitev dobimo, če si že\n# izračunane rezultate zapomnimo, tako da\n# jih pozneje ne računamo ponovno.\n# Spodnja rešitev jih hrani v tabeli "rez".\n# Ker je k lahko tudi negativen, bomo\n# rezultat za (n, k) hranili v rez[n][n+k].\n# (Če je k manjši od -n ali večji od n, pa\n# tako ali tako že iz opisa naloge vemo, da\n# bo rezultat 0, zato nam rezultatov za\n# takšne k ni treba hraniti v tabeli.)\ndef StevPoti2_(n, k, rez):\n  if k < -n or k > n: return 0\n  if n == 0: return 1\n  # Če rezultat za (n, k) še nimamo, ga\n  # izračunajmo zdaj in ga shranimo v tabelo.\n  if rez[n][k+n] < 0:\n    rez[n][k+n] = StevPoti2_(n-1, k-1, rez) + \\\n                  StevPoti2_(n-1, k+1, rez)\n  # Rezultat je zdaj v tabeli in ga lahko vrnemo.\n  return rez[n][k+n]\n\ndef StevPoti2(n, k):\n  rez = [[-1] * (2*nn+1) for nn in range(n+1)]\n  return StevPoti2_(n, k, rez)\n\nfor n in range(1, 10):\n  for k in range(-n - 3, n + 4):\n    assert StevPoti(n, k) == StevPoti2(n, k)');
+}
+
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -385,36 +382,26 @@ editor2.setSize('100%', 175);
 </script>
 
 <script type="text/javascript">
-function outf3(text) {
-  var mypre3 = document.getElementById("output3");
-  mypre3.innerHTML = mypre3.innerHTML + text;
-}
-function builtinRead3(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit3() {
-    var prog = editor3.getValue();
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-    Sk.canvas = "mycanvas3";
-    Sk.pre = "output3";
-    Sk.configure({output:outf3, read:builtinRead3});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit3() {
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-}
-</script>
+var output3 = $('#output3');
+var outf3 = function (text) {
+	output3.text(output3.text() + text);
+};
 
-<script>
+function runit3() {
+	Sk.configure({output: outf3, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor3.getValue(), true);
+		});
+	} catch(e) {
+		outf3(e.toString() + "\n")
+	}
+}
+
+function clearit3() {
+	$('#output3').text('');
+}
+
 var editor3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
   lineNumbers: true,
   matchBrackets: true,

@@ -436,46 +436,41 @@ print(vsota)</textarea>
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf4(text) {
-  var mypre4 = document.getElementById("output4");
-  mypre4.innerHTML = mypre4.innerHTML + text;
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
 }
-function builtinRead4(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
+
+var output4 = $('#output4');
+var outf4 = function (text) {
+	output4.text(output4.text() + text);
+};
+
 function runit4() {
-    var prog = editor4.getValue();
-    var mypre4 = document.getElementById("output4");
-    mypre4.innerHTML = '';
-    Sk.canvas = "mycanvas4";
-    Sk.pre = "output4";
-    Sk.configure({output:outf4, read:builtinRead4});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
+	Sk.configure({output: outf4, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor4.getValue(), true);
+		});
+	} catch(e) {
+		outf4(e.toString() + "\n")
+	}
 }
+
 function clearit4() {
-    var mypre4 = document.getElementById("output4");
-    mypre4.innerHTML = '';
+	$('#output4').text('');
 }
+
 function solveit4() {
   editor4.setValue('for n in range(1, 101):\n  d = 0\n  for delitelj in range(1, n + 1):\n    if n % delitelj == 0:\n      d += 1\n  print(str(n) + " ima " + str(d) + " deliteljev.")');
 }
-</script>
 
-<script>
 var editor4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -486,39 +481,30 @@ editor4.setSize('100%', 120);
 </script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
-}
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
+
 function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
 }
+
 function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
+	$('#output2').text('');
 }
+
 function solveit2() {
   editor2.setValue('for n in range(1, 11):\n  print(n)');
 }
-</script>
 
-<script>
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -529,42 +515,34 @@ editor2.setSize('100%', 50);
 </script>
 
 <script type="text/javascript">
-function outf3(text) {
-  var mypre3 = document.getElementById("output3");
-  mypre3.innerHTML = mypre3.innerHTML + text;
-}
-function builtinRead3(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
+var output3 = $('#output3');
+var outf3 = function (text) {
+	output3.text(output3.text() + text);
+};
+
 function runit3() {
-    var prog = editor3.getValue();
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-    Sk.canvas = "mycanvas3";
-    Sk.pre = "output3";
-    Sk.configure({output:outf3, read:builtinRead3});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
+	Sk.configure({output: outf3, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor3.getValue(), true);
+		});
+	} catch(e) {
+		outf3(e.toString() + "\n")
+	}
 }
+
 function clearit3() {
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
+	$('#output3').text('');
 }
+
 function solveit3a() {
   editor3.setValue('a = int(input("Vnesi a: "))\nb = int(input("Vnesi b: "))\nvsota = 0\nwhile a <= b:\n  vsota = vsota + a\n  a = a + 1\nprint(vsota)');
 }
+
 function solveit3b() {
   editor3.setValue('a = int(input("Vnesi a: "))\nb = int(input("Vnesi b: "))\n# če je b manjši od a ju zamenjaj\nif b < a: t = a; a = b; b = t\nvsota = 0\nwhile a <= b:\n  vsota = vsota + a\n  a = a + 1\nprint(vsota)');
 }
-</script>
 
-<script>
 var editor3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
   lineNumbers: true,
   matchBrackets: true,

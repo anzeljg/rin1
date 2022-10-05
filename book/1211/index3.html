@@ -204,7 +204,7 @@
 <pre>
 # Vrne število samoglasnikov v podanem nizu.
 def PrestejSamoglasnike(niz):
-  samoglasniki = set(['a', 'e', 'i', 'o', 'u'])
+  samoglasniki = {'a', 'e', 'i', 'o', 'u'}
   stevilo = 0
 
   # Sprehodimo se po znakih niza in za vsak znak preverimo, ali je prisoten
@@ -244,10 +244,10 @@ je enak <code>True</code> natanko v primeru, če podani element pripada podani m
 <div>
 <form>
 <p>
-<textarea id="code">M = set(['januar', 'februar', 'marec', 'april'])
+<textarea id="code">M = {'januar', 'februar', 'marec', 'april'}
 print('marec' in M) # izpiše True 
 print('maj' in M)   # izpiše False
-print('a' in set([])) # izpiše False</textarea>
+print('a' in set()) # izpiše False</textarea>
 </p>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
@@ -270,13 +270,13 @@ print('a' in set([])) # izpiše False</textarea>
 
 <p align="justify">Število elementov v množici pridobimo s funkcijo <code>len</code>. S funkcijama <code>add</code> in <code>remove</code> dodajamo in odvzemamo posamezne elemente:
 <pre>
-&gt;&gt;&gt; mnozica = set(['ponedeljek', 'torek'])
+&gt;&gt;&gt; mnozica = {'ponedeljek', 'torek'}
 &gt;&gt;&gt; len(mnozica)
 2
 &gt;&gt;&gt; mnozica.add('sreda')
 &gt;&gt;&gt; mnozica.remove('ponedeljek')
 &gt;&gt;&gt; mnozica
-set(['sreda', 'torek'])
+{'sreda', 'torek'}
 </pre>
 </p>
 </p>
@@ -289,7 +289,7 @@ set(['sreda', 'torek'])
 <pre>
 &gt;&gt;&gt; mnozica.add('sreda')
 &gt;&gt;&gt; mnozica
-set(['sreda', 'torek'])
+{'sreda', 'torek'}
 &gt;&gt;&gt; mnozica.remove('petek')
 Traceback (most recent call last):
   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
@@ -304,8 +304,8 @@ KeyError: 'petek'
 <div>
 <form>
 <p>
-<textarea id="code2">a = set([2, 4, 6, 8, 10, 12])
-b = set([3, 6, 9, 12, 15, 18])
+<textarea id="code2">a = {2, 4, 6, 8, 10, 12}
+b = {3, 6, 9, 12, 15, 18}
 # izpiše presek množic a in b
 print(a.intersection(b))
 # izpiše unijo množic a in b
@@ -318,7 +318,7 @@ print(b.difference(a))</textarea>
 <p>
 <a href="#" class="btn btn-primary"  onclick="runit2()"><span class="fa fa-play"></span> Izvedi</a>
 <a href="#" class="btn btn-primary"  onclick="clearit2()">Počisti</a>
-<input type="checkbox" id="theme" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
+<input type="checkbox" id="theme2" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
@@ -397,43 +397,37 @@ print(b.difference(a))</textarea>
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf(text) {
-  var mypre = document.getElementById("output");
-  mypre.innerHTML = mypre.innerHTML + text;
-}
-function builtinRead(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit() {
-    var prog = editor.getValue();
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-    Sk.canvas = "mycanvas";
-    Sk.pre = "output";
-    Sk.configure({output:outf, read:builtinRead});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit() {
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -444,36 +438,26 @@ editor.setSize('100%', 85);
 </script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
-}
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-}
-</script>
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
 
-<script>
+function runit2() {
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
+}
+
+function clearit2() {
+	$('#output2').text('');
+}
+
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,

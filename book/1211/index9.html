@@ -211,8 +211,8 @@ def OsebeNaRazdalji(poznanstva, oseba, razdalja):
   # Postopamo zelo podobno kot pri funkciji 'Dosegljive'. Zanima nas
   # obogatitev množice 'dosegljive' v koraku 'razdalja'.
 
-  dosegljive = set([])
-  obogatitev = set([oseba])
+  dosegljive = set()
+  obogatitev = {oseba}
   dosegljive.update(obogatitev)
 
   # Po prvem koraku spodnje zanke bo množica 'obogatitev' vsebovala znance
@@ -223,7 +223,7 @@ def OsebeNaRazdalji(poznanstva, oseba, razdalja):
     # Izračunamo obogatitev v tem koraku (množica znancev oseb, s katerimi
     # smo množico 'dosegljive' obogatili v prejšnjem koraku, vendar brez
     # oseb, ki so v množici 'dosegljive' že prisotne).
-    nove = set([])
+    nove = set()
     for ob in obogatitev:
       nove.update(poznanstva[ob])
     obogatitev = nove.difference(dosegljive)
@@ -234,10 +234,7 @@ def OsebeNaRazdalji(poznanstva, oseba, razdalja):
   # Množica 'obogatitev' sedaj vsebuje iskane osebe.
   return obogatitev
 
-prijateljstva = [set([1]), set([0, 5, 7]),
-                 set([4, 5]), set([6]),
-                 set([2]), set([1, 2, 7]),
-                 set([3]), set([1, 5])]
+prijateljstva = [{1}, {0, 5, 7}, {4, 5}, {6}, {2}, {1, 2, 7}, {3}, {1, 5}]
 for i in range(10):
   izpis = 'Osebe na razdalji ' + i
   osebe = OsebeNaRazdalji(poznanstva, 0, i)
@@ -267,30 +264,27 @@ for i in range(10):
 <form>
 <p>
 <textarea id="code">def Dosegljive(poznanstva, oseba):
-  dosegljive = set([])
+  dosegljive = set()
   # Množico na začetku obogatimo s podano osebo.
-  obogatitev = set([oseba])
+  obogatitev = {oseba}
   dosegljive.update(obogatitev)
   # Dokler se množica povečuje ...
   while len(obogatitev) > 0:
-    # Izračunamo obogatitev v tem koraku (množica
-    # znancev oseb, s katerimi smo množico
-    # dosegljive obogatili v prejšnjem koraku,
-    # vendar brez oseb, ki so v množici
-    # dosegljive že prisotne).
-    dodane = set([])
+    # Izračunamo obogatitev v tem koraku (množica znancev oseb,
+    # s katerimi smo množico dosegljive obogatili v prejšnjem
+    # koraku, vendar brez oseb, ki so v množici dosegljive
+    # že prisotne).
+    dodane = set()
     for ob in obogatitev:
       dodane.update(poznanstva[ob])
     obogatitev = dodane.difference(dosegljive)
     # Obogatimo množico dosegljive.
     dosegljive.update(obogatitev)
-    # Množica dosegljive sedaj vsebuje vse osebe,
-    # dosegljive od podane osebe.
+    # Množica dosegljive sedaj vsebuje vse osebe, dosegljive od
+    # podane osebe.
   return dosegljive
 
-p = [set([1]), set([0, 5, 7]), set([4, 5]),
-     set([6]), set([2]), set([1, 2, 7]),
-     set([3]), set([1, 5])]
+p = [{1}, {0, 5, 7}, {4, 5}, {6}, {2}, {1, 2, 7}, {3}, {1, 5}]
 print(Dosegljive(p, 0))
 print(Dosegljive(p, 6))</textarea>
 </p>
@@ -387,43 +381,37 @@ print(Dosegljive(p, 6))</textarea>
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf(text) {
-  var mypre = document.getElementById("output");
-  mypre.innerHTML = mypre.innerHTML + text;
-}
-function builtinRead(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit() {
-    var prog = editor.getValue();
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-    Sk.canvas = "mycanvas";
-    Sk.pre = "output";
-    Sk.configure({output:outf, read:builtinRead});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit() {
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,

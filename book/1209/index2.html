@@ -186,7 +186,7 @@
 <div>
 <form>
 <p>
-<textarea id="code4">t = [] # ustvari prazno tabelo
+<textarea id="code">t = [] # ustvari prazno tabelo
 # doda element 10 na konec tabele
 t.append(10)
 t.append(50)
@@ -213,12 +213,12 @@ print(len(t))
 print(t)</textarea>
 </p>
 <p>
-<a href="#" class="btn btn-info"  onclick="runit4()"><span class="fa fa-play"></span> Izvedi</a>
-<a href="#" class="btn btn-info"  onclick="clearit4()">Počisti</a>
+<a href="#" class="btn btn-info"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-info"  onclick="clearit()">Počisti</a>
 </p>
 </form>
 </div>
-<pre id="output4"></pre>
+<pre id="output"></pre>
 </p>
 </div>
 <!-- Left column end -->
@@ -308,50 +308,44 @@ print(t)</textarea>
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf4(text) {
-  var mypre4 = document.getElementById("output4");
-  mypre4.innerHTML = mypre4.innerHTML + text;
-}
-function builtinRead4(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit4() {
-    var prog = editor4.getValue();
-    var mypre4 = document.getElementById("output4");
-    mypre4.innerHTML = '';
-    Sk.canvas = "mycanvas4";
-    Sk.pre = "output4";
-    Sk.configure({output:outf4, read:builtinRead4});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit4() {
-    var mypre4 = document.getElementById("output4");
-    mypre4.innerHTML = '';
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
-var editor4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
   theme: "rin-light"
 });
-editor4.setSize('100%', 260);
+editor.setSize('100%', 260);
 </script>
 
 

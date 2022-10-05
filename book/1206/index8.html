@@ -372,49 +372,46 @@ Izpisi(["sest", "dvanajst", "sedem", "tri"])</textarea>
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
 }
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-}
-function solveit2a() {
-  editor2.setValue('def PobrisiOklepaje(s):\n  vOklepaju = False\n  t = "" # izhodni niz\n  for c in s:\n    if c == "(": vOklepaju = True\n    elif c == ")": vOklepaju = False\n    elif not vOklepaju: t += c\n  return t\n\n# primer a\na = PobrisiOklepaje("ena(dve)tri(stiri) pet")\nprint(a)\n# primer b\nb = PobrisiOklepaje("ena(dve(tri)stiri)pet")\nprint(b)');
-}
-function solveit2b() {
-  editor2.setValue('def PobrisiOklepaje(s):\n  vOklepaju = 0\n  t = "" # izhodni niz\n  for c in s:\n    if c == "(": vOklepaju += 1\n    elif c == ")": vOklepaju -= 1\n    elif vOklepaju == 0: t += c\n  return t\n\n# primer a\na = PobrisiOklepaje("ena(dve)tri(stiri) pet")\nprint(a)\n# primer b\nb = PobrisiOklepaje("ena(dve(tri)stiri)pet")\nprint(b)');
-}
-</script>
 
-<script>
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
+
+function runit2() {
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
+}
+
+function clearit2() {
+	$('#output2').text('');
+}
+
+
+function solveit2a() {
+    editor2.setValue('def PobrisiOklepaje(s):\n  vOklepaju = False\n  t = "" # izhodni niz\n  for c in s:\n    if c == "(": vOklepaju = True\n    elif c == ")": vOklepaju = False\n    elif not vOklepaju: t += c\n  return t\n\n# primer a\na = PobrisiOklepaje("ena(dve)tri(stiri) pet")\nprint(a)\n# primer b\nb = PobrisiOklepaje("ena(dve(tri)stiri)pet")\nprint(b)');
+}
+
+function solveit2b() {
+    editor2.setValue('def PobrisiOklepaje(s):\n  vOklepaju = 0\n  t = "" # izhodni niz\n  for c in s:\n    if c == "(": vOklepaju += 1\n    elif c == ")": vOklepaju -= 1\n    elif vOklepaju == 0: t += c\n  return t\n\n# primer a\na = PobrisiOklepaje("ena(dve)tri(stiri) pet")\nprint(a)\n# primer b\nb = PobrisiOklepaje("ena(dve(tri)stiri)pet")\nprint(b)');
+}
+
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -425,39 +422,30 @@ editor2.setSize('100%', 280);
 </script>
 
 <script type="text/javascript">
-function outf3(text) {
-  var mypre3 = document.getElementById("output3");
-  mypre3.innerHTML = mypre3.innerHTML + text;
-}
-function builtinRead3(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit3() {
-    var prog = editor3.getValue();
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-    Sk.canvas = "mycanvas3";
-    Sk.pre = "output3";
-    Sk.configure({output:outf3, read:builtinRead3});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit3() {
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-}
-function solveit3() {
-  editor3.setValue('def Izpisi(t):\n  # Poiščimo dolžino najdaljšega\n  # niza v tabeli.\n  naj = 0\n  for s in t:\n    dolzina = len(s)\n    if dolzina > naj:\n      naj = dolzina\n  # Izpišimo nize in pred vsakim še\n  # ustrezno število presledkov.\n  for s in t:\n    print(" " * (naj - len(s)) + s)\n\nIzpisi(["sest", "dvanajst", "sedem", "tri"])');
-}
-</script>
+var output3 = $('#output3');
+var outf3 = function (text) {
+	output3.text(output3.text() + text);
+};
 
-<script>
+function runit3() {
+	Sk.configure({output: outf3, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor3.getValue(), true);
+		});
+	} catch(e) {
+		outf3(e.toString() + "\n")
+	}
+}
+
+function clearit3() {
+	$('#output3').text('');
+}
+
+function solveit3() {
+    editor3.setValue('def Izpisi(t):\n  # Poiščimo dolžino najdaljšega\n  # niza v tabeli.\n  naj = 0\n  for s in t:\n    dolzina = len(s)\n    if dolzina > naj:\n      naj = dolzina\n  # Izpišimo nize in pred vsakim še\n  # ustrezno število presledkov.\n  for s in t:\n    print(" " * (naj - len(s)) + s)\n\nIzpisi(["sest", "dvanajst", "sedem", "tri"])');
+}
+
 var editor3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
   lineNumbers: true,
   matchBrackets: true,

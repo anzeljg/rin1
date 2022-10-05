@@ -284,60 +284,58 @@
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
 }
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-}
-function solveit2a() {
-  editor2.setValue('def KazaloPojavitevA(stavki):\n  h = {}\n  for i in range(len(stavki)):\n    stavek = stavki[i]\n    for beseda in stavek.split():\n      if beseda not in h:\n        h[beseda] = []\n      h[beseda].append(i)\n  return h\n\nstavki = ["ena dve ena", "dve tri štiri"]\nkazalo = KazaloPojavitevA(stavki)\nprint(kazalo)');
-}
-function solveit2b() {
-  editor2.setValue('def KazaloPojavitevB(stavki):\n  h = {}\n  for i in range(len(stavki)):\n    stavek = stavki[i]\n    for beseda in stavek.split():\n      if beseda not in h:\n        h[beseda] = []\n      seznam = h[beseda]\n      if len(seznam) > 0 and seznam[-1] == i:\n        continue\n      h[beseda].append(i)\n  return h\n\nstavki = ["ena dve ena", "dve tri štiri"]\nkazalo = KazaloPojavitevB(stavki)\nprint(kazalo)');
-}
-function solveit2c() {
-  editor2.setValue('def KazaloPojavitevB(stavki):\n  h = {}\n  for i in range(len(stavki)):\n    stavek = stavki[i]\n    for beseda in stavek.split():\n      if beseda not in h:\n        h[beseda] = []\n      seznam = h[beseda]\n      if (len(seznam) > 0 and\n	      seznam[-1] == i):\n        continue\n      h[beseda].append(i)\n  return h\n\ndef StevSopojavitev(s1, s2, kazalo):\n  p1 = kazalo.get(s1, [])\n  p2 = kazalo.get(s2, [])\n  i1 = 0; i2 = 0\n  n1 = len(p1); n2 = len(p2)\n  sopojavitve = 0\n  while i1 < n1 and i2 < n2:\n    if p1[i1] == p2[i2]:\n      sopojavitve += 1\n      i1 += 1\n      i2 += 1\n    elif p1[i1] < p2[i2]: i1 += 1\n    else: i2 += 1\n  return sopojavitve\n\nstavki = ["ena dve ena", "dve tri štiri"]\nkazalo = KazaloPojavitevB(stavki)\nprint(kazalo)\nn = StevSopojavitev("ena", "tri", kazalo)\nprint(n)');
-}
-function solveit2d() {
-  editor2.setValue('def KazaloPojavitevB(stavki):\n  h = {}\n  for i in range(len(stavki)):\n    stavek = stavki[i]\n    for beseda in stavek.split():\n      if beseda not in h:\n        h[beseda] = []\n      seznam = h[beseda]\n      if (len(seznam) > 0 and\n	      seznam[-1] == i):\n        continue\n      h[beseda].append(i)\n  return h\n\ndef StevSopojavitev(s1, s2, kazalo):\n  p1 = kazalo.get(s1, [])\n  p2 = kazalo.get(s2, [])\n  i1 = 0; i2 = 0\n  n1 = len(p1); n2 = len(p2)\n  sopojavitve = 0\n  while i1 < n1 and i2 < n2:\n    if p1[i1] == p2[i2]:\n      sopojavitve += 1\n      i1 += 1\n      i2 += 1\n    elif p1[i1] < p2[i2]: i1 += 1\n    else: i2 += 1\n  return sopojavitve\n\n# Rešitev, ki si najprej pripravi kazalo\n# in gre nato v njem z zanko po vseh parih\n# besed:\ndef NajpogostejseSopojavitve1(stavki):\n  kazalo = KazaloPojavitevB(stavki)\n  # Pripravimo si seznam besed.\n  besede = [beseda for beseda in kazalo]\n  # Pojdimo po vseh parih besed in v seznam\n  # "trojice" dodajajmo trojice oblike\n  # (število sopojavitev, beseda1, beseda2).\n  trojice = []\n  for i in range(1, len(besede)):\n    for j in range(i):\n      stSopojavitev = \\\n      StevSopojavitev(besede[i], besede[j],\n                      kazalo)\n      trojice.append([stSopojavitev, i, j])\n    # Ker nas bo na koncu zanimalo le\n    # najpogostejših 10 sopojavitev, bomo\n    # vsake toliko časa seznam oklestili\n    # in obdržali le najpogostejših 10.\n    trojice.sort(); trojice = trojice[-10:]\n    # Uredimo trojice; najpogostejše\n    # trojice pridejo na konec.\n    trojice.sort()\n    # Izpišimo najpogostejših 10\n    # sopojavitev.\n    for trojica in trojice[-10:]:\n      stSopojavitev = trojica[0]\n      beseda1 = besede[trojica[1]]\n      beseda2 = besede[trojica[2]]\n      print(str(stSopojavitev) + " " +\n            beseda1 + " " + beseda2)\n\n# Rešitev, ki gre po vseh stavkih in pri\n# vsakem stavku pregleda vse pare besed v\n# njem ter poveča števce sopojavitev:\ndef NajpogostejseSopojavitve2(stavki):\n  # Pripravimo si slovar za štetje\n  # sopojavitev.\n  # Ključi bodo pari besed, pripadajoče\n  # vrednosti pa števila sopojavitev.\n  stSopojavitev = {}\n  for stavek in stavki:\n    # Razbijmo stavek na besede.\n    besede = stavek.split()\n    # Spremenimo ga v množico, da se znebimo\n    # morebitnih dvojnikov.\n    besede = set(besede)\n    # Preglejmo vse pare besed v stavku. Da\n    # ne bomo istega para šteli po dvakrat,\n    # bomo vsak par obdelali le, če je\n    # beseda1 < beseda2.\n    for beseda1 in besede:\n      for beseda2 in besede:\n        if beseda1 < beseda2:\n          # Povečajmo števec sopojavitev.\n          stSopojavitev[beseda1,beseda2] = \\\n          stSopojavitev.get((beseda1, \\\n          beseda2), 0) + 1\n  # Iz slovarja naredimo seznam trojic.\n  trojice = [[stSopojavitev[b1, b2], b1, b2]\n             for b1, b2 in stSopojavitev]\n  # Nadaljevanje je enako kot v funkciji\n  # NajpogostejseSopojavitve1.\n  trojice.sort()\n  for trojica in trojice[-10:]:\n    stSopojavitev = trojica[0]\n    beseda1 = trojica[1]\n    beseda2 = trojica[2]\n    print(str(stSopojavitev) + " " +\n          beseda1 + " " + beseda2)\n\nstavki = ["ena dve ena", "dve tri štiri"]\nkazalo = KazaloPojavitevB(stavki)\nprint(kazalo)\nn = StevSopojavitev("ena", "tri", kazalo)\nprint(n)\nprint("------------")\nNajpogostejseSopojavitve1(stavki)\nprint("------------")\nNajpogostejseSopojavitve2(stavki)');
-}
-</script>
 
-<script>
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
+
+function runit2() {
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
+}
+
+function clearit2() {
+	$('#output2').text('');
+}
+
+function solveit2a() {
+    editor2.setValue('def KazaloPojavitevA(stavki):\n  h = {}\n  for i in range(len(stavki)):\n    stavek = stavki[i]\n    for beseda in stavek.split():\n      if beseda not in h:\n        h[beseda] = []\n      h[beseda].append(i)\n  return h\n\nstavki = ["ena dve ena", "dve tri štiri"]\nkazalo = KazaloPojavitevA(stavki)\nprint(kazalo)');
+}
+
+function solveit2b() {
+    editor2.setValue('def KazaloPojavitevB(stavki):\n  h = {}\n  for i in range(len(stavki)):\n    stavek = stavki[i]\n    for beseda in stavek.split():\n      if beseda not in h:\n        h[beseda] = []\n      seznam = h[beseda]\n      if len(seznam) > 0 and seznam[-1] == i:\n        continue\n      h[beseda].append(i)\n  return h\n\nstavki = ["ena dve ena", "dve tri štiri"]\nkazalo = KazaloPojavitevB(stavki)\nprint(kazalo)');
+}
+
+function solveit2c() {
+    editor2.setValue('def KazaloPojavitevB(stavki):\n  h = {}\n  for i in range(len(stavki)):\n    stavek = stavki[i]\n    for beseda in stavek.split():\n      if beseda not in h:\n        h[beseda] = []\n      seznam = h[beseda]\n      if (len(seznam) > 0 and\n	      seznam[-1] == i):\n        continue\n      h[beseda].append(i)\n  return h\n\ndef StevSopojavitev(s1, s2, kazalo):\n  p1 = kazalo.get(s1, [])\n  p2 = kazalo.get(s2, [])\n  i1 = 0; i2 = 0\n  n1 = len(p1); n2 = len(p2)\n  sopojavitve = 0\n  while i1 < n1 and i2 < n2:\n    if p1[i1] == p2[i2]:\n      sopojavitve += 1\n      i1 += 1\n      i2 += 1\n    elif p1[i1] < p2[i2]: i1 += 1\n    else: i2 += 1\n  return sopojavitve\n\nstavki = ["ena dve ena", "dve tri štiri"]\nkazalo = KazaloPojavitevB(stavki)\nprint(kazalo)\nn = StevSopojavitev("ena", "tri", kazalo)\nprint(n)');
+}
+
+function solveit2d() {
+    editor2.setValue('def KazaloPojavitevB(stavki):\n  h = {}\n  for i in range(len(stavki)):\n    stavek = stavki[i]\n    for beseda in stavek.split():\n      if beseda not in h:\n        h[beseda] = []\n      seznam = h[beseda]\n      if (len(seznam) > 0 and\n	      seznam[-1] == i):\n        continue\n      h[beseda].append(i)\n  return h\n\ndef StevSopojavitev(s1, s2, kazalo):\n  p1 = kazalo.get(s1, [])\n  p2 = kazalo.get(s2, [])\n  i1 = 0; i2 = 0\n  n1 = len(p1); n2 = len(p2)\n  sopojavitve = 0\n  while i1 < n1 and i2 < n2:\n    if p1[i1] == p2[i2]:\n      sopojavitve += 1\n      i1 += 1\n      i2 += 1\n    elif p1[i1] < p2[i2]: i1 += 1\n    else: i2 += 1\n  return sopojavitve\n\n# Rešitev, ki si najprej pripravi kazalo\n# in gre nato v njem z zanko po vseh parih\n# besed:\ndef NajpogostejseSopojavitve1(stavki):\n  kazalo = KazaloPojavitevB(stavki)\n  # Pripravimo si seznam besed.\n  besede = [beseda for beseda in kazalo]\n  # Pojdimo po vseh parih besed in v seznam\n  # "trojice" dodajajmo trojice oblike\n  # (število sopojavitev, beseda1, beseda2).\n  trojice = []\n  for i in range(1, len(besede)):\n    for j in range(i):\n      stSopojavitev = \\\n      StevSopojavitev(besede[i], besede[j],\n                      kazalo)\n      trojice.append([stSopojavitev, i, j])\n    # Ker nas bo na koncu zanimalo le\n    # najpogostejših 10 sopojavitev, bomo\n    # vsake toliko časa seznam oklestili\n    # in obdržali le najpogostejših 10.\n    trojice.sort(); trojice = trojice[-10:]\n    # Uredimo trojice; najpogostejše\n    # trojice pridejo na konec.\n    trojice.sort()\n    # Izpišimo najpogostejših 10\n    # sopojavitev.\n    for trojica in trojice[-10:]:\n      stSopojavitev = trojica[0]\n      beseda1 = besede[trojica[1]]\n      beseda2 = besede[trojica[2]]\n      print(str(stSopojavitev) + " " +\n            beseda1 + " " + beseda2)\n\n# Rešitev, ki gre po vseh stavkih in pri\n# vsakem stavku pregleda vse pare besed v\n# njem ter poveča števce sopojavitev:\ndef NajpogostejseSopojavitve2(stavki):\n  # Pripravimo si slovar za štetje\n  # sopojavitev.\n  # Ključi bodo pari besed, pripadajoče\n  # vrednosti pa števila sopojavitev.\n  stSopojavitev = {}\n  for stavek in stavki:\n    # Razbijmo stavek na besede.\n    besede = stavek.split()\n    # Spremenimo ga v množico, da se znebimo\n    # morebitnih dvojnikov.\n    besede = set(besede)\n    # Preglejmo vse pare besed v stavku. Da\n    # ne bomo istega para šteli po dvakrat,\n    # bomo vsak par obdelali le, če je\n    # beseda1 < beseda2.\n    for beseda1 in besede:\n      for beseda2 in besede:\n        if beseda1 < beseda2:\n          # Povečajmo števec sopojavitev.\n          stSopojavitev[beseda1,beseda2] = \\\n          stSopojavitev.get((beseda1, \\\n          beseda2), 0) + 1\n  # Iz slovarja naredimo seznam trojic.\n  trojice = [[stSopojavitev[b1, b2], b1, b2]\n             for b1, b2 in stSopojavitev]\n  # Nadaljevanje je enako kot v funkciji\n  # NajpogostejseSopojavitve1.\n  trojice.sort()\n  for trojica in trojice[-10:]:\n    stSopojavitev = trojica[0]\n    beseda1 = trojica[1]\n    beseda2 = trojica[2]\n    print(str(stSopojavitev) + " " +\n          beseda1 + " " + beseda2)\n\nstavki = ["ena dve ena", "dve tri štiri"]\nkazalo = KazaloPojavitevB(stavki)\nprint(kazalo)\nn = StevSopojavitev("ena", "tri", kazalo)\nprint(n)\nprint("------------")\nNajpogostejseSopojavitve1(stavki)\nprint("------------")\nNajpogostejseSopojavitve2(stavki)');
+}
+
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
-  //theme: "rin-light"
+  theme: "rin-light"
 });
 editor2.setSize('100%', 298);
 </script>

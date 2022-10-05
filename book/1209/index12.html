@@ -226,7 +226,7 @@
 <div>
 <form>
 <p>
-<textarea id="code4">import povezaniSeznam as sez
+<textarea id="code">import povezaniSeznam as sez
 
 # Vrne indeks prvega vozlišča, ki vsebuje
 # podani element.
@@ -272,14 +272,14 @@ else:
   print('Vozlišče z elementom A ne obstaja.')</textarea>
 </p>
 <p>
-<a href="#" class="btn btn-info"  onclick="runit4()"><span class="fa fa-play"></span> Izvedi</a>
-<a href="#" class="btn btn-info"  onclick="clearit4()">Počisti</a>
+<a href="#" class="btn btn-info"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-info"  onclick="clearit()">Počisti</a>
 <a href="#" class="btn btn-info"  data-toggle="modal" data-target="#hint1"><span class="fa fa-question"></span> Namig</a>
-<a href="#" class="btn btn-info"  onclick="solveit4()"><span class="fa fa-check"></span> Rešitev</a>
+<a href="#" class="btn btn-info"  onclick="solveit()"><span class="fa fa-check"></span> Rešitev</a>
 </p>
 </form>
 </div>
-<pre id="output4"></pre>
+<pre id="output"></pre>
 </p>
 </div>
 <!-- Left column end -->
@@ -293,16 +293,16 @@ else:
 <p>
 <div>
 <form>
-<p><textarea id="code5"></textarea></p>
+<p><textarea id="code2"></textarea></p>
 <p>
-<a href="#" class="btn btn-danger"  onclick="runit5()"><span class="fa fa-play"></span> Izvedi</a>
-<a href="#" class="btn btn-danger"  onclick="clearit5()">Počisti</a>
+<a href="#" class="btn btn-danger"  onclick="runit2()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-danger"  onclick="clearit2()">Počisti</a>
 <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#hint2"><span class="fa fa-question"></span> Namig</a>
-<a href="#" class="btn btn-danger"  onclick="solveit5()"><span class="fa fa-check"></span> Rešitev</a>
+<a href="#" class="btn btn-danger"  onclick="solveit2()"><span class="fa fa-check"></span> Rešitev</a>
 </p>
 </form>
 </div>
-<pre id="output5"></pre>
+<pre id="output2"></pre>
 </p>
 </div>
 <!-- Right column end -->
@@ -378,100 +378,86 @@ else:
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <!-- Skulpt stdlib extended with own modules:
      povezaniSeznam.py, sklad.py, vrsta.py
 //-->
-<script src="js/skulpt-stdlib-extended.js"></script> 
+<script src="js/skulpt-extlib-sequence.js"></script>
 <script type="text/javascript">
-function outf4(text) {
-  var mypre4 = document.getElementById("output4");
-  mypre4.innerHTML = mypre4.innerHTML + text;
-}
-function builtinRead4(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit4() {
-    var prog = editor4.getValue();
-    var mypre4 = document.getElementById("output4");
-    mypre4.innerHTML = '';
-    Sk.canvas = "mycanvas4";
-    Sk.pre = "output4";
-    Sk.configure({output:outf4, read:builtinRead4});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit4() {
-    var mypre4 = document.getElementById("output4");
-    mypre4.innerHTML = '';
-}
-function solveit4() {
-  editor4.setValue("import povezaniSeznam as sez\n\n# Vrne indeks prvega vozlišča, ki vsebuje\n# podani element.\ndef Poisci(povSeznam, element):\n  # Pričnemo v začetnem vozlišču.\n  i = sez.IndeksZacetnega(povSeznam)\n\n  # Potujemo po verigi vozlišč, dokler\n  # ne pridemo do konca oziroma dokler\n  # ne naletimo na iskani element.\n  while i != 0:\n    if sez.Element(povSeznam, i) == element:\n      return i\n    i = sez.IndeksNaslednika(povSeznam, i)\n\n  # Elementa nismo našli.\n  return -1\n\n# Preizkusimo funkcijo.\nps = sez.Ustvari()\nprint('Povezani seznam za zaporedje KARTA')\nsez.DodajNaZacetek(ps, 'T')\nsez.DodajNaKonec(ps, 'A')\nsez.DodajNaZacetek(ps, 'R')\nsez.DodajNaZacetek(ps, 'A')\nsez.DodajNaZacetek(ps, 'K')\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z elementom A: ' +\n        str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')\n\nprint('')\nprint('Izločimo prvo vozlišče z elementom A ...')\nsez.Izloci(ps, indeks)\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z elementom A: ' +\n        str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')\n\nprint('')\nprint('Izločimo še edino vozlišče z elementom A ...')\nsez.Izloci(ps, indeks)\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z elementom A: ' +\n        str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')");
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
-var editor4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
+function solveit() {
+    editor.setValue("import povezaniSeznam as sez\n\n# Vrne indeks prvega vozlišča, ki vsebuje\n# podani element.\ndef Poisci(povSeznam, element):\n  # Pričnemo v začetnem vozlišču.\n  i = sez.IndeksZacetnega(povSeznam)\n\n  # Potujemo po verigi vozlišč, dokler\n  # ne pridemo do konca oziroma dokler\n  # ne naletimo na iskani element.\n  while i != 0:\n    if sez.Element(povSeznam, i) == element:\n      return i\n    i = sez.IndeksNaslednika(povSeznam, i)\n\n  # Elementa nismo našli.\n  return -1\n\n# Preizkusimo funkcijo.\nps = sez.Ustvari()\nprint('Povezani seznam za zaporedje KARTA')\nsez.DodajNaZacetek(ps, 'T')\nsez.DodajNaKonec(ps, 'A')\nsez.DodajNaZacetek(ps, 'R')\nsez.DodajNaZacetek(ps, 'A')\nsez.DodajNaZacetek(ps, 'K')\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z elementom A: ' +\n        str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')\n\nprint('')\nprint('Izločimo prvo vozlišče z elementom A ...')\nsez.Izloci(ps, indeks)\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z elementom A: ' +\n        str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')\n\nprint('')\nprint('Izločimo še edino vozlišče z elementom A ...')\nsez.Izloci(ps, indeks)\nsez.IzpisiVse(ps)\nindeks = Poisci(ps, 'A')\nif indeks >= 0:\n  print('Indeks prvega vozlišča z elementom A: ' +\n        str(indeks))\nelse:\n  print('Vozlišče z elementom A ne obstaja.')");
+}
+
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
   theme: "rin-light"
 });
-editor4.setSize('100%', 315);
+editor.setSize('100%', 315);
 </script>
 
 <script type="text/javascript">
-function outf5(text) {
-  var mypre5 = document.getElementById("output5");
-  mypre5.innerHTML = mypre5.innerHTML + text;
-}
-function builtinRead5(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit5() {
-    var prog = editor5.getValue();
-    var mypre5 = document.getElementById("output5");
-    mypre5.innerHTML = '';
-    Sk.canvas = "mycanvas5";
-    Sk.pre = "output5";
-    Sk.configure({output:outf5, read:builtinRead5});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit5() {
-    var mypre5 = document.getElementById("output5");
-    mypre5.innerHTML = '';
-}
-function solveit5() {
-  editor5.setValue("# Ta modul vsebuje osnovne operacije za delo\n# s povezanim seznamom, ki pri dodajanju\n# izkorišča luknje. Seznam je predstavljen\n# kot tabela [vozlisca, luknje], kjer je\n# 'vozlisca' tabela vozlišč, 'luknje' pa\n# tabela indeksov lukenj.\n\n# Ustvari in vrne prazen povezani seznam.\ndef Ustvari():\n  vozlisca = [[0, 0, 0]]\n  luknje = []\n  return [vozlisca, luknje]\n\n# Pomožna funkcija, ki vrne tabelo vozlišč\n# povezanega seznama. Z začetnim podčrtajem\n# označimo, da je funkcija namenjena samo\n# za uporabo znotraj modula. (To je stvar\n# dogovora; python še vedno omogoča\n# klicanje funkcije izven modula.)\ndef _Vozlisca(povSeznam):\n  return povSeznam[0]\n\n# Pomožna funkcija, ki vrne tabelo indeksov\n# lukenj.\ndef _Luknje(povSeznam):\n  return povSeznam[1]\n\n# Vrne število elementov (vozlišč)\n# povezanega seznama.\ndef SteviloElementov(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][0]\n\n# Vrne indeks začetnega vozlišča povezanega\n# seznama.\ndef IndeksZacetnega(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][1]\n\n# Vrne indeks naslednika vozlišča na\n# podanem indeksu.\ndef IndeksNaslednika(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][1]\n\n# Vrne indeks končnega vozlišča povezanega\n# seznama.\ndef IndeksKoncnega(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][2]\n\n# Vrne indeks predhodnika vozlišča na\n# podanem indeksu.\ndef IndeksPredhodnika(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][2]\n\n# Vrne element, ki ga hrani vozlišče s\n# podanim indeksom.\ndef Element(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][0]\n\n# Doda podani element na konec povezanega\n# seznama.\ndef DodajNaKonec(povSeznam, element):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks trenutnega končnega\n  # vozlišča seznama. Po dodajanju bo to\n  # vozlišče postalo prejšnje končno\n  # vozlišče.\n  indeksPrejKoncnega = vozlisca[0][2]\n\n  # Vozlišče vpišemo v prvo luknjo. Če\n  # lukenj ni, ga dodamo na konec tabele.\n  # Dodano vozlišče nima naslednika, njegov\n  # predhodnik pa postane prejšnje končno\n  # vozlišče.\n  if len(luknje) > 0:\n    # Vrni indeks zadnje luknje in jo\n    # odstrani iz tabele lukenj.\n    indeksDodanega = luknje.pop()\n    vozlisca[indeksDodanega] = \\\n    [element, 0, indeksPrejKoncnega]\n  else:\n    indeksDodanega = len(vozlisca)\n    vozlisca.append([element, 0,\n                     indeksPrejKoncnega])\n\n  # Dodano vozlišče postane naslednik\n  # prejšnjega končnega vozlišča.\n  vozlisca[indeksPrejKoncnega][1] = \\\n  indeksDodanega\n\n  # Dodano vozlišče postane tudi novo\n  # končno vozlišče seznama.\n  vozlisca[0][2] = indeksDodanega\n\n  # Število elementov se poveča za 1.\n  vozlisca[0][0] += 1\n\n# Ustvari novo vozlišče s podanim elementom\n# in ga v seznam poveže tako, da vozlišče na\n# podanem indeksu postane njegov naslednik.\ndef Vstavi(povSeznam, indeks, element):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks naslednika in\n  # predhodnika vozlišča, ki ga bomo dodali.\n  indeksNasl = indeks\n  indeksPred = vozlisca[indeks][2]\n\n  # Vozlišče vpišemo v prvo luknjo. Če\n  # lukenj ni, ga dodamo na konec tabele.\n  if len(luknje) > 0:\n    # Vrni indeks zadnje luknje in jo\n    # odstrani iz tabele lukenj.\n    indeksDodanega = luknje.pop()\n    vozlisca[indeksDodanega] = \\\n    [element, indeksNasl, indeksPred]\n  else:\n    indeksDodanega = len(vozlisca)\n    vozlisca.append([element, indeksNasl,\n                     indeksPred])\n\n  # Vozlišče povežemo z njegovim\n  # predhodnikom in naslednikom.\n  vozlisca[indeksPred][1] = indeksDodanega\n  vozlisca[indeksNasl][2] = indeksDodanega\n\n  # Število elementov se poveča za 1.\n  vozlisca[0][0] += 1\n\n# Doda novo vozlišče s podanim elementom\n# na začetek povezanega seznama.\ndef DodajNaZacetek(povSeznam, element):\n  i = IndeksZacetnega(povSeznam)\n  Vstavi(povSeznam, i, element)\n\n# Iz seznama izloči vozlišče s podanim\n# indeksom.\ndef Izloci(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks naslednika in\n  # predhodnika vozlišča, ki ga želimo\n  # odstraniti.\n  indeksNasl = vozlisca[indeks][1]\n  indeksPred = vozlisca[indeks][2]\n\n  # »Obvozimo« vozlišče.\n  vozlisca[indeksPred][1] = indeksNasl\n  vozlisca[indeksNasl][2] = indeksPred\n\n  # Število elementov se zmanjša za 1.\n  vozlisca[0][0] -= 1\n\n  # Dodamo indeks izločenega vozlišča v\n  # tabelo lukenj.\n  luknje.append(indeks)\n\n# Iz seznama izloči začetno vozlišče.\ndef IzlociZacetnega(povSeznam):\n  Izloci(povSeznam,\n         IndeksZacetnega(povSeznam))\n\n# Iz seznama izloči končno vozlišče.\ndef IzlociKoncnega(povSeznam):\n  Izloci(povSeznam,\n         IndeksKoncnega(povSeznam))\n\n# Pomožna funkcija, ki vrne tabelo z\n# elementi povezanega seznama (po vrsti\n# od začetnega do končnega elementa).\ndef Zaporedje(povSeznam):\n  i = IndeksZacetnega(povSeznam)\n  elementi = []\n  while i != 0:\n    elementi.append(Element(povSeznam, i))\n    i = IndeksNaslednika(povSeznam, i)\n  return elementi\n\n# Pomožna funkcija, ki vrne tabelo z\n# elementi povezanega seznama (po vrsti\n# od končnega do začetnega elementa).\ndef ZaporedjeNazaj(povSeznam):\n  i = IndeksKoncnega(povSeznam)\n  elementi = []\n  while i != 0:\n    elementi.append(Element(povSeznam, i))\n    i = IndeksPredhodnika(povSeznam, i)\n  return elementi\n\n# Pomožna funkcija, ki izpiše zgradbo\n# podanega povezanega seznama in zaporedje,\n# ki ga seznam predstavlja. Zaporedje se\n# izpiše v obeh smereh (od začetnega do\n# končnega in od končnega do začetnega\n# elementa).\ndef IzpisiVse(povSeznam):\n  print(povSeznam)\n  print('Zaporedje od začetka do konca :'\n        + str(Zaporedje(povSeznam)))\n  print('Zaporedje od konca do začetka :'\n        + str(ZaporedjeNazaj(povSeznam)))\n\n# Ta funkcija se izvede, če datoteko\n# zaženemo kot samostojen program.\ndef main():\n  print('Povezani seznam za zap. MIZNA')\n  ps = Ustvari() # trenutno zaporedje: <>\n  DodajNaKonec(ps, 'Z')\n  DodajNaZacetek(ps, 'I')\n  DodajNaKonec(ps, 'N')\n  DodajNaZacetek(ps, 'M')\n  DodajNaKonec(ps, 'A')\n  IzpisiVse(ps)\n\n  print('')\n  print('Izločimo N ...')\n  indeks = IndeksKoncnega(ps)\n  indeks = IndeksPredhodnika(ps, indeks)\n  Izloci(ps, indeks)\n  IzpisiVse(ps)\n\n  print('')\n  print('Dodamo R na konec ...')\n  DodajNaKonec(ps, 'R')\n  IzpisiVse(ps)\n\n  print('')\n  print('Izločimo prva dva elementa ...')\n  IzlociZacetnega(ps)\n  IzlociZacetnega(ps)\n  IzpisiVse(ps)\n\n  print('')\n  print('Dodamo A na konec ...')\n  DodajNaKonec(ps, 'A')\n  IzpisiVse(ps)\n\n  print('')\n  print('Vstavimo J pred končni A ...')\n  indeks = IndeksKoncnega(ps)\n  Vstavi(ps, indeks, 'J')\n  IzpisiVse(ps)\n\nif __name__ == '__main__':\n  main()");
-}
-</script>
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
 
-<script>
-var editor5 = CodeMirror.fromTextArea(document.getElementById("code5"), {
+function runit2() {
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
+}
+
+function clearit2() {
+	$('#output2').text('');
+}
+
+function solveit2() {
+    editor2.setValue("# Ta modul vsebuje osnovne operacije za delo\n# s povezanim seznamom, ki pri dodajanju\n# izkorišča luknje. Seznam je predstavljen\n# kot tabela [vozlisca, luknje], kjer je\n# 'vozlisca' tabela vozlišč, 'luknje' pa\n# tabela indeksov lukenj.\n\n# Ustvari in vrne prazen povezani seznam.\ndef Ustvari():\n  vozlisca = [[0, 0, 0]]\n  luknje = []\n  return [vozlisca, luknje]\n\n# Pomožna funkcija, ki vrne tabelo vozlišč\n# povezanega seznama. Z začetnim podčrtajem\n# označimo, da je funkcija namenjena samo\n# za uporabo znotraj modula. (To je stvar\n# dogovora; python še vedno omogoča\n# klicanje funkcije izven modula.)\ndef _Vozlisca(povSeznam):\n  return povSeznam[0]\n\n# Pomožna funkcija, ki vrne tabelo indeksov\n# lukenj.\ndef _Luknje(povSeznam):\n  return povSeznam[1]\n\n# Vrne število elementov (vozlišč)\n# povezanega seznama.\ndef SteviloElementov(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][0]\n\n# Vrne indeks začetnega vozlišča povezanega\n# seznama.\ndef IndeksZacetnega(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][1]\n\n# Vrne indeks naslednika vozlišča na\n# podanem indeksu.\ndef IndeksNaslednika(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][1]\n\n# Vrne indeks končnega vozlišča povezanega\n# seznama.\ndef IndeksKoncnega(povSeznam):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[0][2]\n\n# Vrne indeks predhodnika vozlišča na\n# podanem indeksu.\ndef IndeksPredhodnika(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][2]\n\n# Vrne element, ki ga hrani vozlišče s\n# podanim indeksom.\ndef Element(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  return vozlisca[indeks][0]\n\n# Doda podani element na konec povezanega\n# seznama.\ndef DodajNaKonec(povSeznam, element):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks trenutnega končnega\n  # vozlišča seznama. Po dodajanju bo to\n  # vozlišče postalo prejšnje končno\n  # vozlišče.\n  indeksPrejKoncnega = vozlisca[0][2]\n\n  # Vozlišče vpišemo v prvo luknjo. Če\n  # lukenj ni, ga dodamo na konec tabele.\n  # Dodano vozlišče nima naslednika, njegov\n  # predhodnik pa postane prejšnje končno\n  # vozlišče.\n  if len(luknje) > 0:\n    # Vrni indeks zadnje luknje in jo\n    # odstrani iz tabele lukenj.\n    indeksDodanega = luknje.pop()\n    vozlisca[indeksDodanega] = \\\n    [element, 0, indeksPrejKoncnega]\n  else:\n    indeksDodanega = len(vozlisca)\n    vozlisca.append([element, 0,\n                     indeksPrejKoncnega])\n\n  # Dodano vozlišče postane naslednik\n  # prejšnjega končnega vozlišča.\n  vozlisca[indeksPrejKoncnega][1] = \\\n  indeksDodanega\n\n  # Dodano vozlišče postane tudi novo\n  # končno vozlišče seznama.\n  vozlisca[0][2] = indeksDodanega\n\n  # Število elementov se poveča za 1.\n  vozlisca[0][0] += 1\n\n# Ustvari novo vozlišče s podanim elementom\n# in ga v seznam poveže tako, da vozlišče na\n# podanem indeksu postane njegov naslednik.\ndef Vstavi(povSeznam, indeks, element):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks naslednika in\n  # predhodnika vozlišča, ki ga bomo dodali.\n  indeksNasl = indeks\n  indeksPred = vozlisca[indeks][2]\n\n  # Vozlišče vpišemo v prvo luknjo. Če\n  # lukenj ni, ga dodamo na konec tabele.\n  if len(luknje) > 0:\n    # Vrni indeks zadnje luknje in jo\n    # odstrani iz tabele lukenj.\n    indeksDodanega = luknje.pop()\n    vozlisca[indeksDodanega] = \\\n    [element, indeksNasl, indeksPred]\n  else:\n    indeksDodanega = len(vozlisca)\n    vozlisca.append([element, indeksNasl,\n                     indeksPred])\n\n  # Vozlišče povežemo z njegovim\n  # predhodnikom in naslednikom.\n  vozlisca[indeksPred][1] = indeksDodanega\n  vozlisca[indeksNasl][2] = indeksDodanega\n\n  # Število elementov se poveča za 1.\n  vozlisca[0][0] += 1\n\n# Doda novo vozlišče s podanim elementom\n# na začetek povezanega seznama.\ndef DodajNaZacetek(povSeznam, element):\n  i = IndeksZacetnega(povSeznam)\n  Vstavi(povSeznam, i, element)\n\n# Iz seznama izloči vozlišče s podanim\n# indeksom.\ndef Izloci(povSeznam, indeks):\n  vozlisca = _Vozlisca(povSeznam)\n  luknje = _Luknje(povSeznam)\n\n  # Ugotovimo indeks naslednika in\n  # predhodnika vozlišča, ki ga želimo\n  # odstraniti.\n  indeksNasl = vozlisca[indeks][1]\n  indeksPred = vozlisca[indeks][2]\n\n  # »Obvozimo« vozlišče.\n  vozlisca[indeksPred][1] = indeksNasl\n  vozlisca[indeksNasl][2] = indeksPred\n\n  # Število elementov se zmanjša za 1.\n  vozlisca[0][0] -= 1\n\n  # Dodamo indeks izločenega vozlišča v\n  # tabelo lukenj.\n  luknje.append(indeks)\n\n# Iz seznama izloči začetno vozlišče.\ndef IzlociZacetnega(povSeznam):\n  Izloci(povSeznam,\n         IndeksZacetnega(povSeznam))\n\n# Iz seznama izloči končno vozlišče.\ndef IzlociKoncnega(povSeznam):\n  Izloci(povSeznam,\n         IndeksKoncnega(povSeznam))\n\n# Pomožna funkcija, ki vrne tabelo z\n# elementi povezanega seznama (po vrsti\n# od začetnega do končnega elementa).\ndef Zaporedje(povSeznam):\n  i = IndeksZacetnega(povSeznam)\n  elementi = []\n  while i != 0:\n    elementi.append(Element(povSeznam, i))\n    i = IndeksNaslednika(povSeznam, i)\n  return elementi\n\n# Pomožna funkcija, ki vrne tabelo z\n# elementi povezanega seznama (po vrsti\n# od končnega do začetnega elementa).\ndef ZaporedjeNazaj(povSeznam):\n  i = IndeksKoncnega(povSeznam)\n  elementi = []\n  while i != 0:\n    elementi.append(Element(povSeznam, i))\n    i = IndeksPredhodnika(povSeznam, i)\n  return elementi\n\n# Pomožna funkcija, ki izpiše zgradbo\n# podanega povezanega seznama in zaporedje,\n# ki ga seznam predstavlja. Zaporedje se\n# izpiše v obeh smereh (od začetnega do\n# končnega in od končnega do začetnega\n# elementa).\ndef IzpisiVse(povSeznam):\n  print(povSeznam)\n  print('Zaporedje od začetka do konca :'\n        + str(Zaporedje(povSeznam)))\n  print('Zaporedje od konca do začetka :'\n        + str(ZaporedjeNazaj(povSeznam)))\n\n# Ta funkcija se izvede, če datoteko\n# zaženemo kot samostojen program.\ndef main():\n  print('Povezani seznam za zap. MIZNA')\n  ps = Ustvari() # trenutno zaporedje: <>\n  DodajNaKonec(ps, 'Z')\n  DodajNaZacetek(ps, 'I')\n  DodajNaKonec(ps, 'N')\n  DodajNaZacetek(ps, 'M')\n  DodajNaKonec(ps, 'A')\n  IzpisiVse(ps)\n\n  print('')\n  print('Izločimo N ...')\n  indeks = IndeksKoncnega(ps)\n  indeks = IndeksPredhodnika(ps, indeks)\n  Izloci(ps, indeks)\n  IzpisiVse(ps)\n\n  print('')\n  print('Dodamo R na konec ...')\n  DodajNaKonec(ps, 'R')\n  IzpisiVse(ps)\n\n  print('')\n  print('Izločimo prva dva elementa ...')\n  IzlociZacetnega(ps)\n  IzlociZacetnega(ps)\n  IzpisiVse(ps)\n\n  print('')\n  print('Dodamo A na konec ...')\n  DodajNaKonec(ps, 'A')\n  IzpisiVse(ps)\n\n  print('')\n  print('Vstavimo J pred končni A ...')\n  indeks = IndeksKoncnega(ps)\n  Vstavi(ps, indeks, 'J')\n  IzpisiVse(ps)\n\nif __name__ == '__main__':\n  main()");
+}
+
+var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
   theme: "rin-light"
 });
-editor5.setSize('100%', 265);
+editor2.setSize('100%', 265);
 </script>
 
 

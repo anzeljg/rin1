@@ -359,39 +359,37 @@ for k in h:
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf(text) {
-  var mypre = document.getElementById("output");
-  mypre.innerHTML = mypre.innerHTML + text;
-}
-function builtinRead(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit() {
-    var prog = editor.getValue();
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-    Sk.canvas = "mycanvas";
-    Sk.pre = "output";
-    Sk.configure({output:outf, read:builtinRead});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -402,36 +400,26 @@ editor.setSize('100%', 65);
 </script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
-}
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas2";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-}
-</script>
+var output2 = $('#output2');
+var outf2 = function (text) {
+	output2.text(output2.text() + text);
+};
 
-<script>
+function runit2() {
+	Sk.configure({output: outf2, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor2.getValue(), true);
+		});
+	} catch(e) {
+		outf2(e.toString() + "\n")
+	}
+}
+
+function clearit2() {
+	$('#output2').text('');
+}
+
 var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -442,36 +430,26 @@ editor2.setSize('100%', 65);
 </script>
 
 <script type="text/javascript">
-function outf3(text) {
-  var mypre3 = document.getElementById("output3");
-  mypre3.innerHTML = mypre3.innerHTML + text;
-}
-function builtinRead3(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit3() {
-    var prog = editor3.getValue();
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-    Sk.canvas = "mycanvas3";
-    Sk.pre = "output3";
-    Sk.configure({output:outf3, read:builtinRead3});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit3() {
-    var mypre3 = document.getElementById("output3");
-    mypre3.innerHTML = '';
-}
-</script>
+var output3 = $('#output3');
+var outf3 = function (text) {
+	output3.text(output3.text() + text);
+};
 
-<script>
+function runit3() {
+	Sk.configure({output: outf3, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor3.getValue(), true);
+		});
+	} catch(e) {
+		outf3(e.toString() + "\n")
+	}
+}
+
+function clearit3() {
+	$('#output3').text('');
+}
+
 var editor3 = CodeMirror.fromTextArea(document.getElementById("code3"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -482,36 +460,26 @@ editor3.setSize('100%', 100);
 </script>
 
 <script type="text/javascript">
-function outf4(text) {
-  var mypre4 = document.getElementById("output4");
-  mypre4.innerHTML = mypre4.innerHTML + text;
-}
-function builtinRead4(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit4() {
-    var prog = editor4.getValue();
-    var mypre4 = document.getElementById("output4");
-    mypre4.innerHTML = '';
-    Sk.canvas = "mycanvas4";
-    Sk.pre = "output4";
-    Sk.configure({output:outf4, read:builtinRead4});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit4() {
-    var mypre4 = document.getElementById("output4");
-    mypre4.innerHTML = '';
-}
-</script>
+var output4 = $('#output4');
+var outf4 = function (text) {
+	output4.text(output4.text() + text);
+};
 
-<script>
+function runit4() {
+	Sk.configure({output: outf4, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor4.getValue(), true);
+		});
+	} catch(e) {
+		outf4(e.toString() + "\n")
+	}
+}
+
+function clearit4() {
+	$('#output4').text('');
+}
+
 var editor4 = CodeMirror.fromTextArea(document.getElementById("code4"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -522,36 +490,26 @@ editor4.setSize('100%', 85);
 </script>
 
 <script type="text/javascript">
-function outf5(text) {
-  var mypre5 = document.getElementById("output5");
-  mypre5.innerHTML = mypre5.innerHTML + text;
-}
-function builtinRead5(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit5() {
-    var prog = editor5.getValue();
-    var mypre5 = document.getElementById("output5");
-    mypre5.innerHTML = '';
-    Sk.canvas = "mycanvas5";
-    Sk.pre = "output5";
-    Sk.configure({output:outf5, read:builtinRead5});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit5() {
-    var mypre5 = document.getElementById("output5");
-    mypre5.innerHTML = '';
-}
-</script>
+var output5 = $('#output5');
+var outf5 = function (text) {
+	output5.text(output5.text() + text);
+};
 
-<script>
+function runit5() {
+	Sk.configure({output: outf5, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor5.getValue(), true);
+		});
+	} catch(e) {
+		outf5(e.toString() + "\n")
+	}
+}
+
+function clearit5() {
+	$('#output5').text('');
+}
+
 var editor5 = CodeMirror.fromTextArea(document.getElementById("code5"), {
   lineNumbers: true,
   matchBrackets: true,
@@ -562,36 +520,26 @@ editor5.setSize('100%', 120);
 </script>
 
 <script type="text/javascript">
-function outf6(text) {
-  var mypre6 = document.getElementById("output6");
-  mypre6.innerHTML = mypre6.innerHTML + text;
-}
-function builtinRead6(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit6() {
-    var prog = editor6.getValue();
-    var mypre6 = document.getElementById("output6");
-    mypre6.innerHTML = '';
-    Sk.canvas = "mycanvas6";
-    Sk.pre = "output6";
-    Sk.configure({output:outf6, read:builtinRead6});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit6() {
-    var mypre6 = document.getElementById("output6");
-    mypre6.innerHTML = '';
-}
-</script>
+var output6 = $('#output6');
+var outf6 = function (text) {
+	output6.text(output6.text() + text);
+};
 
-<script>
+function runit6() {
+	Sk.configure({output: outf6, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor6.getValue(), true);
+		});
+	} catch(e) {
+		outf6(e.toString() + "\n")
+	}
+}
+
+function clearit6() {
+	$('#output6').text('');
+}
+
 var editor6 = CodeMirror.fromTextArea(document.getElementById("code6"), {
   lineNumbers: true,
   matchBrackets: true,

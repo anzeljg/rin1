@@ -189,10 +189,10 @@ def ProsteUreZaVsajEnoOsebo(prosteUre):
     m.update(ure)
   return m
 
-prosteUre = [set([15, 17, 18, 19]),
-             set([14, 17, 19, 21]),
-             set([17, 19, 22]),
-             set([16, 17, 18, 19, 20])]
+prosteUre = [{15, 17, 18, 19},
+             {14, 17, 19, 21},
+             {17, 19, 22},
+             {16, 17, 18, 19, 20}]
 print(ProsteUreZaVsajEnoOsebo(prosteUre))
 </pre>
 					</div>
@@ -220,12 +220,12 @@ print(ProsteUreZaVsajEnoOsebo(prosteUre))
 
 <p align="justify">Za primer vzemimo, da je tabela <code>prosteUre</code> videti tako:
 <pre>
-[ set([15, 17, 18, 19]), set([14, 17, 19, 21]),
-  set([17, 19, 22]), set([16, 17, 18, 19, 20]) ]
+[ {15, 17, 18, 19}, {14, 17, 19, 21},
+  {17, 19, 22}, {16, 17, 18, 19, 20} ]
 </pre>
 </p>
 
-<p align="justify">V tem primeru se lahko dobijo bodisi ob 17. ali pa ob 19. uri. Rezultat je torej množica <code>set([17, 19])</code>.</p>
+<p align="justify">V tem primeru se lahko dobijo bodisi ob 17. ali pa ob 19. uri. Rezultat je torej množica <code>{17, 19}</code>.</p>
 
 <p align="justify">Poiskati moramo torej vse elemente (proste ure), ki nastopajo v vseh množicah. Ti elementi tvorijo ravno <b>presek</b> vseh množic. Presek množic v tabeli izračunamo na podoben način, kot bi na primer izračunali vsoto števil v tabeli.</p>
 
@@ -247,10 +247,10 @@ print(ProsteUreZaVsajEnoOsebo(prosteUre))
     m.intersection_update(ure)
   return m
 
-prosteUre = [ set([15, 17, 18, 19]),
-              set([14, 17, 19, 21]),
-              set([17, 19, 22]),
-              set([16, 17, 18, 19, 20]) ]
+prosteUre = [ {15, 17, 18, 19},
+              {14, 17, 19, 21},
+              {17, 19, 22},
+              {16, 17, 18, 19, 20} ]
 print(SkupneProsteUre(prosteUre))</textarea>
 </p>
 <p>
@@ -269,7 +269,7 @@ print(SkupneProsteUre(prosteUre))</textarea>
 <div class="alert alert-info" role="alert">
 <p align="justify">Napiši in preizkusi funkcijo <code>ProsteUreZaVsajEnoOsebo(prosteUre)</code>, ki sprejme tabelo množic prostih ur posameznih oseb in vrne množico vseh ur, v katerih je vsaj ena oseba prosta. V zgornjem primeru bi funkcija vrnila to množico:
 <pre>
-set([14, 15, 16, 17, 18, 19, 20, 21, 22])
+{14, 15, 16, 17, 18, 19, 20, 21, 22}
 </pre>
 </p>
 <p>
@@ -348,43 +348,37 @@ set([14, 15, 16, 17, 18, 19, 20, 21, 22])
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf(text) {
-  var mypre = document.getElementById("output");
-  mypre.innerHTML = mypre.innerHTML + text;
-}
-function builtinRead(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit() {
-    var prog = editor.getValue();
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-    Sk.canvas = "mycanvas";
-    Sk.pre = "output";
-    Sk.configure({output:outf, read:builtinRead});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit() {
-    var mypre = document.getElementById("output");
-    mypre.innerHTML = '';
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,

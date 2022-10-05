@@ -351,20 +351,20 @@ True
 <div>
 <form>
 <p>
-<textarea id="code2">L = int(input('Vnesi leto: '))
+<textarea id="code">L = int(input('Vnesi leto: '))
 if L % 400 == 0 or L % 4 == 0 and L % 100 != 0:
   print('Leto ' + str(L) + ' je prestopno.')
 else:
   print('Leto ' + str(L) + ' ni prestopno.')</textarea>
 </p>
 <p>
-<a href="#" class="btn btn-primary"  onclick="runit2()"><span class="fa fa-play"></span> Izvedi</a>
-<a href="#" class="btn btn-primary"  onclick="clearit2()">Počisti</a>
-<input type="checkbox" id="theme2" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
+<a href="#" class="btn btn-primary"  onclick="runit()"><span class="fa fa-play"></span> Izvedi</a>
+<a href="#" class="btn btn-primary"  onclick="clearit()">Počisti</a>
+<input type="checkbox" id="theme" data-toggle="toggle" data-on="Temno" data-off="Svetlo">
 </p>
 </form>
 </div>
-<pre id="output2"></pre>
+<pre id="output"></pre>
 <!-- Right column end -->
 					</div>
 				</div>
@@ -434,50 +434,44 @@ else:
 
 	<!-- Skulpt and CodeMirror -->
 	<script src="../js/skulpt/codemirrorepl.js"></script>
-	<script src="../js/skulpt/repl.js"></script>
 	<script src="../js/skulpt/skulpt.min.js"></script>
 	<script src="../js/skulpt/skulpt-stdlib.js"></script>
 	<script src="../js/skulpt/python.js"></script>
-	<script>Sk.python3 = true;</script>
 
 <script type="text/javascript">
-function outf2(text) {
-  var mypre2 = document.getElementById("output2");
-  mypre2.innerHTML = mypre2.innerHTML + text;
-}
-function builtinRead2(x) {
-  if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-    throw "File not found: '" + x + "'";
-  return Sk.builtinFiles["files"][x];
-}
-function runit2() {
-    var prog = editor2.getValue();
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-    Sk.canvas = "mycanvas";
-    Sk.pre = "output2";
-    Sk.configure({output:outf2, read:builtinRead2});
-    try {
-        eval(Sk.importMainWithBody("<stdin>",false,prog));
-    }
-    catch(e) {
-        alert(e.toString())
-    }
-}
-function clearit2() {
-    var mypre2 = document.getElementById("output2");
-    mypre2.innerHTML = '';
-}
-</script>
+var output = $('#output');
+var outf = function (text) {
+	output.text(output.text() + text);
+};
 
-<script>
-var editor2 = CodeMirror.fromTextArea(document.getElementById("code2"), {
+function builtinRead(x) {
+	if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+		throw "File not found: '" + x + "'";
+	return Sk.builtinFiles["files"][x];
+}
+
+function runit() {
+	Sk.configure({output: outf, read: builtinRead, __future__: Sk.python3});
+	try {
+		Sk.misceval.asyncToPromise(function() {
+			return Sk.importMainWithBody("<stdin>", false, editor.getValue(), true);
+		});
+	} catch(e) {
+		outf(e.toString() + "\n")
+	}
+}
+
+function clearit() {
+	$('#output').text('');
+}
+
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   matchBrackets: true,
   mode: "python",
   theme: "rin-light"
 });
-editor2.setSize('100%', 100);
+editor.setSize('100%', 100);
 </script>
 <script src="../js/skulpt/theme.js"></script>
 

@@ -1,17 +1,4 @@
 /*
- * Skulpt is Python 2, so make all string Unicode
- * by default, by adding 'u' prefix to the string:
- * =================================================
- */
-
-FROM:
-function parsestrplus(a,b){var c,d;REQ(CHILD(b,0),TOK.T_STRING);d=new Sk.builtin.str("");for(c=0;c<NCH(b);++c)try{d=d.sq$concat(parsestr(a,CHILD(b,c).value))}catch(e){throw new Sk.builtin.SyntaxError("invalid string (possibly contains a unicode character)",a.c_filename,CHILD(b,c).lineno);}return d}
-
-TO:
-function parsestrplus(a,b){var c,d;REQ(CHILD(b,0),TOK.T_STRING);d=new Sk.builtin.str("");for(c=0;c<NCH(b);++c)try{d=d.sq$concat(parsestr(a,'u'+CHILD(b,c).value))}catch(e){throw new Sk.builtin.SyntaxError("invalid string (possibly contains a unicode character)",a.c_filename,CHILD(b,c).lineno);}return d}
-
-
-/*
  * Change how 'input' function works:
  * ===================================================
  */
